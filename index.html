@@ -205,6 +205,7 @@
   }
   .hero__eyebrow { color: #E7C978; margin-bottom: 1.4rem; }
   .hero h1 { font-size: var(--step-3); font-weight: 600; letter-spacing: -0.015em; }
+  .rn-cross { display: inline-block; width: auto; height: 0.72em; margin-left: 0.14em; vertical-align: 0.02em; }
   .rn-rotate { display: inline-block; text-align: left; color: #F0CE86;
     text-shadow: 0 2px 22px rgba(240,206,134,0.28);
     transition: opacity .42s cubic-bezier(.22,1,.36,1), transform .42s cubic-bezier(.22,1,.36,1); }
@@ -422,7 +423,7 @@
     <div class="wrap">
       <div class="hero__copy">
         <p class="label hero__eyebrow">Movimiento nacionalista · Tercera Posición · de Uruguay</p>
-        <h1>La regeneración <span class="rn-rotate" data-words="espiritual †,política,social">espiritual †</span> del Uruguay.</h1>
+        <h1>La regeneración <span class="rn-rotate" data-words="espiritual,política,social">espiritual<svg class="rn-cross" viewBox="0 0 404 564" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="80" d="M202 2V562M2 202H402"/></svg></span> del Uruguay.</h1>
         <p class="hero__lead">Trabajamos fuera del sistema de partidos y del dogma democrático, por un nacionalismo virtuoso y los valores cristianos. Queremos un país donde Dios, la Patria y la Familia vuelvan a ser la base de la sociedad.</p>
         <div class="hero__cta">
           <a class="btn btn--light" href="vision.html">Lee nuestro ideario</a>
@@ -604,9 +605,11 @@
     if (!el) return;
     var words = (el.dataset.words || '').split(',').map(function (w) { return w.trim(); }).filter(Boolean);
     if (words.length < 2) return;
-    var max = 0, orig = el.textContent;
-    words.forEach(function (w) { el.textContent = w; if (el.offsetWidth > max) max = el.offsetWidth; });
-    el.textContent = orig;
+    var CROSS = '<svg class="rn-cross" viewBox="0 0 404 564" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="80" d="M202 2V562M2 202H402"/></svg>';
+    function render(w) { el.textContent = w; if (w === 'espiritual') el.insertAdjacentHTML('beforeend', CROSS); }
+    var max = 0, orig = (el.textContent || '').trim();
+    words.forEach(function (w) { render(w); if (el.offsetWidth > max) max = el.offsetWidth; });
+    render(orig || words[0]);
     el.style.minWidth = Math.ceil(max) + 'px';
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     var i = Math.max(0, words.indexOf(orig));
@@ -615,7 +618,7 @@
       el.style.transform = 'translateY(0.28em)';
       setTimeout(function () {
         i = (i + 1) % words.length;
-        el.textContent = words[i];
+        render(words[i]);
         el.style.opacity = '1';
         el.style.transform = 'translateY(0)';
       }, 430);
