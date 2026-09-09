@@ -322,29 +322,23 @@
     .hero__flag, .doc-hero__flag { animation: rn-drift 40s ease-in-out infinite alternate; }
   }
   @keyframes rn-drift { from { transform: scale(1.08); } to { transform: scale(1.15) translate(-2%, -1.2%); } }
-  /* ---------- Aportar (fondo: mapa de Uruguay) ---------- */
-  #aporta { position: relative; overflow: hidden; isolation: isolate; background: #0b1930; color: #E9E6DE; border-bottom-color: rgba(255,255,255,0.12); }
-  .aporta__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; z-index: -2; opacity: 1; filter: brightness(1.02) contrast(1.06); transform: scale(1.04); pointer-events: none; }
-  .aporta__scrim { position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  /* ---------- Sumarse (fondo: mapa de Uruguay) ---------- */
+  #sumate { position: relative; overflow: hidden; isolation: isolate; background: #0b1930; color: #E9E6DE; border-bottom: 0; }
+  .sumate__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; z-index: -2; opacity: 1; filter: brightness(1.02) contrast(1.06); transform: scale(1.04); pointer-events: none; }
+  .sumate__scrim { position: absolute; inset: 0; z-index: -1; pointer-events: none;
     background:
       linear-gradient(180deg, rgba(8,17,32,0.54) 0%, rgba(6,13,26,0.68) 100%),
       radial-gradient(90% 84% at 50% 48%, rgba(6,12,24,0.50) 0%, rgba(6,12,24,0.12) 84%); }
-  #aporta > .wrap { position: relative; z-index: 1; }
-  #aporta .band__head .label, #aporta .band__head h2, #aporta .tier__name,
-  #aporta .tier__amount, #aporta .tier__use, #aporta .give-note,
-  #aporta .give-online .label, #aporta .give-online a {
+  #sumate > .wrap { position: relative; z-index: 1; }
+  #sumate .band__head .label, #sumate .band__head h2,
+  #sumate .prose-block p, #sumate .contact-lines a {
     text-shadow: 0 1px 2px rgba(0,0,0,0.6), 0 3px 14px rgba(0,0,0,0.45);
   }
-  #aporta .band__head .label, #aporta .give-online .label { color: #F0CE86; }
-  #aporta .band__head h2 { color: #FFFFFF; }
-  #aporta .tiers { border-top-color: rgba(255,255,255,0.9); }
-  #aporta .tier { border-bottom-color: rgba(255,255,255,0.22); }
-  #aporta .tier__name { color: #FFFFFF; }
-  #aporta .tier__amount { color: #A6CBF7; font-weight: 800; }
-  #aporta .tier__use { color: #DDE3EC; }
-  #aporta .give-note { color: #F1F4F8; }
-  #aporta .give-online a { color: #B9D6F7; }
-  @media (prefers-reduced-motion: reduce) { .aporta__video { display: none; } }
+  #sumate .band__head .label { color: #F0CE86; }
+  #sumate .band__head h2 { color: #FFFFFF; }
+  #sumate .prose-block, #sumate .prose-block p { color: #DDE3EC; }
+  #sumate .contact-lines a { color: #B9D6F7; }
+  @media (prefers-reduced-motion: reduce) { .sumate__video { display: none; } }
 </style>
 </head>
 <body style="margin:0">
@@ -431,11 +425,6 @@
   </section>
 
   <section id="aporta" class="band">
-    <video class="aporta__video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"
-           poster="aportar_poster.jpg">
-      <source src="aportar.mp4" type="video/mp4" />
-    </video>
-    <div class="aporta__scrim" aria-hidden="true"></div>
     <div class="wrap">
       <div class="band__head">
         <span class="label">Aportar</span>
@@ -464,6 +453,11 @@
   </section>
 
   <section id="sumate" class="band">
+    <video class="sumate__video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"
+           poster="aportar_poster.jpg">
+      <source src="aportar.mp4" type="video/mp4" />
+    </video>
+    <div class="sumate__scrim" aria-hidden="true"></div>
     <div class="wrap">
       <div class="band__head">
         <span class="label">Sumarse</span>
@@ -557,7 +551,7 @@
     });
     setTimeout(function () { items.forEach(show); }, 1500);
 
-    var av = document.querySelector('.aporta__video');
+    var av = document.querySelector('.sumate__video');
     if (av) {
       var slow = function () { try { av.playbackRate = 0.75; } catch (e) {} };
       slow();
