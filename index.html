@@ -231,6 +231,9 @@
   .band__head .label { color: var(--gold-text); display: block; margin-bottom: 0.9rem; }
   .band__head h2 { font-size: var(--step-2); }
   .band__head p { color: var(--ink-soft); margin-top: 1rem; }
+  .ideario-intro { color: var(--ink); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .ideario-intro { color: #FFFFFF; } }
+  :root[data-theme="dark"] .ideario-intro { color: #FFFFFF; }
 
   /* ---------- Aporta ---------- */
   .tiers { margin-top: 2.5rem; border-top: 2px solid var(--ink); }
@@ -411,7 +414,7 @@
       <div class="band__head">
         <span class="label">Visión</span>
         <h2>Dios, Patria y Familia</h2>
-        <p>Resurgir Nacional busca la regeneración política, cultural y social del Uruguay desde una Tercera Posición: fuera de la vieja disputa de izquierdas y derechas y del dogma democrático liberal. Estos son los doce valores que nos guían.</p>
+        <p class="ideario-intro">Resurgir Nacional busca la regeneración política, cultural y social del Uruguay desde una Tercera Posición: fuera de la vieja disputa de izquierdas y derechas y del dogma democrático liberal. Estos son los doce valores que nos guían.</p>
       </div>
       <ul class="vlist">
         <li><b>Orgullo Nacional</b><span>Un Uruguay soberano que protege su identidad y su historia.</span></li>
