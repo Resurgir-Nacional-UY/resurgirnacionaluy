@@ -1,24 +1,27 @@
 # Resurgir Nacional — web
 
-Sitio de una página del movimiento cívico-patriótico **Resurgir Nacional** (Uruguay).
-Lema: *La Patria o la tumba*.
+Sitio del movimiento **Resurgir Nacional** (Uruguay). Lema: *La Patria o la tumba*.
+
+## Páginas
+
+- [`index.html`](index.html) — portada: ideario resumido, propuestas, actualidad, aportaciones y contacto.
+- [`vision.html`](vision.html) — «Visión de Resurgir Nacional»: visión y valores, doce principios, estructura de acción, actividades y contacto. Transcripción del documento interno del movimiento.
 
 ## Estado
 
-Borrador de diseño. El ideario, las cifras, las fechas y los textos legales son
-**provisionales** y se sustituirán por el contenido oficial.
+Las propuestas, la actualidad y algunos datos de la portada son **provisionales**.
+La página de Visión es contenido oficial del movimiento.
 
-## Publicación
+## Cómo se construye
 
-- Página única: [`index.html`](index.html). Sin dependencias de compilación.
-- Tipografías cargadas desde Google Fonts; el emblema y la bandera son SVG
-  dibujados en el propio HTML.
-- Publicado con GitHub Pages desde la rama `main`.
+Sin compilación. Se editan los fuentes en la raíz del workspace y `build.py`
+genera estas dos páginas ya envueltas (`<!doctype>`, `<meta charset>`, etc.) para
+GitHub Pages, reescribiendo los enlaces absolutos a relativos.
+
+Publicado con GitHub Pages desde la rama `main`.
 
 ## Pendiente
 
-- Ideario oficial (sustituir el texto de ejemplo de la sección *Ideario*).
-- Datos reales: agenda, importes de aportación, sede, contacto, textos legales
-  (naturaleza jurídica, inscripción ante la Corte Electoral, Ley N.º 18.485).
-- Backend real para el formulario "Súmate" y para el cobro de aportaciones
-  (hoy son una demostración y no envían ni guardan datos).
+- Revisar «Propuestas» y «Actualidad» de la portada (hoy son ejemplos).
+- Datos legales del movimiento (naturaleza jurídica, sede).
+- Backend real para el formulario «Súmate».

@@ -1,136 +1,51 @@
-<title>Resurgir Nacional</title>
-<meta name="description" content="Movimiento cívico-patriótico Resurgir Nacional: ideario, propuestas, actualidad y aportaciones." />
+<title>Visión de Resurgir Nacional</title>
+<meta name="description" content="Visión, valores y estructura de acción del movimiento Resurgir Nacional (Uruguay)." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" />
 
 <style>
   :root {
-    /* --- Emblem literal colours (do not change with theme) --- */
-    --rn-blue: #2E5EA8;
-    --rn-blue-deep: #2B60B0;
-    --rn-ink: #0A0C11;
-    --rn-gold: #C6A24C;
-
-    /* --- Light palette --- */
-    --bg: #F4F2EA;
-    --surface: #FBFAF5;
-    --ink: #12151C;
-    --ink-soft: #45505F;
-    --line: #DAD5C5;
-    --blue: #1E4E8F;
-    --blue-bright: #2E5EA8;
-    --gold-text: #9A7A2E;
-    --gold-line: #C6A24C;
-    --focus: #9A7A2E;
-
-    --gutter: clamp(1.25rem, 5vw, 4rem);
-    --measure: 65ch;
-    --header-h: 68px;
-
+    --rn-blue: #2E5EA8; --rn-blue-deep: #2B60B0; --rn-ink: #0A0C11; --rn-gold: #C6A24C;
+    --bg: #F4F2EA; --surface: #FBFAF5; --ink: #12151C; --ink-soft: #45505F; --line: #DAD5C5;
+    --blue: #1E4E8F; --gold-text: #9A7A2E; --gold-line: #C6A24C; --focus: #9A7A2E;
+    --gutter: clamp(1.25rem, 5vw, 4rem); --measure: 66ch; --header-h: 68px;
     --step--1: clamp(0.78rem, 0.74rem + 0.18vw, 0.86rem);
     --step-0: clamp(1.06rem, 1rem + 0.28vw, 1.2rem);
     --step-1: clamp(1.25rem, 1.15rem + 0.5vw, 1.6rem);
     --step-2: clamp(1.6rem, 1.4rem + 1vw, 2.4rem);
-    --step-3: clamp(2.4rem, 1.9rem + 2.6vw, 4.4rem);
+    --step-3: clamp(2.2rem, 1.8rem + 2.2vw, 3.6rem);
   }
-
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #0E1116;
-      --surface: #161B22;
-      --ink: #E9E6DE;
-      --ink-soft: #9BA4B1;
-      --line: #262C36;
-      --blue: #78A6E0;
-      --blue-bright: #3E74BE;
-      --gold-text: #D4B15E;
-      --gold-line: #8C7331;
-      --focus: #D4B15E;
+      --bg: #0E1116; --surface: #161B22; --ink: #E9E6DE; --ink-soft: #9BA4B1; --line: #262C36;
+      --blue: #78A6E0; --gold-text: #D4B15E; --gold-line: #8C7331; --focus: #D4B15E;
     }
   }
-
   :root[data-theme="dark"] {
-    --bg: #0E1116;
-    --surface: #161B22;
-    --ink: #E9E6DE;
-    --ink-soft: #9BA4B1;
-    --line: #262C36;
-    --blue: #78A6E0;
-    --blue-bright: #3E74BE;
-    --gold-text: #D4B15E;
-    --gold-line: #8C7331;
-    --focus: #D4B15E;
+    --bg: #0E1116; --surface: #161B22; --ink: #E9E6DE; --ink-soft: #9BA4B1; --line: #262C36;
+    --blue: #78A6E0; --gold-text: #D4B15E; --gold-line: #8C7331; --focus: #D4B15E;
   }
 
   * { box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
-
   body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
+    margin: 0; background: var(--bg); color: var(--ink);
     font-family: "Newsreader", Georgia, "Times New Roman", serif;
-    font-size: var(--step-0);
-    line-height: 1.7;
-    font-optical-sizing: auto;
-    -webkit-font-smoothing: antialiased;
+    font-size: var(--step-0); line-height: 1.75;
+    font-optical-sizing: auto; -webkit-font-smoothing: antialiased;
   }
-
-  h1, h2, h3 {
-    font-family: "Fraunces", Georgia, serif;
-    font-weight: 500;
-    line-height: 1.1;
-    text-wrap: balance;
-    margin: 0;
-  }
-
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 500; line-height: 1.12; text-wrap: balance; margin: 0; }
   p { margin: 0; }
-  a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-
-  .label {
-    font-family: "Archivo", system-ui, sans-serif;
-    font-weight: 600;
-    font-size: var(--step--1);
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-  }
-
-  :focus-visible {
-    outline: 2px solid var(--focus);
-    outline-offset: 3px;
-    border-radius: 2px;
-  }
-
-  .wrap {
-    max-width: 1120px;
-    margin-inline: auto;
-    padding-inline: var(--gutter);
-  }
-
-  section { scroll-margin-top: calc(var(--header-h) + 1rem); }
-
-  /* ---------- Emblem ---------- */
+  a { color: var(--blue); text-underline-offset: 3px; }
+  .label { font-family: "Archivo", system-ui, sans-serif; font-weight: 600; font-size: var(--step--1); letter-spacing: 0.16em; text-transform: uppercase; }
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 2px; }
+  .wrap { max-width: 1120px; margin-inline: auto; padding-inline: var(--gutter); }
   .emblem { display: block; width: 100%; height: auto; }
 
-  /* ---------- Header ---------- */
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    background: color-mix(in srgb, var(--bg) 86%, transparent);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line);
-  }
-  .site-header .wrap {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    min-height: var(--header-h);
-    padding-block: 0.6rem;
-    flex-wrap: wrap;
-  }
+  /* Header */
+  .site-header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .site-header .wrap { display: flex; align-items: center; gap: 1.5rem; min-height: var(--header-h); padding-block: 0.6rem; flex-wrap: wrap; }
   .brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; color: inherit; margin-right: auto; }
   .brand .emblem { width: 42px; }
   .brand-name { font-family: "Archivo", sans-serif; font-weight: 700; letter-spacing: 0.1em; font-size: 0.95rem; line-height: 1; }
@@ -138,161 +53,59 @@
   .nav { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
   .nav a { color: var(--ink-soft); text-decoration: none; font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; padding-block: 0.3rem; border-bottom: 2px solid transparent; }
   .nav a:hover { color: var(--ink); border-color: var(--gold-line); }
+  .nav a[aria-current="page"] { color: var(--ink); border-color: var(--gold-line); }
 
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: "Archivo", sans-serif;
-    font-weight: 700;
-    font-size: 0.82rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 0.7rem 1.15rem;
-    border-radius: 2px;
-    border: 1px solid var(--blue);
-    background: var(--blue);
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background 0.15s ease, color 0.15s ease;
-  }
+  .btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: "Archivo", sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.7rem 1.15rem; border-radius: 2px; border: 1px solid var(--blue); background: var(--blue); color: #fff; text-decoration: none; cursor: pointer; transition: background 0.15s ease; }
   .btn:hover { background: #16386a; border-color: #16386a; }
-  .btn--ghost { background: transparent; color: var(--blue); }
-  .btn--ghost:hover { background: color-mix(in srgb, var(--blue) 12%, transparent); color: var(--blue); }
-  .btn--light { background: #F4F2EA; border-color: #F4F2EA; color: #16386a; }
-  .btn--light:hover { background: #fff; border-color: #fff; color: #16386a; }
   .btn--outline-light { background: transparent; border-color: rgba(255,255,255,0.55); color: #fff; }
-  .btn--outline-light:hover { background: rgba(255,255,255,0.12); border-color: #fff; color: #fff; }
+  .btn--outline-light:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
 
-  /* ---------- Hero (committed dark-blue band) ---------- */
-  .hero {
-    position: relative;
-    overflow: hidden;
-    background: radial-gradient(120% 120% at 50% 0%, #24579C 0%, #1B3F73 45%, #14315C 100%);
-    color: #F4F2EA;
-    isolation: isolate;
-  }
-  .hero__saltire {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.42;
-    pointer-events: none;
-    -webkit-mask: radial-gradient(140% 120% at 50% 45%, transparent 8%, #000 60%);
-    mask: radial-gradient(140% 120% at 50% 45%, transparent 8%, #000 60%);
-  }
-  .hero .wrap {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: clamp(2rem, 5vw, 4.5rem);
-    align-items: center;
-    padding-block: clamp(3.5rem, 8vw, 6rem);
-  }
-  .hero__eyebrow { color: #E7C978; margin-bottom: 1.4rem; }
-  .hero h1 { font-size: var(--step-3); font-weight: 600; letter-spacing: -0.015em; }
-  .hero__lead { font-size: var(--step-1); line-height: 1.5; margin-top: 1.4rem; max-width: 34ch; color: #E7E3D6; }
-  .hero__motto {
-    display: flex; align-items: center; gap: 0.9rem;
-    margin-top: 2rem; padding-top: 1.4rem;
-    border-top: 1px solid rgba(231,201,120,0.35);
-    font-family: "Archivo", sans-serif; font-weight: 700;
-    letter-spacing: 0.28em; text-transform: uppercase; font-size: 0.8rem;
-    color: #E7C978;
-  }
-  .hero__cta { display: flex; gap: 0.9rem; margin-top: 2.2rem; flex-wrap: wrap; }
-  .hero__emblem { justify-self: center; width: min(78vw, 400px); }
-  .hero__emblem .emblem { filter: drop-shadow(0 20px 45px rgba(0,0,0,0.35)); }
+  /* Document hero */
+  .doc-hero { position: relative; overflow: hidden; background: radial-gradient(120% 130% at 50% 0%, #24579C 0%, #1B3F73 45%, #14315C 100%); color: #F4F2EA; isolation: isolate; }
+  .doc-hero__saltire { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.38; pointer-events: none; -webkit-mask: radial-gradient(150% 130% at 50% 40%, transparent 6%, #000 62%); mask: radial-gradient(150% 130% at 50% 40%, transparent 6%, #000 62%); }
+  .doc-hero .wrap { padding-block: clamp(3rem, 7vw, 5rem); max-width: 900px; }
+  .doc-hero .label { color: #E7C978; }
+  .doc-hero h1 { font-size: var(--step-3); font-weight: 600; letter-spacing: -0.015em; margin: 1.2rem 0 0.6rem; }
+  .doc-hero__sub { font-size: var(--step-1); color: #E7E3D6; }
+  .doc-hero__motto { margin-top: 1.8rem; padding-top: 1.3rem; border-top: 1px solid rgba(231,201,120,0.35); font-family: "Archivo", sans-serif; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; font-size: 0.78rem; color: #E7C978; }
+  .doc-hero__back { margin-top: 1.6rem; }
 
-  @media (prefers-reduced-motion: no-preference) {
-    .hero__emblem { animation: rn-float 9s ease-in-out infinite; }
-  }
-  @keyframes rn-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  /* Document body */
+  .doc { max-width: 900px; margin-inline: auto; padding-inline: var(--gutter); padding-block: clamp(3rem, 7vw, 5rem); }
+  .doc > section + section { margin-top: clamp(3rem, 7vw, 4.5rem); }
+  .doc .label { color: var(--gold-text); display: block; margin-bottom: 0.8rem; }
+  .doc h2 { font-size: var(--step-2); max-width: 20ch; }
+  .prose { max-width: var(--measure); margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.15rem; color: var(--ink); }
+  .prose p { color: var(--ink); }
+  .prose .muted { color: var(--ink-soft); font-size: 0.95rem; }
 
-  /* ---------- Generic section rhythm ---------- */
-  .band { padding-block: clamp(3.5rem, 8vw, 6rem); border-bottom: 1px solid var(--line); }
-  .band__head { max-width: var(--measure); margin-bottom: 2.75rem; }
-  .band__head .label { color: var(--gold-text); display: block; margin-bottom: 0.9rem; }
-  .band__head h2 { font-size: var(--step-2); }
-  .band__head p { color: var(--ink-soft); margin-top: 1rem; }
+  .pullquote { max-width: 30ch; margin: 2rem 0; padding-left: 1.4rem; border-left: 3px solid var(--gold-line); font-family: "Fraunces", serif; font-size: var(--step-1); line-height: 1.3; color: var(--ink); }
 
-  /* ---------- Ideario ---------- */
-  .creed { display: flex; flex-direction: column; gap: 2.5rem; max-width: 760px; }
-  .creed__item { display: grid; grid-template-columns: 3.5rem 1fr; gap: 1.5rem; align-items: start; }
-  .creed__num { font-family: "Fraunces", serif; font-weight: 500; font-size: 2rem; color: var(--gold-text); line-height: 1; padding-top: 0.15rem; font-variant-numeric: tabular-nums; }
-  .creed__item h3 { font-size: var(--step-1); margin-bottom: 0.55rem; }
-  .creed__item p { color: var(--ink-soft); max-width: 60ch; }
-  @media (max-width: 560px) {
-    .creed__item { grid-template-columns: 1fr; gap: 0.5rem; }
-    .creed__num { font-size: 1.5rem; }
-  }
+  .values { margin-top: 2rem; display: flex; flex-direction: column; }
+  .value { display: grid; grid-template-columns: 3.2rem 1fr; gap: 1.4rem; padding: 1.4rem 0; border-top: 1px solid var(--line); align-items: start; }
+  .value:last-child { border-bottom: 1px solid var(--line); }
+  .value__n { font-family: "Fraunces", serif; font-size: 1.5rem; color: var(--gold-text); line-height: 1; font-variant-numeric: tabular-nums; }
+  .value h3 { font-size: var(--step-1); margin-bottom: 0.4rem; }
+  .value p { color: var(--ink-soft); max-width: 62ch; }
+  @media (max-width: 560px) { .value { grid-template-columns: 1fr; gap: 0.4rem; } }
 
-  /* ---------- Propuestas ---------- */
-  .proposals { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; }
-  .proposal { padding: 1.6rem 1.6rem 1.6rem 0; border-top: 1px solid var(--line); }
-  .proposal:nth-child(odd) { padding-right: 2.5rem; }
-  .proposal:nth-child(even) { padding-left: 2.5rem; border-left: 1px solid var(--line); }
-  .proposal .label { color: var(--blue); }
-  .proposal h3 { font-size: var(--step-1); margin: 0.6rem 0 0.5rem; }
-  .proposal p { color: var(--ink-soft); font-size: 0.98rem; }
-  @media (max-width: 640px) {
-    .proposals { grid-template-columns: 1fr; }
-    .proposal, .proposal:nth-child(odd), .proposal:nth-child(even) { padding: 1.4rem 0; border-left: 0; }
-  }
+  .facts { margin-top: 1.8rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 2px solid var(--ink); }
+  .fact { padding: 1.2rem 1.2rem 1.2rem 0; border-bottom: 1px solid var(--line); }
+  .fact:not(:first-child) { padding-left: 1.4rem; border-left: 1px solid var(--line); }
+  .fact b { display: block; font-family: "Archivo", sans-serif; font-weight: 700; font-size: 1.35rem; color: var(--blue); }
+  .fact span { font-size: 0.85rem; color: var(--ink-soft); }
+  @media (max-width: 620px) { .facts { grid-template-columns: 1fr; } .fact, .fact:not(:first-child) { padding: 1rem 0; border-left: 0; } }
 
-  /* ---------- Actualidad ---------- */
-  .news-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(2rem, 5vw, 4rem); }
-  .col-title { font-family: "Archivo", sans-serif; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; font-size: 0.8rem; color: var(--gold-text); padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); margin-bottom: 0.5rem; }
-  .post { padding: 1.35rem 0; border-bottom: 1px solid var(--line); }
-  .post time { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
-  .post h3 { font-size: 1.15rem; margin: 0.4rem 0 0.35rem; }
-  .post p { color: var(--ink-soft); font-size: 0.95rem; }
-  .event { display: grid; grid-template-columns: 3.4rem 1fr; gap: 1rem; padding: 1.15rem 0; border-bottom: 1px solid var(--line); }
-  .event__date { text-align: center; font-family: "Archivo", sans-serif; line-height: 1; }
-  .event__date b { display: block; font-size: 1.5rem; color: var(--ink); font-weight: 700; }
-  .event__date span { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--ink-soft); }
-  .event h3 { font-size: 1.02rem; margin-bottom: 0.2rem; }
-  .event p { font-size: 0.88rem; color: var(--ink-soft); }
-  @media (max-width: 720px) { .news-grid { grid-template-columns: 1fr; } }
+  .acts { margin-top: 2rem; display: flex; flex-direction: column; }
+  .act { padding: 1.4rem 0; border-top: 1px solid var(--line); max-width: var(--measure); }
+  .act:last-child { border-bottom: 1px solid var(--line); }
+  .act h3 { font-size: 1.2rem; margin-bottom: 0.45rem; }
+  .act p { color: var(--ink-soft); }
 
-  /* ---------- Aporta ---------- */
-  .give-lead { max-width: var(--measure); color: var(--ink-soft); }
-  .tiers { margin-top: 2.5rem; border-top: 2px solid var(--ink); }
-  .tier { display: grid; grid-template-columns: 11rem 9.5rem 1fr; gap: 1.5rem; align-items: baseline; padding: 1.35rem 0; border-bottom: 1px solid var(--line); }
-  .tier__name { font-family: "Fraunces", serif; font-size: 1.2rem; }
-  .tier__amount { font-family: "Archivo", sans-serif; font-weight: 700; color: var(--blue); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; white-space: nowrap; }
-  .tier__use { color: var(--ink-soft); font-size: 0.95rem; }
-  .give-note { margin-top: 1.75rem; font-size: 0.88rem; color: var(--ink-soft); max-width: 62ch; }
-  @media (max-width: 620px) {
-    .tier { grid-template-columns: 1fr auto; column-gap: 1rem; row-gap: 0.3rem; }
-    .tier__use { grid-column: 1 / -1; }
-  }
+  .contact { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.8rem; }
+  .contact a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 1.05rem; letter-spacing: 0.01em; }
 
-  /* ---------- Súmate ---------- */
-  .join { background: var(--surface); }
-  .join-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
-  .join-grid h2 { font-size: var(--step-2); }
-  .join-grid > div > p { color: var(--ink-soft); margin-top: 1rem; max-width: 42ch; }
-  form.join-form { display: grid; gap: 1rem; }
-  .field { display: grid; gap: 0.4rem; }
-  .field label { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
-  .field input, .field select {
-    font: inherit; font-size: 0.98rem;
-    padding: 0.7rem 0.8rem;
-    background: var(--bg);
-    border: 1px solid var(--line);
-    border-radius: 2px;
-    color: var(--ink);
-  }
-  .field input:focus, .field select:focus { outline: 2px solid var(--focus); outline-offset: 1px; border-color: var(--focus); }
-  .consent { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.86rem; color: var(--ink-soft); }
-  .consent input { margin-top: 0.25rem; }
-  .form-done { padding: 1.25rem; border: 1px solid var(--gold-line); border-radius: 2px; background: color-mix(in srgb, var(--gold-line) 12%, transparent); font-size: 0.95rem; }
-  @media (max-width: 720px) { .join-grid { grid-template-columns: 1fr; } }
-
-  /* ---------- Footer ---------- */
+  /* Footer */
   .site-footer { background: #14315C; color: #D9DEEA; padding-block: 3.5rem; }
   .site-footer a { color: #E7C978; }
   .footer-grid { display: flex; gap: 2.5rem; justify-content: space-between; flex-wrap: wrap; align-items: flex-start; }
@@ -302,23 +115,8 @@
   .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; font-family: "Archivo", sans-serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
   .footer-links a { color: #D9DEEA; text-decoration: none; }
   .footer-links a:hover { color: #fff; }
-  .footer-symbols { margin-top: 2.75rem; }
-  .footer-symbols .col-title { display: block; border-bottom: 1px solid rgba(255,255,255,0.15); }
-  .footer-symbols > div { display: flex; align-items: center; gap: 1.5rem; margin-top: 1.1rem; }
-  .footer-symbols svg { height: 74px; width: auto; border-radius: 2px; }
   .footer-legal { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.15); font-size: 0.8rem; line-height: 1.6; color: #A9B4C8; max-width: 70ch; }
-  .draft-badge {
-    font-family: "Archivo", sans-serif; font-weight: 600;
-    font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--gold-text); border: 1px solid var(--gold-line);
-    padding: 0.15rem 0.45rem; border-radius: 2px; white-space: nowrap;
-  }
-  /* ---------- Lista de valores (resumen) ---------- */
-  .vlist { margin-top: 1.6rem; max-width: 780px; columns: 2; column-gap: 2.75rem; }
-  .vlist li { break-inside: avoid; padding: 0.7rem 0; border-top: 1px solid var(--line); }
-  .vlist b { font-family: "Fraunces", serif; font-weight: 500; display: block; }
-  .vlist span { color: var(--ink-soft); font-size: 0.9rem; }
-  @media (max-width: 620px) { .vlist { columns: 1; } }
+  .draft-badge { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); border: 1px solid var(--gold-line); padding: 0.15rem 0.45rem; border-radius: 2px; white-space: nowrap; }
 </style>
 
 <!-- Marcas de marca (emblema y bandera reales) y aspa decorativa -->
@@ -339,7 +137,7 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="#top">
+    <a class="brand" href="https://avvedit-creator.github.io/resurgirnacionaluy/">
       <svg class="emblem" viewBox="0 0 400 400"><use href="#rn-emblem" /></svg>
       <span>
         <span class="brand-name">RESURGIR NACIONAL</span>
@@ -347,218 +145,111 @@
       </span>
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="#ideario">Ideario</a>
-      <a href="https://avvedit-creator.github.io/resurgirnacionaluy/vision.html">Visión</a>
-      <a href="#propuestas">Propuestas</a>
-      <a href="#actualidad">Actualidad</a>
-      <a href="#aporta">Aporta</a>
-      <a class="btn" href="#sumate">Súmate</a>
+      <a href="https://avvedit-creator.github.io/resurgirnacionaluy/">Inicio</a>
+      <a href="vision.html" aria-current="page">Visión</a>
+      <a href="https://avvedit-creator.github.io/resurgirnacionaluy/#aporta">Aporta</a>
+      <a class="btn" href="https://avvedit-creator.github.io/resurgirnacionaluy/#sumate">Súmate</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
-  <section class="hero">
-    <svg class="hero__saltire" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#rn-saltire" /></svg>
+<main>
+  <section class="doc-hero">
+    <svg class="doc-hero__saltire" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#rn-saltire" /></svg>
     <div class="wrap">
-      <div class="hero__copy">
-        <p class="label hero__eyebrow">Movimiento nacionalista · Tercera Posición · Uruguay</p>
-        <h1>Levantar la nación, empezando por lo esencial.</h1>
-        <p class="hero__lead">La regeneración política, cultural y social del Uruguay. Que Dios, la Patria y la Familia vuelvan a ser la base de la sociedad.</p>
-        <div class="hero__cta">
-          <a class="btn btn--light" href="https://avvedit-creator.github.io/resurgirnacionaluy/vision.html">Lee nuestra visión</a>
-          <a class="btn btn--outline-light" href="#aporta">Haz tu aportación</a>
-        </div>
-        <p class="hero__motto"><span aria-hidden="true">◆</span> La Patria o la tumba</p>
-      </div>
-      <div class="hero__emblem">
-        <svg class="emblem" viewBox="0 0 400 400" role="img" aria-label="Emblema de Resurgir Nacional"><use href="#rn-emblem" /></svg>
+      <p class="label">Documento del movimiento</p>
+      <h1>Visión de Resurgir Nacional</h1>
+      <p class="doc-hero__sub">Valores y estructura de acción.</p>
+      <p class="doc-hero__motto">La Patria o la tumba</p>
+      <div class="doc-hero__back">
+        <a class="btn btn--outline-light" href="https://avvedit-creator.github.io/resurgirnacionaluy/">← Volver al inicio</a>
       </div>
     </div>
   </section>
 
-  <section id="ideario" class="band">
-    <div class="wrap">
-      <div class="band__head">
-        <span class="label">Ideario</span>
-        <h2>Dios, Patria y Familia</h2>
-        <p>Resurgir Nacional busca la regeneración política, cultural y social del Uruguay desde una Tercera Posición: fuera de la vieja disputa de izquierdas y derechas y del dogma democrático liberal. Estos son los doce valores que nos guían.</p>
-      </div>
-      <ul class="vlist">
-        <li><b>Orgullo Nacional</b><span>Un Uruguay soberano que protege su identidad y su historia.</span></li>
-        <li><b>Valores Cristianos</b><span>La fe cristiana como guía para vivir con justicia y dignidad.</span></li>
-        <li><b>Familia, pilar de la Nación</b><span>Núcleo de la sociedad y base de un futuro próspero.</span></li>
-        <li><b>Salud y fortaleza física</b><span>Vida sana, alimentación natural y vigor espiritual.</span></li>
-        <li><b>Defensa de la tierra</b><span>Ganadería tradicional y soberanía alimentaria.</span></li>
-        <li><b>Resistencia al globalismo</b><span>Frente a la ideología de género y la descomposición cultural.</span></li>
-        <li><b>Unidad y solidaridad nacional</b><span>Comunidad y colaboración por un Uruguay unido.</span></li>
-        <li><b>Disciplina</b><span>Trabajo con perseverancia y determinación.</span></li>
-        <li><b>Preservación cultural</b><span>Defensa del legado y las tradiciones nacionales.</span></li>
-        <li><b>Anti-liberalismo</b><span>Todo orden político subordinado a un orden superior.</span></li>
-        <li><b>Anti-marxismo</b><span>Frente al materialismo, una concepción espiritual del mundo.</span></li>
-        <li><b>Anti-democratismo liberal</b><span>La raíz del mal está en el sistema político imperante.</span></li>
-      </ul>
-      <p style="margin-top:2rem"><a class="btn" href="https://avvedit-creator.github.io/resurgirnacionaluy/vision.html">Lee la visión completa</a></p>
-    </div>
-  </section>
+  <div class="doc">
+    <section>
+      <span class="label">Visión y valores</span>
+      <h2>Una regeneración política, cultural y social</h2>
+      <div class="prose">
+        <p>Buscamos la regeneración política, cultural y social del Uruguay, trabajando fuera del sistema de partidos y del dogma democrático. Para ello trabajamos en ser la voz y la acción que defiende el corazón de Uruguay: su gente, su fe, su tierra y sus tradiciones. Promovemos un nacionalismo virtuoso y los valores cristianos como la guía para un futuro digno y soberano. Queremos un país fuerte, donde Dios, la Patria y la Familia vuelvan a ser la base de la sociedad.</p>
 
-  <section id="propuestas" class="band">
-    <div class="wrap">
-      <div class="band__head">
-        <span class="label">Propuestas</span>
-        <h2>Medidas concretas, primeras en la agenda.</h2>
-        <p>Selección provisional para revisión interna. Cada propuesta llevará memoria económica y calendario antes de su presentación pública.</p>
-      </div>
-      <div class="proposals">
-        <article class="proposal">
-          <span class="label">Economía</span>
-          <h3>Regla de oro fiscal</h3>
-          <p>Techo legal de deuda y déficit, con auditoría ciudadana anual del presupuesto y sus desviaciones.</p>
-        </article>
-        <article class="proposal">
-          <span class="label">Instituciones</span>
-          <h3>Portal único de contratación</h3>
-          <p>Todo contrato público en datos abiertos, con alertas automáticas de adjudicaciones a dedo y sobrecostes.</p>
-        </article>
-        <article class="proposal">
-          <span class="label">Territorio</span>
-          <h3>Servicios mínimos garantizados</h3>
-          <p>Sanidad, escuela y conexión digital aseguradas en el medio rural mediante un plan plurianual con financiación fijada. <em>[Cifras por concretar]</em></p>
-        </article>
-        <article class="proposal">
-          <span class="label">Energía</span>
-          <h3>Estrategia de autoabastecimiento</h3>
-          <p>Plan nacional para reducir la dependencia exterior en energía y materias primas críticas. <em>[Mix y plazos por definir]</em></p>
-        </article>
-      </div>
-    </div>
-  </section>
+        <p class="pullquote">Queremos un país fuerte, donde Dios, la Patria y la Familia vuelvan a ser la base de la sociedad.</p>
 
-  <section id="actualidad" class="band">
-    <div class="wrap">
-      <div class="band__head">
-        <span class="label">Actualidad</span>
-        <h2>Lo que hacemos y a dónde vamos.</h2>
-        <p>Contenido de muestra. Las entradas y la agenda se cargarán desde el gestor del movimiento.</p>
-      </div>
-      <div class="news-grid">
-        <div>
-          <p class="col-title">Noticias</p>
-          <article class="post">
-            <time>[00 · MES]</time>
-            <h3>Presentación del ideario en [ciudad]</h3>
-            <p>Primer acto público del curso ante afiliados y simpatizantes. Resumen y vídeo disponibles.</p>
-          </article>
-          <article class="post">
-            <time>[00 · MES]</time>
-            <h3>Encuentro con [sector o colectivo]</h3>
-            <p>Ronda de reuniones con representantes de la pequeña empresa y del campo.</p>
-          </article>
-          <article class="post">
-            <time>[00 · MES]</time>
-            <h3>Nota de prensa: posición sobre [asunto]</h3>
-            <p>Comunicado oficial del movimiento ante la actualidad de la semana.</p>
-          </article>
-        </div>
-        <div>
-          <p class="col-title">Agenda</p>
-          <article class="event">
-            <span class="event__date"><b>12</b><span>OCT</span></span>
-            <div>
-              <h3>Acto de afiliados — [Ciudad]</h3>
-              <p>[Lugar] · [Hora] · Entrada con inscripción previa.</p>
-            </div>
-          </article>
-          <article class="event">
-            <span class="event__date"><b>26</b><span>OCT</span></span>
-            <div>
-              <h3>Charla abierta: soberanía económica</h3>
-              <p>[Ciudad] · [Lugar] · Acceso libre hasta completar aforo.</p>
-            </div>
-          </article>
-          <article class="event">
-            <span class="event__date"><b>09</b><span>NOV</span></span>
-            <div>
-              <h3>Jornada de puertas abiertas</h3>
-              <p>[Ciudad] · [Lugar] · Presentación de los grupos de trabajo.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
+        <p>Nos oponemos a las divisiones desgastadas de la lucha política de derechas e izquierdas. Nuestra Tercera Posición en Uruguay debe enfocarse en romper con el orden liberal, partidocrático y masónico que nos ha acompañado a lo largo de la historia. Y es acá donde se encuentra el enfoque principal del movimiento: la construcción de un orden nuevo, porque se ha llegado al punto en el cual las instituciones no son simplemente pervertidas, sino que son incapaces de generar algo diminutamente positivo como por lo menos solían hacer.</p>
 
-  <section id="aporta" class="band">
-    <div class="wrap">
-      <div class="band__head">
-        <span class="label">Aporta</span>
-        <h2>Un movimiento se sostiene con quienes lo forman.</h2>
-      </div>
-      <p class="give-lead">No dependemos de grandes intereses. Cada aportación, por pequeña que sea, se traduce en calle, formación y actos abiertos. Elige la forma que te encaje.</p>
-      <div class="tiers">
-        <div class="tier">
-          <span class="tier__name">Simpatizante</span>
-          <span class="tier__amount">$ [importe]</span>
-          <span class="tier__use">Aportación única. Materiales de difusión y acciones de calle.</span>
-        </div>
-        <div class="tier">
-          <span class="tier__name">Militante</span>
-          <span class="tier__amount">$ [importe]/mes</span>
-          <span class="tier__use">Cuota periódica. Sostiene la estructura local y la formación de cuadros.</span>
-        </div>
-        <div class="tier">
-          <span class="tier__name">Colaborador</span>
-          <span class="tier__amount">$ [importe]</span>
-          <span class="tier__use">Aportación mayor destinada a actos públicos y campañas concretas.</span>
-        </div>
-      </div>
-      <p class="give-note">
-        El cobro de aportaciones requiere una pasarela de pago y debe ajustarse a la Ley de Partidos Políticos del Uruguay (Ley N.º 18.485) y a la normativa de la Corte Electoral; este bloque es informativo mientras se habilita. Publicamos las cuentas del movimiento cada trimestre en <a href="#">transparencia</a>. Importes en pesos uruguayos. <em>[Límites y textos legales por validar con asesoría]</em>
-      </p>
-    </div>
-  </section>
+        <p>El orden actual de las cosas, tanto social como política y económicamente, no soportará mucho más. Es cuestión de tiempo para que el país colapse, y la razón de ello es que, en vez de destinar esfuerzos en la construcción de un proyecto nacional, se ha seguido con la lucha partidocrática; se ha mantenido la discusión política en aquella falsa y dañina polarización de izquierdas y derechas que limita el debate político y manipula a la gente desesperada. En los últimos cuarenta años se ha visto una destrucción promovida desde la democracia liberal de nuestra economía, nuestra educación, nuestra seguridad y nuestra sociedad entera: de los pilares básicos de cualquier país. En definitiva se destruye, no por causas foráneas sino cercanas, la totalidad de la nación.</p>
 
-  <section id="sumate" class="band join">
-    <div class="wrap">
-      <div class="join-grid">
-        <div>
-          <span class="label" style="color:var(--gold-text)">Súmate</span>
-          <h2>Da el paso.</h2>
-          <p>Déjanos tus datos y te contamos cómo participar en el grupo de trabajo más cercano a ti.</p>
-        </div>
-        <div>
-          <form class="join-form" id="joinForm" novalidate>
-            <div class="field">
-              <label for="jf-name">Nombre y apellidos</label>
-              <input id="jf-name" name="name" type="text" autocomplete="name" required />
-            </div>
-            <div class="field">
-              <label for="jf-email">Correo electrónico</label>
-              <input id="jf-email" name="email" type="email" autocomplete="email" required />
-            </div>
-            <div class="field">
-              <label for="jf-prov">Departamento</label>
-              <select id="jf-prov" name="province">
-                <option value="">Selecciona…</option>
-                <option>Montevideo</option>
-                <option>Canelones</option>
-                <option>Maldonado</option>
-                <option>Colonia</option>
-                <option>Salto</option>
-                <option>Otro (interior)</option>
-                <option>Exterior</option>
-              </select>
-            </div>
-            <label class="consent">
-              <input type="checkbox" name="consent" required />
-              <span>He leído y acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos para fines del movimiento.</span>
-            </label>
-            <button class="btn" type="submit">Súmate</button>
-          </form>
-        </div>
+        <p>¿Cuál es la situación nacional tras tantos años de palabrería democrática y liberal? La educación arruinada, la industria nacional destruida hasta casi su inexistencia, nuestra cultura convertida en un espectáculo babilónico, la partidocracia cada vez más dañina, los suicidios aumentando cada año, el empleo que ya no es sinónimo de estabilidad, la riqueza natural de nuestros suelos y ríos robada por agentes internacionales sin patria, la usura y la deuda que esclavizan a cada hombre y mujer. La natalidad cae en picada. Nuestro capital humano desaparece.</p>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section>
+      <span class="label">El horizonte</span>
+      <h2>Un Uruguay sano, virtuoso y unido</h2>
+      <div class="prose">
+        <p>Resurgir Nacional sueña con un Uruguay sano, virtuoso y unido, donde cada ciudadano se sienta orgulloso de su identidad y de su patria. Un país que honra su verdadero legado cultural y que avanza hacia un futuro donde la familia, la fe y el trabajo sean sinónimos de esperanza y grandeza. Queremos ser un ejemplo de fortaleza y determinación, encendiendo la chispa del renacimiento cristiano y nacionalista en cada rincón de nuestra tierra.</p>
+        <p>Buscamos, en definitiva, lo que ha hecho grande a los pueblos. Para ello, Resurgir Nacional decide seguir los siguientes valores.</p>
+      </div>
+    </section>
+
+    <section>
+      <span class="label">Nuestros valores</span>
+      <h2>Doce principios</h2>
+      <ol class="values">
+        <li class="value"><span class="value__n" aria-hidden="true">01</span><div><h3>Orgullo Nacional</h3><p>Creemos en un Uruguay soberano, fuerte y decidido a proteger su identidad y su historia.</p></div></li>
+        <li class="value"><span class="value__n" aria-hidden="true">02</span><div><h3>Valores Cristianos</h3><p>Nos guiamos por la luz de los valores cristianos, que nos inspiran a vivir con justicia y dignidad.</p></div></li>
+        <li class="value"><span class="value__n" aria-hidden="true">03</span><div><h3>Familia, pilar de la Nación</h3><p>Defendemos la familia como el núcleo de nuestra sociedad y la base de un futuro próspero.</p></div></li>
+        <li class="value"><span class="value__n" aria-hidden="true">04</span><div><h3>Salud y fortaleza física</h3><p>Promovemos una vida sana, con alimentación natural, fuerza física y vigor espiritual como cimientos de un pueblo invencible.</p></div></li>
+        <li class="value"><span class="value__n" aria-hidden="true">05</span><div><h3>Defensa de la tierra</h3><p>Nuestra riqueza está en la tierra: es con ella donde nacen nuestras industrias madres. Protegemos la ganadería tradicional como símbolo de nuestra cultura y sustento de nuestra soberanía alimentaria.</p></div></li>
+        <li class="value"><span class="value__n" aria-hidden="true">06</span><div><h3>Resistencia al globalismo</h3><p>Nos oponemos al globalismo, a la ideología de género y a la cultura degenerada que promueve la hipersexualización, la apología a la delincuencia y la descomposición moral, defendiendo nuestras tradiciones y valores nacionales.</p></div></li>
+        <li class="value"><span class="value__n" aria-hidden="true">07</span><div><h3>Unidad y solidaridad nacional</h3><p>Creemos en el poder de la comunidad y en la colaboración para construir un Uruguay unido y solidario.</p></div></li>
+        <li class="value"><span class="value__n" aria-hidden="true">08</span><div><h3>Disciplina</h3><p>Trabajamos con inteligencia, perseverancia y determinación, con voluntad, buscando gente que quiera aportar de verdad a Resurgir Nacional, siguiendo el ejemplo de quienes han sabido defender sus ideales.</p></div></li>
+        <li class="value"><span class="value__n" aria-hidden="true">09</span><div><h3>Preservación cultural</h3><p>Resistimos con orgullo cualquier intento de borrar nuestras tradiciones y buscamos fortalecer el legado de nuestra identidad nacional.</p></div></li>
+        <li class="value"><span class="value__n" aria-hidden="true">10</span><div><h3>Anti-liberalismo</h3><p>Nuestro movimiento condena y condenará siempre al liberalismo que provoca decadencia y enajenación a nuestra patria. Todo orden político debe estar subordinado a un orden superior, a Dios. El liberalismo destruye todos los sanos valores que buscamos preservar y fortalecer.</p></div></li>
+        <li class="value"><span class="value__n" aria-hidden="true">11</span><div><h3>Anti-marxismo</h3><p>Nuestro movimiento condena y condenará al marxismo y su materialismo, profundamente dañinos para la prosperidad del Uruguay. El marxismo atenta contra nuestra fe y nuestra forma de ver el mundo, que es una concepción espiritual y trascendental.</p></div></li>
+        <li class="value"><span class="value__n" aria-hidden="true">12</span><div><h3>Anti-democratismo liberal</h3><p>Nuestro movimiento ve claramente que el mal que padece nuestra patria se encuentra de raíz en el sistema político imperante. No hay futuro, desarrollo, prosperidad ni proyecto nacional posible con este sistema. La necesidad de un orden político auténtico y orgánico, subordinado al orden superior de la fe, es hoy más necesaria que nunca.</p></div></li>
+      </ol>
+    </section>
+
+    <section>
+      <span class="label">Estructura de acción</span>
+      <h2>Un espacio cultural, social y estratégico apartidario</h2>
+      <div class="prose">
+        <p>Nuestra misión actual es crear un espacio cultural, social y estratégico apartidario. El objetivo ahora es ser un lugar de reflexión, militancia y planificación.</p>
+        <p>Para sostener la estructura interna del movimiento se establece una cuota mensual de cada miembro de mínimo 70 pesos, y de 50 pesos para estudiantes o padres. El dinero recaudado se destina a las actividades de RN. La cuota es flexible según la situación económica de cada integrante: no pagarla no es motivo de expulsión ni impide el acceso al movimiento, pero el integrante debe aclarar su situación antes de ingresar.</p>
+        <p>Para ingresar a Resurgir Nacional es necesario pasar por una entrevista virtual (Google Meet, Jitsi, Zoom o Discord) con una serie de preguntas de índole política, religiosa y cultural.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>$ 70/mes</b><span>Cuota general (mínimo)</span></div>
+        <div class="fact"><b>$ 50/mes</b><span>Estudiantes y padres</span></div>
+        <div class="fact"><b>Entrevista</b><span>Ingreso previa entrevista virtual</span></div>
+      </div>
+    </section>
+
+    <section>
+      <span class="label">Actividades</span>
+      <h2>Cómo trabajamos</h2>
+      <div class="acts">
+        <article class="act"><h3>Debates</h3><p>Debates sobre temas políticos, sociales, económicos y culturales. Un espacio para discutir sin presiones externas, con análisis profundo.</p></article>
+        <article class="act"><h3>Propaganda</h3><p>Jornadas de propaganda callejera con consignas ligadas a las problemáticas del país. Parte de lo recaudado por la cuota se destina a afiches, pegatinas, carteleras, grafitis, banderas y demás.</p></article>
+        <article class="act"><h3>Acciones sociales</h3><p>Trabajos de carácter social sin ánimo de lucro: donaciones de ropa y alimento a iglesias, hospitales, policlínicas, zonas periféricas, orfanatos, familias necesitadas, personas sin techo y personas con discapacidad. Se destina parte de la cuota cuando es necesario.</p></article>
+        <article class="act"><h3>Redes sociales</h3><p>Las redes y los medios modernos son fundamentales en la batalla cultural. Usamos TikTok, YouTube, Twitter, Instagram y Telegram para difundir públicamente nuestra visión y nuestro trabajo.</p></article>
+        <article class="act"><h3>Trabajo intelectual</h3><p>El trabajo intelectual enriquece al movimiento y a la Tercera Posición. Difundimos textos de diversas temáticas, presentaciones, podcasts sobre actualidad, historia, política y filosofía, y entrevistas a personas de interés.</p></article>
+        <article class="act"><h3>Ejercicio espiritual</h3><p>Resurgir Nacional tiene una base fuertemente católica. Compartimos invitaciones a misas y rosarios e incentivamos a asistir en grupo a las actividades católicas para cultivar la fe en comunidad. Cristianos de otras denominaciones, ateos y agnósticos pueden unirse y participar siempre que respeten la base religiosa del movimiento.</p></article>
+        <article class="act"><h3>Afiliación política</h3><p>Votantes de CA, FA, PC, PN, IS y demás partidos pueden formar parte del movimiento. Se pide mantener separadas la pertenencia a Resurgir Nacional y la militancia partidaria individual.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <span class="label">Contacto</span>
+      <h2>Escríbenos</h2>
+      <div class="contact">
+        <a href="mailto:resurgirnacionaluruguay@gmail.com">resurgirnacionaluruguay@gmail.com</a>
+        <a href="mailto:resurgirnacional@proton.me">resurgirnacional@proton.me</a>
+      </div>
+    </section>
+  </div>
 </main>
 
 <footer class="site-footer">
@@ -572,48 +263,21 @@
         </span>
       </div>
       <nav class="footer-links" aria-label="Pie">
-        <a href="#ideario">Ideario</a>
-        <a href="https://avvedit-creator.github.io/resurgirnacionaluy/vision.html">Visión</a>
-        <a href="#propuestas">Propuestas</a>
-        <a href="#actualidad">Actualidad</a>
-        <a href="#aporta">Aporta</a>
-        <a href="#sumate">Súmate</a>
-        <a href="#">Prensa</a>
-        <a href="#">Contacto</a>
+        <a href="https://avvedit-creator.github.io/resurgirnacionaluy/">Inicio</a>
+        <a href="vision.html">Visión</a>
+        <a href="https://avvedit-creator.github.io/resurgirnacionaluy/#aporta">Aporta</a>
+        <a href="https://avvedit-creator.github.io/resurgirnacionaluy/#sumate">Súmate</a>
+        <a href="mailto:resurgirnacionaluruguay@gmail.com">Contacto</a>
       </nav>
     </div>
-    <div class="footer-symbols" aria-label="Símbolos del movimiento">
-      <span class="col-title" style="color:#E7C978;border-color:rgba(255,255,255,0.15)">Símbolos</span>
-      <div>
-        <svg viewBox="0 0 400 400" role="img" aria-label="Emblema"><use href="#rn-emblem" /></svg>
-        <svg viewBox="0 0 300 169" role="img" aria-label="Bandera del movimiento"><use href="#rn-flag" /></svg>
-      </div>
-    </div>
     <p class="footer-legal">
-      <span class="draft-badge">Borrador de diseño</span>&nbsp; Contenido, cifras, fechas y textos legales provisionales, pendientes de validación.
+      <span class="draft-badge">Borrador de diseño</span>&nbsp; Transcripción del documento «Visión del Resurgir Nacional». Los textos legales del movimiento están pendientes de validación.
       <br /><br />
-      Resurgir Nacional — movimiento nacionalista del Uruguay. Contacto: resurgirnacionaluruguay@gmail.com · resurgirnacional@proton.me. [Naturaleza jurídica pendiente de definición.] © <span id="year">2026</span> Resurgir Nacional.
+      Resurgir Nacional — movimiento nacionalista del Uruguay. Contacto: resurgirnacionaluruguay@gmail.com · resurgirnacional@proton.me. © <span id="year">2026</span> Resurgir Nacional.
     </p>
   </div>
 </footer>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Join form — front-end demonstration only. Nothing is sent or stored.
-  const form = document.getElementById('joinForm');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const name = (form.name.value || '').trim();
-    const email = (form.email.value || '').trim();
-    if (!name || !email || !form.consent.checked) {
-      form.reportValidity();
-      return;
-    }
-    const done = document.createElement('div');
-    done.className = 'form-done';
-    done.setAttribute('role', 'status');
-    done.textContent = 'Gracias, ' + name + '. Te escribiremos a ' + email + '. (Demostración: no se ha enviado ni guardado ningún dato.)';
-    form.replaceWith(done);
-  });
 </script>
