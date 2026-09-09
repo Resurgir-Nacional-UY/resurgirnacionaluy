@@ -354,6 +354,9 @@
   #sumate .band__head { margin-bottom: 1.4rem; }
   #sumate .prose-block { gap: 0.7rem; }
   #sumate .prose-block .contact-lines { margin-top: 0.35rem; }
+  #sumate .prose-block, #sumate .prose-block p { color: var(--ink); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #sumate .prose-block, :root:not([data-theme="light"]) #sumate .prose-block p { color: #FFFFFF; } }
+  :root[data-theme="dark"] #sumate .prose-block, :root[data-theme="dark"] #sumate .prose-block p { color: #FFFFFF; }
 </style>
 </head>
 <body style="margin:0">
