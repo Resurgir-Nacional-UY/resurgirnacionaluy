@@ -330,16 +330,20 @@
       linear-gradient(180deg, rgba(8,17,32,0.54) 0%, rgba(6,13,26,0.68) 100%),
       radial-gradient(90% 84% at 50% 48%, rgba(6,12,24,0.50) 0%, rgba(6,12,24,0.12) 84%); }
   #aporta > .wrap { position: relative; z-index: 1; }
-  #aporta .band__head .label,
-  #aporta .give-online .label { color: #E7C978; }
-  #aporta .band__head h2 { color: #F4F2EA; }
-  #aporta .tiers { border-top-color: rgba(255,255,255,0.72); }
-  #aporta .tier { border-bottom-color: rgba(255,255,255,0.14); }
-  #aporta .tier__name { color: #F4F2EA; }
-  #aporta .tier__amount { color: #86B4EE; }
-  #aporta .tier__use { color: #BFC7D2; }
-  #aporta .give-note { color: #DCE1E9; }
-  #aporta .give-online a { color: #A7CBF3; }
+  #aporta .band__head .label, #aporta .band__head h2, #aporta .tier__name,
+  #aporta .tier__amount, #aporta .tier__use, #aporta .give-note,
+  #aporta .give-online .label, #aporta .give-online a {
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6), 0 3px 14px rgba(0,0,0,0.45);
+  }
+  #aporta .band__head .label, #aporta .give-online .label { color: #F0CE86; }
+  #aporta .band__head h2 { color: #FFFFFF; }
+  #aporta .tiers { border-top-color: rgba(255,255,255,0.9); }
+  #aporta .tier { border-bottom-color: rgba(255,255,255,0.22); }
+  #aporta .tier__name { color: #FFFFFF; }
+  #aporta .tier__amount { color: #A6CBF7; font-weight: 800; }
+  #aporta .tier__use { color: #DDE3EC; }
+  #aporta .give-note { color: #F1F4F8; }
+  #aporta .give-online a { color: #B9D6F7; }
   @media (prefers-reduced-motion: reduce) { .aporta__video { display: none; } }
 </style>
 </head>
