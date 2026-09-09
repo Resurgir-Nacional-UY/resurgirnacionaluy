@@ -322,6 +322,25 @@
     .hero__flag, .doc-hero__flag { animation: rn-drift 40s ease-in-out infinite alternate; }
   }
   @keyframes rn-drift { from { transform: scale(1.08); } to { transform: scale(1.15) translate(-2%, -1.2%); } }
+  /* ---------- Aportar (fondo: mapa de Uruguay) ---------- */
+  #aporta { position: relative; overflow: hidden; isolation: isolate; background: #0b1930; color: #E9E6DE; border-bottom-color: rgba(255,255,255,0.12); }
+  .aporta__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; z-index: -2; opacity: 0.85; filter: brightness(0.72) blur(1px); transform: scale(1.05); pointer-events: none; }
+  .aporta__scrim { position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(8,17,32,0.80) 0%, rgba(6,13,26,0.90) 100%),
+      radial-gradient(85% 80% at 50% 50%, rgba(6,12,24,0.72) 0%, rgba(6,12,24,0.16) 78%); }
+  #aporta > .wrap { position: relative; z-index: 1; }
+  #aporta .band__head .label,
+  #aporta .give-online .label { color: #E7C978; }
+  #aporta .band__head h2 { color: #F4F2EA; }
+  #aporta .tiers { border-top-color: rgba(255,255,255,0.72); }
+  #aporta .tier { border-bottom-color: rgba(255,255,255,0.14); }
+  #aporta .tier__name { color: #F4F2EA; }
+  #aporta .tier__amount { color: #86B4EE; }
+  #aporta .tier__use { color: #BFC7D2; }
+  #aporta .give-note { color: #AAB3C0; }
+  #aporta .give-online a { color: #A7CBF3; }
+  @media (prefers-reduced-motion: reduce) { .aporta__video { display: none; } }
 </style>
 </head>
 <body style="margin:0">
@@ -407,6 +426,11 @@
   </section>
 
   <section id="aporta" class="band">
+    <video class="aporta__video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"
+           poster="aportar_poster.jpg">
+      <source src="aportar.mp4" type="video/mp4" />
+    </video>
+    <div class="aporta__scrim" aria-hidden="true"></div>
     <div class="wrap">
       <div class="band__head">
         <span class="label">Aportar</span>
