@@ -324,11 +324,11 @@
   @keyframes rn-drift { from { transform: scale(1.08); } to { transform: scale(1.15) translate(-2%, -1.2%); } }
   /* ---------- Aportar (fondo: mapa de Uruguay) ---------- */
   #aporta { position: relative; overflow: hidden; isolation: isolate; background: #0b1930; color: #E9E6DE; border-bottom-color: rgba(255,255,255,0.12); }
-  .aporta__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; z-index: -2; opacity: 0.85; filter: brightness(0.72) blur(1px); transform: scale(1.05); pointer-events: none; }
+  .aporta__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; z-index: -2; opacity: 1; filter: brightness(0.9) contrast(1.08); transform: scale(1.04); pointer-events: none; }
   .aporta__scrim { position: absolute; inset: 0; z-index: -1; pointer-events: none;
     background:
-      linear-gradient(180deg, rgba(8,17,32,0.80) 0%, rgba(6,13,26,0.90) 100%),
-      radial-gradient(85% 80% at 50% 50%, rgba(6,12,24,0.72) 0%, rgba(6,12,24,0.16) 78%); }
+      linear-gradient(180deg, rgba(8,17,32,0.52) 0%, rgba(6,13,26,0.68) 100%),
+      radial-gradient(88% 82% at 50% 48%, rgba(6,12,24,0.54) 0%, rgba(6,12,24,0.10) 82%); }
   #aporta > .wrap { position: relative; z-index: 1; }
   #aporta .band__head .label,
   #aporta .give-online .label { color: #E7C978; }
@@ -552,6 +552,14 @@
       else io.observe(el);
     });
     setTimeout(function () { items.forEach(show); }, 1500);
+
+    var av = document.querySelector('.aporta__video');
+    if (av) {
+      var slow = function () { try { av.playbackRate = 0.75; } catch (e) {} };
+      slow();
+      av.addEventListener('loadedmetadata', slow);
+      av.addEventListener('play', slow);
+    }
   })();
 </script>
 
