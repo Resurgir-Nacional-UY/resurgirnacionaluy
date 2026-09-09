@@ -271,6 +271,23 @@
     color: var(--gold-text); border: 1px solid var(--gold-line);
     padding: 0.15rem 0.45rem; border-radius: 2px; white-space: nowrap;
   }
+  /* ---------- Escarapela girando (sección Visión) ---------- */
+  #ideario { position: relative; overflow: hidden; }
+  #ideario > .wrap { position: relative; z-index: 1; }
+  .ideario-cockade {
+    position: absolute; z-index: 0; pointer-events: none;
+    top: clamp(1.75rem, 6vw, 4.5rem); right: clamp(1rem, 5vw, 4rem);
+    width: clamp(76px, 12vw, 150px); height: auto;
+    opacity: 0.9; transform-origin: center;
+    filter: drop-shadow(0 8px 20px rgba(0,54,163,0.20));
+  }
+  @media (max-width: 760px) { .ideario-cockade { width: 60px; opacity: 0.45; top: 1.25rem; right: 1rem; } }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .ideario-cockade { opacity: 0.75; } }
+  :root[data-theme="dark"] .ideario-cockade { opacity: 0.75; }
+  @media (prefers-reduced-motion: no-preference) {
+    .ideario-cockade { animation: rn-cockade-spin 26s linear infinite; }
+  }
+  @keyframes rn-cockade-spin { to { transform: rotate(360deg); } }
   /* ---------- Lista de valores (resumen) ---------- */
   .vlist { margin-top: 1.6rem; max-width: 780px; columns: 2; column-gap: 2.75rem; }
   .vlist li { break-inside: avoid; padding: 0.7rem 0; border-top: 1px solid var(--line); }
@@ -419,6 +436,15 @@
   </section>
 
   <section id="ideario" class="band">
+    <svg class="ideario-cockade" viewBox="-300 -300 600 600" aria-hidden="true" fill="#0036A3">
+      <g id="k-d"><g id="k-c"><g id="k-b"><g id="k-a">
+        <path fill="#fff" d="m0,0l37,281a40,30 0 0 1-74,0"/>
+        <path d="m32,245a34,26 0 0 1-65,0l5-35a30,23 0 0 0 56,0M23,175a26,22 0 0 1-47,0l5-35a20,18 0 0 0 37,0M0,0l14,105a16,14 0 0 1-28,0"/>
+        <path fill="#0000001a" d="m0,0v300a42,30 0 0 1-37-19"/>
+      </g><use href="#k-a" transform="rotate(15)"/><use href="#k-a" transform="rotate(30)"/></g><use href="#k-b" transform="rotate(45)"/></g><use href="#k-c" transform="rotate(90)"/></g><use href="#k-d" transform="scale(-1)"/>
+      <circle r="70" fill="#fff" stroke="#e5e5e5" stroke-width="10"/>
+      <circle r="37"/>
+    </svg>
     <div class="wrap">
       <div class="band__head">
         <span class="label">Visión</span>
