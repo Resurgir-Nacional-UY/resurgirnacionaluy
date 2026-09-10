@@ -10,9 +10,6 @@ draft: false
 
 (De entre los muchos materiales que recibimos de amigos o colaboradores, compartimos este texto perteneciente a Orlando Almada, con su debida autorización)
 
-
-
-
 La resignificación de los valores patrióticos a menudo es percibida como un proceso de denigración. Los símbolos, rituales y narrativas que históricamente han cimentado el sentimiento de pertenencia a una nación, como el himno, la bandera, los héroes nacionales y la historia compartida son hoy objeto de un intenso escrutinio crítico.
 
 Esta crítica surge de la reevaluación de los fundamentos históricos de la nación-estado, influenciados por una filosofía política que no ve en estos valores algo superior a resaltar.
@@ -26,7 +23,6 @@ CONTEXTO SOCIAL: En el ámbito social, esta resignificación se manifiesta y pro
 El patriotismo es a veces tildado de nacionalismo ciego, un sentimiento que ignora la diversidad interna y las responsabilidades globales, la típica dicotomía progresista de ver el individualismo contrapuesto a un individuo integrado e interactuando en sociedad, una individualidad producto de una sociedad y no un individuo libre y con derechos por el solo hecho de existir.
 
 El resultado de esta denigración es que los valores patrióticos pierden su carácter sagrado y unificador, siendo relegados a un segundo plano o incluso estigmatizados. La identidad ya no se basa únicamente en la pertenencia a una nación, sino en múltiples identidades fluidas y transnacionales.
-
 
 RESIGNIFICACIÓN DE LOS VALORES PATRIÓTICOS.
 
@@ -56,12 +52,6 @@ Por eso la PATRIA... es algo más que individuos y voluntades.
 
 La patria es en los hechos, el fruto de la ofrenda que cada individuo genera, a cada paso, a cada día, cuando en un MISMO SENTIDO y hacia un MISMO DESTINO proyecta el espíritu singular que lo distingue...
 
-
-
-
 -Orlando Almada.
-
-
-
 
 (Publicación original en la revista Opinar, Núm. 795, lunes 22 de septiembre de 2025, Edición digital)
