@@ -5,139 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#14315C" />
 <style>*{box-sizing:border-box}img{max-width:100%;height:auto}[hidden]{display:none!important}</style>
-<title>Resurgir Nacional</title>
-<meta name="description" content="Resurgir Nacional: movimiento nacionalista del Uruguay. Visión, cómo aportar y cómo sumarse." />
+<title>Formación</title>
+<meta name="description" content="Formación — Resurgir Nacional: video de presentación y artículos del movimiento." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" />
 
 <style>
   :root {
-    /* --- Emblem literal colours (do not change with theme) --- */
-    --rn-blue: #2E5EA8;
-    --rn-blue-deep: #2B60B0;
-    --rn-ink: #0A0C11;
-    --rn-gold: #C6A24C;
-
-    /* --- Light palette --- */
-    --bg: #F4F2EA;
-    --surface: #FBFAF5;
-    --ink: #12151C;
-    --ink-soft: #45505F;
-    --line: #DAD5C5;
-    --blue: #1E4E8F;
-    --blue-bright: #2E5EA8;
-    --gold-text: #9A7A2E;
-    --gold-line: #C6A24C;
-    --focus: #9A7A2E;
-
-    --gutter: clamp(1.25rem, 5vw, 4rem);
-    --measure: 65ch;
-    --header-h: 68px;
-
+    --rn-blue: #2E5EA8; --rn-blue-deep: #2B60B0; --rn-ink: #0A0C11; --rn-gold: #C6A24C;
+    --bg: #F4F2EA; --surface: #FBFAF5; --ink: #12151C; --ink-soft: #45505F; --line: #DAD5C5;
+    --blue: #1E4E8F; --gold-text: #9A7A2E; --gold-line: #C6A24C; --focus: #9A7A2E;
+    --gutter: clamp(1.25rem, 5vw, 4rem); --measure: 66ch; --header-h: 68px;
     --step--1: clamp(0.78rem, 0.74rem + 0.18vw, 0.86rem);
     --step-0: clamp(1.06rem, 1rem + 0.28vw, 1.2rem);
     --step-1: clamp(1.25rem, 1.15rem + 0.5vw, 1.6rem);
     --step-2: clamp(1.6rem, 1.4rem + 1vw, 2.4rem);
-    --step-3: clamp(2.4rem, 1.9rem + 2.6vw, 4.4rem);
+    --step-3: clamp(2.2rem, 1.8rem + 2.2vw, 3.6rem);
   }
-
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #0E1116;
-      --surface: #161B22;
-      --ink: #E9E6DE;
-      --ink-soft: #9BA4B1;
-      --line: #262C36;
-      --blue: #78A6E0;
-      --blue-bright: #3E74BE;
-      --gold-text: #D4B15E;
-      --gold-line: #8C7331;
-      --focus: #D4B15E;
+      --bg: #0E1116; --surface: #161B22; --ink: #E9E6DE; --ink-soft: #9BA4B1; --line: #262C36;
+      --blue: #78A6E0; --gold-text: #D4B15E; --gold-line: #8C7331; --focus: #D4B15E;
     }
   }
-
   :root[data-theme="dark"] {
-    --bg: #0E1116;
-    --surface: #161B22;
-    --ink: #E9E6DE;
-    --ink-soft: #9BA4B1;
-    --line: #262C36;
-    --blue: #78A6E0;
-    --blue-bright: #3E74BE;
-    --gold-text: #D4B15E;
-    --gold-line: #8C7331;
-    --focus: #D4B15E;
+    --bg: #0E1116; --surface: #161B22; --ink: #E9E6DE; --ink-soft: #9BA4B1; --line: #262C36;
+    --blue: #78A6E0; --gold-text: #D4B15E; --gold-line: #8C7331; --focus: #D4B15E;
   }
 
   * { box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
-
   body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
+    margin: 0; background: var(--bg); color: var(--ink);
     font-family: "Newsreader", Georgia, "Times New Roman", serif;
-    font-size: var(--step-0);
-    line-height: 1.7;
-    font-optical-sizing: auto;
-    -webkit-font-smoothing: antialiased;
+    font-size: var(--step-0); line-height: 1.75;
+    font-optical-sizing: auto; -webkit-font-smoothing: antialiased;
   }
-
-  h1, h2, h3 {
-    font-family: "Fraunces", Georgia, serif;
-    font-weight: 500;
-    line-height: 1.1;
-    text-wrap: balance;
-    margin: 0;
-  }
-
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 500; line-height: 1.12; text-wrap: balance; margin: 0; }
   p { margin: 0; }
-  a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-
-  .label {
-    font-family: "Archivo", system-ui, sans-serif;
-    font-weight: 600;
-    font-size: var(--step--1);
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-  }
-
-  :focus-visible {
-    outline: 2px solid var(--focus);
-    outline-offset: 3px;
-    border-radius: 2px;
-  }
-
-  .wrap {
-    max-width: 1120px;
-    margin-inline: auto;
-    padding-inline: var(--gutter);
-  }
-
-  section { scroll-margin-top: calc(var(--header-h) + 1rem); }
-
-  /* ---------- Emblem ---------- */
+  a { color: var(--blue); text-underline-offset: 3px; }
+  .label { font-family: "Archivo", system-ui, sans-serif; font-weight: 600; font-size: var(--step--1); letter-spacing: 0.16em; text-transform: uppercase; }
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 2px; }
+  .wrap { max-width: 1120px; margin-inline: auto; padding-inline: var(--gutter); }
   .emblem { display: block; width: 100%; height: auto; }
 
-  /* ---------- Header ---------- */
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    background: color-mix(in srgb, var(--bg) 86%, transparent);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line);
-  }
-  .site-header .wrap {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    min-height: var(--header-h);
-    padding-block: 0.6rem;
-    flex-wrap: wrap;
-  }
+  /* Header */
+  .site-header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .site-header .wrap { display: flex; align-items: center; gap: 1.5rem; min-height: var(--header-h); padding-block: 0.6rem; flex-wrap: wrap; }
   .brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; color: inherit; margin-right: auto; }
   .brand .emblem { width: 42px; }
   .brand-name { font-family: "Archivo", sans-serif; font-weight: 700; letter-spacing: 0.1em; font-size: 0.95rem; line-height: 1; }
@@ -145,115 +60,51 @@
   .nav { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
   .nav a { color: var(--ink-soft); text-decoration: none; font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; padding-block: 0.3rem; border-bottom: 2px solid transparent; }
   .nav a:hover { color: var(--ink); border-color: var(--gold-line); }
+  .nav a[aria-current="page"] { color: var(--ink); border-color: var(--gold-line); }
 
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: "Archivo", sans-serif;
-    font-weight: 700;
-    font-size: 0.82rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 0.7rem 1.15rem;
-    border-radius: 2px;
-    border: 1px solid #1E4E8F;
-    background: #1E4E8F;
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background 0.15s ease, color 0.15s ease;
-  }
+  .btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: "Archivo", sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.7rem 1.15rem; border-radius: 2px; border: 1px solid #1E4E8F; background: #1E4E8F; color: #fff; text-decoration: none; cursor: pointer; transition: background 0.15s ease; }
   .btn:hover { background: #16386a; border-color: #16386a; }
   .nav a.btn, .nav a.btn:hover { color: #fff; }
-  .btn--ghost { background: transparent; color: var(--blue); }
-  .btn--ghost:hover { background: color-mix(in srgb, var(--blue) 12%, transparent); color: var(--blue); }
-  .btn--light { background: #F4F2EA; border-color: #F4F2EA; color: #16386a; }
-  .btn--light:hover { background: #fff; border-color: #fff; color: #16386a; }
   .btn--outline-light { background: transparent; border-color: rgba(255,255,255,0.55); color: #fff; }
-  .btn--outline-light:hover { background: rgba(255,255,255,0.12); border-color: #fff; color: #fff; }
-  .nav-cross { display: inline-block; width: auto; height: 0.95em; margin-left: 0.42em; vertical-align: -0.06em; }
+  .btn--outline-light:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
 
-  /* ---------- Hero (committed dark-blue band) ---------- */
-  .hero {
-    position: relative;
-    overflow: hidden;
-    background: radial-gradient(120% 120% at 50% 0%, #24579C 0%, #1B3F73 45%, #14315C 100%);
-    color: #F4F2EA;
-    isolation: isolate;
-  }
-  .hero__flag {
-    position: absolute; inset: 0; width: 100%; height: 100%;
-    object-fit: cover; object-position: center;
-    transform: scale(1.05); z-index: -2; pointer-events: none;
-    object-position: 62% center;
-    filter: saturate(0.95) blur(1.5px);
-    -webkit-mask: radial-gradient(140% 135% at 50% 36%, #000 22%, transparent 94%);
-    mask: radial-gradient(140% 135% at 50% 36%, #000 22%, transparent 94%);
-  }
-  .hero__scrim {
-    position: absolute; inset: 0; z-index: -1; pointer-events: none;
-    background:
-      linear-gradient(92deg, rgba(11,28,55,0.94) 0%, rgba(14,35,68,0.86) 55%, rgba(12,30,58,0.90) 100%),
-      radial-gradient(65% 85% at 64% 46%, rgba(9,22,44,0.62) 0%, rgba(9,22,44,0) 70%);
-  }
-  .hero .wrap {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: clamp(2rem, 5vw, 4.5rem);
-    align-items: center;
-    padding-block: clamp(3.5rem, 8vw, 6rem);
-  }
-  .hero__eyebrow { color: #E7C978; margin-bottom: 1.4rem; }
-  .hero h1 { font-size: var(--step-3); font-weight: 600; letter-spacing: -0.015em; }
-  .rn-cross { display: inline-block; width: auto; height: 0.72em; margin-left: 0.14em; vertical-align: 0.02em; }
-  .rn-rotate { display: inline-block; text-align: left; color: #F0CE86;
-    text-shadow: 0 2px 22px rgba(240,206,134,0.28);
-    transition: opacity .42s cubic-bezier(.22,1,.36,1), transform .42s cubic-bezier(.22,1,.36,1); }
-  .hero__lead { font-size: var(--step-1); line-height: 1.5; margin-top: 1.4rem; max-width: 46ch; color: #E7E3D6; }
-  .hero__motto {
-    display: flex; align-items: center; gap: 0.9rem;
-    margin-top: 2rem; padding-top: 1.4rem;
-    border-top: 1px solid rgba(231,201,120,0.35);
-    font-family: "Archivo", sans-serif; font-weight: 700;
-    letter-spacing: 0.28em; text-transform: uppercase; font-size: 0.8rem;
-    color: #E7C978;
-  }
-  .hero__cta { display: flex; gap: 0.9rem; margin-top: 2.2rem; flex-wrap: wrap; }
-  .hero__emblem { justify-self: center; width: min(78vw, 400px); }
-  .hero__emblem .emblem { filter: drop-shadow(0 20px 45px rgba(0,0,0,0.35)); }
 
-  @media (prefers-reduced-motion: no-preference) {
-    .hero__emblem { animation: rn-float 9s ease-in-out infinite; }
-  }
-  @keyframes rn-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  /* Document body */
+  .doc { max-width: 900px; margin-inline: auto; padding-inline: var(--gutter); padding-block: clamp(3rem, 7vw, 5rem); }
+  .doc > section + section { margin-top: clamp(3rem, 7vw, 4.5rem); }
+  .doc .label { color: var(--gold-text); display: block; margin-bottom: 0.8rem; }
+  .doc h2 { font-size: var(--step-2); max-width: 20ch; }
+  .prose { max-width: var(--measure); margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.15rem; color: var(--ink); }
+  .prose p { color: var(--ink); }
+  .prose .muted { color: var(--ink-soft); font-size: 0.95rem; }
 
-  /* ---------- Generic section rhythm ---------- */
-  .band { padding-block: clamp(3.5rem, 8vw, 6rem); border-bottom: 1px solid var(--line); }
-  .band__head { max-width: var(--measure); margin-bottom: 2.75rem; }
-  .band__head .label { color: var(--gold-text); display: block; margin-bottom: 0.9rem; }
-  .band__head h2 { font-size: var(--step-2); }
-  .band__head p { color: var(--ink-soft); margin-top: 1rem; }
-  .ideario-intro { color: var(--ink); }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .ideario-intro { color: #FFFFFF; } }
-  :root[data-theme="dark"] .ideario-intro { color: #FFFFFF; }
+  .pullquote { max-width: 30ch; margin: 2rem 0; padding-left: 1.4rem; border-left: 3px solid var(--gold-line); font-family: "Fraunces", serif; font-size: var(--step-1); line-height: 1.3; color: var(--ink); }
 
-  /* ---------- Aporta ---------- */
-  .tiers { margin-top: 2.5rem; border-top: 2px solid var(--ink); }
-  .tier { display: grid; grid-template-columns: 13rem 11rem 1fr; gap: 1.6rem; align-items: baseline; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
-  .tier__name { font-family: "Fraunces", serif; font-size: 1.45rem; }
-  .tier__amount { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--blue); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; white-space: nowrap; }
-  .tier__use { color: var(--ink-soft); font-size: 1.1rem; font-weight: 700; line-height: 1.5; }
-  .give-note { margin-top: 1.75rem; font-size: 1.05rem; font-weight: 600; line-height: 1.55; color: var(--ink-soft); max-width: 62ch; }
-  .give-online { margin-top: 1.6rem; display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
-  .give-online .label { color: var(--gold-text); font-size: 0.98rem; }
-  .give-online a { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 1.15rem; letter-spacing: 0.02em; }
-  @media (max-width: 620px) {
-    .tier { grid-template-columns: 1fr auto; column-gap: 1rem; row-gap: 0.3rem; }
-    .tier__use { grid-column: 1 / -1; }
-  }
+  .values { margin-top: 2rem; display: flex; flex-direction: column; }
+  .value { display: grid; grid-template-columns: 3.2rem 1fr; gap: 1.4rem; padding: 1.4rem 0; border-top: 1px solid var(--line); align-items: start; }
+  .value:last-child { border-bottom: 1px solid var(--line); }
+  .value__n { font-family: "Fraunces", serif; font-size: 1.5rem; color: var(--gold-text); line-height: 1; font-variant-numeric: tabular-nums; }
+  .value h3 { font-size: var(--step-1); margin-bottom: 0.4rem; }
+  .value p { color: var(--ink-soft); max-width: 62ch; }
+  @media (max-width: 560px) { .value { grid-template-columns: 1fr; gap: 0.4rem; } }
 
-  /* ---------- Footer ---------- */
+  .facts { margin-top: 1.8rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 2px solid var(--ink); }
+  .fact { padding: 1.2rem 1.2rem 1.2rem 0; border-bottom: 1px solid var(--line); }
+  .fact:not(:first-child) { padding-left: 1.4rem; border-left: 1px solid var(--line); }
+  .fact b { display: block; font-family: "Archivo", sans-serif; font-weight: 700; font-size: 1.35rem; color: var(--blue); }
+  .fact span { font-size: 0.85rem; color: var(--ink-soft); }
+  @media (max-width: 620px) { .facts { grid-template-columns: 1fr; } .fact, .fact:not(:first-child) { padding: 1rem 0; border-left: 0; } }
+
+  .acts { margin-top: 2rem; display: flex; flex-direction: column; }
+  .act { padding: 1.4rem 0; border-top: 1px solid var(--line); max-width: var(--measure); }
+  .act:last-child { border-bottom: 1px solid var(--line); }
+  .act h3 { font-size: 1.2rem; margin-bottom: 0.45rem; }
+  .act p { color: var(--ink-soft); }
+
+  .contact { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.8rem; }
+  .contact a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 1.05rem; letter-spacing: 0.01em; }
+
+  /* Footer */
   .site-footer { background: #14315C; color: #FFFFFF; padding-block: 3.5rem; position: relative; overflow: hidden; isolation: isolate; }
   .site-footer__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; pointer-events: none; }
   .site-footer__scrim { position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(180deg, rgba(19,44,82,0.90) 0%, rgba(10,22,42,0.96) 100%); }
@@ -268,40 +119,7 @@
   .footer-links a { color: #FFFFFF; text-decoration: none; }
   .footer-links a:hover { color: #fff; }
   .footer-legal { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.15); font-size: 0.95rem; line-height: 1.7; color: #FFFFFF; white-space: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .draft-badge {
-    font-family: "Archivo", sans-serif; font-weight: 600;
-    font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--gold-text); border: 1px solid var(--gold-line);
-    padding: 0.15rem 0.45rem; border-radius: 2px; white-space: nowrap;
-  }
-  /* ---------- Escarapela girando (sección Visión) ---------- */
-  #ideario { position: relative; overflow: hidden; }
-  #ideario > .wrap { position: relative; z-index: 1; }
-  .ideario-cockade {
-    position: absolute; z-index: 0; pointer-events: none;
-    top: clamp(1.75rem, 6vw, 4.5rem); right: clamp(1rem, 5vw, 4rem);
-    width: clamp(76px, 12vw, 150px); height: auto;
-    opacity: 0.9; transform-origin: center;
-    filter: drop-shadow(0 8px 20px rgba(0,54,163,0.20));
-  }
-  @media (max-width: 760px) { .ideario-cockade { width: 60px; opacity: 0.45; top: 1.25rem; right: 1rem; } }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .ideario-cockade { opacity: 0.75; } }
-  :root[data-theme="dark"] .ideario-cockade { opacity: 0.75; }
-  @media (prefers-reduced-motion: no-preference) {
-    .ideario-cockade { animation: rn-cockade-spin 26s linear infinite; }
-  }
-  @keyframes rn-cockade-spin { to { transform: rotate(360deg); } }
-  /* ---------- Lista de valores (resumen) ---------- */
-  .vlist { margin-top: 1.6rem; max-width: 780px; columns: 2; column-gap: 2.75rem; }
-  .vlist li { break-inside: avoid; padding: 0.7rem 0; border-top: 1px solid var(--line); }
-  .vlist b { font-family: "Fraunces", serif; font-weight: 500; display: block; }
-  .vlist span { color: var(--ink); font-size: 1.08rem; line-height: 1.5; }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .vlist span { color: #FFFFFF; } }
-  :root[data-theme="dark"] .vlist span { color: #FFFFFF; }
-  @media (max-width: 620px) { .vlist { columns: 1; } }
-  /* ---------- Sumarse ---------- */
-  .prose-block { max-width: var(--measure); display: flex; flex-direction: column; gap: 1.15rem; color: var(--ink-soft); }
-  .contact-lines a { font-family: "Archivo", sans-serif; font-weight: 600; letter-spacing: 0.01em; }
+  .draft-badge { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); border: 1px solid var(--gold-line); padding: 0.15rem 0.45rem; border-radius: 2px; white-space: nowrap; }
   /* ---------- Redes sociales (pie) ---------- */
   .footer-social { margin-top: 2.5rem; display: flex; align-items: center; gap: 1.05rem; flex-wrap: wrap; }
   .footer-social__label { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; color: #E7C978; }
@@ -343,43 +161,22 @@
     html.anim .reveal-stagger.in > *:nth-child(8) { transition-delay: .33s; }
     html.anim .reveal-stagger.in > *:nth-child(9) { transition-delay: .37s; }
     html.anim .reveal-stagger.in > *:nth-child(n+10) { transition-delay: .40s; }
+    .hero__flag, .doc-hero__flag { animation: rn-drift 40s ease-in-out infinite alternate; }
   }
   @keyframes rn-drift { from { transform: scale(1.08); } to { transform: scale(1.15) translate(-2%, -1.2%); } }
-  /* ---------- Aportar (fondo: mapa de Uruguay) ---------- */
-  #aporta { position: relative; overflow: hidden; isolation: isolate; background: #0b1930; color: #E9E6DE; border-bottom-color: rgba(255,255,255,0.12); }
-  .aporta__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; z-index: -2; opacity: 0.95; filter: brightness(0.9) contrast(1.05); transform: scale(1.04); pointer-events: none; }
-  .aporta__scrim { position: absolute; inset: 0; z-index: -1; pointer-events: none;
-    background:
-      linear-gradient(180deg, rgba(8,17,32,0.64) 0%, rgba(6,13,26,0.78) 100%),
-      radial-gradient(90% 84% at 50% 48%, rgba(6,12,24,0.58) 0%, rgba(6,12,24,0.16) 84%); }
-  #aporta > .wrap { position: relative; z-index: 1; }
-  #aporta .band__head .label, #aporta .band__head h2, #aporta .tier__name,
-  #aporta .tier__amount, #aporta .tier__use, #aporta .give-note,
-  #aporta .give-online .label, #aporta .give-online a {
-    text-shadow: 0 1px 2px rgba(0,0,0,0.6), 0 3px 14px rgba(0,0,0,0.45);
-  }
-  #aporta .band__head .label, #aporta .give-online .label { color: #F0CE86; }
-  #aporta .band__head h2 { color: #FFFFFF; }
-  #aporta .tiers { border-top-color: rgba(255,255,255,0.9); }
-  #aporta .tier { border-bottom-color: rgba(255,255,255,0.22); }
-  #aporta .tier__name { color: #FFFFFF; }
-  #aporta .tier__amount { color: #A6CBF7; font-weight: 800; }
-  #aporta .tier__use { color: #FFFFFF; }
-  #aporta .give-note { color: #FFFFFF; }
-  #aporta .give-online a { color: #B9D6F7; }
-  @media (prefers-reduced-motion: reduce) { .aporta__video { display: none; } }
-  /* ---------- Sumarse: más compacto ---------- */
-  #sumate { padding-block: clamp(2.25rem, 4vw, 3.25rem); }
-  #sumate .band__head { margin-bottom: 1.4rem; }
-  #sumate .prose-block { gap: 0.7rem; }
-  #sumate .prose-block .contact-lines { margin-top: 0.35rem; }
-  #sumate .prose-block, #sumate .prose-block p { color: var(--ink); }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #sumate .prose-block, :root:not([data-theme="light"]) #sumate .prose-block p { color: #FFFFFF; } }
-  :root[data-theme="dark"] #sumate .prose-block, :root[data-theme="dark"] #sumate .prose-block p { color: #FFFFFF; }
   /* ---------- Copiar correo al hacer clic ---------- */
   a.mail-copy { cursor: pointer; }
   .copy-toast { position: fixed; left: 50%; bottom: 1.5rem; transform: translateX(-50%) translateY(0.5rem); background: #12151C; color: #F4F2EA; padding: 0.6rem 1.1rem; border-radius: 999px; font-family: "Archivo", system-ui, sans-serif; font-size: 0.82rem; letter-spacing: 0.02em; box-shadow: 0 10px 28px rgba(0,0,0,0.35); opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease; z-index: 9999; }
   .copy-toast.is-on { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .nav-cross { display: inline-block; width: auto; height: 0.95em; margin-left: 0.42em; vertical-align: -0.06em; }
+  .doc h1 { font-size: clamp(2.1rem, 1.7rem + 2vw, 3.2rem); font-weight: 600; letter-spacing: -0.015em; max-width: 18ch; margin-bottom: 0.35rem; }
+  .doc-lead { color: var(--ink-soft); font-size: var(--step-1); margin-bottom: 0.6rem; }
+  .yt-lite { position: relative; margin-top: 1.6rem; aspect-ratio: 16 / 9; max-width: 760px; border-radius: 3px; overflow: hidden; background: #000; cursor: pointer; }
+  .yt-lite__thumb { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .yt-lite__btn { position: absolute; inset: 0; margin: auto; width: 68px; height: 48px; border: 0; background: transparent; padding: 0; cursor: pointer; }
+  .yt-lite__btn svg { width: 100%; height: 100%; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.45)); transition: transform .18s ease; }
+  .yt-lite:hover .yt-lite__btn svg, .yt-lite:focus-within .yt-lite__btn svg { transform: scale(1.08); }
+  .yt-lite iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 </style>
 </head>
 <body style="margin:0">
@@ -401,7 +198,7 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="#top">
+    <a class="brand" href="index.html">
       <svg class="emblem" viewBox="0 0 400 400"><use href="#rn-emblem" /></svg>
       <span>
         <span class="brand-name">RESURGIR NACIONAL</span>
@@ -409,121 +206,45 @@
       </span>
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="#ideario">Visión</a>
+      <a href="index.html#ideario">Visión</a>
       <a href="vision.html">Ideario</a>
       <a href="SagradoCorazondeJesus.html">Fe<svg class="nav-cross" viewBox="0 0 404 564" aria-hidden="true"><use href="#ic-cross" /></svg></a>
-      <a href="formacion.html">Formación</a>
-      <a href="#aporta">Aporta</a>
-      <a class="btn" href="#sumate">Súmate</a>
+      <a href="formacion.html" aria-current="page">Formación</a>
+      <a href="index.html#aporta">Aporta</a>
+      <a class="btn" href="index.html#sumate">Súmate</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
-  <section class="hero">
-    <video class="hero__flag" autoplay muted loop playsinline preload="auto" aria-hidden="true" poster="hero_poster.jpg">
-      <source src="hero.mp4" type="video/mp4" />
-    </video>
-    <div class="hero__scrim" aria-hidden="true"></div>
-    <div class="wrap">
-      <div class="hero__copy">
-        <p class="label hero__eyebrow">Movimiento nacionalista · Tercera Posición</p>
-        <h1>La regeneración <span class="rn-rotate" data-words="espiritual,política,social">espiritual<svg class="rn-cross" viewBox="0 0 404 564" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="80" d="M202 2V562M2 202H402"/></svg></span> del Uruguay.</h1>
-        <p class="hero__lead">Trabajamos fuera del sistema de partidos y del dogma democrático, por un nacionalismo virtuoso y los valores cristianos. Queremos un país donde Dios, la Patria y la Familia vuelvan a ser la base de la sociedad.</p>
-        <div class="hero__cta">
-          <a class="btn btn--light" href="vision.html">Lee nuestro ideario</a>
-          <a class="btn btn--outline-light" href="#sumate">Cómo sumarse</a>
-        </div>
-        <p class="hero__motto"><span aria-hidden="true">◆</span> La Patria o la tumba</p>
-      </div>
-      <div class="hero__emblem">
-        <svg class="emblem" viewBox="0 0 400 400" role="img" aria-label="Emblema de Resurgir Nacional"><use href="#rn-emblem" /></svg>
-      </div>
-    </div>
-  </section>
+<main>
+  <div class="doc">
+    <section>
+      <span class="label">Formación</span>
+      <h1>Formación</h1>
+      <p class="doc-lead">Material para conocer y difundir las ideas del movimiento.</p>
+    </section>
 
-  <section id="ideario" class="band">
-    <svg class="ideario-cockade" viewBox="-300 -300 600 600" aria-hidden="true" fill="#0036A3">
-      <g id="k-d"><g id="k-c"><g id="k-b"><g id="k-a">
-        <path fill="#fff" d="m0,0l37,281a40,30 0 0 1-74,0"/>
-        <path d="m32,245a34,26 0 0 1-65,0l5-35a30,23 0 0 0 56,0M23,175a26,22 0 0 1-47,0l5-35a20,18 0 0 0 37,0M0,0l14,105a16,14 0 0 1-28,0"/>
-        <path fill="#0000001a" d="m0,0v300a42,30 0 0 1-37-19"/>
-      </g><use href="#k-a" transform="rotate(15)"/><use href="#k-a" transform="rotate(30)"/></g><use href="#k-b" transform="rotate(45)"/></g><use href="#k-c" transform="rotate(90)"/></g><use href="#k-d" transform="scale(-1)"/>
-      <circle r="70" fill="#fff" stroke="#e5e5e5" stroke-width="10"/>
-      <circle r="37"/>
-    </svg>
-    <div class="wrap">
-      <div class="band__head">
-        <span class="label">Visión</span>
-        <h2>Dios, Patria y Familia</h2>
-        <p class="ideario-intro">Resurgir Nacional busca la regeneración política, cultural y social del Uruguay desde una Tercera Posición: fuera de la vieja disputa de izquierdas y derechas y del dogma democrático liberal. Estos son los doce valores que nos guían.</p>
+    <section>
+      <span class="label">Video</span>
+      <h2>Esencia de la Democracia · Presentación</h2>
+      <div class="yt-lite" data-id="Glzx6Y9uhLI" data-title="Esencia de la Democracia · Presentación">
+        <img class="yt-lite__thumb" src="formacion-vid.jpg" alt="" loading="lazy" />
+        <button type="button" class="yt-lite__btn" aria-label="Reproducir: Esencia de la Democracia · Presentación">
+          <svg viewBox="0 0 68 48" aria-hidden="true"><path d="M66.5 7.7a8 8 0 0 0-5.6-5.6C55.9.8 34 .8 34 .8s-21.9 0-26.9 1.3A8 8 0 0 0 1.5 7.7C.2 12.7.2 24 .2 24s0 11.3 1.3 16.3a8 8 0 0 0 5.6 5.6C12.1 47.2 34 47.2 34 47.2s21.9 0 26.9-1.3a8 8 0 0 0 5.6-5.6C67.8 35.3 67.8 24 67.8 24s0-11.3-1.3-16.3z" fill="#cc3333"/><path d="M27 34.3 45.2 24 27 13.7z" fill="#fff"/></svg>
+        </button>
       </div>
-      <ul class="vlist">
-        <li><b>Orgullo Nacional</b><span>Un Uruguay soberano que protege su identidad y su historia.</span></li>
-        <li><b>Valores Cristianos</b><span>La fe cristiana como guía para vivir con justicia y dignidad.</span></li>
-        <li><b>Familia, pilar de la Nación</b><span>Núcleo de la sociedad y base de un futuro próspero.</span></li>
-        <li><b>Salud y fortaleza física</b><span>Vida sana, alimentación natural y vigor espiritual.</span></li>
-        <li><b>Defensa de la tierra</b><span>Ganadería tradicional y soberanía alimentaria.</span></li>
-        <li><b>Resistencia al globalismo</b><span>Frente a la ideología de género y la descomposición cultural.</span></li>
-        <li><b>Unidad y solidaridad nacional</b><span>Comunidad y colaboración por un Uruguay unido.</span></li>
-        <li><b>Disciplina</b><span>Trabajo con perseverancia y determinación.</span></li>
-        <li><b>Preservación cultural</b><span>Defensa del legado y las tradiciones nacionales.</span></li>
-        <li><b>Anti-liberalismo</b><span>Todo orden político subordinado a un orden superior.</span></li>
-        <li><b>Anti-marxismo</b><span>Frente al materialismo, una concepción espiritual del mundo.</span></li>
-        <li><b>Anti-democratismo liberal</b><span>La raíz del mal está en el sistema político imperante.</span></li>
-      </ul>
-      <p style="margin-top:2rem"><a class="btn" href="vision.html">Lee el ideario completo</a></p>
-    </div>
-  </section>
+      <p class="doc-lead"><a href="https://www.youtube.com/@ResurgirNacional" target="_blank" rel="noopener">Canal de YouTube de Resurgir Nacional →</a></p>
+    </section>
 
-  <section id="aporta" class="band">
-    <video class="aporta__video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"
-           poster="aportar_poster.jpg">
-      <source src="aportar.mp4" type="video/mp4" />
-    </video>
-    <div class="aporta__scrim" aria-hidden="true"></div>
-    <div class="wrap">
-      <div class="band__head">
-        <span class="label">Aportar</span>
-        <h2>El movimiento se sostiene con la cuota de sus miembros.</h2>
+    <section>
+      <span class="label">Publicaciones</span>
+      <h2>Artículos en X</h2>
+      <div class="prose">
+        <p>Ensayos y textos del movimiento, publicados en X.</p>
       </div>
-      <div class="tiers">
-        <div class="tier">
-          <span class="tier__name">Cuota general</span>
-          <span class="tier__amount">$ 70/mes</span>
-          <span class="tier__use">Mínimo mensual por miembro.</span>
-        </div>
-        <div class="tier">
-          <span class="tier__name">Estudiantes y padres</span>
-          <span class="tier__amount">$ 50/mes</span>
-          <span class="tier__use">Cuota reducida.</span>
-        </div>
-        <div class="tier">
-          <span class="tier__name">Situación particular</span>
-          <span class="tier__amount">Flexible</span>
-          <span class="tier__use">No pagar la cuota no impide el ingreso ni es motivo de expulsión; el integrante debe aclarar su situación antes de ingresar.</span>
-        </div>
-      </div>
-      <p class="give-note">El dinero recaudado se destina a las actividades de Resurgir Nacional: propaganda callejera (afiches, pegatinas, carteleras, banderas), acciones sociales y funcionamiento del movimiento.</p>
-      <p class="give-online"><span class="label">Aportar en línea</span><a href="https://www.paypal.me/resurgirnacional" target="_blank" rel="noopener">PayPal</a><a href="https://ko-fi.com/resurgirnacionaluy" target="_blank" rel="noopener">Ko-fi</a></p>
-    </div>
-  </section>
-
-  <section id="sumate" class="band">
-    <div class="wrap">
-      <div class="band__head">
-        <span class="label">Sumarse</span>
-        <h2>Cómo ingresar a Resurgir Nacional</h2>
-      </div>
-      <div class="prose-block">
-        <p>Para ingresar es necesario pasar por una entrevista virtual (Google Meet, Jitsi, Zoom o Discord) con una serie de preguntas de índole política, religiosa y cultural.</p>
-        <p>Cristianos de otras denominaciones, ateos y agnósticos pueden unirse y participar siempre que respeten la base religiosa del movimiento.</p>
-        <p class="contact-lines">
-          <a href="mailto:resurgirnacionaluruguay@gmail.com">resurgirnacionaluruguay@gmail.com</a>
-        </p>
-      </div>
-    </div>
-  </section>
+      <p><a class="btn" href="https://x.com/ResurgirUy/articles" target="_blank" rel="noopener">Ver los artículos en X</a></p>
+    </section>
+  </div>
 </main>
 
 <footer class="site-footer">
@@ -542,10 +263,10 @@
         </span>
       </div>
       <nav class="footer-links" aria-label="Pie">
-        <a href="#ideario">Visión</a>
+        <a href="index.html#ideario">Visión</a>
         <a href="vision.html">Ideario</a>
-        <a href="#aporta">Aporta</a>
-        <a href="#sumate">Sumarse</a>
+        <a href="index.html#aporta">Aporta</a>
+        <a href="index.html#sumate">Sumarse</a>
       </nav>
     </div>
     <div class="footer-social">
@@ -595,40 +316,6 @@
       else io.observe(el);
     });
     setTimeout(function () { items.forEach(show); }, 1500);
-
-    [['.aporta__video', 0.75], ['.hero__flag', 0.6]].forEach(function (p) {
-      var v = document.querySelector(p[0]);
-      if (!v || !('playbackRate' in v)) return;
-      var set = function () { try { v.playbackRate = p[1]; } catch (e) {} };
-      set();
-      v.addEventListener('loadedmetadata', set);
-      v.addEventListener('play', set);
-    });
-  })();
-
-  (function () {
-    var el = document.querySelector('.rn-rotate');
-    if (!el) return;
-    var words = (el.dataset.words || '').split(',').map(function (w) { return w.trim(); }).filter(Boolean);
-    if (words.length < 2) return;
-    var CROSS = '<svg class="rn-cross" viewBox="0 0 404 564" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="80" d="M202 2V562M2 202H402"/></svg>';
-    function render(w) { el.textContent = w; if (w === 'espiritual') el.insertAdjacentHTML('beforeend', CROSS); }
-    var max = 0, orig = (el.textContent || '').trim();
-    words.forEach(function (w) { render(w); if (el.offsetWidth > max) max = el.offsetWidth; });
-    render(orig || words[0]);
-    el.style.minWidth = Math.ceil(max) + 'px';
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var i = Math.max(0, words.indexOf(orig));
-    setInterval(function () {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(0.28em)';
-      setTimeout(function () {
-        i = (i + 1) % words.length;
-        render(words[i]);
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
-      }, 430);
-    }, 2600);
   })();
   (function () {
     var MAIL = 'resurgirnacionaluruguay@gmail.com';
@@ -660,6 +347,22 @@
     }
     [].forEach.call(links, function (a) {
       a.addEventListener('click', function (e) { e.preventDefault(); copy(); });
+    });
+  })();
+  (function () {
+    document.querySelectorAll('.yt-lite').forEach(function (el) {
+      el.addEventListener('click', function () {
+        if (el.querySelector('iframe')) return;
+        var id = el.getAttribute('data-id');
+        if (!id) return;
+        var f = document.createElement('iframe');
+        f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+        f.title = el.getAttribute('data-title') || 'Video';
+        f.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture; fullscreen');
+        f.setAttribute('allowfullscreen', '');
+        el.innerHTML = '';
+        el.appendChild(f);
+      });
     });
   })();
 </script>
