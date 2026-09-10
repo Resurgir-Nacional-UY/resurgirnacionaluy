@@ -397,6 +397,20 @@
   a.mail-copy { cursor: pointer; }
   .copy-toast { position: fixed; left: 50%; bottom: 1.5rem; transform: translateX(-50%) translateY(0.5rem); background: #12151C; color: #F4F2EA; padding: 0.6rem 1.1rem; border-radius: 999px; font-family: "Archivo", system-ui, sans-serif; font-size: 0.82rem; letter-spacing: 0.02em; box-shadow: 0 10px 28px rgba(0,0,0,0.35); opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease; z-index: 9999; }
   .copy-toast.is-on { opacity: 1; transform: translateX(-50%) translateY(0); }
+  /* ---------- Aviso "nuevo artículo" (esquina, solo portada) ---------- */
+  .newpost { position: fixed; right: 1rem; bottom: 1rem; z-index: 9998; width: min(22rem, calc(100vw - 2rem)); padding: 1rem 1.1rem 1.05rem; background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--gold-line); border-radius: 6px; box-shadow: 0 14px 36px rgba(0,0,0,0.28); transform: translateY(130%); opacity: 0; transition: transform .45s cubic-bezier(0.16,1,0.3,1), opacity .3s ease; }
+  .newpost.is-on { transform: none; opacity: 1; }
+  .newpost__x { position: absolute; top: 0.3rem; right: 0.4rem; width: 1.9rem; height: 1.9rem; display: grid; place-items: center; background: none; border: 0; color: var(--ink-soft); font-size: 1.15rem; line-height: 1; cursor: pointer; border-radius: 4px; }
+  .newpost__x:hover { color: var(--ink); }
+  .newpost__x:focus-visible { outline: 2px solid var(--gold-line); outline-offset: 1px; }
+  .newpost__kicker { display: block; font-family: "Archivo", system-ui, sans-serif; font-weight: 700; font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-text); }
+  .newpost__title { display: block; margin-top: 0.4rem; padding-right: 1.2rem; font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 1.08rem; line-height: 1.28; color: var(--ink); text-decoration: none; }
+  .newpost__title:hover { color: var(--blue); }
+  .newpost__sum { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin: 0.4rem 0 0; font-size: 0.86rem; line-height: 1.5; color: var(--ink-soft); }
+  .newpost__cta { display: inline-block; margin-top: 0.7rem; font-family: "Archivo", system-ui, sans-serif; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.03em; color: var(--blue); text-decoration: none; }
+  .newpost__cta:hover { text-decoration: underline; }
+  @media (prefers-reduced-motion: reduce) { .newpost { transition: opacity .25s ease; transform: none; } }
+  @media (max-width: 480px) { .newpost { right: 0.5rem; left: 0.5rem; bottom: 0.5rem; width: auto; } }
 </style>
 </head>
 <body style="margin:0">
@@ -680,6 +694,68 @@
     [].forEach.call(links, function (a) {
       a.addEventListener('click', function (e) { e.preventDefault(); copy(); });
     });
+  })();
+
+  (function () {
+    // Aviso del último artículo de Formación. Lee /feed.xml y muestra una card en
+    // la esquina. Recuerda el artículo ya visto: no reaparece hasta que haya uno
+    // más nuevo, y como mucho una vez por sesión.
+    var KEY = 'rn.newpost.seen';
+    try { if (sessionStorage.getItem('rn.newpost.closed')) return; } catch (e) {}
+
+    function seen(link) { try { localStorage.setItem(KEY, link); } catch (e) {} }
+
+    function show(link, title, sum) {
+      var card = document.createElement('aside');
+      card.className = 'newpost';
+      card.setAttribute('role', 'complementary');
+      card.setAttribute('aria-label', 'Artículo nuevo en Formación');
+      card.innerHTML =
+        '<button type="button" class="newpost__x" aria-label="Cerrar aviso">×</button>' +
+        '<span class="newpost__kicker">Nuevo en Formación</span>' +
+        '<a class="newpost__title"></a>' +
+        (sum ? '<p class="newpost__sum"></p>' : '') +
+        '<a class="newpost__cta">Leer el artículo →</a>';
+      var t = card.querySelector('.newpost__title');
+      var c = card.querySelector('.newpost__cta');
+      t.textContent = title; t.href = link; c.href = link;
+      if (sum) card.querySelector('.newpost__sum').textContent = sum;
+      t.addEventListener('click', function () { seen(link); });
+      c.addEventListener('click', function () { seen(link); });
+      card.querySelector('.newpost__x').addEventListener('click', function () {
+        card.classList.remove('is-on');
+        seen(link);
+        try { sessionStorage.setItem('rn.newpost.closed', '1'); } catch (e) {}
+        setTimeout(function () { card.remove(); }, 500);
+      });
+      document.body.appendChild(card);
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () { card.classList.add('is-on'); });
+      });
+    }
+
+    function load() {
+      fetch('feed.xml', { cache: 'no-cache' })
+        .then(function (r) { return r.ok ? r.text() : null; })
+        .then(function (xml) {
+          if (!xml) return;
+          var item = new DOMParser().parseFromString(xml, 'application/xml').querySelector('item');
+          if (!item) return;
+          var g = function (tag) { var el = item.querySelector(tag); return el ? el.textContent.trim() : ''; };
+          var link = g('link'), title = g('title');
+          if (!link || !title) return;
+          var last;
+          try { last = localStorage.getItem(KEY); } catch (e) {}
+          if (last === link) return;
+          show(link, title, g('description'));
+        })
+        .catch(function () {});
+    }
+
+    var fired = false;
+    function go() { if (fired) return; fired = true; load(); }
+    setTimeout(go, 4000);
+    addEventListener('scroll', go, { passive: true, once: true });
   })();
 </script>
 
