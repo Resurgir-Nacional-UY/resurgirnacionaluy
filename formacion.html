@@ -197,6 +197,14 @@
   .article-body a { color: var(--blue); }
   .article-body img { border-radius: 3px; margin: 0.6rem 0; }
   .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 1.4rem 0; }
+  .boletin { max-width: 30rem; }
+  .boletin__form { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1.1rem; }
+  .boletin__form label { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-text); }
+  .boletin__form input[type="email"] { font: inherit; padding: 0.7rem 0.85rem; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); color: var(--ink); }
+  .boletin__form input[type="email"]::placeholder { color: var(--ink-soft); }
+  .boletin__form button { align-self: flex-start; margin-top: 0.4rem; }
+  .boletin__note { margin-top: 0.75rem; font-size: 0.85rem; color: var(--ink-soft); }
+  .boletin__ok { margin-top: 1.1rem; font-family: "Fraunces", Georgia, serif; font-size: var(--step-1); color: var(--ink); }
 </style>
 </head>
 <body style="margin:0">
@@ -270,6 +278,29 @@
         <span class="pub-card__cta">Leer en X →</span>
       </a>
       <p style="margin-top:1.4rem"><a href="https://x.com/ResurgirUy/articles" target="_blank" rel="noopener">Ver todos los artículos en X →</a></p>
+    </section>
+
+    <!-- BOLETÍN — oculto hasta configurar MailerLite. Ver README-BOLETIN.md:
+         1) crear el formulario embebido en MailerLite y reemplazar abajo
+            __ML_ACCOUNT__ y __ML_FORM__ por los números de su URL de "action"
+         2) quitar el atributo  hidden  de  <section class="boletin"> -->
+    <section class="boletin" hidden>
+      <span class="label">Boletín</span>
+      <h2>Recibí cada artículo por correo</h2>
+      <div class="prose">
+        <p>Cuando se publica un artículo nuevo, te llega el enlace por correo.</p>
+      </div>
+      <form class="boletin__form" method="post" target="ml_iframe"
+            action="https://assets.mailerlite.com/jsonp/__ML_ACCOUNT__/forms/__ML_FORM__/subscribe">
+        <label for="ml-email">Correo electrónico</label>
+        <input id="ml-email" type="email" name="fields[email]" autocomplete="email"
+               placeholder="tucorreo@ejemplo.com" required />
+        <input type="hidden" name="ml-submit" value="1" />
+        <input type="hidden" name="anticsrf" value="true" />
+        <button class="btn" type="submit">Suscribirme</button>
+      </form>
+      <iframe name="ml_iframe" title="MailerLite" style="display:none" aria-hidden="true"></iframe>
+      <p class="boletin__note">Recibirás un correo para confirmar la suscripción. Podés darte de baja cuando quieras.</p>
     </section>
   </div>
 </main>
@@ -392,6 +423,18 @@
         el.innerHTML = '';
         el.appendChild(f);
       });
+    });
+  })();
+  (function () {
+    var f = document.querySelector('.boletin__form');
+    if (!f || f.action.indexOf('__ML_') !== -1) return;   // sin configurar
+    f.addEventListener('submit', function () {
+      setTimeout(function () {
+        var ok = document.createElement('p');
+        ok.className = 'boletin__ok';
+        ok.textContent = '¡Gracias! Revisá tu correo para confirmar la suscripción.';
+        f.replaceWith(ok);
+      }, 250);
     });
   })();
 </script>
