@@ -173,6 +173,12 @@
   .btn--cross { padding-left: 0.85rem; padding-right: 0.85rem; }
   .btn--cross .ic-cross { display: block; width: auto; height: 16px; }
   .invocations { margin-top: 2.25rem; font-family: "Fraunces", serif; font-weight: 500; font-size: var(--step-1); line-height: 1.45; color: var(--gold-text); }
+  /* ---------- Fondo: Sagrado Corazón ---------- */
+  .scj-bg { position: fixed; right: -2%; bottom: 0; height: min(94vh, 940px); width: auto; z-index: -1; opacity: 0.15; pointer-events: none;
+    -webkit-mask: linear-gradient(100deg, transparent 0%, #000 48%); mask: linear-gradient(100deg, transparent 0%, #000 48%); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .scj-bg { opacity: 0.2; } }
+  :root[data-theme="dark"] .scj-bg { opacity: 0.2; }
+  @media (max-width: 860px) { .scj-bg { opacity: 0.08; right: -22%; } }
 </style>
 </head>
 <body style="margin:0">
@@ -212,6 +218,7 @@
 </header>
 
 <main>
+  <img class="scj-bg" src="scj.png" alt="" aria-hidden="true" />
   <div class="doc">
     <section>
       <span class="label">3 de junio de 1875</span>
