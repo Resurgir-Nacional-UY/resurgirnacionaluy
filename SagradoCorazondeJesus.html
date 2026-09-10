@@ -171,12 +171,13 @@
   .copy-toast { position: fixed; left: 50%; bottom: 1.5rem; transform: translateX(-50%) translateY(0.5rem); background: #12151C; color: #F4F2EA; padding: 0.6rem 1.1rem; border-radius: 999px; font-family: "Archivo", system-ui, sans-serif; font-size: 0.82rem; letter-spacing: 0.02em; box-shadow: 0 10px 28px rgba(0,0,0,0.35); opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease; z-index: 9999; }
   .copy-toast.is-on { opacity: 1; transform: translateX(-50%) translateY(0); }
   .invocations { margin-top: 2.25rem; font-family: "Fraunces", serif; font-weight: 500; font-size: var(--step-1); line-height: 1.45; color: var(--gold-text); }
-  /* ---------- Fondo: Sagrado Corazón ---------- */
-  .scj-bg { position: fixed; right: -1%; bottom: 0; height: min(96vh, 1000px); width: auto; z-index: -1; opacity: 0.16; pointer-events: none;
-    -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%); mask: linear-gradient(103deg, transparent 0%, #000 26%); }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .scj-bg { opacity: 0.2; } }
-  :root[data-theme="dark"] .scj-bg { opacity: 0.2; }
-  @media (max-width: 860px) { .scj-bg { opacity: 0.08; right: -22%; } }
+  /* ---------- Fondos: Corazones de Jesús y de María ---------- */
+  .scj-bg, .icdm-bg { position: fixed; bottom: 0; height: min(84vh, 860px); width: auto; z-index: -1; opacity: 0.16; pointer-events: none; }
+  .scj-bg { right: -1%; -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%); mask: linear-gradient(103deg, transparent 0%, #000 26%); }
+  .icdm-bg { left: -1%; -webkit-mask: linear-gradient(-103deg, transparent 0%, #000 26%); mask: linear-gradient(-103deg, transparent 0%, #000 26%); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .scj-bg, :root:not([data-theme="light"]) .icdm-bg { opacity: 0.2; } }
+  :root[data-theme="dark"] .scj-bg, :root[data-theme="dark"] .icdm-bg { opacity: 0.2; }
+  @media (max-width: 900px) { .icdm-bg { display: none; } .scj-bg { opacity: 0.08; right: -22%; } }
   /* ---------- Pie con cielo (solo esta página) ---------- */
   .site-footer { background: #1e3c68; }
   .site-footer__video { filter: brightness(0.92) saturate(1.05); }
@@ -222,6 +223,7 @@
 </header>
 
 <main>
+  <img class="icdm-bg" src="icdm.png" alt="" aria-hidden="true" />
   <img class="scj-bg" src="scj.png" alt="" aria-hidden="true" />
   <div class="doc">
     <section>
