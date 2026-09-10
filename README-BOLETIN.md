@@ -1,7 +1,7 @@
 # Boletín por correo (MailerLite + RSS)
 
 Cuando se publica un artículo en Formación, el sitio actualiza
-`https://avvedit-creator.github.io/resurgirnacionaluy/feed.xml`.
+`https://resurgirnacionaluy.org/feed.xml`.
 MailerLite vigila ese feed y envía un correo con el enlace a cada suscriptor.
 
 El sitio ya tiene todo lo suyo hecho:
@@ -53,7 +53,7 @@ El formulario ya está maquetado con el estilo del sitio y muestra un
 
 1. `Campaigns › Create campaign › RSS campaign`.
 2. **RSS feed URL:**
-   `https://avvedit-creator.github.io/resurgirnacionaluy/feed.xml`
+   `https://resurgirnacionaluy.org/feed.xml`
 3. **Cuándo enviar:** «cuando haya un ítem nuevo» si está disponible; si no,
    una revisión diaria.
 4. **Destinatarios:** grupo «Boletín Formación».

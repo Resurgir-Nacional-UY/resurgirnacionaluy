@@ -23,7 +23,7 @@ TEMPLATE = os.path.join(ROOT, "formacion.html")
 FEED = os.path.join(ROOT, "feed.xml")
 SITEMAP = os.path.join(ROOT, "sitemap.xml")
 # URL publica del sitio. Cambiar si se pasa a dominio propio (p. ej. https://resurgirnacionaluy.org/)
-SITE = "https://avvedit-creator.github.io/resurgirnacionaluy/"
+SITE = "https://resurgirnacionaluy.org/"
 STATIC_PAGES = ["", "vision.html", "formacion.html", "SagradoCorazondeJesus.html"]
 MARK_A = "<!-- ARTICLES:START -->"
 MARK_B = "<!-- ARTICLES:END -->"

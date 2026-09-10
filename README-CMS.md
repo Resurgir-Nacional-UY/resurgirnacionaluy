@@ -36,7 +36,7 @@ Da login de un clic, sin tokens. Requiere el worker oficial
 
 1. **GitHub OAuth App**: tu cuenta → `Settings › Developer settings ›
    OAuth Apps › New OAuth App`
-   - *Homepage URL*: `https://avvedit-creator.github.io/resurgirnacionaluy/`
+   - *Homepage URL*: `https://resurgirnacionaluy.org/`
    - *Authorization callback URL*: `https://TU-WORKER.workers.dev/callback`
      (se ajusta después de crear el worker)
    - Guardar **Client ID** y generar un **Client Secret**.
@@ -45,7 +45,7 @@ Da login de un clic, sin tokens. Requiere el worker oficial
    Cloudflare*, o usar `wrangler`). Variables del worker:
    - `GITHUB_CLIENT_ID` = Client ID
    - `GITHUB_CLIENT_SECRET` = Client Secret
-   - `ALLOWED_DOMAINS` = `avvedit-creator.github.io`
+   - `ALLOWED_DOMAINS` = `resurgirnacionaluy.org`
 3. Copiar el callback real (`https://TU-WORKER.workers.dev/callback`) a la
    OAuth App.
 4. En **`admin/config.yml`** cambiar
@@ -64,7 +64,7 @@ creación de un PR.
 
 ## Uso
 
-1. Ir a **`https://avvedit-creator.github.io/resurgirnacionaluy/admin/`**
+1. Ir a **`https://resurgirnacionaluy.org/admin/`**
 2. *Sign in with GitHub*
 3. *Artículos de Formación* → *New Artículo*
 4. Completar Título, Slug, Fecha, Resumen, Cuerpo. Se pueden subir imágenes.

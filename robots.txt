@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://avvedit-creator.github.io/resurgirnacionaluy/sitemap.xml
+Sitemap: https://resurgirnacionaluy.org/sitemap.xml
