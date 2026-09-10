@@ -3,7 +3,7 @@ title: Hombres de voto.
 slug: democraciaenuruguay
 date: 2026-08-30
 author: Bruno Acosta Pastore
-summary: ''
+summary: Frente al hombre democrático -proteico, veleidoso, afeminado- se precisan, para la restauración de nuestra cultura, hombres DE-VOTOS -fieles, decididos, viriles-. Frente a la palabra mendaz del demócrata, la verba diáfana y sonora del nacionalista.
 source_url: ''
 draft: false
 ---
