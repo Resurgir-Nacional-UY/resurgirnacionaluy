@@ -3,7 +3,7 @@ title: Fascismo Oriental.
 slug: terceraposicionenuruguay
 date: 2026-09-01
 author: José Otaiza
-summary: ''
+summary: Hoy desde nuestra perspectiva de más de 100 años después, y en nuestra nación Uruguay, por supuesto que es una ideología vigente, solamente necesita una adaptación y eso es lo que he teorizado personalmente desde mi punto de vista a nuestro tiempo y país.
 source_url: ''
 draft: false
 ---
@@ -42,7 +42,6 @@ La propiedad extranjera, también de multinacionales, deben estar terminantement
 
 La propiedad de nativos debe ser totalmente libre y con apoyos para emprendedores. 
 
-
 SINDICATOS, ORGANIZACIONES COLECTIVAS Y TRABAJO. 
 
 Los sindicatos privados de trabajadores que obviamente operan por el beneficio económico de sus líderes, la división dentro del país y por la lucha de clases deben ser eliminados. 
@@ -57,9 +56,7 @@ Aquí la ley es simple. Para bajar los impuestos para así aliviar la presión f
 
 Debe aplicarse una rígida práctica fiscal que el gasto nunca debe superar la ganancia para evitar déficits y deudas. 
 
-
 Por aquí termino haciendo esta primera parte con los aspectos político y económico, pretendiendo hacer una obra completa y detallada es algo tedioso, pero continuare con una segunda parte, muy pronto. 
-
 
 Ahora camaradas, cierro está redacción. 
 
