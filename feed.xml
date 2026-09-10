@@ -6,7 +6,14 @@
   <atom:link href="https://resurgirnacionaluy.org/feed.xml" rel="self" type="application/rss+xml" />
   <description>Artículos de formación del movimiento Resurgir Nacional.</description>
   <language>es-uy</language>
-  <lastBuildDate>Thu, 03 Sep 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 04 Sep 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Más allá de la izquierda y la derecha.</title>
+    <link>https://resurgirnacionaluy.org/izquierdayderechaenuruguay.html</link>
+    <guid isPermaLink="true">https://resurgirnacionaluy.org/izquierdayderechaenuruguay.html</guid>
+    <pubDate>Fri, 04 Sep 2026 12:00:00 +0000</pubDate>
+    <description>Durante la contienda electoral la simplificación es la norma. El énfasis en el marketing y la ingeniería electoral busca situarnos por fuera del debate de ideas. Mediante la construcción de narrativas que priorizan la identificación emocional frente al debate racional se asumen determinadas categorías, que en muchos casos pueden ser, en realidad, más iguales de lo que parecen absolutamente inválidas. Este trabajo pretende ser un aporte que complejiza un espacio común en el discurso político: el de las categorías de izquierda y derecha.</description>
+  </item>
   <item>
     <title>Gabriel Terra: Jefe de la Revolución de Marzo.</title>
     <link>https://resurgirnacionaluy.org/gabrielterrarevoluciondemarzo.html</link>
