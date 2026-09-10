@@ -1,0 +1,51 @@
+# Sveltia CMS — editor de Formación
+# Autenticación: GitHub. Los "usuarios autorizados" son los colaboradores del
+# repositorio avvedit-creator/resurgirnacionaluy (Settings › Collaborators).
+#
+# Por defecto se usa login con token de acceso (no requiere infraestructura).
+# Para habilitar "Iniciar sesión con GitHub" de un clic, descomentá base_url y
+# poné la URL de tu worker de OAuth (ver README-CMS.md, paso 2).
+
+backend:
+  name: github
+  repo: avvedit-creator/resurgirnacionaluy
+  branch: main
+  # base_url: https://TU-WORKER.workers.dev
+
+# Cada guardado abre un Pull Request; el artículo se publica al aprobarlo (merge).
+publish_mode: editorial_workflow
+
+# Imágenes subidas desde el editor. public_folder sin barra inicial: las páginas
+# viven en la raíz del sitio de proyecto (/resurgirnacionaluy/), así que la ruta
+# relativa resuelve bien tanto en formacion.html como en cada artículo.
+media_folder: media/formacion
+public_folder: media/formacion
+
+locale: es
+
+collections:
+  - name: formacion
+    label: Artículos de Formación
+    label_singular: Artículo
+    description: >-
+      Ensayos y textos del movimiento. Al guardar se crea un Pull Request;
+      queda publicado cuando alguien con permiso lo aprueba.
+    folder: content/formacion
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    summary: "{{title}}  ·  {{date}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: Título, widget: string }
+      - name: slug
+        label: Slug (parte final de la URL)
+        widget: string
+        hint: "solo minúsculas, números y guiones — p. ej. la-soberania-nacional → /la-soberania-nacional.html"
+        pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "Solo minúsculas, números y guiones"]
+      - { name: date, label: Fecha, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { name: author, label: Autor, widget: string, default: "Resurgir Nacional" }
+      - { name: summary, label: Resumen (para el listado y la vista previa), widget: text }
+      - { name: source_url, label: Enlace externo (opcional, p. ej. el hilo en X), widget: string, required: false }
+      - { name: draft, label: Borrador (no se publica mientras esté marcado), widget: boolean, default: false }
+      - { name: body, label: Cuerpo del artículo, widget: markdown }

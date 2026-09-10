@@ -184,6 +184,18 @@
   .pub-card__title { display: block; margin-top: 0.6rem; font-family: "Fraunces", serif; font-weight: 500; font-size: 1.35rem; line-height: 1.2; }
   .pub-card__excerpt { display: block; margin-top: 0.6rem; color: var(--ink-soft); font-size: 1rem; line-height: 1.55; }
   .pub-card__cta { display: inline-block; margin-top: 1rem; font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--blue); }
+  .acts--articles { margin-top: 1.6rem; margin-bottom: 1.6rem; }
+  a.act { display: block; text-decoration: none; color: inherit; }
+  a.act h3 { color: var(--ink); transition: color .18s ease; }
+  a.act:hover h3 { color: var(--blue); }
+  .act__meta { display: block; margin-top: 0.55rem; font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-text); }
+  .article-body h2 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: var(--step-1); margin-top: 1.2rem; }
+  .article-body h3 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: var(--step-0); margin-top: 0.6rem; }
+  .article-body ul, .article-body ol { margin: 0; padding-left: 1.4rem; display: flex; flex-direction: column; gap: 0.4rem; }
+  .article-body blockquote { margin: 0.4rem 0; padding-left: 1.2rem; border-left: 3px solid var(--gold-line); color: var(--ink-soft); font-style: italic; }
+  .article-body a { color: var(--blue); }
+  .article-body img { border-radius: 3px; margin: 0.6rem 0; }
+  .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 1.4rem 0; }
 </style>
 </head>
 <body style="margin:0">
@@ -245,12 +257,13 @@
 
     <section>
       <span class="label">Publicaciones</span>
-      <h2>Artículos en X</h2>
+      <h2>Artículos</h2>
       <div class="prose">
-        <p>Ensayos y textos del movimiento, publicados en X.</p>
+        <p>Ensayos y textos del movimiento.</p>
       </div>
+      <!-- ARTICLES:START --><!-- ARTICLES:END -->
       <a class="pub-card" href="https://x.com/ResurgirUy/status/2097353476409815118" target="_blank" rel="noopener">
-        <span class="pub-card__kicker">Último artículo <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-x" /></svg></span>
+        <span class="pub-card__kicker">También en X <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-x" /></svg></span>
         <span class="pub-card__title">Sobre la inmigración en el Uruguay</span>
         <span class="pub-card__excerpt">«La nación no es una simple suma de individuos. Si no existe el sentimiento de preservación, el Uruguay dejará de ser tal.»</span>
         <span class="pub-card__cta">Leer en X →</span>
