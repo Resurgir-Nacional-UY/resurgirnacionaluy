@@ -385,14 +385,25 @@
   #aporta .give-note { color: #FFFFFF; }
   #aporta .give-online a { color: #B9D6F7; }
   @media (prefers-reduced-motion: reduce) { .aporta__video { display: none; } }
-  /* ---------- Sumarse: más compacto ---------- */
-  #sumate { padding-block: clamp(2.25rem, 4vw, 3.25rem); }
+  /* ---------- Sumarse: fondo de video (Reclutamiento), más compacto ---------- */
+  #sumate { position: relative; overflow: hidden; isolation: isolate; padding-block: clamp(2.5rem, 5vw, 3.75rem); background: #0b1930; color: #E9E6DE; border-bottom-color: rgba(255,255,255,0.12); }
+  .sumate__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; z-index: -2; opacity: 0.9; filter: brightness(0.8) contrast(1.05); transform: scale(1.04); pointer-events: none; }
+  .sumate__scrim { position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(8,17,32,0.74) 0%, rgba(6,13,26,0.88) 100%),
+      radial-gradient(90% 84% at 50% 44%, rgba(6,12,24,0.60) 0%, rgba(6,12,24,0.18) 84%); }
+  #sumate > .wrap { position: relative; z-index: 1; }
   #sumate .band__head { margin-bottom: 1.4rem; }
   #sumate .prose-block { gap: 0.7rem; }
   #sumate .prose-block .contact-lines { margin-top: 0.35rem; }
-  #sumate .prose-block, #sumate .prose-block p { color: var(--ink); }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #sumate .prose-block, :root:not([data-theme="light"]) #sumate .prose-block p { color: #FFFFFF; } }
-  :root[data-theme="dark"] #sumate .prose-block, :root[data-theme="dark"] #sumate .prose-block p { color: #FFFFFF; }
+  #sumate .band__head .label { color: #F0CE86; }
+  #sumate .band__head h2 { color: #FFFFFF; }
+  #sumate .prose-block, #sumate .prose-block p { color: #FFFFFF; }
+  #sumate .prose-block a { color: #B9D6F7; }
+  #sumate .band__head .label, #sumate .band__head h2, #sumate .prose-block p, #sumate .prose-block a {
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6), 0 3px 14px rgba(0,0,0,0.45);
+  }
+  @media (prefers-reduced-motion: reduce) { .sumate__video { display: none; } }
   /* ---------- Copiar correo al hacer clic ---------- */
   a.mail-copy { cursor: pointer; }
   .copy-toast { position: fixed; left: 50%; bottom: 1.5rem; transform: translateX(-50%) translateY(0.5rem); background: #12151C; color: #F4F2EA; padding: 0.6rem 1.1rem; border-radius: 999px; font-family: "Archivo", system-ui, sans-serif; font-size: 0.82rem; letter-spacing: 0.02em; box-shadow: 0 10px 28px rgba(0,0,0,0.35); opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease; z-index: 9999; }
@@ -460,7 +471,7 @@
       <div class="hero__copy">
         <p class="label hero__eyebrow">Movimiento nacionalista · Tercera Posición</p>
         <h1>La regeneración <span class="rn-rotate" data-words="espiritual,política,social">espiritual<svg class="rn-cross" viewBox="0 0 404 564" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="80" d="M202 2V562M2 202H402"/></svg></span> del Uruguay.</h1>
-        <p class="hero__lead">Trabajamos fuera del sistema de partidos y del dogma democrático, por un nacionalismo virtuoso y los valores cristianos. Queremos un país donde Dios, la Patria y la Familia vuelvan a ser la base de la sociedad.</p>
+        <p class="hero__lead">Trabajamos fuera del sistema de partidos y del dogma democrático, por un nacionalismo virtuoso desde la perspectiva cristiana. Queremos un país donde Dios, la Patria y la Familia vuelvan a ser la base de la sociedad.</p>
         <div class="hero__cta">
           <a class="btn btn--light" href="vision.html">Lee nuestro ideario</a>
           <a class="btn btn--outline-light" href="#sumate">Cómo sumarse</a>
@@ -541,6 +552,10 @@
   </section>
 
   <section id="sumate" class="band">
+    <video class="sumate__video" autoplay muted loop playsinline preload="none" poster="reclutamiento.jpg" aria-hidden="true">
+      <source src="reclutamiento.mp4" type="video/mp4" />
+    </video>
+    <div class="sumate__scrim" aria-hidden="true"></div>
     <div class="wrap">
       <div class="band__head">
         <span class="label">Sumarse</span>
@@ -629,7 +644,7 @@
     });
     setTimeout(function () { items.forEach(show); }, 1500);
 
-    [['.aporta__video', 0.75], ['.hero__flag', 0.6]].forEach(function (p) {
+    [['.aporta__video', 0.75], ['.hero__flag', 0.6], ['.sumate__video', 0.85]].forEach(function (p) {
       var v = document.querySelector(p[0]);
       if (!v || !('playbackRate' in v)) return;
       var set = function () { try { v.playbackRate = p[1]; } catch (e) {} };
