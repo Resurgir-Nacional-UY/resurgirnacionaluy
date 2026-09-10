@@ -10,17 +10,11 @@ draft: false
 
 (Escrito en el año 2024, a 85 años de la segunda guerra mundial, por el compatriota oriental y camarada Bruno Acosta Pastore)
 
-
-
-
 “Chamberlain dijo que América y el mundo judío habían forzado a Inglaterra a la guerra” (The Forrestal Diaries, New York, 1951, pág. 121)
 
 “¿Es el mío un grito de guerra? Yo declaro que es la única garantía para la paz” ( Winston Churchill, octubre de 1938)
 
 “De no mediar Gran Bretaña entre Alemania y Polonia sin duda se hubiese encontrado una solución justa y razonable” (Del gobierno alemán al inglés, 3 de setiembre de 1939)
-
-
-
 
 El primero de septiembre se cumplen 85 años del inicio de la Segunda Guerra Mundial. Este hecho y su desenlace -la victoria de los aliados- marcó un derrotero religioso, cultural, político, social y económico que el mundo padece hasta nuestros días. Fue el triunfo de las democracias liberales, masónicas y relativistas; fue el triunfo del comunismo ateo. Fue la “Derrota Mundial”, según trillada y plástica expresión de Don Salvador Borrego. Los perdidosos nacionalismos fueron la expresión de vida postrera, las últimas bocanadas de aire, de Occidente. Tras su hundimiento, éste quedose sin defensas. Al poco tiempo, infiltrada ya desde hace décadas, la Iglesia Católica coronaría su eclipse con el Concilio Vaticano Segundo (1962-1965). Los principios masónicos y liberales penetraron, ya abiertamente, en el propio seno eclesial.
 
@@ -62,9 +56,6 @@ Y respecto de su pertenencia a la masonería, el historiador mexicano acredita q
 
 La masonería estadounidense, en general, quiso la guerra contra Alemania. En ese sentido, Salvador Borrego da cuenta de que el consejo supremo del Rito Escocés se reunió en Washington el 31 de mayo de 1940 y acordó que el país debía intervenir cuanto antes en la guerra.
 
-
-
-
 Ese otro “cerdo”, Winston Churchill.
 
 Al puerco Delano Roosevelt, “Gran Cerdo” de la Logia 81 “Los Grandes Cerdos del Líbano”, lo acompañó como instigador de la guerra otro chancho, éste por su fisionomía rolliza y rojiza: Winston Churchill, el alcohólico consuetudinario. Éste, correveidile de los circuncisos, siempre tuvo a Hitler en el blanco.
@@ -77,9 +68,6 @@ Y sigue más adelante el escritor mexicano: “El capitán Russell Grenfell, his
 
 Es increíble comprobar cómo la historiografía oficial ha montado el relato de la “política de apaciguamiento” para frenar a Alemania y pone como ejemplo el Pacto de Munich. Ahora bien: ese acuerdo se logró gracias a los buenos oficios de Mussolini, de un lado; y, de otro, Bruno Spampanato prueba que, dos semanas luego de su firma, Churchill le dijo a los norteamericanos: “debemos rearmar”, “el pueblo británico aguardará bien despierto cualquier eventualidad”, “existe ya una oposición entre nazismo y democracia”, “nos defenderemos contra la barbarie”, etc. “Esto y algo más dijo Churchill a América” -continúa Spampanato- “¿Es el mío un grito de guerra? Yo declaro que es la única garantía para la paz”.
 
-
-
-
 La propuesta alemana y su rechazo
 
 Hasta este punto, se ha probado sumariamente de qué manera el judaísmo, la masonería y los demócratas deseaban la guerra contra Alemania. Ahora bien: ¿qué fue lo que encendió el conflicto?
@@ -89,15 +77,10 @@ El Reich quería llegar a un acuerdo diplomático con Polonia para solucionar el
 “1. Reincorporación a Alemania de la ciudad libre de Danzig. Danzig es una ciudad alemana, lo fue siempre y seguirá siéndolo.
 
 2. Alemania tendrá a través del Corredor una autopista y una línea férrea, que pertenecerán al Reich y tendrán carácter extraterritorial.
-
 3. Por su parte, Polonia tendrá asimismo una carretera o una autopista y un ferrocarril, que conduzcan a Danzig y un puerto.
-
 4. Polonia garantizará la celebración de unas elecciones libres en el territorio de Danzig.
-
 5. Las dos naciones reconocen sus fronteras comunes y están dispuestas, además, a suscribir una mutua garantía territorial.
-
 6. El tratado germano-polaco será renovado por un plazo de 25 años.
-
 7. Los dos países se someten a la cláusula consultiva del tratado.”
 
 El hecho de que Polonia no haya aceptado esta razonable proposición y que, instigada por Francia y Gran Bretaña, haya movilizado sus tropas y motivado las “operaciones” alemanas en Polonia (que tal acotado carácter tenía prístinamente), evidencia cómo las “fuerzas ocultas”, por medio de la crisis polaca, estaban buscando el casus belli contra Hitler que finalmente encontraron.
@@ -111,8 +94,5 @@ Según informa Spampanato, el 3 de septiembre de 1939, el gobierno alemán, en c
 Palabras finales.
 
 Es manida la frase según la cual “los vencedores escriben la Historia”. En el caso de la Segunda Guerra Mundial, se verifica plenamente. Tarea es de quienes aman la Verdad y tienen Coraje, develar lo que realmente ocurrió en esos años decisivos. La Providencia Divina permitió la “Derrota Mundial”, quedó dicho. Mas pronto será la hora del Triunfo, y aplastadas serán las fuerzas del Mal. Que así sea.
-
-
-
 
 -Bruno Acosta Pastore. 31 de agosto de 2024.
