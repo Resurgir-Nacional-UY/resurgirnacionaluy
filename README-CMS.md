@@ -13,52 +13,40 @@ se publica recién cuando alguien con permiso lo aprueba (merge).
 ## Puesta en marcha (una sola vez)
 
 ### 1. ¿Quién puede publicar?
-`Settings › Collaborators` del repo → **Add people**. Cada persona necesita
-cuenta de GitHub. Rol **Write**.
+El repo vive en la organización **Resurgir-Nacional-UY**. Cada redactor se
+agrega al equipo **`redactores`** (`github.com/orgs/Resurgir-Nacional-UY/teams/redactores`
+→ *Add a member*), que ya tiene permiso **Write** sobre el repo. Cada persona
+necesita cuenta de GitHub.
 Para exigir aprobación de un tercero: `Settings › Branches › Add branch
 protection rule` sobre `main` → *Require a pull request before merging* +
-*Require approvals: 1*. (Ver también el paso 3.)
+*Require approvals: 1*. **OJO:** eso rompe el `git push` a `main` del workflow
+`formacion.yml` salvo que agregues GitHub Actions como excepción del ruleset.
 
-### 2. Login
+### 2. Login — YA CONFIGURADO
 
-**Opción rápida (sin infraestructura) — token de acceso.**
-En `/admin/` elegir *«Iniciar sesión con un token de acceso»*. Cada persona
-autorizada crea un *fine-grained PAT* en GitHub
-(`Settings › Developer settings › Fine-grained tokens`): acceso *Only select
-repositories → resurgirnacionaluy*, permiso *Contents: Read and write* y
-*Pull requests: Read and write*. Se pega en el editor. Es lo más simple para
-empezar; la contra es que el token caduca y cada quien gestiona el suyo.
-Con esta opción **no hace falta** el resto del paso 2.
+**«Iniciar sesión con GitHub» (un clic).** Ya está montado:
+- Worker `sveltia/sveltia-cms-auth` desplegado en Cloudflare:
+  **`https://sveltia-cms-auth.avvedit.workers.dev`** (cuenta CF de avvedit@gmail.com).
+  Secrets del worker: `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET`,
+  `ALLOWED_DOMAINS = resurgirnacionaluy.org, *.resurgirnacionaluy.org`.
+  Redeploy: `cd C:\rn-sca && npx wrangler deploy` (o `wrangler secret put NOMBRE`).
+- OAuth App **«Resurgir Nacional CMS»** en la organización
+  (`github.com/organizations/Resurgir-Nacional-UY/settings/applications`) —
+  callback `https://sveltia-cms-auth.avvedit.workers.dev/callback`, tokens sin
+  expiración. Client ID `Ov23lipR5TYwmDvAFj2u`.
+- `admin/config.yml` ya tiene `base_url` apuntando al worker.
 
-**Opción cómoda — «Iniciar sesión con GitHub» (worker de OAuth).**
-Da login de un clic, sin tokens. Requiere el worker oficial
-**`sveltia/sveltia-cms-auth`** en Cloudflare (plan gratis).
+La **primera vez** que cada redactor pulsa «Iniciar sesión con GitHub», GitHub
+muestra una pantalla de permiso («Authorize Resurgir Nacional CMS») — hay que
+pulsar **Authorize** una vez. Después es directo.
 
-1. **GitHub OAuth App**: tu cuenta → `Settings › Developer settings ›
-   OAuth Apps › New OAuth App`
-   - *Homepage URL*: `https://resurgirnacionaluy.org/`
-   - *Authorization callback URL*: `https://TU-WORKER.workers.dev/callback`
-     (se ajusta después de crear el worker)
-   - Guardar **Client ID** y generar un **Client Secret**.
-2. **Cloudflare Worker**: cuenta gratis en Cloudflare → desplegar
-   `github.com/sveltia/sveltia-cms-auth` (su README tiene botón *Deploy to
-   Cloudflare*, o usar `wrangler`). Variables del worker:
-   - `GITHUB_CLIENT_ID` = Client ID
-   - `GITHUB_CLIENT_SECRET` = Client Secret
-   - `ALLOWED_DOMAINS` = `resurgirnacionaluy.org`
-3. Copiar el callback real (`https://TU-WORKER.workers.dev/callback`) a la
-   OAuth App.
-4. En **`admin/config.yml`** cambiar
-   `base_url: https://REEMPLAZAR-POR-TU-WORKER.workers.dev`
-   por la URL real del worker y commitear.
+**Alternativa — token de acceso.** El botón «Iniciar sesión con un token de
+acceso» sigue disponible: *fine-grained PAT* con *Contents: RW* + *Pull
+requests: RW* sobre el repo.
 
-### 3. Permisos de GitHub Actions
-`Settings › Actions › General › Workflow permissions` →
-**Read and write permissions** → *Save*.
-(El workflow necesita commitear las páginas generadas.)
-Si activaste protección de rama en el paso 1, agregá a `resurgir-bot` /
-GitHub Actions como excepción, **o** cambiá el `git push` del workflow por la
-creación de un PR.
+### 3. Permisos de GitHub Actions — YA HECHO
+Puestos en **Read and write** a nivel organización
+(`Settings › Actions › General › Workflow permissions`) y repo.
 
 ---
 
