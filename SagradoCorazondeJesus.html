@@ -170,8 +170,6 @@
   a.mail-copy { cursor: pointer; }
   .copy-toast { position: fixed; left: 50%; bottom: 1.5rem; transform: translateX(-50%) translateY(0.5rem); background: #12151C; color: #F4F2EA; padding: 0.6rem 1.1rem; border-radius: 999px; font-family: "Archivo", system-ui, sans-serif; font-size: 0.82rem; letter-spacing: 0.02em; box-shadow: 0 10px 28px rgba(0,0,0,0.35); opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease; z-index: 9999; }
   .copy-toast.is-on { opacity: 1; transform: translateX(-50%) translateY(0); }
-  .btn--cross { padding-left: 0.85rem; padding-right: 0.85rem; }
-  .btn--cross .ic-cross { display: block; width: auto; height: 16px; }
   .invocations { margin-top: 2.25rem; font-family: "Fraunces", serif; font-weight: 500; font-size: var(--step-1); line-height: 1.45; color: var(--gold-text); }
   /* ---------- Fondo: Sagrado Corazón ---------- */
   .scj-bg { position: fixed; right: -1%; bottom: 0; height: min(96vh, 1000px); width: auto; z-index: -1; opacity: 0.16; pointer-events: none;
@@ -183,6 +181,7 @@
   .site-footer { background: #1e3c68; }
   .site-footer__video { filter: brightness(0.92) saturate(1.05); }
   .site-footer__scrim { background: linear-gradient(180deg, rgba(17,35,66,0.66) 0%, rgba(10,22,46,0.9) 100%); }
+  .nav-cross { display: inline-block; width: auto; height: 0.95em; margin-left: 0.42em; vertical-align: -0.06em; }
 </style>
 </head>
 <body style="margin:0">
@@ -214,9 +213,9 @@
     <nav class="nav" aria-label="Principal">
       <a href="index.html#ideario">Visión</a>
       <a href="vision.html">Ideario</a>
+      <a href="SagradoCorazondeJesus.html" aria-current="page">Fe<svg class="nav-cross" viewBox="0 0 404 564" aria-hidden="true"><use href="#ic-cross" /></svg></a>
       <a href="index.html#aporta">Aporta</a>
       <a class="btn" href="index.html#sumate">Súmate</a>
-      <a class="btn btn--cross" href="SagradoCorazondeJesus.html" aria-current="page" aria-label="Sagrado Corazón de Jesús"><svg class="ic-cross" viewBox="0 0 404 564" aria-hidden="true"><use href="#ic-cross" /></svg></a>
     </nav>
   </div>
 </header>
