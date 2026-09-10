@@ -1,7 +1,7 @@
 ---
 title: La Iglesia Católica y la educación uruguaya.
 slug: laiglesiacatolicaylaeducacionuruguaya
-date: ''
+date: 2026-08-31
 author: Christian Iguini.
 summary: Este trabajo analiza la evolución del sistema educativo uruguayo, destacando la transición desde la base pedagógica de la Iglesia Católica hasta el modelo educativo actual del Plan 2023. Al comienzo la Iglesia fundó las bases de la educación occidental y colonial, preservando la cultura y promoviendo un humanismo integral orientado a la formación moral y la salvación. En Uruguay este predominio enfrentó una ruptura radical en el siglo XIX con la Reforma Vareliana, que impuso la laicidad y la formación para la ciudadanía democrática, desplazando el dogma religioso en favor de la razón y el método científico. El análisis revela que, aunque existe una secularización técnica, persiste una continuidad en la búsqueda de la dignidad humana y la solidaridad.
 source_url: ''
@@ -11,9 +11,6 @@ draft: false
 Este trabajo analiza la evolución del sistema educativo uruguayo, destacando la transición desde la base pedagógica de la Iglesia Católica hasta el modelo educativo actual del Plan 2023. Al comienzo la Iglesia fundó las bases de la educación occidental y colonial, preservando la cultura y promoviendo un humanismo integral orientado a la formación moral y la salvación. En Uruguay este predominio enfrentó una ruptura radical en el siglo XIX con la Reforma Vareliana, que impuso la laicidad y la formación para la ciudadanía democrática, desplazando el dogma religioso en favor de la razón y el método científico. El análisis revela que, aunque existe una secularización técnica, persiste una continuidad en la búsqueda de la dignidad humana y la solidaridad. 
 
 Actualmente el Plan 2023 profundiza estas rupturas al situar al estudiante como protagonista autónomo de su aprendizaje en entornos multimodales. Este modelo prioriza el desarrollo de competencias sobre la memorización, consolidando un sistema basado en los Derechos Humanos. Para sintetizar dicho resumen, la educación nacional ha transformado sus fundamentos teológicos en una ética civil, manteniendo el compromiso con la perfección integral de la persona.
-
-
-
 
 INTRODUCCIÓN.
 
@@ -28,9 +25,6 @@ No obstante, en la segunda mitad de este siglo, se marcó una ruptura fundamenta
 Por su parte, Varela proponía una escuela laica, gratuita y obligatoria como instrumento de democracia. En contraposición la Iglesia advertía que la exclusión de Dios de las aulas iba a conducir a una erosión de los valores espirituales de la nación. 
 
 En la actualidad, este debate sigue presente bajo nuevas formas en el Marco Curricular, donde la laicidad uruguaya se enfrenta al desafío de integrar una formación integral en un sistema que, aunque profundamente secularizado, sigue en plena conversación con las raíces de su tradición occidental. El análisis de este proceso es esencial para entender las tensiones entre la religión y lo laico han estructurado el perfil ciudadano y el modelo pedagógico del Uruguay actual.
-
-
-
 
 APORTES DE LA IGLESIA EN LA EDUCACIÓN OCCIDENTAL.
 
@@ -51,9 +45,6 @@ Durante la colonización de América, la Iglesia Católica desempeñó un papel 
 Los misioneros fueron educadores y se sostiene que los religiosos que llegaron a América no se dedicaron únicamente a evangelizar, sino también a enseñar. Aprendieron las lenguas indígenas, elaboraron gramáticas y diccionarios, enseñaron lectura y escritura, también, fundaron escuelas. Se muestra la relevancia que tuvo la Iglesia como una de las primeras instituciones educativas del continente. 
 
 Si bien el objetivo principal era la conversión religiosa de los pueblos indígenas. La enseñanza también incluía leer, escribir y la doctrina cristiana. La educación no era concebida como una actividad independiente, sino como parte de la misión evangelizadora.
-
-
-
 
 LA EDUCACIÓN CRISTIANA EN LA EDAD MEDIA.
 
@@ -107,9 +98,6 @@ San Agustín sostiene que existe una analogía absoluta entre la verdad y la fel
 
 Afirma que el único y verdadero maestro es Jesucristo (Maestro Interior), quien ilumina el alma desde dentro para que el hombre encuentre la verdad que lo lleva a su destino eterno.
 
-
-
-
 INFLUENCIA DE LA IGLESIA EN LA EDUCACIÓN URUGUAYA.
 
 En el período colonial la influencia de la Iglesia en la educación de la Banda Oriental fue determinante, siendo las órdenes religiosas las encargadas exclusivas de sistematizar la enseñanza bajo el régimen del Patronato Real. 
@@ -146,9 +134,6 @@ El hito inicial de la institucionalización en manos del Estado fue el Instituto
 
 Otro hito fue la fundación de la Universidad de la República en 1849, nació bajo la advocación de la Iglesia Católica como una supervivencia formal del periodo colonial, el control real lo ejercía el Estado a través del ministro de Gobierno como patrono. Su estructura original, basada en el modelo napoleónico, abarcaba todos los niveles de instrucción: primaria, secundaria y superior.
 
-
-
-
 LA REFORMA DE JOSÉ PEDRO VARELA.
 
 La gran transformación ocurrió con la Reforma Vareliana, impulsada por Varela tras su contacto con las experiencias educativas de Estados Unidos y su vínculo con Domingo Faustino Sarmiento. 
@@ -170,9 +155,6 @@ La reforma provocó una confrontación directa entre el positivismo liberal de V
 Merlo expresa que Jacinto Vera en su Carta Pastoral de 1878, el Obispo denunció que la exclusión o restricción de la religión en las aulas llevaría a la "destrucción de los valores espirituales" y al caos moral. Para Vera, no existía verdadera ilustración sin Dios, y el Estado no tenía derecho a violentar la conciencia de la mayoría católica. 
 
 Este periodo cerró con la Iglesia reorganizando su propia estructura educativa (fundando el Liceo de Estudios Universitarios en 1876) para contrarrestar la influencia racionalista, mientras el Estado afirmaba definitivamente su monopolio sobre la instrucción pública.
-
-
-
 
 PERMANENCIAS Y RUPTURAS.
 
@@ -212,12 +194,6 @@ Los programas de la Educación Básica Integrada actual incorporan explícitamen
 
 También cambió el sistema educativo y su autonomía, teniendo en cuenta el plan actual que da más poder de decisión. Dicho plan introduce el concepto de autonomía curricular, que habilita a los centros educativos y a los docentes a reflexionar y tomar decisiones pedagógicas para contextualizar sus prácticas según las necesidades de sus estudiantes. Se puede notar como se adapta más a casos particulares en comparación con el sistema educativo en la Iglesia.
 
-
-
-
-
-
-
 CONCLUSIÓN.
 
 Realizando este ensayo se puede obtener como conclusión principal, el papel de la Iglesia en el sistema educativo en Occidente y en Uruguay. En occidente, durante la edad media, los monasterios y escuelas catedralicias preservaron la cultura clásica y sentaron bases de las universidades. 
@@ -242,13 +218,7 @@ La influencia de la Iglesia persiste no en los programas oficiales, sino en la c
 
 Para concluir con dicho ensayo, se hace una mención especial al movimiento cultural de Resurgir Nacional que rectifica la importancia de la Iglesia y los valores cristianos que fueron indispensables para la educación uruguaya.
 
-
-
-
 -Christian Iguini.
-
-
-
 
 Bibliografía:
 
