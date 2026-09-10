@@ -21,8 +21,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.join(ROOT, "content", "formacion")
 TEMPLATE = os.path.join(ROOT, "formacion.html")
 FEED = os.path.join(ROOT, "feed.xml")
+SITEMAP = os.path.join(ROOT, "sitemap.xml")
 # URL publica del sitio. Cambiar si se pasa a dominio propio (p. ej. https://resurgirnacionaluy.org/)
 SITE = "https://avvedit-creator.github.io/resurgirnacionaluy/"
+STATIC_PAGES = ["", "vision.html", "formacion.html", "SagradoCorazondeJesus.html"]
 MARK_A = "<!-- ARTICLES:START -->"
 MARK_B = "<!-- ARTICLES:END -->"
 GEN_MARK = "<!-- generated:formacion-article -->"
@@ -96,12 +98,20 @@ def article_page(tpl, a):
     if src:
         source_p = ('\n      <p class="muted" style="margin-top:1.5rem">Publicado tambien en '
                     '<a href="%s" target="_blank" rel="noopener">X</a>.</p>' % esc(src))
+    art_url = SITE + a["slug"] + ".html"
     pre = tpl[:tpl.index("<main>")]
     post = tpl[tpl.index("</main>") + len("</main>"):]
-    pre = pre.replace("<title>Formación</title>",
+    pre = pre.replace("<title>Formación — Resurgir Nacional</title>",
                       "<title>%s · Formación · Resurgir Nacional</title>" % esc(title), 1)
-    pre = re.sub(r'<meta name="description" content="[^"]*"',
-                 '<meta name="description" content="%s"' % esc(summary), pre, count=1)
+    pre = pre.replace(SITE + "formacion.html", art_url)          # canonical, hreflang, og:url
+    pre = pre.replace('<meta property="og:type" content="website" />',
+                      '<meta property="og:type" content="article" />', 1)
+    pre = re.sub(r'(<meta name="description" content=")[^"]*(")',
+                 lambda m: m.group(1) + esc(summary) + m.group(2), pre, count=1)
+    pre = re.sub(r'(<meta property="og:title" content=")[^"]*(")',
+                 lambda m: m.group(1) + esc(title) + m.group(2), pre, count=1)
+    pre = re.sub(r'(<meta property="og:description" content=")[^"]*(")',
+                 lambda m: m.group(1) + esc(summary) + m.group(2), pre, count=1)
     pre = pre.replace("<head>", "<head>\n" + GEN_MARK, 1)
     main_html = (
         '<main>\n'
@@ -187,6 +197,20 @@ def write_feed(arts):
         print("  feed.xml: %d articulos" % len(arts))
 
 
+def write_sitemap(arts):
+    rows = ["  <url><loc>%s%s</loc></url>" % (SITE, p) for p in STATIC_PAGES]
+    for a in arts:
+        m = re.match(r"\d{4}-\d{2}-\d{2}", str(a.get("date", "")))
+        lm = "<lastmod>%s</lastmod>" % m.group(0) if m else ""
+        rows.append("  <url><loc>%s%s.html</loc>%s</url>" % (SITE, a["slug"], lm))
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+           + "\n".join(rows) + "\n</urlset>\n")
+    if not os.path.exists(SITEMAP) or rd(SITEMAP) != xml:
+        wr(SITEMAP, xml)
+        print("  sitemap.xml: %d urls" % len(rows))
+
+
 def main():
     if not os.path.isdir(CONTENT):
         os.makedirs(CONTENT, exist_ok=True)
@@ -230,6 +254,7 @@ def main():
         print("  formacion.html: sin cambios (%d articulos)" % len(arts))
 
     write_feed(arts)
+    write_sitemap(arts)
     return 0
 
 
