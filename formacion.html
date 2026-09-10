@@ -177,6 +177,13 @@
   .yt-lite__btn svg { width: 100%; height: 100%; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.45)); transition: transform .18s ease; }
   .yt-lite:hover .yt-lite__btn svg, .yt-lite:focus-within .yt-lite__btn svg { transform: scale(1.08); }
   .yt-lite iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .pub-card { display: block; margin-top: 1.6rem; max-width: 620px; padding: 1.5rem 1.6rem; border: 1px solid var(--line); border-radius: 4px; text-decoration: none; color: var(--ink); background: var(--surface); transition: border-color .2s ease, transform .2s ease; }
+  .pub-card:hover { border-color: var(--gold-line); transform: translateY(-2px); }
+  .pub-card__kicker { display: flex; align-items: center; gap: 0.45rem; font-family: "Archivo", sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); }
+  .pub-card__kicker svg { width: 0.95em; height: 0.95em; fill: currentColor; }
+  .pub-card__title { display: block; margin-top: 0.6rem; font-family: "Fraunces", serif; font-weight: 500; font-size: 1.35rem; line-height: 1.2; }
+  .pub-card__excerpt { display: block; margin-top: 0.6rem; color: var(--ink-soft); font-size: 1rem; line-height: 1.55; }
+  .pub-card__cta { display: inline-block; margin-top: 1rem; font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--blue); }
 </style>
 </head>
 <body style="margin:0">
@@ -242,7 +249,13 @@
       <div class="prose">
         <p>Ensayos y textos del movimiento, publicados en X.</p>
       </div>
-      <p><a class="btn" href="https://x.com/ResurgirUy/articles" target="_blank" rel="noopener">Ver los artículos en X</a></p>
+      <a class="pub-card" href="https://x.com/ResurgirUy/status/2097353476409815118" target="_blank" rel="noopener">
+        <span class="pub-card__kicker">Último artículo <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-x" /></svg></span>
+        <span class="pub-card__title">Sobre la inmigración en el Uruguay</span>
+        <span class="pub-card__excerpt">«La nación no es una simple suma de individuos. Si no existe el sentimiento de preservación, el Uruguay dejará de ser tal.»</span>
+        <span class="pub-card__cta">Leer en X →</span>
+      </a>
+      <p style="margin-top:1.4rem"><a href="https://x.com/ResurgirUy/articles" target="_blank" rel="noopener">Ver todos los artículos en X →</a></p>
     </section>
   </div>
 </main>
