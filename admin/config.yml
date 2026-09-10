@@ -1,6 +1,7 @@
 # Sveltia CMS — editor de Formación
-# Autenticación: GitHub. Los "usuarios autorizados" son los colaboradores del
-# repositorio avvedit-creator/resurgirnacionaluy (Settings › Collaborators).
+# Autenticación: GitHub. Los "usuarios autorizados" son los miembros del equipo
+# "redactores" de la organización Resurgir-Nacional-UY (con permiso Write sobre
+# este repositorio).
 #
 # Por defecto se usa login con token de acceso (no requiere infraestructura).
 # Para habilitar "Iniciar sesión con GitHub" de un clic, descomentá base_url y
@@ -8,7 +9,7 @@
 
 backend:
   name: github
-  repo: avvedit-creator/resurgirnacionaluy
+  repo: Resurgir-Nacional-UY/resurgirnacionaluy
   branch: main
   # base_url: https://TU-WORKER.workers.dev
 
