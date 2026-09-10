@@ -6,5 +6,13 @@
   <atom:link href="https://resurgirnacionaluy.org/feed.xml" rel="self" type="application/rss+xml" />
   <description>Artículos de formación del movimiento Resurgir Nacional.</description>
   <language>es-uy</language>
+  <lastBuildDate>Sun, 30 Aug 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Hombres de voto.</title>
+    <link>https://resurgirnacionaluy.org/democraciaenuruguay.html</link>
+    <guid isPermaLink="true">https://resurgirnacionaluy.org/democraciaenuruguay.html</guid>
+    <pubDate>Sun, 30 Aug 2026 12:00:00 +0000</pubDate>
+    <description>Frente al hombre democrático -proteico, veleidoso, afeminado- se precisan, para la restauración de nuestra cultura, hombres DE-VOTOS -fieles, decididos, viriles-. Frente a la palabra mendaz del demócrata, la verba diáfana y sonora del nacionalista.</description>
+  </item>
 </channel>
 </rss>
