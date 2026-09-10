@@ -6,7 +6,14 @@
   <atom:link href="https://resurgirnacionaluy.org/feed.xml" rel="self" type="application/rss+xml" />
   <description>Artículos de formación del movimiento Resurgir Nacional.</description>
   <language>es-uy</language>
-  <lastBuildDate>Sun, 30 Aug 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 31 Aug 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>La Iglesia Católica y la educación uruguaya.</title>
+    <link>https://resurgirnacionaluy.org/laiglesiacatolicaylaeducacionuruguaya.html</link>
+    <guid isPermaLink="true">https://resurgirnacionaluy.org/laiglesiacatolicaylaeducacionuruguaya.html</guid>
+    <pubDate>Mon, 31 Aug 2026 12:00:00 +0000</pubDate>
+    <description>Este trabajo analiza la evolución del sistema educativo uruguayo, destacando la transición desde la base pedagógica de la Iglesia Católica hasta el modelo educativo actual del Plan 2023. Al comienzo la Iglesia fundó las bases de la educación occidental y colonial, preservando la cultura y promoviendo un humanismo integral orientado a la formación moral y la salvación. En Uruguay este predominio enfrentó una ruptura radical en el siglo XIX con la Reforma Vareliana, que impuso la laicidad y la formación para la ciudadanía democrática, desplazando el dogma religioso en favor de la razón y el método científico. El análisis revela que, aunque existe una secularización técnica, persiste una continuidad en la búsqueda de la dignidad humana y la solidaridad.</description>
+  </item>
   <item>
     <title>Hombres de voto.</title>
     <link>https://resurgirnacionaluy.org/democraciaenuruguay.html</link>
