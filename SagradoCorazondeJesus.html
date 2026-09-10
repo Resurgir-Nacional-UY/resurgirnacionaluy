@@ -179,6 +179,10 @@
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .scj-bg { opacity: 0.2; } }
   :root[data-theme="dark"] .scj-bg { opacity: 0.2; }
   @media (max-width: 860px) { .scj-bg { opacity: 0.08; right: -22%; } }
+  /* ---------- Pie con cielo (solo esta página) ---------- */
+  .site-footer { background: #1e3c68; }
+  .site-footer__video { filter: brightness(0.92) saturate(1.05); }
+  .site-footer__scrim { background: linear-gradient(180deg, rgba(17,35,66,0.66) 0%, rgba(10,22,46,0.9) 100%); }
 </style>
 </head>
 <body style="margin:0">
@@ -247,8 +251,8 @@
 
 <footer class="site-footer">
   <video class="site-footer__video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"
-         poster="footer_poster.jpg">
-    <source src="footer.mp4" type="video/mp4" />
+         poster="cielo_poster.jpg">
+    <source src="cielo.mp4" type="video/mp4" />
   </video>
   <div class="site-footer__scrim"></div>
   <div class="wrap">
