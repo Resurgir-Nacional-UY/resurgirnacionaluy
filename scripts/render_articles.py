@@ -22,15 +22,22 @@ CONTENT = os.path.join(ROOT, "content", "formacion")
 TEMPLATE = os.path.join(ROOT, "formacion.html")
 FEED = os.path.join(ROOT, "feed.xml")
 SITEMAP = os.path.join(ROOT, "sitemap.xml")
+INDEX_NAME = "articulos.html"
+INDEX = os.path.join(ROOT, INDEX_NAME)
+# Artículos mostrados en la portada de Formación; el resto vive en el índice completo.
+HUB_LIMIT = 6
 # URL publica del sitio. Cambiar si se pasa a dominio propio (p. ej. https://resurgirnacionaluy.org/)
 SITE = "https://resurgirnacionaluy.org/"
 STATIC_PAGES = ["", "vision.html", "formacion.html", "SagradoCorazondeJesus.html"]
 MARK_A = "<!-- ARTICLES:START -->"
 MARK_B = "<!-- ARTICLES:END -->"
 GEN_MARK = "<!-- generated:formacion-article -->"
-RESERVED = {"index", "vision", "formacion", "sagradocorazondejesus", "admin", "404", "readme"}
+RESERVED = {"index", "vision", "formacion", "sagradocorazondejesus", "admin", "404",
+            "readme", "articulos"}
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
          "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+MESES_AB = ["ene", "feb", "mar", "abr", "may", "jun", "jul",
+            "ago", "sep", "oct", "nov", "dic"]
 
 
 def rd(p):
@@ -51,6 +58,18 @@ def fecha_es(s):
         return str(s or "")
     y, mo, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
     return "%d de %s de %d" % (d, MESES[mo - 1], y)
+
+
+def fecha_corta(s):
+    m = re.match(r"(\d{4})-(\d{2})-(\d{2})", str(s or ""))
+    if not m:
+        return str(s or "")
+    y, mo, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    return "%d %s %d" % (d, MESES_AB[mo - 1], y)
+
+
+def _collapse(s):
+    return re.sub(r"\s+", " ", str(s or "")).strip()
 
 
 def parse_md(text):
@@ -132,10 +151,11 @@ def article_page(tpl, a):
 
 
 def list_block(arts):
+    """Bloque para la portada de Formación: los HUB_LIMIT más recientes + enlace al índice."""
     if not arts:
         return ""
     rows = []
-    for a in arts:
+    for a in arts[:HUB_LIMIT]:
         rows.append(
             '        <a class="act" href="%s.html">\n'
             '          <h3>%s</h3>\n'
@@ -143,7 +163,108 @@ def list_block(arts):
             '          <span class="act__meta">%s</span>\n'
             '        </a>' % (a["slug"], esc(a["title"]), esc(a.get("summary", "")), esc(meta_line(a)))
         )
-    return '\n      <div class="acts acts--articles">\n' + "\n".join(rows) + "\n      </div>\n      "
+    block = '\n      <div class="acts acts--articles">\n' + "\n".join(rows) + "\n      </div>\n"
+    if len(arts) > HUB_LIMIT:
+        block += ('      <p class="acts__more"><a href="%s">'
+                  'Ver todos los artículos (%d)&nbsp;→</a></p>\n' % (INDEX_NAME, len(arts)))
+    return block + "      "
+
+
+INDEX_JS = """      <script>
+        (function () {
+          var box = document.querySelector('.art-search');
+          var rows = [].slice.call(document.querySelectorAll('.art-row'));
+          var none = document.querySelector('.art-nores');
+          if (!box || !rows.length) return;
+          var norm = function (s) {
+            return s.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
+          };
+          var keys = rows.map(function (r) { return norm(r.getAttribute('data-s') || ''); });
+          var apply = function () {
+            var q = norm(box.value.trim());
+            var shown = 0;
+            rows.forEach(function (r, i) {
+              var hit = !q || keys[i].indexOf(q) !== -1;
+              r.hidden = !hit;
+              if (hit) shown += 1;
+            });
+            [].forEach.call(document.querySelectorAll('.art-rows'), function (g) {
+              var any = [].some.call(g.querySelectorAll('.art-row'), function (r) { return !r.hidden; });
+              g.hidden = !any;
+              var head = g.previousElementSibling;
+              if (head && head.classList.contains('art-year')) head.hidden = !any;
+            });
+            if (none) none.hidden = shown !== 0;
+          };
+          box.addEventListener('input', apply);
+        })();
+      </script>"""
+
+
+def index_rows(arts):
+    parts, year = [], None
+    for a in arts:
+        m = re.match(r"(\d{4})", str(a.get("date", "")))
+        y = m.group(1) if m else "Sin fecha"
+        if y != year:
+            if year is not None:
+                parts.append("      </div>")
+            parts.append('      <h2 class="art-year">%s</h2>' % esc(y))
+            parts.append('      <div class="art-rows">')
+            year = y
+        summary = _collapse(a.get("summary", ""))
+        hay = _collapse("%s %s %s" % (a.get("title", ""), summary, a.get("author", "")))
+        parts.append(
+            '        <a class="art-row" href="%s.html" data-s="%s">'
+            '<span class="art-row__date">%s</span>'
+            '<span class="art-row__title">%s</span>'
+            '<span class="art-row__sum">%s</span></a>'
+            % (a["slug"], esc(hay), esc(fecha_corta(a.get("date", ""))),
+               esc(a["title"]), esc(summary))
+        )
+    if year is not None:
+        parts.append("      </div>")
+    return "\n".join(parts)
+
+
+def index_page(tpl, arts):
+    """Índice completo: articulos.html, con buscador en vivo. Reusa el chrome de formacion.html."""
+    pre = tpl[:tpl.index("<main>")]
+    post = tpl[tpl.index("</main>") + len("</main>"):]
+    desc = "Todos los artículos de formación del movimiento nacionalista uruguayo Resurgir Nacional."
+    pre = pre.replace("<title>Formación — Resurgir Nacional</title>",
+                      "<title>Artículos de Formación · Resurgir Nacional</title>", 1)
+    pre = pre.replace(SITE + "formacion.html", SITE + INDEX_NAME)   # canonical, hreflang, og:url
+    pre = re.sub(r'(<meta name="description" content=")[^"]*(")',
+                 lambda m: m.group(1) + esc(desc) + m.group(2), pre, count=1)
+    pre = re.sub(r'(<meta property="og:title" content=")[^"]*(")',
+                 lambda m: m.group(1) + "Artículos de Formación — Resurgir Nacional" + m.group(2), pre, count=1)
+    pre = re.sub(r'(<meta property="og:description" content=")[^"]*(")',
+                 lambda m: m.group(1) + esc(desc) + m.group(2), pre, count=1)
+    pre = pre.replace("<head>", "<head>\n" + GEN_MARK, 1)
+    n = len(arts)
+    lead = ("%d publicaciones. Buscá por título, resumen o autor." % n) if n \
+        else "Todavía no hay artículos publicados."
+    main_html = (
+        '<main>\n'
+        '  <article class="doc">\n'
+        '    <section>\n'
+        '      <span class="label">Formación</span>\n'
+        '      <h1>Artículos</h1>\n'
+        '      <p class="doc-lead">%s</p>\n'
+        '      <input type="search" class="art-search" placeholder="Buscar…" '
+        'aria-label="Buscar artículos" autocomplete="off" />\n'
+        '      <p class="art-nores" hidden>No hay artículos que coincidan con la búsqueda.</p>\n'
+        '    </section>\n'
+        '    <section class="art-index">\n'
+        '%s\n'
+        '      <p style="margin-top:2.5rem"><a href="formacion.html">← Volver a Formación</a></p>\n'
+        '    </section>\n'
+        '%s\n'
+        '  </article>\n'
+        '</main>' % (esc(lead), index_rows(arts), INDEX_JS)
+    )
+    return pre + main_html + post
 
 
 def _rfc822(datestr):
@@ -198,7 +319,10 @@ def write_feed(arts):
 
 
 def write_sitemap(arts):
-    rows = ["  <url><loc>%s%s</loc></url>" % (SITE, p) for p in STATIC_PAGES]
+    pages = list(STATIC_PAGES)
+    if len(arts) > HUB_LIMIT:
+        pages.append(INDEX_NAME)
+    rows = ["  <url><loc>%s%s</loc></url>" % (SITE, p) for p in pages]
     for a in arts:
         m = re.match(r"\d{4}-\d{2}-\d{2}", str(a.get("date", "")))
         lm = "<lastmod>%s</lastmod>" % m.group(0) if m else ""
@@ -229,6 +353,15 @@ def main():
             wr(out, page)
             print("  escrito: %s.html" % a["slug"])
         written.add(a["slug"] + ".html")
+
+    # índice completo articulos.html — solo si hay más artículos que los de la portada
+    if len(arts) > HUB_LIMIT:
+        page = index_page(tpl, arts)
+        if not os.path.exists(INDEX) or rd(INDEX) != page:
+            wr(INDEX, page)
+            print("  escrito: %s (%d articulos)" % (INDEX_NAME, len(arts)))
+        written.add(INDEX_NAME)
+    # si no supera el límite, sobra: lo borra la limpieza de abajo (lleva GEN_MARK)
 
     # remove stale generated article pages
     for path in glob.glob(os.path.join(ROOT, "*.html")):
