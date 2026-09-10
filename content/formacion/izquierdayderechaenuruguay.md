@@ -10,9 +10,6 @@ draft: false
 
 (Con su debido permiso, compartimos este texto escrito por el compatriota Oriental Facundo Cuadro, sobre las categorías políticas de derecha e izquierda)
 
-
-
-
 Parte 1. Las categorías de izquierda y derecha.   
 
 Durante la contienda electoral la simplificación es la norma. El énfasis en el marketing y la ingeniería electoral busca situarnos por fuera del debate de ideas. Mediante la construcción de narrativas que priorizan la identificación emocional frente al debate racional se asumen determinadas categorías, que en muchos casos pueden ser, en realidad, más iguales de lo que parecen absolutamente inválidas. Este trabajo pretende ser un aporte que complejiza un espacio común en el discurso político: el de las categorías de izquierda y derecha.     
@@ -28,9 +25,6 @@ En su recorrido, los tres analizan autores y movimientos políticos que se han i
 3- La última, contraria a la primera, plantea que izquierda y derecha son categorías inválidas en sí mismas. Es decir, que no sirven para explicar lo político, porque oscurecen más de lo que aclaran. 
 
 A continuación, vamos a analizar las razones de cada una de estas posturas para intentar comprender esta problemática. 
-
-
-
 
 Primera posición: izquierda y derecha como categorías necesarias. 
 
@@ -48,9 +42,6 @@ Esta visión está estrechamente ligada a la izquierda de la modernidad, influen
 
 En espejo a la posición de Bobbio se pueden plantear otras que entienden, al igual que él, que las categorías son cuasi eternas, pero tomando posición desde la derecha. Así, por ejemplo, se puede argumentar que, en realidad, la derecha no festeja la desigualdad, sino que ve en ella la diferencia. No se fomenta o apoya la desigualdad, sino la diferencia, el particularismo, que deviene en defensa del individualismo frente al colectivismo. La igualdad que plantea Bobbio se ve, desde esta postura, como igualitarismo, y la búsqueda de romper con las diferencias como la búsqueda de homogeneización. De esta forma puede argumentarse la desigualdad como parte de un orden orgánico, sea natural o divino, en el que la diferencia determina el papel de cada uno en un orden justo en el que a cada uno le corresponde lo suyo. La defensa de este antiguo régimen, cuya característica principal es la alianza entre el trono y el altar, es la razón de ser de las derechas políticas, sobre todo de la derecha tradicional contra-revolucionaria,  reaccionaria (que buscaba volver a un estado anterior de cosas), representada por ejemplo por De Meistre en Francia (que, si bien como al igual que Rousseau, no se identificaba con la distinción izquierda/derecha, podría ser considerado uno de los padres de la derecha política). 
 
-
-
-
 La derecha y el individualismo. 
 
 Las diferencias dentro de la derecha en la justificación de la desigualdad pueden estar relacionada, por ejemplo, con posturas teológicas. Hay corrientes que entienden el orden desigual como una cuestión de justicia divina, alegando que este sería el orden divino. En este caso la diferencia es vista como un hecho de voluntad de Dios, por lo que no se la niega ni se la combate: se acepta. Estas posturas son propias de las derechas cristianas católicas o protestantes. También se podría rastrear también una derecha pagana, influenciada, por ejemplo, por Nietzsche. Nietzsche en “El anticristo” defiende la jerarquía como indispensable para el mejoramiento de las sociedades. Es a partir del mejoramiento de los individuos y del triunfo de los mejores que las sociedades pueden avanzar. 
@@ -59,13 +50,7 @@ Las diferencias dentro de la derecha en la justificación de la desigualdad pued
 
 Mutatis mutandis esta es la posición que también hoy toma la derecha “liberal”, hegemónica en el campo político de la derecha. Enfrentada a un comunitarismo de izquierda se plantea una derecha individualista. En este caso hay una defensa al orden social existente, abandonada ya la idea de un retorno al antiguo régimen (en el caso de una derecha conservadora, no reaccionaria). El horizonte histórico, la aspiración social a futuro, no es la vuelta comunidad orgánica del antiguo régimen, sino el mantenimiento de una sociedad de individuos. Las diferencias sociales, de individuos que podrían organizarse en clases (no en castas como plantean los reaccionarios) está en función del mérito. Es la meritocracia la razón que explica las diferencias sociales. El orden social divino es secularizado por el orden natural del mercado. En esta derecha, a diferencia de la tradicionalista, el centro es mercantil y la relación entre individuos es utilitarista, basada en la sociedad del comercio y la competición como único principio de suceso y de justicia. En su visión actual más radical, cualquier acción del Estado sobre la política o la economía es vista como un signo de opresión colectivista sobre el individuo soberano radical. Aunque con la contradicción patente de que se autodenominen, en muchos casos, “derecha conservadora”. 
 
-
-
-
 Parte 2 - La visión de una dicotomía sociohistórica. 
-
-
-
 
 Segunda posición: validez de las categorías solo en un contexto sociohistórico. 
 
@@ -105,13 +90,7 @@ Bueno también distingue tres izquierdas indefinidas, es decir, sin proyecto de 
 
 En “El mito de la derecha”, libro posterior a “El mito de la izquierda”, Bueno plantea distintas modulaciones de la derecha: una derecha reaccionaria, que busca la vuelta al antiguo régimen, una derecha conservadora liberal que combina, justamente, parámetros conservadores y liberales dependiendo del momento sociohistórico, y una derecha socialista, propia de algunas derechas comunitaristas ligadas a la iglesia católica. También destaca a una derecha extravagante, propia de movimientos secesionistas, anarcocapitalistas individualistas extremos y una derecha no alineada con el antiguo régimen, donde sitúa al fascismo y al nazismo. 
 
-
-
-
 Parte 3: la inútil categorización izquierda- derecha y el partido único globalista.  
-
-
-
 
 Tercera postura. izquierda y derecha: fantasmas superados.  
 
@@ -154,8 +133,5 @@ Por último, si el orden mundial es de izquierda en la cultura y de derecha en l
 El Estado existe y funciona para controlar al pueblo. Se entromete constantemente en la vida de las personas mediante las imposiciones biopolíticas, pero es incapaz de intervenir en la economía a favor del bajo. Además, cumple otra función: invisibilizar el disenso y promover falsas disidencias.   
 
 Las propuestas políticas son coincidentes, diferenciándose sólo en intensidad y radicalidad. Ambas partes se acusan mutuamente de manera infundada: la derecha tacha a la izquierda de comunista, y la izquierda acusa a la derecha de fascista; mientras tanto, ambos perpetúan las lógicas globalistas. Así, se divide a los sectores populares, mientras las élites llevan a cabo sus políticas de clase. Se crea la ilusión de pluralismo, cuando en realidad este se niega en su propia posibilidad. Lo que existe, en lugar de izquierda y derecha, es un monopartidismo competitivo: el Partido Único globalista.
-
-
-
 
 -Facundo Cuadro.
