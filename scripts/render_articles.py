@@ -10,6 +10,9 @@ Run from the repo root:  python scripts/render_articles.py
 Pure stdlib + `markdown` + `pyyaml`.
 """
 import io, os, re, sys, json, html, glob
+from datetime import datetime, timezone
+from email.utils import format_datetime
+from xml.sax.saxutils import escape as xesc
 
 import yaml
 import markdown
@@ -17,6 +20,9 @@ import markdown
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.join(ROOT, "content", "formacion")
 TEMPLATE = os.path.join(ROOT, "formacion.html")
+FEED = os.path.join(ROOT, "feed.xml")
+# URL publica del sitio. Cambiar si se pasa a dominio propio (p. ej. https://resurgirnacionaluy.org/)
+SITE = "https://avvedit-creator.github.io/resurgirnacionaluy/"
 MARK_A = "<!-- ARTICLES:START -->"
 MARK_B = "<!-- ARTICLES:END -->"
 GEN_MARK = "<!-- generated:formacion-article -->"
@@ -130,6 +136,57 @@ def list_block(arts):
     return '\n      <div class="acts acts--articles">\n' + "\n".join(rows) + "\n      </div>\n      "
 
 
+def _rfc822(datestr):
+    m = re.match(r"(\d{4})-(\d{2})-(\d{2})", str(datestr or ""))
+    if not m:
+        return None
+    dt = datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)), 12, 0, 0, tzinfo=timezone.utc)
+    return format_datetime(dt)
+
+
+def write_feed(arts):
+    items, newest = [], None
+    for a in arts:
+        url = SITE + a["slug"] + ".html"
+        pub = _rfc822(a.get("date"))
+        if pub and not newest:
+            newest = pub
+        items.append(
+            "  <item>\n"
+            "    <title>%s</title>\n"
+            "    <link>%s</link>\n"
+            '    <guid isPermaLink="true">%s</guid>\n'
+            "%s"
+            "    <description>%s</description>\n"
+            "  </item>" % (
+                xesc(a["title"]), xesc(url), xesc(url),
+                ("    <pubDate>%s</pubDate>\n" % pub) if pub else "",
+                xesc(a.get("summary", "") or a["title"]),
+            )
+        )
+    feed = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
+        "<channel>\n"
+        "  <title>Resurgir Nacional — Formación</title>\n"
+        "  <link>%sformacion.html</link>\n"
+        '  <atom:link href="%sfeed.xml" rel="self" type="application/rss+xml" />\n'
+        "  <description>Artículos de formación del movimiento Resurgir Nacional.</description>\n"
+        "  <language>es-uy</language>\n"
+        "%s"
+        "%s"
+        "</channel>\n"
+        "</rss>\n" % (
+            SITE, SITE,
+            ("  <lastBuildDate>%s</lastBuildDate>\n" % newest) if newest else "",
+            ("\n".join(items) + "\n") if items else "",
+        )
+    )
+    if not os.path.exists(FEED) or rd(FEED) != feed:
+        wr(FEED, feed)
+        print("  feed.xml: %d articulos" % len(arts))
+
+
 def main():
     if not os.path.isdir(CONTENT):
         os.makedirs(CONTENT, exist_ok=True)
@@ -171,6 +228,8 @@ def main():
         print("  formacion.html: lista actualizada (%d articulos)" % len(arts))
     else:
         print("  formacion.html: sin cambios (%d articulos)" % len(arts))
+
+    write_feed(arts)
     return 0
 
 

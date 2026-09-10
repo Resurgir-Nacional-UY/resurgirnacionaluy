@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Resurgir Nacional — Formación</title>
+  <link>https://avvedit-creator.github.io/resurgirnacionaluy/formacion.html</link>
+  <atom:link href="https://avvedit-creator.github.io/resurgirnacionaluy/feed.xml" rel="self" type="application/rss+xml" />
+  <description>Artículos de formación del movimiento Resurgir Nacional.</description>
+  <language>es-uy</language>
+</channel>
+</rss>
