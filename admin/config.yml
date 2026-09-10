@@ -3,15 +3,15 @@
 # "redactores" de la organización Resurgir-Nacional-UY (con permiso Write sobre
 # este repositorio).
 #
-# Por defecto se usa login con token de acceso (no requiere infraestructura).
-# Para habilitar "Iniciar sesión con GitHub" de un clic, descomentá base_url y
-# poné la URL de tu worker de OAuth (ver README-CMS.md, paso 2).
+# Login "Iniciar sesión con GitHub" de un clic vía el worker de OAuth
+# sveltia-cms-auth en Cloudflare (base_url). También sigue disponible el login
+# con token de acceso personal. Ver README-CMS.md.
 
 backend:
   name: github
   repo: Resurgir-Nacional-UY/resurgirnacionaluy
   branch: main
-  # base_url: https://TU-WORKER.workers.dev
+  base_url: https://sveltia-cms-auth.avvedit.workers.dev
 
 # Cada guardado abre un Pull Request; el artículo se publica al aprobarlo (merge).
 publish_mode: editorial_workflow
