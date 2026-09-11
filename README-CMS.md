@@ -105,8 +105,19 @@ Al hacer push a `main`, el workflow lo publica.
 ## Editar textos e imágenes de la portada, Visión, Fe y Formación
 
 Desde `/admin/` hay una sección **"Páginas"** (además de "Artículos de
-Formación") con un formulario por página: el texto principal del inicio, los
-videos de fondo, las imágenes de fondo de Fe, y el video de presentación de
-Formación. Se edita ahí, sin tocar código — funciona igual que un artículo:
-al guardar se crea un Pull Request, y se publica cuando alguien con permiso
-lo aprueba (merge).
+Formación") con un formulario por página:
+
+- **Portada**: el texto principal del inicio y los videos de fondo.
+- **Visión**: el video de fondo y **todo el texto del documento** — los
+  títulos de cada sección, los párrafos, la frase destacada, los doce
+  principios (título y texto de cada uno), los recuadros de la cuota y las
+  siete actividades. Los principios, recuadros y actividades son una
+  cantidad fija (no se pueden agregar ni quitar desde el editor, para no
+  romper la numeración ni el diseño) — solo se edita su texto.
+- **Fe**: las dos imágenes de fondo y **todo el texto** — bajada, oraciones
+  (línea por línea) e invocaciones.
+- **Formación**: el ID del video de YouTube de presentación y su miniatura.
+
+Se edita ahí, sin tocar código — funciona igual que un artículo: al guardar
+se crea un Pull Request, y se publica cuando alguien con permiso lo aprueba
+(merge).

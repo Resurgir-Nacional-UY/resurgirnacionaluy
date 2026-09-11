@@ -47,7 +47,7 @@ collections:
             hint: "Un video corto en loop (MP4, sin audio). Pesos grandes hacen la web más lenta: idealmente menos de 3 MB."
 
       - name: vision
-        label: "Visión — imagen de fondo"
+        label: "Visión — texto e imagen de fondo"
         file: content/pages/vision.yml
         media_folder: /media/pages
         public_folder: /media/pages
@@ -57,8 +57,86 @@ collections:
             widget: file
             hint: "Un video corto en loop (MP4, sin audio)."
 
+          - name: sec1_heading
+            label: "Sección 1 — título"
+            widget: string
+          - name: sec1_p1
+            label: "Sección 1 — párrafo 1"
+            widget: text
+          - name: sec1_pullquote
+            label: "Sección 1 — frase destacada"
+            widget: text
+            hint: "Se muestra en grande, entre el párrafo 1 y el 2."
+          - name: sec1_p2
+            label: "Sección 1 — párrafo 2"
+            widget: text
+          - name: sec1_p3
+            label: "Sección 1 — párrafo 3"
+            widget: text
+          - name: sec1_p4
+            label: "Sección 1 — párrafo 4"
+            widget: text
+
+          - name: sec2_heading
+            label: "Sección 2 — título"
+            widget: string
+          - name: sec2_p1
+            label: "Sección 2 — párrafo 1"
+            widget: text
+          - name: sec2_p2
+            label: "Sección 2 — párrafo 2"
+            widget: text
+
+          - name: sec3_heading
+            label: "Sección 3 — título"
+            widget: string
+          - name: sec3_values
+            label: "Los doce principios"
+            widget: list
+            min: 12
+            max: 12
+            hint: "Son exactamente 12 (están numerados en la página) — se puede editar el texto de cada uno, pero no agregar ni quitar."
+            fields:
+              - { name: title, label: "Título", widget: string }
+              - { name: body, label: "Texto", widget: text }
+
+          - name: sec4_heading
+            label: "Sección 4 — título"
+            widget: string
+          - name: sec4_p1
+            label: "Sección 4 — párrafo 1"
+            widget: text
+          - name: sec4_p2
+            label: "Sección 4 — párrafo 2"
+            widget: text
+          - name: sec4_p3
+            label: "Sección 4 — párrafo 3"
+            widget: text
+          - name: sec4_facts
+            label: "Recuadros de cuota"
+            widget: list
+            min: 3
+            max: 3
+            hint: "Son exactamente 3 recuadros — se puede editar el texto de cada uno, pero no agregar ni quitar."
+            fields:
+              - { name: big, label: "Número o palabra grande", widget: string }
+              - { name: label, label: "Descripción chica", widget: string }
+
+          - name: sec5_heading
+            label: "Sección 5 — título"
+            widget: string
+          - name: sec5_acts
+            label: "Actividades"
+            widget: list
+            min: 7
+            max: 7
+            hint: "Son exactamente 7 tarjetas — se puede editar el texto de cada una, pero no agregar ni quitar."
+            fields:
+              - { name: title, label: "Título", widget: string }
+              - { name: body, label: "Texto", widget: text }
+
       - name: fe
-        label: "Fe — imágenes de fondo"
+        label: "Fe — texto e imágenes de fondo"
         file: content/pages/fe.yml
         media_folder: /media/pages
         public_folder: /media/pages
@@ -70,6 +148,58 @@ collections:
           - name: bg_icdm
             label: "Imagen de fondo — izquierda (Inmaculado Corazón)"
             widget: image
+
+          - name: sec1_lead
+            label: "Bajada (debajo del título)"
+            widget: string
+          - name: sec1_p1
+            label: "Introducción"
+            widget: text
+
+          - name: sec2_heading
+            label: "Oración — título"
+            widget: string
+          - name: sec2_p1
+            label: "Oración — línea 1"
+            widget: text
+          - name: sec2_p2
+            label: "Oración — línea 2"
+            widget: text
+          - name: sec2_p3
+            label: "Oración — línea 3"
+            widget: text
+          - name: sec2_p4
+            label: "Oración — línea 4"
+            widget: text
+          - name: sec2_p5
+            label: "Oración — línea 5"
+            widget: text
+          - name: sec2_p6
+            label: "Oración — línea 6"
+            widget: text
+          - name: sec2_invocations
+            label: "Invocaciones"
+            widget: text
+            hint: "Dos frases cortas, una por línea."
+
+          - name: sec3_heading
+            label: "Segunda oración — título"
+            widget: string
+          - name: sec3_p1
+            label: "Segunda oración — línea 1"
+            widget: text
+          - name: sec3_p2
+            label: "Segunda oración — línea 2"
+            widget: text
+          - name: sec3_p3
+            label: "Segunda oración — línea 3"
+            widget: text
+          - name: sec3_p4
+            label: "Segunda oración — línea 4"
+            widget: text
+          - name: sec3_p5
+            label: "Segunda oración — línea 5"
+            widget: text
 
       - name: formacion_page
         label: "Formación — video de presentación"
