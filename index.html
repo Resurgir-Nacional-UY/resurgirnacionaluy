@@ -221,7 +221,9 @@
   /* ---------- Cortina de bandera uruguaya: cubre el hero y se corre a la
      izquierda al cargar, revelando el titular y el emblema. El panel usa el
      mismo ratio que la bandera real (2:3 alto:ancho) en vez de estirarse al
-     ancho del hero, así no queda borde blanco de más alrededor del diseño. */
+     ancho del hero, así no queda borde blanco de más alrededor del diseño.
+     En escritorio se usa uruguay-wide.svg (mismo archivo, con las franjas
+     —no el sol— ensanchadas hacia la derecha) con un ratio más ancho. ---- */
   .hero__curtain {
     position: absolute; top: 0; left: 0; height: 100%;
     aspect-ratio: 945 / 630;
@@ -232,6 +234,9 @@
   .hero__curtain-flag {
     position: absolute; inset: 0; width: 100%; height: 100%;
     object-fit: cover; display: block;
+  }
+  @media (min-width: 900px) {
+    .hero__curtain { aspect-ratio: 1550 / 630; }
   }
   @media (prefers-reduced-motion: no-preference) {
     .hero__curtain { animation: hero-curtain-slide 1.55s cubic-bezier(.65,0,.35,1) 0.65s both; }
@@ -500,7 +505,10 @@
     </video>
     <div class="hero__scrim" aria-hidden="true"></div>
     <div class="hero__curtain" aria-hidden="true">
-      <img class="hero__curtain-flag" src="uruguay.svg" alt="" />
+      <picture>
+        <source media="(min-width: 900px)" srcset="uruguay-wide.svg" />
+        <img class="hero__curtain-flag" src="uruguay.svg" alt="" />
+      </picture>
     </div>
     <div class="wrap">
       <div class="hero__copy">
