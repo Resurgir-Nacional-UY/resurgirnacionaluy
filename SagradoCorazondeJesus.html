@@ -219,7 +219,8 @@
   @media (max-width: 900px) { .icdm-bg { display: none; } .scj-bg { opacity: 0.08; right: -22%; } .vera-bg { opacity: 0.08; right: -22%; } }
   .vera-bg {
     right: -1%;
-    height: 92%;
+    height: 400px;
+    bottom: 40px;
     -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%);
     mask: linear-gradient(103deg, transparent 0%, #000 26%);
   }
@@ -231,9 +232,14 @@
      el mask conviven en el mismo elemento, el resplandor que se sale de
      la caja de la imagen queda cortado en seco justo en el borde (se ve
      un recuadro). Sin mask, el blur se apaga solo antes de llegar al
-     borde de la sección. */
+     borde de la sección — pero el propio archivo recortado deja muy poco
+     margen transparente arriba/abajo de la figura (~2% de su alto), así
+     que además se fija una altura en píxeles (no % de la sección) con
+     bottom:40px, dejando ~40px de aire real arriba y abajo dentro de
+     .vera-host (min-height 480px) para que el resplandor tenga sitio de
+     sobra antes de tocar el overflow:hidden de la sección. */
   .vera-glow {
-    position: absolute; bottom: 0; right: -1%; height: 92%; width: auto;
+    position: absolute; bottom: 40px; right: -1%; height: 400px; width: auto;
     z-index: -2; opacity: 0.16; pointer-events: none;
     filter:
       drop-shadow(0 0 10px rgba(255, 214, 130, 0.85))
