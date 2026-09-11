@@ -195,8 +195,12 @@
      van con su propia sección en vez de quedar clavadas en pantalla. */
   .scj-host, .icdm-host { position: relative; overflow: hidden; min-height: 480px; }
   .scj-bg, .icdm-bg { position: absolute; bottom: 0; height: 100%; width: auto; z-index: -1; opacity: 0.16; pointer-events: none; }
-  .scj-bg { right: -1%; -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%); mask: linear-gradient(103deg, transparent 0%, #000 26%); }
-  .icdm-bg { left: -1%; transform: scaleX(-1); -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%); mask: linear-gradient(103deg, transparent 0%, #000 26%); }
+  /* .doc está centrado (max-width + margin-inline:auto): right/left en
+     calc(50% - 50vw + ...) rompe el ancho angosto de la sección anfitriona
+     y vuelve a alinear la imagen al borde real de la ventana, como cuando
+     eran position:fixed. */
+  .scj-bg { right: calc(50% - 50vw - 1%); -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%); mask: linear-gradient(103deg, transparent 0%, #000 26%); }
+  .icdm-bg { left: calc(50% - 50vw - 1%); height: 122%; transform: scaleX(-1); -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%); mask: linear-gradient(103deg, transparent 0%, #000 26%); }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .scj-bg, :root:not([data-theme="light"]) .icdm-bg { opacity: 0.2; } }
   :root[data-theme="dark"] .scj-bg, :root[data-theme="dark"] .icdm-bg { opacity: 0.2; }
   @media (max-width: 900px) { .icdm-bg { display: none; } .scj-bg { opacity: 0.08; right: -22%; } }
@@ -239,8 +243,8 @@
   }
   @keyframes scj-rotate { to { transform: translate(-50%, -50%) rotate(360deg); } }
 
-  .scj-heart-glow { right: -1%; aspect-ratio: 520 / 1218; --gx: 51%; --gy: 30.2%; }
-  .icdm-heart-glow { left: -1%; aspect-ratio: 520 / 1410; --gx: 47%; --gy: 27.5%; transform: scaleX(-1); }
+  .scj-heart-glow { right: calc(50% - 50vw - 1%); aspect-ratio: 520 / 1218; --gx: 51%; --gy: 30.2%; }
+  .icdm-heart-glow { left: calc(50% - 50vw - 1%); height: 122%; aspect-ratio: 520 / 1410; --gx: 47%; --gy: 27.5%; transform: scaleX(-1); }
 
   @media (max-width: 900px) {
     .scj-heart-glow { right: -22%; opacity: 0.55; }
