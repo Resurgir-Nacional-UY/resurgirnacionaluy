@@ -23,6 +23,71 @@ media_folder: media/formacion
 public_folder: media/formacion
 
 collections:
+  - name: pages
+    label: Páginas
+    files:
+      - name: home
+        label: "Portada — textos e imágenes"
+        file: content/pages/home.yml
+        media_folder: /media/pages
+        public_folder: /media/pages
+        fields:
+          - name: hero_lead
+            label: "Texto principal (debajo del título)"
+            widget: text
+
+          - name: hero_video
+            label: "Video de fondo — sección de inicio"
+            widget: file
+            hint: "Un video corto en loop (MP4, sin audio). Pesos grandes hacen la web más lenta: idealmente menos de 3 MB."
+
+          - name: sumate_video
+            label: "Video de fondo — sección Sumarse"
+            widget: file
+            hint: "Un video corto en loop (MP4, sin audio). Pesos grandes hacen la web más lenta: idealmente menos de 3 MB."
+
+      - name: vision
+        label: "Visión — imagen de fondo"
+        file: content/pages/vision.yml
+        media_folder: /media/pages
+        public_folder: /media/pages
+        fields:
+          - name: hero_video
+            label: "Video de fondo (bandera)"
+            widget: file
+            hint: "Un video corto en loop (MP4, sin audio)."
+
+      - name: fe
+        label: "Fe — imágenes de fondo"
+        file: content/pages/fe.yml
+        media_folder: /media/pages
+        public_folder: /media/pages
+        fields:
+          - name: bg_scj
+            label: "Imagen de fondo — derecha (Cristo Rey)"
+            widget: image
+
+          - name: bg_icdm
+            label: "Imagen de fondo — izquierda (Inmaculado Corazón)"
+            widget: image
+
+      - name: formacion_page
+        label: "Formación — video de presentación"
+        file: content/pages/formacion.yml
+        media_folder: /media/pages
+        public_folder: /media/pages
+        fields:
+          - name: video_youtube_id
+            label: "ID del video de YouTube"
+            widget: string
+            hint: >-
+              La parte del link de YouTube después de "v=" o "youtu.be/". Por
+              ejemplo, en https://youtu.be/Glzx6Y9uhLI el ID es Glzx6Y9uhLI.
+
+          - name: video_thumb
+            label: "Miniatura (imagen que se ve antes de reproducir)"
+            widget: image
+
   - name: formacion
     label: Artículos de Formación
     label_singular: Artículo

@@ -93,7 +93,20 @@ Al hacer push a `main`, el workflow lo publica.
 |---|---|
 | `admin/` | Editor web (Sveltia CMS) |
 | `content/formacion/*.md` | Artículos (fuente) |
-| `media/formacion/` | Imágenes subidas |
-| `scripts/render_articles.py` | Genera las páginas y el listado |
+| `media/formacion/` | Imágenes subidas (artículos) |
+| `scripts/render_articles.py` | Genera las páginas de artículos y el listado |
 | `.github/workflows/formacion.yml` | Corre el script al cambiar el contenido |
-| `<slug>.html` (raíz) | Páginas generadas — no editar a mano |
+| `<slug>.html` (raíz) | Páginas de artículo generadas — no editar a mano |
+| `content/pages/*.yml` | Textos e imágenes editables de las páginas fijas (fuente) |
+| `media/pages/` | Imágenes/videos subidos para las páginas fijas |
+| `tools/render_pages.py` | Aplica `content/pages/*.yml` sobre `tools/src/*.html` |
+| `tools/build.py` | Arma el sitio completo (llama a `render_pages.py` y a `render_articles.py`) |
+
+## Editar textos e imágenes de la portada, Visión, Fe y Formación
+
+Desde `/admin/` hay una sección **"Páginas"** (además de "Artículos de
+Formación") con un formulario por página: el texto principal del inicio, los
+videos de fondo, las imágenes de fondo de Fe, y el video de presentación de
+Formación. Se edita ahí, sin tocar código — funciona igual que un artículo:
+al guardar se crea un Pull Request, y se publica cuando alguien con permiso
+lo aprueba (merge).

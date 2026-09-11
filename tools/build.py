@@ -24,6 +24,11 @@ TOOLS = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(TOOLS, "src")
 ROOT = os.path.dirname(TOOLS)   # raíz del repo (carpeta que sirve GitHub Pages)
 
+# Aplica primero los campos editables sin código (colección Sveltia "Páginas":
+# content/pages/*.yml) sobre las fuentes en src/, antes de leerlas más abajo.
+import render_pages
+render_pages.main()
+
 HOME = "https://resurgirnacionaluy.org/"
 VISION_ABS = HOME + "vision.html"
 SUBPAGES = ["vision.html", "SagradoCorazondeJesus.html", "formacion.html"]
