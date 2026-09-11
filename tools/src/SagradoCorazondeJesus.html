@@ -206,22 +206,33 @@
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .scj-bg, :root:not([data-theme="light"]) .icdm-bg, :root:not([data-theme="light"]) .vera-bg { opacity: 0.2; } }
   :root[data-theme="dark"] .scj-bg, :root[data-theme="dark"] .icdm-bg, :root[data-theme="dark"] .vera-bg { opacity: 0.2; }
   @media (max-width: 900px) { .icdm-bg { display: none; } .scj-bg { opacity: 0.08; right: -22%; } .vera-bg { opacity: 0.08; right: -22%; } }
-  /* ---------- Beato Jacinto Vera: otro tipo de iluminación — en vez del
-     corazón con rayos (scj/icdm), un aura dorada que sigue el propio
-     contorno de la figura (drop-shadow respeta el canal alfa del PNG/WEBP
-     recortado), pulsando muy despacio como una vela. ---------- */
   .vera-bg {
     right: -1%;
     height: 92%;
     -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%);
     mask: linear-gradient(103deg, transparent 0%, #000 26%);
+  }
+  /* ---------- Beato Jacinto Vera: otro tipo de iluminación — en vez del
+     corazón con rayos (scj/icdm), un aura dorada que sigue el propio
+     contorno de la figura (drop-shadow respeta el canal alfa del PNG/WEBP
+     recortado), pulsando muy despacio como una vela. Vive en una imagen
+     aparte (misma imagen, detrás de .vera-bg) y SIN mask: si el filter y
+     el mask conviven en el mismo elemento, el resplandor que se sale de
+     la caja de la imagen queda cortado en seco justo en el borde (se ve
+     un recuadro). Sin mask, el blur se apaga solo antes de llegar al
+     borde de la sección. */
+  .vera-glow {
+    position: absolute; bottom: 0; right: -1%; height: 92%; width: auto;
+    z-index: -2; opacity: 0.16; pointer-events: none;
     filter:
       drop-shadow(0 0 10px rgba(255, 214, 130, 0.85))
       drop-shadow(0 0 26px rgba(240, 190, 100, 0.55))
       drop-shadow(0 0 48px rgba(224, 160, 70, 0.32));
   }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .vera-glow { opacity: 0.2; } }
+  :root[data-theme="dark"] .vera-glow { opacity: 0.2; }
   @media (prefers-reduced-motion: no-preference) {
-    .vera-bg { animation: vera-aura 5.5s ease-in-out infinite; }
+    .vera-glow { animation: vera-aura 5.5s ease-in-out infinite; }
   }
   @keyframes vera-aura {
     0%, 100% {
@@ -237,6 +248,7 @@
         drop-shadow(0 0 62px rgba(224, 170, 80, 0.4));
     }
   }
+  @media (max-width: 900px) { .vera-glow { opacity: 0.08; right: -22%; } }
   /* ---------- Rayos de luz sobre los grabados (corazón y cabeza, en las
      dos figuras) ---------- Elementos aparte (no hijos de .scj-bg/.icdm-bg)
      para que el brillo no herede su opacidad tan baja; cada uno usa el
@@ -370,6 +382,7 @@
     </section>
 
     <section class="vera-host">
+      <img class="vera-glow" src="vera.webp" alt="" aria-hidden="true" />
       <img class="vera-bg" src="vera.webp" alt="" aria-hidden="true" />
       <div class="host-inner">
         <span class="label">Por su intercesión</span>
