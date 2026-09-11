@@ -255,7 +255,11 @@
 
   .scj-heart-glow { right: 3%; aspect-ratio: 520 / 1218; --gx: 51%; --gy: 30.2%; }
   .icdm-heart-glow { left: 3%; aspect-ratio: 520 / 1410; --gx: 47%; --gy: 27.5%; transform: scaleX(-1); }
-  .vera-aura-glow { right: -1%; aspect-ratio: 866 / 1300; --gx: 47%; --gy: 40%; --gs: 46%; }
+  .vera-aura-glow { right: -1%; aspect-ratio: 866 / 1300; --gx: 50%; --gy: 48%; }
+  .vera-aura-glow::before {
+    width: 135%; aspect-ratio: 866 / 1300; border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(255,231,166,0.9) 0%, rgba(240,190,100,0.5) 34%, rgba(224,150,60,0.2) 58%, rgba(224,150,60,0) 74%);
+  }
 
   @media (max-width: 900px) {
     .scj-heart-glow { right: -22%; opacity: 0.55; }
