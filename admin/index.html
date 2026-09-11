@@ -7,7 +7,11 @@
 <!-- CMS propio de este sitio: script y conexiones limitadas a lo que necesita
      (GitHub + el worker de login). Sveltia se sirve desde este mismo origen
      (sveltia-cms.js, ver README-CMS.md) en vez de un CDN de terceros. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src 'self' https://api.github.com https://github.com https://*.githubusercontent.com https://sveltia-cms-auth.avvedit.workers.dev; img-src 'self' data: blob: https:; media-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://github.com; worker-src 'self' blob:; base-uri 'none'; form-action 'self'; object-src 'none'" />
+<!-- connect-src queda ancho a propósito: Sveltia hace llamadas a varios
+     dominios propios (github.com, api.github.com, unpkg.com para idiomas,
+     etc.) que cambian entre versiones. Lo que de verdad importa —que no se
+     pueda cargar ni ejecutar JavaScript de otro origen— lo da script-src. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src 'self' https:; img-src 'self' data: blob: https:; media-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data: https:; frame-src https://github.com; worker-src 'self' blob:; base-uri 'none'; form-action 'self'; object-src 'none'" />
 <title>Editor · Resurgir Nacional</title>
 </head>
 <body>
