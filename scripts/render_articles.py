@@ -40,12 +40,20 @@ MESES_AB = ["ene", "feb", "mar", "abr", "may", "jun", "jul",
             "ago", "sep", "oct", "nov", "dic"]
 
 
+def _lp(p):
+    """En Windows, rutas >= 260 chars necesitan el prefijo \\\\?\\. No-op en Linux (CI)."""
+    p = os.path.abspath(p)
+    if os.name == "nt" and len(p) >= 255 and not p.startswith("\\\\?\\"):
+        return "\\\\?\\" + p
+    return p
+
+
 def rd(p):
-    return io.open(p, encoding="utf-8").read()
+    return io.open(_lp(p), encoding="utf-8").read()
 
 
 def wr(p, s):
-    io.open(p, "w", encoding="utf-8", newline="\n").write(s)
+    io.open(_lp(p), "w", encoding="utf-8", newline="\n").write(s)
 
 
 def esc(s):
@@ -192,7 +200,7 @@ INDEX_JS = """      <script>
               var any = [].some.call(g.querySelectorAll('.art-row'), function (r) { return !r.hidden; });
               g.hidden = !any;
               var head = g.previousElementSibling;
-              if (head && head.classList.contains('art-year')) head.hidden = !any;
+              if (head && head.classList.contains('art-month')) head.hidden = !any;
             });
             if (none) none.hidden = shown !== 0;
           };
@@ -200,31 +208,74 @@ INDEX_JS = """      <script>
         })();
       </script>"""
 
+MESES_CAP = [m.capitalize() for m in MESES]
+
+
+def _ym(a):
+    """(año, mes) como strings a partir de la fecha; ('', '') si no hay."""
+    m = re.match(r"(\d{4})-(\d{2})", str(a.get("date", "")))
+    return (m.group(1), m.group(2)) if m else ("", "")
+
 
 def index_rows(arts):
-    parts, year = [], None
+    """Filas del índice, agrupadas por mes con un <h2 id="m-AAAA-MM"> por grupo."""
+    parts, cur = [], None
     for a in arts:
-        m = re.match(r"(\d{4})", str(a.get("date", "")))
-        y = m.group(1) if m else "Sin fecha"
-        if y != year:
-            if year is not None:
-                parts.append("      </div>")
-            parts.append('      <h2 class="art-year">%s</h2>' % esc(y))
-            parts.append('      <div class="art-rows">')
-            year = y
+        y, mo = _ym(a)
+        if (y, mo) != cur:
+            if cur is not None:
+                parts.append("        </div>")
+            if y:
+                label, anchor = "%s %s" % (MESES_CAP[int(mo) - 1], y), "m-%s-%s" % (y, mo)
+            else:
+                label, anchor = "Sin fecha", "m-sinfecha"
+            parts.append('        <h2 class="art-month" id="%s">%s</h2>' % (anchor, esc(label)))
+            parts.append('        <div class="art-rows">')
+            cur = (y, mo)
         summary = _collapse(a.get("summary", ""))
         hay = _collapse("%s %s %s" % (a.get("title", ""), summary, a.get("author", "")))
         parts.append(
-            '        <a class="art-row" href="%s.html" data-s="%s">'
+            '          <a class="art-row" href="%s.html" data-s="%s">'
             '<span class="art-row__date">%s</span>'
             '<span class="art-row__title">%s</span>'
             '<span class="art-row__sum">%s</span></a>'
             % (a["slug"], esc(hay), esc(fecha_corta(a.get("date", ""))),
                esc(a["title"]), esc(summary))
         )
-    if year is not None:
-        parts.append("      </div>")
+    if cur is not None:
+        parts.append("        </div>")
     return "\n".join(parts)
+
+
+def archive_nav(arts):
+    """Menú lateral estilo blog: año (desplegable) → meses con la cantidad."""
+    tree = []   # [(year, [(month, count), ...]), ...] preservando orden desc
+    for a in arts:
+        y, mo = _ym(a)
+        if not y:
+            continue
+        if not tree or tree[-1][0] != y:
+            tree.append((y, []))
+        months = tree[-1][1]
+        if months and months[-1][0] == mo:
+            months[-1] = (mo, months[-1][1] + 1)
+        else:
+            months.append((mo, 1))
+    if not tree:
+        return "      <nav class=\"arc\" aria-label=\"Archivo por mes\"></nav>"
+    out = ['      <nav class="arc" aria-label="Archivo por mes">',
+           '        <p class="arc__title">Archivo</p>']
+    for i, (y, months) in enumerate(tree):
+        out.append('        <details class="arc__year"%s>' % (" open" if i == 0 else ""))
+        out.append('          <summary>%s</summary>' % esc(y))
+        out.append('          <ul>')
+        for mo, c in months:
+            out.append('            <li><a href="#m-%s-%s">%s <span>(%d)</span></a></li>'
+                       % (y, mo, esc(MESES[int(mo) - 1]), c))
+        out.append('          </ul>')
+        out.append('        </details>')
+    out.append('      </nav>')
+    return "\n".join(out)
 
 
 def index_page(tpl, arts):
@@ -252,17 +303,24 @@ def index_page(tpl, arts):
         '      <span class="label">Formación</span>\n'
         '      <h1>Artículos</h1>\n'
         '      <p class="doc-lead">%s</p>\n'
-        '      <input type="search" class="art-search" placeholder="Buscar…" '
-        'aria-label="Buscar artículos" autocomplete="off" />\n'
-        '      <p class="art-nores" hidden>No hay artículos que coincidan con la búsqueda.</p>\n'
         '    </section>\n'
-        '    <section class="art-index">\n'
+        '    <div class="art-layout">\n'
+        '      <aside class="art-side">\n'
         '%s\n'
-        '      <p style="margin-top:2.5rem"><a href="formacion.html">← Volver a Formación</a></p>\n'
-        '    </section>\n'
+        '      </aside>\n'
+        '      <div class="art-main">\n'
+        '        <input type="search" class="art-search" placeholder="Buscar…" '
+        'aria-label="Buscar artículos" autocomplete="off" />\n'
+        '        <p class="art-nores" hidden>No hay artículos que coincidan con la búsqueda.</p>\n'
+        '        <div class="art-index">\n'
+        '%s\n'
+        '        </div>\n'
+        '        <p style="margin-top:2.5rem"><a href="formacion.html">← Volver a Formación</a></p>\n'
+        '      </div>\n'
+        '    </div>\n'
         '%s\n'
         '  </article>\n'
-        '</main>' % (esc(lead), index_rows(arts), INDEX_JS)
+        '</main>' % (esc(lead), archive_nav(arts), index_rows(arts), INDEX_JS)
     )
     return pre + main_html + post
 

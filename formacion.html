@@ -225,13 +225,27 @@
   /* "Ver todos" bajo la lista corta de la portada de Formación */
   .acts__more { margin: 1.4rem 0 0; }
   .acts__more a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.02em; }
-  /* Índice completo de artículos (articulos.html) */
-  .art-search { width: 100%; max-width: var(--measure); margin: 0.2rem 0 0.4rem; padding: 0.7rem 0.9rem; font: inherit; font-size: 1rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; }
+  /* Índice completo de artículos (articulos.html) — con menú de archivo por mes */
+  .art-layout { display: grid; grid-template-columns: 12.5rem minmax(0, 1fr); gap: 2.75rem; align-items: start; margin-top: 0.5rem; }
+  .art-side { position: sticky; top: calc(var(--header-h) + 1rem); }
+  .art-main { min-width: 0; }
+  .arc__title { font-family: "Archivo", system-ui, sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-text); margin: 0 0 0.55rem; }
+  .arc__year { border-top: 1px solid var(--line); }
+  .arc__year > summary { list-style: none; cursor: pointer; padding: 0.5rem 0; font-family: "Archivo", system-ui, sans-serif; font-weight: 600; font-size: 0.9rem; color: var(--ink); display: flex; align-items: center; gap: 0.4rem; }
+  .arc__year > summary::-webkit-details-marker { display: none; }
+  .arc__year > summary::before { content: "\25B8"; font-size: 0.7rem; color: var(--ink-soft); transition: transform .15s ease; }
+  .arc__year[open] > summary::before { transform: rotate(90deg); }
+  .arc__year ul { list-style: none; margin: 0 0 0.4rem; padding: 0 0 0 1.1rem; display: flex; flex-direction: column; gap: 0.1rem; }
+  .arc__year li a { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.28rem 0; font-size: 0.88rem; color: var(--ink-soft); text-decoration: none; }
+  .arc__year li a:hover { color: var(--blue); }
+  .arc__year li a span { font-variant-numeric: tabular-nums; font-size: 0.8rem; opacity: 0.7; }
+  .art-search { width: 100%; margin: 0 0 0.4rem; padding: 0.7rem 0.9rem; font: inherit; font-size: 1rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; }
   .art-search::placeholder { color: var(--ink-soft); }
   .art-search:focus-visible { outline: 2px solid var(--gold-line); outline-offset: 1px; border-color: var(--gold-line); }
   .art-nores { color: var(--ink-soft); font-style: italic; margin-top: 0.6rem; }
-  .art-index { max-width: var(--measure); }
-  .art-year { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-text); margin: 1.9rem 0 0; }
+  .art-month { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); margin: 1.9rem 0 0; scroll-margin-top: calc(var(--header-h) + 1.5rem); }
+  .art-index > .art-month:first-child { margin-top: 0; }
+  .art-month:target { color: var(--blue); }
   .art-rows { display: flex; flex-direction: column; }
   .art-row { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.15rem 1rem; padding: 0.8rem 0; border-top: 1px solid var(--line); text-decoration: none; color: inherit; }
   .art-rows .art-row:last-child { border-bottom: 1px solid var(--line); }
@@ -240,6 +254,11 @@
   .art-row:hover .art-row__title { color: var(--blue); }
   .art-row__sum { grid-column: 2; font-size: 0.9rem; color: var(--ink-soft); line-height: 1.5; }
   .art-row__sum:empty { display: none; }
+  @media (max-width: 820px) {
+    .art-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+    .art-side { position: static; }
+    .arc { border: 1px solid var(--line); border-radius: 4px; padding: 0.9rem 1rem; }
+  }
   @media (max-width: 560px) {
     .art-row { grid-template-columns: 1fr; }
     .art-row__sum { grid-column: 1; }
