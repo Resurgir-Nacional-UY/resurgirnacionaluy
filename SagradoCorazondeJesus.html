@@ -192,15 +192,23 @@
      Ya no son fijos a toda la página: cada imagen vive DENTRO de la
      sección con la que corresponde (scj → Oración de consagración,
      icdm → A la patrona del Uruguay), así que al hacer scroll suben y se
-     van con su propia sección en vez de quedar clavadas en pantalla. */
-  .scj-host, .icdm-host { position: relative; overflow: hidden; min-height: 480px; }
+     van con su propia sección en vez de quedar clavadas en pantalla.
+     La sección anfitriona se extiende a todo el ancho de la ventana
+     (breakout del max-width de .doc) para que overflow:hidden (necesario
+     para no dejar que la imagen, más alta que la sección, se filtre en
+     las secciones vecinas al hacer scroll) no recorte también el lado
+     donde la imagen llega al borde de la ventana. El texto vuelve a su
+     columna normal adentro, en .host-inner. */
+  .scj-host, .icdm-host {
+    position: relative; overflow: hidden; min-height: 480px;
+    width: 100vw; margin-left: calc(50% - 50vw);
+  }
+  .scj-host .host-inner, .icdm-host .host-inner {
+    max-width: 900px; margin-inline: auto; padding-inline: var(--gutter);
+  }
   .scj-bg, .icdm-bg { position: absolute; bottom: 0; height: 100%; width: auto; z-index: -1; opacity: 0.16; pointer-events: none; }
-  /* .doc está centrado (max-width + margin-inline:auto): right/left en
-     calc(50% - 50vw + ...) rompe el ancho angosto de la sección anfitriona
-     y vuelve a alinear la imagen al borde real de la ventana, como cuando
-     eran position:fixed. */
-  .scj-bg { right: calc(50% - 50vw - 1%); -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%); mask: linear-gradient(103deg, transparent 0%, #000 26%); }
-  .icdm-bg { left: calc(50% - 50vw - 1%); height: 122%; transform: scaleX(-1); -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%); mask: linear-gradient(103deg, transparent 0%, #000 26%); }
+  .scj-bg { right: -1%; -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%); mask: linear-gradient(103deg, transparent 0%, #000 26%); }
+  .icdm-bg { left: -1%; height: 122%; transform: scaleX(-1); -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%); mask: linear-gradient(103deg, transparent 0%, #000 26%); }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .scj-bg, :root:not([data-theme="light"]) .icdm-bg { opacity: 0.2; } }
   :root[data-theme="dark"] .scj-bg, :root[data-theme="dark"] .icdm-bg { opacity: 0.2; }
   @media (max-width: 900px) { .icdm-bg { display: none; } .scj-bg { opacity: 0.08; right: -22%; } }
@@ -243,8 +251,8 @@
   }
   @keyframes scj-rotate { to { transform: translate(-50%, -50%) rotate(360deg); } }
 
-  .scj-heart-glow { right: calc(50% - 50vw - 1%); aspect-ratio: 520 / 1218; --gx: 51%; --gy: 30.2%; }
-  .icdm-heart-glow { left: calc(50% - 50vw - 1%); height: 122%; aspect-ratio: 520 / 1410; --gx: 47%; --gy: 27.5%; transform: scaleX(-1); }
+  .scj-heart-glow { right: -1%; aspect-ratio: 520 / 1218; --gx: 51%; --gy: 30.2%; }
+  .icdm-heart-glow { left: -1%; height: 122%; aspect-ratio: 520 / 1410; --gx: 47%; --gy: 27.5%; transform: scaleX(-1); }
 
   @media (max-width: 900px) {
     .scj-heart-glow { right: -22%; opacity: 0.55; }
@@ -308,30 +316,34 @@
     <section class="scj-host">
       <img class="scj-bg" src="scj.png" alt="" aria-hidden="true" />
       <div class="rn-glow scj-heart-glow" aria-hidden="true"></div>
-      <span class="label">Oración de consagración</span>
-      <h2 data-cms="sec2-heading">Corazón de Jesús</h2>
-      <div class="prose">
-        <p data-cms="sec2-p1">Tú eres nuestro consuelo y nuestra esperanza.</p>
-        <p data-cms="sec2-p2">Humildemente postrados en tu presencia, te pedimos perdón de nuestros pecados.</p>
-        <p data-cms="sec2-p3">Proclamamos que queremos vivir y morir en tu servicio y corresponder dignamente a tus soberanos designios de misericordia en favor de la Iglesia y de la sociedad.</p>
-        <p data-cms="sec2-p4">Te consagramos nuestras personas y nuestras familias, nuestros intereses y nuestros bienes, el presente y el porvenir.</p>
-        <p data-cms="sec2-p5">Te rogamos, Señor, acojas benignamente nuestras plegarias por tu Santa Iglesia, por la conversión y salvación de los hombres, por la paz y prosperidad de nuestra patria y de todos los pueblos.</p>
-        <p data-cms="sec2-p6">Amén.</p>
+      <div class="host-inner">
+        <span class="label">Oración de consagración</span>
+        <h2 data-cms="sec2-heading">Corazón de Jesús</h2>
+        <div class="prose">
+          <p data-cms="sec2-p1">Tú eres nuestro consuelo y nuestra esperanza.</p>
+          <p data-cms="sec2-p2">Humildemente postrados en tu presencia, te pedimos perdón de nuestros pecados.</p>
+          <p data-cms="sec2-p3">Proclamamos que queremos vivir y morir en tu servicio y corresponder dignamente a tus soberanos designios de misericordia en favor de la Iglesia y de la sociedad.</p>
+          <p data-cms="sec2-p4">Te consagramos nuestras personas y nuestras familias, nuestros intereses y nuestros bienes, el presente y el porvenir.</p>
+          <p data-cms="sec2-p5">Te rogamos, Señor, acojas benignamente nuestras plegarias por tu Santa Iglesia, por la conversión y salvación de los hombres, por la paz y prosperidad de nuestra patria y de todos los pueblos.</p>
+          <p data-cms="sec2-p6">Amén.</p>
+        </div>
+        <p class="invocations" data-cms="sec2-invocations">¡Corazón Santísimo, sálvanos!<br />¡Corazón de Jesús, ten piedad de nosotros!</p>
       </div>
-      <p class="invocations" data-cms="sec2-invocations">¡Corazón Santísimo, sálvanos!<br />¡Corazón de Jesús, ten piedad de nosotros!</p>
     </section>
 
     <section class="icdm-host">
       <img class="icdm-bg" src="icdm.png" alt="" aria-hidden="true" />
       <div class="rn-glow icdm-heart-glow" aria-hidden="true"></div>
-      <span class="label">A la patrona del Uruguay</span>
-      <h2 data-cms="sec3-heading">Oración para todos los días</h2>
-      <div class="prose">
-        <p data-cms="sec3-p1">Santísima Virgen de los Treinta y Tres, ante cuya imagen inclinaron su bandera y doblaron reverentemente su rodilla los fundadores de nuestra Patria.</p>
-        <p data-cms="sec3-p2">Protege siempre a este pueblo nacido a tu sombra bienhechora.</p>
-        <p data-cms="sec3-p3">Concede, oh Virgen de los Treinta y Tres, que en nuestros hogares florezcan la religión y todas las virtudes cristianas.</p>
-        <p data-cms="sec3-p4">Haz que veamos el reinado de Cristo, que es el de la verdad y la justicia.</p>
-        <p data-cms="sec3-p5">Alcánzanos estas gracias y la de la eterna salvación, de tu Hijo Jesucristo, que con el Padre y el Espíritu Santo vive y reina por los siglos de los siglos. Amén.</p>
+      <div class="host-inner">
+        <span class="label">A la patrona del Uruguay</span>
+        <h2 data-cms="sec3-heading">Oración para todos los días</h2>
+        <div class="prose">
+          <p data-cms="sec3-p1">Santísima Virgen de los Treinta y Tres, ante cuya imagen inclinaron su bandera y doblaron reverentemente su rodilla los fundadores de nuestra Patria.</p>
+          <p data-cms="sec3-p2">Protege siempre a este pueblo nacido a tu sombra bienhechora.</p>
+          <p data-cms="sec3-p3">Concede, oh Virgen de los Treinta y Tres, que en nuestros hogares florezcan la religión y todas las virtudes cristianas.</p>
+          <p data-cms="sec3-p4">Haz que veamos el reinado de Cristo, que es el de la verdad y la justicia.</p>
+          <p data-cms="sec3-p5">Alcánzanos estas gracias y la de la eterna salvación, de tu Hijo Jesucristo, que con el Padre y el Espíritu Santo vive y reina por los siglos de los siglos. Amén.</p>
+        </div>
       </div>
     </section>
 
