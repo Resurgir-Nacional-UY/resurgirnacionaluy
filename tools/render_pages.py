@@ -110,11 +110,101 @@ def sub_list(page, prefix, items, fields):
     return page
 
 
+def sub_attr_by_marker(page, key, attr, value, prefix=""):
+    """Busca el elemento marcado con data-cms="key" y cambia el valor de un
+    atributo suyo (`attr`), anteponiendo `prefix` si se da (p. ej. para armar
+    un aria-label del tipo "Reproducir: {título}"). No importa en qué orden
+    aparezcan los atributos dentro de la etiqueta: primero se ubica la
+    etiqueta completa por data-cms, y recién ahí se busca `attr=` adentro."""
+    if value is None:
+        return page
+    tagpat = re.compile(r'<[a-zA-Z0-9]+\b[^>]*\bdata-cms="%s"[^>]*>' % re.escape(key))
+    m = tagpat.search(page)
+    if not m:
+        return page
+    tag = m.group(0)
+    newtag = re.sub(
+        r'(\b%s=")[^"]*(")' % re.escape(attr),
+        lambda mm: mm.group(1) + esc(prefix + str(value)) + mm.group(2),
+        tag, count=1)
+    if newtag == tag:
+        return page
+    return page[:m.start()] + newtag + page[m.end():]
+
+
+def sub_href(page, key, value):
+    """<a ... data-cms="key" href="...">: cambia el destino de un enlace."""
+    if not value:
+        return page
+    return sub_attr_by_marker(page, key, "href", value)
+
+
+def sub_mailto(page, key, email):
+    """<a ... data-cms="key" href="mailto:X...">...texto con X...</a>: cambia la
+    parte local del href (preserva cualquier ?subject=... que ya tuviera) y
+    reemplaza el primer token con forma de correo dentro del texto visible,
+    conservando el resto (p. ej. una flecha final)."""
+    if not email:
+        return page
+    pat = re.compile(r'(<a\b[^>]*\bdata-cms="%s"[^>]*>)(.*?)(</a>)' % re.escape(key), re.S)
+
+    def fix(m):
+        open_tag, inner, close_tag = m.group(1), m.group(2), m.group(3)
+        open_tag = re.sub(r'(href="mailto:)[^"?]*', lambda mm: mm.group(1) + esc(email), open_tag, count=1)
+        inner = re.sub(r'[^\s<]+@[^\s<]+', esc(email), inner, count=1)
+        return open_tag + inner + close_tag
+    return pat.sub(fix, page, count=1)
+
+
+def sub_js_var(page, varname, value):
+    """var NOMBRE = '...'; dentro de un <script>: reemplaza el valor de una
+    variable de texto (comillas simples), localizada por su nombre."""
+    if value is None:
+        return page
+    pat = re.compile(r"(var %s = ')[^']*(';)" % re.escape(varname))
+    safe = str(value).replace("\\", "\\\\").replace("'", "\\'")
+    return pat.sub(lambda m: m.group(1) + safe + m.group(2), page, count=1)
+
+
 def apply_home(page):
     d = load("home")
     page = sub_text(page, "p", "hero__lead", d.get("hero_lead"))
     page = sub_video_src(page, "hero__flag", d.get("hero_video"))
     page = sub_video_src(page, "sumate__video", d.get("sumate_video"))
+
+    page = sub_by_marker(page, "hero-eyebrow", d.get("hero_eyebrow"))
+    page = sub_by_marker(page, "hero-cta1", d.get("hero_cta1_text"))
+    page = sub_by_marker(page, "hero-cta2", d.get("hero_cta2_text"))
+
+    for suf in ("1", "2"):  # menú (header) y pie: mismas 6 etiquetas, sincronizadas
+        page = sub_by_marker(page, "nav-vision-%s" % suf, d.get("nav_vision"))
+        page = sub_by_marker(page, "nav-ideario-%s" % suf, d.get("nav_ideario"))
+        page = sub_by_marker(page, "nav-fe-%s" % suf, d.get("nav_fe"))
+        page = sub_by_marker(page, "nav-formacion-%s" % suf, d.get("nav_formacion"))
+        page = sub_by_marker(page, "nav-colabora-%s" % suf, d.get("nav_colabora"))
+        page = sub_by_marker(page, "nav-sumate-%s" % suf, d.get("nav_sumate"))
+
+    page = sub_by_marker(page, "ideario-label", d.get("ideario_label"))
+    page = sub_by_marker(page, "ideario-heading", d.get("ideario_heading"))
+    page = sub_by_marker(page, "ideario-intro", d.get("ideario_intro"))
+    page = sub_list(page, "iv", d.get("ideario_values") or [], ["title", "body"])
+
+    page = sub_by_marker(page, "aporta-label", d.get("aporta_label"))
+    page = sub_by_marker(page, "aporta-heading", d.get("aporta_heading"))
+    page = sub_list(page, "t", d.get("aporta_tiers") or [], ["name", "amount", "use"])
+    page = sub_by_marker(page, "aporta-note", d.get("aporta_note"))
+    page = sub_href(page, "aporta-paypal", d.get("aporta_paypal"))
+    page = sub_href(page, "aporta-kofi", d.get("aporta_kofi"))
+
+    page = sub_by_marker(page, "sumate-label", d.get("sumate_label"))
+    page = sub_by_marker(page, "sumate-heading", d.get("sumate_heading"))
+    page = sub_by_marker(page, "sumate-p1", d.get("sumate_p1"))
+    page = sub_by_marker(page, "sumate-p2", d.get("sumate_p2"))
+
+    email = d.get("contact_email")
+    page = sub_mailto(page, "contact-email-sumate", email)
+    page = sub_mailto(page, "contact-email-footer", email)
+    page = sub_js_var(page, "MAIL", email)
     return page
 
 
@@ -139,6 +229,7 @@ def apply_vision(page):
     page = sub_list(page, "f", d.get("sec4_facts") or [], ["big", "label"])
     page = sub_by_marker(page, "sec5-heading", d.get("sec5_heading"))
     page = sub_list(page, "a", d.get("sec5_acts") or [], ["title", "body"])
+    page = sub_js_var(page, "MAIL", load("home").get("contact_email"))
     return page
 
 
@@ -162,6 +253,7 @@ def apply_fe(page):
     page = sub_by_marker(page, "sec3-p3", d.get("sec3_p3"))
     page = sub_by_marker(page, "sec3-p4", d.get("sec3_p4"))
     page = sub_by_marker(page, "sec3-p5", d.get("sec3_p5"))
+    page = sub_js_var(page, "MAIL", load("home").get("contact_email"))
     return page
 
 
@@ -169,6 +261,22 @@ def apply_formacion(page):
     d = load("formacion")
     page = sub_data_attr(page, "div", "yt-lite", "data-id", d.get("video_youtube_id"))
     page = sub_tag_src(page, "img", "yt-lite__thumb", d.get("video_thumb"))
+
+    page = sub_by_marker(page, "doc-lead", d.get("doc_lead"))
+    page = sub_by_marker(page, "video-title-h2", d.get("video_title"))
+    page = sub_attr_by_marker(page, "video-title-attr", "data-title", d.get("video_title"))
+    page = sub_attr_by_marker(page, "video-title-aria", "aria-label", d.get("video_title"), prefix="Reproducir: ")
+    page = sub_by_marker(page, "articles-intro", d.get("articles_intro"))
+    page = sub_by_marker(page, "write-cta-heading", d.get("write_cta_heading"))
+    page = sub_by_marker(page, "write-cta-body", d.get("write_cta_body"))
+    page = sub_href(page, "x-post-url", d.get("x_post_url"))
+    page = sub_by_marker(page, "x-post-title", d.get("x_post_title"))
+    page = sub_by_marker(page, "x-post-excerpt", d.get("x_post_excerpt"))
+
+    email = load("home").get("contact_email")
+    page = sub_mailto(page, "contact-email-writecta", email)
+    page = sub_mailto(page, "contact-email-footer", email)
+    page = sub_js_var(page, "MAIL", email)
     return page
 
 

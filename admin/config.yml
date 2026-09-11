@@ -27,24 +27,114 @@ collections:
     label: Páginas
     files:
       - name: home
-        label: "Portada — textos e imágenes"
+        label: "Portada, menú y pie — todo el texto"
         file: content/pages/home.yml
         media_folder: /media/pages
         public_folder: /media/pages
         fields:
+          - name: hero_eyebrow
+            label: "Portada — etiqueta sobre el título"
+            widget: string
           - name: hero_lead
-            label: "Texto principal (debajo del título)"
+            label: "Portada — texto principal (debajo del título)"
             widget: text
-
+          - name: hero_cta1_text
+            label: "Portada — botón 1"
+            widget: string
+          - name: hero_cta2_text
+            label: "Portada — botón 2"
+            widget: string
           - name: hero_video
-            label: "Video de fondo — sección de inicio"
+            label: "Portada — video de fondo (sección de inicio)"
             widget: file
             hint: "Un video corto en loop (MP4, sin audio). Pesos grandes hacen la web más lenta: idealmente menos de 3 MB."
 
+          - name: nav_vision
+            label: "Menú — Visión"
+            widget: string
+            hint: "Este grupo de 6 etiquetas es el menú de arriba Y el pie de página — se usan en las 5 páginas del sitio."
+          - name: nav_ideario
+            label: "Menú — Ideario"
+            widget: string
+          - name: nav_fe
+            label: "Menú — Fe"
+            widget: string
+          - name: nav_formacion
+            label: "Menú — Formación"
+            widget: string
+          - name: nav_colabora
+            label: "Menú — Colabora"
+            widget: string
+          - name: nav_sumate
+            label: "Menú — Súmate"
+            widget: string
+
+          - name: ideario_label
+            label: "Sección Visión (portada) — etiqueta"
+            widget: string
+          - name: ideario_heading
+            label: "Sección Visión (portada) — título"
+            widget: string
+          - name: ideario_intro
+            label: "Sección Visión (portada) — introducción"
+            widget: text
+          - name: ideario_values
+            label: "Sección Visión (portada) — los 12 valores"
+            widget: list
+            min: 12
+            max: 12
+            hint: "Son exactamente 12 — se puede editar el texto de cada uno, pero no agregar ni quitar. Es el resumen corto de la portada; el texto largo está en la sección Visión."
+            fields:
+              - { name: title, label: "Título", widget: string }
+              - { name: body, label: "Texto", widget: string }
+
+          - name: aporta_label
+            label: "Sección Colaborar — etiqueta"
+            widget: string
+          - name: aporta_heading
+            label: "Sección Colaborar — título"
+            widget: string
+          - name: aporta_tiers
+            label: "Sección Colaborar — recuadros de cuota"
+            widget: list
+            min: 3
+            max: 3
+            hint: "Son exactamente 3 — se puede editar el texto de cada uno, pero no agregar ni quitar."
+            fields:
+              - { name: name, label: "Nombre", widget: string }
+              - { name: amount, label: "Monto", widget: string }
+              - { name: use, label: "Descripción", widget: text }
+          - name: aporta_note
+            label: "Sección Colaborar — nota sobre el destino del dinero"
+            widget: text
+          - name: aporta_paypal
+            label: "Sección Colaborar — link de PayPal"
+            widget: string
+          - name: aporta_kofi
+            label: "Sección Colaborar — link de Ko-fi"
+            widget: string
+
+          - name: sumate_label
+            label: "Sección Sumarse — etiqueta"
+            widget: string
+          - name: sumate_heading
+            label: "Sección Sumarse — título"
+            widget: string
+          - name: sumate_p1
+            label: "Sección Sumarse — párrafo 1"
+            widget: text
+          - name: sumate_p2
+            label: "Sección Sumarse — párrafo 2"
+            widget: text
           - name: sumate_video
-            label: "Video de fondo — sección Sumarse"
+            label: "Sección Sumarse — video de fondo"
             widget: file
             hint: "Un video corto en loop (MP4, sin audio). Pesos grandes hacen la web más lenta: idealmente menos de 3 MB."
+
+          - name: contact_email
+            label: "Correo de contacto"
+            widget: string
+            hint: "Se usa en toda la web (Portada, Formación y el pie de las 5 páginas) — cambiarlo acá lo actualiza en todos lados."
 
       - name: vision
         label: "Visión — texto e imagen de fondo"
@@ -202,21 +292,49 @@ collections:
             widget: text
 
       - name: formacion_page
-        label: "Formación — video de presentación"
+        label: "Formación — texto y video de presentación"
         file: content/pages/formacion.yml
         media_folder: /media/pages
         public_folder: /media/pages
         fields:
+          - name: doc_lead
+            label: "Bajada (debajo del título)"
+            widget: string
+
+          - name: video_title
+            label: "Título del video de presentación"
+            widget: string
           - name: video_youtube_id
             label: "ID del video de YouTube"
             widget: string
             hint: >-
               La parte del link de YouTube después de "v=" o "youtu.be/". Por
               ejemplo, en https://youtu.be/Glzx6Y9uhLI el ID es Glzx6Y9uhLI.
-
           - name: video_thumb
             label: "Miniatura (imagen que se ve antes de reproducir)"
             widget: image
+
+          - name: articles_intro
+            label: "Introducción a la lista de artículos"
+            widget: text
+
+          - name: x_post_url
+            label: "Último artículo en X — link"
+            widget: string
+            hint: "Se actualiza a mano cada vez que se comparte un artículo nuevo en X (X no permite mostrarlo automáticamente)."
+          - name: x_post_title
+            label: "Último artículo en X — título"
+            widget: string
+          - name: x_post_excerpt
+            label: "Último artículo en X — cita corta"
+            widget: text
+
+          - name: write_cta_heading
+            label: "Invitación a colaborar — título"
+            widget: string
+          - name: write_cta_body
+            label: "Invitación a colaborar — texto"
+            widget: text
 
   - name: formacion
     label: Artículos de Formación

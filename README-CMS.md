@@ -107,7 +107,16 @@ Al hacer push a `main`, el workflow lo publica.
 Desde `/admin/` hay una sección **"Páginas"** (además de "Artículos de
 Formación") con un formulario por página:
 
-- **Portada**: el texto principal del inicio y los videos de fondo.
+- **Portada, menú y pie** (un solo formulario, "Portada, menú y pie"): el
+  texto del inicio (etiqueta, párrafo principal, los dos botones) y su video
+  de fondo; las 6 etiquetas del menú (se usan en el menú de arriba Y en el
+  pie — cambiarlas acá las actualiza en las 5 páginas del sitio a la vez); la
+  sección "Visión" de la portada (título, introducción y los 12 valores
+  resumidos); la sección "Colaborar" (título, los 3 recuadros de cuota, la
+  nota sobre el destino del dinero, y los links de PayPal/Ko-fi); la sección
+  "Sumarse" (título, los 2 párrafos y su video de fondo); y el **correo de
+  contacto**, que se usa en toda la web — cambiarlo ahí lo actualiza en la
+  Portada, en Formación y en el pie de las 5 páginas al mismo tiempo.
 - **Visión**: el video de fondo y **todo el texto del documento** — los
   títulos de cada sección, los párrafos, la frase destacada, los doce
   principios (título y texto de cada uno), los recuadros de la cuota y las
@@ -116,8 +125,19 @@ Formación") con un formulario por página:
   romper la numeración ni el diseño) — solo se edita su texto.
 - **Fe**: las dos imágenes de fondo y **todo el texto** — bajada, oraciones
   (línea por línea) e invocaciones.
-- **Formación**: el ID del video de YouTube de presentación y su miniatura.
+- **Formación**: la bajada de la página, el título/ID/miniatura del video de
+  presentación, la introducción a la lista de artículos, la tarjeta del
+  último artículo compartido en X (link, título y cita — se actualiza a mano
+  cada vez que se comparte uno nuevo, X no permite traerlo automático), y el
+  texto de la invitación a colaborar.
 
 Se edita ahí, sin tocar código — funciona igual que un artículo: al guardar
 se crea un Pull Request, y se publica cuando alguien con permiso lo aprueba
 (merge).
+
+**Qué queda fuera (a propósito):** los títulos grandes de cada página
+(`<h1>`), las fechas históricas de Fe, el lema del movimiento ("La Patria o
+la tumba") y el nombre de la marca en el encabezado, las palabras que rotan
+en el título de la portada (tienen lógica de animación propia), y la
+estructura del menú/enlaces. Son elementos de identidad o de diseño, no
+contenido — si hace falta cambiarlos, se pide acá.
