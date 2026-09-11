@@ -218,6 +218,31 @@
       linear-gradient(92deg, rgba(11,28,55,0.94) 0%, rgba(14,35,68,0.86) 55%, rgba(12,30,58,0.90) 100%),
       radial-gradient(65% 85% at 64% 46%, rgba(9,22,44,0.62) 0%, rgba(9,22,44,0) 70%);
   }
+  /* ---------- Cortina de bandera uruguaya: cubre el hero y se corre a la
+     izquierda al cargar, revelando el titular y el emblema ---------- */
+  .hero__curtain { position: absolute; inset: 0; z-index: 6; overflow: hidden; pointer-events: none; }
+  .hero__curtain-flag {
+    position: absolute; top: -4%; left: -4%; width: 108%; height: 108%;
+    object-fit: cover; display: block;
+    box-shadow: 14px 0 40px rgba(0,0,0,0.38);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .hero__curtain { animation: hero-curtain-slide 1.55s cubic-bezier(.65,0,.35,1) 0.65s both; }
+    .hero__curtain-flag { animation: hero-curtain-flutter 3.2s ease-in-out infinite; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero__curtain { display: none; }
+  }
+  @keyframes hero-curtain-slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-104%); }
+  }
+  @keyframes hero-curtain-flutter {
+    0%, 100% { transform: skewX(0deg) scaleY(1); }
+    25% { transform: skewX(-1.1deg) scaleY(1.006); }
+    50% { transform: skewX(0.4deg) scaleY(0.997); }
+    75% { transform: skewX(-0.5deg) scaleY(1.004); }
+  }
   .hero .wrap {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
@@ -474,6 +499,9 @@
       <source src="hero.mp4" type="video/mp4" />
     </video>
     <div class="hero__scrim" aria-hidden="true"></div>
+    <div class="hero__curtain" aria-hidden="true">
+      <img class="hero__curtain-flag" src="uruguay.svg" alt="" />
+    </div>
     <div class="wrap">
       <div class="hero__copy">
         <p class="label hero__eyebrow" data-cms="hero-eyebrow">Movimiento nacionalista · Tercera Posición</p>
