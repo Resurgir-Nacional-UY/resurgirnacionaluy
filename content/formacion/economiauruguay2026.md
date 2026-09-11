@@ -12,9 +12,6 @@ draft: false
 
 Uruguay es un país, nación y patria. Por ende, debe poner su interés nacional por sobre todo y por encima de todo en el mundo, aunque sea en detrimento de las naciones extranjeras...
 
-
-
-
 Económicamente la inversión extranjera debería estar absolutamente prohibida, las multinacionales ni ninguna persona sin nuestra nacionalidad no debe tener ninguna propiedad en nuestra jurisdicción territorial. Y la única clase de extranjero que puede tener propiedades en nuestra jurisdicción territorial solamente puede ser un inmigrante que posea residencia activa en nuestro país, adaptación cultural, idiomática, tradicional, religiosa completa y con ella nuestra nacionalidad.
 
 Los nativos uruguayos sin embargo deben tener libertad total de tener y adquirir propiedades en nuestro país con el apoyo del Estado y no con una guerra tributaria como en la actualidad.
