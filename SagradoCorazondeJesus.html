@@ -221,9 +221,10 @@
   /* .vera-bg/.vera-glow se posicionan con "left" (no "right") a un cm del
      borde derecho de la columna de texto (.host-inner, max-width:900px
      centrada): 50vw llega al centro de la sección, +450px llega al borde
-     derecho de esa columna, +1cm dejar el aire pedido antes de la imagen. */
+     derecho de esa columna, +0.2cm dejar apenas un poco de aire antes de
+     la imagen. */
   .vera-bg {
-    left: calc(50vw + 450px + 1cm);
+    left: calc(50vw + 450px + 0.2cm);
     height: 400px;
     bottom: 140px;
     -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%);
@@ -244,7 +245,7 @@
      .vera-host (min-height 480px) para que el resplandor tenga sitio de
      sobra antes de tocar el overflow:hidden de la sección. */
   .vera-glow {
-    position: absolute; bottom: 140px; left: calc(50vw + 450px + 1cm); height: 400px; width: auto;
+    position: absolute; bottom: 140px; left: calc(50vw + 450px + 0.2cm); height: 400px; width: auto;
     z-index: -2; opacity: 0.16; pointer-events: none;
     filter:
       drop-shadow(0 0 10px rgba(255, 214, 130, 0.85))
