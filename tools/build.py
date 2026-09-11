@@ -116,6 +116,10 @@ HEAD = ('<!doctype html>\n<html lang="es">\n<head>\n'
         '<meta charset="utf-8" />\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1" />\n'
         '<meta name="theme-color" content="#14315C" />\n'
+        '<link rel="icon" href="favicon.ico" sizes="any" />\n'
+        '<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />\n'
+        '<link rel="icon" href="favicon-192.png" sizes="192x192" type="image/png" />\n'
+        '<link rel="apple-touch-icon" href="apple-touch-icon.png" />\n'
         '<style>*{box-sizing:border-box}img{max-width:100%;height:auto}[hidden]{display:none!important}</style>\n')
 
 
