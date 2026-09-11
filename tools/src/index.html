@@ -207,42 +207,31 @@
       linear-gradient(92deg, rgba(11,28,55,0.94) 0%, rgba(14,35,68,0.86) 55%, rgba(12,30,58,0.90) 100%),
       radial-gradient(65% 85% at 64% 46%, rgba(9,22,44,0.62) 0%, rgba(9,22,44,0) 70%);
   }
-  /* ---------- Cortina de bandera uruguaya: un panel diagonal que entra por
-     la derecha, cruza el hero y sale por la izquierda (al estilo de una
-     transición de video), revelando el titular y el emblema. El panel va
-     inclinado (skew) para el borde diagonal; adentro se contra-inclina para
-     que la bandera en sí se vea recta. El fondo blanco del panel iguala el
-     campo de la bandera para que "contain" no deje ver un letterbox (la
-     bandera se ve completa, sin recortar el diseño). El ondulado real lo da
-     un filtro SVG (feTurbulence+feDisplacementMap) animado por SMIL. ------ */
-  .hero__curtain { position: absolute; inset: 0; z-index: 6; overflow: hidden; pointer-events: none; }
-  .hero__curtain-panel {
-    position: absolute; top: 0; height: 100%; left: 0; width: 72%;
+  /* ---------- Cortina de bandera uruguaya: cubre el hero, ondea, y se corre
+     a la izquierda al cargar, revelando el titular y el emblema. El fondo
+     blanco iguala el campo de la bandera para que no se note el letterbox
+     de "contain" (la bandera se ve completa, sin recortar el diseño). El
+     ondulado real lo da un filtro SVG (feTurbulence+feDisplacementMap)
+     animado por SMIL, no un simple skew. ---------- */
+  .hero__curtain {
+    position: absolute; inset: 0; z-index: 6; overflow: hidden; pointer-events: none;
     background: #FAFAF7;
-    /* sombra solo del lado de avance (izquierda): el panel "empuja" hacia
-       donde todavía no pasó; el borde de salida (derecha) queda limpio */
-    box-shadow: -30px 0 55px rgba(0,0,0,0.4);
-    transform: skewX(-11deg) translateX(-145%);
-  }
-  .hero__curtain-panel__inner {
-    position: absolute; inset: 0;
-    transform: skewX(11deg);
-    display: flex; align-items: center; justify-content: center;
+    box-shadow: 14px 0 40px rgba(0,0,0,0.38);
   }
   .hero__curtain-flag {
-    width: 92%; height: 92%;
+    position: absolute; inset: 0; width: 100%; height: 100%;
     object-fit: contain; display: block;
   }
   @media (prefers-reduced-motion: no-preference) {
-    .hero__curtain-panel { animation: hero-curtain-sweep 2.3s cubic-bezier(.5,0,.4,1) 0.3s both; }
+    .hero__curtain { animation: hero-curtain-slide 1.55s cubic-bezier(.65,0,.35,1) 0.65s both; }
     .hero__curtain-flag { filter: url(#flag-ripple); }
   }
   @media (prefers-reduced-motion: reduce) {
     .hero__curtain { display: none; }
   }
-  @keyframes hero-curtain-sweep {
-    0% { transform: skewX(-11deg) translateX(145%); }
-    100% { transform: skewX(-11deg) translateX(-245%); }
+  @keyframes hero-curtain-slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-104%); }
   }
   .hero .wrap {
     display: grid;
@@ -504,15 +493,11 @@
             <animate attributeName="baseFrequency" dur="7s" repeatCount="indefinite"
               values="0.010 0.028;0.016 0.042;0.010 0.028" />
           </feTurbulence>
-          <feDisplacementMap in="SourceGraphic" in2="noise" scale="20"
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="16"
             xChannelSelector="R" yChannelSelector="G" />
         </filter>
       </svg>
-      <div class="hero__curtain-panel">
-        <div class="hero__curtain-panel__inner">
-          <img class="hero__curtain-flag" src="uruguay.svg" alt="" />
-        </div>
-      </div>
+      <img class="hero__curtain-flag" src="uruguay.svg" alt="" />
     </div>
     <div class="wrap">
       <div class="hero__copy">
