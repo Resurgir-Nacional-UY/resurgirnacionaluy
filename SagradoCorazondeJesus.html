@@ -208,6 +208,7 @@
      entera (a 100%, sin estirarla más allá de su propia caja) y
      overflow:hidden ya no le recorta la cabeza. */
   .icdm-host { min-height: 586px; }
+  .vera-host { min-height: 580px; }
   .scj-host .host-inner, .icdm-host .host-inner, .vera-host .host-inner {
     max-width: 900px; margin-inline: auto; padding-inline: var(--gutter);
   }
@@ -220,7 +221,7 @@
   .vera-bg {
     right: -1%;
     height: 400px;
-    bottom: 40px;
+    bottom: 140px;
     -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%);
     mask: linear-gradient(103deg, transparent 0%, #000 26%);
   }
@@ -239,7 +240,7 @@
      .vera-host (min-height 480px) para que el resplandor tenga sitio de
      sobra antes de tocar el overflow:hidden de la sección. */
   .vera-glow {
-    position: absolute; bottom: 40px; right: -1%; height: 400px; width: auto;
+    position: absolute; bottom: 140px; right: -1%; height: 400px; width: auto;
     z-index: -2; opacity: 0.16; pointer-events: none;
     filter:
       drop-shadow(0 0 10px rgba(255, 214, 130, 0.85))
