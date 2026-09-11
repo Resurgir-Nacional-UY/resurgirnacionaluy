@@ -12,6 +12,7 @@ Pure stdlib + `markdown` + `pyyaml`.
 import io, os, re, sys, json, html, glob
 from datetime import datetime, timezone
 from email.utils import format_datetime
+from html.parser import HTMLParser
 from xml.sax.saxutils import escape as xesc
 
 import yaml
@@ -80,6 +81,87 @@ def _collapse(s):
     return re.sub(r"\s+", " ", str(s or "")).strip()
 
 
+# --- Sanitizador de HTML (stdlib, sin dependencias nuevas) --------------------
+# Los artículos los suben redactores autorizados vía el CMS, pero el Markdown
+# admite HTML crudo (extensión "extra" de `markdown`) y una cuenta comprometida
+# o un descuido podría meter <script>/onerror/etc. en un artículo publicado.
+# Esto corre SIEMPRE sobre el HTML que sale de `markdown.markdown()`, antes de
+# escribirlo en la página: solo se permite una lista blanca de etiquetas y
+# atributos; el resto se elimina (o se elimina junto con su contenido, para
+# <script>/<style>/<iframe>/etc.).
+_SAFE_TAGS = {
+    "p", "br", "hr", "h2", "h3", "h4",
+    "ul", "ol", "li", "blockquote",
+    "strong", "b", "em", "i", "u", "s", "sub", "sup", "mark",
+    "a", "img", "code", "pre", "span",
+    "table", "thead", "tbody", "tr", "th", "td",
+}
+_DROP_WITH_CONTENT = {
+    "script", "style", "iframe", "object", "embed", "form", "input", "button",
+    "textarea", "select", "option", "noscript", "svg", "math", "link", "meta",
+    "base", "template",
+}
+_SAFE_ATTRS = {"a": {"href", "title"}, "img": {"src", "alt", "title", "width", "height"}}
+_SAFE_URL = re.compile(r"^(https?:|mailto:|#|/|\.)", re.I)
+
+
+class _HTMLSanitizer(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.out = []
+        self._skip_tag = None
+        self._skip_depth = 0
+
+    def _open(self, tag, attrs, self_closing):
+        tag = tag.lower()
+        if self._skip_depth:
+            if tag == self._skip_tag:
+                self._skip_depth += 1
+            return
+        if tag in _DROP_WITH_CONTENT:
+            self._skip_tag, self._skip_depth = tag, 1
+            return
+        if tag not in _SAFE_TAGS:
+            return  # etiqueta no permitida: se descarta, pero se conserva el contenido
+        allowed = _SAFE_ATTRS.get(tag, set())
+        kept = []
+        for name, value in attrs:
+            name, value = (name or "").lower(), value or ""
+            if name not in allowed:
+                continue
+            if name in ("href", "src") and not _SAFE_URL.match(value.strip()):
+                continue
+            kept.append('%s="%s"' % (name, html.escape(value, quote=True)))
+        self.out.append("<%s%s%s>" % (tag, (" " + " ".join(kept)) if kept else "",
+                                       " /" if self_closing else ""))
+
+    def handle_starttag(self, tag, attrs):
+        self._open(tag, attrs, False)
+
+    def handle_startendtag(self, tag, attrs):
+        self._open(tag, attrs, True)
+
+    def handle_endtag(self, tag):
+        tag = tag.lower()
+        if self._skip_depth:
+            if tag == self._skip_tag:
+                self._skip_depth -= 1
+            return
+        if tag in _SAFE_TAGS:
+            self.out.append("</%s>" % tag)
+
+    def handle_data(self, data):
+        if not self._skip_depth:
+            self.out.append(html.escape(data, quote=False))
+
+
+def sanitize_html(s):
+    p = _HTMLSanitizer()
+    p.feed(s or "")
+    p.close()
+    return "".join(p.out)
+
+
 def parse_md(text):
     text = text.lstrip("﻿")
     if text.startswith("---"):
@@ -120,6 +202,7 @@ def article_page(tpl, a):
     title = a["title"]
     summary = a.get("summary", "") or title
     body_html = markdown.markdown(a["_body"], extensions=["extra", "sane_lists", "smarty"])
+    body_html = sanitize_html(body_html)
     src = a.get("source_url")
     source_p = ""
     if src:

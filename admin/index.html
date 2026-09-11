@@ -4,10 +4,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex" />
+<!-- CMS propio de este sitio: script y conexiones limitadas a lo que necesita
+     (GitHub + el worker de login). Sveltia se sirve desde este mismo origen
+     (sveltia-cms.js, ver README-CMS.md) en vez de un CDN de terceros. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src 'self' https://api.github.com https://github.com https://*.githubusercontent.com https://sveltia-cms-auth.avvedit.workers.dev; img-src 'self' data: blob: https:; media-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://github.com; worker-src 'self' blob:; base-uri 'none'; form-action 'self'; object-src 'none'" />
 <title>Editor · Resurgir Nacional</title>
 </head>
 <body>
-<!-- Sveltia CMS -->
-<script src="https://cdn.jsdelivr.net/npm/@sveltia/cms@0/dist/sveltia-cms.js"></script>
+<!-- Sveltia CMS — versión vendorizada, ver tools/README-sveltia.md para actualizarla -->
+<script src="sveltia-cms.js"></script>
 </body>
 </html>
