@@ -291,6 +291,28 @@ collections:
             label: "Segunda oración — línea 5"
             widget: text
 
+          - name: sec4_heading
+            label: "Oración a Jacinto Vera — título"
+            widget: string
+          - name: sec4_p1
+            label: "Oración a Jacinto Vera — párrafo 1"
+            widget: text
+          - name: sec4_p2
+            label: "Oración a Jacinto Vera — párrafo 2 (peticiones)"
+            widget: text
+          - name: sec4_p3
+            label: "Oración a Jacinto Vera — párrafo 3"
+            widget: text
+          - name: sec4_p4
+            label: "Oración a Jacinto Vera — párrafo 4"
+            widget: text
+          - name: sec4_p5
+            label: "Oración a Jacinto Vera — párrafo 5"
+            widget: text
+          - name: sec4_p6
+            label: "Oración a Jacinto Vera — cierre"
+            widget: text
+
       - name: formacion_page
         label: "Formación — texto y video de presentación"
         file: content/pages/formacion.yml

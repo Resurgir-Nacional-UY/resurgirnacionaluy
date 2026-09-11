@@ -253,6 +253,13 @@ def apply_fe(page):
     page = sub_by_marker(page, "sec3-p3", d.get("sec3_p3"))
     page = sub_by_marker(page, "sec3-p4", d.get("sec3_p4"))
     page = sub_by_marker(page, "sec3-p5", d.get("sec3_p5"))
+    page = sub_by_marker(page, "sec4-heading", d.get("sec4_heading"))
+    page = sub_by_marker(page, "sec4-p1", d.get("sec4_p1"))
+    page = sub_by_marker(page, "sec4-p2", d.get("sec4_p2"))
+    page = sub_by_marker(page, "sec4-p3", d.get("sec4_p3"))
+    page = sub_by_marker(page, "sec4-p4", d.get("sec4_p4"))
+    page = sub_by_marker(page, "sec4-p5", d.get("sec4_p5"))
+    page = sub_by_marker(page, "sec4-p6", d.get("sec4_p6"))
     page = sub_js_var(page, "MAIL", load("home").get("contact_email"))
     return page
 
