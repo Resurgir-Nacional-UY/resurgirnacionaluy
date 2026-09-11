@@ -207,12 +207,10 @@
       linear-gradient(92deg, rgba(11,28,55,0.94) 0%, rgba(14,35,68,0.86) 55%, rgba(12,30,58,0.90) 100%),
       radial-gradient(65% 85% at 64% 46%, rgba(9,22,44,0.62) 0%, rgba(9,22,44,0) 70%);
   }
-  /* ---------- Cortina de bandera uruguaya: cubre el hero, ondea, y se corre
-     a la izquierda al cargar, revelando el titular y el emblema. El fondo
+  /* ---------- Cortina de bandera uruguaya: cubre el hero y se corre a la
+     izquierda al cargar, revelando el titular y el emblema. El fondo
      blanco iguala el campo de la bandera para que no se note el letterbox
-     de "contain" (la bandera se ve completa, sin recortar el diseño). El
-     ondulado real lo da un filtro SVG (feTurbulence+feDisplacementMap)
-     animado por SMIL, no un simple skew. ---------- */
+     de "contain" (la bandera se ve completa, sin recortar el diseño). ---- */
   .hero__curtain {
     position: absolute; inset: 0; z-index: 6; overflow: hidden; pointer-events: none;
     background: #FAFAF7;
@@ -224,7 +222,6 @@
   }
   @media (prefers-reduced-motion: no-preference) {
     .hero__curtain { animation: hero-curtain-slide 1.55s cubic-bezier(.65,0,.35,1) 0.65s both; }
-    .hero__curtain-flag { filter: url(#flag-ripple); }
   }
   @media (prefers-reduced-motion: reduce) {
     .hero__curtain { display: none; }
@@ -487,16 +484,6 @@
     </video>
     <div class="hero__scrim" aria-hidden="true"></div>
     <div class="hero__curtain" aria-hidden="true">
-      <svg width="0" height="0" style="position:absolute">
-        <filter id="flag-ripple" x="-20%" y="-20%" width="140%" height="140%">
-          <feTurbulence type="fractalNoise" numOctaves="2" seed="7" result="noise">
-            <animate attributeName="baseFrequency" dur="7s" repeatCount="indefinite"
-              values="0.010 0.028;0.016 0.042;0.010 0.028" />
-          </feTurbulence>
-          <feDisplacementMap in="SourceGraphic" in2="noise" scale="16"
-            xChannelSelector="R" yChannelSelector="G" />
-        </filter>
-      </svg>
       <img class="hero__curtain-flag" src="uruguay.svg" alt="" />
     </div>
     <div class="wrap">
