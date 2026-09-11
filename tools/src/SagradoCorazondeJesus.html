@@ -188,7 +188,7 @@
      las secciones vecinas al hacer scroll) no recorte también el lado
      donde la imagen llega al borde de la ventana. El texto vuelve a su
      columna normal adentro, en .host-inner. */
-  .scj-host, .icdm-host {
+  .scj-host, .icdm-host, .vera-host {
     position: relative; overflow: hidden; min-height: 480px;
     width: 100vw; margin-left: calc(50% - 50vw);
   }
@@ -197,15 +197,45 @@
      entera (a 100%, sin estirarla más allá de su propia caja) y
      overflow:hidden ya no le recorta la cabeza. */
   .icdm-host { min-height: 586px; }
-  .scj-host .host-inner, .icdm-host .host-inner {
+  .scj-host .host-inner, .icdm-host .host-inner, .vera-host .host-inner {
     max-width: 900px; margin-inline: auto; padding-inline: var(--gutter);
   }
-  .scj-bg, .icdm-bg { position: absolute; bottom: 0; height: 100%; width: auto; z-index: -1; opacity: 0.16; pointer-events: none; }
+  .scj-bg, .icdm-bg, .vera-bg { position: absolute; bottom: 0; height: 100%; width: auto; z-index: -1; opacity: 0.16; pointer-events: none; }
   .scj-bg { right: -1%; -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%); mask: linear-gradient(103deg, transparent 0%, #000 26%); }
   .icdm-bg { left: -1%; transform: scaleX(-1); -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%); mask: linear-gradient(103deg, transparent 0%, #000 26%); }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .scj-bg, :root:not([data-theme="light"]) .icdm-bg { opacity: 0.2; } }
-  :root[data-theme="dark"] .scj-bg, :root[data-theme="dark"] .icdm-bg { opacity: 0.2; }
-  @media (max-width: 900px) { .icdm-bg { display: none; } .scj-bg { opacity: 0.08; right: -22%; } }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .scj-bg, :root:not([data-theme="light"]) .icdm-bg, :root:not([data-theme="light"]) .vera-bg { opacity: 0.2; } }
+  :root[data-theme="dark"] .scj-bg, :root[data-theme="dark"] .icdm-bg, :root[data-theme="dark"] .vera-bg { opacity: 0.2; }
+  @media (max-width: 900px) { .icdm-bg { display: none; } .scj-bg { opacity: 0.08; right: -22%; } .vera-bg { opacity: 0.08; right: -22%; } }
+  /* ---------- Beato Jacinto Vera: otro tipo de iluminación — en vez del
+     corazón con rayos (scj/icdm), un aura dorada que sigue el propio
+     contorno de la figura (drop-shadow respeta el canal alfa del PNG/WEBP
+     recortado), pulsando muy despacio como una vela. ---------- */
+  .vera-bg {
+    right: -1%;
+    -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%);
+    mask: linear-gradient(103deg, transparent 0%, #000 26%);
+    filter:
+      drop-shadow(0 0 10px rgba(255, 214, 130, 0.85))
+      drop-shadow(0 0 26px rgba(240, 190, 100, 0.55))
+      drop-shadow(0 0 48px rgba(224, 160, 70, 0.32));
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .vera-bg { animation: vera-aura 5.5s ease-in-out infinite; }
+  }
+  @keyframes vera-aura {
+    0%, 100% {
+      filter:
+        drop-shadow(0 0 10px rgba(255, 214, 130, 0.85))
+        drop-shadow(0 0 26px rgba(240, 190, 100, 0.55))
+        drop-shadow(0 0 48px rgba(224, 160, 70, 0.32));
+    }
+    50% {
+      filter:
+        drop-shadow(0 0 16px rgba(255, 224, 160, 0.95))
+        drop-shadow(0 0 38px rgba(240, 200, 120, 0.65))
+        drop-shadow(0 0 62px rgba(224, 170, 80, 0.4));
+    }
+  }
   /* ---------- Rayos de luz sobre los grabados (corazón y cabeza, en las
      dos figuras) ---------- Elementos aparte (no hijos de .scj-bg/.icdm-bg)
      para que el brillo no herede su opacidad tan baja; cada uno usa el
@@ -338,16 +368,19 @@
       </div>
     </section>
 
-    <section>
-      <span class="label">Por su intercesión</span>
-      <h2 data-cms="sec4-heading">Oración al Beato Jacinto Vera</h2>
-      <div class="prose">
-        <p data-cms="sec4-p1">Dios, Padre nuestro, que ungiste con el Espíritu Santo a tu Siervo Jacinto, eligiéndolo como primer Obispo del Uruguay, para que, como instrumento de Cristo, Buen Pastor, llevara a todos los rincones de nuestra Patria el Evangelio de Tu Amor y los Sacramentos de la Salvación:</p>
-        <p data-cms="sec4-p2">Guía a nuestros obispos y sacerdotes. Envía abundantes y santas vocaciones sacerdotales y religiosas. Une a nuestras familias en la verdad y en el amor. Otorga a tus fieles santidad de vida y fortaleza para ser testigos del Evangelio de Cristo.</p>
-        <p data-cms="sec4-p3">Haz que vivamos según tus mandamientos, caminando bajo la luz de la fe, con la esperanza puesta en Ti, amándote con todo el corazón y amando al prójimo por amor a Ti.</p>
-        <p data-cms="sec4-p4">Glorifica tu Nombre en tu Siervo Jacinto y concédele ser reconocido entre tus santos, para alabanza de tu gloria y edificación de tu Iglesia.</p>
-        <p data-cms="sec4-p5">Dame, Señor, por su intercesión, la gracia que humilde y devotamente te pido (breve silencio para que cada uno pida la gracia deseada) y ayúdame a conformar mi vida con tu voluntad.</p>
-        <p data-cms="sec4-p6">Por Jesucristo, nuestro Señor. Amén.</p>
+    <section class="vera-host">
+      <img class="vera-bg" src="vera.webp" alt="" aria-hidden="true" />
+      <div class="host-inner">
+        <span class="label">Por su intercesión</span>
+        <h2 data-cms="sec4-heading">Oración al Beato Jacinto Vera</h2>
+        <div class="prose">
+          <p data-cms="sec4-p1">Dios, Padre nuestro, que ungiste con el Espíritu Santo a tu Siervo Jacinto, eligiéndolo como primer Obispo del Uruguay, para que, como instrumento de Cristo, Buen Pastor, llevara a todos los rincones de nuestra Patria el Evangelio de Tu Amor y los Sacramentos de la Salvación:</p>
+          <p data-cms="sec4-p2">Guía a nuestros obispos y sacerdotes. Envía abundantes y santas vocaciones sacerdotales y religiosas. Une a nuestras familias en la verdad y en el amor. Otorga a tus fieles santidad de vida y fortaleza para ser testigos del Evangelio de Cristo.</p>
+          <p data-cms="sec4-p3">Haz que vivamos según tus mandamientos, caminando bajo la luz de la fe, con la esperanza puesta en Ti, amándote con todo el corazón y amando al prójimo por amor a Ti.</p>
+          <p data-cms="sec4-p4">Glorifica tu Nombre en tu Siervo Jacinto y concédele ser reconocido entre tus santos, para alabanza de tu gloria y edificación de tu Iglesia.</p>
+          <p data-cms="sec4-p5">Dame, Señor, por su intercesión, la gracia que humilde y devotamente te pido (breve silencio para que cada uno pida la gracia deseada) y ayúdame a conformar mi vida con tu voluntad.</p>
+          <p data-cms="sec4-p6">Por Jesucristo, nuestro Señor. Amén.</p>
+        </div>
       </div>
     </section>
   </div>
