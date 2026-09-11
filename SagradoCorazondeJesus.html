@@ -218,32 +218,60 @@
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .scj-bg, :root:not([data-theme="light"]) .icdm-bg, :root:not([data-theme="light"]) .vera-bg { opacity: 0.2; } }
   :root[data-theme="dark"] .scj-bg, :root[data-theme="dark"] .icdm-bg, :root[data-theme="dark"] .vera-bg { opacity: 0.2; }
   @media (max-width: 900px) { .icdm-bg { display: none; } .scj-bg { opacity: 0.08; right: -22%; } .vera-bg { opacity: 0.08; right: -22%; } }
-  /* ---------- Iluminación: un aura dorada que sigue el propio contorno de
-     cada figura (drop-shadow respeta el canal alfa del PNG/WEBP recortado),
-     pulsando muy despacio como una vela. Misma iluminación en las tres
-     imágenes. ---------- */
-  .scj-bg, .icdm-bg, .vera-bg {
-    filter:
-      drop-shadow(0 0 10px rgba(255, 214, 130, 0.85))
-      drop-shadow(0 0 26px rgba(240, 190, 100, 0.55))
-      drop-shadow(0 0 48px rgba(224, 160, 70, 0.32));
+  /* ---------- Rayos de luz sobre los grabados (corazón y cabeza, en las
+     dos figuras) ---------- Elementos aparte (no hijos de .scj-bg/.icdm-bg)
+     para que el brillo no herede su opacidad tan baja; cada uno usa el
+     mismo encuadre que su imagen (altura/lado, ahora relativo a su propia
+     sección) y variables --gx/--gy (posición) y --gs/--gr (tamaño del halo
+     y de los rayos) para caer justo sobre el punto que corresponde del
+     grabado. La de la izquierda (icdm) lleva scaleX(-1) igual que
+     .icdm-bg, así que sus coordenadas se miden sobre icdm.png sin espejar.
+     NOTA: el brillo NO se aplica como filter:drop-shadow sobre la propia
+     imagen — combinado con el mask diagonal (el fundido hacia el texto),
+     el filtro quedaba recortado en seco justo en el borde de la caja de
+     la imagen, dejando un recuadro visible. Por eso el halo vive en un
+     elemento aparte, con su propio degradado que ya se apaga solo antes
+     de llegar al borde. .rn-halo reusa el mismo halo suave para Vera, sin
+     los rayos (que son propios del corazón expuesto de las otras dos). */
+  .rn-glow, .rn-halo {
+    position: absolute; bottom: 0; height: 100%; z-index: -1; pointer-events: none;
+    -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%);
+    mask: linear-gradient(103deg, transparent 0%, #000 26%);
+  }
+  .rn-glow::before, .rn-glow::after, .rn-halo::before {
+    content: ""; position: absolute; left: var(--gx); top: var(--gy);
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+  }
+  .rn-glow::before, .rn-halo::before {
+    width: var(--gs, 32%); aspect-ratio: 1; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,231,166,0.9) 0%, rgba(240,190,100,0.5) 34%, rgba(224,150,60,0.2) 58%, rgba(224,150,60,0) 74%);
+    filter: blur(1.5px);
+  }
+  .rn-glow::after {
+    width: var(--gr, 92%); aspect-ratio: 1;
+    background: repeating-conic-gradient(rgba(255,220,140,0.42) 0deg, rgba(255,220,140,0.42) 5deg, transparent 5deg, transparent 30deg);
+    -webkit-mask: radial-gradient(circle, transparent 20%, #000 32%, transparent 64%);
+    mask: radial-gradient(circle, transparent 20%, #000 32%, transparent 64%);
   }
   @media (prefers-reduced-motion: no-preference) {
-    .scj-bg, .icdm-bg, .vera-bg { animation: vera-aura 5.5s ease-in-out infinite; }
+    .rn-glow::before, .rn-halo::before { animation: scj-pulse 4.2s ease-in-out infinite; }
+    .rn-glow::after { animation: scj-rotate 22s linear infinite; }
   }
-  @keyframes vera-aura {
-    0%, 100% {
-      filter:
-        drop-shadow(0 0 10px rgba(255, 214, 130, 0.85))
-        drop-shadow(0 0 26px rgba(240, 190, 100, 0.55))
-        drop-shadow(0 0 48px rgba(224, 160, 70, 0.32));
-    }
-    50% {
-      filter:
-        drop-shadow(0 0 16px rgba(255, 224, 160, 0.95))
-        drop-shadow(0 0 38px rgba(240, 200, 120, 0.65))
-        drop-shadow(0 0 62px rgba(224, 170, 80, 0.4));
-    }
+  @keyframes scj-pulse {
+    0%, 100% { opacity: 0.72; transform: translate(-50%, -50%) scale(0.95); }
+    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
+  }
+  @keyframes scj-rotate { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+  .scj-heart-glow { right: 3%; aspect-ratio: 520 / 1218; --gx: 51%; --gy: 30.2%; }
+  .icdm-heart-glow { left: 3%; aspect-ratio: 520 / 1410; --gx: 47%; --gy: 27.5%; transform: scaleX(-1); }
+  .vera-aura-glow { right: -1%; aspect-ratio: 866 / 1300; --gx: 47%; --gy: 40%; --gs: 46%; }
+
+  @media (max-width: 900px) {
+    .scj-heart-glow { right: -22%; opacity: 0.55; }
+    .icdm-heart-glow { display: none; }
+    .vera-aura-glow { right: -22%; opacity: 0.55; }
   }
   /* ---------- Pie con cielo (solo esta página) ---------- */
   .site-footer { background: #1e3c68; }
@@ -302,6 +330,7 @@
 
     <section class="scj-host">
       <img class="scj-bg" src="scj.png" alt="" aria-hidden="true" />
+      <div class="rn-glow scj-heart-glow" aria-hidden="true"></div>
       <div class="host-inner">
         <span class="label">Oración de consagración</span>
         <h2 data-cms="sec2-heading">Corazón de Jesús</h2>
@@ -319,6 +348,7 @@
 
     <section class="icdm-host">
       <img class="icdm-bg" src="icdm.png" alt="" aria-hidden="true" />
+      <div class="rn-glow icdm-heart-glow" aria-hidden="true"></div>
       <div class="host-inner">
         <span class="label">A la patrona del Uruguay</span>
         <h2 data-cms="sec3-heading">Oración para todos los días</h2>
@@ -334,6 +364,7 @@
 
     <section class="vera-host">
       <img class="vera-bg" src="vera.webp" alt="" aria-hidden="true" />
+      <div class="rn-halo vera-aura-glow" aria-hidden="true"></div>
       <div class="host-inner">
         <span class="label">Por su intercesión</span>
         <h2 data-cms="sec4-heading">Oración al Beato Jacinto Vera</h2>
