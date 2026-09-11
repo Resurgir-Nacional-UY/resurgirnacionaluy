@@ -224,13 +224,11 @@
   @keyframes scj-rotate { to { transform: translate(-50%, -50%) rotate(360deg); } }
 
   .scj-heart-glow { right: -1%; aspect-ratio: 520 / 1218; --gx: 51%; --gy: 30.2%; }
-  .scj-head-glow  { right: -1%; aspect-ratio: 520 / 1218; --gx: 49%; --gy: 8%; --gs: 24%; --gr: 64%; }
   .icdm-heart-glow { left: -1%; aspect-ratio: 520 / 1410; --gx: 47%; --gy: 27.5%; transform: scaleX(-1); }
-  .icdm-head-glow  { left: -1%; aspect-ratio: 520 / 1410; --gx: 51%; --gy: 9%; --gs: 24%; --gr: 64%; transform: scaleX(-1); }
 
   @media (max-width: 900px) {
-    .scj-heart-glow, .scj-head-glow { right: -22%; opacity: 0.55; }
-    .icdm-heart-glow, .icdm-head-glow { display: none; }
+    .scj-heart-glow { right: -22%; opacity: 0.55; }
+    .icdm-heart-glow { display: none; }
   }
   /* ---------- Pie con cielo (solo esta página) ---------- */
   .site-footer { background: #1e3c68; }
@@ -277,9 +275,7 @@
   <img class="icdm-bg" src="icdm.png" alt="" aria-hidden="true" />
   <img class="scj-bg" src="scj.png" alt="" aria-hidden="true" />
   <div class="rn-glow scj-heart-glow" aria-hidden="true"></div>
-  <div class="rn-glow scj-head-glow" aria-hidden="true"></div>
   <div class="rn-glow icdm-heart-glow" aria-hidden="true"></div>
-  <div class="rn-glow icdm-head-glow" aria-hidden="true"></div>
   <div class="doc">
     <section>
       <span class="label">3 de junio de 1875</span>
