@@ -195,6 +195,43 @@
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .scj-bg, :root:not([data-theme="light"]) .icdm-bg { opacity: 0.2; } }
   :root[data-theme="dark"] .scj-bg, :root[data-theme="dark"] .icdm-bg { opacity: 0.2; }
   @media (max-width: 900px) { .icdm-bg { display: none; } .scj-bg { opacity: 0.08; right: -22%; } }
+  /* ---------- Rayos de luz del Sagrado Corazón, sobre scj.png ----------
+     Elemento aparte (no hijo de .scj-bg) para que su brillo no herede la
+     opacidad tan baja del fondo; se ubica con el mismo encuadre fijo
+     (misma altura/lado/aspect-ratio que la imagen) y coordenadas en % para
+     caer justo sobre el corazón del grabado. */
+  .scj-heart-glow {
+    position: fixed; bottom: 0; right: -1%; height: min(84vh, 860px);
+    aspect-ratio: 520 / 1218; z-index: -1; pointer-events: none;
+    -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%);
+    mask: linear-gradient(103deg, transparent 0%, #000 26%);
+  }
+  .scj-heart-glow::before, .scj-heart-glow::after {
+    content: ""; position: absolute; left: 51%; top: 30.2%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+  }
+  .scj-heart-glow::before {
+    width: 32%; aspect-ratio: 1; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,231,166,0.9) 0%, rgba(240,190,100,0.5) 34%, rgba(224,150,60,0.2) 58%, rgba(224,150,60,0) 74%);
+    filter: blur(1.5px);
+  }
+  .scj-heart-glow::after {
+    width: 92%; aspect-ratio: 1;
+    background: repeating-conic-gradient(rgba(255,220,140,0.42) 0deg, rgba(255,220,140,0.42) 5deg, transparent 5deg, transparent 30deg);
+    -webkit-mask: radial-gradient(circle, transparent 20%, #000 32%, transparent 64%);
+    mask: radial-gradient(circle, transparent 20%, #000 32%, transparent 64%);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .scj-heart-glow::before { animation: scj-pulse 4.2s ease-in-out infinite; }
+    .scj-heart-glow::after { animation: scj-rotate 22s linear infinite; }
+  }
+  @keyframes scj-pulse {
+    0%, 100% { opacity: 0.72; transform: translate(-50%, -50%) scale(0.95); }
+    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
+  }
+  @keyframes scj-rotate { to { transform: translate(-50%, -50%) rotate(360deg); } }
+  @media (max-width: 900px) { .scj-heart-glow { right: -22%; opacity: 0.55; } }
   /* ---------- Pie con cielo (solo esta página) ---------- */
   .site-footer { background: #1e3c68; }
   .site-footer__video { filter: brightness(0.92) saturate(1.05); }
@@ -242,6 +279,7 @@
 <main>
   <img class="icdm-bg" src="icdm.png" alt="" aria-hidden="true" />
   <img class="scj-bg" src="scj.png" alt="" aria-hidden="true" />
+  <div class="scj-heart-glow" aria-hidden="true"></div>
   <div class="doc">
     <section>
       <span class="label">3 de junio de 1875</span>
