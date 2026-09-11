@@ -188,8 +188,13 @@
   .copy-toast { position: fixed; left: 50%; bottom: 1.5rem; transform: translateX(-50%) translateY(0.5rem); background: #12151C; color: #F4F2EA; padding: 0.6rem 1.1rem; border-radius: 999px; font-family: "Archivo", system-ui, sans-serif; font-size: 0.82rem; letter-spacing: 0.02em; box-shadow: 0 10px 28px rgba(0,0,0,0.35); opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease; z-index: 9999; }
   .copy-toast.is-on { opacity: 1; transform: translateX(-50%) translateY(0); }
   .invocations { margin-top: 2.25rem; font-family: "Fraunces", serif; font-weight: 500; font-size: var(--step-1); line-height: 1.45; color: var(--gold-text); }
-  /* ---------- Fondos: Corazones de Jesús y de María ---------- */
-  .scj-bg, .icdm-bg { position: fixed; bottom: 0; height: min(84vh, 860px); width: auto; z-index: -1; opacity: 0.16; pointer-events: none; }
+  /* ---------- Fondos: Corazones de Jesús y de María ----------
+     Ya no son fijos a toda la página: cada imagen vive DENTRO de la
+     sección con la que corresponde (scj → Oración de consagración,
+     icdm → A la patrona del Uruguay), así que al hacer scroll suben y se
+     van con su propia sección en vez de quedar clavadas en pantalla. */
+  .scj-host, .icdm-host { position: relative; overflow: hidden; min-height: 480px; }
+  .scj-bg, .icdm-bg { position: absolute; bottom: 0; height: 100%; width: auto; z-index: -1; opacity: 0.16; pointer-events: none; }
   .scj-bg { right: -1%; -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%); mask: linear-gradient(103deg, transparent 0%, #000 26%); }
   .icdm-bg { left: -1%; transform: scaleX(-1); -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%); mask: linear-gradient(103deg, transparent 0%, #000 26%); }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .scj-bg, :root:not([data-theme="light"]) .icdm-bg { opacity: 0.2; } }
@@ -198,13 +203,13 @@
   /* ---------- Rayos de luz sobre los grabados (corazón y cabeza, en las
      dos figuras) ---------- Elementos aparte (no hijos de .scj-bg/.icdm-bg)
      para que el brillo no herede su opacidad tan baja; cada uno usa el
-     mismo encuadre fijo que su imagen (altura/lado/aspect-ratio) y
-     variables --gx/--gy (posición) y --gs/--gr (tamaño del halo y de los
-     rayos) para caer justo sobre el punto que corresponde del grabado. La
-     de la izquierda (icdm) lleva scaleX(-1) igual que .icdm-bg, así que
-     sus coordenadas se miden sobre icdm.png sin espejar. */
+     mismo encuadre que su imagen (altura/lado, ahora relativo a su propia
+     sección) y variables --gx/--gy (posición) y --gs/--gr (tamaño del halo
+     y de los rayos) para caer justo sobre el punto que corresponde del
+     grabado. La de la izquierda (icdm) lleva scaleX(-1) igual que
+     .icdm-bg, así que sus coordenadas se miden sobre icdm.png sin espejar. */
   .rn-glow {
-    position: fixed; bottom: 0; height: min(84vh, 860px); z-index: -1; pointer-events: none;
+    position: absolute; bottom: 0; height: 100%; z-index: -1; pointer-events: none;
     -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%);
     mask: linear-gradient(103deg, transparent 0%, #000 26%);
   }
@@ -286,10 +291,6 @@
 </header>
 
 <main>
-  <img class="icdm-bg" src="icdm.png" alt="" aria-hidden="true" />
-  <img class="scj-bg" src="scj.png" alt="" aria-hidden="true" />
-  <div class="rn-glow scj-heart-glow" aria-hidden="true"></div>
-  <div class="rn-glow icdm-heart-glow" aria-hidden="true"></div>
   <div class="doc">
     <section>
       <span class="label">3 de junio de 1875</span>
@@ -300,7 +301,9 @@
       </div>
     </section>
 
-    <section>
+    <section class="scj-host">
+      <img class="scj-bg" src="scj.png" alt="" aria-hidden="true" />
+      <div class="rn-glow scj-heart-glow" aria-hidden="true"></div>
       <span class="label">Oración de consagración</span>
       <h2 data-cms="sec2-heading">Corazón de Jesús</h2>
       <div class="prose">
@@ -314,7 +317,9 @@
       <p class="invocations" data-cms="sec2-invocations">¡Corazón Santísimo, sálvanos!<br />¡Corazón de Jesús, ten piedad de nosotros!</p>
     </section>
 
-    <section>
+    <section class="icdm-host">
+      <img class="icdm-bg" src="icdm.png" alt="" aria-hidden="true" />
+      <div class="rn-glow icdm-heart-glow" aria-hidden="true"></div>
       <span class="label">A la patrona del Uruguay</span>
       <h2 data-cms="sec3-heading">Oración para todos los días</h2>
       <div class="prose">
