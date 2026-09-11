@@ -206,9 +206,13 @@
   .icdm-bg { left: 3%; transform: scaleX(-1); -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%); mask: linear-gradient(103deg, transparent 0%, #000 26%); }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .scj-bg, :root:not([data-theme="light"]) .icdm-bg, :root:not([data-theme="light"]) .vera-bg { opacity: 0.2; } }
   :root[data-theme="dark"] .scj-bg, :root[data-theme="dark"] .icdm-bg, :root[data-theme="dark"] .vera-bg { opacity: 0.2; }
-  @media (max-width: 900px) { .icdm-bg { display: none; } .scj-bg { opacity: 0.08; right: -22%; } .vera-bg { opacity: 0.08; right: -22%; } }
+  @media (max-width: 900px) { .icdm-bg { display: none; } .scj-bg { opacity: 0.08; right: -22%; } .vera-bg { opacity: 0.08; left: auto; right: -22%; } }
+  /* .vera-bg/.vera-glow se posicionan con "left" (no "right") a un cm del
+     borde derecho de la columna de texto (.host-inner, max-width:900px
+     centrada): 50vw llega al centro de la sección, +450px llega al borde
+     derecho de esa columna, +1cm dejar el aire pedido antes de la imagen. */
   .vera-bg {
-    right: -1%;
+    left: calc(50vw + 450px + 1cm);
     height: 400px;
     bottom: 140px;
     -webkit-mask: linear-gradient(103deg, transparent 0%, #000 26%);
@@ -229,7 +233,7 @@
      .vera-host (min-height 480px) para que el resplandor tenga sitio de
      sobra antes de tocar el overflow:hidden de la sección. */
   .vera-glow {
-    position: absolute; bottom: 140px; right: -1%; height: 400px; width: auto;
+    position: absolute; bottom: 140px; left: calc(50vw + 450px + 1cm); height: 400px; width: auto;
     z-index: -2; opacity: 0.16; pointer-events: none;
     filter:
       drop-shadow(0 0 10px rgba(255, 214, 130, 0.85))
@@ -255,7 +259,7 @@
         drop-shadow(0 0 62px rgba(224, 170, 80, 0.4));
     }
   }
-  @media (max-width: 900px) { .vera-glow { opacity: 0.08; right: -22%; } }
+  @media (max-width: 900px) { .vera-glow { opacity: 0.08; left: auto; right: -22%; } }
   /* ---------- Rayos de luz sobre los grabados (corazón y cabeza, en las
      dos figuras) ---------- Elementos aparte (no hijos de .scj-bg/.icdm-bg)
      para que el brillo no herede su opacidad tan baja; cada uno usa el
