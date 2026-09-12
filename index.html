@@ -208,7 +208,7 @@
     object-fit: cover; object-position: center;
     transform: scale(1.05); z-index: -2; pointer-events: none;
     object-position: 62% center;
-    filter: saturate(0.95) blur(1.5px);
+    filter: saturate(0.95) blur(0.5px);
     -webkit-mask: radial-gradient(140% 135% at 50% 36%, #000 22%, transparent 94%);
     mask: radial-gradient(140% 135% at 50% 36%, #000 22%, transparent 94%);
   }
@@ -225,8 +225,8 @@
   .hero__scrim {
     position: absolute; inset: 0; z-index: -1; pointer-events: none;
     background:
-      linear-gradient(92deg, rgba(11,28,55,0.94) 0%, rgba(14,35,68,0.86) 55%, rgba(12,30,58,0.90) 100%),
-      radial-gradient(65% 85% at 64% 46%, rgba(9,22,44,0.62) 0%, rgba(9,22,44,0) 70%);
+      linear-gradient(92deg, rgba(11,28,55,0.62) 0%, rgba(14,35,68,0.52) 55%, rgba(12,30,58,0.58) 100%),
+      radial-gradient(65% 85% at 64% 46%, rgba(9,22,44,0.4) 0%, rgba(9,22,44,0) 70%);
   }
   /* ---------- Cortina de bandera uruguaya: cubre el hero y se corre a la
      izquierda al cargar, revelando el titular y el emblema. El panel usa el
@@ -260,11 +260,13 @@
   }
   .hero .wrap {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 0.85fr 1.15fr;
     gap: clamp(2rem, 5vw, 4.5rem);
     align-items: center;
     padding-block: clamp(2.1rem, 4.6vw, 3.6rem);
   }
+  .hero__copy { order: 2; }
+  .hero__emblem { order: 1; }
   .hero__eyebrow { color: #E7C978; margin-bottom: 0.6rem; }
   .hero h1 { font-size: var(--step-3); font-weight: 600; letter-spacing: -0.015em; }
   .rn-cross { display: inline-block; width: auto; height: 0.72em; margin-left: 0.14em; vertical-align: 0.02em; }
@@ -282,6 +284,7 @@
   .hero__motto span:last-child { letter-spacing: 0.98em; }
   @media (max-width: 900px) {
     .hero__motto span:last-child { letter-spacing: 0.4em; }
+    .hero .wrap { grid-template-columns: 1fr; }
   }
   .hero__cta { display: flex; gap: 0.9rem; margin-top: 2.2rem; flex-wrap: wrap; }
   .hero__emblem { justify-self: center; width: min(78vw, 400px); }
