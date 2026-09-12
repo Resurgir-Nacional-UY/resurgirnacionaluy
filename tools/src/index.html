@@ -255,8 +255,12 @@
     display: flex; align-items: center; gap: 0.9rem;
     margin: 0 0 1.4rem;
     font-family: "Archivo", sans-serif; font-weight: 700;
-    letter-spacing: 0.28em; text-transform: uppercase; font-size: 0.8rem;
+    text-transform: uppercase; font-size: 0.8rem;
     color: #E7C978;
+  }
+  .hero__motto span:last-child { letter-spacing: 0.98em; }
+  @media (max-width: 900px) {
+    .hero__motto span:last-child { letter-spacing: 0.4em; }
   }
   .hero__cta { display: flex; gap: 0.9rem; margin-top: 2.2rem; flex-wrap: wrap; }
   .hero__emblem { justify-self: center; width: min(78vw, 400px); }
@@ -499,7 +503,7 @@
     <div class="wrap">
       <div class="hero__copy">
         <p class="label hero__eyebrow" data-cms="hero-eyebrow">Movimiento nacionalista · Tercera Posición</p>
-        <p class="hero__motto"><span aria-hidden="true">◆</span> La Patria o la tumba</p>
+        <p class="hero__motto"><span aria-hidden="true">◆</span><span>La Patria o la tumba</span></p>
         <h1>La regeneración <span class="rn-rotate" data-words="espiritual,política,social">espiritual<svg class="rn-cross" viewBox="0 0 404 564" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="80" d="M202 2V562M2 202H402"/></svg></span> del Uruguay.</h1>
         <p class="hero__lead">Trabajamos fuera del sistema de partidos y del dogma democrático, por un nacionalismo virtuoso con perspectiva cristiana. Queremos un país donde Dios, la Patria y la Familia vuelvan a ser la base de la sociedad.</p>
         <div class="hero__cta">
