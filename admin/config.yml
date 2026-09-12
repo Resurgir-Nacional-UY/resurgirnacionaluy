@@ -126,6 +126,9 @@ collections:
           - name: sumate_p2
             label: "Sección Sumarse — párrafo 2"
             widget: text
+          - name: sumate_contact_label
+            label: "Sección Sumarse — texto antes del correo"
+            widget: string
           - name: sumate_video
             label: "Sección Sumarse — video de fondo"
             widget: file
