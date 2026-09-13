@@ -145,8 +145,6 @@ _-Denes Martos. 2026_
 
 **NOTAS**
 
-
-
 Los datos fueron recabados ordenados y validados utilizando Inteligencia Artificial, la cual no se ha empleado para la evaluación y el análisis histórico-político de los mismos.
 
 [[1]](https://denesmartos.blogspot.com/2026/#_ednref1) )- William Ebenstein nació (…) en Jazłowiec, Galitzia, como ciudadano austrohúngaro. Provenía de una respetada familia judía cuyos antepasados ​​incluían al rabino Jacob Jehoschua Falk. (...) En 1936, emigró a los Estados Unidos. (...) Al igual que muchos otros abogados germano-estadounidenses, se puso al servicio de los EE.UU. durante la Segunda Guerra Mundial. Trabajó para el servicio de inteligencia estadounidense, entrenando personal para la ocupación de los países del Eje.
