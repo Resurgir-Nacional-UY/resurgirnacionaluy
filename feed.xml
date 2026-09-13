@@ -6,7 +6,21 @@
   <atom:link href="https://resurgirnacionaluy.org/feed.xml" rel="self" type="application/rss+xml" />
   <description>Artículos de formación del movimiento Resurgir Nacional.</description>
   <language>es-uy</language>
-  <lastBuildDate>Tue, 08 Sep 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Sun, 13 Sep 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Fundamentos de Política</title>
+    <link>https://resurgirnacionaluy.org/fundamentospoliticos.html</link>
+    <guid isPermaLink="true">https://resurgirnacionaluy.org/fundamentospoliticos.html</guid>
+    <pubDate>Sun, 13 Sep 2026 12:00:00 +0000</pubDate>
+    <description>Sobre los fundamentos de la Política</description>
+  </item>
+  <item>
+    <title>Hitler, Stalin y la segunda guerra mundial...</title>
+    <link>https://resurgirnacionaluy.org/sobrestalinyhitler.html</link>
+    <guid isPermaLink="true">https://resurgirnacionaluy.org/sobrestalinyhitler.html</guid>
+    <pubDate>Sun, 13 Sep 2026 12:00:00 +0000</pubDate>
+    <description>Sobre el trasfondo del inicio de la guerra entre Stalin y Hitler.</description>
+  </item>
   <item>
     <title>Sobre la inmigración</title>
     <link>https://resurgirnacionaluy.org/8483e472e2a2.html</link>
