@@ -280,7 +280,7 @@ def list_block(arts):
         )
     block = '\n      <div class="acts acts--articles">\n' + "\n".join(rows) + "\n      </div>\n"
     if len(arts) > HUB_LIMIT:
-        block += ('      <p class="acts__more"><a href="%s">'
+        block += ('      <p class="acts__more"><a class="btn btn--rounded" href="%s">'
                   'Ver todos los artículos (%d)&nbsp;→</a></p>\n' % (INDEX_NAME, len(arts)))
     return block + "      "
 
