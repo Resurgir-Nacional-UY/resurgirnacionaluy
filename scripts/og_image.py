@@ -12,6 +12,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts")
 EMBLEM = os.path.join(ROOT, "favicon-192.png")
+BACKGROUND = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "fondo-minia.jpg")
 
 W, H = 1200, 630
 PAD = 72
@@ -79,17 +80,38 @@ def _vertical_gradient(w, h, stops):
     return img.resize((w, h))
 
 
+def _cover(img, w, h):
+    """Escala la imagen para cubrir w x h y recorta el sobrante centrado."""
+    scale = max(w / img.width, h / img.height)
+    rw, rh = round(img.width * scale), round(img.height * scale)
+    img = img.resize((rw, rh), Image.LANCZOS)
+    x0 = (rw - w) // 2
+    y0 = (rh - h) // 2
+    return img.crop((x0, y0, x0 + w, y0 + h))
+
+
+def _left_scrim(w, h, color=(13, 32, 62), start_alpha=232, end_alpha=10):
+    """Velo degradado de izquierda (oscuro, para el texto) a derecha (claro)."""
+    row = Image.new("RGBA", (w, 1))
+    for x in range(w):
+        t = (x / max(w - 1, 1)) ** 1.25
+        a = int(start_alpha + (end_alpha - start_alpha) * t)
+        row.putpixel((x, 0), color + (a,))
+    return row.resize((w, h))
+
+
+def _background(w, h):
+    if os.path.exists(BACKGROUND):
+        bg = _cover(Image.open(BACKGROUND).convert("RGB"), w, h).convert("RGBA")
+    else:
+        bg = _vertical_gradient(w, h, [(0.0, NAVY_TOP), (0.5, NAVY_MID), (1.0, NAVY_BOTTOM)]).convert("RGBA")
+    bg.alpha_composite(_left_scrim(w, h))
+    return bg
+
+
 def make_og_image(kicker, title, byline, out_path):
     """kicker: p.ej. 'Formacion . Articulo'. title/byline: texto plano."""
-    img = _vertical_gradient(W, H, [(0.0, NAVY_TOP), (0.5, NAVY_MID), (1.0, NAVY_BOTTOM)]).convert("RGBA")
-
-    # Marca de agua: el emblema, muy grande y tenue, sangrando por la derecha.
-    if os.path.exists(EMBLEM):
-        emblem = Image.open(EMBLEM).convert("RGBA")
-        big = emblem.resize((560, 560), Image.LANCZOS)
-        alpha = big.getchannel("A").point(lambda a: int(a * 0.10))
-        big.putalpha(alpha)
-        img.alpha_composite(big, (W - 420, H - 460))
+    img = _background(W, H)
 
     draw = ImageDraw.Draw(img)
 
