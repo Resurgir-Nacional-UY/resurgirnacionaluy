@@ -18,9 +18,12 @@ from xml.sax.saxutils import escape as xesc
 import yaml
 import markdown
 
+import og_image
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.join(ROOT, "content", "formacion")
 TEMPLATE = os.path.join(ROOT, "formacion.html")
+OG_DIR = os.path.join(ROOT, "og")
 FEED = os.path.join(ROOT, "feed.xml")
 SITEMAP = os.path.join(ROOT, "sitemap.xml")
 INDEX_NAME = "articulos.html"
@@ -198,6 +201,24 @@ def meta_line(a):
     return "%s · %s" % (fecha_es(a.get("date", "")), a.get("author") or "Resurgir Nacional")
 
 
+def write_og_image(a):
+    """Genera og/<slug>.png con el titulo real del articulo (si cambio)."""
+    out = os.path.join(OG_DIR, a["slug"] + ".png")
+    tmp = out + ".tmp"
+    og_image.make_og_image("Formación · Artículo", a["title"], meta_line(a), tmp)
+    with open(_lp(tmp), "rb") as f:
+        new = f.read()
+    old = None
+    if os.path.exists(out):
+        with open(_lp(out), "rb") as f:
+            old = f.read()
+    if old == new:
+        os.remove(_lp(tmp))
+        return False
+    os.replace(_lp(tmp), _lp(out))
+    return True
+
+
 def article_page(tpl, a):
     title = a["title"]
     summary = a.get("summary", "") or title
@@ -222,6 +243,9 @@ def article_page(tpl, a):
                  lambda m: m.group(1) + esc(title) + m.group(2), pre, count=1)
     pre = re.sub(r'(<meta property="og:description" content=")[^"]*(")',
                  lambda m: m.group(1) + esc(summary) + m.group(2), pre, count=1)
+    pre = re.sub(r'<meta property="og:image" content="[^"]*" />',
+                 '<meta property="og:image" content="%sog/%s.png" />' % (SITE, a["slug"]),
+                 pre, count=1)
     pre = pre.replace("<head>", "<head>\n" + GEN_MARK, 1)
     main_html = (
         '<main>\n'
@@ -493,6 +517,8 @@ def main():
         if not os.path.exists(out) or rd(out) != page:
             wr(out, page)
             print("  escrito: %s.html" % a["slug"])
+        if write_og_image(a):
+            print("  og/%s.png: imagen social actualizada" % a["slug"])
         written.add(a["slug"] + ".html")
 
     # índice completo articulos.html — solo si hay más artículos que los de la portada
@@ -516,6 +542,15 @@ def main():
         if GEN_MARK in head:
             os.remove(path)
             print("  eliminado (obsoleto): %s" % name)
+
+    # remove stale per-article OG images
+    slugs = {a["slug"] for a in arts}
+    if os.path.isdir(OG_DIR):
+        for path in glob.glob(os.path.join(OG_DIR, "*.png")):
+            slug = os.path.splitext(os.path.basename(path))[0]
+            if slug not in slugs:
+                os.remove(path)
+                print("  eliminado (obsoleto): og/%s.png" % slug)
 
     # rewrite the list region inside formacion.html
     i = tpl.index(MARK_A) + len(MARK_A)

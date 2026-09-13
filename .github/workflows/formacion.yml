@@ -26,7 +26,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install --quiet markdown pyyaml
+      - run: pip install --quiet markdown pyyaml Pillow
 
       - run: python scripts/render_articles.py
 
