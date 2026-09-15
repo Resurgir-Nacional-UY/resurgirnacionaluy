@@ -6,7 +6,14 @@
   <atom:link href="https://resurgirnacionaluy.org/feed.xml" rel="self" type="application/rss+xml" />
   <description>Artículos de formación del movimiento Resurgir Nacional.</description>
   <language>es-uy</language>
-  <lastBuildDate>Sun, 13 Sep 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 15 Sep 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Tercera Posición para el Uruguay del siglo XX</title>
+    <link>https://resurgirnacionaluy.org/fascismoenuruguay.html</link>
+    <guid isPermaLink="true">https://resurgirnacionaluy.org/fascismoenuruguay.html</guid>
+    <pubDate>Tue, 15 Sep 2026 12:00:00 +0000</pubDate>
+    <description>Visión sobre un ideal fascista posible para el Uruguay del siglo XX.</description>
+  </item>
   <item>
     <title>Fundamentos de Política</title>
     <link>https://resurgirnacionaluy.org/fundamentospoliticos.html</link>
