@@ -26,7 +26,6 @@ No lo olviden camaradas, Uruguay siempre debe ir por delante y para adelante en 
 
 ![](/media/formacion/MAPAS-FACUNDO.jpg)
 
-
 # **FASCISMO, MI ADAPTACIÓN PERSONAL Y PARA EL URUGUAY.**
 
 El fascismo surgió en 1919 después de la gran guerra, esta ideología fue pensada, forjada por el exdirigente socialista, antiguo director del diario socialista Avanti, Benito Mussolini, para unificar Italia bajo un ideal único, reclamar los territorios prometidos por la entente en 1915 para que Italia entrara a la gran guerra y al terminar esta esa promesa fue traicionada. 
@@ -51,9 +50,6 @@ No debe tolerarse nada fuera de la elección por mérito, capacidad y conocimien
 
 **Ideología**) No debe tolerarse ninguna ideología ya sea liberalismo, progresismo, socialismo comunismo o cualquier otra que sea subversiva para el estado de orden. 
 
-
-
-
 ### **ASPECTO ECONÓMICO, PROPIEDAD EXTRANJERA, ESTATAL Y NATIVA.**
 
 La intervención estatal en la economía solamente debe a límites de orden jurídico, administrativo y organizativo. Sin injerencias, ni intromisiones innecesarias en la misma. 
@@ -61,9 +57,6 @@ La intervención estatal en la economía solamente debe a límites de orden jur�
 La propiedad extranjera, también de multinacionales, deben estar terminantemente prohibida a excepción de inmigrantes adaptados y nacionalizados. 
 
 La propiedad de nativos debe ser totalmente libre y con apoyos para emprendedores. 
-
-
-
 
 ### **SINDICATOS, ORGANIZACIONES COLECTIVAS Y TRABAJO.** 
 
@@ -73,17 +66,11 @@ Los trabajadores deben agruparse en sindicatos nacionales al igual que los empre
 
 No debe tolerarse ninguna injusticia en el ambiente laboral como explotación laboral, agitación obrera o cualquier otra práctica que incida directa o indirectamente en cualquier acción subversiva de carácter marxista o de cualquier otra ideología que atente contra el estado de orden. 
 
-
-
-
 ### **IMPUESTOS Y PRESUPUESTO ESTATAL.**
 
 Aquí la ley es simple. Para bajar los impuestos para así aliviar la presión fiscal sobre la población, primero hay que bajar el gasto público, todo de manera gradual, también obviamente eso demanda sacrificio, pero es la herramienta para que la población pueda desarrollarse de manera propia y prosperar. 
 
 Debe aplicarse una rígida práctica fiscal que el gasto nunca debe superar la ganancia para evitar déficits y deudas. 
-
-
-
 
 ### **ASPECTO SOCIAL**
 
@@ -103,7 +90,6 @@ DEBE de primar la unidad con base en la FAMILIA y la COMUNIDAD.
 
 Connotando en la nacionalidad se debe restaurar la solidaridad, cooperación y colaboración en esfuerzos colectivos para la comunidad y el bien común. Por encima del individualismo, la envidia y el relativismo de formas extranjeras y disolventes. Una nación fuerte, soberana se desarrolla con cooperación, solidaridad colectiva y comunitaria.
 
-
 ### **CONCLUSIÓN...**
 
 **_Una nación fuerte se construye con un liderazgo fuerte y una cosmovisión política suprema. Una economía estable y nacional, propia y soberana, cooperativa y justa._**
@@ -111,6 +97,5 @@ Connotando en la nacionalidad se debe restaurar la solidaridad, cooperación y c
 **_Una sociedad unida, ordenada por la fe, educada por sus instituciones naturales y preparada para defender la patria, teniendo una forma de vida establecida._**
 
 **_Contra el liberalismo permisivo y relativista. El capitalismo invasor y disolvente. El marxismo materialista y envidioso._**
-
 
 _-José Otaiza. 15 de septiembre de 2026._
