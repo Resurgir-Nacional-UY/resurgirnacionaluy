@@ -295,6 +295,10 @@ INDEX_JS = """      <script>
             return s.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
           };
           var keys = rows.map(function (r) { return norm(r.getAttribute('data-s') || ''); });
+          try {
+            var qp = new URLSearchParams(location.search).get('q');
+            if (qp) box.value = qp;
+          } catch (e) {}
           var apply = function () {
             var q = norm(box.value.trim());
             var shown = 0;
@@ -312,6 +316,7 @@ INDEX_JS = """      <script>
             if (none) none.hidden = shown !== 0;
           };
           box.addEventListener('input', apply);
+          apply();
         })();
       </script>"""
 

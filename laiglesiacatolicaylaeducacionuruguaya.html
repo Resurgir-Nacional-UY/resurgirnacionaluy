@@ -247,6 +247,17 @@
   .art-search { width: 100%; margin: 0 0 0.4rem; padding: 0.7rem 0.9rem; font: inherit; font-size: 1rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; }
   .art-search::placeholder { color: var(--ink-soft); }
   .art-search:focus-visible { outline: 2px solid var(--gold-line); outline-offset: 1px; border-color: var(--gold-line); }
+  /* Buscador en la cabecera de "Artículos" (portada de Formación) */
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  .pub-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5rem 2.5rem; flex-wrap: wrap; }
+  .pub-search { display: flex; align-items: center; gap: 0.5rem; flex: 0 0 auto; width: 100%; max-width: 15.5rem; }
+  .pub-search input { flex: 1; min-width: 0; font: inherit; font-size: 0.92rem; padding: 0.55rem 0.8rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; }
+  .pub-search input::placeholder { color: var(--ink-soft); }
+  .pub-search input:focus-visible { outline: 2px solid var(--gold-line); outline-offset: 1px; border-color: var(--gold-line); }
+  .pub-search button { flex: none; display: grid; place-items: center; width: 2.35rem; height: 2.35rem; padding: 0; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink-soft); cursor: pointer; transition: color .15s ease, border-color .15s ease; }
+  .pub-search button:hover { color: var(--blue); border-color: var(--gold-line); }
+  .pub-search button svg { width: 1.05rem; height: 1.05rem; fill: currentColor; }
+  @media (max-width: 560px) { .pub-head { align-items: stretch; } .pub-search { max-width: none; } }
   .art-nores { color: var(--ink-soft); font-style: italic; margin-top: 0.6rem; }
   .art-month { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); margin: 1.9rem 0 0; scroll-margin-top: calc(var(--header-h) + 1.5rem); }
   .art-index > .art-month:first-child { margin-top: 0; }

@@ -246,6 +246,17 @@
   .art-search { width: 100%; margin: 0 0 0.4rem; padding: 0.7rem 0.9rem; font: inherit; font-size: 1rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; }
   .art-search::placeholder { color: var(--ink-soft); }
   .art-search:focus-visible { outline: 2px solid var(--gold-line); outline-offset: 1px; border-color: var(--gold-line); }
+  /* Buscador en la cabecera de "Artículos" (portada de Formación) */
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  .pub-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5rem 2.5rem; flex-wrap: wrap; }
+  .pub-search { display: flex; align-items: center; gap: 0.5rem; flex: 0 0 auto; width: 100%; max-width: 15.5rem; }
+  .pub-search input { flex: 1; min-width: 0; font: inherit; font-size: 0.92rem; padding: 0.55rem 0.8rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; }
+  .pub-search input::placeholder { color: var(--ink-soft); }
+  .pub-search input:focus-visible { outline: 2px solid var(--gold-line); outline-offset: 1px; border-color: var(--gold-line); }
+  .pub-search button { flex: none; display: grid; place-items: center; width: 2.35rem; height: 2.35rem; padding: 0; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink-soft); cursor: pointer; transition: color .15s ease, border-color .15s ease; }
+  .pub-search button:hover { color: var(--blue); border-color: var(--gold-line); }
+  .pub-search button svg { width: 1.05rem; height: 1.05rem; fill: currentColor; }
+  @media (max-width: 560px) { .pub-head { align-items: stretch; } .pub-search { max-width: none; } }
   .art-nores { color: var(--ink-soft); font-style: italic; margin-top: 0.6rem; }
   .art-month { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); margin: 1.9rem 0 0; scroll-margin-top: calc(var(--header-h) + 1.5rem); }
   .art-index > .art-month:first-child { margin-top: 0; }
@@ -327,10 +338,21 @@
     </section>
 
     <section>
-      <span class="label">Publicaciones</span>
-      <h2>Artículos</h2>
-      <div class="prose">
-        <p data-cms="articles-intro">Ensayos y textos del movimiento.</p>
+      <div class="pub-head">
+        <div>
+          <span class="label">Publicaciones</span>
+          <h2>Artículos</h2>
+          <div class="prose">
+            <p data-cms="articles-intro">Ensayos y textos del movimiento.</p>
+          </div>
+        </div>
+        <form class="pub-search" action="articulos.html" method="get" role="search">
+          <label for="pub-search-input" class="sr-only">Buscar artículos</label>
+          <input id="pub-search-input" type="search" name="q" placeholder="Buscar artículos…" autocomplete="off" />
+          <button type="submit" aria-label="Buscar">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M13.6 12.2a6 6 0 1 0-1.4 1.4l4.1 4.1 1.4-1.4-4.1-4.1ZM8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z"/></svg>
+          </button>
+        </form>
       </div>
       <!-- ARTICLES:START -->
       <div class="acts acts--articles">
