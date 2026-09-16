@@ -3,7 +3,7 @@ title: Tercera Posición para el Uruguay del siglo XX
 slug: fascismoenuruguay
 date: 2026-09-15
 author: José Otaiza
-summary: Visión sobre un ideal fascista posible para el Uruguay del siglo XX.
+summary: Visión sobre un ideal fascista posible para el Uruguay del siglo XXI.
 source_url: ''
 draft: false
 ---
