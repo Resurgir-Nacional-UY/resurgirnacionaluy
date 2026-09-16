@@ -1,5 +1,5 @@
 ---
-title: Tercera Posición para el Uruguay del siglo XX
+title: Tercera Posición para el Uruguay del siglo XXI
 slug: fascismoenuruguay
 date: 2026-09-15
 author: José Otaiza
