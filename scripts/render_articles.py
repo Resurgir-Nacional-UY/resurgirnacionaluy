@@ -33,7 +33,10 @@ HUB_LIMIT = 6
 # URL publica del sitio. Cambiar si se pasa a dominio propio (p. ej. https://resurgirnacionaluy.org/)
 SITE = "https://resurgirnacionaluy.org/"
 STATIC_PAGES = ["", "ideario-y-valores-rn.html", "cultura-nacional-uruguaya.html", "catolicismo-en-uruguay.html",
-                "lecturas-para-el-uruguay.html", "tienda-resurgir-nacional.html"]
+                "lecturas-para-el-uruguay.html"]
+# tienda-resurgir-nacional.html queda afuera del sitemap a proposito: la
+# Tienda esta oculta al publico hasta terminar de configurar el pago (ver
+# el comentario en tools/src/index.html junto al link de nav que se saco).
 MARK_A = "<!-- ARTICLES:START -->"
 MARK_B = "<!-- ARTICLES:END -->"
 INDEX_MARK_A = "<!-- PUBINDEX:START -->"
