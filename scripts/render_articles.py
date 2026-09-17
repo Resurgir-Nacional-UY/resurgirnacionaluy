@@ -206,10 +206,10 @@ def meta_line(a):
 
 
 def write_og_image(a):
-    """Genera og/<slug>.png con el titulo real del articulo (si cambio)."""
-    out = os.path.join(OG_DIR, a["slug"] + ".png")
+    """Genera og/<slug>.jpg con el titulo real del articulo (si cambio)."""
+    out = os.path.join(OG_DIR, a["slug"] + ".jpg")
     tmp = out + ".tmp"
-    og_image.make_og_image("Formación · Artículo", a["title"], meta_line(a), tmp)
+    og_image.make_og_image("Formación · Artículo", a["title"], meta_line(a), tmp, fmt="JPEG")
     with open(_lp(tmp), "rb") as f:
         new = f.read()
     old = None
@@ -248,7 +248,7 @@ def article_page(tpl, a):
     pre = re.sub(r'(<meta property="og:description" content=")[^"]*(")',
                  lambda m: m.group(1) + esc(summary) + m.group(2), pre, count=1)
     pre = re.sub(r'<meta property="og:image" content="[^"]*" />',
-                 '<meta property="og:image" content="%sog/%s.png" />' % (SITE, a["slug"]),
+                 '<meta property="og:image" content="%sog/%s.jpg" />' % (SITE, a["slug"]),
                  pre, count=1)
     pre = pre.replace("<head>", "<head>\n" + GEN_MARK, 1)
     main_html = (
@@ -550,7 +550,7 @@ def main():
             wr(out, page)
             print("  escrito: %s.html" % a["slug"])
         if write_og_image(a):
-            print("  og/%s.png: imagen social actualizada" % a["slug"])
+            print("  og/%s.jpg: imagen social actualizada" % a["slug"])
         written.add(a["slug"] + ".html")
 
     # índice completo articulos.html — solo si hay más artículos que los de la portada
@@ -578,14 +578,14 @@ def main():
     # remove stale per-article OG images (og/libro-*.png son de Biblioteca, no se tocan)
     slugs = {a["slug"] for a in arts}
     if os.path.isdir(OG_DIR):
-        for path in glob.glob(os.path.join(OG_DIR, "*.png")):
+        for path in glob.glob(os.path.join(OG_DIR, "*.jpg")):
             name = os.path.basename(path)
             if name.startswith("libro-"):
                 continue
             slug = os.path.splitext(name)[0]
             if slug not in slugs:
                 os.remove(_lp(path))
-                print("  eliminado (obsoleto): og/%s.png" % slug)
+                print("  eliminado (obsoleto): og/%s.jpg" % slug)
 
     # rewrite the list region inside cultura-nacional-uruguaya.html
     i = tpl.index(MARK_A) + len(MARK_A)

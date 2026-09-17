@@ -2,7 +2,7 @@
 """Genera la imagen social (og:image) de cada articulo de Formacion.
 
 Cada articulo tiene su propia tarjeta 1200x630 con su titulo real, en vez de
-reutilizar siempre el mismo og-image.png generico del sitio. Se llama desde
+reutilizar siempre el mismo og-image.jpg generico del sitio. Se llama desde
 render_articles.py; no tiene dependencias fuera de Pillow + los assets de
 este repo (fuentes locales + favicon-192.png), asi que corre igual en CI.
 """
@@ -119,7 +119,7 @@ def _background(w, h, background=BACKGROUND):
     return bg
 
 
-def make_og_image(kicker, title, byline, out_path, background=BACKGROUND):
+def make_og_image(kicker, title, byline, out_path, background=BACKGROUND, fmt=None):
     """kicker: p.ej. 'Formacion . Articulo'. title/byline: texto plano."""
     img = _background(W, H, background)
 
@@ -153,4 +153,14 @@ def make_og_image(kicker, title, byline, out_path, background=BACKGROUND):
     out_dir = os.path.dirname(out_path)
     if out_dir:
         os.makedirs(_lp(out_dir), exist_ok=True)
-    img.convert("RGB").save(_lp(out_path), "PNG", optimize=True)
+    # JPEG: con fondo fotografico (bandera), un PNG pesa 700-800KB y WhatsApp
+    # no genera vista previa con imagenes tan pesadas. En JPEG calidad 85 el
+    # mismo diseno pesa ~100-150KB, sin perdida visible.
+    # OJO: no inferir el formato de la extension de out_path -- los llamadores
+    # suelen escribir primero a "<final>.tmp" (ext ".tmp") y renombrar despues,
+    # asi que hay que pasar `fmt` explicito en vez de confiar en el sniffing.
+    real_fmt = fmt or ("JPEG" if os.path.splitext(out_path)[1].lower() in (".jpg", ".jpeg") else "PNG")
+    if real_fmt == "JPEG":
+        img.convert("RGB").save(_lp(out_path), "JPEG", quality=85, optimize=True)
+    else:
+        img.convert("RGB").save(_lp(out_path), "PNG", optimize=True)

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera og-image.png (miniatura al compartir la portada del sitio).
+"""Genera og-image.jpg (miniatura al compartir la portada del sitio).
 
 A diferencia de og/<slug>.png (uno por articulo/libro, generados en cada
 build), esta es la unica imagen de la portada: se corre a mano cuando se
@@ -17,7 +17,7 @@ ROOT = og_image.ROOT
 FONTS = og_image.FONTS
 BACKGROUND = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "fondo-banderas.jpg")
 SEAL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "seal-badge.png")
-OUT = os.path.join(ROOT, "og-image.png")
+OUT = os.path.join(ROOT, "og-image.jpg")
 
 W, H = 1200, 630
 GOLD = (212, 177, 94)
@@ -55,7 +55,7 @@ def main():
     tag_font = _font("Archivo-Medium.ttf", 22)
     draw.text((text_x, line_y + 62), "· La Patria o la tumba ·", font=tag_font, fill=MUTED)
 
-    bg.convert("RGB").save(og_image._lp(OUT), "PNG", optimize=True)
+    bg.convert("RGB").save(og_image._lp(OUT), "JPEG", quality=85, optimize=True)
     print("escrito:", OUT)
 
 

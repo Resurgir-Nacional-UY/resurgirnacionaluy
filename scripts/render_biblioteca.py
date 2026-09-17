@@ -87,17 +87,17 @@ def pdf_size_mb(b):
 
 
 def og_name(slug):
-    # prefijo "libro-" para no compartir namespace con og/<slug>.png de Formacion
+    # prefijo "libro-" para no compartir namespace con og/<slug>.jpg de Formacion
     # (ambos scripts escriben en el mismo directorio og/, en limpiezas separadas)
-    return "libro-" + slug + ".png"
+    return "libro-" + slug + ".jpg"
 
 
 def write_og_image(b):
-    """Genera og/libro-<slug>.png con el titulo real del libro (si cambio)."""
+    """Genera og/libro-<slug>.jpg con el titulo real del libro (si cambio)."""
     out = os.path.join(OG_DIR, og_name(b["slug"]))
     tmp = out + ".tmp"
     og_image.make_og_image("Biblioteca · Libro", b["title"], meta_line(b), tmp,
-                            background=og_image.BACKGROUND_BIBLIOTECA)
+                            background=og_image.BACKGROUND_BIBLIOTECA, fmt="JPEG")
     with open(_lp(tmp), "rb") as f:
         new = f.read()
     old = None
@@ -211,8 +211,8 @@ def main():
     # remove stale per-book OG images (solo las propias: prefijo "libro-")
     slugs = {b["slug"] for b in books}
     if os.path.isdir(OG_DIR):
-        for path in glob.glob(os.path.join(OG_DIR, "libro-*.png")):
-            slug = os.path.basename(path)[len("libro-"):-len(".png")]
+        for path in glob.glob(os.path.join(OG_DIR, "libro-*.jpg")):
+            slug = os.path.basename(path)[len("libro-"):-len(".jpg")]
             if slug not in slugs:
                 os.remove(_lp(path))
                 print("  eliminado (obsoleto): og/%s" % os.path.basename(path))
