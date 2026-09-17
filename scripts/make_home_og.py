@@ -15,7 +15,7 @@ import og_image  # reusa _cover, _left_scrim, _lp, fuentes
 
 ROOT = og_image.ROOT
 FONTS = og_image.FONTS
-BACKGROUND = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "fondo-home.jpg")
+BACKGROUND = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "fondo-banderas.jpg")
 SEAL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "seal-badge.png")
 OUT = os.path.join(ROOT, "og-image.png")
 

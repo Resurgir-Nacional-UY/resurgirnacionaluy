@@ -291,9 +291,9 @@ def apply_formacion(page):
 
 APPLIERS = {
     "index.html": apply_home,
-    "vision.html": apply_vision,
-    "SagradoCorazondeJesus.html": apply_fe,
-    "formacion.html": apply_formacion,
+    "ideario-y-valores-rn.html": apply_vision,
+    "catolicismo-en-uruguay.html": apply_fe,
+    "cultura-nacional-uruguaya.html": apply_formacion,
 }
 
 

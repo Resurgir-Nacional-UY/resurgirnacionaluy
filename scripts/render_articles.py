@@ -3,8 +3,8 @@
 
 Reads Markdown files from content/formacion/*.md (written by the CMS or by hand),
 turns each into a standalone page <slug>.html at the repo root that reuses the
-shared chrome from formacion.html, and rewrites the article list between the
-<!-- ARTICLES:START --> / <!-- ARTICLES:END --> markers inside formacion.html.
+shared chrome from cultura-nacional-uruguaya.html, and rewrites the article list between the
+<!-- ARTICLES:START --> / <!-- ARTICLES:END --> markers inside cultura-nacional-uruguaya.html.
 
 Run from the repo root:  python scripts/render_articles.py
 Pure stdlib + `markdown` + `pyyaml`.
@@ -22,7 +22,7 @@ import og_image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.join(ROOT, "content", "formacion")
-TEMPLATE = os.path.join(ROOT, "formacion.html")
+TEMPLATE = os.path.join(ROOT, "cultura-nacional-uruguaya.html")
 OG_DIR = os.path.join(ROOT, "og")
 FEED = os.path.join(ROOT, "feed.xml")
 SITEMAP = os.path.join(ROOT, "sitemap.xml")
@@ -32,14 +32,16 @@ INDEX = os.path.join(ROOT, INDEX_NAME)
 HUB_LIMIT = 6
 # URL publica del sitio. Cambiar si se pasa a dominio propio (p. ej. https://resurgirnacionaluy.org/)
 SITE = "https://resurgirnacionaluy.org/"
-STATIC_PAGES = ["", "vision.html", "formacion.html", "SagradoCorazondeJesus.html", "biblioteca.html"]
+STATIC_PAGES = ["", "ideario-y-valores-rn.html", "cultura-nacional-uruguaya.html", "catolicismo-en-uruguay.html", "lecturas-para-el-uruguay.html"]
 MARK_A = "<!-- ARTICLES:START -->"
 MARK_B = "<!-- ARTICLES:END -->"
 INDEX_MARK_A = "<!-- PUBINDEX:START -->"
 INDEX_MARK_B = "<!-- PUBINDEX:END -->"
 GEN_MARK = "<!-- generated:formacion-article -->"
 RESERVED = {"index", "vision", "formacion", "sagradocorazondejesus", "biblioteca", "admin", "404",
-            "readme", "articulos"}
+            "readme", "articulos",
+            "ideario-y-valores-rn", "catolicismo-en-uruguay", "cultura-nacional-uruguaya",
+            "lecturas-para-el-uruguay"}
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
          "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 MESES_AB = ["ene", "feb", "mar", "abr", "may", "jun", "jul",
@@ -236,7 +238,7 @@ def article_page(tpl, a):
     post = tpl[tpl.index("</main>") + len("</main>"):]
     pre = pre.replace("<title>Formación — Resurgir Nacional</title>",
                       "<title>%s · Formación · Resurgir Nacional</title>" % esc(title), 1)
-    pre = pre.replace(SITE + "formacion.html", art_url)          # canonical, hreflang, og:url
+    pre = pre.replace(SITE + "cultura-nacional-uruguaya.html", art_url)          # canonical, hreflang, og:url
     pre = pre.replace('<meta property="og:type" content="website" />',
                       '<meta property="og:type" content="article" />', 1)
     pre = re.sub(r'(<meta name="description" content=")[^"]*(")',
@@ -262,7 +264,7 @@ def article_page(tpl, a):
         '    </section>\n'
         '    <section>\n'
         '      <div class="prose article-body">\n%s\n      </div>%s\n'
-        '      <p style="margin-top:2.5rem"><a href="formacion.html">← Volver a Formación</a></p>\n'
+        '      <p style="margin-top:2.5rem"><a href="cultura-nacional-uruguaya.html">← Volver a Formación</a></p>\n'
         '    </section>\n'
         '  </article>\n'
         '</main>' % (esc(title), esc(meta_line(a)), body_html, source_p)
@@ -413,13 +415,13 @@ def archive_nav(arts):
 
 
 def index_page(tpl, arts):
-    """Índice completo: articulos.html, con buscador en vivo. Reusa el chrome de formacion.html."""
+    """Índice completo: articulos.html, con buscador en vivo. Reusa el chrome de cultura-nacional-uruguaya.html."""
     pre = tpl[:tpl.index("<main>")]
     post = tpl[tpl.index("</main>") + len("</main>"):]
     desc = "Todos los artículos de formación del movimiento nacionalista uruguayo Resurgir Nacional."
     pre = pre.replace("<title>Formación — Resurgir Nacional</title>",
                       "<title>Artículos de Formación · Resurgir Nacional</title>", 1)
-    pre = pre.replace(SITE + "formacion.html", SITE + INDEX_NAME)   # canonical, hreflang, og:url
+    pre = pre.replace(SITE + "cultura-nacional-uruguaya.html", SITE + INDEX_NAME)   # canonical, hreflang, og:url
     pre = re.sub(r'(<meta name="description" content=")[^"]*(")',
                  lambda m: m.group(1) + esc(desc) + m.group(2), pre, count=1)
     pre = re.sub(r'(<meta property="og:title" content=")[^"]*(")',
@@ -449,7 +451,7 @@ def index_page(tpl, arts):
         '        <div class="art-index">\n'
         '%s\n'
         '        </div>\n'
-        '        <p style="margin-top:2.5rem"><a href="formacion.html">← Volver a Formación</a></p>\n'
+        '        <p style="margin-top:2.5rem"><a href="cultura-nacional-uruguaya.html">← Volver a Formación</a></p>\n'
         '      </div>\n'
         '    </div>\n'
         '%s\n'
@@ -492,7 +494,7 @@ def write_feed(arts):
         '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
         "<channel>\n"
         "  <title>Resurgir Nacional — Formación</title>\n"
-        "  <link>%sformacion.html</link>\n"
+        "  <link>%scultura-nacional-uruguaya.html</link>\n"
         '  <atom:link href="%sfeed.xml" rel="self" type="application/rss+xml" />\n'
         "  <description>Artículos de formación del movimiento Resurgir Nacional.</description>\n"
         "  <language>es-uy</language>\n"
@@ -532,10 +534,10 @@ def main():
         os.makedirs(CONTENT, exist_ok=True)
     tpl = rd(TEMPLATE)
     if MARK_A not in tpl or MARK_B not in tpl:
-        print("ERROR: faltan los marcadores ARTICLES en formacion.html")
+        print("ERROR: faltan los marcadores ARTICLES en cultura-nacional-uruguaya.html")
         return 1
     if INDEX_MARK_A not in tpl or INDEX_MARK_B not in tpl:
-        print("ERROR: faltan los marcadores PUBINDEX en formacion.html")
+        print("ERROR: faltan los marcadores PUBINDEX en cultura-nacional-uruguaya.html")
         return 1
     arts = load_articles()
 
@@ -585,19 +587,19 @@ def main():
                 os.remove(_lp(path))
                 print("  eliminado (obsoleto): og/%s.png" % slug)
 
-    # rewrite the list region inside formacion.html
+    # rewrite the list region inside cultura-nacional-uruguaya.html
     i = tpl.index(MARK_A) + len(MARK_A)
     j = tpl.index(MARK_B)
     new_tpl = tpl[:i] + list_block(arts) + tpl[j:]
-    # rewrite the index-panel region inside formacion.html
+    # rewrite the index-panel region inside cultura-nacional-uruguaya.html
     ii = new_tpl.index(INDEX_MARK_A) + len(INDEX_MARK_A)
     jj = new_tpl.index(INDEX_MARK_B)
     new_tpl = new_tpl[:ii] + index_panel_block(arts) + new_tpl[jj:]
     if new_tpl != tpl:
         wr(TEMPLATE, new_tpl)
-        print("  formacion.html: lista actualizada (%d articulos)" % len(arts))
+        print("  cultura-nacional-uruguaya.html: lista actualizada (%d articulos)" % len(arts))
     else:
-        print("  formacion.html: sin cambios (%d articulos)" % len(arts))
+        print("  cultura-nacional-uruguaya.html: sin cambios (%d articulos)" % len(arts))
 
     write_feed(arts)
     write_sitemap(arts)

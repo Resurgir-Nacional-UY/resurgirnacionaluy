@@ -2,10 +2,10 @@
 """Render Biblioteca (libros en PDF de dominio publico).
 
 Lee content/biblioteca/*.yml (subidos por el CMS o a mano), genera una pagina
-standalone <slug>.html por libro (reusa el chrome de biblioteca.html, igual
+standalone <slug>.html por libro (reusa el chrome de lecturas-para-el-uruguay.html, igual
 que hace render_articles.py con Formacion) y reescribe la grilla de libros
 entre los marcadores <!-- BOOKS:START --> / <!-- BOOKS:END --> dentro de
-biblioteca.html.
+lecturas-para-el-uruguay.html.
 
 Correr desde la raiz del repo:  python scripts/render_biblioteca.py
 Pure stdlib + `yaml` + og_image.py (Pillow) para la portada social.
@@ -18,14 +18,16 @@ import og_image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.join(ROOT, "content", "biblioteca")
-TEMPLATE = os.path.join(ROOT, "biblioteca.html")
+TEMPLATE = os.path.join(ROOT, "lecturas-para-el-uruguay.html")
 OG_DIR = os.path.join(ROOT, "og")
 SITE = "https://resurgirnacionaluy.org/"
 MARK_A = "<!-- BOOKS:START -->"
 MARK_B = "<!-- BOOKS:END -->"
 GEN_MARK = "<!-- generated:biblioteca-book -->"
 RESERVED = {"index", "vision", "formacion", "sagradocorazondejesus", "biblioteca",
-            "admin", "404", "readme", "articulos"}
+            "admin", "404", "readme", "articulos",
+            "ideario-y-valores-rn", "catolicismo-en-uruguay", "cultura-nacional-uruguaya",
+            "lecturas-para-el-uruguay"}
 
 
 def _lp(p):
@@ -121,7 +123,7 @@ def book_page(tpl, b):
     post = tpl[tpl.index("</main>") + len("</main>"):]
     pre = pre.replace("<title>Biblioteca — Resurgir Nacional</title>",
                       "<title>%s · Biblioteca · Resurgir Nacional</title>" % esc(title), 1)
-    pre = pre.replace(SITE + "biblioteca.html", book_url)          # canonical, hreflang, og:url
+    pre = pre.replace(SITE + "lecturas-para-el-uruguay.html", book_url)          # canonical, hreflang, og:url
     pre = re.sub(r'(<meta name="description" content=")[^"]*(")',
                  lambda m: m.group(1) + esc(summary) + m.group(2), pre, count=1)
     pre = re.sub(r'(<meta property="og:title" content=")[^"]*(")',
@@ -147,7 +149,7 @@ def book_page(tpl, b):
         '      <div class="prose"><p>%s</p></div>\n'
         '      <p style="margin-top:1.6rem"><a class="btn btn--rounded" href="%s" target="_blank" '
         'rel="noopener">Descargar PDF%s →</a></p>\n'
-        '      <p style="margin-top:2.5rem"><a href="biblioteca.html">← Volver a Biblioteca</a></p>\n'
+        '      <p style="margin-top:2.5rem"><a href="lecturas-para-el-uruguay.html">← Volver a Biblioteca</a></p>\n'
         '    </section>\n'
         '  </article>\n'
         '</main>' % (esc(title), esc(lead), esc(summary), esc(b["pdf"]), esc(size_txt))
@@ -174,11 +176,11 @@ def main():
     if not os.path.isdir(CONTENT):
         os.makedirs(CONTENT, exist_ok=True)
     if not os.path.exists(TEMPLATE):
-        print("ERROR: falta biblioteca.html (correr tools/build.py primero)")
+        print("ERROR: falta lecturas-para-el-uruguay.html (correr tools/build.py primero)")
         return 1
     tpl = rd(TEMPLATE)
     if MARK_A not in tpl or MARK_B not in tpl:
-        print("ERROR: faltan los marcadores BOOKS en biblioteca.html")
+        print("ERROR: faltan los marcadores BOOKS en lecturas-para-el-uruguay.html")
         return 1
     books = load_books()
 
@@ -220,9 +222,9 @@ def main():
     new_tpl = tpl[:i] + cards_block(books) + tpl[j:]
     if new_tpl != tpl:
         wr(TEMPLATE, new_tpl)
-        print("  biblioteca.html: grilla actualizada (%d libros)" % len(books))
+        print("  lecturas-para-el-uruguay.html: grilla actualizada (%d libros)" % len(books))
     else:
-        print("  biblioteca.html: sin cambios (%d libros)" % len(books))
+        print("  lecturas-para-el-uruguay.html: sin cambios (%d libros)" % len(books))
 
     return 0
 

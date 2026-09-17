@@ -1,0 +1,46 @@
+# URLs viejas -> URLs nuevas (renombradas para SEO, sep. 2026).
+# Cada entrada genera una pagina finita en <from>.html que reenvia a
+# <to>.html, para que los enlaces ya compartidos no se rompan.
+# Ver scripts/render_redirects.py.
+
+- from: vision
+  to: ideario-y-valores-rn
+- from: SagradoCorazondeJesus
+  to: catolicismo-en-uruguay
+- from: formacion
+  to: cultura-nacional-uruguaya
+- from: biblioteca
+  to: lecturas-para-el-uruguay
+
+- from: 8483e472e2a2
+  to: inmigracion-en-uruguay
+- from: democraciaenuruguay
+  to: democracia-en-uruguay
+- from: economiauruguay2026
+  to: economia-uruguay-2026
+- from: elabortoenuruguay
+  to: el-aborto-en-uruguay
+- from: elpotencialdeuruguay
+  to: el-potencial-de-uruguay
+- from: fascismoenuruguay
+  to: fascismo-en-uruguay
+- from: fundamentospoliticos
+  to: fundamentos-politicos
+- from: gabrielterrarevoluciondemarzo
+  to: gabriel-terra-revolucion-de-marzo
+- from: hegemoniaculturaluruguay
+  to: hegemonia-cultural-uruguay
+- from: izquierdayderechaenuruguay
+  to: izquierda-y-derecha-en-uruguay
+- from: laiglesiacatolicaylaeducacionuruguaya
+  to: la-iglesia-catolica-y-la-educacion-uruguaya
+- from: patriotismoenuruguay
+  to: patriotismo-en-uruguay
+- from: revisionismohistoricouruguay
+  to: revisionismo-historico-uruguay
+- from: sobreespiritudelfascismo
+  to: sobre-el-espiritu-del-fascismo
+- from: sobrestalinyhitler
+  to: sobre-stalin-y-hitler
+- from: terceraposicionenuruguay
+  to: tercera-posicion-en-uruguay

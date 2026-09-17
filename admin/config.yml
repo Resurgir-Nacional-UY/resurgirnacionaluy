@@ -18,7 +18,7 @@ publish_mode: editorial_workflow
 
 # Imágenes subidas desde el editor. public_folder sin barra inicial: las páginas
 # viven en la raíz del sitio de proyecto (/resurgirnacionaluy/), así que la ruta
-# relativa resuelve bien tanto en formacion.html como en cada artículo.
+# relativa resuelve bien tanto en cultura-nacional-uruguaya.html como en cada artículo.
 media_folder: media/formacion
 public_folder: media/formacion
 

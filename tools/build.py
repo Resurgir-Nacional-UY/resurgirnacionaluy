@@ -30,10 +30,12 @@ import render_pages
 render_pages.main()
 
 HOME = "https://resurgirnacionaluy.org/"
-VISION_ABS = HOME + "vision.html"
-SUBPAGES = ["vision.html", "SagradoCorazondeJesus.html", "formacion.html", "biblioteca.html"]
+VISION_PAGE = "ideario-y-valores-rn.html"
+VISION_ABS = HOME + VISION_PAGE
+SUBPAGES = ["ideario-y-valores-rn.html", "catolicismo-en-uruguay.html",
+            "cultura-nacional-uruguaya.html", "lecturas-para-el-uruguay.html"]
 # per-page footer background video override (data-file, data-poster)
-FOOTER_VIDEO = {"SagradoCorazondeJesus.html": ("cielo.mp4", "cielo_poster.jpg")}
+FOOTER_VIDEO = {"catolicismo-en-uruguay.html": ("cielo.mp4", "cielo_poster.jpg")}
 
 
 def rd(p):
@@ -77,7 +79,7 @@ chrome = {tag: span(idx, tag, end)[0]
 def for_subpage(block, current):
     b = block.replace('<a class="brand" href="#top">', '<a class="brand" href="index.html">')
     b = re.sub(r'(<a\b[^>]*\bhref=")#', r'\1index.html#', b)          # anchor links only
-    b = b.replace(VISION_ABS, "vision.html")
+    b = b.replace(VISION_ABS, VISION_PAGE)
     b = re.sub(r'(<a\b(?![^>]*aria-current)[^>]*\bhref="' + re.escape(current) + r'")',
                r'\1 aria-current="page"', b)                          # mark current page
     return b
@@ -125,7 +127,7 @@ HEAD = ('<!doctype html>\n<html lang="es">\n<head>\n'
 
 def to_repo(src):
     s = src
-    s = s.replace(VISION_ABS, "vision.html")
+    s = s.replace(VISION_ABS, VISION_PAGE)
     s = s.replace(HOME + "#", "index.html#")
     s = s.replace('href="' + HOME + '"', 'href="index.html"')
     s = s.replace(HOME, "index.html")
@@ -152,3 +154,10 @@ if r.returncode:
 r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "render_biblioteca.py")], cwd=ROOT)
 if r.returncode:
     print("WARNING: render_biblioteca.py salio con codigo", r.returncode)
+
+# redirecciones de URLs viejas (content/redirects.yml) -- corre al final, para
+# que las paginas viejas que Formacion/Biblioteca ya borraron por renombre
+# queden libres antes de ocuparlas con la redireccion.
+r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "render_redirects.py")], cwd=ROOT)
+if r.returncode:
+    print("WARNING: render_redirects.py salio con codigo", r.returncode)
