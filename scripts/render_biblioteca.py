@@ -53,7 +53,10 @@ def esc(s):
 
 def load_books():
     books = []
-    for path in sorted(glob.glob(os.path.join(CONTENT, "*.yml"))):
+    # Sveltia CMS guarda los archivos de esta coleccion con extension ".yaml"
+    # (4 letras) aunque el resto del repo use ".yml"; hay que leer ambas.
+    paths = glob.glob(os.path.join(CONTENT, "*.yml")) + glob.glob(os.path.join(CONTENT, "*.yaml"))
+    for path in sorted(paths):
         slug = os.path.splitext(os.path.basename(path))[0].lower()
         slug = re.sub(r"[^a-z0-9-]+", "-", slug).strip("-")
         if not slug or slug in RESERVED:
