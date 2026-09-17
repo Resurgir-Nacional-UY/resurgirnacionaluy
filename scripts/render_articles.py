@@ -541,6 +541,19 @@ def main():
         return 1
     arts = load_articles()
 
+    # Salvaguarda: un archivo en content/formacion/ con extension distinta a
+    # .md queda invisible para load_articles() sin ningun aviso (el mismo
+    # tipo de bug que dejo sin publicar un libro de Biblioteca por venir en
+    # .yaml en vez de .yml). Corta el build con un error visible en vez de
+    # publicar en silencio de menos.
+    unmatched = [f for f in os.listdir(CONTENT)
+                 if not f.startswith(".") and os.path.splitext(f)[1].lower() != ".md"]
+    if unmatched:
+        print("ERROR: archivos en content/formacion/ con extension no reconocida (no se van a publicar):")
+        for f in sorted(unmatched):
+            print("  - %s" % f)
+        return 1
+
     # write / refresh each article page
     written = set()
     for a in arts:

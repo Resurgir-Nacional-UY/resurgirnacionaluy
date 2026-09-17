@@ -202,6 +202,8 @@ def apply_home(page):
     page = sub_by_marker(page, "sumate-p1", d.get("sumate_p1"))
     page = sub_by_marker(page, "sumate-p2", d.get("sumate_p2"))
     page = sub_by_marker(page, "sumate-contact-label", d.get("sumate_contact_label"))
+    page = sub_by_marker(page, "sumate-telegram-label", d.get("sumate_telegram_label"))
+    page = sub_href(page, "sumate-telegram-url", d.get("sumate_telegram_url"))
 
     email = d.get("contact_email")
     page = sub_mailto(page, "contact-email-sumate", email)

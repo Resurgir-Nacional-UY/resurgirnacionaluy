@@ -23,6 +23,8 @@ OG_DIR = os.path.join(ROOT, "og")
 SITE = "https://resurgirnacionaluy.org/"
 MARK_A = "<!-- BOOKS:START -->"
 MARK_B = "<!-- BOOKS:END -->"
+INDEX_MARK_A = "<!-- BOOKINDEX:START -->"
+INDEX_MARK_B = "<!-- BOOKINDEX:END -->"
 GEN_MARK = "<!-- generated:biblioteca-book -->"
 RESERVED = {"index", "vision", "formacion", "sagradocorazondejesus", "biblioteca",
             "admin", "404", "readme", "articulos",
@@ -175,6 +177,23 @@ def cards_block(books):
     return '\n      <div class="acts acts--articles">\n' + "\n".join(rows) + "\n      </div>\n      "
 
 
+def index_panel_block(books):
+    """Panel esmerilado a la izquierda de la grilla: indice numerado de todos
+    los libros (el mas reciente queda marcado como activo)."""
+    if not books:
+        return ""
+    rows = []
+    for i, b in enumerate(books, start=1):
+        cls = "pub-index__row pub-index__row--active" if i == 1 else "pub-index__row"
+        rows.append(
+            '          <a class="%s" href="%s.html">\n'
+            '            <span class="pub-index__num">%02d</span>\n'
+            '            <span class="pub-index__title">%s</span>\n'
+            '          </a>' % (cls, b["slug"], i, esc(b["title"]))
+        )
+    return "\n" + "\n".join(rows) + "\n          "
+
+
 def main():
     if not os.path.isdir(CONTENT):
         os.makedirs(CONTENT, exist_ok=True)
@@ -185,7 +204,25 @@ def main():
     if MARK_A not in tpl or MARK_B not in tpl:
         print("ERROR: faltan los marcadores BOOKS en lecturas-para-el-uruguay.html")
         return 1
+    if INDEX_MARK_A not in tpl or INDEX_MARK_B not in tpl:
+        print("ERROR: faltan los marcadores BOOKINDEX en lecturas-para-el-uruguay.html")
+        return 1
     books = load_books()
+
+    # Salvaguarda: cualquier archivo en content/biblioteca/ que no sea .yml/.yaml
+    # (p. ej. si el CMS algun dia usa otra extension) queda invisible para
+    # load_books() sin ningun aviso -- exactamente el bug de "santa-biblia-
+    # uruguay.yaml" (PR #20/#21, mergeado pero nunca publicado porque el
+    # script solo miraba *.yml). En vez de fallar en silencio, esto corta el
+    # build con un error bien visible en el log de GitHub Actions.
+    known_ext = {".yml", ".yaml"}
+    unmatched = [f for f in os.listdir(CONTENT)
+                 if not f.startswith(".") and os.path.splitext(f)[1].lower() not in known_ext]
+    if unmatched:
+        print("ERROR: archivos en content/biblioteca/ con extension no reconocida (no se van a publicar):")
+        for f in sorted(unmatched):
+            print("  - %s" % f)
+        return 1
 
     written = set()
     for b in books:
@@ -223,6 +260,9 @@ def main():
     i = tpl.index(MARK_A) + len(MARK_A)
     j = tpl.index(MARK_B)
     new_tpl = tpl[:i] + cards_block(books) + tpl[j:]
+    ii = new_tpl.index(INDEX_MARK_A) + len(INDEX_MARK_A)
+    jj = new_tpl.index(INDEX_MARK_B)
+    new_tpl = new_tpl[:ii] + index_panel_block(books) + new_tpl[jj:]
     if new_tpl != tpl:
         wr(TEMPLATE, new_tpl)
         print("  lecturas-para-el-uruguay.html: grilla actualizada (%d libros)" % len(books))

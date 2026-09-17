@@ -359,6 +359,9 @@
   /* ---------- Sumarse ---------- */
   .prose-block { max-width: var(--measure); display: flex; flex-direction: column; gap: 1.15rem; color: var(--ink-soft); }
   .contact-lines a { font-family: "Archivo", sans-serif; font-weight: 600; letter-spacing: 0.01em; }
+  .sumate-telegram__link { display: inline-flex; margin-top: 0.4rem; transition: transform .15s ease; }
+  .sumate-telegram__link:hover { transform: translateY(-2px); }
+  .sumate-telegram__link .ic { width: 27px; height: 27px; display: block; }
   /* ---------- Redes sociales (pie) ---------- */
   .footer-social { margin-top: 2.5rem; display: flex; align-items: center; gap: 1.05rem; flex-wrap: wrap; }
   .footer-social__label { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; color: #E7C978; }
@@ -616,6 +619,12 @@
         <p class="contact-lines">
           <span data-cms="sumate-contact-label">Escríbenos a nuestro correo electrónico:</span><br />
           <a data-cms="contact-email-sumate" href="mailto:resurgirnacionaluruguay@gmail.com">resurgirnacionaluruguay@gmail.com</a> <span class="copy-hint">(clic para copiar)</span>
+        </p>
+        <p class="contact-lines">
+          <span data-cms="sumate-telegram-label">Nuestro canal de Telegram</span><br />
+          <a class="sumate-telegram__link" data-cms="sumate-telegram-url" href="https://t.me/resurgirnacionaluruguay" target="_blank" rel="noopener" aria-label="Canal de Telegram de Resurgir Nacional">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-telegram" /></svg>
+          </a>
         </p>
       </div>
     </div>
