@@ -22,6 +22,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts")
 EMBLEM = os.path.join(ROOT, "favicon-192.png")
 BACKGROUND = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "fondo-minia.jpg")
+BACKGROUND_BIBLIOTECA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "fondo-biblioteca.jpg")
 
 W, H = 1200, 630
 PAD = 72
@@ -109,18 +110,18 @@ def _left_scrim(w, h, color=(13, 32, 62), start_alpha=232, end_alpha=10):
     return row.resize((w, h))
 
 
-def _background(w, h):
-    if os.path.exists(BACKGROUND):
-        bg = _cover(Image.open(BACKGROUND).convert("RGB"), w, h).convert("RGBA")
+def _background(w, h, background=BACKGROUND):
+    if background and os.path.exists(background):
+        bg = _cover(Image.open(background).convert("RGB"), w, h).convert("RGBA")
     else:
         bg = _vertical_gradient(w, h, [(0.0, NAVY_TOP), (0.5, NAVY_MID), (1.0, NAVY_BOTTOM)]).convert("RGBA")
     bg.alpha_composite(_left_scrim(w, h))
     return bg
 
 
-def make_og_image(kicker, title, byline, out_path):
+def make_og_image(kicker, title, byline, out_path, background=BACKGROUND):
     """kicker: p.ej. 'Formacion . Articulo'. title/byline: texto plano."""
-    img = _background(W, H)
+    img = _background(W, H, background)
 
     draw = ImageDraw.Draw(img)
 

@@ -94,7 +94,8 @@ def write_og_image(b):
     """Genera og/libro-<slug>.png con el titulo real del libro (si cambio)."""
     out = os.path.join(OG_DIR, og_name(b["slug"]))
     tmp = out + ".tmp"
-    og_image.make_og_image("Biblioteca · Libro", b["title"], meta_line(b), tmp)
+    og_image.make_og_image("Biblioteca · Libro", b["title"], meta_line(b), tmp,
+                            background=og_image.BACKGROUND_BIBLIOTECA)
     with open(_lp(tmp), "rb") as f:
         new = f.read()
     old = None
