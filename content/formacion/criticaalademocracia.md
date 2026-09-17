@@ -12,7 +12,7 @@ draft: false
 
 _(Publicado originalmente el 16 de agosto de 2020.)_
 
-**_“La democracia es un dogma” (Dr. Justino Jiménez de Aréchaga)_                                            
+> _“La democracia es un dogma” (Dr. Justino Jiménez de Aréchaga)_                                            
 
 El viernes 9 de noviembre del 2018 fue publicada una encuesta en el diario “El Observador” en la que se denunciaba que sólo el 61% de los orientales apoya la democracia, lo cual representa una caída del 9% respecto del año anterior, y la cifra más baja desde que la encuesta se lleva a cabo (año 1995).
 
@@ -64,8 +64,7 @@ La representación en base a partidos políticos conspira, de consuno, contra el
 
 Vale atender, a ese respecto, al testimonio del estadista portugués Antonio de Oliveira Salazar, quien gobernó su país entre 1932 y 1968 bajo una “atmósfera de milagro”, según las palabras del Papa Pío XII:
 
-> _“Soy profundamente antiparlamentario, porque detesto los discursos hueros, la verborragia, las interpelaciones vistosas y vacías, el halagar las pasiones, no en torno a una gran idea, sino de futilidades, de vanidades, de naderías, desde el punto del interés nacional […] No nos podemos permitir el lujo de dejar reinar de nuevo entre nosotros la división y la discordia, y de consentir a las luchas partidarias […] El espíritu de partido corrompe y envilece el poder, deforma la visión de los problemas, sacrifica el orden natural de las soluciones, se sobrepone al interés nacional, dificulta –cuando no se opone completamente- la utilización de los valores nacionales al servicio del bien común […] [En síntesis] la Nación tiende instintivamente a la unidad; los partidos, a la división.”_[_[4]_](file:///C:/Users/bruno/Desktop/REVISTA%20VERDAD/JUICIO%20SOBRE%20LA%20DEMOCRACIA%20II.docx#_ftn4)
-
+> “Soy profundamente antiparlamentario, porque detesto los discursos hueros, la verborragia, las interpelaciones vistosas y vacías, el halagar las pasiones, no en torno a una gran idea, sino de futilidades, de vanidades, de naderías, desde el punto del interés nacional …] No nos podemos permitir el lujo de dejar reinar de nuevo entre nosotros la división y la discordia, y de consentir a las luchas partidarias […] El espíritu de partido corrompe y envilece el poder, deforma la visión de los problemas, sacrifica el orden natural de las soluciones, se sobrepone al interés nacional, dificulta –cuando no se opone completamente- la utilización de los valores nacionales al servicio del bien común […] [En síntesis] la Nación tiende instintivamente a la unidad; los partidos, a la división.”_[_[4]_
 
 #### **_Conclusión_**
 
