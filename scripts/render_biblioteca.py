@@ -167,12 +167,13 @@ def cards_block(books):
         return ""
     rows = []
     for b in books:
+        search_text = "%s %s" % (b["title"], b.get("author") or "")
         rows.append(
-            '        <a class="act" href="%s.html">\n'
+            '        <a class="act" href="%s.html" data-s="%s">\n'
             '          <h3>%s</h3>\n'
             '          <p>%s</p>\n'
             '          <span class="act__meta">%s</span>\n'
-            '        </a>' % (b["slug"], esc(b["title"]), esc(b.get("summary", "")), esc(meta_line(b)))
+            '        </a>' % (b["slug"], esc(search_text), esc(b["title"]), esc(b.get("summary", "")), esc(meta_line(b)))
         )
     return '\n      <div class="acts acts--articles">\n' + "\n".join(rows) + "\n      </div>\n      "
 
