@@ -35,6 +35,8 @@ SITE = "https://resurgirnacionaluy.org/"
 STATIC_PAGES = ["", "vision.html", "formacion.html", "SagradoCorazondeJesus.html"]
 MARK_A = "<!-- ARTICLES:START -->"
 MARK_B = "<!-- ARTICLES:END -->"
+INDEX_MARK_A = "<!-- PUBINDEX:START -->"
+INDEX_MARK_B = "<!-- PUBINDEX:END -->"
 GEN_MARK = "<!-- generated:formacion-article -->"
 RESERVED = {"index", "vision", "formacion", "sagradocorazondejesus", "admin", "404",
             "readme", "articulos"}
@@ -285,6 +287,23 @@ def list_block(arts):
     return block + "      "
 
 
+def index_panel_block(arts):
+    """Panel esmerilado a la izquierda de "Publicaciones": índice numerado de
+    todos los artículos (el más reciente queda marcado como activo)."""
+    if not arts:
+        return ""
+    rows = []
+    for i, a in enumerate(arts, start=1):
+        cls = "pub-index__row pub-index__row--active" if i == 1 else "pub-index__row"
+        rows.append(
+            '          <a class="%s" href="%s.html">\n'
+            '            <span class="pub-index__num">%02d</span>\n'
+            '            <span class="pub-index__title">%s</span>\n'
+            '          </a>' % (cls, a["slug"], i, esc(a["title"]))
+        )
+    return "\n" + "\n".join(rows) + "\n          "
+
+
 INDEX_JS = """      <script>
         (function () {
           var box = document.querySelector('.art-search');
@@ -512,6 +531,9 @@ def main():
     if MARK_A not in tpl or MARK_B not in tpl:
         print("ERROR: faltan los marcadores ARTICLES en formacion.html")
         return 1
+    if INDEX_MARK_A not in tpl or INDEX_MARK_B not in tpl:
+        print("ERROR: faltan los marcadores PUBINDEX en formacion.html")
+        return 1
     arts = load_articles()
 
     # write / refresh each article page
@@ -561,6 +583,10 @@ def main():
     i = tpl.index(MARK_A) + len(MARK_A)
     j = tpl.index(MARK_B)
     new_tpl = tpl[:i] + list_block(arts) + tpl[j:]
+    # rewrite the index-panel region inside formacion.html
+    ii = new_tpl.index(INDEX_MARK_A) + len(INDEX_MARK_A)
+    jj = new_tpl.index(INDEX_MARK_B)
+    new_tpl = new_tpl[:ii] + index_panel_block(arts) + new_tpl[jj:]
     if new_tpl != tpl:
         wr(TEMPLATE, new_tpl)
         print("  formacion.html: lista actualizada (%d articulos)" % len(arts))

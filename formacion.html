@@ -256,6 +256,25 @@
   .pub-search button { flex: none; display: grid; place-items: center; width: 2.35rem; height: 2.35rem; padding: 0; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink-soft); cursor: pointer; transition: color .15s ease, border-color .15s ease; }
   .pub-search button:hover { color: var(--blue); border-color: var(--gold-line); }
   .pub-search button svg { width: 1.05rem; height: 1.05rem; fill: currentColor; }
+  /* Índice numerado (panel esmerilado) + lista de artículos */
+  .pub-layout { display: grid; grid-template-columns: 13rem minmax(0, 1fr); gap: 2.25rem; align-items: start; margin-top: 1.8rem; }
+  .pub-index {
+    position: sticky; top: calc(var(--header-h) + 1rem);
+    padding: 1.2rem 1.1rem;
+    background: color-mix(in srgb, var(--surface) 58%, transparent);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--line); border-radius: 10px;
+  }
+  .pub-index__label { display: block; font-family: "Archivo", sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); margin-bottom: 0.85rem; }
+  .pub-index__row { display: flex; align-items: baseline; gap: 0.7rem; padding: 0.56rem 0.6rem; margin-inline: -0.6rem; border-left: 2px solid transparent; border-radius: 4px; text-decoration: none; transition: background .15s ease, border-color .15s ease; }
+  .pub-index__row:hover { background: color-mix(in srgb, var(--line) 45%, transparent); }
+  .pub-index__num { flex: none; font-family: "Archivo", sans-serif; font-size: 0.76rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+  .pub-index__title { font-family: "Archivo", sans-serif; font-size: 0.85rem; line-height: 1.35; color: var(--ink-soft); transition: color .15s ease; }
+  .pub-index__row:hover .pub-index__title { color: var(--ink); }
+  .pub-index__row--active { border-left-color: var(--gold-line); background: color-mix(in srgb, var(--gold-line) 12%, transparent); }
+  .pub-index__row--active .pub-index__title { color: var(--ink); font-weight: 600; }
+  .pub-index__row--active .pub-index__num { color: var(--gold-text); }
+  @media (max-width: 820px) { .pub-layout { grid-template-columns: 1fr; } .pub-index { position: static; } }
   @media (max-width: 560px) { .pub-head { align-items: stretch; } .pub-search { max-width: none; } }
   .art-nores { color: var(--ink-soft); font-style: italic; margin-top: 0.6rem; }
   .art-month { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); margin: 1.9rem 0 0; scroll-margin-top: calc(var(--header-h) + 1.5rem); }
@@ -354,7 +373,78 @@
           </button>
         </form>
       </div>
-      <!-- ARTICLES:START -->
+      <div class="pub-layout">
+        <aside class="pub-index" aria-label="Índice de artículos">
+          <span class="pub-index__label">Índice</span>
+          <!-- PUBINDEX:START -->
+          <a class="pub-index__row pub-index__row--active" href="fascismoenuruguay.html">
+            <span class="pub-index__num">01</span>
+            <span class="pub-index__title">Tercera Posición para el Uruguay del siglo XXI</span>
+          </a>
+          <a class="pub-index__row" href="fundamentospoliticos.html">
+            <span class="pub-index__num">02</span>
+            <span class="pub-index__title">Fundamentos de Política</span>
+          </a>
+          <a class="pub-index__row" href="sobreespiritudelfascismo.html">
+            <span class="pub-index__num">03</span>
+            <span class="pub-index__title">La ideología fascista y el mundo académico.</span>
+          </a>
+          <a class="pub-index__row" href="sobrestalinyhitler.html">
+            <span class="pub-index__num">04</span>
+            <span class="pub-index__title">Hitler, Stalin y la segunda guerra mundial...</span>
+          </a>
+          <a class="pub-index__row" href="8483e472e2a2.html">
+            <span class="pub-index__num">05</span>
+            <span class="pub-index__title">Sobre la inmigración</span>
+          </a>
+          <a class="pub-index__row" href="hegemoniaculturaluruguay.html">
+            <span class="pub-index__num">06</span>
+            <span class="pub-index__title">Hegemonía cultural vs revolución por las armas.</span>
+          </a>
+          <a class="pub-index__row" href="revisionismohistoricouruguay.html">
+            <span class="pub-index__num">07</span>
+            <span class="pub-index__title">Sobre la Segunda Guerra Mundial...</span>
+          </a>
+          <a class="pub-index__row" href="izquierdayderechaenuruguay.html">
+            <span class="pub-index__num">08</span>
+            <span class="pub-index__title">Más allá de la izquierda y la derecha.</span>
+          </a>
+          <a class="pub-index__row" href="gabrielterrarevoluciondemarzo.html">
+            <span class="pub-index__num">09</span>
+            <span class="pub-index__title">Gabriel Terra: Jefe de la Revolución de Marzo.</span>
+          </a>
+          <a class="pub-index__row" href="elabortoenuruguay.html">
+            <span class="pub-index__num">10</span>
+            <span class="pub-index__title">Aborto, el grito silenciado del Uruguay.</span>
+          </a>
+          <a class="pub-index__row" href="patriotismoenuruguay.html">
+            <span class="pub-index__num">11</span>
+            <span class="pub-index__title">Resignificación de los valores patrióticos.</span>
+          </a>
+          <a class="pub-index__row" href="terceraposicionenuruguay.html">
+            <span class="pub-index__num">12</span>
+            <span class="pub-index__title">Fascismo Oriental.</span>
+          </a>
+          <a class="pub-index__row" href="laiglesiacatolicaylaeducacionuruguaya.html">
+            <span class="pub-index__num">13</span>
+            <span class="pub-index__title">La Iglesia Católica y la educación uruguaya.</span>
+          </a>
+          <a class="pub-index__row" href="democraciaenuruguay.html">
+            <span class="pub-index__num">14</span>
+            <span class="pub-index__title">Hombres de voto.</span>
+          </a>
+          <a class="pub-index__row" href="economiauruguay2026.html">
+            <span class="pub-index__num">15</span>
+            <span class="pub-index__title">La prostitución de la economía.</span>
+          </a>
+          <a class="pub-index__row" href="elpotencialdeuruguay.html">
+            <span class="pub-index__num">16</span>
+            <span class="pub-index__title">Nuestro potencial nacional.</span>
+          </a>
+          <!-- PUBINDEX:END -->
+        </aside>
+        <div class="pub-main">
+          <!-- ARTICLES:START -->
       <div class="acts acts--articles">
         <a class="act" href="fascismoenuruguay.html">
           <h3>Tercera Posición para el Uruguay del siglo XXI</h3>
@@ -389,18 +479,8 @@
       </div>
       <p class="acts__more"><a class="btn btn--rounded" href="articulos.html">Ver todos los artículos (16)&nbsp;→</a></p>
       <!-- ARTICLES:END -->
-    </section>
-
-    <section>
-      <span class="label">También en X</span>
-      <h2>Artículos en X</h2>
-      <a class="pub-card" data-cms="x-post-url" href="https://x.com/ResurgirUy/status/2097353476409815118" target="_blank" rel="noopener">
-        <span class="pub-card__kicker">Último <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-x" /></svg></span>
-        <span class="pub-card__title" data-cms="x-post-title">Sobre la inmigración en el Uruguay</span>
-        <span class="pub-card__excerpt" data-cms="x-post-excerpt">«La nación no es una simple suma de individuos. Si no existe el sentimiento de preservación, el Uruguay dejará de ser tal.»</span>
-        <span class="pub-card__cta">Leer en X →</span>
-      </a>
-      <p style="margin-top:1.4rem"><a class="btn btn--rounded" href="https://x.com/ResurgirUy/articles" target="_blank" rel="noopener">Ver los artículos publicados en X →</a></p>
+        </div>
+      </div>
     </section>
 
     <section class="write-cta">
