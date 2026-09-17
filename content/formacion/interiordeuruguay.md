@@ -50,5 +50,4 @@ Paralelamente, la emblemática solidaridad campesina —aquella que movilizaba a
 
 El interior rural y remoto de Uruguay representa un espacio de enorme valor identitario, ecológico y humano que desborda las simplificaciones teñidas de prejuicio urbano. Su subsistencia depende de un delicado equilibrio entre la preservación de un estilo de vida sustentado en el trabajo noble y la tranquilidad, y la capacidad de amortiguar transformaciones económicas estructurales como la extranjerización territorial. Reconocer la complejidad del campo uruguayo, valorando tanto su belleza y serenidad como sus profundas desigualdades y pérdidas comunitarias, resulta indispensable para integrar al país en toda su riqueza, garantizando que el medio rural no quede reducido a un simple insumo productivo deshabitado.
 
-
 -José Otaiza. 16 de septiembre de 2026.
