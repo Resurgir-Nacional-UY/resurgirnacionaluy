@@ -189,6 +189,7 @@
   .copy-toast.is-on { opacity: 1; transform: translateX(-50%) translateY(0); }
   .nav-cross { display: inline-block; width: auto; height: 0.95em; margin-left: 0.42em; vertical-align: -0.06em; }
   .doc h1 { font-size: clamp(2.1rem, 1.7rem + 2vw, 3.2rem); font-weight: 600; letter-spacing: -0.015em; max-width: 18ch; margin-bottom: 0.35rem; }
+  h2[data-cms="video-title-h2"] { max-width: none; white-space: nowrap; font-size: clamp(1.05rem, 4.5vw, var(--step-2)); }
   .doc-lead { color: var(--ink-soft); font-size: var(--step-1); margin-bottom: 0.6rem; }
   .yt-lite { position: relative; margin-top: 1.6rem; aspect-ratio: 16 / 9; max-width: 760px; border-radius: 3px; overflow: hidden; background: #000; cursor: pointer; }
   .yt-lite__thumb { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -345,7 +346,6 @@
     </section>
 
     <section>
-      <span class="label">Video</span>
       <h2 data-cms="video-title-h2">CONOCE RESURGIR NACIONAL</h2>
       <div class="yt-lite" data-id="dDm-5lMpOsk" data-title="CONOCE RESURGIR NACIONAL" data-cms="video-title-attr">
         <img class="yt-lite__thumb" src="formacion-vid.jpg" alt="" loading="lazy" />
