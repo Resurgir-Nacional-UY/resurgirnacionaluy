@@ -39,5 +39,11 @@ jobs:
             echo "Sin cambios que publicar."
           else
             git commit -m "Biblioteca: regenerar libros [skip ci]"
+            for i in 1 2 3 4 5; do
+              git push && exit 0
+              git fetch origin main
+              git rebase origin/main
+              sleep $((RANDOM % 5 + 1))
+            done
             git push
           fi
