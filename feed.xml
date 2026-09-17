@@ -6,7 +6,14 @@
   <atom:link href="https://resurgirnacionaluy.org/feed.xml" rel="self" type="application/rss+xml" />
   <description>Artículos de formación del movimiento Resurgir Nacional.</description>
   <language>es-uy</language>
-  <lastBuildDate>Tue, 15 Sep 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 17 Sep 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Sobre el interior del Uruguay</title>
+    <link>https://resurgirnacionaluy.org/interiordeuruguay.html</link>
+    <guid isPermaLink="true">https://resurgirnacionaluy.org/interiordeuruguay.html</guid>
+    <pubDate>Thu, 17 Sep 2026 12:00:00 +0000</pubDate>
+    <description>Sobre el interior del Uruguay en profundidad y detalle.</description>
+  </item>
   <item>
     <title>Tercera Posición para el Uruguay del siglo XXI</title>
     <link>https://resurgirnacionaluy.org/fascismo-en-uruguay.html</link>
