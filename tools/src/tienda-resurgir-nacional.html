@@ -1,15 +1,15 @@
-<title>Visión de Resurgir Nacional — movimiento nacionalista uruguayo</title>
-<meta name="description" content="Visión, valores y estructura de acción del movimiento Resurgir Nacional (Uruguay)." />
-<link rel="canonical" href="@@SITE@@ideario-y-valores-rn.html" />
-<link rel="alternate" hreflang="es-uy" href="@@SITE@@ideario-y-valores-rn.html" />
-<link rel="alternate" hreflang="x-default" href="@@SITE@@ideario-y-valores-rn.html" />
-<meta property="og:type" content="article" />
+<title>Tienda — Resurgir Nacional</title>
+<meta name="description" content="Tienda — Resurgir Nacional: merchandising y libros del movimiento, pago vía PayPal." />
+<link rel="canonical" href="@@SITE@@tienda-resurgir-nacional.html" />
+<link rel="alternate" hreflang="es-uy" href="@@SITE@@tienda-resurgir-nacional.html" />
+<link rel="alternate" hreflang="x-default" href="@@SITE@@tienda-resurgir-nacional.html" />
+<meta property="og:type" content="website" />
 <meta property="og:site_name" content="Resurgir Nacional" />
 <meta property="og:locale" content="es_UY" />
-<meta property="og:title" content="Visión de Resurgir Nacional" />
-<meta property="og:description" content="Visión, valores y estructura de acción del movimiento nacionalista uruguayo." />
-<meta property="og:url" content="@@SITE@@ideario-y-valores-rn.html" />
-<meta property="og:image" content="@@SITE@@og-image-vision.jpg" />
+<meta property="og:title" content="Tienda — Resurgir Nacional" />
+<meta property="og:description" content="Merchandising y libros del movimiento, pago vía PayPal." />
+<meta property="og:url" content="@@SITE@@tienda-resurgir-nacional.html" />
+<meta property="og:image" content="@@SITE@@og-image.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -73,63 +73,27 @@
   .nav a.btn, .nav a.btn:hover { color: #fff; }
   .btn--outline-light { background: transparent; border-color: rgba(255,255,255,0.55); color: #fff; }
   .btn--outline-light:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
-
-  /* Document hero */
-  .doc-hero { position: relative; overflow: hidden; background: radial-gradient(120% 130% at 50% 0%, #24579C 0%, #1B3F73 45%, #14315C 100%); color: #F4F2EA; isolation: isolate; }
-  .doc-hero__flag {
-    position: absolute; inset: 0; width: 100%; height: 100%;
-    object-fit: cover; object-position: center;
-    transform: scale(1.08); z-index: -2; pointer-events: none;
-    object-position: 68% center;
-    filter: saturate(0.8) blur(3px);
-    -webkit-mask: radial-gradient(140% 135% at 50% 36%, #000 22%, transparent 94%);
-    mask: radial-gradient(140% 135% at 50% 36%, #000 22%, transparent 94%);
-  }
-  .doc-hero__scrim {
-    position: absolute; inset: 0; z-index: -1; pointer-events: none;
-    background:
-      linear-gradient(92deg, rgba(11,28,55,0.94) 0%, rgba(14,35,68,0.86) 55%, rgba(12,30,58,0.90) 100%),
-      radial-gradient(65% 85% at 64% 46%, rgba(9,22,44,0.62) 0%, rgba(9,22,44,0) 70%);
-  }
-  .doc-hero .wrap { padding-block: clamp(3rem, 7vw, 5rem); max-width: 900px; }
-  .doc-hero .label { color: #E7C978; }
-  .doc-hero h1 { font-size: var(--step-3); font-weight: 600; letter-spacing: -0.015em; margin: 1.2rem 0 0.6rem; }
-  .doc-hero__sub { font-size: var(--step-1); color: #E7E3D6; }
+  .btn--rounded { border-radius: 8px; }
+  .btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none !important; box-shadow: none !important; }
 
   /* Document body */
-  .doc { max-width: 900px; margin-inline: auto; padding-inline: var(--gutter); padding-block: clamp(3rem, 7vw, 5rem); }
+  .doc { max-width: 1120px; margin-inline: auto; padding-inline: var(--gutter); padding-block: clamp(3rem, 7vw, 5rem); }
   .doc > section + section { margin-top: clamp(3rem, 7vw, 4.5rem); }
   .doc .label { color: var(--gold-text); display: block; margin-bottom: 0.8rem; }
   .doc h2 { font-size: var(--step-2); max-width: 20ch; }
   .prose { max-width: var(--measure); margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.15rem; color: var(--ink); }
   .prose p { color: var(--ink); }
   .prose .muted { color: var(--ink-soft); font-size: 0.95rem; }
-
-  .pullquote { max-width: 30ch; margin: 2rem 0; padding-left: 1.4rem; border-left: 3px solid var(--gold-line); font-family: "Fraunces", serif; font-size: var(--step-1); line-height: 1.3; color: var(--ink); }
-
-  .values { margin-top: 2rem; display: flex; flex-direction: column; }
-  .value { display: grid; grid-template-columns: 3.2rem 1fr; gap: 1.4rem; padding: 1.4rem 0; border-top: 1px solid var(--line); align-items: start; }
-  .value:last-child { border-bottom: 1px solid var(--line); }
-  .value__n { font-family: "Fraunces", serif; font-size: 1.5rem; color: var(--gold-text); line-height: 1; font-variant-numeric: tabular-nums; }
-  .value h3 { font-size: var(--step-1); margin-bottom: 0.4rem; }
-  .value p { color: var(--ink-soft); max-width: 62ch; }
-  @media (max-width: 560px) { .value { grid-template-columns: 1fr; gap: 0.4rem; } }
-
-  .facts { margin-top: 1.8rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 2px solid var(--ink); }
-  .fact { padding: 1.2rem 1.2rem 1.2rem 0; border-bottom: 1px solid var(--line); }
-  .fact:not(:first-child) { padding-left: 1.4rem; border-left: 1px solid var(--line); }
-  .fact b { display: block; font-family: "Archivo", sans-serif; font-weight: 700; font-size: 1.35rem; color: var(--blue); }
-  .fact span { font-size: 0.85rem; color: var(--ink-soft); }
-  @media (max-width: 620px) { .facts { grid-template-columns: 1fr; } .fact, .fact:not(:first-child) { padding: 1rem 0; border-left: 0; } }
-
-  .acts { margin-top: 2rem; display: flex; flex-direction: column; }
-  .act { padding: 1.4rem 0; border-top: 1px solid var(--line); max-width: var(--measure); }
-  .act:last-child { border-bottom: 1px solid var(--line); }
-  .act h3 { font-size: 1.2rem; margin-bottom: 0.45rem; }
-  .act p { color: var(--ink-soft); }
-
-  .contact { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.8rem; }
-  .contact a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 1.05rem; letter-spacing: 0.01em; }
+  .doc h1 { font-size: clamp(2.1rem, 1.7rem + 2vw, 3.2rem); font-weight: 600; letter-spacing: -0.015em; max-width: 18ch; margin-bottom: 0.35rem; }
+  .doc-lead { color: var(--ink-soft); font-size: var(--step-1); margin-bottom: 0.6rem; }
+  .share-btn { display: inline-flex; align-items: center; gap: 0.45rem; margin-top: 0.9rem; padding: 0.5rem 0.95rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink-soft); font: inherit; font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; transition: color .15s ease, border-color .15s ease; }
+  .share-btn:hover, .share-btn:focus-visible { color: var(--blue); border-color: var(--gold-line); }
+  .share-btn svg { width: 1rem; height: 1rem; fill: currentColor; }
+  .write-cta { max-width: 40rem; padding: 1.4rem 1.5rem; border: 1px solid var(--line); border-left: 3px solid var(--gold-line); border-radius: 4px; background: var(--surface); }
+  .write-cta h2 { font-size: var(--step-1); max-width: none; margin-top: 0.1rem; }
+  .write-cta p { margin-top: 0.6rem; color: var(--ink-soft); max-width: 52ch; }
+  .write-cta__mail { margin-top: 0.95rem; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
   /* Footer */
   .site-footer { background: #14315C; color: #FFFFFF; padding-block: 3.5rem; position: relative; overflow: hidden; isolation: isolate; }
@@ -147,13 +111,11 @@
   .footer-links a:hover { color: #fff; }
   .footer-legal { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.15); font-size: 0.95rem; line-height: 1.7; color: #FFFFFF; white-space: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .draft-badge { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); border: 1px solid var(--gold-line); padding: 0.15rem 0.45rem; border-radius: 2px; white-space: nowrap; }
-  /* ---------- Redes sociales (pie) ---------- */
   .footer-social { margin-top: 2.5rem; display: flex; align-items: center; gap: 1.05rem; flex-wrap: wrap; }
   .footer-social__label { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; color: #E7C978; }
   .footer-social a { color: #FFFFFF; display: inline-flex; }
   .footer-social a:hover { color: #fff; }
   .footer-social .ic { width: 25px; height: 25px; display: block; }
-  /* ---------- Movimiento ---------- */
   .nav a, .footer-links a { position: relative; }
   .nav a::after, .footer-links a::after {
     content: ""; position: absolute; left: 0; bottom: -1px; width: 100%; height: 2px;
@@ -170,32 +132,53 @@
   .footer-social a:hover { transform: translateY(-3px); }
   .site-header { transition: box-shadow .25s ease; }
   .site-header.is-scrolled { box-shadow: 0 12px 30px -14px rgba(0,0,0,0.4); }
-  .vlist li, .value, .act, .tier { transition: color .2s ease, background .2s ease; }
-  .value:hover, .act:hover { background: color-mix(in srgb, var(--gold-line) 8%, transparent); }
-  .vlist li:hover { color: var(--ink); }
-
-  @media (prefers-reduced-motion: no-preference) {
-    html.anim .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s cubic-bezier(.2,.6,.2,1), transform .7s cubic-bezier(.2,.6,.2,1); }
-    html.anim .reveal.in { opacity: 1; transform: none; }
-    html.anim .reveal-stagger > * { opacity: 0; transform: translateY(14px); transition: opacity .55s ease, transform .55s ease; }
-    html.anim .reveal-stagger.in > * { opacity: 1; transform: none; }
-    html.anim .reveal-stagger.in > *:nth-child(2) { transition-delay: .05s; }
-    html.anim .reveal-stagger.in > *:nth-child(3) { transition-delay: .10s; }
-    html.anim .reveal-stagger.in > *:nth-child(4) { transition-delay: .15s; }
-    html.anim .reveal-stagger.in > *:nth-child(5) { transition-delay: .20s; }
-    html.anim .reveal-stagger.in > *:nth-child(6) { transition-delay: .25s; }
-    html.anim .reveal-stagger.in > *:nth-child(7) { transition-delay: .29s; }
-    html.anim .reveal-stagger.in > *:nth-child(8) { transition-delay: .33s; }
-    html.anim .reveal-stagger.in > *:nth-child(9) { transition-delay: .37s; }
-    html.anim .reveal-stagger.in > *:nth-child(n+10) { transition-delay: .40s; }
-    .hero__flag, .doc-hero__flag { animation: rn-drift 40s ease-in-out infinite alternate; }
-  }
-  @keyframes rn-drift { from { transform: scale(1.08); } to { transform: scale(1.15) translate(-2%, -1.2%); } }
-  /* ---------- Copiar correo al hacer clic ---------- */
+  .nav-cross { display: inline-block; width: auto; height: 0.95em; margin-left: 0.42em; vertical-align: -0.06em; }
   a.mail-copy { cursor: pointer; }
   .copy-toast { position: fixed; left: 50%; bottom: 1.5rem; transform: translateX(-50%) translateY(0.5rem); background: #12151C; color: #F4F2EA; padding: 0.6rem 1.1rem; border-radius: 999px; font-family: "Archivo", system-ui, sans-serif; font-size: 0.82rem; letter-spacing: 0.02em; box-shadow: 0 10px 28px rgba(0,0,0,0.35); opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease; z-index: 9999; }
   .copy-toast.is-on { opacity: 1; transform: translateX(-50%) translateY(0); }
-  .nav-cross { display: inline-block; width: auto; height: 0.95em; margin-left: 0.42em; vertical-align: -0.06em; }
+
+  /* ---------- Tienda: grilla de productos ---------- */
+  .shop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.6rem; margin-top: 2rem; }
+  .shop-card { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); overflow: hidden; transition: border-color .2s ease, transform .2s ease; }
+  .shop-card:hover { border-color: var(--gold-line); transform: translateY(-2px); }
+  .shop-card__media { display: block; aspect-ratio: 1 / 1; background: var(--line); overflow: hidden; }
+  .shop-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .shop-card__body { padding: 1rem 1.1rem 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
+  .shop-card__kind { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-text); }
+  .shop-card__title { font-family: "Fraunces", serif; font-size: 1.1rem; line-height: 1.25; color: var(--ink); text-decoration: none; }
+  .shop-card__title:hover { color: var(--blue); }
+  .shop-card__price { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 1rem; color: var(--ink); margin-top: auto; }
+  .shop-card__variant { font: inherit; font-size: 0.85rem; padding: 0.4rem 0.5rem; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); }
+  .shop-add { align-self: stretch; justify-content: center; }
+
+  /* ---------- Tienda: carrito lateral ---------- */
+  .cart-toggle { position: fixed; right: clamp(1rem, 4vw, 2.2rem); bottom: clamp(1rem, 4vw, 2.2rem); z-index: 40; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.2rem; border-radius: 999px; border: 1px solid var(--gold-line); background: #14315C; color: #fff; font-family: "Archivo", sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; box-shadow: 0 10px 28px rgba(0,0,0,0.28); }
+  .cart-toggle svg { width: 1.1rem; height: 1.1rem; fill: currentColor; }
+  .cart-toggle__count { display: inline-grid; place-items: center; min-width: 1.35rem; height: 1.35rem; padding: 0 0.3rem; border-radius: 999px; background: var(--gold-line); color: #12151C; font-size: 0.72rem; }
+  .cart-backdrop { position: fixed; inset: 0; background: rgba(10, 12, 17, 0.55); z-index: 45; }
+  .cart-drawer { position: fixed; top: 0; right: 0; bottom: 0; width: min(92vw, 25%); min-width: 320px; max-width: 460px; background: var(--bg); color: var(--ink); z-index: 46; display: flex; flex-direction: column; box-shadow: -18px 0 40px rgba(0,0,0,0.25); }
+  .cart-drawer__head { display: flex; align-items: center; justify-content: space-between; padding: 1.3rem 1.4rem; border-bottom: 1px solid var(--line); }
+  .cart-drawer__head h2 { font-size: 1.3rem; }
+  .cart-close { border: 0; background: none; font-size: 1.6rem; line-height: 1; color: var(--ink-soft); cursor: pointer; padding: 0.2rem 0.4rem; }
+  .cart-close:hover { color: var(--ink); }
+  .cart-items { flex: 1; overflow-y: auto; padding: 1rem 1.4rem; display: flex; flex-direction: column; gap: 1rem; }
+  .cart-empty { padding: 1rem 1.4rem; color: var(--ink-soft); font-style: italic; }
+  .cart-item { display: grid; grid-template-columns: 3.2rem 1fr auto; gap: 0.8rem; align-items: start; }
+  .cart-item img { width: 3.2rem; height: 3.2rem; object-fit: cover; border-radius: 4px; background: var(--line); }
+  .cart-item__title { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.92rem; }
+  .cart-item__meta { font-size: 0.82rem; color: var(--ink-soft); margin-top: 0.2rem; }
+  .cart-item__qty { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.4rem; }
+  .cart-item__qty button { width: 1.6rem; height: 1.6rem; border: 1px solid var(--line); background: var(--surface); border-radius: 4px; cursor: pointer; font: inherit; line-height: 1; }
+  .cart-item__remove { border: 0; background: none; color: var(--ink-soft); font-size: 0.78rem; text-decoration: underline; cursor: pointer; padding: 0; justify-self: end; }
+  .cart-item__remove:hover { color: var(--ink); }
+  .cart-drawer__foot { border-top: 1px solid var(--line); padding: 1.1rem 1.4rem 1.4rem; display: flex; flex-direction: column; gap: 0.7rem; }
+  .cart-total { display: flex; justify-content: space-between; font-family: "Archivo", sans-serif; font-weight: 700; font-size: 1.05rem; }
+  .cart-note { font-size: 0.82rem; color: var(--ink-soft); }
+  .cart-status { font-size: 0.85rem; }
+  .cart-status--error { color: #b3261e; }
+  .cart-status--ok { color: #1d7a3d; }
+  #paypal-button-container { min-height: 2.75rem; }
+  #paypal-button-container:empty::before { content: "Cargando pago…"; font-size: 0.82rem; color: var(--ink-soft); }
 </style>
 
 <!-- Marcas de marca (emblema y bandera reales) y aspa decorativa -->
@@ -223,11 +206,11 @@
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="index.html#ideario" data-cms="nav-vision-1">Visión</a>
-      <a href="ideario-y-valores-rn.html" aria-current="page" data-cms="nav-ideario-1">Ideario</a>
+      <a href="ideario-y-valores-rn.html" data-cms="nav-ideario-1">Ideario</a>
       <a href="catolicismo-en-uruguay.html"><span data-cms="nav-fe-1">Fe</span><svg class="nav-cross" viewBox="0 0 404 564" aria-hidden="true"><use href="#ic-cross" /></svg></a>
       <a href="cultura-nacional-uruguaya.html" data-cms="nav-formacion-1">Formación</a>
       <a href="lecturas-para-el-uruguay.html" data-cms="nav-biblioteca-1">Biblioteca</a>
-      <a href="tienda-resurgir-nacional.html" data-cms="nav-tienda-1">Tienda</a>
+      <a href="tienda-resurgir-nacional.html" aria-current="page" data-cms="nav-tienda-1">Tienda</a>
       <a href="index.html#aporta" data-cms="nav-colabora-1">Colabora</a>
       <a class="btn" href="index.html#sumate" data-cms="nav-sumate-1">Súmate</a>
     </nav>
@@ -235,101 +218,47 @@
 </header>
 
 <main>
-  <section class="doc-hero">
-    <video class="doc-hero__flag" autoplay muted loop playsinline preload="auto" aria-hidden="true" poster="hero_poster.jpg">
-      <source src="hero.mp4" type="video/mp4" />
-    </video>
-    <div class="doc-hero__scrim" aria-hidden="true"></div>
-    <div class="wrap">
-      <p class="label">Documento del movimiento</p>
-      <h1>Visión de Resurgir Nacional</h1>
-      <p class="doc-hero__sub">Valores y estructura de acción.</p>
-    </div>
-  </section>
-
   <div class="doc">
     <section>
-      <span class="label">Visión y valores</span>
-      <h2 data-cms="sec1-heading">Una regeneración política, cultural y social</h2>
-      <div class="prose">
-        <p data-cms="sec1-p1">Buscamos la regeneración política, cultural y social del Uruguay, trabajando fuera del sistema de partidos y del dogma democrático. Para ello trabajamos en ser la voz y la acción que defiende el corazón de Uruguay: su gente, su fe, su tierra y sus tradiciones. Promovemos un nacionalismo virtuoso y los valores cristianos como la guía para un futuro digno y soberano. Queremos un país fuerte, donde Dios, la Patria y la Familia vuelvan a ser la base de la sociedad.</p>
-
-        <p class="pullquote" data-cms="sec1-pullquote">Queremos un país fuerte, donde Dios, la Patria y la Familia vuelvan a ser la base de la sociedad.</p>
-
-        <p data-cms="sec1-p2">Nos oponemos a las divisiones desgastadas de la lucha política de derechas e izquierdas. Nuestra Tercera Posición en Uruguay debe enfocarse en romper con el orden liberal, partidocrático y masónico que nos ha acompañado a lo largo de la historia. Y es acá donde se encuentra el enfoque principal del movimiento: la construcción de un orden nuevo, porque se ha llegado al punto en el cual las instituciones no son simplemente pervertidas, sino que son incapaces de generar algo diminutamente positivo como por lo menos solían hacer.</p>
-
-        <p data-cms="sec1-p3">El orden actual de las cosas, tanto social como política y económicamente, no soportará mucho más. Es cuestión de tiempo para que el país colapse, y la razón de ello es que, en vez de destinar esfuerzos en la construcción de un proyecto nacional, se ha seguido con la lucha partidocrática; se ha mantenido la discusión política en aquella falsa y dañina polarización de izquierdas y derechas que limita el debate político y manipula a la gente desesperada. En los últimos cuarenta años se ha visto una destrucción promovida desde la democracia liberal de nuestra economía, nuestra educación, nuestra seguridad y nuestra sociedad entera: de los pilares básicos de cualquier país. En definitiva se destruye, no por causas foráneas sino cercanas, la totalidad de la nación.</p>
-
-        <p data-cms="sec1-p4">¿Cuál es la situación nacional tras tantos años de palabrería democrática y liberal? La educación arruinada, la industria nacional destruida hasta casi su inexistencia, nuestra cultura convertida en un espectáculo babilónico, la partidocracia cada vez más dañina, los suicidios aumentando cada año, el empleo que ya no es sinónimo de estabilidad, la riqueza natural de nuestros suelos y ríos robada por agentes internacionales sin patria, la usura y la deuda que esclavizan a cada hombre y mujer. La natalidad cae en picada. Nuestro capital humano desaparece.</p>
-      </div>
+      <span class="label">Tienda</span>
+      <h1>Tienda</h1>
+      <p class="doc-lead" data-cms="tienda-lead">Merchandising y libros de Resurgir Nacional. Pago vía PayPal; el envío se coordina aparte.</p>
     </section>
 
     <section>
-      <span class="label">El horizonte</span>
-      <h2 data-cms="sec2-heading">Un Uruguay sano, virtuoso y unido</h2>
-      <div class="prose">
-        <p data-cms="sec2-p1">Resurgir Nacional sueña con un Uruguay sano, virtuoso y unido, donde cada ciudadano se sienta orgulloso de su identidad y de su patria. Un país que honra su verdadero legado cultural y que avanza hacia un futuro donde la familia, la fe y el trabajo sean sinónimos de esperanza y grandeza. Queremos ser un ejemplo de fortaleza y determinación, encendiendo la chispa del renacimiento cristiano y nacionalista en cada rincón de nuestra tierra.</p>
-        <p data-cms="sec2-p2">Buscamos, en definitiva, lo que ha hecho grande a los pueblos. Para ello, Resurgir Nacional decide seguir los siguientes valores.</p>
+      <div class="shop-grid">
+        <!-- PRODUCTS:START --><!-- PRODUCTS:END -->
       </div>
+      <p class="prose muted" style="margin-top:1.4rem" data-cms="tienda-shipping-note">El costo de envío (si corresponde) se coordina por correo después de la compra.</p>
     </section>
 
-    <section>
-      <span class="label">Nuestros valores</span>
-      <h2 data-cms="sec3-heading">Doce principios</h2>
-      <ol class="values">
-        <li class="value"><span class="value__n" aria-hidden="true">01</span><div><h3 data-cms="v1-title">Orgullo Nacional</h3><p data-cms="v1-body">Creemos en un Uruguay soberano, fuerte y decidido a proteger su identidad y su historia.</p></div></li>
-        <li class="value"><span class="value__n" aria-hidden="true">02</span><div><h3 data-cms="v2-title">Valores Cristianos</h3><p data-cms="v2-body">Nos guiamos por la luz de los valores cristianos, que nos inspiran a vivir con justicia y dignidad.</p></div></li>
-        <li class="value"><span class="value__n" aria-hidden="true">03</span><div><h3 data-cms="v3-title">Familia, pilar de la Nación</h3><p data-cms="v3-body">Defendemos la familia como el núcleo de nuestra sociedad y la base de un futuro próspero.</p></div></li>
-        <li class="value"><span class="value__n" aria-hidden="true">04</span><div><h3 data-cms="v4-title">Salud y fortaleza física</h3><p data-cms="v4-body">Promovemos una vida sana, con alimentación natural, fuerza física y vigor espiritual como cimientos de un pueblo invencible.</p></div></li>
-        <li class="value"><span class="value__n" aria-hidden="true">05</span><div><h3 data-cms="v5-title">Defensa de la tierra</h3><p data-cms="v5-body">Nuestra riqueza está en la tierra: es con ella donde nacen nuestras industrias madres. Protegemos la ganadería tradicional como símbolo de nuestra cultura y sustento de nuestra soberanía alimentaria.</p></div></li>
-        <li class="value"><span class="value__n" aria-hidden="true">06</span><div><h3 data-cms="v6-title">Resistencia al globalismo</h3><p data-cms="v6-body">Nos oponemos al globalismo, a la ideología de género y a la cultura degenerada que promueve la hipersexualización, la apología a la delincuencia y la descomposición moral, defendiendo nuestras tradiciones y valores nacionales.</p></div></li>
-        <li class="value"><span class="value__n" aria-hidden="true">07</span><div><h3 data-cms="v7-title">Unidad y solidaridad nacional</h3><p data-cms="v7-body">Creemos en el poder de la comunidad y en la colaboración para construir un Uruguay unido y solidario.</p></div></li>
-        <li class="value"><span class="value__n" aria-hidden="true">08</span><div><h3 data-cms="v8-title">Disciplina</h3><p data-cms="v8-body">Trabajamos con inteligencia, perseverancia y determinación, con voluntad, buscando gente que quiera aportar de verdad a Resurgir Nacional, siguiendo el ejemplo de quienes han sabido defender sus ideales.</p></div></li>
-        <li class="value"><span class="value__n" aria-hidden="true">09</span><div><h3 data-cms="v9-title">Preservación cultural</h3><p data-cms="v9-body">Resistimos con orgullo cualquier intento de borrar nuestras tradiciones y buscamos fortalecer el legado de nuestra identidad nacional.</p></div></li>
-        <li class="value"><span class="value__n" aria-hidden="true">10</span><div><h3 data-cms="v10-title">Anti-liberalismo</h3><p data-cms="v10-body">Nuestro movimiento condena y condenará siempre al liberalismo que provoca decadencia y enajenación a nuestra patria. Todo orden político debe estar subordinado a un orden superior, a Dios. El liberalismo destruye todos los sanos valores que buscamos preservar y fortalecer.</p></div></li>
-        <li class="value"><span class="value__n" aria-hidden="true">11</span><div><h3 data-cms="v11-title">Anti-marxismo</h3><p data-cms="v11-body">Nuestro movimiento condena y condenará al marxismo y su materialismo, profundamente dañinos para la prosperidad del Uruguay. El marxismo atenta contra nuestra fe y nuestra forma de ver el mundo, que es una concepción espiritual y trascendental.</p></div></li>
-        <li class="value"><span class="value__n" aria-hidden="true">12</span><div><h3 data-cms="v12-title">Anti-democratismo liberal</h3><p data-cms="v12-body">Nuestro movimiento ve claramente que el mal que padece nuestra patria se encuentra de raíz en el sistema político imperante. No hay futuro, desarrollo, prosperidad ni proyecto nacional posible con este sistema. La necesidad de un orden político auténtico y orgánico, subordinado al orden superior de la fe, es hoy más necesaria que nunca.</p></div></li>
-      </ol>
-    </section>
-
-    <section>
-      <span class="label">Estructura de acción</span>
-      <h2 data-cms="sec4-heading">Un espacio cultural, social y estratégico apartidario</h2>
-      <div class="prose">
-        <p data-cms="sec4-p1">Nuestra misión actual es crear un espacio cultural, social y estratégico apartidario. El objetivo ahora es ser un lugar de reflexión, militancia y planificación.</p>
-        <p data-cms="sec4-p2">Para sostener la estructura interna del movimiento se establece una cuota mensual de cada miembro de mínimo 70 pesos, y de 50 pesos para estudiantes o padres. El dinero recaudado se destina a las actividades de RN. La cuota es flexible según la situación económica de cada integrante: no pagarla no es motivo de expulsión ni impide el acceso al movimiento, pero el integrante debe aclarar su situación antes de ingresar.</p>
-        <p data-cms="sec4-p3">Para ingresar a Resurgir Nacional es necesario pasar por una entrevista virtual (Google Meet, Jitsi, Zoom o Discord) con una serie de preguntas de índole política, religiosa y cultural.</p>
-      </div>
-      <div class="facts">
-        <div class="fact"><b data-cms="f1-big">$ 70/mes</b><span data-cms="f1-label">Cuota general (mínimo)</span></div>
-        <div class="fact"><b data-cms="f2-big">$ 50/mes</b><span data-cms="f2-label">Estudiantes y padres</span></div>
-        <div class="fact"><b data-cms="f3-big">Entrevista</b><span data-cms="f3-label">Ingreso previa entrevista virtual</span></div>
-      </div>
-    </section>
-
-    <section>
-      <span class="label">Actividades</span>
-      <h2 data-cms="sec5-heading">Cómo trabajamos</h2>
-      <div class="acts">
-        <article class="act"><h3 data-cms="a1-title">Debates</h3><p data-cms="a1-body">Debates sobre temas políticos, sociales, económicos y culturales. Un espacio para discutir sin presiones externas, con análisis profundo.</p></article>
-        <article class="act"><h3 data-cms="a2-title">Propaganda</h3><p data-cms="a2-body">Jornadas de propaganda callejera con consignas ligadas a las problemáticas del país. Parte de lo recaudado por la cuota se destina a afiches, pegatinas, carteleras, grafitis, banderas y demás.</p></article>
-        <article class="act"><h3 data-cms="a3-title">Acciones sociales</h3><p data-cms="a3-body">Trabajos de carácter social sin ánimo de lucro: donaciones de ropa y alimento a iglesias, hospitales, policlínicas, zonas periféricas, orfanatos, familias necesitadas, personas sin techo y personas con discapacidad. Se destina parte de la cuota cuando es necesario.</p></article>
-        <article class="act"><h3 data-cms="a4-title">Redes sociales</h3><p data-cms="a4-body">Las redes y los medios modernos son fundamentales en la batalla cultural. Usamos TikTok, YouTube, Twitter, Instagram y Telegram para difundir públicamente nuestra visión y nuestro trabajo.</p></article>
-        <article class="act"><h3 data-cms="a5-title">Trabajo intelectual</h3><p data-cms="a5-body">El trabajo intelectual enriquece al movimiento y a la Tercera Posición. Difundimos textos de diversas temáticas, presentaciones, podcasts sobre actualidad, historia, política y filosofía, y entrevistas a personas de interés.</p></article>
-        <article class="act"><h3 data-cms="a6-title">Ejercicio espiritual</h3><p data-cms="a6-body">Resurgir Nacional tiene una base fuertemente católica. Compartimos invitaciones a misas y rosarios e incentivamos a asistir en grupo a las actividades católicas para cultivar la fe en comunidad. Cristianos de otras denominaciones, ateos y agnósticos pueden unirse y participar siempre que respeten la base religiosa del movimiento.</p></article>
-        <article class="act"><h3 data-cms="a7-title">Afiliación política</h3><p data-cms="a7-body">Votantes de CA, FA, PC, PN, IS y demás partidos pueden formar parte del movimiento. Se pide mantener separadas la pertenencia a Resurgir Nacional y la militancia partidaria individual.</p></article>
-      </div>
-    </section>
-
-    <section>
-      <span class="label">Contacto</span>
-      <h2>Escríbenos</h2>
-      <div class="contact">
-        <a href="mailto:resurgirnacionaluruguay@gmail.com">resurgirnacionaluruguay@gmail.com</a>
-      </div>
+    <section class="write-cta">
+      <span class="label">Consultas</span>
+      <h2>¿Tenés dudas sobre algún producto?</h2>
+      <p>Escribinos y te respondemos antes de que compres.</p>
+      <a class="mail-copy write-cta__mail btn btn--rounded" data-cms="contact-email-footer" href="mailto:resurgirnacionaluruguay@gmail.com?subject=Consulta%20sobre%20la%20tienda">resurgirnacionaluruguay@gmail.com →</a>
     </section>
   </div>
 </main>
+
+<button type="button" id="cart-toggle" class="cart-toggle" aria-label="Ver carrito" hidden>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h-2l-1 2v1h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 0 1.1.9 2 2 2h11v-2h-11.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7c.15-.29.15-.62 0-.9-.15-.29-.42-.46-.75-.46h-14.08l-.94-2zm.5 15c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2c1.1 0 2-.9 2-2s-.9-2-2-2zm9 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2c1.1 0 2-.9 2-2s-.9-2-2-2z"/></svg>
+  Carrito <span class="cart-toggle__count" id="cart-count">0</span>
+</button>
+<div id="cart-backdrop" class="cart-backdrop" hidden></div>
+<aside id="cart-drawer" class="cart-drawer" hidden aria-label="Carrito de compras">
+  <div class="cart-drawer__head">
+    <h2>Tu carrito</h2>
+    <button type="button" id="cart-close" class="cart-close" aria-label="Cerrar carrito">×</button>
+  </div>
+  <div id="cart-items" class="cart-items"></div>
+  <div class="cart-drawer__foot">
+    <div class="cart-total"><span>Total</span><span id="cart-total">US$ 0.00</span></div>
+    <p class="cart-note" data-cms="tienda-shipping-note-2">El costo de envío (si corresponde) se coordina por correo después de la compra.</p>
+    <p id="cart-status" class="cart-status" hidden></p>
+    <div id="paypal-button-container"></div>
+  </div>
+</aside>
 
 <footer class="site-footer">
   <video class="site-footer__video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"
@@ -348,11 +277,11 @@
       </div>
       <nav class="footer-links" aria-label="Pie">
         <a href="index.html#ideario" data-cms="nav-vision-2">Visión</a>
-        <a href="ideario-y-valores-rn.html" aria-current="page" data-cms="nav-ideario-2">Ideario</a>
+        <a href="ideario-y-valores-rn.html" data-cms="nav-ideario-2">Ideario</a>
         <a href="catolicismo-en-uruguay.html"><span data-cms="nav-fe-2">Fe</span><svg class="nav-cross" viewBox="0 0 404 564" aria-hidden="true"><use href="#ic-cross" /></svg></a>
         <a href="cultura-nacional-uruguaya.html" data-cms="nav-formacion-2">Formación</a>
         <a href="lecturas-para-el-uruguay.html" data-cms="nav-biblioteca-2">Biblioteca</a>
-        <a href="tienda-resurgir-nacional.html" data-cms="nav-tienda-2">Tienda</a>
+        <a href="tienda-resurgir-nacional.html" aria-current="page" data-cms="nav-tienda-2">Tienda</a>
         <a href="index.html#aporta" data-cms="nav-colabora-2">Colabora</a>
         <a href="index.html#sumate" data-cms="nav-sumate-2">Súmate</a>
       </nav>
@@ -373,7 +302,7 @@
 </footer>
 
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
 
   (function () {
     var header = document.querySelector('.site-header');
@@ -382,28 +311,6 @@
       onScroll();
       addEventListener('scroll', onScroll, { passive: true });
     }
-
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    document.documentElement.classList.add('anim');
-
-    var groups = '.vlist, .values, .acts, .facts, .tiers, .footer-social';
-    var singles = '.band__head, .give-online, .prose-block, .contact, .doc .prose, .footer-grid, .footer-legal';
-    var items = [];
-    [].forEach.call(document.querySelectorAll(groups), function (el) { el.classList.add('reveal-stagger'); items.push(el); });
-    [].forEach.call(document.querySelectorAll(singles), function (el) { el.classList.add('reveal'); items.push(el); });
-    if (!items.length) return;
-
-    var show = function (el) { el.classList.add('in'); };
-    var vh = window.innerHeight;
-    if (!('IntersectionObserver' in window)) { items.forEach(show); return; }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
-    }, { rootMargin: '0px 0px -8% 0px' });
-    items.forEach(function (el) {
-      if (el.getBoundingClientRect().top < vh * 0.94) show(el);
-      else io.observe(el);
-    });
-    setTimeout(function () { items.forEach(show); }, 1500);
   })();
   (function () {
     var MAIL = 'resurgirnacionaluruguay@gmail.com';
@@ -438,10 +345,245 @@
     });
   })();
   (function () {
-    var v = document.querySelector('.doc-hero__flag');
-    if (!v || !('playbackRate' in v)) return;
-    var set = function () { try { v.playbackRate = 0.6; } catch (e) {} };
-    set();
-    v.addEventListener('loadedmetadata', set);
+    var btns = document.querySelectorAll('.share-btn');
+    if (!btns.length) return;
+    var toast = document.createElement('div');
+    toast.className = 'copy-toast';
+    toast.setAttribute('role', 'status');
+    document.body.appendChild(toast);
+    var t;
+    function ping(msg) {
+      toast.textContent = msg;
+      toast.classList.add('is-on');
+      clearTimeout(t);
+      t = setTimeout(function () { toast.classList.remove('is-on'); }, 1600);
+    }
+    function fallbackCopy(str) {
+      var ta = document.createElement('textarea');
+      ta.value = str; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.top = '-1000px';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      ping('Enlace copiado');
+    }
+    function copyLink() {
+      var url = location.href;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(function () { ping('Enlace copiado'); }, function () { fallbackCopy(url); });
+      } else { fallbackCopy(url); }
+    }
+    [].forEach.call(btns, function (b) {
+      b.addEventListener('click', function () {
+        if (navigator.share) {
+          navigator.share({ title: document.title, url: location.href }).catch(function () {});
+        } else {
+          copyLink();
+        }
+      });
+    });
+  })();
+
+  /* ---------- Carrito de la tienda ---------- */
+  var PAYPAL_CLIENT_ID = '';
+  var TIENDA_API_BASE = '';
+  (function () {
+    var CART_KEY = 'rn_tienda_cart_v1';
+    var fmt = function (n) { return 'US$ ' + n.toFixed(2); };
+
+    function loadCart() {
+      try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; } catch (e) { return []; }
+    }
+    function saveCart(cart) {
+      try { localStorage.setItem(CART_KEY, JSON.stringify(cart)); } catch (e) {}
+    }
+    function cartKey(item) { return item.slug + '::' + (item.variant || ''); }
+
+    function addToCart(item) {
+      var cart = loadCart();
+      var existing = cart.find(function (i) { return cartKey(i) === cartKey(item); });
+      if (existing) { existing.qty += item.qty; }
+      else { cart.push(item); }
+      saveCart(cart);
+      renderCart();
+      openDrawer();
+    }
+    function removeFromCart(key) {
+      var cart = loadCart().filter(function (i) { return cartKey(i) !== key; });
+      saveCart(cart);
+      renderCart();
+    }
+    function changeQty(key, delta) {
+      var cart = loadCart();
+      var item = cart.find(function (i) { return cartKey(i) === key; });
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) cart = cart.filter(function (i) { return cartKey(i) !== key; });
+      saveCart(cart);
+      renderCart();
+    }
+
+    var toggle = document.getElementById('cart-toggle');
+    var drawer = document.getElementById('cart-drawer');
+    var backdrop = document.getElementById('cart-backdrop');
+    var closeBtn = document.getElementById('cart-close');
+    var itemsEl = document.getElementById('cart-items');
+    var totalEl = document.getElementById('cart-total');
+    var countEl = document.getElementById('cart-count');
+    var statusEl = document.getElementById('cart-status');
+    var paypalRendered = false;
+
+    function openDrawer() {
+      drawer.hidden = false; backdrop.hidden = false;
+      document.body.style.overflow = 'hidden';
+      maybeRenderPaypal();
+    }
+    function closeDrawer() {
+      drawer.hidden = true; backdrop.hidden = true;
+      document.body.style.overflow = '';
+    }
+    if (toggle) { toggle.hidden = false; toggle.addEventListener('click', openDrawer); }
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    if (backdrop) backdrop.addEventListener('click', closeDrawer);
+
+    function renderCart() {
+      var cart = loadCart();
+      var count = cart.reduce(function (n, i) { return n + i.qty; }, 0);
+      if (countEl) countEl.textContent = count;
+      if (!itemsEl) return;
+      itemsEl.innerHTML = '';
+      if (!cart.length) {
+        var p = document.createElement('p');
+        p.className = 'cart-empty';
+        p.textContent = 'Todavía no agregaste nada.';
+        itemsEl.appendChild(p);
+      }
+      var total = 0;
+      cart.forEach(function (item) {
+        total += item.price * item.qty;
+        var key = cartKey(item);
+        var row = document.createElement('div');
+        row.className = 'cart-item';
+        row.innerHTML =
+          '<img src="' + (item.image || '') + '" alt="" />' +
+          '<div>' +
+            '<div class="cart-item__title">' + item.title + '</div>' +
+            '<div class="cart-item__meta">' + (item.variant ? item.variant + ' · ' : '') + fmt(item.price) + '</div>' +
+            '<div class="cart-item__qty">' +
+              '<button type="button" data-act="dec" aria-label="Restar">−</button>' +
+              '<span>' + item.qty + '</span>' +
+              '<button type="button" data-act="inc" aria-label="Sumar">+</button>' +
+            '</div>' +
+          '</div>' +
+          '<button type="button" class="cart-item__remove" data-act="rm">Quitar</button>';
+        row.querySelector('[data-act="dec"]').addEventListener('click', function () { changeQty(key, -1); });
+        row.querySelector('[data-act="inc"]').addEventListener('click', function () { changeQty(key, 1); });
+        row.querySelector('[data-act="rm"]').addEventListener('click', function () { removeFromCart(key); });
+        itemsEl.appendChild(row);
+      });
+      if (totalEl) totalEl.textContent = fmt(total);
+      paypalRendered = false;
+      var pc = document.getElementById('paypal-button-container');
+      if (pc) pc.innerHTML = '';
+      if (statusEl) { statusEl.hidden = true; statusEl.textContent = ''; }
+      if (!drawer.hidden) maybeRenderPaypal();
+    }
+
+    function setStatus(msg, kind) {
+      if (!statusEl) return;
+      statusEl.hidden = false;
+      statusEl.textContent = msg;
+      statusEl.className = 'cart-status' + (kind ? ' cart-status--' + kind : '');
+    }
+
+    function setStatusNode(node, kind) {
+      if (!statusEl) return;
+      statusEl.hidden = false;
+      statusEl.innerHTML = '';
+      statusEl.appendChild(node);
+      statusEl.className = 'cart-status' + (kind ? ' cart-status--' + kind : '');
+    }
+
+    function maybeRenderPaypal() {
+      var cart = loadCart();
+      var pc = document.getElementById('paypal-button-container');
+      if (!pc || paypalRendered || !cart.length) return;
+      if (!PAYPAL_CLIENT_ID || !TIENDA_API_BASE) {
+        pc.innerHTML = '';
+        setStatus('La tienda todavía no tiene el pago configurado.', 'error');
+        return;
+      }
+      paypalRendered = true;
+      function render() {
+        if (!window.paypal) return;
+        pc.innerHTML = '';
+        window.paypal.Buttons({
+          createOrder: function () {
+            var items = loadCart().map(function (i) { return { slug: i.slug, variant: i.variant || null, qty: i.qty }; });
+            return fetch(TIENDA_API_BASE + '/create-order', {
+              method: 'POST', headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ items: items })
+            }).then(function (r) {
+              if (!r.ok) throw new Error('create-order failed');
+              return r.json();
+            }).then(function (data) { return data.id; })
+              .catch(function () { setStatus('No pudimos iniciar el pago. Probá de nuevo en un momento.', 'error'); throw new Error('create-order'); });
+          },
+          onApprove: function (data) {
+            return fetch(TIENDA_API_BASE + '/capture-order', {
+              method: 'POST', headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ orderID: data.orderID })
+            }).then(function (r) {
+              if (!r.ok) throw new Error('capture-order failed');
+              return r.json();
+            }).then(function (res) {
+              saveCart([]);
+              renderCart();
+              var wrap = document.createElement('div');
+              var p = document.createElement('p');
+              p.textContent = '¡Gracias por tu compra!' + (res.hasPhysical ? ' Te vamos a escribir para coordinar el envío.' : '');
+              wrap.appendChild(p);
+              if (res.downloads && res.downloads.length) {
+                res.downloads.forEach(function (d) {
+                  var a = document.createElement('a');
+                  a.href = d.url; a.target = '_blank'; a.rel = 'noopener';
+                  a.className = 'btn btn--rounded';
+                  a.style.marginTop = '0.6rem';
+                  a.textContent = 'Descargar ' + d.slug;
+                  wrap.appendChild(a);
+                });
+                var note = document.createElement('p');
+                note.style.marginTop = '0.4rem';
+                note.textContent = 'El link vale por 15 minutos — guardá el archivo ahora.';
+                wrap.appendChild(note);
+              }
+              setStatusNode(wrap, 'ok');
+            }).catch(function () { setStatus('El pago se aprobó pero hubo un problema confirmándolo. Escribinos.', 'error'); });
+          },
+          onError: function () { setStatus('Hubo un error con PayPal. Probá de nuevo.', 'error'); }
+        }).render('#paypal-button-container');
+      }
+      if (window.paypal) { render(); return; }
+      var s = document.createElement('script');
+      s.src = 'https://www.paypal.com/sdk/js?client-id=' + encodeURIComponent(PAYPAL_CLIENT_ID) + '&currency=USD&intent=capture';
+      s.onload = render;
+      document.head.appendChild(s);
+    }
+
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('.shop-add');
+      if (!btn) return;
+      var card = btn.closest('.shop-card');
+      var select = card ? card.querySelector('.shop-card__variant') : null;
+      addToCart({
+        slug: btn.getAttribute('data-slug'),
+        title: btn.getAttribute('data-title'),
+        price: parseFloat(btn.getAttribute('data-price')) || 0,
+        image: btn.getAttribute('data-image') || '',
+        variant: select ? select.value : null,
+        qty: 1
+      });
+    });
+
+    renderCart();
   })();
 </script>

@@ -182,6 +182,7 @@ def apply_home(page):
         page = sub_by_marker(page, "nav-fe-%s" % suf, d.get("nav_fe"))
         page = sub_by_marker(page, "nav-formacion-%s" % suf, d.get("nav_formacion"))
         page = sub_by_marker(page, "nav-biblioteca-%s" % suf, d.get("nav_biblioteca"))
+        page = sub_by_marker(page, "nav-tienda-%s" % suf, d.get("nav_tienda"))
         page = sub_by_marker(page, "nav-colabora-%s" % suf, d.get("nav_colabora"))
         page = sub_by_marker(page, "nav-sumate-%s" % suf, d.get("nav_sumate"))
 
@@ -290,11 +291,24 @@ def apply_formacion(page):
     return page
 
 
+def apply_tienda(page):
+    d = load("tienda")
+    page = sub_by_marker(page, "tienda-lead", d.get("lead"))
+    page = sub_by_marker(page, "tienda-shipping-note", d.get("shipping_note"))
+    page = sub_js_var(page, "PAYPAL_CLIENT_ID", d.get("paypal_client_id") or "")
+    page = sub_js_var(page, "TIENDA_API_BASE", d.get("api_base") or "")
+
+    email = load("home").get("contact_email")
+    page = sub_mailto(page, "contact-email-footer", email)
+    return page
+
+
 APPLIERS = {
     "index.html": apply_home,
     "ideario-y-valores-rn.html": apply_vision,
     "catolicismo-en-uruguay.html": apply_fe,
     "cultura-nacional-uruguaya.html": apply_formacion,
+    "tienda-resurgir-nacional.html": apply_tienda,
 }
 
 

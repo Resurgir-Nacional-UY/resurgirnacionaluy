@@ -1,0 +1,29 @@
+name = "tienda-api"
+main = "src/index.ts"
+compatibility_date = "2026-09-01"
+
+# Config publica (no secreta). Ajustar antes del primer deploy.
+[vars]
+MANIFEST_URL = "https://resurgirnacionaluy.org/tienda-manifest.json"
+ALLOWED_ORIGIN = "https://resurgirnacionaluy.org"
+NOTIFY_EMAIL = "resurgirnacionaluruguay@gmail.com"
+FROM_EMAIL = "pedidos@resurgirnacionaluy.org"
+PAYPAL_ENV = "sandbox"           # cambiar a "live" recien despues de probar en sandbox
+
+# Reemplazar <ID> con el que devuelve:
+#   wrangler kv namespace create ORDERS
+[[kv_namespaces]]
+binding = "ORDERS"
+id = "<ID>"
+
+# Reemplazar con el nombre real del bucket creado con:
+#   wrangler r2 bucket create tienda-digital
+[[r2_buckets]]
+binding = "DIGITAL_BOOKS"
+bucket_name = "tienda-digital"
+
+# Secretos (NO van en este archivo -- se cargan con `wrangler secret put`):
+#   PAYPAL_CLIENT_ID
+#   PAYPAL_CLIENT_SECRET
+#   RESEND_API_KEY
+#   ADMIN_TOKEN

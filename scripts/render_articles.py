@@ -32,7 +32,8 @@ INDEX = os.path.join(ROOT, INDEX_NAME)
 HUB_LIMIT = 6
 # URL publica del sitio. Cambiar si se pasa a dominio propio (p. ej. https://resurgirnacionaluy.org/)
 SITE = "https://resurgirnacionaluy.org/"
-STATIC_PAGES = ["", "ideario-y-valores-rn.html", "cultura-nacional-uruguaya.html", "catolicismo-en-uruguay.html", "lecturas-para-el-uruguay.html"]
+STATIC_PAGES = ["", "ideario-y-valores-rn.html", "cultura-nacional-uruguaya.html", "catolicismo-en-uruguay.html",
+                "lecturas-para-el-uruguay.html", "tienda-resurgir-nacional.html"]
 MARK_A = "<!-- ARTICLES:START -->"
 MARK_B = "<!-- ARTICLES:END -->"
 INDEX_MARK_A = "<!-- PUBINDEX:START -->"
@@ -41,7 +42,7 @@ GEN_MARK = "<!-- generated:formacion-article -->"
 RESERVED = {"index", "vision", "formacion", "sagradocorazondejesus", "biblioteca", "admin", "404",
             "readme", "articulos",
             "ideario-y-valores-rn", "catolicismo-en-uruguay", "cultura-nacional-uruguaya",
-            "lecturas-para-el-uruguay"}
+            "lecturas-para-el-uruguay", "tienda-resurgir-nacional"}
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
          "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 MESES_AB = ["ene", "feb", "mar", "abr", "may", "jun", "jul",

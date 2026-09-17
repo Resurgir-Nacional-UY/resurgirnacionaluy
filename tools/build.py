@@ -33,7 +33,8 @@ HOME = "https://resurgirnacionaluy.org/"
 VISION_PAGE = "ideario-y-valores-rn.html"
 VISION_ABS = HOME + VISION_PAGE
 SUBPAGES = ["ideario-y-valores-rn.html", "catolicismo-en-uruguay.html",
-            "cultura-nacional-uruguaya.html", "lecturas-para-el-uruguay.html"]
+            "cultura-nacional-uruguaya.html", "lecturas-para-el-uruguay.html",
+            "tienda-resurgir-nacional.html"]
 # per-page footer background video override (data-file, data-poster)
 FOOTER_VIDEO = {"catolicismo-en-uruguay.html": ("cielo.mp4", "cielo_poster.jpg")}
 
@@ -154,6 +155,11 @@ if r.returncode:
 r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "render_biblioteca.py")], cwd=ROOT)
 if r.returncode:
     print("WARNING: render_biblioteca.py salio con codigo", r.returncode)
+
+# render Tienda (content/tienda/*.yml -> <slug>.html + grilla de productos)
+r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "render_tienda.py")], cwd=ROOT)
+if r.returncode:
+    print("WARNING: render_tienda.py salio con codigo", r.returncode)
 
 # redirecciones de URLs viejas (content/redirects.yml) -- corre al final, para
 # que las paginas viejas que Formacion/Biblioteca ya borraron por renombre

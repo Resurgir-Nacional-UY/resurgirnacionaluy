@@ -65,6 +65,9 @@ collections:
           - name: nav_biblioteca
             label: "Menú — Biblioteca"
             widget: string
+          - name: nav_tienda
+            label: "Menú — Tienda"
+            widget: string
           - name: nav_colabora
             label: "Menú — Colabora"
             widget: string
@@ -364,6 +367,30 @@ collections:
             label: "Invitación a colaborar — texto"
             widget: text
 
+      - name: tienda_page
+        label: "Tienda — configuración"
+        file: content/pages/tienda.yml
+        fields:
+          - name: lead
+            label: "Bajada (debajo del título)"
+            widget: text
+          - name: paypal_client_id
+            label: "PayPal — Client ID"
+            widget: string
+            required: false
+            hint: >-
+              El Client ID público de la app de PayPal (no el Secret — ese va
+              como secreto en Cloudflare, nunca acá). En
+              developer.paypal.com → Apps & Credentials.
+          - name: api_base
+            label: "URL base de la función de pago (Cloudflare Worker)"
+            widget: string
+            required: false
+            hint: "Ej: https://tienda-api.<cuenta>.workers.dev (sin barra final)."
+          - name: shipping_note
+            label: "Aviso sobre el envío en el carrito"
+            widget: string
+
   - name: formacion
     label: Artículos de Formación
     label_singular: Artículo
@@ -473,6 +500,108 @@ collections:
 
       - name: pages
         label: "Cantidad de páginas (opcional)"
+        widget: number
+        value_type: int
+        required: false
+
+      - name: draft
+        label: "Borrador (no se publica mientras esté marcado)"
+        widget: boolean
+        default: false
+
+  - name: tienda
+    label: Tienda
+    label_singular: Producto
+    description: >-
+      Merchandising y libros a la venta. Al guardar se crea un Pull Request;
+      queda publicado cuando alguien con permiso lo aprueba (merge).
+    folder: content/tienda
+    create: true
+    extension: yml
+    format: yaml
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    summary: "{{title}} · {{type}} · USD {{price}}"
+    sortable_fields:
+      - title
+      - price
+      - type
+    media_folder: /media/tienda
+    public_folder: /media/tienda
+    fields:
+      - name: title
+        label: Título
+        widget: string
+
+      - name: slug
+        label: "Slug (parte final de la URL)"
+        widget: string
+        hint: "solo minúsculas, números y guiones — p. ej. remera-sol da /remera-sol.html"
+        pattern:
+          - "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          - "Solo minúsculas, números y guiones"
+
+      - name: type
+        label: Tipo de producto
+        widget: select
+        options:
+          - { label: "Merchandising", value: "merch" }
+          - { label: "Libro digital (PDF)", value: "libro_digital" }
+          - { label: "Libro físico", value: "libro_fisico" }
+
+      - name: price
+        label: "Precio (dólares, USD)"
+        widget: number
+        value_type: float
+        min: 0
+        hint: >-
+          PayPal no admite cobrar en pesos uruguayos — el precio se carga y
+          se cobra en dólares (USD).
+
+      - name: summary
+        label: "Resumen (para la tarjeta)"
+        widget: text
+
+      - name: description
+        label: "Descripción completa"
+        widget: text
+        required: false
+
+      - name: images
+        label: "Imágenes (la primera es la principal)"
+        widget: list
+        field: { name: image, label: Imagen, widget: image }
+        min: 1
+        max: 6
+
+      - name: variant_label
+        label: "Nombre de la variante (p. ej. Talle) — opcional"
+        widget: string
+        required: false
+        hint: "Dejar vacío si el producto no tiene variantes."
+
+      - name: variant_options
+        label: "Opciones de la variante, separadas por coma (p. ej. S,M,L,XL)"
+        widget: string
+        required: false
+
+      - name: stock
+        label: "Stock disponible (vacío = sin límite / digital)"
+        widget: number
+        value_type: int
+        required: false
+        hint: "Se actualiza a mano después de cada venta — no se descuenta solo."
+
+      - name: digital_asset_key
+        label: "Clave del archivo en R2 (solo libro digital)"
+        widget: string
+        required: false
+        hint: >-
+          NO subir el PDF acá (quedaría público). Subilo a Cloudflare R2 y
+          pegá la clave del objeto, p. ej. libros/mi-libro.pdf.
+
+      - name: pages
+        label: "Cantidad de páginas (opcional, solo libros)"
         widget: number
         value_type: int
         required: false
