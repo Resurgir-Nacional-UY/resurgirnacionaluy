@@ -32,13 +32,13 @@ INDEX = os.path.join(ROOT, INDEX_NAME)
 HUB_LIMIT = 6
 # URL publica del sitio. Cambiar si se pasa a dominio propio (p. ej. https://resurgirnacionaluy.org/)
 SITE = "https://resurgirnacionaluy.org/"
-STATIC_PAGES = ["", "vision.html", "formacion.html", "SagradoCorazondeJesus.html"]
+STATIC_PAGES = ["", "vision.html", "formacion.html", "SagradoCorazondeJesus.html", "biblioteca.html"]
 MARK_A = "<!-- ARTICLES:START -->"
 MARK_B = "<!-- ARTICLES:END -->"
 INDEX_MARK_A = "<!-- PUBINDEX:START -->"
 INDEX_MARK_B = "<!-- PUBINDEX:END -->"
 GEN_MARK = "<!-- generated:formacion-article -->"
-RESERVED = {"index", "vision", "formacion", "sagradocorazondejesus", "admin", "404",
+RESERVED = {"index", "vision", "formacion", "sagradocorazondejesus", "biblioteca", "admin", "404",
             "readme", "articulos"}
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
          "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
@@ -570,13 +570,16 @@ def main():
             os.remove(path)
             print("  eliminado (obsoleto): %s" % name)
 
-    # remove stale per-article OG images
+    # remove stale per-article OG images (og/libro-*.png son de Biblioteca, no se tocan)
     slugs = {a["slug"] for a in arts}
     if os.path.isdir(OG_DIR):
         for path in glob.glob(os.path.join(OG_DIR, "*.png")):
-            slug = os.path.splitext(os.path.basename(path))[0]
+            name = os.path.basename(path)
+            if name.startswith("libro-"):
+                continue
+            slug = os.path.splitext(name)[0]
             if slug not in slugs:
-                os.remove(path)
+                os.remove(_lp(path))
                 print("  eliminado (obsoleto): og/%s.png" % slug)
 
     # rewrite the list region inside formacion.html

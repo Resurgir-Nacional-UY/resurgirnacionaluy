@@ -9,6 +9,15 @@ este repo (fuentes locales + favicon-192.png), asi que corre igual en CI.
 import os
 from PIL import Image, ImageDraw, ImageFont
 
+
+def _lp(p):
+    """En Windows, rutas >= 260 chars necesitan el prefijo \\\\?\\. No-op en Linux (CI)."""
+    p = os.path.abspath(p)
+    if os.name == "nt" and len(p) >= 255 and not p.startswith("\\\\?\\"):
+        return "\\\\?\\" + p
+    return p
+
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts")
 EMBLEM = os.path.join(ROOT, "favicon-192.png")
@@ -142,5 +151,5 @@ def make_og_image(kicker, title, byline, out_path):
 
     out_dir = os.path.dirname(out_path)
     if out_dir:
-        os.makedirs(out_dir, exist_ok=True)
-    img.convert("RGB").save(out_path, "PNG", optimize=True)
+        os.makedirs(_lp(out_dir), exist_ok=True)
+    img.convert("RGB").save(_lp(out_path), "PNG", optimize=True)

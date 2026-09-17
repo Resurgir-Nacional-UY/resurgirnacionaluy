@@ -62,6 +62,9 @@ collections:
           - name: nav_formacion
             label: "Menú — Formación"
             widget: string
+          - name: nav_biblioteca
+            label: "Menú — Biblioteca"
+            widget: string
           - name: nav_colabora
             label: "Menú — Colabora"
             widget: string
@@ -417,3 +420,64 @@ collections:
       - name: body
         label: "Cuerpo del artículo"
         widget: markdown
+
+  - name: biblioteca
+    label: Biblioteca
+    label_singular: Libro
+    description: >-
+      Libros en PDF de dominio público. Al guardar se crea un Pull Request;
+      queda publicado cuando alguien con permiso lo aprueba (merge).
+    folder: content/biblioteca
+    create: true
+    extension: yaml
+    format: yaml
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    summary: "{{title}} · {{author}} · {{year}}"
+    sortable_fields:
+      - year
+      - title
+    media_folder: /media/biblioteca
+    public_folder: /media/biblioteca
+    fields:
+      - name: title
+        label: Título
+        widget: string
+
+      - name: slug
+        label: "Slug (parte final de la URL)"
+        widget: string
+        hint: "solo minúsculas, números y guiones — p. ej. jacinto-vera da /jacinto-vera.html"
+        pattern:
+          - "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          - "Solo minúsculas, números y guiones"
+
+      - name: author
+        label: Autor
+        widget: string
+
+      - name: year
+        label: "Año de edición"
+        widget: string
+
+      - name: summary
+        label: "Resumen (para la tarjeta y la vista previa)"
+        widget: text
+
+      - name: pdf
+        label: "Archivo PDF"
+        widget: file
+        media_library:
+          config:
+            max_file_size: 60000000
+
+      - name: pages
+        label: "Cantidad de páginas (opcional)"
+        widget: number
+        value_type: int
+        required: false
+
+      - name: draft
+        label: "Borrador (no se publica mientras esté marcado)"
+        widget: boolean
+        default: false

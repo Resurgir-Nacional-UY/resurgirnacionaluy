@@ -31,7 +31,7 @@ render_pages.main()
 
 HOME = "https://resurgirnacionaluy.org/"
 VISION_ABS = HOME + "vision.html"
-SUBPAGES = ["vision.html", "SagradoCorazondeJesus.html", "formacion.html"]
+SUBPAGES = ["vision.html", "SagradoCorazondeJesus.html", "formacion.html", "biblioteca.html"]
 # per-page footer background video override (data-file, data-poster)
 FOOTER_VIDEO = {"SagradoCorazondeJesus.html": ("cielo.mp4", "cielo_poster.jpg")}
 
@@ -147,3 +147,8 @@ import subprocess, sys
 r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "render_articles.py")], cwd=ROOT)
 if r.returncode:
     print("WARNING: render_articles.py salio con codigo", r.returncode)
+
+# render Biblioteca (content/biblioteca/*.yml -> <slug>.html + grilla de libros)
+r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "render_biblioteca.py")], cwd=ROOT)
+if r.returncode:
+    print("WARNING: render_biblioteca.py salio con codigo", r.returncode)
