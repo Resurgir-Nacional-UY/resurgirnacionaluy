@@ -1,6 +1,6 @@
 ---
 title: Juicio a la democracia
-slug: criticaalademocracia
+slug: critica-a-la-democracia
 date: 2026-09-17
 author: Bruno acosta pastore
 summary: Crítica al sistema democrático imperante en occidente.

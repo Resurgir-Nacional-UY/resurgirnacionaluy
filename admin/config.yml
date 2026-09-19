@@ -415,8 +415,8 @@ collections:
         widget: string
         hint: "solo minúsculas, números y guiones — p. ej. la-soberania-nacional da /la-soberania-nacional.html"
         pattern:
-          - "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-          - "Solo minúsculas, números y guiones"
+          - "^[a-z0-9]+(?:-[a-z0-9]+)+$"
+          - "Separa las palabras con guiones, todo en minúsculas (ej: la-soberania-nacional). Mejora cómo Google lee la URL."
 
       - name: date
         label: Fecha
@@ -476,8 +476,8 @@ collections:
         widget: string
         hint: "solo minúsculas, números y guiones — p. ej. jacinto-vera da /jacinto-vera.html"
         pattern:
-          - "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-          - "Solo minúsculas, números y guiones"
+          - "^[a-z0-9]+(?:-[a-z0-9]+)+$"
+          - "Separa las palabras con guiones, todo en minúsculas (ej: la-soberania-nacional). Mejora cómo Google lee la URL."
 
       - name: author
         label: Autor
@@ -538,8 +538,8 @@ collections:
         widget: string
         hint: "solo minúsculas, números y guiones — p. ej. remera-sol da /remera-sol.html"
         pattern:
-          - "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-          - "Solo minúsculas, números y guiones"
+          - "^[a-z0-9]+(?:-[a-z0-9]+)+$"
+          - "Separa las palabras con guiones, todo en minúsculas (ej: la-soberania-nacional). Mejora cómo Google lee la URL."
 
       - name: type
         label: Tipo de producto

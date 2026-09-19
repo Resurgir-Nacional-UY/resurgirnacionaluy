@@ -1,6 +1,6 @@
 ---
 title: Sobre el interior del Uruguay
-slug: interiordeuruguay
+slug: interior-del-uruguay
 date: 2026-09-17
 author: José Otaiza
 summary: Sobre el interior del Uruguay en profundidad y detalle.

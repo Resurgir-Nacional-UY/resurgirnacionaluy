@@ -1,6 +1,6 @@
 ---
 title: ¡Por la patria!
-slug: republicaorientaldeluruguay
+slug: republica-oriental-del-uruguay
 date: 2026-09-17
 author: Movimiento patriótico 1933
 summary: Sobre la defensa necesaria y obligatoria de nuestra tierra.
