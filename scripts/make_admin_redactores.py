@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Genera admin/config-redactores.yml a partir de admin/config.yml.
+"""Genera redactores/config.yml a partir de admin/config.yml.
 
 Es la versión del CMS para articulistas: solo las colecciones Formación y
-Biblioteca. Se abre en /admin/redactores.html. Esto solo simplifica el menú;
+Biblioteca. Se abre en /redactores/. Esto solo simplifica el menú;
 lo que un articulista puede publicar de verdad lo limita el ruleset de main
 + .github/CODEOWNERS (no editar el permiso aquí).
 """
@@ -10,7 +10,7 @@ import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "admin", "config.yml")
-DST = os.path.join(ROOT, "admin", "config-redactores.yml")
+DST = os.path.join(ROOT, "redactores", "config.yml")
 
 HEADER_NOTE = (
     "# GENERADO por scripts/make_admin_redactores.py desde admin/config.yml.\n"
@@ -36,4 +36,4 @@ if not (i_form < i_bib < i_tienda):
 out = HEADER_NOTE + "".join(lines[:i_coll + 1]) + "\n" + "".join(lines[i_form:i_tienda]).rstrip() + "\n"
 with open(DST, "w", encoding="utf-8", newline="\n") as f:
     f.write(out)
-print("admin/config-redactores.yml escrito")
+print("redactores/config.yml escrito")
