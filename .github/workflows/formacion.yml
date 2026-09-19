@@ -20,6 +20,9 @@ concurrency:
 jobs:
   render:
     runs-on: ubuntu-latest
+    # El token solo existe en este environment, que GitHub limita a la rama main:
+    # una rama de un colaborador no puede leerlo.
+    environment: publicar
     steps:
       - uses: actions/checkout@v4
         with:
