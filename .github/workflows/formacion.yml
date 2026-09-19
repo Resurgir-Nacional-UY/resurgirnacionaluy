@@ -6,6 +6,7 @@ on:
     paths:
       - "content/formacion/**"
       - "media/formacion/**"
+      - "content/biblioteca/**"
       - "scripts/render_articles.py"
   workflow_dispatch:
 

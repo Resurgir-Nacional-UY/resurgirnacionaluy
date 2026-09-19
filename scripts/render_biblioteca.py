@@ -10,7 +10,7 @@ lecturas-para-el-uruguay.html.
 Correr desde la raiz del repo:  python scripts/render_biblioteca.py
 Pure stdlib + `yaml` + og_image.py (Pillow) para la portada social.
 """
-import io, os, re, sys, glob
+import io, os, re, sys, glob, json
 
 import yaml
 
@@ -139,6 +139,23 @@ def book_page(tpl, b):
                  '<meta property="og:image" content="%sog/%s" />' % (SITE, og_name(b["slug"])),
                  pre, count=1)
     pre = pre.replace("<head>", "<head>\n" + GEN_MARK, 1)
+    ld = {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "name": title,
+        "description": summary,
+        "url": book_url,
+        "image": "%sog/%s" % (SITE, og_name(b["slug"])),
+        "inLanguage": "es",
+        "author": {"@type": "Person", "name": str(b.get("author") or "Varios autores")},
+    }
+    if b.get("year"):
+        ld["datePublished"] = str(b["year"])
+    if pages:
+        ld["numberOfPages"] = pages
+    ld_tag = ('<script type="application/ld+json">%s</script>\n'
+              % json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"))
+    pre = pre.replace("</head>", ld_tag + "</head>", 1)
     main_html = (
         '<main>\n'
         '  <article class="doc">\n'

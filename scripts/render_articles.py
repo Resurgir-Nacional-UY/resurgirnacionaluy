@@ -255,6 +255,24 @@ def article_page(tpl, a):
                  '<meta property="og:image" content="%sog/%s.jpg" />' % (SITE, a["slug"]),
                  pre, count=1)
     pre = pre.replace("<head>", "<head>\n" + GEN_MARK, 1)
+    ld = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "description": summary,
+        "image": "%sog/%s.jpg" % (SITE, a["slug"]),
+        "mainEntityOfPage": art_url,
+        "inLanguage": "es-UY",
+        "author": {"@type": "Person", "name": str(a.get("author") or "Resurgir Nacional")},
+        "publisher": {"@type": "Organization", "name": "Resurgir Nacional",
+                      "logo": {"@type": "ImageObject", "url": SITE + "favicon-192.png"}},
+    }
+    dm = re.match(r"\d{4}-\d{2}-\d{2}", str(a.get("date", "")))
+    if dm:
+        ld["datePublished"] = dm.group(0)
+    ld_tag = ('<script type="application/ld+json">%s</script>\n'
+              % json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"))
+    pre = pre.replace("</head>", ld_tag + "</head>", 1)
     main_html = (
         '<main>\n'
         '  <article class="doc">\n'
@@ -525,6 +543,21 @@ def write_sitemap(arts):
         m = re.match(r"\d{4}-\d{2}-\d{2}", str(a.get("date", "")))
         lm = "<lastmod>%s</lastmod>" % m.group(0) if m else ""
         rows.append("  <url><loc>%s%s.html</loc>%s</url>" % (SITE, a["slug"], lm))
+    # libros de Biblioteca (los publica render_biblioteca.py; este script es
+    # el unico dueño de sitemap.xml, asi que los lista desde el contenido)
+    bdir = os.path.join(ROOT, "content", "biblioteca")
+    if os.path.isdir(bdir):
+        for bp in sorted(glob.glob(os.path.join(bdir, "*.yml")) + glob.glob(os.path.join(bdir, "*.yaml"))):
+            try:
+                b = yaml.safe_load(rd(bp)) or {}
+            except Exception:
+                continue
+            if not isinstance(b, dict) or not b.get("title") or not b.get("pdf"):
+                continue
+            if b.get("draft") in (True, "true", "True"):
+                continue
+            bslug = re.sub(r"[^a-z0-9-]+", "-", os.path.splitext(os.path.basename(bp))[0].lower()).strip("-")
+            rows.append("  <url><loc>%s%s.html</loc></url>" % (SITE, bslug))
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
            + "\n".join(rows) + "\n</urlset>\n")
