@@ -167,3 +167,8 @@ if r.returncode:
 r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "render_redirects.py")], cwd=ROOT)
 if r.returncode:
     print("WARNING: render_redirects.py salio con codigo", r.returncode)
+
+# CMS reducido para articulistas (admin/config-redactores.yml)
+r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "make_admin_redactores.py")], cwd=ROOT)
+if r.returncode:
+    print("WARNING: make_admin_redactores.py salio con codigo", r.returncode)

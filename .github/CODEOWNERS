@@ -1,8 +1,10 @@
 # Todo el sitio es del equipo dueño...
 *                     @avvedit-creator @Juanko1939
 
-# ...salvo los artículos de Formación y sus imágenes: sin dueño, así los
+# ...salvo los artículos de Formación, los libros de Biblioteca y sus archivos: sin dueño, así los
 # articulistas los publican solos. Cualquier PR que toque otra ruta
 # necesita la aprobación de un dueño (ver ruleset de main).
 /content/formacion/
 /media/formacion/
+/content/biblioteca/
+/media/biblioteca/
