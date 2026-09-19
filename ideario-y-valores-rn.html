@@ -138,6 +138,12 @@
 
   .contact { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.8rem; }
   .contact a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 1.05rem; letter-spacing: 0.01em; }
+  .contact .copy-hint { color: var(--ink-soft); font-weight: 400; font-size: 0.95rem; }
+  .contact-lines { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.6rem; color: var(--ink-soft); }
+  .sumate-social { display: flex; align-items: center; gap: 1.1rem; }
+  .sumate-social .sumate-social__link { display: inline-flex; transition: transform .15s ease; }
+  .sumate-social .sumate-social__link:hover { transform: translateY(-2px); }
+  .sumate-social .sumate-social__link .ic { width: 27px; height: 27px; display: block; }
 
   /* Footer */
   .site-footer { background: #14315C; color: #FFFFFF; padding-block: 3.5rem; position: relative; overflow: hidden; isolation: isolate; }
@@ -339,6 +345,21 @@
       <h2>Escríbenos</h2>
       <div class="contact">
         <a href="mailto:resurgirnacionaluruguay@gmail.com">resurgirnacionaluruguay@gmail.com</a>
+        <span class="copy-hint">(clic para copiar)</span>
+        <div class="contact-lines">
+          <span>Otras maneras de contactarnos:</span>
+          <span class="sumate-social">
+            <a class="sumate-social__link" href="https://www.instagram.com/resurgirnacionuy/" target="_blank" rel="noopener" aria-label="Instagram de Resurgir Nacional">
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-instagram" /></svg>
+            </a>
+            <a class="sumate-social__link" href="https://x.com/ResurgirUy" target="_blank" rel="noopener" aria-label="X de Resurgir Nacional">
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-x" /></svg>
+            </a>
+            <a class="sumate-social__link" href="https://t.me/resurgirnacionaluruguay" target="_blank" rel="noopener" aria-label="Canal de Telegram de Resurgir Nacional">
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-telegram" /></svg>
+            </a>
+          </span>
+        </div>
       </div>
     </section>
   </div>
