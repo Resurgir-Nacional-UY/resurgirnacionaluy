@@ -62,9 +62,6 @@ collections:
           - name: nav_formacion
             label: "Menú — Formación"
             widget: string
-          - name: nav_biblioteca
-            label: "Menú — Biblioteca"
-            widget: string
           - name: nav_tienda
             label: "Menú — Tienda"
             widget: string

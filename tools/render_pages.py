@@ -181,7 +181,6 @@ def apply_home(page):
         page = sub_by_marker(page, "nav-ideario-%s" % suf, d.get("nav_ideario"))
         page = sub_by_marker(page, "nav-fe-%s" % suf, d.get("nav_fe"))
         page = sub_by_marker(page, "nav-formacion-%s" % suf, d.get("nav_formacion"))
-        page = sub_by_marker(page, "nav-biblioteca-%s" % suf, d.get("nav_biblioteca"))
         page = sub_by_marker(page, "nav-tienda-%s" % suf, d.get("nav_tienda"))
         page = sub_by_marker(page, "nav-colabora-%s" % suf, d.get("nav_colabora"))
         page = sub_by_marker(page, "nav-sumate-%s" % suf, d.get("nav_sumate"))
