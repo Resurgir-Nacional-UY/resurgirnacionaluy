@@ -173,6 +173,26 @@ def sanitize_html(s):
     return "".join(p.out)
 
 
+def seo_title(title, suffix="Resurgir Nacional", limit=62):
+    """<title> pensado para el buscador: sin punto final y con el sufijo de marca
+    solo si cabe (Google corta alrededor de los 60 caracteres)."""
+    t = " ".join(str(title).split()).rstrip(". ")
+    full = "%s · %s" % (t, suffix)
+    return full if len(full) <= limit else t
+
+
+def seo_desc(text, extra="", limit=155):
+    """Meta description de 70-155 caracteres: completa las muy cortas con `extra`
+    y recorta las largas (el resumen entero de un articulo llega a 1000+) en un
+    limite de palabra."""
+    t = " ".join(str(text or "").split())
+    if extra and len(t) < 75:
+        t = "%s. %s" % (t.rstrip(". "), extra)
+    if len(t) > limit:
+        t = t[:limit - 1].rsplit(" ", 1)[0].rstrip(",;:.-—") + "…"
+    return t
+
+
 def parse_md(text):
     text = text.lstrip("﻿")
     if text.startswith("---"):
@@ -240,17 +260,18 @@ def article_page(tpl, a):
     art_url = SITE + a["slug"] + ".html"
     pre = tpl[:tpl.index("<main>")]
     post = tpl[tpl.index("</main>") + len("</main>"):]
-    pre = pre.replace("<title>Formación — Resurgir Nacional</title>",
-                      "<title>%s · Formación · Resurgir Nacional</title>" % esc(title), 1)
+    seo_t = seo_title(title)
+    seo_d = seo_desc(summary, "Artículo de Formación · Resurgir Nacional, nacionalismo uruguayo.")
+    pre = re.sub(r"<title>.*?</title>", lambda m: "<title>%s</title>" % esc(seo_t), pre, count=1, flags=re.S)
     pre = pre.replace(SITE + "cultura-nacional-uruguaya.html", art_url)          # canonical, hreflang, og:url
     pre = pre.replace('<meta property="og:type" content="website" />',
                       '<meta property="og:type" content="article" />', 1)
     pre = re.sub(r'(<meta name="description" content=")[^"]*(")',
-                 lambda m: m.group(1) + esc(summary) + m.group(2), pre, count=1)
+                 lambda m: m.group(1) + esc(seo_d) + m.group(2), pre, count=1)
     pre = re.sub(r'(<meta property="og:title" content=")[^"]*(")',
                  lambda m: m.group(1) + esc(title) + m.group(2), pre, count=1)
     pre = re.sub(r'(<meta property="og:description" content=")[^"]*(")',
-                 lambda m: m.group(1) + esc(summary) + m.group(2), pre, count=1)
+                 lambda m: m.group(1) + esc(seo_d) + m.group(2), pre, count=1)
     pre = re.sub(r'<meta property="og:image" content="[^"]*" />',
                  '<meta property="og:image" content="%sog/%s.jpg" />' % (SITE, a["slug"]),
                  pre, count=1)
@@ -441,8 +462,7 @@ def index_page(tpl, arts):
     pre = tpl[:tpl.index("<main>")]
     post = tpl[tpl.index("</main>") + len("</main>"):]
     desc = "Todos los artículos de formación del movimiento nacionalista uruguayo Resurgir Nacional."
-    pre = pre.replace("<title>Formación — Resurgir Nacional</title>",
-                      "<title>Artículos de Formación · Resurgir Nacional</title>", 1)
+    pre = re.sub(r"<title>.*?</title>", "<title>Artículos de Formación · Resurgir Nacional</title>", pre, count=1, flags=re.S)
     pre = pre.replace(SITE + "cultura-nacional-uruguaya.html", SITE + INDEX_NAME)   # canonical, hreflang, og:url
     pre = re.sub(r'(<meta name="description" content=")[^"]*(")',
                  lambda m: m.group(1) + esc(desc) + m.group(2), pre, count=1)

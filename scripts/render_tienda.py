@@ -172,8 +172,7 @@ def product_page(tpl, p):
     product_url = SITE + p["slug"] + ".html"
     pre = tpl[:tpl.index("<main>")]
     post = tpl[tpl.index("</main>") + len("</main>"):]
-    pre = pre.replace("<title>Tienda — Resurgir Nacional</title>",
-                      "<title>%s · Tienda · Resurgir Nacional</title>" % esc(title), 1)
+    pre = re.sub(r"<title>.*?</title>", lambda m: "<title>%s · Tienda · Resurgir Nacional</title>" % esc(title), pre, count=1, flags=re.S)
     pre = pre.replace(SITE + "tienda-resurgir-nacional.html", product_url)  # canonical, hreflang, og:url
     pre = re.sub(r'(<meta name="description" content=")[^"]*(")',
                  lambda m: m.group(1) + esc(summary) + m.group(2), pre, count=1)
