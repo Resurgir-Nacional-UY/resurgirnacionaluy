@@ -33,7 +33,7 @@
   :root {
     --rn-blue: #2E5EA8; --rn-blue-deep: #2B60B0; --rn-ink: #0A0C11; --rn-gold: #C6A24C;
     --bg: #F4F2EA; --surface: #FBFAF5; --ink: #12151C; --ink-soft: #45505F; --line: #DAD5C5;
-    --blue: #1E4E8F; --gold-text: #9A7A2E; --gold-line: #C6A24C; --focus: #9A7A2E;
+    --blue: #1E4E8F; --gold-text: #9A7A2E; --gold-line: #C6A24C; --focus: #9A7A2E; --tab-blink: #12151C;
     --gutter: clamp(1.25rem, 5vw, 4rem); --measure: 66ch; --header-h: 68px;
     --step--1: clamp(0.78rem, 0.74rem + 0.18vw, 0.86rem);
     --step-0: clamp(1.06rem, 1rem + 0.28vw, 1.2rem);
@@ -44,12 +44,12 @@
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg: #0E1116; --surface: #161B22; --ink: #E9E6DE; --ink-soft: #9BA4B1; --line: #262C36;
-      --blue: #78A6E0; --gold-text: #D4B15E; --gold-line: #8C7331; --focus: #D4B15E;
+      --blue: #78A6E0; --gold-text: #D4B15E; --gold-line: #8C7331; --focus: #D4B15E; --tab-blink: #FFFFFF;
     }
   }
   :root[data-theme="dark"] {
     --bg: #0E1116; --surface: #161B22; --ink: #E9E6DE; --ink-soft: #9BA4B1; --line: #262C36;
-    --blue: #78A6E0; --gold-text: #D4B15E; --gold-line: #8C7331; --focus: #D4B15E;
+    --blue: #78A6E0; --gold-text: #D4B15E; --gold-line: #8C7331; --focus: #D4B15E; --tab-blink: #FFFFFF;
   }
 
   * { box-sizing: border-box; }
@@ -256,6 +256,8 @@
   .pub-tabs { display: flex; align-items: baseline; gap: 0.4rem 1.9rem; flex-wrap: wrap; }
   .pub-tab { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: var(--step-2); line-height: 1.12; max-width: none; margin: 0; padding: 0 0 0.3rem; color: var(--ink-soft); text-decoration: none; border-bottom: 2px solid transparent; transition: color .15s ease, border-color .15s ease; }
   a.pub-tab:hover { color: var(--ink); border-bottom-color: var(--gold-line); }
+  @keyframes pub-tab-blink { 0%, 100% { color: var(--ink-soft); } 50% { color: var(--tab-blink); } }
+  @media (prefers-reduced-motion: no-preference) { a.pub-tab { animation: pub-tab-blink 1.6s ease-in-out infinite; } a.pub-tab:hover, a.pub-tab:focus-visible { animation: none; } }
   a.pub-tab:focus-visible { outline: 2px solid var(--gold-line); outline-offset: 3px; }
   .pub-tab--on { color: var(--ink); border-bottom-color: var(--gold-text); }
   #publicaciones { scroll-margin-top: calc(var(--header-h) + 1rem); }
