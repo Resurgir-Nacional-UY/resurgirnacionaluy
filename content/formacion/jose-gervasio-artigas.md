@@ -1,7 +1,7 @@
 ---
 title: El Reglamento de Tierras de José Artigas
 slug: jose-gervasio-artigas
-date: ''
+date: 2026-09-22
 author: Resurgir Nacional
 summary: |-
   El Reglamento Provisorio de la Provincia Oriental para el Fomento de su Campaña y Seguridad de sus Hacendados, fue un decreto promulgado el 10 de septiembre de 1815 por José Gervasio Artigas desde su cuartel general en Purificación.
@@ -13,7 +13,6 @@ draft: false
 
 ![](/media/formacion/images%20%2881%29.jpg)
 
-
 #### **_"...que los más infelices sean los más privilegiados..."_ -José Gervasio Artigas.**
 
 > **_"la política económico-social artiguista se vinculaba con la más pura y justa tradición española, obteniendo de esa ligazón imprescindible con el pasado que todo verdadero hecho revolucionario posee, una fuerza y una “realidad” intrínsecas._**
@@ -23,7 +22,6 @@ draft: false
 > **_En verdad toda esta política fue una manifestación más de esa hondísima compenetración con el sentir popular y americano que caracterizaba a nuestro héroe nacional y lo diferenciaba de Bolívar, San Martín y Washington. Su lucha por la República (en un medio ambiente dominado por el Congreso de Viena y los planes monárquicos porteños), su afán por la igualdad provincial (traslación de una idea europea, pero aplicada a una realidad donde la igualdad no tenía sentido tanto entre los ciudadanos como entre los conglomerados regionales), su preocupación por las clases humildes y su esfuerzo por educarlas y civilizarlas (que contrasta violentamente con el desprecio que los patriciados urbanos asumían hacia ellas), todos estos rasgos, muestran un líder revolucionario único, por la amplitud y madurez de su enfoque, en América._** 
 
 > **_Tan particular y original —incluso por el mismo hecho de ser el más auténticamente americano entre todos los demás— que la mayor parte de sus postulados son aún letra muerta en la realidad viva de América Latina"._** (José Pedro Barrán, Benjamín Nahum. Las bases económicas de la revolución artiguista)
-
 
 ### **Reglamento de Tierras de 1815.**
 
