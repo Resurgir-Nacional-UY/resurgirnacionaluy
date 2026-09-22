@@ -76,6 +76,26 @@
   .btn--rounded { border-radius: 8px; }
 
   /* Document body */
+  /* Document hero */
+  .doc-hero { position: relative; overflow: hidden; background: radial-gradient(120% 130% at 50% 0%, #24579C 0%, #1B3F73 45%, #14315C 100%); color: #F4F2EA; isolation: isolate; }
+  .doc-hero__flag {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; object-position: center;
+    transform: scale(1.08); z-index: -2; pointer-events: none;
+    filter: saturate(0.95);
+  }
+  .doc-hero__scrim {
+    position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background:
+      linear-gradient(92deg, rgba(8,20,42,0.82) 0%, rgba(10,26,52,0.55) 55%, rgba(8,20,42,0.35) 100%);
+  }
+  .doc-hero .wrap { padding-block: clamp(3rem, 7vw, 5rem); max-width: 900px; }
+  .doc-hero .label { color: #E7C978; }
+  .doc-hero h1 { font-size: var(--step-3); font-weight: 600; letter-spacing: -0.015em; margin: 1.2rem 0 0.6rem; }
+  .doc-hero__sub { font-size: var(--step-1); color: #E7E3D6; }
+  @media (prefers-reduced-motion: no-preference) { .doc-hero__flag { animation: rn-drift 40s ease-in-out infinite alternate; } }
+  @keyframes rn-drift { from { transform: scale(1.08); } to { transform: scale(1.15) translate(-2%, -1.2%); } }
+
   .doc { max-width: 1120px; margin-inline: auto; padding-inline: var(--gutter); padding-block: clamp(3rem, 7vw, 5rem); }
   .doc > section + section { margin-top: clamp(3rem, 7vw, 4.5rem); }
   .doc .label { color: var(--gold-text); display: block; margin-bottom: 0.8rem; }
@@ -228,12 +248,19 @@
 </header>
 
 <main>
-  <div class="doc">
-    <section>
+  <section class="doc-hero">
+    <video class="doc-hero__flag" autoplay muted loop playsinline preload="auto" aria-hidden="true" poster="biblioteca-hero_poster.jpg">
+      <source src="biblioteca-hero.mp4" type="video/mp4" />
+    </video>
+    <div class="doc-hero__scrim" aria-hidden="true"></div>
+    <div class="wrap">
       <span class="label">Biblioteca</span>
       <h1>Lecturas recomendadas</h1>
-      <p class="doc-lead" data-cms="biblioteca-lead">Libros de dominio público sobre la historia y el pensamiento nacional y cristiano, en PDF y de descarga libre.</p>
-    </section>
+      <p class="doc-hero__sub" data-cms="biblioteca-lead">Libros de dominio público sobre la historia y el pensamiento nacional y cristiano, en PDF y de descarga libre.</p>
+    </div>
+  </section>
+
+  <div class="doc">
 
     <section>
       <div class="bib-search-row">
@@ -435,5 +462,12 @@
         }
       });
     });
+  })();
+  (function () {
+    var v = document.querySelector('.doc-hero__flag');
+    if (!v || !('playbackRate' in v)) return;
+    var set = function () { try { v.playbackRate = 0.6; } catch (e) {} };
+    set();
+    v.addEventListener('loadedmetadata', set);
   })();
 </script>
