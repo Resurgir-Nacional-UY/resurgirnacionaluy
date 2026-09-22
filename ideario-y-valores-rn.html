@@ -90,7 +90,7 @@
   .doc-hero__flag {
     position: absolute; inset: 0; width: 100%; height: 100%;
     object-fit: cover; object-position: center;
-    transform: scale(1.08); z-index: -2; pointer-events: none;
+    transform: scale(1.0); z-index: -2; pointer-events: none;
     object-position: center;
     filter: saturate(0.95);
   }
@@ -99,7 +99,7 @@
     background:
       linear-gradient(92deg, rgba(8,20,42,0.82) 0%, rgba(10,26,52,0.55) 55%, rgba(8,20,42,0.35) 100%);
   }
-  .doc-hero .wrap { padding-block: clamp(3rem, 7vw, 5rem); max-width: 900px; }
+  .doc-hero .wrap { padding-block: clamp(4rem, 9vw, 6.5rem); max-width: 900px; }
   .doc-hero .label { color: #E7C978; }
   .doc-hero h1 { font-size: var(--step-3); font-weight: 600; letter-spacing: -0.015em; margin: 1.2rem 0 0.6rem; }
   .doc-hero__sub { font-size: var(--step-1); color: #E7E3D6; }
@@ -204,7 +204,7 @@
     html.anim .reveal-stagger.in > *:nth-child(n+10) { transition-delay: .40s; }
     .hero__flag, .doc-hero__flag { animation: rn-drift 40s ease-in-out infinite alternate; }
   }
-  @keyframes rn-drift { from { transform: scale(1.08); } to { transform: scale(1.15) translate(-2%, -1.2%); } }
+  @keyframes rn-drift { from { transform: scale(1.0); } to { transform: scale(1.05) translate(-1.2%, -0.7%); } }
   /* ---------- Copiar correo al hacer clic ---------- */
   a.mail-copy { cursor: pointer; }
   .copy-toast { position: fixed; left: 50%; bottom: 1.5rem; transform: translateX(-50%) translateY(0.5rem); background: #12151C; color: #F4F2EA; padding: 0.6rem 1.1rem; border-radius: 999px; font-family: "Archivo", system-ui, sans-serif; font-size: 0.82rem; letter-spacing: 0.02em; box-shadow: 0 10px 28px rgba(0,0,0,0.35); opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease; z-index: 9999; }
