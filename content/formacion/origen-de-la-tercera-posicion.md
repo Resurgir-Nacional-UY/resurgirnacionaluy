@@ -38,7 +38,6 @@ Charles Maurras, nacido el 20 de abril de 1868 en Martigues, Francia, fue un inf
 
 Su carrera literaria despegó con la publicación de ensayos y poemas que reflejaban su profundo nacionalismo y su crítica a la democracia liberal. En 1899, cofundó la revista "Action Française", que se convertiría en la plataforma principal para sus ideas. Maurras abogó por una monarquía integral. 
 
-
 ## Reflexión de la tercera posición
 
 En este panorama actual, la tercera posición se vislumbra como una respuesta a la disidencia de izquierda y la inefectividad de la derecha, en un mundo donde el desacuerdo y la disconformidad prevalecen en las doctrinas y sistemas de agrupaciones. La sociedad experimenta una profunda molestia, y la rivalidad entre izquierdismo y derechismo se manifiesta como una de las mayores tensiones globales. Hablé con un político y no pararon 5 minutos antes de que me pregunte: “¿Eres de izquierda o derecha?” 
@@ -49,11 +48,9 @@ La actualidad muestra que muchos izquierdistas se identifican intensamente con l
 
 **_“No soy de izquierda, ni derecha, ni de centro, solo un ciudadano o campesino cansado y descontento.”_**
 
-
 ## **Fascismo Clásico**
 
 Tras la concepción de la tercera posición, observamos la implementación práctica de las ideas centrales en una filosofía y estilo de vida, con la denominación dada por Benito Mussolini. Aunque el Estado Libre de Fiume marcó un hito, es innegable reconocer a Mussolini como la figura clave que otorgó el nombre adecuado a este movimiento, que hoy nos invita a explorar en la era contemporánea. Sin menospreciar al creador original, Mussolini desempeñó un papel fundamental al propiciar el nombre que caracteriza este movimiento. Surgido como respuesta a las limitaciones económicas y el descontento que Italia experimentó tras la Primera Guerra Mundial, este movimiento encarna una búsqueda de soluciones más allá de las convenciones políticas previas. Fue en este contexto que presenciamos el auténtico valor de esta filosofía, reflejado en la voluntad inquebrantable de las personas. A pesar de la inminente derrota ante los aliados, destacaron movimientos como el RSI, donde hombres valerosos, sin nada que perder, demostraron su decidido compromiso al colocar cuchillos en sus mandíbulas y lanzarse a la lucha. Más allá de la capacidad militar, resalta la capacidad volitiva de mantener la resistencia en circunstancias adversas. 
-
 
 ## Árbol de la tercera posición  
 
