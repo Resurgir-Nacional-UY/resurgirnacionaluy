@@ -35,7 +35,15 @@ jobs:
 
       - run: pip install --quiet markdown pyyaml Pillow
 
-      - run: python scripts/render_articles.py
+      # continue-on-error: un problema puntual (p. ej. un archivo con
+      # extension no reconocida en content/formacion/) corta este script con
+      # ERROR, pero el resto de Formacion ya se termino de renderizar bien --
+      # eso SI hay que publicarlo (paso siguiente). El job igual termina en
+      # rojo mas abajo para que GitHub avise por correo.
+      - name: Render
+        id: render
+        run: python scripts/render_articles.py
+        continue-on-error: true
 
       - name: Publicar cambios
         run: |
@@ -54,3 +62,7 @@ jobs:
             done
             git push
           fi
+
+      - name: Marcar el run como fallido si el render tuvo errores
+        if: steps.render.outcome == 'failure'
+        run: exit 1

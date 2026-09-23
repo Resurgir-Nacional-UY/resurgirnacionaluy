@@ -34,7 +34,15 @@ jobs:
 
       - run: pip install --quiet pyyaml Pillow
 
-      - run: python scripts/render_biblioteca.py
+      # continue-on-error: un libro con un PDF que nunca llego al repo (o
+      # cualquier otro problema de un solo item) corta este script con
+      # ERROR, pero el resto de la Biblioteca ya se termino de renderizar
+      # bien -- eso SI hay que publicarlo (paso siguiente). El job igual
+      # termina en rojo mas abajo para que GitHub avise por correo.
+      - name: Render
+        id: render
+        run: python scripts/render_biblioteca.py
+        continue-on-error: true
 
       - name: Publicar cambios
         run: |
@@ -53,3 +61,7 @@ jobs:
             done
             git push
           fi
+
+      - name: Marcar el run como fallido si el render tuvo errores
+        if: steps.render.outcome == 'failure'
+        run: exit 1

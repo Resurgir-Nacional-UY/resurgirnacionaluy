@@ -34,7 +34,14 @@ jobs:
 
       - run: pip install --quiet pyyaml Pillow
 
-      - run: python scripts/render_tienda.py
+      # continue-on-error: un problema puntual de un solo producto no debe
+      # frenar la publicacion del resto (mismo criterio que Formacion y
+      # Biblioteca). El job igual termina en rojo mas abajo si el render
+      # fallo, para que GitHub avise por correo.
+      - name: Render
+        id: render
+        run: python scripts/render_tienda.py
+        continue-on-error: true
 
       - name: Publicar cambios
         run: |
@@ -53,3 +60,7 @@ jobs:
             done
             git push
           fi
+
+      - name: Marcar el run como fallido si el render tuvo errores
+        if: steps.render.outcome == 'failure'
+        run: exit 1
