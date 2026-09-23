@@ -55,6 +55,7 @@ def esc(s):
 
 def load_books():
     books = []
+    missing_pdf = []
     # Sveltia CMS guarda los archivos de esta coleccion con extension ".yaml"
     # (4 letras) aunque el resto del repo use ".yml"; hay que leer ambas.
     paths = glob.glob(os.path.join(CONTENT, "*.yml")) + glob.glob(os.path.join(CONTENT, "*.yaml"))
@@ -73,10 +74,36 @@ def load_books():
         if not b.get("title") or not b.get("pdf"):
             print("  skip (falta titulo o pdf): %s" % slug)
             continue
+        # El campo "pdf" es un widget "file" del CMS: normalmente una ruta
+        # dentro de /media/biblioteca/ (el archivo subido), pero tambien se
+        # puede pegar ahi un enlace externo (p. ej. a archive.org) en vez de
+        # subir el PDF -- varios libros ya lo usan asi. Solo se verifica que
+        # el archivo exista cuando la ruta es local (empieza con "/"); un
+        # enlace http(s) externo no se puede ni conviene comprobar aca.
+        pdf_field = str(b["pdf"]).strip()
+        if pdf_field.startswith("/"):
+            pdf_path = os.path.join(ROOT, pdf_field.lstrip("/"))
+            if not os.path.isfile(_lp(pdf_path)):
+                # La subida del archivo en el editor se guarda como ruta de
+                # texto apenas se elige el archivo, ANTES de confirmar que
+                # termino de subirse a GitHub. Si esa subida se corta
+                # (conexion lenta, archivo grande, el editor cerrado a mitad
+                # de camino), el libro se guarda igual con una ruta que
+                # apunta a un PDF que nunca llego al repo -- sin ningun aviso
+                # en el editor (paso con "doctrina-social-iglesia", sep.
+                # 2026). Por eso no se publica el libro (como si fuera
+                # borrador) hasta que el archivo de verdad este en el repo;
+                # el ERROR de abajo corta el build para que no pase
+                # desapercibido.
+                print("ERROR: libro \"%s\" (%s) NO se publica: falta el archivo PDF" % (b.get("title"), slug))
+                print("       %s" % pdf_field)
+                print("       (la subida del archivo en el editor no llego a terminar -- volver a subirlo)")
+                missing_pdf.append(slug)
+                continue
         b["slug"] = slug
         books.append(b)
     books.sort(key=lambda b: (str(b.get("year", "")), b.get("title", "")), reverse=True)
-    return books
+    return books, missing_pdf
 
 
 def seo_title(title, suffix="Resurgir Nacional", limit=62):
@@ -246,7 +273,7 @@ def main():
     if INDEX_MARK_A not in tpl or INDEX_MARK_B not in tpl:
         print("ERROR: faltan los marcadores BOOKINDEX en lecturas-para-el-uruguay.html")
         return 1
-    books = load_books()
+    books, missing_pdf = load_books()
 
     # Salvaguarda: cualquier archivo en content/biblioteca/ que no sea .yml/.yaml
     # (p. ej. si el CMS algun dia usa otra extension) queda invisible para
@@ -307,6 +334,14 @@ def main():
         print("  lecturas-para-el-uruguay.html: grilla actualizada (%d libros)" % len(books))
     else:
         print("  lecturas-para-el-uruguay.html: sin cambios (%d libros)" % len(books))
+
+    if missing_pdf:
+        # El resto del sitio ya se publico bien (arriba); esto solo corta el
+        # build.py que llama a este script para que la Action termine en rojo
+        # y GitHub avise por correo -- ver detalle del porque en load_books().
+        print("ERROR: %d libro(s) sin publicar por falta de PDF: %s"
+              % (len(missing_pdf), ", ".join(missing_pdf)))
+        return 1
 
     return 0
 

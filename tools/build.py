@@ -147,28 +147,38 @@ print("built:", ", ".join(["index.html"] + list(built)))
 
 # render Formacion articles (content/formacion/*.md -> <slug>.html + article list)
 import subprocess, sys
-r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "render_articles.py")], cwd=ROOT)
-if r.returncode:
-    print("WARNING: render_articles.py salio con codigo", r.returncode)
+_failed = []
+
+
+def _run(script):
+    r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", script)], cwd=ROOT)
+    if r.returncode:
+        print("WARNING: %s salio con codigo %s" % (script, r.returncode))
+        _failed.append(script)
+
+
+_run("render_articles.py")
 
 # render Biblioteca (content/biblioteca/*.yml -> <slug>.html + grilla de libros)
-r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "render_biblioteca.py")], cwd=ROOT)
-if r.returncode:
-    print("WARNING: render_biblioteca.py salio con codigo", r.returncode)
+_run("render_biblioteca.py")
 
 # render Tienda (content/tienda/*.yml -> <slug>.html + grilla de productos)
-r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "render_tienda.py")], cwd=ROOT)
-if r.returncode:
-    print("WARNING: render_tienda.py salio con codigo", r.returncode)
+_run("render_tienda.py")
 
 # redirecciones de URLs viejas (content/redirects.yml) -- corre al final, para
 # que las paginas viejas que Formacion/Biblioteca ya borraron por renombre
 # queden libres antes de ocuparlas con la redireccion.
-r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "render_redirects.py")], cwd=ROOT)
-if r.returncode:
-    print("WARNING: render_redirects.py salio con codigo", r.returncode)
+_run("render_redirects.py")
 
 # CMS reducido para articulistas (admin/config-redactores.yml)
-r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "make_admin_redactores.py")], cwd=ROOT)
-if r.returncode:
-    print("WARNING: make_admin_redactores.py salio con codigo", r.returncode)
+_run("make_admin_redactores.py")
+
+if _failed:
+    # Un codigo de salida != 0 hace que el step de GitHub Actions quede en
+    # rojo (el resto del sitio ya se publico bien: cada _run() de arriba
+    # corrio igual). Con eso, GitHub avisa por correo a quien disparo el
+    # run -- es el aviso "con claridad" que no da el editor cuando, por
+    # ejemplo, una subida de PDF se corta a mitad de camino (ver el porque
+    # en scripts/render_biblioteca.py, load_books()).
+    print("ERROR: build.py termino con fallas en:", ", ".join(_failed))
+    sys.exit(1)
