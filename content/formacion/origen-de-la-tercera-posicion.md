@@ -1,0 +1,72 @@
+---
+title: Raíces de la Tercera Posición
+slug: origen-de-la-tercera-posicion
+date: 2026-09-23
+author: Eduardo M.
+summary: Sobre las raíces ideológicas de la llamada Tercera Posición y su evolución.
+source_url: ''
+draft: false
+---
+
+_Extracto de la obra "Nuevo Fascismo" de Eduardo M. (de la página 2 hasta la página 10)_
+
+## Inicio de la Tercera posición  
+
+Para iniciar esta reflexión, es esencial aclarar que, en el transcurso de esta exposición, emplearé el término "Tercera posición" en relación con la palabra "Fascismo", a pesar de las diversas perspectivas y opiniones que existen al respecto. Esta elección léxica busca establecer un marco conceptual que permita explorar con mayor precisión y profundidad la temática que abordaré. 
+
+En el análisis de la historia de la Tercera Posición, es crucial remontarse a una época anterior a la concepción del término "Fascismo". Se hace imperativo explorar a los autores y movimientos que abrazaron ideas erróneamente catalogadas como "extrema derecha". La teoría política que surgió en este contexto fue, en gran medida, una respuesta insatisfecha ante las condiciones existentes. 
+
+Entre 1885 y 1914, en la Tercera República Francesa, se gestaron manifestaciones de descontento, especialmente marcadas por el rechazo hacia los ecos persistentes de la Revolución que reverberaban en su historia. Este periodo experimentó notables crisis, siendo el movimiento Boulangista uno de sus destacados exponentes. Figuras como Georges Boulanger, un soldado francés, se destacaron al no adscribirse ni a la derecha ni a la izquierda, sino como un simple nacionalista con la firme intención de fortalecer a Francia y vengarse de Alemania por la pérdida territorial tras la guerra franco-prusiana. 
+
+Boulanger, obsesionado con buscar una guerra para restaurar la gloria de Francia, fue destituido de su cargo militar. Sin embargo, su incursión en la política captó la atención de las masas, y su movimiento se caracterizó por el Bonapartismo y la lucha contra la corrupción. En 1889, se le instigó a llevar a cabo un golpe de estado, lo que resultó en su persecución y exilio en Bélgica. Este episodio afectó su prestigio, culminando trágicamente con su suicidio en 1891. 
+
+En el escenario político francés, otro acontecimiento emblemático fue el caso Dreyfus. André Dreyfus, un ingeniero de origen judío, fue acusado de entregar documentos a los alemanes. Sometido a juicio, fue condenado y desterrado a las islas de Guayana Francesa. A pesar de los esfuerzos de la gente por demostrar su inocencia, los defensores de Dreyfus fueron perseguidos políticamente. Aunque se reconoció su inocencia en 1906, este caso generó una profunda inestabilidad política. 
+
+El caso Dreyfus también se convirtió en un catalizador para el surgimiento del movimiento nacional socialista, cuyo impulso ya se había intensificado con el impacto previo del movimiento liderado por Boulanger. Esta crisis política, marcada por un sincretismo entre la izquierda y la derecha, se erigió como el referente principal para pensadores como George Sorel, Maurice Barrès y Charles Maurras. 
+
+George Sorel, en particular, emerge como una figura intrigante en este contexto histórico. Su pensamiento se nutrió de la complejidad de la situación política, abogando por la acción directa y la "huelga de masas" como medio para la transformación social. Su influencia perduró a lo largo de las décadas, dejando una huella en la evolución de las ideas políticas en Francia. George Sorel, inicialmente un arquitecto con múltiples opiniones y ideas, incluyendo las políticas, transitó por un recorrido intelectual fascinante. Inició como un tradicionalista francés, pero en la década de 1890, se transformó en un marxista comprometido, no limitándose a la simple lectura, sino sometiéndolo a rigurosos cuestionamientos y análisis. Sorel sostenía que las ideas, incluso las fundamentales como la teoría del valor y la teoría de la explotación, necesitaban ser pulidas y perfeccionadas. 
+
+Dedicó una década de su vida a escudriñar las teorías de Marx, un esfuerzo que eventualmente lo llevó a distanciarse de ellas. Consideró que el marxismo se había corrompido, especialmente por los movimientos revolucionarios, destacando el carácter demasiado utópico y abstracto del blanquismo. En la visión de Sorel, la posición política más fiel a las ideas originales de Marx era un sindicalismo revolucionario. 
+
+A medida que amalgamaba sus creencias, Sorel incorporó elementos de Nietzsche, introduciendo aspectos psicológicos y heroicos en su pensamiento. Este enfoque singular, marcado por la acción directa y la "huelga de masas", se convirtió en una contribución significativa al pensamiento político, influyendo en corrientes posteriores y consolidando su legado en la evolución de las ideas políticas en Francia. 
+
+En la utopía del "Héroe proletario" erigido sobre las ruinas de la civilización, una ilusión que parecía desvanecerse, los obreros se encontraban sometidos a sus amos con una voluntad aparentemente inquebrantable. Sin embargo, Georges Sorel emergía como un faro de esperanza, ofreciendo un grupo vanguardista y revolucionario compuesto por jóvenes decididos a resistir la amenaza liberal sin inclinarse ante ella. Este círculo proyectado por Sorel, conocido como "Círculo Proudhon", formalizaba la síntesis entre los valores y la estética nacionalista con ideas revolucionarias. Admirados mutuamente, los ultra nacionalistas veían en Sorel un líder, y él a su vez los contemplaba con admiración. Así nacía la primera orden de tercera posición, enraizada en el nacionalismo, el sindicalismo, la revolución y la oposición a la burguesía ¿Los valores les parecen familiar? En 1925 la organización cambió su nombre a “Le Faisceau”
+
+Maurice Barrès, destacado periodista y novelista vinculado a movimientos postrománticos, persiguió la verdad universal a través de la espiritualidad en sus obras artísticas y literarias. Admirador ferviente de Boulanger, su incursión en la política lo llevó a ser elegido diputado. Barrès, el visionario, acuñó el término "Socialismo Nacional" como parte fundamental de su teoría, sosteniendo que un nacionalismo auténtico debe abordar la cuestión social. Para él, la unión entre burgueses y proletarios en nombre de la nación era esencial. Al igual que Sorel, Barrès despreciaba la democracia liberal, considerándola incompatible con la verdadera realización nacional. 
+
+Charles Maurras, nacido el 20 de abril de 1868 en Martigues, Francia, fue un influyente escritor y político, destacándose como el más doctrinario entre sus contemporáneos. Criado en una familia provenzal, Maurras se educó en la Universidad de Aviñón y posteriormente en la Sorbona, donde se sumergió en los círculos literarios y políticos. 
+
+Su carrera literaria despegó con la publicación de ensayos y poemas que reflejaban su profundo nacionalismo y su crítica a la democracia liberal. En 1899, cofundó la revista "Action Française", que se convertiría en la plataforma principal para sus ideas. Maurras abogó por una monarquía integral. 
+
+
+## Reflexión de la tercera posición
+
+En este panorama actual, la tercera posición se vislumbra como una respuesta a la disidencia de izquierda y la inefectividad de la derecha, en un mundo donde el desacuerdo y la disconformidad prevalecen en las doctrinas y sistemas de agrupaciones. La sociedad experimenta una profunda molestia, y la rivalidad entre izquierdismo y derechismo se manifiesta como una de las mayores tensiones globales. Hablé con un político y no pararon 5 minutos antes de que me pregunte: “¿Eres de izquierda o derecha?” 
+
+El izquierdismo, que en la primera mitad del siglo pasado se identificaba prácticamente como socialismo, ahora se percibe como un conjunto de posturas políticas, socialistas y colectivas que se autodenominan "políticamente correctos". Este término abarca desde feministas hasta activistas por los derechos humanos y de los animales. Siguiendo la perspectiva de Theodore Kaczynski, se plantea que las ideologías de izquierda y derecha son, en última instancia, expresiones de una psicología arraigada en sentimientos de inferioridad.
+
+La actualidad muestra que muchos izquierdistas se identifican intensamente con los problemas de grupos, representando la mujer como débil y necesitada de superación. Este enfoque, según el análisis, refleja el miedo de no ser igual de capaces que los hombres. A su vez, los izquierdistas tienden a manifestar aversión hacia todo lo que proyecta fortaleza, bondad y éxito, aborreciendo a los hombres blancos y tachando de imperialistas, sexistas y fascistas a los occidentales. En respuesta a esta "revolución de izquierda", surge la reacción, presentando la contraposición a lo que busca la izquierda. Sin embargo, se señala que esta reacción a menudo se traduce en un discurso de odio, atacando a grupos con propósitos legítimos, así como a individuos homosexuales o cualquier persona que se interponga en su camino. En lugar de proponer políticas útiles, esta reacción puede terminar generando una visión negativa de ideologías o filosofías que realmente buscan un cambio genuino. Así como mantengo escrito entre «En las llamas» donde expresó mi principal molestia con exactamente las mismas palabras, la izquierda y la derecha no nos representan.
+
+**_“No soy de izquierda, ni derecha, ni de centro, solo un ciudadano o campesino cansado y descontento.”_**
+
+
+## **Fascismo Clásico**
+
+Tras la concepción de la tercera posición, observamos la implementación práctica de las ideas centrales en una filosofía y estilo de vida, con la denominación dada por Benito Mussolini. Aunque el Estado Libre de Fiume marcó un hito, es innegable reconocer a Mussolini como la figura clave que otorgó el nombre adecuado a este movimiento, que hoy nos invita a explorar en la era contemporánea. Sin menospreciar al creador original, Mussolini desempeñó un papel fundamental al propiciar el nombre que caracteriza este movimiento. Surgido como respuesta a las limitaciones económicas y el descontento que Italia experimentó tras la Primera Guerra Mundial, este movimiento encarna una búsqueda de soluciones más allá de las convenciones políticas previas. Fue en este contexto que presenciamos el auténtico valor de esta filosofía, reflejado en la voluntad inquebrantable de las personas. A pesar de la inminente derrota ante los aliados, destacaron movimientos como el RSI, donde hombres valerosos, sin nada que perder, demostraron su decidido compromiso al colocar cuchillos en sus mandíbulas y lanzarse a la lucha. Más allá de la capacidad militar, resalta la capacidad volitiva de mantener la resistencia en circunstancias adversas. 
+
+
+## Árbol de la tercera posición  
+
+En el contexto mencionado, emergen diversas ramificaciones de la tercera posición o fascismo. La primera y pionera entre ellas es el "fascismo clásico", que no solo fue la iniciadora, sino que también otorgó un nombre formal a un sincretismo de ideas. 
+
+La conceptualización del fascismo, de manera análoga a resolver ecuaciones matemáticas, se basa en la premisa Fascismo = X, donde X representa la suma de ideas apropiadas para cada nación. Es un enfoque que busca adaptar y aplicar los principios fundamentales del fascismo a las características particulares de cada contexto nacional o internacional inclusive. 
+
+La analogía de representar el fascismo como un árbol, con el tronco central que es el fascismo, ramificándose en diversas ideologías y filosofías, es una metáfora intrigante. Las ramificaciones, que incluyen aspectos como la religión, el sindicalismo, el valor atribuido a la raza, el progreso tecnológico, el avance social, el tradicionalismo e incluso el ecologismo, añaden una diversidad funcional a esta ecuación conceptual, reflejando la adaptabilidad del fascismo a distintas dimensiones de la sociedad.
+
+fascista se presenta como la síntesis de elementos considerados esenciales para una nación, según la perspectiva de quienes la sostienen. Un ejemplo claro de esta es la «doctrina del fascismo», delineada por Giovanni Gentile, la cual ha experimentado modificaciones a lo largo del tiempo. Es importante destacar que no existe una representación realista o directa del fascismo, y aquellos que afirmen lo contrario probablemente estén haciendo referencia a una interpretación particular de este movimiento, inclusive debería existir el análisis a la diferencia entre el reino de Italia (1922-1943) y la República de Salo (1943-1945) 
+
+En el análisis de las diferencias entre fascismos, es crucial reconocer la complejidad inherente a las ideologías políticas. A menudo, caemos en la trampa de simplificarlas en términos de buenos y malos, izquierda y derecha, cuando en realidad, estas categorías no capturan la totalidad de las filosofías políticas. Es fundamental evitar esquemas rígidos, ya que la realidad política y filosófica es más matizada. Si bien existen extremos, etiquetar el fascismo como simplemente opuesto al comunismo o liberalismo es un error común. La tercera posición, como el Nacional Bolchevismo, desafía fácilmente las clasificaciones simplistas y requiere un análisis más profundo para comprender sus matices y diferencias, dando un ejemplo algo conocido. Así como en una ecuación matemática se puede formar un sistema fascista al considerar el factor clave representado por X como la esencia de la tercera posición, es posible construir el modelo añadiendo elementos pertinentes. De este modo, se establece un paralelo con la matemática, donde el Fascismo se define por el factor X y se desarrolla mediante la incorporación de componentes específicos que corresponden a su naturaleza. 
+
+En esta representación sencilla, observamos cómo la incorporación o suma de la fe junto a la tercera posición genera diversos movimientos. La combinación de estos elementos esencialmente contribuye a la formación de distintas corrientes. 
+
+_-Eduardo M. 5 de febrero del 2024, México._
