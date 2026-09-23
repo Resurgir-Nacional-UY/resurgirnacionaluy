@@ -6,7 +6,14 @@
   <atom:link href="https://resurgirnacionaluy.org/feed.xml" rel="self" type="application/rss+xml" />
   <description>Artículos de formación del movimiento Resurgir Nacional.</description>
   <language>es-uy</language>
-  <lastBuildDate>Tue, 22 Sep 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 23 Sep 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Raíces de la Tercera Posición</title>
+    <link>https://resurgirnacionaluy.org/origen-de-la-tercera-posicion.html</link>
+    <guid isPermaLink="true">https://resurgirnacionaluy.org/origen-de-la-tercera-posicion.html</guid>
+    <pubDate>Wed, 23 Sep 2026 12:00:00 +0000</pubDate>
+    <description>Sobre las raíces ideológicas de la llamada Tercera Posición y su evolución.</description>
+  </item>
   <item>
     <title>El Reglamento de Tierras de José Artigas</title>
     <link>https://resurgirnacionaluy.org/jose-gervasio-artigas.html</link>
