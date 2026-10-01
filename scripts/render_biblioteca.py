@@ -21,6 +21,9 @@ CONTENT = os.path.join(ROOT, "content", "biblioteca")
 TEMPLATE = os.path.join(ROOT, "lecturas-para-el-uruguay.html")
 OG_DIR = os.path.join(ROOT, "og")
 SITE = "https://resurgirnacionaluy.org/"
+INDEX_NAME = "libros.html"
+INDEX = os.path.join(ROOT, INDEX_NAME)
+HUB_LIMIT = 6   # libros que se muestran en la portada de Biblioteca antes de "Ver todos"
 MARK_A = "<!-- BOOKS:START -->"
 MARK_B = "<!-- BOOKS:END -->"
 INDEX_MARK_A = "<!-- BOOKINDEX:START -->"
@@ -36,7 +39,7 @@ TEMA_ORDER = [
 ]
 GEN_MARK = "<!-- generated:biblioteca-book -->"
 RESERVED = {"index", "vision", "formacion", "sagradocorazondejesus", "biblioteca",
-            "admin", "404", "readme", "articulos",
+            "admin", "404", "readme", "articulos", "libros",
             "ideario-y-valores-rn", "catolicismo-en-uruguay", "cultura-nacional-uruguaya",
             "lecturas-para-el-uruguay", "tienda-resurgir-nacional"}
 
@@ -60,6 +63,10 @@ def wr(p, s):
 def esc(s):
     import html
     return html.escape(str(s), quote=True)
+
+
+def _collapse(s):
+    return re.sub(r"\s+", " ", str(s or "")).strip()
 
 
 def load_books():
@@ -237,10 +244,12 @@ def book_page(tpl, b):
 
 
 def cards_block(books):
+    """Bloque para la portada de Biblioteca: los HUB_LIMIT más recientes + enlace al índice
+    completo (mismo criterio que list_block() en render_articles.py para Formación)."""
     if not books:
         return ""
     rows = []
-    for b in books:
+    for b in books[:HUB_LIMIT]:
         search_text = "%s %s" % (b["title"], b.get("author") or "")
         rows.append(
             '        <a class="act" href="%s.html" data-s="%s">\n'
@@ -249,7 +258,11 @@ def cards_block(books):
             '          <span class="act__meta">%s</span>\n'
             '        </a>' % (b["slug"], esc(search_text), esc(b["title"]), esc(b.get("summary", "")), esc(meta_line(b)))
         )
-    return '\n      <div class="acts acts--articles">\n' + "\n".join(rows) + "\n      </div>\n      "
+    block = '\n      <div class="acts acts--articles">\n' + "\n".join(rows) + "\n      </div>\n"
+    if len(books) > HUB_LIMIT:
+        block += ('      <p class="acts__more"><a class="btn btn--rounded" href="%s">'
+                  'Ver todos los libros (%d)&nbsp;→</a></p>\n' % (INDEX_NAME, len(books)))
+    return block + "      "
 
 
 def index_panel_block(books):
@@ -339,6 +352,140 @@ def index_panel_block_tema(books):
     return "\n" + "\n".join(parts) + "\n          "
 
 
+INDEX_JS = """      <script>
+        (function () {
+          var box = document.querySelector('.art-search');
+          var rows = [].slice.call(document.querySelectorAll('.art-row'));
+          var none = document.querySelector('.art-nores');
+          if (!box || !rows.length) return;
+          var norm = function (s) {
+            return s.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
+          };
+          var keys = rows.map(function (r) { return norm(r.getAttribute('data-s') || ''); });
+          try {
+            var qp = new URLSearchParams(location.search).get('q');
+            if (qp) box.value = qp;
+          } catch (e) {}
+          var apply = function () {
+            var q = norm(box.value.trim());
+            var shown = 0;
+            rows.forEach(function (r, i) {
+              var hit = !q || keys[i].indexOf(q) !== -1;
+              r.hidden = !hit;
+              if (hit) shown += 1;
+            });
+            [].forEach.call(document.querySelectorAll('.art-rows'), function (g) {
+              var any = [].some.call(g.querySelectorAll('.art-row'), function (r) { return !r.hidden; });
+              g.hidden = !any;
+              var head = g.previousElementSibling;
+              if (head && head.classList.contains('art-month')) head.hidden = !any;
+            });
+            if (none) none.hidden = shown !== 0;
+          };
+          box.addEventListener('input', apply);
+          apply();
+        })();
+      </script>"""
+
+
+def index_rows(books):
+    """Filas del índice completo, agrupadas por año con un <h2 id="y-AAAA"> por grupo
+    (los libros solo tienen año, no mes/día como los artículos)."""
+    parts, cur = [], None
+    for b in books:
+        y = str(b.get("year") or "") or None
+        if y != cur:
+            if cur is not None:
+                parts.append("        </div>")
+            label, anchor = (y, "y-%s" % y) if y else ("Sin fecha", "y-sinfecha")
+            parts.append('        <h2 class="art-month" id="%s">%s</h2>' % (anchor, esc(label)))
+            parts.append('        <div class="art-rows">')
+            cur = y
+        summary = _collapse(b.get("summary", ""))
+        hay = _collapse("%s %s %s" % (b.get("title", ""), summary, b.get("author", "")))
+        parts.append(
+            '          <a class="art-row" href="%s.html" data-s="%s">'
+            '<span class="art-row__date">%s</span>'
+            '<span class="art-row__title">%s</span>'
+            '<span class="art-row__sum">%s</span></a>'
+            % (b["slug"], esc(hay), esc(y or "s/f"), esc(b["title"]), esc(summary))
+        )
+    if cur is not None:
+        parts.append("        </div>")
+    return "\n".join(parts)
+
+
+def archive_nav(books):
+    """Menú lateral estilo blog: lista plana de años con la cantidad de libros de
+    cada uno (sin desplegable anidado por mes, a diferencia del de artículos,
+    porque los libros no tienen mes de publicación)."""
+    years = []
+    for b in books:
+        y = str(b.get("year") or "") or None
+        if not y:
+            continue
+        if not years or years[-1][0] != y:
+            years.append([y, 0])
+        years[-1][1] += 1
+    if not years:
+        return "      <nav class=\"arc\" aria-label=\"Archivo por año\"></nav>"
+    out = ['      <nav class="arc" aria-label="Archivo por año">',
+           '        <p class="arc__title">Archivo</p>',
+           '        <ul class="arc__years">']
+    for y, c in years:
+        out.append('          <li><a href="#y-%s">%s <span>(%d)</span></a></li>' % (y, esc(y), c))
+    out.append('        </ul>')
+    out.append('      </nav>')
+    return "\n".join(out)
+
+
+def index_page(tpl, books):
+    """Índice completo: libros.html, con buscador en vivo. Reusa el chrome de
+    lecturas-para-el-uruguay.html (mismo patrón que articulos.html para Formación)."""
+    pre = tpl[:tpl.index("<main>")]
+    post = tpl[tpl.index("</main>") + len("</main>"):]
+    desc = "Todos los libros de la Biblioteca de Resurgir Nacional: textos de dominio público en PDF."
+    pre = re.sub(r"<title>.*?</title>", "<title>Libros de la Biblioteca · Resurgir Nacional</title>", pre, count=1, flags=re.S)
+    pre = pre.replace(SITE + "lecturas-para-el-uruguay.html", SITE + INDEX_NAME)   # canonical, hreflang, og:url
+    pre = re.sub(r'(<meta name="description" content=")[^"]*(")',
+                 lambda m: m.group(1) + esc(desc) + m.group(2), pre, count=1)
+    pre = re.sub(r'(<meta property="og:title" content=")[^"]*(")',
+                 lambda m: m.group(1) + "Libros de la Biblioteca — Resurgir Nacional" + m.group(2), pre, count=1)
+    pre = re.sub(r'(<meta property="og:description" content=")[^"]*(")',
+                 lambda m: m.group(1) + esc(desc) + m.group(2), pre, count=1)
+    pre = pre.replace("<head>", "<head>\n" + GEN_MARK, 1)
+    n = len(books)
+    lead = ("%d libros. Buscá por título o autor." % n) if n \
+        else "Todavía no hay libros publicados."
+    main_html = (
+        '<main>\n'
+        '  <article class="doc">\n'
+        '    <section>\n'
+        '      <span class="label">Biblioteca</span>\n'
+        '      <h1>Libros</h1>\n'
+        '      <p class="doc-lead">%s</p>\n'
+        '    </section>\n'
+        '    <div class="art-layout">\n'
+        '      <aside class="art-side">\n'
+        '%s\n'
+        '      </aside>\n'
+        '      <div class="art-main">\n'
+        '        <input type="search" class="art-search" placeholder="Buscar…" '
+        'aria-label="Buscar libros" autocomplete="off" />\n'
+        '        <p class="art-nores" hidden>No hay libros que coincidan con la búsqueda.</p>\n'
+        '        <div class="art-index">\n'
+        '%s\n'
+        '        </div>\n'
+        '        <p style="margin-top:2.5rem"><a href="lecturas-para-el-uruguay.html">← Volver a Biblioteca</a></p>\n'
+        '      </div>\n'
+        '    </div>\n'
+        '%s\n'
+        '  </article>\n'
+        '</main>' % (esc(lead), archive_nav(books), index_rows(books), INDEX_JS)
+    )
+    return pre + main_html + post
+
+
 def main():
     if not os.path.isdir(CONTENT):
         os.makedirs(CONTENT, exist_ok=True)
@@ -382,6 +529,15 @@ def main():
         if write_og_image(b):
             print("  og/%s: imagen social actualizada" % og_name(b["slug"]))
         written.add(b["slug"] + ".html")
+
+    # índice completo libros.html — solo si hay más libros que los de la portada
+    if len(books) > HUB_LIMIT:
+        page = index_page(tpl, books)
+        if not os.path.exists(INDEX) or rd(INDEX) != page:
+            wr(INDEX, page)
+            print("  escrito: %s (%d libros)" % (INDEX_NAME, len(books)))
+        written.add(INDEX_NAME)
+    # si no supera el límite, sobra: lo borra la limpieza de abajo (lleva GEN_MARK)
 
     # remove stale generated book pages
     for path in glob.glob(os.path.join(ROOT, "*.html")):

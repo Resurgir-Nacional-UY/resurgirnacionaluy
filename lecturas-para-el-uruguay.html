@@ -125,6 +125,41 @@
   a.act h3 { color: var(--ink); transition: color .18s ease; }
   a.act:hover h3 { color: var(--blue); }
   .act__meta { display: block; margin-top: 0.55rem; font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-text); }
+  /* "Ver todos" bajo la lista corta de la portada de Biblioteca */
+  .acts__more { margin: 1.4rem 0 0; }
+  /* Índice completo de libros (libros.html) — con menú de archivo por año */
+  .art-layout { display: grid; grid-template-columns: 12.5rem minmax(0, 1fr); gap: 2.75rem; align-items: start; margin-top: 0.5rem; }
+  .art-side { position: sticky; top: calc(var(--header-h) + 1rem); }
+  .art-main { min-width: 0; }
+  .arc__title { font-family: "Archivo", system-ui, sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-text); margin: 0 0 0.55rem; }
+  .arc__years { list-style: none; display: flex; flex-direction: column; }
+  .arc__years li a { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.5rem 0; border-top: 1px solid var(--line); font-family: "Archivo", sans-serif; font-size: 0.88rem; color: var(--ink-soft); text-decoration: none; }
+  .arc__years li:last-child a { border-bottom: 1px solid var(--line); }
+  .arc__years li a:hover { color: var(--blue); }
+  .arc__years li a span { font-variant-numeric: tabular-nums; font-size: 0.8rem; opacity: 0.7; }
+  .art-search { width: 100%; margin: 0 0 0.4rem; padding: 0.7rem 0.9rem; font: inherit; font-size: 1rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; }
+  .art-search::placeholder { color: var(--ink-soft); }
+  .art-search:focus-visible { outline: 2px solid var(--gold-line); outline-offset: 1px; border-color: var(--gold-line); }
+  .art-month { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); margin: 1.9rem 0 0; scroll-margin-top: calc(var(--header-h) + 1.5rem); }
+  .art-index > .art-month:first-child { margin-top: 0; }
+  .art-month:target { color: var(--blue); }
+  .art-rows { display: flex; flex-direction: column; }
+  .art-row { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.15rem 1rem; padding: 0.8rem 0; border-top: 1px solid var(--line); text-decoration: none; color: inherit; }
+  .art-rows .art-row:last-child { border-bottom: 1px solid var(--line); }
+  .art-row__date { font-family: "Archivo", sans-serif; font-size: 0.8rem; color: var(--ink-soft); padding-top: 0.2rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .art-row__title { font-family: "Fraunces", Georgia, serif; font-size: 1.08rem; line-height: 1.35; color: var(--ink); transition: color .15s ease; }
+  .art-row:hover .art-row__title { color: var(--blue); }
+  .art-row__sum { grid-column: 2; font-size: 0.9rem; color: var(--ink-soft); line-height: 1.5; }
+  .art-row__sum:empty { display: none; }
+  @media (max-width: 820px) {
+    .art-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+    .art-side { position: static; }
+    .arc { border: 1px solid var(--line); border-radius: 4px; padding: 0.9rem 1rem; }
+  }
+  @media (max-width: 560px) {
+    .art-row { grid-template-columns: 1fr; }
+    .art-row__sum { grid-column: 1; }
+  }
 
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
   /* Pestañas Artículos / Biblioteca */
@@ -328,9 +363,9 @@
           <a class="pub-tab" href="cultura-nacional-uruguaya.html#publicaciones">Artículos</a>
           <span class="pub-tab pub-tab--on" aria-current="page">Biblioteca</span>
         </div>
-        <form class="pub-search" role="search" onsubmit="return false;">
+        <form class="pub-search" action="libros.html" method="get" role="search">
           <label for="bib-search-input" class="sr-only">Buscar libros</label>
-          <input id="bib-search-input" type="search" placeholder="Busca por título o autor" autocomplete="off" />
+          <input id="bib-search-input" type="search" name="q" placeholder="Busca por título o autor" autocomplete="off" />
           <button type="submit" aria-label="Buscar">
             <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M13.6 12.2a6 6 0 1 0-1.4 1.4l4.1 4.1 1.4-1.4-4.1-4.1ZM8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z"/></svg>
           </button>
@@ -720,138 +755,11 @@ natural. Aspira a que tan trascendente tema sea profundizado por aquellos a quie
           <p>Excelente e imprescindible repaso sobre las diversas doctrinas que han engendrado los movimientos nacionalistas de la vieja Europa.</p>
           <span class="act__meta">Jacques Ploncard d&#x27;Assac · 1971</span>
         </a>
-        <a class="act" href="evolucion-econmica-de-la-banda-oriental.html" data-s="Evolución económica de la Banda Oriental Varios Autores">
-          <h3>Evolución económica de la Banda Oriental</h3>
-          <p>En este libro, Lucia Sala De Touron, Julio Carlos Rodríguez y Nelson De La Torre exponen y explican cómo fue desarrollándose las estructuras económicas que acondicionaron la vida en la Banda Oriental.</p>
-          <span class="act__meta">Varios Autores · 1969</span>
-        </a>
-        <a class="act" href="artigas-como-militar.html" data-s="Artigas como militar Oscar Antunez Olivera">
-          <h3>Artigas como militar</h3>
-          <p>Texto publicado originalmente en EL PAÍS, 1950, del coronel oriental Oscar Antunez Olivera, donde se analiza militarmente a la figura de José Gervasio Artigas.</p>
-          <span class="act__meta">Oscar Antunez Olivera · 1950</span>
-        </a>
-        <a class="act" href="artigas-jose-enrique-rodo.html" data-s="ARTIGAS José Enrique Rodó">
-          <h3>ARTIGAS</h3>
-          <p>En 1917, los estudiantes de la “Asociación Salto” invitaron a José Enrique Rodó para que los acompañase en la peregrinación patriótica que, cada año, realizaban hasta la Meseta de Artigas. 
-El Maestro decidió concurrir, pero no pudo hacerlo. Escribió, sin embargo, el MENSAJE prometido, у confió el honor de leerlo al doctor Carlos María Prando, quien lo hizo con magnifica prestancia, en acto solemne, el 18 de julio, en la ciudad de Salto.</p>
-          <span class="act__meta">José Enrique Rodó · 1950</span>
-        </a>
-        <a class="act" href="santa-biblia-uruguay.html" data-s="Sagradas Escrituras (Nácar-Colunga 1ra edición) Varios Autores">
-          <h3>Sagradas Escrituras (Nácar-Colunga 1ra edición)</h3>
-          <p>La primera versión completa de la Biblia, hecha de las
-lenguas originales, hebrea y griega, al castellano por  Autores Católicos, con la que la Editorial Católica inicia, bajo los auspicios y la alta dirección de la Pontificia Universidad de Salamanca, su Biblioteca de Autores Cristianos, no hubiese podido ser publicada en circunstancia más propicia ni presentada con cartas credenciales más augustas y autorizadas que la Encíclica Divino Afflante Spiritu, de Su Santidad Pío XII.</p>
-          <span class="act__meta">Varios Autores · 1944</span>
-        </a>
-        <a class="act" href="la-tierra-de-sanabria-vocacion-autonomica-de-la-banda-oriental.html" data-s="La Tierra de Sanabria: vocación autonómica de la Banda Oriental Guillermo García Moyano">
-          <h3>La Tierra de Sanabria: vocación autonómica de la Banda Oriental</h3>
-          <p>La Tierra de Sanabria, de Guillermo García Moyano, es una obra importantísima históricamente, porque interpreta la formación de la Banda Oriental desde una perspectiva que pone el punto importante en su temprana vocación de autonomía.</p>
-          <span class="act__meta">Guillermo García Moyano · 1944</span>
-        </a>
-        <a class="act" href="perfiles-para-un-nacionalismo.html" data-s="Perfiles para un nacionalismo Alejandro Gallinal Heber">
-          <h3>Perfiles para un nacionalismo</h3>
-          <p>Texto perteneciente al pensador oriental, Alejandro Gallinal Heber, sobre elementos que deben perfilar, según su visión la cual fundamenta, un nacionalismo.</p>
-          <span class="act__meta">Alejandro Gallinal Heber · 1942</span>
-        </a>
-        <a class="act" href="doctrina-social-iglesia.html" data-s="La Doctrina Social de la Iglesia Leon XIII, Pío XI">
-          <h3>La Doctrina Social de la Iglesia</h3>
-          <p>Un manual de DOCTRINA SOCIAL CATÓLICA no podía escribirse de mejor modo que los recopiladores de este libro lo hacen. Dejando para obras de otro carácter una labor más personal en la exposición o el comentario, de índole de este libro pedía, en efecto, el contenido de que se le ha provisto, a saber: una selección de los documentos en que se contiene lo más importante de la doctrina social de la Iglesia. Han creído, no obstante, los autores que a la transcripción de textos debieran preceder algunas consideraciones acerca del conjunto de la doctrina que en ellos se expone, y me piden que por vía de prólogo las haga. Tomando yo de entre los documentos que al lector se ofrecen aquellos que son como la fuente de donde 105 demás toman su origen, esto es, las encíclicas sociales de León XIII y de Pío XI, intentaré un examen comparativo entre ellas, del que por fuerza ha de resultar hecho ese estudio de conjunto que se desea.</p>
-          <span class="act__meta">Leon XIII, Pío XI · 1939</span>
-        </a>
-        <a class="act" href="el-ocaso-de-la-democracia-alberto-zum-felde.html" data-s="El ocaso de la democracia Alberto Zum Felde">
-          <h3>El ocaso de la democracia</h3>
-          <p>En esta obra del año 1939, el autor oriental Alberto Zum Felde, realiza una crítica profunda y lúcida al sistema democrático liberal. A pesar del tiempo transcurrido desde que este libro vio la luz, su visión plasmada en ese entonces no puede ser omitida por nada del mundo.</p>
-          <span class="act__meta">Alberto Zum Felde · 1939</span>
-        </a>
-        <a class="act" href="gabriel-terra-uruguay.html" data-s="La Revolución de Marzo Gabriel Terra">
-          <h3>La Revolución de Marzo</h3>
-          <p>¡Desde el Movimiento de Tercera Posición, Resurgir Nacional, les traemos con orgullo este libro! 
-
-&quot;La Revolución de Marzo&quot; es un libro que recopila los mejores discursos de Gabriel Terra, el último gran estatista y gran líder de la República Oriental del Uruguay, único gobernante de Tercera Posición que tuvo el país.</p>
-          <span class="act__meta">Gabriel Terra · 1938</span>
-        </a>
-        <a class="act" href="gabriel-terra-1937.html" data-s="Así habló Terra el 18 de mayo de 1937 Gabriel Terra">
-          <h3>Así habló Terra el 18 de mayo de 1937</h3>
-          <p>Discurso pronunciado por el Dr. Gabriel Terra durante el acto de colocación de la piedra fundacional de la obra hidroeléctrica de Río Negro, misma obra que es considerada un hito de la ingeniería en el continente.</p>
-          <span class="act__meta">Gabriel Terra · 1937</span>
-        </a>
-        <a class="act" href="roma-el-espiritu-de-occidente.html" data-s="Roma y el espíritu de occidente Adolfo Agorio">
-          <h3>Roma y el espíritu de occidente</h3>
-          <p>Una de las obras más importantes del Uruguay, publicada en 1934, y perteneciente uno de los pensadores más importantes de nuestra nación. Roma y el espíritu de occidente de Adolfo Agorio fue una gran reflexión y estudio sobre los tiempos antes de la guerra de 1939, y sorprendentemente, muchas de las cosas plasmadas en este libro son de actualidad.</p>
-          <span class="act__meta">Adolfo Agorio · 1934</span>
-        </a>
-        <a class="act" href="los-capuchinos-genoveses-en-el-rio-de-la-plata.html" data-s="Los capuchinos genoveses en el Río de la Plata Padre Antonio María">
-          <h3>Los capuchinos genoveses en el Río de la Plata</h3>
-          <p>Historia de la misión de los frailes capuchinos genoveses en el Río de la Plata, editado en Montevideo en 1933.</p>
-          <span class="act__meta">Padre Antonio María · 1933</span>
-        </a>
-        <a class="act" href="monsenor-jacinto-vera.html" data-s="Monseñor D. Jacinto Vera Rafael Algorta Camusso">
-          <h3>Monseñor D. Jacinto Vera</h3>
-          <p>Biografía de Monseñor Jacinto Vera, primer obispo del Uruguay, editada en Montevideo en 1931.</p>
-          <span class="act__meta">Rafael Algorta Camusso · 1931</span>
-        </a>
-        <a class="act" href="energia-hidroelectrica-rio-negro-uruguay.html" data-s="La energía hidroeléctrica del Río Negro Gabriel Terra">
-          <h3>La energía hidroeléctrica del Río Negro</h3>
-          <p>Texto publicado a través de la Asociación Patriótica del Uruguay, en 1928, donde el Dr. Gabriel Terra explica la necesidad y beneficio que conllevaba el aprovechar la capacidad energética del Río Negro para el país.</p>
-          <span class="act__meta">Gabriel Terra · 1928</span>
-        </a>
-        <a class="act" href="la-religion-de-artigas.html" data-s="La religión del héroe Juan Zorilla de San Martín">
-          <h3>La religión del héroe</h3>
-          <p>Texto perteneciente a la Federación de la Juventud Católica del Uruguay, publicado originalmente en Montevideo, febrero 28 de 1923.
-
-Juan Zorrilla de San Martin. De la epopeya de Artigas.</p>
-          <span class="act__meta">Juan Zorilla de San Martín · 1923</span>
-        </a>
-        <a class="act" href="ataraxia-adolfo-agorio.html" data-s="Ataraxia Adolfo Agorio">
-          <h3>Ataraxia</h3>
-          <p>Obra de Adolfo Agorio, que es predecesora a &quot;Roma y el espíritu de Occidente&quot; del mismo autor. En esta obra titulada como Ataraxia, Agorio reflexiona con lenguaje poético y profundo sobre numerosas cuestiones como la democracia, la civilización, la conquista de américa, entre otras.</p>
-          <span class="act__meta">Adolfo Agorio · 1923</span>
-        </a>
-        <a class="act" href="la-tierra-charrua.html" data-s="La Tierra Charrúa Luis Alberto de Herrera">
-          <h3>La Tierra Charrúa</h3>
-          <p>Ensayo publicado en 1901 por el político oriental, Luis Alberto de Herrera, centrado en las vicisitudes histórico-políticas a las que nuestro país se vio cruzado.</p>
-          <span class="act__meta">Luis Alberto de Herrera · 1901</span>
-        </a>
-        <a class="act" href="ariel-jose-enrique-rodo.html" data-s="El Ariel José Enrique Rodó">
-          <h3>El Ariel</h3>
-          <p>Junto a Adolfo Agorio, José Enrique Rodó es de los pensadores más trascendentales de nuestra patria. En esta obra de Ariel, Rodó manifiesta el ideal que ha de guiarnos a la juventud.</p>
-          <span class="act__meta">José Enrique Rodó · 1900</span>
-        </a>
-        <a class="act" href="la-leyenda-patria.html" data-s="La Leyenda Patria Juan Zorrilla de San Martín">
-          <h3>La Leyenda Patria</h3>
-          <p>Poema nacional de nuestra Patria el Uruguay, escrito por el oriental Juan Zorrilla de San Martín, donde se canta la gesta heroica de los Treinta y Tres Orientales.
-
-&quot;Abundancia de ideas e imágenes, gallardía y vigor tal es el plan sencillo y grande del poema. En cuanto a la ejecución, al estilo poético, me parece de todo punto admirable. Abundancia de ideas e imágenes, gallardía y vigor en la estructura del período poético, frescura y novedad; tiene Zorrilla las grandes fases del genio poético.&quot; -PABLO GROUSSAC.</p>
-          <span class="act__meta">Juan Zorrilla de San Martín · 1896</span>
-        </a>
       </div>
+      <p class="acts__more"><a class="btn btn--rounded" href="libros.html">Ver todos los libros (25)&nbsp;→</a></p>
       <!-- BOOKS:END -->
-          <p class="art-nores" hidden>No se encontraron libros para esa búsqueda.</p>
         </div>
       </div>
-      <script>
-        (function () {
-          var box = document.getElementById('bib-search-input');
-          var rows = [].slice.call(document.querySelectorAll('.pub-main .act'));
-          var none = document.querySelector('.pub-main .art-nores');
-          if (!box || !rows.length) return;
-          var norm = function (s) {
-            return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
-          };
-          var keys = rows.map(function (r) { return norm(r.getAttribute('data-s') || ''); });
-          var apply = function () {
-            var q = norm(box.value.trim());
-            var shown = 0;
-            rows.forEach(function (r, i) {
-              var hit = !q || keys[i].indexOf(q) !== -1;
-              r.hidden = !hit;
-              if (hit) shown += 1;
-            });
-            if (none) none.hidden = shown !== 0;
-          };
-          box.addEventListener('input', apply);
-          apply();
-        })();
-      </script>
     </section>
 
     <section class="write-cta">
