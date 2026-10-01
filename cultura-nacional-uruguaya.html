@@ -292,8 +292,13 @@
   .pub-index__tab { flex: 1; font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.66rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.35rem 0.2rem; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--ink-soft); cursor: pointer; text-align: center; transition: background .15s ease, color .15s ease, border-color .15s ease; }
   .pub-index__tab:hover { color: var(--ink); border-color: var(--gold-line); }
   .pub-index__tab--on, .pub-index__tab--on:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
-  .pub-index__group-label { display: block; font-family: "Archivo", sans-serif; font-weight: 700; font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin: 1.1rem 0 0.35rem; }
-  .pub-index__view > span.pub-index__group-label:first-of-type { margin-top: 0; }
+  .pub-index__group { border-top: 1px solid var(--line); margin-top: 0.5rem; padding-top: 0.5rem; }
+  .pub-index__view > .pub-index__group:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
+  .pub-index__group-label { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; font-family: "Archivo", sans-serif; font-weight: 700; font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
+  .pub-index__group-label::-webkit-details-marker { display: none; }
+  .pub-index__group-label::before { content: "\25B8"; font-size: 0.6rem; color: var(--gold-text); transition: transform .15s ease; }
+  .pub-index__group[open] > .pub-index__group-label::before { transform: rotate(90deg); }
+  .pub-index__group-rows { display: flex; flex-direction: column; margin-top: 0.35rem; }
   @media (max-width: 820px) { .pub-layout { grid-template-columns: 1fr; } .pub-index { position: static; } }
   @media (max-width: 560px) { .pub-head { align-items: stretch; } .pub-search { max-width: none; } }
   .art-nores { color: var(--ink-soft); font-style: italic; margin-top: 0.6rem; }
@@ -407,99 +412,119 @@
           </div>
           <div class="pub-index__view" data-view="tema">
             <!-- PUBINDEXTEMA:START -->
-          <span class="pub-index__group-label">Tercera Posición e ideología</span>
-          <a class="pub-index__row pub-index__row--active" href="encrucijadas-en-la-historia-politica-economica-del-mundo.html">
-            <span class="pub-index__num">01</span>
-            <span class="pub-index__title">Encrucijada en la historia política y económica del mundo</span>
-          </a>
-          <a class="pub-index__row" href="origen-de-la-tercera-posicion.html">
-            <span class="pub-index__num">02</span>
-            <span class="pub-index__title">Raíces de la Tercera Posición</span>
-          </a>
-          <a class="pub-index__row" href="critica-a-la-democracia.html">
-            <span class="pub-index__num">03</span>
-            <span class="pub-index__title">Juicio a la democracia</span>
-          </a>
-          <a class="pub-index__row" href="fascismo-en-uruguay.html">
-            <span class="pub-index__num">04</span>
-            <span class="pub-index__title">Tercera Posición para el Uruguay del siglo XXI</span>
-          </a>
-          <a class="pub-index__row" href="fundamentos-politicos.html">
-            <span class="pub-index__num">05</span>
-            <span class="pub-index__title">Fundamentos de Política</span>
-          </a>
-          <a class="pub-index__row" href="sobre-el-espiritu-del-fascismo.html">
-            <span class="pub-index__num">06</span>
-            <span class="pub-index__title">La ideología fascista y el mundo académico.</span>
-          </a>
-          <a class="pub-index__row" href="izquierda-y-derecha-en-uruguay.html">
-            <span class="pub-index__num">07</span>
-            <span class="pub-index__title">Más allá de la izquierda y la derecha.</span>
-          </a>
-          <a class="pub-index__row" href="tercera-posicion-en-uruguay.html">
-            <span class="pub-index__num">08</span>
-            <span class="pub-index__title">Fascismo Oriental.</span>
-          </a>
-          <span class="pub-index__group-label">Historia nacional</span>
-          <a class="pub-index__row" href="jose-gervasio-artigas.html">
-            <span class="pub-index__num">01</span>
-            <span class="pub-index__title">El Reglamento de Tierras de José Artigas</span>
-          </a>
-          <a class="pub-index__row" href="interior-del-uruguay.html">
-            <span class="pub-index__num">02</span>
-            <span class="pub-index__title">Sobre el interior del Uruguay</span>
-          </a>
-          <a class="pub-index__row" href="sobre-stalin-y-hitler.html">
-            <span class="pub-index__num">03</span>
-            <span class="pub-index__title">Hitler, Stalin y la segunda guerra mundial...</span>
-          </a>
-          <a class="pub-index__row" href="revisionismo-historico-uruguay.html">
-            <span class="pub-index__num">04</span>
-            <span class="pub-index__title">Sobre la Segunda Guerra Mundial...</span>
-          </a>
-          <a class="pub-index__row" href="gabriel-terra-revolucion-de-marzo.html">
-            <span class="pub-index__num">05</span>
-            <span class="pub-index__title">Gabriel Terra: Jefe de la Revolución de Marzo.</span>
-          </a>
-          <span class="pub-index__group-label">Religión y fe</span>
-          <a class="pub-index__row" href="inmigracion-en-uruguay.html">
-            <span class="pub-index__num">01</span>
-            <span class="pub-index__title">Sobre la inmigración</span>
-          </a>
-          <a class="pub-index__row" href="la-iglesia-catolica-y-la-educacion-uruguaya.html">
-            <span class="pub-index__num">02</span>
-            <span class="pub-index__title">La Iglesia Católica y la educación uruguaya.</span>
-          </a>
-          <span class="pub-index__group-label">Cultura, sociedad y patria</span>
-          <a class="pub-index__row" href="republica-oriental-del-uruguay.html">
-            <span class="pub-index__num">01</span>
-            <span class="pub-index__title">¡Por la patria!</span>
-          </a>
-          <a class="pub-index__row" href="hegemonia-cultural-uruguay.html">
-            <span class="pub-index__num">02</span>
-            <span class="pub-index__title">Hegemonía cultural vs revolución por las armas.</span>
-          </a>
-          <a class="pub-index__row" href="el-aborto-en-uruguay.html">
-            <span class="pub-index__num">03</span>
-            <span class="pub-index__title">Aborto, el grito silenciado del Uruguay.</span>
-          </a>
-          <a class="pub-index__row" href="patriotismo-en-uruguay.html">
-            <span class="pub-index__num">04</span>
-            <span class="pub-index__title">Resignificación de los valores patrióticos.</span>
-          </a>
-          <a class="pub-index__row" href="democracia-en-uruguay.html">
-            <span class="pub-index__num">05</span>
-            <span class="pub-index__title">Hombres de voto.</span>
-          </a>
-          <span class="pub-index__group-label">Economía y soberanía</span>
-          <a class="pub-index__row" href="economia-uruguay-2026.html">
-            <span class="pub-index__num">01</span>
-            <span class="pub-index__title">La prostitución de la economía.</span>
-          </a>
-          <a class="pub-index__row" href="el-potencial-de-uruguay.html">
-            <span class="pub-index__num">02</span>
-            <span class="pub-index__title">Nuestro potencial nacional.</span>
-          </a>
+          <details class="pub-index__group" open>
+            <summary class="pub-index__group-label">Tercera Posición e ideología</summary>
+            <div class="pub-index__group-rows">
+              <a class="pub-index__row pub-index__row--active" href="encrucijadas-en-la-historia-politica-economica-del-mundo.html">
+                <span class="pub-index__num">01</span>
+                <span class="pub-index__title">Encrucijada en la historia política y económica del mundo</span>
+              </a>
+              <a class="pub-index__row" href="origen-de-la-tercera-posicion.html">
+                <span class="pub-index__num">02</span>
+                <span class="pub-index__title">Raíces de la Tercera Posición</span>
+              </a>
+              <a class="pub-index__row" href="critica-a-la-democracia.html">
+                <span class="pub-index__num">03</span>
+                <span class="pub-index__title">Juicio a la democracia</span>
+              </a>
+              <a class="pub-index__row" href="fascismo-en-uruguay.html">
+                <span class="pub-index__num">04</span>
+                <span class="pub-index__title">Tercera Posición para el Uruguay del siglo XXI</span>
+              </a>
+              <a class="pub-index__row" href="fundamentos-politicos.html">
+                <span class="pub-index__num">05</span>
+                <span class="pub-index__title">Fundamentos de Política</span>
+              </a>
+              <a class="pub-index__row" href="sobre-el-espiritu-del-fascismo.html">
+                <span class="pub-index__num">06</span>
+                <span class="pub-index__title">La ideología fascista y el mundo académico.</span>
+              </a>
+              <a class="pub-index__row" href="izquierda-y-derecha-en-uruguay.html">
+                <span class="pub-index__num">07</span>
+                <span class="pub-index__title">Más allá de la izquierda y la derecha.</span>
+              </a>
+              <a class="pub-index__row" href="tercera-posicion-en-uruguay.html">
+                <span class="pub-index__num">08</span>
+                <span class="pub-index__title">Fascismo Oriental.</span>
+              </a>
+            </div>
+          </details>
+          <details class="pub-index__group">
+            <summary class="pub-index__group-label">Historia nacional</summary>
+            <div class="pub-index__group-rows">
+              <a class="pub-index__row" href="jose-gervasio-artigas.html">
+                <span class="pub-index__num">01</span>
+                <span class="pub-index__title">El Reglamento de Tierras de José Artigas</span>
+              </a>
+              <a class="pub-index__row" href="interior-del-uruguay.html">
+                <span class="pub-index__num">02</span>
+                <span class="pub-index__title">Sobre el interior del Uruguay</span>
+              </a>
+              <a class="pub-index__row" href="sobre-stalin-y-hitler.html">
+                <span class="pub-index__num">03</span>
+                <span class="pub-index__title">Hitler, Stalin y la segunda guerra mundial...</span>
+              </a>
+              <a class="pub-index__row" href="revisionismo-historico-uruguay.html">
+                <span class="pub-index__num">04</span>
+                <span class="pub-index__title">Sobre la Segunda Guerra Mundial...</span>
+              </a>
+              <a class="pub-index__row" href="gabriel-terra-revolucion-de-marzo.html">
+                <span class="pub-index__num">05</span>
+                <span class="pub-index__title">Gabriel Terra: Jefe de la Revolución de Marzo.</span>
+              </a>
+            </div>
+          </details>
+          <details class="pub-index__group">
+            <summary class="pub-index__group-label">Religión y fe</summary>
+            <div class="pub-index__group-rows">
+              <a class="pub-index__row" href="inmigracion-en-uruguay.html">
+                <span class="pub-index__num">01</span>
+                <span class="pub-index__title">Sobre la inmigración</span>
+              </a>
+              <a class="pub-index__row" href="la-iglesia-catolica-y-la-educacion-uruguaya.html">
+                <span class="pub-index__num">02</span>
+                <span class="pub-index__title">La Iglesia Católica y la educación uruguaya.</span>
+              </a>
+            </div>
+          </details>
+          <details class="pub-index__group">
+            <summary class="pub-index__group-label">Cultura, sociedad y patria</summary>
+            <div class="pub-index__group-rows">
+              <a class="pub-index__row" href="republica-oriental-del-uruguay.html">
+                <span class="pub-index__num">01</span>
+                <span class="pub-index__title">¡Por la patria!</span>
+              </a>
+              <a class="pub-index__row" href="hegemonia-cultural-uruguay.html">
+                <span class="pub-index__num">02</span>
+                <span class="pub-index__title">Hegemonía cultural vs revolución por las armas.</span>
+              </a>
+              <a class="pub-index__row" href="el-aborto-en-uruguay.html">
+                <span class="pub-index__num">03</span>
+                <span class="pub-index__title">Aborto, el grito silenciado del Uruguay.</span>
+              </a>
+              <a class="pub-index__row" href="patriotismo-en-uruguay.html">
+                <span class="pub-index__num">04</span>
+                <span class="pub-index__title">Resignificación de los valores patrióticos.</span>
+              </a>
+              <a class="pub-index__row" href="democracia-en-uruguay.html">
+                <span class="pub-index__num">05</span>
+                <span class="pub-index__title">Hombres de voto.</span>
+              </a>
+            </div>
+          </details>
+          <details class="pub-index__group">
+            <summary class="pub-index__group-label">Economía y soberanía</summary>
+            <div class="pub-index__group-rows">
+              <a class="pub-index__row" href="economia-uruguay-2026.html">
+                <span class="pub-index__num">01</span>
+                <span class="pub-index__title">La prostitución de la economía.</span>
+              </a>
+              <a class="pub-index__row" href="el-potencial-de-uruguay.html">
+                <span class="pub-index__num">02</span>
+                <span class="pub-index__title">Nuestro potencial nacional.</span>
+              </a>
+            </div>
+          </details>
           <!-- PUBINDEXTEMA:END -->
           </div>
           <div class="pub-index__view" data-view="fecha" hidden>

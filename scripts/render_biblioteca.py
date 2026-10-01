@@ -270,12 +270,15 @@ def index_panel_block(books):
 
 
 def index_panel_block_tema(books):
-    """Panel esmerilado, vista agrupada por temática: una sub-etiqueta por
-    tema (en el orden de TEMA_ORDER) y dentro de cada una, los libros
-    numerados desde 01. El libro más reciente de todos queda activo."""
+    """Panel esmerilado, vista agrupada por temática: un desplegable <details>
+    por tema (en el orden de TEMA_ORDER), con los libros numerados desde 01
+    adentro. Queda abierto solo el tema del libro más reciente de todos (que
+    además va marcado como activo); el resto arranca cerrado para no
+    alargar el panel."""
     if not books:
         return ""
     active_slug = books[0]["slug"]
+    active_tema = books[0].get("tema")
     groups = {}
     otros = []
     for b in books:
@@ -288,23 +291,31 @@ def index_panel_block_tema(books):
     if otros:
         order.append(None)
         groups[None] = otros
+        if active_tema not in TEMA_ORDER:
+            active_tema = None
     parts = []
     for tema in order:
         items = groups.get(tema)
         if not items:
             continue
-        parts.append(
-            '          <span class="pub-index__group-label">%s</span>'
-            % esc(tema or "Otros")
-        )
+        open_attr = " open" if tema == active_tema else ""
+        rows = []
         for i, b in enumerate(items, start=1):
             cls = "pub-index__row pub-index__row--active" if b["slug"] == active_slug else "pub-index__row"
-            parts.append(
-                '          <a class="%s" href="%s.html">\n'
-                '            <span class="pub-index__num">%02d</span>\n'
-                '            <span class="pub-index__title">%s</span>\n'
-                '          </a>' % (cls, b["slug"], i, esc(b["title"]))
+            rows.append(
+                '              <a class="%s" href="%s.html">\n'
+                '                <span class="pub-index__num">%02d</span>\n'
+                '                <span class="pub-index__title">%s</span>\n'
+                '              </a>' % (cls, b["slug"], i, esc(b["title"]))
             )
+        parts.append(
+            '          <details class="pub-index__group"%s>\n'
+            '            <summary class="pub-index__group-label">%s</summary>\n'
+            '            <div class="pub-index__group-rows">\n'
+            '%s\n'
+            '            </div>\n'
+            '          </details>' % (open_attr, esc(tema or "Otros"), "\n".join(rows))
+        )
     return "\n" + "\n".join(parts) + "\n          "
 
 
