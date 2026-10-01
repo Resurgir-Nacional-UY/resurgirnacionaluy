@@ -253,20 +253,40 @@ def cards_block(books):
 
 
 def index_panel_block(books):
-    """Panel esmerilado a la izquierda de la grilla: indice numerado de todos
-    los libros (el mas reciente queda marcado como activo)."""
+    """Panel esmerilado, vista "Fecha": un desplegable por año de edición del
+    libro (no hay mes: los libros solo tienen año). Solo el año del libro
+    mas reciente queda abierto; el resto arranca cerrado."""
     if not books:
         return ""
-    rows = []
-    for i, b in enumerate(books, start=1):
-        cls = "pub-index__row pub-index__row--active" if i == 1 else "pub-index__row"
-        rows.append(
-            '          <a class="%s" href="%s.html">\n'
-            '            <span class="pub-index__num">%02d</span>\n'
-            '            <span class="pub-index__title">%s</span>\n'
-            '          </a>' % (cls, b["slug"], i, esc(b["title"]))
+    active_slug = books[0]["slug"]
+    active_year = str(books[0].get("year") or "") or "s/f"
+    years = []
+    for b in books:
+        y = str(b.get("year") or "") or "s/f"
+        if not years or years[-1][0] != y:
+            years.append((y, []))
+        years[-1][1].append(b)
+    parts = []
+    for y, items in years:
+        open_attr = " open" if y == active_year else ""
+        rows = []
+        for i, b in enumerate(items, start=1):
+            cls = "pub-index__row pub-index__row--active" if b["slug"] == active_slug else "pub-index__row"
+            rows.append(
+                '              <a class="%s" href="%s.html">\n'
+                '                <span class="pub-index__num">%02d</span>\n'
+                '                <span class="pub-index__title">%s</span>\n'
+                '              </a>' % (cls, b["slug"], i, esc(b["title"]))
+            )
+        parts.append(
+            '          <details class="pub-index__group"%s>\n'
+            '            <summary class="pub-index__group-label">%s</summary>\n'
+            '            <div class="pub-index__group-rows">\n'
+            '%s\n'
+            '            </div>\n'
+            '          </details>' % (open_attr, esc(y), "\n".join(rows))
         )
-    return "\n" + "\n".join(rows) + "\n          "
+    return "\n" + "\n".join(parts) + "\n          "
 
 
 def index_panel_block_tema(books):

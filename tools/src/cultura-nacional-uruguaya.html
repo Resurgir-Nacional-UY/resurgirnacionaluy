@@ -288,6 +288,9 @@
   .pub-index__group-label::before { content: "\25B8"; font-size: 0.6rem; color: var(--gold-text); transition: transform .15s ease; }
   .pub-index__group[open] > .pub-index__group-label::before { transform: rotate(90deg); }
   .pub-index__group-rows { display: flex; flex-direction: column; margin-top: 0.35rem; }
+  .pub-index__group--month { border-top: none; margin-top: 0.3rem; padding-top: 0; padding-left: 0.85rem; }
+  .pub-index__group--month > .pub-index__group-label { font-size: 0.58rem; color: var(--ink-soft); opacity: 0.85; }
+  .pub-index__group--month .pub-index__group-rows { margin-top: 0.25rem; }
   @media (max-width: 820px) { .pub-layout { grid-template-columns: 1fr; } .pub-index { position: static; } }
   @media (max-width: 560px) { .pub-head { align-items: stretch; } .pub-search { max-width: none; } }
   .art-nores { color: var(--ink-soft); font-style: italic; margin-top: 0.6rem; }

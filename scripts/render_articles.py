@@ -345,20 +345,58 @@ def list_block(arts):
 
 
 def index_panel_block(arts):
-    """Panel esmerilado a la izquierda de "Publicaciones": índice numerado de
-    todos los artículos (el más reciente queda marcado como activo)."""
+    """Panel esmerilado, vista "Fecha": desplegables anidados por año y, adentro
+    de cada año, por mes (igual criterio que el archivo de articulos.html).
+    Solo quedan abiertos el año y el mes del artículo más reciente; el resto
+    arranca cerrado para no alargar el panel."""
     if not arts:
         return ""
-    rows = []
-    for i, a in enumerate(arts, start=1):
-        cls = "pub-index__row pub-index__row--active" if i == 1 else "pub-index__row"
-        rows.append(
-            '          <a class="%s" href="%s.html">\n'
-            '            <span class="pub-index__num">%02d</span>\n'
-            '            <span class="pub-index__title">%s</span>\n'
-            '          </a>' % (cls, a["slug"], i, esc(a["title"]))
+    active_slug = arts[0]["slug"]
+    active_y, active_mo = _ym(arts[0])
+    years = []
+    for a in arts:
+        y, mo = _ym(a)
+        y = y or "s/f"
+        mo = mo or "00"
+        if not years or years[-1][0] != y:
+            years.append((y, []))
+        months = years[-1][1]
+        if not months or months[-1][0] != mo:
+            months.append((mo, []))
+        months[-1][1].append(a)
+    parts = []
+    for y, months in years:
+        month_parts = []
+        for mo, items in months:
+            label = MESES_CAP[int(mo) - 1] if mo.isdigit() and mo != "00" else "Sin fecha"
+            mo_open = " open" if (y == active_y and mo == active_mo) else ""
+            rows = []
+            for i, a in enumerate(items, start=1):
+                cls = "pub-index__row pub-index__row--active" if a["slug"] == active_slug else "pub-index__row"
+                rows.append(
+                    '                  <a class="%s" href="%s.html">\n'
+                    '                    <span class="pub-index__num">%02d</span>\n'
+                    '                    <span class="pub-index__title">%s</span>\n'
+                    '                  </a>' % (cls, a["slug"], i, esc(a["title"]))
+                )
+            month_parts.append(
+                '              <details class="pub-index__group pub-index__group--month"%s>\n'
+                '                <summary class="pub-index__group-label">%s</summary>\n'
+                '                <div class="pub-index__group-rows">\n'
+                '%s\n'
+                '                </div>\n'
+                '              </details>' % (mo_open, esc(label), "\n".join(rows))
+            )
+        y_open = " open" if y == active_y else ""
+        parts.append(
+            '          <details class="pub-index__group"%s>\n'
+            '            <summary class="pub-index__group-label">%s</summary>\n'
+            '            <div class="pub-index__group-rows">\n'
+            '%s\n'
+            '            </div>\n'
+            '          </details>' % (y_open, esc(y), "\n".join(month_parts))
         )
-    return "\n" + "\n".join(rows) + "\n          "
+    return "\n" + "\n".join(parts) + "\n          "
 
 
 def index_panel_block_tema(arts):
