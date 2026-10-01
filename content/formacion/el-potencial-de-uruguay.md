@@ -3,7 +3,7 @@ title: Nuestro potencial nacional.
 slug: el-potencial-de-uruguay
 date: 2026-08-30
 author: Nacionalista en lucha
-tema: "Economía y soberanía"
+tema: "Economía social"
 summary: En su tesis “La Deuda Pública en el Uruguay”, concluyó que un Estado no debe nunca constituirse deudor, ya que según sus estudios, esto afecta la soberanía  nacional, y “si por circunstancias desgraciadas la deuda existiese”, concluyó, “debe tratarse cuanto antes, consolidándola en condiciones precisas y fáciles de  cumplir, evitando todo reclamo que sería hiriente para la dignidad de la nación”;  Estos principios los llevó a la práctica en su segundo gobierno, había buscado la  suspensión de amortizaciones que fue tardíamente aceptada por el Consejo  Nacional de Administración y no pidió créditos externos durante todo su gobierno.  "Toda esta obra constructiva se ha efectuado con recursos propios, sin nada pedir al extranjero, mientras que en el pasado cualquier iniciativa (...) debía recurrir invariablemente al oro extranjero, que, si bien nos permitió desenvolvernos en muchas oportunidades, originaba incesantemente nuevos y pesados gravámenes sobre nuestra incipiente economía, cuya vitalidad se iba estrangulando paulatinamente”. (Así habló Terra el 18 de mayo de 1937”)
 source_url: ''
 draft: false

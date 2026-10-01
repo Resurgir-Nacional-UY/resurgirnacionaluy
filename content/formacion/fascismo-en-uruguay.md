@@ -3,7 +3,7 @@ title: Tercera Posición para el Uruguay del siglo XXI
 slug: fascismo-en-uruguay
 date: 2026-09-15
 author: José Otaiza
-tema: "Tercera Posición e ideología"
+tema: "Teoría política"
 summary: Visión sobre un ideal fascista posible para el Uruguay del siglo XXI.
 source_url: ''
 draft: false

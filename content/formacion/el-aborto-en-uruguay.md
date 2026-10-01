@@ -3,7 +3,7 @@ title: Aborto, el grito silenciado del Uruguay.
 slug: el-aborto-en-uruguay
 date: 2026-09-02
 author: Pablo Carrasco
-tema: "Cultura, sociedad y patria"
+tema: "Cultura y sociedad"
 summary: Uruguay legalizó el aborto hablando de libertad; una libertad que tuvo el costo de conducirnos a ser uno de los países con menos nacimientos de América. Bajo el argumento del progreso, la cuestión respecto al aborto se adentró en la conciencia de los uruguayos a tal punto que hoy ir contra esta práctica es visto como algo digno de una persona que opta por el atraso.
 source_url: ''
 draft: false

@@ -3,7 +3,7 @@ title: La ideología fascista y el mundo académico.
 slug: sobre-el-espiritu-del-fascismo
 date: 2026-09-13
 author: Carlos Videla
-tema: "Tercera Posición e ideología"
+tema: "Teoría política"
 summary: Sobre la visión del fascismo en el mundo académico.
 source_url: ''
 draft: false

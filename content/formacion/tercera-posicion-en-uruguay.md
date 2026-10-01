@@ -3,7 +3,7 @@ title: Fascismo Oriental.
 slug: tercera-posicion-en-uruguay
 date: 2026-09-01
 author: José Otaiza
-tema: "Tercera Posición e ideología"
+tema: "Teoría política"
 summary: Hoy desde nuestra perspectiva de más de 100 años después, y en nuestra nación Uruguay, por supuesto que es una ideología vigente, solamente necesita una adaptación y eso es lo que he teorizado personalmente desde mi punto de vista a nuestro tiempo y país.
 source_url: ''
 draft: false

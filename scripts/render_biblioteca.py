@@ -28,11 +28,11 @@ INDEX_MARK_B = "<!-- BOOKINDEX:END -->"
 INDEX_TEMA_MARK_A = "<!-- BOOKINDEXTEMA:START -->"
 INDEX_TEMA_MARK_B = "<!-- BOOKINDEXTEMA:END -->"
 TEMA_ORDER = [
-    "Tercera Posición e ideología",
+    "Teoría política",
     "Historia nacional",
-    "Religión y fe",
-    "Cultura, sociedad y patria",
-    "Economía y soberanía",
+    "Fe católica",
+    "Cultura y sociedad",
+    "Economía social",
 ]
 GEN_MARK = "<!-- generated:biblioteca-book -->"
 RESERVED = {"index", "vision", "formacion", "sagradocorazondejesus", "biblioteca",

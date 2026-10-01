@@ -71,11 +71,11 @@ collections:
         label: "Temática (para el índice agrupado)"
         widget: select
         options:
-          - "Tercera Posición e ideología"
+          - "Teoría política"
           - "Historia nacional"
-          - "Religión y fe"
-          - "Cultura, sociedad y patria"
-          - "Economía y soberanía"
+          - "Fe católica"
+          - "Cultura y sociedad"
+          - "Economía social"
 
       - name: summary
         label: "Resumen (para el listado y la vista previa)"
@@ -134,11 +134,11 @@ collections:
         label: "Temática (para el índice agrupado)"
         widget: select
         options:
-          - "Tercera Posición e ideología"
+          - "Teoría política"
           - "Historia nacional"
-          - "Religión y fe"
-          - "Cultura, sociedad y patria"
-          - "Economía y soberanía"
+          - "Fe católica"
+          - "Cultura y sociedad"
+          - "Economía social"
 
       - name: year
         label: "Año de edición"
