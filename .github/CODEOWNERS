@@ -7,3 +7,8 @@
 # necesita la aprobación de un dueño (ver ruleset de main).
 /content/formacion/
 /media/formacion/
+
+# Interruptor de "transmisión en vivo" (ver admin/config.yml, pages > live):
+# sin dueño para que se publique al toque al tocar "Publicar" en el CMS, sin
+# esperar una aprobación -- el aviso solo sirve si aparece casi al instante.
+/content/pages/live.yml

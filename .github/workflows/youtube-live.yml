@@ -6,6 +6,12 @@ on:
     # cuota por llamada (limite gratuito: 10000/dia) -- a cada 20 min son
     # ~7200/dia, dejando margen para corridas manuales el mismo dia.
     - cron: "*/20 * * * *"
+  push:
+    branches: [main]
+    paths:
+      # Interruptor manual del CMS (Páginas > Transmisión en vivo): corre
+      # al toque al publicarse, sin esperar el proximo cron.
+      - "content/pages/live.yml"
   workflow_dispatch:
 
 permissions:
@@ -30,6 +36,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - run: pip install --quiet pyyaml
 
       - name: Consultar YouTube
         env:

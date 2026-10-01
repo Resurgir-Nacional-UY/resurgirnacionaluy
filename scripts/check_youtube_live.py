@@ -5,6 +5,13 @@ Escribe live-status.json en la raiz del repo. El banner embebido en el
 <header> (ver tools/src/index.html) lo lee con fetch() en cada carga de
 pagina y muestra/oculta el aviso segun el campo "live".
 
+Antes de consultar la API mira content/pages/live.yml (el interruptor manual
+del CMS, colección Páginas > "🔴 Transmisión en vivo"): si esta activado,
+publica "en vivo" al toque usando el link /live del canal -- sin esperar la
+consulta a la API, que puede tardar hasta 20 minutos (el intervalo del
+cron) y ademas puede tardar un rato en detectar una transmision recien
+arrancada. Si esta desactivado, corre la consulta real de siempre.
+
 Nunca falla el job de GitHub Actions a proposito: un hipo de la API (cuota,
 red) o un secreto mal configurado no deben mandar un correo de fallo cada
 vez que corre el cron (cada 20 minutos). Si la consulta falla, se deja
@@ -18,10 +25,13 @@ Variables de entorno:
 Correr desde la raiz del repo:  python scripts/check_youtube_live.py
 """
 import io, json, os, sys, urllib.parse, urllib.request
+import yaml
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "live-status.json")
+MANUAL = os.path.join(ROOT, "content", "pages", "live.yml")
 CHANNEL_ID = "UCHZVDhnLmw73slFZadO7oFw"  # @ResurgirNacional
+CHANNEL_LIVE_URL = "https://www.youtube.com/@ResurgirNacional/live"
 
 
 def rd(p):
@@ -32,7 +42,38 @@ def wr(p, s):
     io.open(p, "w", encoding="utf-8", newline="\n").write(s)
 
 
+def manual_override():
+    """True si el interruptor manual del CMS (Páginas > Transmisión en vivo)
+    esta activado."""
+    if not os.path.exists(MANUAL):
+        return False
+    try:
+        data = yaml.safe_load(rd(MANUAL))
+    except Exception:
+        return False
+    return bool(isinstance(data, dict) and data.get("live_now"))
+
+
+def write_if_changed(new):
+    old = None
+    if os.path.exists(OUT):
+        try:
+            old = json.loads(rd(OUT))
+        except Exception:
+            old = None
+    if new != old:
+        wr(OUT, json.dumps(new, ensure_ascii=False) + "\n")
+        print("live-status.json actualizado:", new)
+    else:
+        print("Sin cambios (en vivo: %s)" % new["live"])
+
+
 def main():
+    if manual_override():
+        write_if_changed({"live": True, "url": CHANNEL_LIVE_URL,
+                           "title": "Transmisión en vivo"})
+        return 0
+
     api_key = os.environ.get("YOUTUBE_API_KEY", "").strip()
     if not api_key:
         print("ERROR: falta la variable de entorno YOUTUBE_API_KEY (secreto del environment 'publicar')")
@@ -65,18 +106,7 @@ def main():
     else:
         new = {"live": False}
 
-    old = None
-    if os.path.exists(OUT):
-        try:
-            old = json.loads(rd(OUT))
-        except Exception:
-            old = None
-
-    if new != old:
-        wr(OUT, json.dumps(new, ensure_ascii=False) + "\n")
-        print("live-status.json actualizado:", new)
-    else:
-        print("Sin cambios (en vivo: %s)" % new["live"])
+    write_if_changed(new)
     return 0
 
 
