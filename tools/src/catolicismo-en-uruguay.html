@@ -329,6 +329,40 @@
 </svg>
 
 <header class="site-header">
+  <style>
+    .live-banner { display: none; background: #B3261E; }
+    .live-banner.is-live { display: block; }
+    .live-banner__link { display: flex; align-items: center; justify-content: center; gap: 0.6rem; max-width: 1120px; margin-inline: auto; padding: 0.55rem var(--gutter); color: #fff; text-decoration: none; font-family: "Archivo", sans-serif; font-size: 0.85rem; flex-wrap: wrap; }
+    .live-banner__link:hover { opacity: 0.88; }
+    .live-banner__dot { width: 8px; height: 8px; border-radius: 50%; background: #fff; flex: none; }
+    .live-banner__label { font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    .live-banner__title { opacity: 0.92; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 40ch; }
+    .live-banner__cta { font-weight: 600; text-decoration: underline; white-space: nowrap; margin-left: auto; }
+  </style>
+  <div class="live-banner" id="live-banner">
+    <a class="live-banner__link" id="live-banner-link" href="https://www.youtube.com/@ResurgirNacional/live" target="_blank" rel="noopener">
+      <span class="live-banner__dot" aria-hidden="true"></span>
+      <span class="live-banner__label">En vivo</span>
+      <span class="live-banner__title" id="live-banner-title"></span>
+      <span class="live-banner__cta">Ver en YouTube →</span>
+    </a>
+  </div>
+  <script>
+    (function () {
+      var b = document.getElementById('live-banner');
+      if (!b) return;
+      fetch('/live-status.json', { cache: 'no-store' }).then(function (r) {
+        return r.ok ? r.json() : null;
+      }).then(function (d) {
+        if (!d || !d.live || !d.url) return;
+        var link = document.getElementById('live-banner-link');
+        var title = document.getElementById('live-banner-title');
+        link.href = d.url;
+        if (title && d.title) title.textContent = '— ' + d.title;
+        b.classList.add('is-live');
+      }).catch(function () {});
+    })();
+  </script>
   <div class="wrap">
     <a class="brand" href="index.html">
       <svg class="emblem" viewBox="0 0 400 400"><use href="#rn-emblem" /></svg>
