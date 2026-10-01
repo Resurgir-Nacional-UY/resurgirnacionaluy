@@ -3,6 +3,7 @@ title: El Reglamento de Tierras de José Artigas
 slug: jose-gervasio-artigas
 date: 2026-09-22
 author: Resurgir Nacional
+tema: "Historia nacional"
 summary: |-
   El Reglamento Provisorio de la Provincia Oriental para el Fomento de su Campaña y Seguridad de sus Hacendados, fue un decreto promulgado el 10 de septiembre de 1815 por José Gervasio Artigas desde su cuartel general en Purificación.
 

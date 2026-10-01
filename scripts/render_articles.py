@@ -41,6 +41,15 @@ MARK_A = "<!-- ARTICLES:START -->"
 MARK_B = "<!-- ARTICLES:END -->"
 INDEX_MARK_A = "<!-- PUBINDEX:START -->"
 INDEX_MARK_B = "<!-- PUBINDEX:END -->"
+INDEX_TEMA_MARK_A = "<!-- PUBINDEXTEMA:START -->"
+INDEX_TEMA_MARK_B = "<!-- PUBINDEXTEMA:END -->"
+TEMA_ORDER = [
+    "Tercera Posición e ideología",
+    "Historia nacional",
+    "Religión y fe",
+    "Cultura, sociedad y patria",
+    "Economía y soberanía",
+]
 GEN_MARK = "<!-- generated:formacion-article -->"
 RESERVED = {"index", "vision", "formacion", "sagradocorazondejesus", "biblioteca", "admin", "404",
             "readme", "articulos",
@@ -352,6 +361,45 @@ def index_panel_block(arts):
     return "\n" + "\n".join(rows) + "\n          "
 
 
+def index_panel_block_tema(arts):
+    """Panel esmerilado, vista agrupada por temática: una sub-etiqueta por
+    tema (en el orden de TEMA_ORDER) y dentro de cada una, los artículos
+    numerados desde 01. El artículo más reciente de todos queda activo."""
+    if not arts:
+        return ""
+    active_slug = arts[0]["slug"]
+    groups = {}
+    otros = []
+    for a in arts:
+        tema = a.get("tema")
+        if tema in TEMA_ORDER:
+            groups.setdefault(tema, []).append(a)
+        else:
+            otros.append(a)
+    order = list(TEMA_ORDER)
+    if otros:
+        order.append(None)
+        groups[None] = otros
+    parts = []
+    for tema in order:
+        items = groups.get(tema)
+        if not items:
+            continue
+        parts.append(
+            '          <span class="pub-index__group-label">%s</span>'
+            % esc(tema or "Otros")
+        )
+        for i, a in enumerate(items, start=1):
+            cls = "pub-index__row pub-index__row--active" if a["slug"] == active_slug else "pub-index__row"
+            parts.append(
+                '          <a class="%s" href="%s.html">\n'
+                '            <span class="pub-index__num">%02d</span>\n'
+                '            <span class="pub-index__title">%s</span>\n'
+                '          </a>' % (cls, a["slug"], i, esc(a["title"]))
+            )
+    return "\n" + "\n".join(parts) + "\n          "
+
+
 INDEX_JS = """      <script>
         (function () {
           var box = document.querySelector('.art-search');
@@ -596,6 +644,9 @@ def main():
     if INDEX_MARK_A not in tpl or INDEX_MARK_B not in tpl:
         print("ERROR: faltan los marcadores PUBINDEX en cultura-nacional-uruguaya.html")
         return 1
+    if INDEX_TEMA_MARK_A not in tpl or INDEX_TEMA_MARK_B not in tpl:
+        print("ERROR: faltan los marcadores PUBINDEXTEMA en cultura-nacional-uruguaya.html")
+        return 1
     arts = load_articles()
 
     # Salvaguarda: un archivo en content/formacion/ con extension distinta a
@@ -665,6 +716,10 @@ def main():
     ii = new_tpl.index(INDEX_MARK_A) + len(INDEX_MARK_A)
     jj = new_tpl.index(INDEX_MARK_B)
     new_tpl = new_tpl[:ii] + index_panel_block(arts) + new_tpl[jj:]
+    # rewrite the themed index-panel region inside cultura-nacional-uruguaya.html
+    kk = new_tpl.index(INDEX_TEMA_MARK_A) + len(INDEX_TEMA_MARK_A)
+    ll = new_tpl.index(INDEX_TEMA_MARK_B)
+    new_tpl = new_tpl[:kk] + index_panel_block_tema(arts) + new_tpl[ll:]
     if new_tpl != tpl:
         wr(TEMPLATE, new_tpl)
         print("  cultura-nacional-uruguaya.html: lista actualizada (%d articulos)" % len(arts))

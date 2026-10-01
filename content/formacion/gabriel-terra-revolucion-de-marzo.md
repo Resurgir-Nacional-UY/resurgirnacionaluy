@@ -3,6 +3,7 @@ title: 'Gabriel Terra: Jefe de la Revolución de Marzo.'
 slug: gabriel-terra-revolucion-de-marzo
 date: 2026-09-03
 author: Nacionalista en lucha.
+tema: "Historia nacional"
 summary: La tradición es la memoria de los pueblos y siendo la memoria definida como la capacidad de almacenar, codificar y recuperar información, es evidente que la salud de un pueblo se puede evaluar en su memoria colectiva, sus tradiciones y ritos. Esta redacción es una expresión de la conmemoración de los héroes que nos precedieron en el camino recorrido por nuestro mundo y nuestro pueblo, aquellos que lideraron los destinos de la Nación Oriental tras la Revolución de Marzo, conduciéndola a su época de mayor esplendor hasta el presente.
 source_url: ''
 draft: false

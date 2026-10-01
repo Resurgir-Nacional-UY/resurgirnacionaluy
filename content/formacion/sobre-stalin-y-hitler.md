@@ -3,6 +3,7 @@ title: Hitler, Stalin y la segunda guerra mundial...
 slug: sobre-stalin-y-hitler
 date: 2026-09-13
 author: Denes Martos
+tema: "Historia nacional"
 summary: Sobre el trasfondo del inicio de la guerra entre Stalin y Hitler.
 source_url: hitlerystalin
 draft: false

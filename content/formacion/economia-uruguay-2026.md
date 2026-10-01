@@ -3,6 +3,7 @@ title: La prostitución de la economía.
 slug: economia-uruguay-2026
 date: 2026-08-30
 author: José Otaiza
+tema: "Economía y soberanía"
 summary: La economía uruguaya no es soberana
 source_url: ''
 draft: false

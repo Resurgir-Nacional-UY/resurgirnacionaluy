@@ -3,6 +3,7 @@ title: Fundamentos de Política
 slug: fundamentos-politicos
 date: 2026-09-13
 author: Denes Martos
+tema: "Tercera Posición e ideología"
 summary: Sobre los fundamentos de la Política
 source_url: ''
 draft: false

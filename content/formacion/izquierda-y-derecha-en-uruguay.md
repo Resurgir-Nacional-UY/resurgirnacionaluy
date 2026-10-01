@@ -3,6 +3,7 @@ title: Más allá de la izquierda y la derecha.
 slug: izquierda-y-derecha-en-uruguay
 date: 2026-09-04
 author: Facundo Cuadro.
+tema: "Tercera Posición e ideología"
 summary: 'Durante la contienda electoral la simplificación es la norma. El énfasis en el marketing y la ingeniería electoral busca situarnos por fuera del debate de ideas. Mediante la construcción de narrativas que priorizan la identificación emocional frente al debate racional se asumen determinadas categorías, que en muchos casos pueden ser, en realidad, más iguales de lo que parecen absolutamente inválidas. Este trabajo pretende ser un aporte que complejiza un espacio común en el discurso político: el de las categorías de izquierda y derecha.'
 source_url: ''
 draft: false

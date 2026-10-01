@@ -3,6 +3,7 @@ title: Encrucijada en la historia política y económica del mundo
 slug: encrucijadas-en-la-historia-politica-economica-del-mundo
 date: 2026-09-26
 author: José Antonio Primo de Rivera
+tema: "Tercera Posición e ideología"
 summary: Conferencia realizada por el padre de la Falange Española, José Antonio Primo de Rivera, en el Círculo Mercantil de Madrid, el día 9 de abril del año 1935.
 source_url: ''
 draft: false

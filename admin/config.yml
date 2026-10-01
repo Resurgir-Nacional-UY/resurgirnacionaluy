@@ -427,6 +427,16 @@ collections:
         widget: string
         default: "Resurgir Nacional"
 
+      - name: tema
+        label: "Temática (para el índice agrupado)"
+        widget: select
+        options:
+          - "Tercera Posición e ideología"
+          - "Historia nacional"
+          - "Religión y fe"
+          - "Cultura, sociedad y patria"
+          - "Economía y soberanía"
+
       - name: summary
         label: "Resumen (para el listado y la vista previa)"
         widget: text
@@ -479,6 +489,16 @@ collections:
       - name: author
         label: Autor
         widget: string
+
+      - name: tema
+        label: "Temática (para el índice agrupado)"
+        widget: select
+        options:
+          - "Tercera Posición e ideología"
+          - "Historia nacional"
+          - "Religión y fe"
+          - "Cultura, sociedad y patria"
+          - "Economía y soberanía"
 
       - name: year
         label: "Año de edición"

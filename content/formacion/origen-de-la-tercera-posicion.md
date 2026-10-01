@@ -3,6 +3,7 @@ title: Raíces de la Tercera Posición
 slug: origen-de-la-tercera-posicion
 date: 2026-09-23
 author: Eduardo M.
+tema: "Tercera Posición e ideología"
 summary: Sobre las raíces ideológicas de la llamada Tercera Posición y su evolución.
 source_url: ''
 draft: false

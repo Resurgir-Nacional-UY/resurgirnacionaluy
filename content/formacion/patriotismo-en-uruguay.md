@@ -3,6 +3,7 @@ title: Resignificación de los valores patrióticos.
 slug: patriotismo-en-uruguay
 date: 2026-09-02
 author: Orlando Almada.
+tema: "Cultura, sociedad y patria"
 summary: La resignificación de los valores patrióticos a menudo es percibida como un proceso de denigración. Los símbolos, rituales y narrativas que históricamente han cimentado el sentimiento de pertenencia a una nación, como el himno, la bandera, los héroes nacionales y la historia compartida son hoy objeto de un intenso escrutinio crítico.
 source_url: ''
 draft: false

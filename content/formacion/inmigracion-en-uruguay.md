@@ -3,6 +3,7 @@ title: Sobre la inmigración
 slug: inmigracion-en-uruguay
 date: 2026-09-08
 author: Juan Hernandorena.
+tema: "Religión y fe"
 summary: Sobre el cristianismo y el derecho a la preservación nacional.
 source_url: ''
 draft: false

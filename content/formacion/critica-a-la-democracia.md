@@ -3,6 +3,7 @@ title: Juicio a la democracia
 slug: critica-a-la-democracia
 date: 2026-09-17
 author: Bruno acosta pastore
+tema: "Tercera Posición e ideología"
 summary: Crítica al sistema democrático imperante en occidente.
 source_url: ''
 draft: false

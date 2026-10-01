@@ -161,6 +161,12 @@
   .pub-index__row--active { border-left-color: var(--gold-line); background: color-mix(in srgb, var(--gold-line) 12%, transparent); }
   .pub-index__row--active .pub-index__title { color: var(--ink); font-weight: 600; }
   .pub-index__row--active .pub-index__num { color: var(--gold-text); }
+  .pub-index__tabs { display: flex; gap: 0.3rem; margin-bottom: 0.9rem; }
+  .pub-index__tab { flex: 1; font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.66rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.35rem 0.2rem; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--ink-soft); cursor: pointer; text-align: center; transition: background .15s ease, color .15s ease, border-color .15s ease; }
+  .pub-index__tab:hover { color: var(--ink); border-color: var(--gold-line); }
+  .pub-index__tab--on, .pub-index__tab--on:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
+  .pub-index__group-label { display: block; font-family: "Archivo", sans-serif; font-weight: 700; font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin: 1.1rem 0 0.35rem; }
+  .pub-index__view > span.pub-index__group-label:first-of-type { margin-top: 0; }
   @media (max-width: 820px) { .pub-layout { grid-template-columns: 1fr; } .pub-index { position: static; } }
   .art-nores { color: var(--ink-soft); font-style: italic; margin-top: 0.6rem; }
 
@@ -428,6 +434,22 @@ lenguas originales, hebrea y griega, al castellano por  Autores Católicos, con 
     var set = function () { try { v.playbackRate = 0.6; } catch (e) {} };
     set();
     v.addEventListener('loadedmetadata', set);
+  })();
+  (function () {
+    var panel = document.querySelector('.pub-index');
+    if (!panel) return;
+    var tabs = [].slice.call(panel.querySelectorAll('.pub-index__tab'));
+    var views = [].slice.call(panel.querySelectorAll('.pub-index__view'));
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.classList.toggle('pub-index__tab--on', on);
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        views.forEach(function (v) { v.hidden = v.dataset.view !== tab.dataset.view; });
+      });
+    });
   })();
 </script>
 

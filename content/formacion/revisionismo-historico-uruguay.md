@@ -3,6 +3,7 @@ title: Sobre la Segunda Guerra Mundial...
 slug: revisionismo-historico-uruguay
 date: 2026-09-05
 author: Bruno Acosta Pastore
+tema: "Historia nacional"
 summary: El primero de septiembre se cumplen 85 años del inicio de la Segunda Guerra Mundial. Este hecho y su desenlace -la victoria de los aliados- marcó un derrotero religioso, cultural, político, social y económico que el mundo padece hasta nuestros días. Fue el triunfo de las democracias liberales, masónicas y relativistas; fue el triunfo del comunismo ateo. Fue la “Derrota Mundial”, según trillada y plástica expresión de Don Salvador Borrego. Los perdidosos nacionalismos fueron la expresión de vida postrera, las últimas bocanadas de aire, de Occidente. Tras su hundimiento, éste quedose sin defensas. Al poco tiempo, infiltrada ya desde hace décadas, la Iglesia Católica coronaría su eclipse con el Concilio Vaticano Segundo (1962-1965). Los principios masónicos y liberales penetraron, ya abiertamente, en el propio seno eclesial.
 source_url: ''
 draft: false

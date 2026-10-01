@@ -3,6 +3,7 @@ title: La Iglesia Católica y la educación uruguaya.
 slug: la-iglesia-catolica-y-la-educacion-uruguaya
 date: 2026-08-31
 author: Christian Iguini.
+tema: "Religión y fe"
 summary: Este trabajo analiza la evolución del sistema educativo uruguayo, destacando la transición desde la base pedagógica de la Iglesia Católica hasta el modelo educativo actual del Plan 2023. Al comienzo la Iglesia fundó las bases de la educación occidental y colonial, preservando la cultura y promoviendo un humanismo integral orientado a la formación moral y la salvación. En Uruguay este predominio enfrentó una ruptura radical en el siglo XIX con la Reforma Vareliana, que impuso la laicidad y la formación para la ciudadanía democrática, desplazando el dogma religioso en favor de la razón y el método científico. El análisis revela que, aunque existe una secularización técnica, persiste una continuidad en la búsqueda de la dignidad humana y la solidaridad.
 source_url: ''
 draft: false

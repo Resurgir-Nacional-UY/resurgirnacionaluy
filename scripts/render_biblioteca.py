@@ -25,6 +25,15 @@ MARK_A = "<!-- BOOKS:START -->"
 MARK_B = "<!-- BOOKS:END -->"
 INDEX_MARK_A = "<!-- BOOKINDEX:START -->"
 INDEX_MARK_B = "<!-- BOOKINDEX:END -->"
+INDEX_TEMA_MARK_A = "<!-- BOOKINDEXTEMA:START -->"
+INDEX_TEMA_MARK_B = "<!-- BOOKINDEXTEMA:END -->"
+TEMA_ORDER = [
+    "Tercera Posición e ideología",
+    "Historia nacional",
+    "Religión y fe",
+    "Cultura, sociedad y patria",
+    "Economía y soberanía",
+]
 GEN_MARK = "<!-- generated:biblioteca-book -->"
 RESERVED = {"index", "vision", "formacion", "sagradocorazondejesus", "biblioteca",
             "admin", "404", "readme", "articulos",
@@ -260,6 +269,45 @@ def index_panel_block(books):
     return "\n" + "\n".join(rows) + "\n          "
 
 
+def index_panel_block_tema(books):
+    """Panel esmerilado, vista agrupada por temática: una sub-etiqueta por
+    tema (en el orden de TEMA_ORDER) y dentro de cada una, los libros
+    numerados desde 01. El libro más reciente de todos queda activo."""
+    if not books:
+        return ""
+    active_slug = books[0]["slug"]
+    groups = {}
+    otros = []
+    for b in books:
+        tema = b.get("tema")
+        if tema in TEMA_ORDER:
+            groups.setdefault(tema, []).append(b)
+        else:
+            otros.append(b)
+    order = list(TEMA_ORDER)
+    if otros:
+        order.append(None)
+        groups[None] = otros
+    parts = []
+    for tema in order:
+        items = groups.get(tema)
+        if not items:
+            continue
+        parts.append(
+            '          <span class="pub-index__group-label">%s</span>'
+            % esc(tema or "Otros")
+        )
+        for i, b in enumerate(items, start=1):
+            cls = "pub-index__row pub-index__row--active" if b["slug"] == active_slug else "pub-index__row"
+            parts.append(
+                '          <a class="%s" href="%s.html">\n'
+                '            <span class="pub-index__num">%02d</span>\n'
+                '            <span class="pub-index__title">%s</span>\n'
+                '          </a>' % (cls, b["slug"], i, esc(b["title"]))
+            )
+    return "\n" + "\n".join(parts) + "\n          "
+
+
 def main():
     if not os.path.isdir(CONTENT):
         os.makedirs(CONTENT, exist_ok=True)
@@ -272,6 +320,9 @@ def main():
         return 1
     if INDEX_MARK_A not in tpl or INDEX_MARK_B not in tpl:
         print("ERROR: faltan los marcadores BOOKINDEX en lecturas-para-el-uruguay.html")
+        return 1
+    if INDEX_TEMA_MARK_A not in tpl or INDEX_TEMA_MARK_B not in tpl:
+        print("ERROR: faltan los marcadores BOOKINDEXTEMA en lecturas-para-el-uruguay.html")
         return 1
     books, missing_pdf = load_books()
 
@@ -329,6 +380,9 @@ def main():
     ii = new_tpl.index(INDEX_MARK_A) + len(INDEX_MARK_A)
     jj = new_tpl.index(INDEX_MARK_B)
     new_tpl = new_tpl[:ii] + index_panel_block(books) + new_tpl[jj:]
+    kk = new_tpl.index(INDEX_TEMA_MARK_A) + len(INDEX_TEMA_MARK_A)
+    ll = new_tpl.index(INDEX_TEMA_MARK_B)
+    new_tpl = new_tpl[:kk] + index_panel_block_tema(books) + new_tpl[ll:]
     if new_tpl != tpl:
         wr(TEMPLATE, new_tpl)
         print("  lecturas-para-el-uruguay.html: grilla actualizada (%d libros)" % len(books))

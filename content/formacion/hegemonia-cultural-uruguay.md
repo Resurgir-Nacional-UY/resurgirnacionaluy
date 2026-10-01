@@ -3,6 +3,7 @@ title: Hegemonía cultural vs revolución por las armas.
 slug: hegemonia-cultural-uruguay
 date: 2026-09-08
 author: Orlando Almada
+tema: "Cultura, sociedad y patria"
 summary: El caos político que ves en universidades, en redes sociales, en reuniones de trabajo no es histeria colectiva. No es una generación de jóvenes que perdió la cabeza. No es espontáneo. Es protocolo. Está en un libro. Fue escrito en 1971 y quien lo escribió te explicó el sistema completo antes de morir.
 source_url: ''
 draft: false

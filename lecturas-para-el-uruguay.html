@@ -160,6 +160,12 @@
   .pub-index__row--active { border-left-color: var(--gold-line); background: color-mix(in srgb, var(--gold-line) 12%, transparent); }
   .pub-index__row--active .pub-index__title { color: var(--ink); font-weight: 600; }
   .pub-index__row--active .pub-index__num { color: var(--gold-text); }
+  .pub-index__tabs { display: flex; gap: 0.3rem; margin-bottom: 0.9rem; }
+  .pub-index__tab { flex: 1; font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.66rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.35rem 0.2rem; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--ink-soft); cursor: pointer; text-align: center; transition: background .15s ease, color .15s ease, border-color .15s ease; }
+  .pub-index__tab:hover { color: var(--ink); border-color: var(--gold-line); }
+  .pub-index__tab--on, .pub-index__tab--on:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
+  .pub-index__group-label { display: block; font-family: "Archivo", sans-serif; font-weight: 700; font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin: 1.1rem 0 0.35rem; }
+  .pub-index__view > span.pub-index__group-label:first-of-type { margin-top: 0; }
   @media (max-width: 820px) { .pub-layout { grid-template-columns: 1fr; } .pub-index { position: static; } }
   .art-nores { color: var(--ink-soft); font-style: italic; margin-top: 0.6rem; }
 
@@ -293,7 +299,117 @@
       <div class="pub-layout">
         <aside class="pub-index" aria-label="Índice de libros">
           <span class="pub-index__label">Índice</span>
-          <!-- BOOKINDEX:START -->
+          <div class="pub-index__tabs" role="tablist">
+            <button type="button" class="pub-index__tab pub-index__tab--on" data-view="tema" role="tab" aria-selected="true">Temática</button>
+            <button type="button" class="pub-index__tab" data-view="fecha" role="tab" aria-selected="false">Fecha</button>
+          </div>
+          <div class="pub-index__view" data-view="tema">
+            <!-- BOOKINDEXTEMA:START -->
+          <span class="pub-index__group-label">Tercera Posición e ideología</span>
+          <a class="pub-index__row" href="la-identidad-nacional-y-el-poder-politico.html">
+            <span class="pub-index__num">01</span>
+            <span class="pub-index__title">La identidad nacional y el poder político</span>
+          </a>
+          <a class="pub-index__row" href="las-opciones-juan-maria-bordaberry.html">
+            <span class="pub-index__num">02</span>
+            <span class="pub-index__title">Las Opciones</span>
+          </a>
+          <a class="pub-index__row" href="doctrinas-del-nacionalismo.html">
+            <span class="pub-index__num">03</span>
+            <span class="pub-index__title">Doctrinas del nacionalismo</span>
+          </a>
+          <a class="pub-index__row" href="perfiles-para-un-nacionalismo.html">
+            <span class="pub-index__num">04</span>
+            <span class="pub-index__title">Perfiles para un nacionalismo</span>
+          </a>
+          <a class="pub-index__row" href="el-ocaso-de-la-democracia-alberto-zum-felde.html">
+            <span class="pub-index__num">05</span>
+            <span class="pub-index__title">El ocaso de la democracia</span>
+          </a>
+          <a class="pub-index__row" href="roma-el-espiritu-de-occidente.html">
+            <span class="pub-index__num">06</span>
+            <span class="pub-index__title">Roma y el espíritu de occidente</span>
+          </a>
+          <a class="pub-index__row" href="ataraxia-adolfo-agorio.html">
+            <span class="pub-index__num">07</span>
+            <span class="pub-index__title">Ataraxia</span>
+          </a>
+          <span class="pub-index__group-label">Historia nacional</span>
+          <a class="pub-index__row pub-index__row--active" href="los-origenes-de-la-nacionalidad-uruguaya.html">
+            <span class="pub-index__num">01</span>
+            <span class="pub-index__title">Los orígenes de la nacionalidad uruguaya</span>
+          </a>
+          <a class="pub-index__row" href="artigas-como-militar.html">
+            <span class="pub-index__num">02</span>
+            <span class="pub-index__title">Artigas como militar</span>
+          </a>
+          <a class="pub-index__row" href="artigas-jose-enrique-rodo.html">
+            <span class="pub-index__num">03</span>
+            <span class="pub-index__title">ARTIGAS</span>
+          </a>
+          <a class="pub-index__row" href="la-tierra-de-sanabria-vocacion-autonomica-de-la-banda-oriental.html">
+            <span class="pub-index__num">04</span>
+            <span class="pub-index__title">La Tierra de Sanabria: vocación autonómica de la Banda Oriental</span>
+          </a>
+          <a class="pub-index__row" href="gabriel-terra-uruguay.html">
+            <span class="pub-index__num">05</span>
+            <span class="pub-index__title">La Revolución de Marzo</span>
+          </a>
+          <a class="pub-index__row" href="gabriel-terra-1937.html">
+            <span class="pub-index__num">06</span>
+            <span class="pub-index__title">Así habló Terra el 18 de mayo de 1937</span>
+          </a>
+          <span class="pub-index__group-label">Religión y fe</span>
+          <a class="pub-index__row" href="iglesia-catolica-uruguay.html">
+            <span class="pub-index__num">01</span>
+            <span class="pub-index__title">ESTUDIOS HISTÓRICOS: La Iglesia en Uruguay (1978)</span>
+          </a>
+          <a class="pub-index__row" href="santa-biblia-uruguay.html">
+            <span class="pub-index__num">02</span>
+            <span class="pub-index__title">Sagradas Escrituras (Nácar-Colunga 1ra edición)</span>
+          </a>
+          <a class="pub-index__row" href="los-capuchinos-genoveses-en-el-rio-de-la-plata.html">
+            <span class="pub-index__num">03</span>
+            <span class="pub-index__title">Los capuchinos genoveses en el Río de la Plata</span>
+          </a>
+          <a class="pub-index__row" href="monsenor-jacinto-vera.html">
+            <span class="pub-index__num">04</span>
+            <span class="pub-index__title">Monseñor D. Jacinto Vera</span>
+          </a>
+          <a class="pub-index__row" href="la-religion-de-artigas.html">
+            <span class="pub-index__num">05</span>
+            <span class="pub-index__title">La religión del héroe</span>
+          </a>
+          <span class="pub-index__group-label">Cultura, sociedad y patria</span>
+          <a class="pub-index__row" href="la-tierra-charrua.html">
+            <span class="pub-index__num">01</span>
+            <span class="pub-index__title">La Tierra Charrúa</span>
+          </a>
+          <a class="pub-index__row" href="ariel-jose-enrique-rodo.html">
+            <span class="pub-index__num">02</span>
+            <span class="pub-index__title">El Ariel</span>
+          </a>
+          <a class="pub-index__row" href="la-leyenda-patria.html">
+            <span class="pub-index__num">03</span>
+            <span class="pub-index__title">La Leyenda Patria</span>
+          </a>
+          <span class="pub-index__group-label">Economía y soberanía</span>
+          <a class="pub-index__row" href="bases-economicas-de-la-revolucion-artiguista.html">
+            <span class="pub-index__num">01</span>
+            <span class="pub-index__title">Bases económicas de la revolución artiguista</span>
+          </a>
+          <a class="pub-index__row" href="evolucion-econmica-de-la-banda-oriental.html">
+            <span class="pub-index__num">02</span>
+            <span class="pub-index__title">Evolución económica de la Banda Oriental</span>
+          </a>
+          <a class="pub-index__row" href="energia-hidroelectrica-rio-negro-uruguay.html">
+            <span class="pub-index__num">03</span>
+            <span class="pub-index__title">La energía hidroeléctrica del Río Negro</span>
+          </a>
+          <!-- BOOKINDEXTEMA:END -->
+          </div>
+          <div class="pub-index__view" data-view="fecha" hidden>
+            <!-- BOOKINDEX:START -->
           <a class="pub-index__row pub-index__row--active" href="los-origenes-de-la-nacionalidad-uruguaya.html">
             <span class="pub-index__num">01</span>
             <span class="pub-index__title">Los orígenes de la nacionalidad uruguaya</span>
@@ -391,6 +507,7 @@
             <span class="pub-index__title">La Leyenda Patria</span>
           </a>
           <!-- BOOKINDEX:END -->
+          </div>
         </aside>
         <div class="pub-main">
           <!-- BOOKS:START -->
@@ -716,6 +833,22 @@ Juan Zorrilla de San Martin. De la epopeya de Artigas.</p>
     var set = function () { try { v.playbackRate = 0.6; } catch (e) {} };
     set();
     v.addEventListener('loadedmetadata', set);
+  })();
+  (function () {
+    var panel = document.querySelector('.pub-index');
+    if (!panel) return;
+    var tabs = [].slice.call(panel.querySelectorAll('.pub-index__tab'));
+    var views = [].slice.call(panel.querySelectorAll('.pub-index__view'));
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.classList.toggle('pub-index__tab--on', on);
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        views.forEach(function (v) { v.hidden = v.dataset.view !== tab.dataset.view; });
+      });
+    });
   })();
 </script>
 
