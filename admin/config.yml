@@ -397,13 +397,14 @@ collections:
             widget: boolean
             default: false
             hint: >-
-              Activalo justo cuando arranques la transmisión en YouTube: en
-              un par de minutos aparece un aviso con el link en todo el
-              sitio. El sitio igual detecta solo una transmisión en vivo
-              cada 20 minutos (vía la API de YouTube) -- este interruptor es
-              solo para no esperar esos minutos. No hace falta desactivarlo
-              a mano al cortar: el sitio vuelve a detectar el estado real
-              en la próxima consulta automática.
+              Activalo justo cuando arranques la transmisión en YouTube:
+              hasta en unos 10 minutos aparece un aviso con el link en todo
+              el sitio (el sitio cachea ese dato un rato). El sitio igual
+              detecta solo una transmisión en vivo cada 20 minutos (vía la
+              API de YouTube) -- este interruptor es para no esperar tanto,
+              no para que sea instantáneo. No hace falta desactivarlo a mano
+              al cortar: el sitio vuelve a detectar el estado real en la
+              próxima consulta automática.
 
   - name: formacion
     label: Artículos de Formación
