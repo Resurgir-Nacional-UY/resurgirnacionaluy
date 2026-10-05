@@ -39,4 +39,4 @@ Brasil resurgirá cuando exista un profundo y auténtico nacionalismo que vele p
 
 ![](/media/formacion/Screenshot_719.png)
 
--Juan Hernandorena. 06/10/2026
+-Juan Hernandorena. 05/10/2026
