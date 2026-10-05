@@ -6,7 +6,14 @@
   <atom:link href="https://resurgirnacionaluy.org/feed.xml" rel="self" type="application/rss+xml" />
   <description>Artículos de formación del movimiento Resurgir Nacional.</description>
   <language>es-uy</language>
-  <lastBuildDate>Sat, 26 Sep 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 05 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Sobre las elecciones de Brasil 2026</title>
+    <link>https://resurgirnacionaluy.org/elecciones-de-brasil-2026.html</link>
+    <guid isPermaLink="true">https://resurgirnacionaluy.org/elecciones-de-brasil-2026.html</guid>
+    <pubDate>Mon, 05 Oct 2026 12:00:00 +0000</pubDate>
+    <description>Sobre las elecciones de Brasil del 2026, el sistema de partidos, la derecha e izquierda, y el futuro.</description>
+  </item>
   <item>
     <title>Encrucijada en la historia política y económica del mundo</title>
     <link>https://resurgirnacionaluy.org/encrucijadas-en-la-historia-politica-economica-del-mundo.html</link>
