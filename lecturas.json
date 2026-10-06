@@ -1,0 +1,75 @@
+{
+ "dias": {
+  "2026-10-06": {
+   "celebracion": "Martes de la XXVII semana del tiempo ordinario",
+   "lecturas": [
+    {
+     "cierre": "Palabra de Dios.",
+     "cita": "Gálatas 1, 13-24",
+     "lema": "Reveló a su Hijo en mí para que lo anunciara entre los gentiles.",
+     "presentacion": "Lectura de la carta del apóstol san Pablo a los Gálatas.",
+     "texto": [
+      "HERMANOS:",
+      "Habéis oído hablar de mi pasada conducta en el judaísmo: con qué saña perseguía a la Iglesia de Dios y la asolaba, y aventajaba en el judaísmo a muchos de mi edad y de mi raza como defensor muy celoso de las tradiciones de mis antepasados.",
+      "Pero, cuando aquel que me escogió desde el seno de mi madre y me llamó por su gracia, se dignó revelar a su Hijo en mí para que lo anunciara entre los gentiles, no consulté con hombres ni subí a Jerusalén a ver a los apóstoles anteriores a mí, sino que, enseguida, me fui a Arabia, y volví a Damasco.",
+      "Después, pasados tres años, subí a Jerusalén para conocer a Cefas, y permanecí quince días con él. De los otros apóstoles no vi a ninguno, sino a Santiago, el hermano del Señor. Dios es testigo de que no miento en lo que os escribo. Después fui a las regiones de Siria y de Cilicia. Personalmente yo era un desconocido para las iglesias de Cristo que hay en Judea; solo habían oído decir que el que antes los perseguía anuncia ahora la fe que antes intentaba destruir; y glorificaban a Dios por causa mía."
+     ],
+     "tipo": "Primera lectura"
+    },
+    {
+     "cita": "Salmo 138",
+     "estrofas": [
+      [
+       "Señor, tú me sondeas y me conoces.",
+       "Me conoces cuando me siento o me levanto,",
+       "de lejos penetras mis pensamientos;",
+       "distingues mi camino y mi descanso,",
+       "todas mis sendas te son familiares. R/."
+      ],
+      [
+       "Tú has creado mis entrañas,",
+       "me has tejido en el seno materno.",
+       "Te doy gracias, porque me has plasmado portentosamente,",
+       "porque son admirables tus obras. R/."
+      ],
+      [
+       "Mi alma lo reconoce agradecida,",
+       "no desconocías mis huesos.",
+       "Cuando, en lo oculto, me iba formando,",
+       "y entretejiendo en lo profundo de la tierra. R/."
+      ]
+     ],
+     "respuesta": "Guíame, Señor, por el camino eterno.",
+     "tipo": "Salmo responsorial"
+    },
+    {
+     "estrofas": [
+      [
+       "Aleluya, aleluya, aleluya.",
+       "Bienaventurados los que escuchan la palabra de Dios",
+       "y la cumplen.",
+       "Aleluya, aleluya, aleluya."
+      ]
+     ],
+     "tipo": "Aclamación antes del Evangelio"
+    },
+    {
+     "cierre": "Palabra del Señor.",
+     "cita": "Lucas 10, 38-42",
+     "lema": "Marta lo recibió en su casa. María ha escogido la parte mejor.",
+     "presentacion": "✠ Lectura del santo Evangelio según san Lucas.",
+     "texto": [
+      "EN aquel tiempo, entró Jesús en una aldea, y una mujer llamada Marta lo recibió en su casa.",
+      "Esta tenía una hermana llamada María, que, sentada junto a los pies del Señor, escuchaba su palabra.",
+      "Marta, en cambio, andaba muy afanada con los muchos servicios; hasta que, acercándose, dijo:",
+      "«Señor, ¿no te importa que mi hermana me haya dejado sola para servir? Dile que me eche una mano».",
+      "Respondiendo, le dijo el Señor:",
+      "«Marta, Marta, andas inquieta y preocupada con muchas cosas; solo una es necesaria. María, pues, ha escogido la parte mejor, y no le será quitada»."
+     ],
+     "tipo": "Evangelio"
+    }
+   ],
+   "santo": "Memoria libre: San Bruno, presbítero"
+  }
+ }
+}
