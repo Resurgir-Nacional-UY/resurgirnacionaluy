@@ -308,9 +308,14 @@ def index_page(tpl, dias):
 
 
 def sitemap(fechas):
-    rows = ['  <url><loc>%s%s</loc><lastmod>%s</lastmod></url>' % (SITE, INDEX_NAME, max(fechas))]
+    """<lastmod> solo para dias que ya llegaron: una fecha futura en el sitemap no es valida."""
+    import datetime
+    hoy = datetime.date.today().isoformat()
+    lm = lambda f: "<lastmod>%s</lastmod>" % f if f <= hoy else ""
+    pasados = [f for f in fechas if f <= hoy]
+    rows = ['  <url><loc>%s%s</loc>%s</url>' % (SITE, INDEX_NAME, lm(max(pasados)) if pasados else "")]
     for f in sorted(fechas, reverse=True):
-        rows.append('  <url><loc>%s%s</loc><lastmod>%s</lastmod></url>' % (SITE, page_name(f), f))
+        rows.append('  <url><loc>%s%s</loc>%s</url>' % (SITE, page_name(f), lm(f)))
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
             + "\n".join(rows) + "\n</urlset>\n")
