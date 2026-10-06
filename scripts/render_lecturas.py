@@ -214,21 +214,21 @@ def _crumbs(items):
 def day_page(tpl, fecha, dia, prev_f, next_f):
     larga = fecha_larga(fecha)
     page = page_name(fecha)
-    title = "Lecturas de la Misa y Evangelio del %s" % fecha_corta(fecha)
+    title = "Lecturas de la Santa Misa y Evangelio del %s" % fecha_corta(fecha)
     cs = citas(dia)
-    desc = recortar("Lecturas de la Misa del %s: %s. %s." % (larga, "; ".join(cs), dia["celebracion"]))
+    desc = recortar("Lecturas de la Santa Misa del %s: %s. %s." % (larga, "; ".join(cs), dia["celebracion"]))
     ld = {"@context": "https://schema.org", "@graph": [
-        {"@type": "Article", "headline": "Lecturas de la Misa del %s" % larga,
+        {"@type": "Article", "headline": "Lecturas de la Santa Misa del %s" % larga,
          "description": desc, "url": SITE + page, "mainEntityOfPage": SITE + page,
          "datePublished": fecha, "dateModified": fecha, "inLanguage": "es-UY",
          "image": OG_IMAGE,
          "author": {"@type": "Organization", "name": "Resurgir Nacional"},
          "publisher": {"@type": "Organization", "name": "Resurgir Nacional",
                        "url": SITE}},
-        _crumbs([("Inicio", ""), ("Fe", FE_PAGE), ("Lecturas de la Misa", INDEX_NAME),
+        _crumbs([("Inicio", ""), ("Fe", FE_PAGE), ("Lecturas de la Santa Misa", INDEX_NAME),
                  (fecha_corta(fecha), page)]),
     ]}
-    pre = _head(tpl, page, title, desc, "Lecturas de la Misa del %s" % larga, ld)
+    pre = _head(tpl, page, title, desc, "Lecturas de la Santa Misa del %s" % larga, ld)
     post = tpl[tpl.index("</main>") + len("</main>"):]
     cuerpo = "\n".join(lectura_html(l) for l in dia["lecturas"])
     pasos = []
@@ -245,8 +245,8 @@ def day_page(tpl, fecha, dia, prev_f, next_f):
         '<main>\n'
         '  <article class="doc">\n'
         '    <section>\n'
-        '      <span class="label">Fe · Lecturas de la Misa</span>\n'
-        '      <h1>Lecturas de la Misa del %s</h1>\n'
+        '      <span class="label">Fe · Lecturas de la Santa Misa</span>\n'
+        '      <h1>Lecturas de la Santa Misa del %s</h1>\n'
         '      <p class="lecturas__celebracion">%s</p>\n'
         '%s'
         '%s\n'
@@ -266,16 +266,16 @@ def day_page(tpl, fecha, dia, prev_f, next_f):
 
 def index_page(tpl, dias):
     fechas = sorted(dias, reverse=True)
-    title = "Lecturas de la Misa de cada día · Resurgir Nacional"
-    desc = ("Lecturas de la Misa día por día: primera lectura, salmo y Evangelio, "
+    title = "Lecturas de la Santa Misa de cada día · Resurgir Nacional"
+    desc = ("Lecturas de la Santa Misa día por día: primera lectura, salmo y Evangelio, "
             "con la fiesta o el santo del día. Del %s al %s."
             % (fecha_corta(fechas[-1]), fecha_corta(fechas[0])))
     ld = {"@context": "https://schema.org", "@graph": [
-        {"@type": "CollectionPage", "name": "Lecturas de la Misa de cada día",
+        {"@type": "CollectionPage", "name": "Lecturas de la Santa Misa de cada día",
          "description": desc, "url": SITE + INDEX_NAME, "inLanguage": "es-UY"},
-        _crumbs([("Inicio", ""), ("Fe", FE_PAGE), ("Lecturas de la Misa", INDEX_NAME)]),
+        _crumbs([("Inicio", ""), ("Fe", FE_PAGE), ("Lecturas de la Santa Misa", INDEX_NAME)]),
     ]}
-    pre = _head(tpl, INDEX_NAME, title, recortar(desc), "Lecturas de la Misa de cada día", ld)
+    pre = _head(tpl, INDEX_NAME, title, recortar(desc), "Lecturas de la Santa Misa de cada día", ld)
     post = tpl[tpl.index("</main>") + len("</main>"):]
     bloques, mes_actual = [], None
     for f in fechas:
@@ -296,7 +296,7 @@ def index_page(tpl, dias):
         '  <article class="doc">\n'
         '    <section>\n'
         '      <span class="label">Fe</span>\n'
-        '      <h1>Lecturas de la Misa</h1>\n'
+        '      <h1>Lecturas de la Santa Misa</h1>\n'
         '      <p class="doc-lead">Primera lectura, salmo y Evangelio de cada día.</p>\n'
         '%s\n'
         '      <nav class="lecturas__nav" aria-label="Más de Fe">'

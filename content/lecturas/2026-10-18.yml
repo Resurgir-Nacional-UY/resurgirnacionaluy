@@ -1,4 +1,4 @@
-# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
 # Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
 # los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
 fecha: '2026-10-18'

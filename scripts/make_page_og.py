@@ -30,7 +30,7 @@ def main():
     print("escrito: og-image-formacion.jpg")
 
     og_image.make_og_image(
-        "Fe", "Oraciones por Uruguay y lecturas de la Misa",
+        "Fe", "Oraciones por Uruguay y lecturas de la Santa Misa",
         "Catolicismo en Uruguay",
         os.path.join(ROOT, "og-image-fe.jpg"), background=os.path.join(os.path.dirname(BACKGROUND), "fondo-fe.jpg"), fmt="JPEG",
     )

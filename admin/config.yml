@@ -656,14 +656,14 @@ collections:
         widget: boolean
         default: false
 
-  # ---- Fe: lecturas de la Misa del día ----
+  # ---- Fe: lecturas de la Santa Misa del día ----
   # Van después de "tienda" a propósito: scripts/make_admin_redactores.py solo
   # copia al CMS de articulistas lo que está entre "formacion" y "tienda".
   - name: lecturas
     label: "Fe · Lecturas del día"
     label_singular: "Lectura del día"
     description: >-
-      Lecturas de la Misa. Una entrada por fecha: se muestra en la página Fe el
+      Lecturas de la Santa Misa. Una entrada por fecha: se muestra en la página Fe el
       día que corresponde (hora de Montevideo). Al guardar se crea un Pull
       Request; queda publicada cuando alguien con permiso lo aprueba (merge).
     folder: content/lecturas
