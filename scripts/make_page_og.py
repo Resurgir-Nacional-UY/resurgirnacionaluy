@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera og-image-vision.jpg y og-image-formacion.jpg (miniaturas de esas
+"""Genera og-image-vision.jpg, og-image-formacion.jpg y og-image-fe.jpg (miniaturas de esas
 paginas fijas). Igual que og-image.jpg (portada), estas no forman parte de
 render_articles.py ni render_biblioteca.py: se corren a mano cuando se
 quiere cambiar el fondo o el texto.
@@ -28,6 +28,13 @@ def main():
         os.path.join(ROOT, "og-image-formacion.jpg"), background=BACKGROUND, fmt="JPEG",
     )
     print("escrito: og-image-formacion.jpg")
+
+    og_image.make_og_image(
+        "Fe", "Oraciones por Uruguay y lecturas de la Misa",
+        "Catolicismo en Uruguay",
+        os.path.join(ROOT, "og-image-fe.jpg"), background=os.path.join(os.path.dirname(BACKGROUND), "fondo-fe.jpg"), fmt="JPEG",
+    )
+    print("escrito: og-image-fe.jpg")
 
 
 if __name__ == "__main__":
