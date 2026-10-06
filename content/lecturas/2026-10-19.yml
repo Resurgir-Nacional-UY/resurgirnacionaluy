@@ -1,0 +1,48 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-19'
+celebracion: Lunes de la XXIX semana del tiempo ordinario
+santo: 'Memoria libre: Santos Juan de Brébeuf e Isaac Jogues, presbíteros, y compañeros, mártires'
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Efesios 2, 1-10
+  presentacion: Lectura de la carta del apóstol san Pablo a los Efesios.
+  texto: |-
+    También vosotros estabais muertos por vuestros delitos y pecados, en los cuales en otro tiempo anduvisteis conforme al curso de este mundo, conforme al príncipe de la autoridad del aire, el espíritu que ahora obra en los hijos de la incredulidad. Entre ellos vivíamos también nosotros todos en un tiempo según las concupiscencias de nuestra carne, siguiendo los apetitos de la carne y de nuestros pensamientos; de modo que éramos por naturaleza hijos de ira, lo mismo que los demás.
+
+    Pero Dios, que es rico en misericordia por causa del grande amor suyo con que nos amó, cuando estábamos aún muertos en los pecados, nos vivificó juntamente con Cristo –de gracia habéis sido salvados– y juntamente con Él nos resucitó y nos hizo sentar en los cielos en Cristo Jesús, para que en las edades venideras se manifieste la sobreabundante riqueza de su gracia mediante la bondad que tuvo para nosotros en Cristo Jesús.
+
+    Porque habéis sido salvados gratuitamente por medio de la fe; y esto no viene de vosotros: es el don de Dios; tampoco viene de las obras, para que ninguno pueda gloriarse. Pues de Él somos hechura, creados (de nuevo) en Cristo Jesús para obras buenas que Dios preparó de antemano para que las hagamos.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 99
+  estrofas: |-
+    Aclamad a Yahvé, tierras todas,
+    servid a Yahvé con alegría,
+    llegaos a su presencia con exultación.
+
+    Sabed que Yahvé es Dios.
+    Él nos hizo y somos de Él,
+    pueblo suyo y ovejas de su aprisco.
+
+    Entrad por sus puertas alabándole,
+    en sus atrios, con himnos.
+    Ensalzadle, bendecid su Nombre.
+
+    Porque Yahvé es bueno;
+    su misericordia es eterna,
+    y su fidelidad,
+    de generación en generación.
+- tipo: Evangelio
+  cita: Lucas 12, 13-21
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Entonces uno del pueblo le dijo: “Maestro, dile a mi hermano que parta conmigo la herencia”. Jesús le respondió: “Hombre, ¿quién me ha constituido sobre vosotros juez o partidor?”. Y les dijo: “Mirad: preservaos de toda avaricia; porque, la vida del hombre no consiste en la abundancia de lo que posee”.
+
+    Y les dijo una parábola: “Había un rico, cuyas tierras habían producido mucho. Y se hizo esta reflexión: “¿Qué voy a hacer? porque no tengo dónde recoger mis cosechas”. Y dijo: “He aquí lo que voy a hacer: derribaré mis graneros y construiré unos mayores; allí amontonaré todo mi trigo y mis bienes. Y diré a mi alma: Alma mía, tienes cuantiosos bienes en reserva para un gran número de años; reposa, come, bebe, haz fiesta”.
+
+    Mas Dios le dijo: “¡Insensato! esta misma noche te van a pedir el alma, y lo que tú has allegado, ¿para quién será?” Así ocurre con todo aquel que atesora para sí mismo, y no es rico ante Dios”.
+  cierre: Palabra del Señor.

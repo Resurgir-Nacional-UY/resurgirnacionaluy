@@ -1,0 +1,45 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-12'
+celebracion: Lunes de la XXVIII semana del tiempo ordinario
+santo: ''
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Gálatas 4, 22-24. 26-27. 31 – 5, 1
+  presentacion: Lectura de la carta del apóstol san Pablo a los Gálatas.
+  texto: |-
+    Porque escrito está que Abrahán tuvo dos hijos, uno de la esclava y otro de la libre. Mas el de la esclava nació según la carne, mientras que el de la libre, por la promesa. Esto es una alegoría, porque aquellas mujeres son dos testamentos: el uno del monte Sinaí, que engendra para servidumbre, el cual es Agar.
+
+    Mas la Jerusalén de arriba es libre, y ésta es nuestra madre. Porque escrito está: “Regocíjate, oh estéril, que no das a luz; prorrumpe en júbilo y clama, tú que no conoces los dolores de parto; porque mas son los hijos de la abandonada que los de aquella que tiene marido”. Por consiguiente, hermanos, no somos hijos de la esclava, sino de la libre.
+
+    Cristo nos ha hecho libres para la libertad. Estad, pues, firmes, y no os sujetéis de nuevo al yugo de la servidumbre.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 112
+  estrofas: |-
+    Alabad, siervos de Yahvé,
+    alabad el Nombre de Yahvé.
+    Sea bendito el Nombre de Yahvé,
+    desde ahora y para siempre.
+
+    Desde el nacimiento del sol hasta su ocaso
+    sea ensalzado el Nombre de Yahvé.
+    Excelso es Yahvé
+    sobre todas las naciones,
+    sobre los cielos, su gloria.
+
+    ¿Quién hay en los cielos y en la tierra,
+    comparable al Señor Dios nuestro,
+    que tiene su trono en las alturas
+    y se inclina para mirar?
+    Alza del polvo al desvalido
+    y desde el estiércol exalta al pobre.
+- tipo: Evangelio
+  cita: Lucas 11, 29-32
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Como la muchedumbre se agolpaba, se puso a decir: “Perversa generación es ésta; busca una señal, mas no le será dada señal, sino la de Jonás. Porque lo mismo que Jonás fué una señal para los ninivitas, así el Hijo del hombre será una señal para la generación esta. La reina del Mediodía será despertada en el juicio frente a los hombres de la generación esta y los condenará, porque vino de las extremidades de la tierra para escuchar la sabiduría de Salomón; y hay aquí más que Salomón. Los varones ninivitas actuarán en el juicio frente a la generación esta y la condenarán, porque ellos se arrepintieron a la predicación de Jonás; y hay aquí más que Jonás”.
+  cierre: Palabra del Señor.

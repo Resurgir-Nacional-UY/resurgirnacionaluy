@@ -1,0 +1,43 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-13'
+celebracion: Martes de la XXVIII semana del tiempo ordinario
+santo: ''
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Gálatas 5, 1-6
+  presentacion: Lectura de la carta del apóstol san Pablo a los Gálatas.
+  texto: |-
+    Cristo nos ha hecho libres para la libertad. Estad, pues, firmes, y no os sujetéis de nuevo al yugo de la servidumbre. Mirad, yo Pablo os digo que si os circuncidáis, Cristo de nada os aprovechará. Otra vez testifico a todo hombre que se circuncida, que queda obligado a cumplir toda la Ley.
+
+    Destituidos de Cristo quedáis cuantos queréis justificaros por la Ley; caísteis de la gracia. Pues nosotros, en virtud de la fe, esperamos por medio del Espíritu la promesa de la justicia. Por cuanto en Cristo Jesús ni la circuncisión vale algo, ni la incircuncisión, sino la fe, que obra por amor.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 118
+  estrofas: |-
+    Vengan sobre mí
+    tus misericordias, oh Yahvé;
+    y tu salud, según tus oráculos;
+    No quites de mi boca
+    la palabra de la verdad,
+    porque en tus designios
+    tengo puesta mi esperanza.
+
+    Y guardaré tu Ley para siempre,
+    en el siglo y por los siglos de los siglos.
+    Ancho será el camino en que yo ande,
+    porque busco tus preceptos.
+
+    Y me deleitaré con las voluntades tuyas,
+    que yo amo.
+    Y alzaré mis manos hacia tus mandatos
+    y meditaré en tus enseñanzas.
+- tipo: Evangelio
+  cita: Lucas 11, 37-41
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Mientras Él hablaba lo invitó un fariseo a comer con él; entró y se puso a la mesa. El fariseo se extrañó al ver que no se había lavado antes de comer. Díjole, pues el Señor: “Vosotros, fariseos, estáis purificando lo exterior de la copa y del plato, en tanto que por dentro estáis llenos de rapiña y de iniquidad. ¡Insensatos! el que hizo lo exterior ¿no hizo también lo interior? Por eso, dad de limosna el contenido, y todo para vosotros quedará puro.
+  cierre: Palabra del Señor.

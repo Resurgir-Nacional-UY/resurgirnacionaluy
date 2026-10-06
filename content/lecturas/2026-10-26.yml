@@ -1,0 +1,52 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-26'
+celebracion: Lunes de la XXX semana del tiempo ordinario
+santo: ''
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Efesios 4, 32 – 5, 8
+  presentacion: Lectura de la carta del apóstol san Pablo a los Efesios.
+  texto: |-
+    Sed benignos unos para con otros, compasivos, perdonándoos mutuamente de la misma manera que Dios os ha perdonado a vosotros en Cristo. Imitad entonces a Dios, pues que sois sus hijos amados; y vivid en amor así como Cristo os amó, y se entregó por nosotros como oblación y víctima a Dios cual (incienso de) olor suavísimo.
+
+    Fornicación y cualquier impureza o avaricia, ni siquiera se nombre entre vosotros, como conviene a santos; ni torpeza, ni vana palabrería, ni bufonerías, cosas que no convienen, antes bien acciones de gracia. Porque tened bien entendido que ningún fornicario, impuro o avaro, que es lo mismo que idólatra, tiene parte en el reino de Cristo y de Dios.
+
+    Nadie os engañe con vanas palabras, pues por estas cosas descarga la ira de Dios sobre los hijos de la desobediencia. No os hagáis, pues, copartícipes de ellos. Porque antes erais tinieblas, ahora sois luz en el Señor. Andad, pues, como hijos de la luz.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 1
+  estrofas: |-
+    ¡Dichoso el hombre que no sigue
+    el consejo de los malvados,
+    ni pone el pie
+    en el camino de los pecadores,
+    ni entre los burladores toma asiento,
+    mas tiene su deleite en la Ley del Señor,
+    y en ella medita día y noche!
+
+    Es como un árbol
+    plantado junto a ríos de agua,
+    que a su tiempo dará fruto
+    y cuyas hojas no se marchitan;
+    todo cuanto hiciere prosperará.
+
+    No así los malvados, no así.
+    Ellos son como paja
+    que el viento desparrama.
+    Porque el camino de los justos
+    lo cuida Yahvé,
+    y el camino de los malvados tiene mal fin.
+- tipo: Evangelio
+  cita: Lucas 13, 10-17
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Un día sabático enseñaba en una sinagoga. Había allí una mujer que tenía desde hacía dieciocho años, un espíritu de enfermedad: estaba toda encorvada, y sin poder absolutamente enderezarse. Al verla Jesús, la llamó y le dijo: “Mujer, queda libre de tu enfermedad”. Y puso sobre ella sus manos, y al punto se enderezó y se puso a glorificar a Dios.
+
+    Entonces, el jefe de la sinagoga, indignado porque Jesús había curado en día sabático, respondió y dijo al pueblo: “Hay seis días para trabajar; en esos días podéis venir para haceros curar, y no el día de sábado”. Mas Jesús le replicó diciendo: “Hipócritas, ¿cada uno de vosotros no desata su buey o su asno del pesebre, en día sabático, para llevarlo al abrevadero? Y a ésta, que es una hija de Abrahán, que Satanás tenía ligada hace ya dieciocho años, ¿no se la había de libertar de sus ataduras, en día sabático?”
+
+    A estas palabras, todos sus adversarios quedaron anonadados de vergüenza, en tanto que la muchedumbre entera se gozaba de todas las cosas gloriosas hechas por Él.
+  cierre: Palabra del Señor.

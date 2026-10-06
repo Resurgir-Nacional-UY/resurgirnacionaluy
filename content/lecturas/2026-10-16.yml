@@ -1,0 +1,42 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-16'
+celebracion: Viernes de la XXVIII semana del tiempo ordinario
+santo: 'Memoria libre: Santa Eduvigis, religiosa'
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Efesios 1, 11-14
+  presentacion: Lectura de la carta del apóstol san Pablo a los Efesios.
+  texto: |-
+    En Él también fuimos elegidos nosotros para herederos predestinados, según el designio del que todo lo hace conforme al consejo de su voluntad, para que fuésemos la alabanza de su gloria los que primero pusimos nuestra esperanza en Cristo. En Él también vosotros, después de oír la palabra de la verdad, el Evangelio de vuestra salvación, habéis creído, y en Él fuisteis sellados con el Espíritu de la promesa; el cual es arras de nuestra herencia a la espera del completo rescate de los que Él se adquirió para alabanza de su gloria.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 32
+  estrofas: |-
+    Cantad, oh justos, a Yahvé,
+    la alabanza es propia de los rectos.
+    Celebrad al Señor con la cítara;
+    con el arpa de diez cuerdas cantadle himnos.
+
+    Porque la Palabra de Yahvé es recta,
+    y toda su conducta es fiel.
+    Él ama la misericordia y la justicia,
+    la tierra está llena de la bondad de Yahvé.
+
+    ¡Dichoso el pueblo
+    que tiene por Dios a Yahvé,
+    dichoso el pueblo
+    que Él escogió para herencia suya!
+    Yahvé mira desde lo alto de los cielos,
+    ve a todos los hijos de los hombres.
+- tipo: Evangelio
+  cita: Lucas 12, 1-7
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Mientras tanto, habiéndose reunido miles y miles del pueblo, hasta el punto que unos a otros se pisoteaban, se puso a decir, dirigiéndose primeramente a sus discípulos: “Guardaos a vosotros mismos de la levadura –es decir de la hipocresía– de los fariseos. Nada hay oculto que no haya de ser descubierto, nada secreto que no haya de ser conocido. En consecuencia, lo que hayáis dicho en las tinieblas, será oído en plena luz; y lo que hayáis dicho al oído en los sótanos, será pregonado sobre los techos. Os lo digo a vosotros, amigos míos, no temáis a los que matan el cuerpo y después de esto nada más pueden hacer. Voy a deciros a quién debéis temer: temed a Aquel que, después de haber dado la muerte, tiene el poder de arrojar en la gehenna. Sí, os lo digo, a Aquel temedle”.
+
+    “¿No se venden cinco pájaros por dos ases? Con todo, ni uno solo es olvidado de Dios. Aun los cabellos de vuestra cabeza están todos contados. No tenéis vosotros que temer: valéis más que muchos pájaros.
+  cierre: Palabra del Señor.

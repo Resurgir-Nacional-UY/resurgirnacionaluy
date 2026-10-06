@@ -1,0 +1,57 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-18'
+celebracion: XXIX domingo del tiempo ordinario
+santo: ''
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Isaías 45, 1. 4-6
+  presentacion: Lectura del libro de Isaías.
+  texto: |-
+    Así dice Yahvé a su ungido, a Ciro, a quien he tomado de la derecha, para derribar delante de él naciones, y desceñir la cintura de reyes; para abrir ante él las puertas a fin de que las puertas no le estén cerradas. Por amor de Jacob, mi siervo, y por amor de Israel, mi escogido, te llamé por tu nombre; te puse nombre cuando no me conocías aún.
+
+    Yo soy Yahvé, y no hay otro; fuera de Mí no hay Dios alguno. Yo te ceñí cuando no me conocías, a fin de que sepan (todos), desde el Oriente hasta el Occidente, que no hay ninguno fuera de Mí. Yo soy Yahvé, y no hay otro.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 95
+  estrofas: |-
+    Cantad a Yahvé un cántico nuevo,
+    cantad a Yahvé, tierras todas.
+    Pregonad su gloria entre los gentiles;
+    sus maravillas entre los pueblos todos.
+
+    Porque grande es Yahvé
+    y digno de suma alabanza,
+    temible, más que todos los dioses.
+    Pues todos los dioses de los gentiles son ficción
+    en tanto que Yahvé hizo los cielos.
+
+    Reconoced a Yahvé,
+    oh razas de los pueblos,
+    reconoced a Yahvé la gloria y el poder.
+    Reconoced a Yahvé
+    la gloria de su Nombre.
+
+    Adorad a Yahvé en sacro esplendor,
+    oh tierra toda, tiembla ante Él.
+    Anunciad a las naciones: “Reina Yahvé;
+    rige a los pueblos con justicia.”
+- tipo: Segunda lectura
+  cita: 1 Tesalonicenses 1, 1-5
+  presentacion: Lectura de la primera carta del apóstol san Pablo a los Tesalonicenses.
+  texto: |-
+    Pablo y Silvano y Timoteo, a la Iglesia de los tesalonicenses, en Dios Padre y en el Señor Jesucristo: gracia a vosotros y paz. Siempre damos gracias a Dios por todos vosotros, haciendo sin cesar memoria de vosotros en nuestras oraciones. Nos acordamos ante Dios y Padre nuestro de la obra de vuestra fe, y del trabajo de vuestra caridad, y de la paciencia de vuestra esperanza en nuestro Señor Jesucristo, porque conocemos, hermanos amados de Dios, vuestra elección.
+
+    Pues nuestro Evangelio llegó a vosotros no solamente en palabras, sino también en poder, y en el Espíritu Santo, y con toda plenitud.
+  cierre: Palabra de Dios.
+- tipo: Evangelio
+  cita: Mateo 22, 15-21
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    Entonces los fariseos se fueron y deliberaron cómo le sorprenderían en alguna palabra. Le enviaron, pues, sus discípulos con los herodianos, a decirle: “Maestro, sabemos que eres veraz y que enseñas el camino de Dios con verdad, sin miedo a nadie, porque no miras a la persona de los hombres. Dinos, pues, lo que piensas: ¿es lícito pagar tributo al César o no?”
+
+    Mas Jesús, conociendo su malicia, repuso: “Hipócritas, ¿por qué me tentáis? Mostradme la moneda del tributo”. Y le presentaron un denario. Preguntóles: “¿De quien es esta figura y la leyenda?” Le respondieron: “del César”. Entonces les dijo: “Dad, pues, al César lo que es del César, y a Dios lo que es de Dios”.
+  cierre: Palabra del Señor.

@@ -1,0 +1,42 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-29'
+celebracion: Jueves de la XXX semana del tiempo ordinario
+santo: ''
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Efesios 6, 10-20
+  presentacion: Lectura de la carta del apóstol san Pablo a los Efesios.
+  texto: |-
+    Por lo demás, hermanos, confortaos en el Señor y en la fuerza de su poder. Vestíos la armadura de Dios, para poder sosteneros contra los ataques engañosos del diablo. Porque para nosotros la lucha no es contra sangre y carne, sino contra los principados, contra las potestades, contra los poderes mundanos de estas tinieblas, contra los espíritus de la maldad en lo celestial.
+
+    Tomad, por eso, la armadura de Dios, para que puedas resistir en el día malo y, habiendo cumplido todo, estar en pie. Teneos, pues, firmes, ceñidos los lomos con la verdad y vestidos con la coraza de la justicia, y calzados los pies con la prontitud del Evangelio de la paz. Embrazad en todas las ocasiones el escudo de la fe, con el cual podréis apagar todos los dardos encendidos del Maligno.
+
+    Recibid asimismo el yelmo de la salud, y la espada del Espíritu, que es la Palabra de Dios; orando siempre en el Espíritu con toda suerte de oración y plegaria, y velando para ello con toda perseverancia y súplica por todos los santos, y por mí, a fin de que al abrir mi boca se me den palabras para manifestar con denuedo el misterio del Evangelio, del cual soy mensajero entre cadenas, y sea yo capaz de anunciarlo con toda libertad, según debo hablar.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 143
+  estrofas: |-
+    Bendito sea Yahvé, mi piedra;
+    Él adiestra mis manos para la pelea,
+    mis dedos para la guerra;
+    Él es mi alcázar y mi libertador,
+    el broquel con que me cubro;
+    Él es quien me somete los pueblos.
+
+    Quiero cantarte, oh Dios, un cántico nuevo,
+    con el salterio de diez cuerdas te cantaré:
+    El que da la victoria a los reyes,
+    que salvó a David, su siervo,
+    de la fatal espada.
+- tipo: Evangelio
+  cita: Lucas 13, 31-35
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    En ese momento se acercaron algunos fariseos, para decirle: “¡Sal, vete de aquí, porque Herodes te quiere matar”. Y les dijo: “Id a decir a ese zorro: He aquí que echo demonios y obro curaciones hoy y mañana; el tercer día habré terminado. Pero hoy, mañana y al otro día, es necesario que Yo ande, porque no cabe que un profeta perezca fuera de Jerusalén”.
+
+    ¡A ¡Jerusalén, Jerusalén, tú que matas a los profetas, y apedreas a los que te son enviados, ¡cuántas veces quise Yo reunir a tus hijos, como la gallina reúne su pollada debajo de sus alas, y vosotros no lo habéis querido! Ved que vuestra casa os va a quedar desierta. Yo os lo digo, no me volveréis a ver, hasta que llegue el tiempo en que digáis: “¡Bendito el que viene en nombre del Señor!”
+  cierre: Palabra del Señor.

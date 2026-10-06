@@ -1,0 +1,45 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-27'
+celebracion: Martes de la XXX semana del tiempo ordinario
+santo: ''
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Efesios 5, 21-33
+  presentacion: Lectura de la carta del apóstol san Pablo a los Efesios.
+  texto: |-
+    sujetándoos los unos a los otros en el santo temor de Cristo. Las mujeres sujétense a sus maridos como al Señor, porque el varón es cabeza de la mujer, como Cristo cabeza de la Iglesia, salvador de su cuerpo. Así como la Iglesia está sujeta a Cristo, así también las mujeres lo han de estar a sus maridos en todo.
+
+    Maridos, amad a vuestras mujeres, como Cristo amó a la Iglesia y se entregó Él mismo por ella, para santificarla, purificándola con la palabra en el baño del agua, a fin de presentarla delante de Sí mismo como Iglesia gloriosa, sin mancha, ni arruga, ni nada semejante, sino santa e inmaculada.
+
+    Así también los varones deben amar a sus mujeres como a su propio cuerpo. El que ama a su mujer, a sí mismo se ama. Porque nadie jamás tuvo odio a su propia carne, sino que la sustenta y regala, como también Cristo a la Iglesia, puesto que somos miembros de su cuerpo. “A causa de esto dejará el hombre a su padre y a su madre, y se adherirá a su mujer, y los dos serán una carne”.
+
+    Este misterio es grande; mas yo lo digo en orden a Cristo y a la Iglesia. Con todo, también cada uno de vosotros ame a su mujer como a sí mismo; y la mujer a su vez reverencie al marido.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 127
+  estrofas: |-
+    Dichoso tú que temes a Yahvé,
+    que andas en sus caminos.
+    Pues comerás del trabajo de tus manos;
+    serás bendito, te irá bien.
+
+    Tu esposa, parra fecunda
+    en el interior de tu casa;
+    tus hijos, retoños de olivo
+    alrededor de tu mesa.
+
+    Así será bendecido el hombre
+    que teme a Yahvé.
+    Te bendiga Yahvé desde Sión,
+    para que veas la prosperidad de Jerusalén
+    todos los días de tu vida.
+- tipo: Evangelio
+  cita: Lucas 13, 18-21
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Dijo entonces: “¿A qué es semejante el reino de Dios, y con qué podré compararlo? Es semejante a un grano de mostaza que un hombre tomó y fue a sembrar en su huerta; creció, vino a ser un árbol, y los pájaros del cielo llegaron a anidar en sus ramas”. Dijo todavía: “¿Con qué podré comparar el reino de Dios? Es semejante a la levadura que una mujer tomó y escondió en tres medidas de harina y, finalmente, todo fermentó”.
+  cierre: Palabra del Señor.

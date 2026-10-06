@@ -1,0 +1,50 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-25'
+celebracion: XXX domingo del tiempo ordinario
+santo: ''
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Éxodo 22, 20-26
+  presentacion: Lectura del libro del Éxodo.
+  texto: |-
+    No maltratarás al extranjero, ni lo oprimirás, pues extranjeros fuisteis vosotros en el país de Egipto. No afligiréis a la viuda ni al huérfano. Si los afligiereis, clamarán a Mí, y Yo no dejaré de oír su clamor; y se encenderá mi ira, y os mataré a espada; y vuestras mujeres quedarán viudas, y vuestros hijos, huérfanos.
+
+    Si prestas dinero a uno de mi pueblo, al pobre que habita contigo, no serás con él como usurero; no le exigirás interés. Si tomas en prenda el manto de tu prójimo, se lo devolverás antes de ponerse el sol; porque es su único abrigo; es el vestido de su cuerpo. ¿Sobre qué dormirá?
+
+    Si clamare a Mí, le prestaré oído, porque soy misericordioso.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 17
+  estrofas: |-
+    Te amo, Yahvé, fortaleza mía,
+    mi peña, mi baluarte, mi libertador,
+    Dios mío, mi roca, mi refugio.
+
+    Broquel mío, cuerno de mi salud, asilo mío.
+    Invoco a Yahvé, el digno de alabanza,
+    y quedo libre de mis enemigos.
+
+    ¡Vive Yahvé! ¡Bendita sea mi Roca!
+    ¡Sea ensalzado el Dios mi Salvador!
+    Él da grandes victorias a su rey,
+    y usa de misericordia con su ungido.
+- tipo: Segunda lectura
+  cita: 1 Tesalonicenses 1, 5-10
+  presentacion: Lectura de la primera carta del apóstol san Pablo a los Tesalonicenses.
+  texto: |-
+    Y así bien sabéis cuáles fuimos entre vosotros por amor vuestro. Vosotros os hicisteis imitadores nuestros y del Señor, recibiendo la palabra en medio de grande tribulación con gozo del Espíritu Santo; de modo que llegasteis a ser un ejemplo para todos los fieles de Macedonia y de Acaya.
+
+    Así es que desde vosotros ha repercutido la Palabra del Señor, no sólo por Macedonia y Acaya, sino que en todo lugar la fe vuestra, que es para con Dios, se ha divulgado de tal manera que nosotros no tenemos necesidad de decir palabra. Pues ellos mismos cuentan de nosotros cuál fue nuestra llegada a vosotros, y cómo os volvisteis de los ídolos a Dios para servir al Dios vivo y verdadero, y esperar de los cielos a su Hijo, a quien Él resucitó de entre los muertos: Jesús, el que nos libra de la ira venidera.
+  cierre: Palabra de Dios.
+- tipo: Evangelio
+  cita: Mateo 22, 34-40
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    Mas los fariseos, al oír que había tapado la boca a los saduceos, vinieron a reunirse junto a Él; y uno de ellos, doctor de la Ley, le propuso esta cuestión para tentarlo: “Maestro, ¿cuál es el mayor mandamiento de la Ley?” Respondió Él: “Amarás al Señor tu Dios de todo tu corazón, con toda tu alma, y con todo tu espíritu. Éste es el mayor y primer mandamiento. El segundo le es semejante: “Amarás a tu prójimo como a ti mismo”.
+
+    De estos dos mandamientos pende toda la Ley y los Profetas”.
+  cierre: Palabra del Señor.

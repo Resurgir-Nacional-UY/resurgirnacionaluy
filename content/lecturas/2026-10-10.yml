@@ -1,0 +1,44 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-10'
+celebracion: Sábado de la XXVII semana del tiempo ordinario
+santo: 'Memoria libre: Santa María en sábado'
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Gálatas 3, 22-29
+  presentacion: Lectura de la carta del apóstol san Pablo a los Gálatas.
+  texto: |-
+    Pero la Escritura lo ha encerrado todo bajo el pecado, a fin de que la promesa, que es por la fe en Jesucristo, fuese dada a los que creyesen. Mas antes de venir la fe, estábamos bajo la custodia de la Ley, encerrados para la fe que había de ser revelada. De manera que la Ley fue nuestro ayo para conducirnos a Cristo, a fin de que seamos justificados por la fe.
+
+    Mas venida la fe, ya no estamos bajo el ayo, por cuanto todos sois hijos de Dios por la fe en Cristo Jesús. Pues todos los que habéis sido bautizados en Cristo estáis vestidos de Cristo. No hay ya judío ni griego, no hay esclavo ni libre, no hay varón y mujer; porque todos vosotros sois uno solo en Cristo Jesús.
+
+    Y siendo vosotros de Cristo, sois por tanto descendientes de Abrahán, herederos según la promesa.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 104
+  estrofas: |-
+    Cantadle, entonadle salmos,
+    relatad todas sus obras maravillosas.
+    Gloriaos de su santo Nombre;
+    alégrese el corazón
+    de los que buscan a Yahvé.
+
+    Fijaos en Yahvé y su fortaleza,
+    buscad sin cesar su rostro.
+    Acordaos de las maravillas que hizo,
+    de sus prodigios
+    y de las sentencias de su boca.
+
+    Vosotros, descendencia de Abrahán, su siervo,
+    hijos de Jacob, su escogido.
+    El mismo Yahvé es nuestro Dios;
+    sus juicios prevalecen en toda la tierra.
+- tipo: Evangelio
+  cita: Lucas 11, 27-28
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Cuando Él hablaba así, una mujer levantando la voz de entre la multitud, dijo: “¡Feliz el seno que te llevó y los pechos que Tú mamaste!” Y Él contestó: “¡Felices más bien los que escuchan la palabra de Dios y la conservan!”
+  cierre: Palabra del Señor.

@@ -1,0 +1,51 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-22'
+celebracion: Jueves de la XXIX semana del tiempo ordinario
+santo: 'Memoria libre: San Juan Pablo II, papa'
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Efesios 3, 14-21
+  presentacion: Lectura de la carta del apóstol san Pablo a los Efesios.
+  texto: |-
+    Por esto doblo mis rodillas ante el Padre, de quien toma su nombre toda paternidad en el cielo y en la tierra, para que os conceda, según la riqueza de su gloria, que seáis poderosamente fortalecidos por su Espíritu en el hombre interior; y Cristo por la fe habite en vuestros corazones, a fin de que, arraigados y cimentados en el amor, seáis hechos capaces de comprender con todos los santos qué cosa sea la anchura y largura y alteza y profundidad, y de conocer el amor de Cristo (por nosotros) que sobrepuja a todo conocimiento, para que seáis colmados de toda la plenitud de Dios.
+
+    A Él, que es poderoso para hacer en todo, mediante su fuerza que obra en nosotros, incomparablemente más de lo que pedimos y pensamos, a Él la gloria en la Iglesia y en Cristo Jesús, por todas las generaciones de la edad de las edades. Amén.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 32
+  estrofas: |-
+    Cantad, oh justos, a Yahvé,
+    la alabanza es propia de los rectos.
+    Celebrad al Señor con la cítara;
+    con el arpa de diez cuerdas cantadle himnos.
+
+    Porque la Palabra de Yahvé es recta,
+    y toda su conducta es fiel.
+    Él ama la misericordia y la justicia,
+    la tierra está llena de la bondad de Yahvé.
+
+    Mas los planes del Señor permanecen eternamente;
+    los designios de su corazón,
+    de generación en generación.
+    ¡Dichoso el pueblo
+    que tiene por Dios a Yahvé,
+    dichoso el pueblo
+    que Él escogió para herencia suya!
+
+    Mas los ojos de Yahvé
+    velan por los que le temen,
+    por los que esperan de su misericordia,
+    que ha de librar sus almas de la muerte,
+    y alimentarlos en el tiempo de hambre.
+- tipo: Evangelio
+  cita: Lucas 12, 49-53
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Fuego vine a echar sobre la tierra, ¡y cuánto deseo que ya esté encendido! Un bautismo tengo para bautizarme, ¡y cómo estoy en angustias hasta que sea cumplido! ¿Pensáis que vine aquí para poner paz en la tierra? No, os digo, sino división. Porque desde ahora, cinco en una casa estarán divididos: tres contra dos, y dos contra tres.
+
+    Estarán divididos, el padre contra el hijo, y el hijo contra el padre; la madre contra la hija, y la hija contra la madre; la suegra contra su nuera, y la nuera contra su suegra”.
+  cierre: Palabra del Señor.

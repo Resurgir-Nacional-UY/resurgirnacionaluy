@@ -1,0 +1,45 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-07'
+celebracion: Miércoles de la XXVII semana del tiempo ordinario
+santo: 'Memoria obligatoria: Bienaventurada Virgen María del Rosario'
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Hechos 1, 12-14
+  presentacion: Lectura del libro de los Hechos de los Apóstoles.
+  texto: |-
+    Después de esto regresaron a Jerusalén desde el monte llamado de los Olivos que está cerca de Jerusalén, distante la caminata de un sábado. Y luego que entraron, subieron al cenáculo, donde tenían su morada: Pedro, Juan, Santiago y Andrés, Felipe y Tomás, Bartolomé y Mateo, Santiago de Alfeo, Simón el Zelote y Judas de Santiago.
+
+    Todos ellos perseveraban unánimes en oración, con las mujeres, con María, la madre de Jesús, y con los hermanos de Éste.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Lucas 1, 46-55
+  estrofas: |-
+    Glorifica mi alma al Señor,
+    y mi espíritu se goza en Dios mi Salvador,
+    porque ha mirado la pequeñez de su esclava. Y he aquí que desde ahora me felicitarán todas las generaciones.
+
+    Porque en mí obró grandezas el Poderoso. Santo es su nombre,
+    y su misericordia, para los que le temen va de generación en generación.
+
+    Desplegó el poder de su brazo; dispersó a los que se engrieron en los pensamientos de su corazón.
+    Bajó del trono a los poderosos, y levantó a los pequeños;
+    llenó de bienes a los hambrientos, y a los ricos despidió vacíos.
+
+    Acogió a Israel su siervo, recordando la misericordia,
+    conforme lo dijera a nuestros padres en favor de Abrahán y su posteridad para siempre.
+- tipo: Evangelio
+  cita: Lucas 1, 26-38
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Al sexto mes, el ángel Gabriel fué enviado por Dios a una ciudad de Galilea llamada Nazaret, a una virgen prometida en matrimonio a un varón, de nombre José, de la casa de David; y el nombre de la virgen era María. Y entrado donde ella estaba, le dijo: “Salve, llena de gracia; el Señor es contigo”.
+
+    Al oír estas palabras, se turbó, y se preguntaba qué podría significar este saludo. Mas el ángel le dijo: “No temas, María, porque has hallado gracia cerca de Dios. He aquí que vas a concebir en tu seno, y darás a luz un hijo, y le pondrás por nombre Jesús. El será grande y será llamado el Hijo del Altísimo; y el Señor Dios le dará el trono de David su padre, y reinará sobre la casa de Jacob por los siglos, y su, reinado no tendrá fin. Entonces María dijo al ángel: “¿Cómo será eso, pues no conozco varón?”
+
+    El ángel le respondió y dijo: “El Espíritu Santo vendrá sobre ti, y la virtud del Altísimo te cubrirá; por eso el santo Ser que nacerá será llamado Hijo de Dios. Y he aquí que tu parienta Isabel, en su vejez también ha concebido un hijo, y está en su sexto mes la que era llamada estéril; porque no hay nada imposible para Dios”.
+
+    Entonces María dijo: “He aquí la esclava del Señor: Séame hecho según tu palabra”. Y el ángel la dejó.
+  cierre: Palabra del Señor.

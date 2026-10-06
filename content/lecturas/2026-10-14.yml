@@ -1,0 +1,48 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-14'
+celebracion: Miércoles de la XXVIII semana del tiempo ordinario
+santo: 'Memoria libre: San Calixto I, papa y mártir'
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Gálatas 5, 18-25
+  presentacion: Lectura de la carta del apóstol san Pablo a los Gálatas.
+  texto: |-
+    Porque si os dejáis guiar por el Espíritu no estáis bajo la Ley. Y las obras de la carne son manifiestas, a saber: fornicación, impureza, lascivia, idolatría, hechicería, enemistades, contiendas, celos, ira, litigios, banderías, divisiones, envidias, embriagueces, orgías y otras cosas semejantes, respecto de las cuales os prevengo, como os lo he dicho ya, que los que hacen tales cosas no heredarán el reino de Dios.
+
+    En cambio, el fruto del Espíritu es amor, gozo, paz, longanimidad, benignidad, bondad, fidelidad, mansedumbre, templanza. Contra tales cosas no hay ley. Los que son de Cristo Jesús han crucificado la carne con las pasiones y las concupiscencias. Si vivimos por el Espíritu, por el Espíritu también caminemos.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 1
+  estrofas: |-
+    ¡Dichoso el hombre que no sigue
+    el consejo de los malvados,
+    ni pone el pie
+    en el camino de los pecadores,
+    ni entre los burladores toma asiento,
+    mas tiene su deleite en la Ley del Señor,
+    y en ella medita día y noche!
+
+    Es como un árbol
+    plantado junto a ríos de agua,
+    que a su tiempo dará fruto
+    y cuyas hojas no se marchitan;
+    todo cuanto hiciere prosperará.
+
+    No así los malvados, no así.
+    Ellos son como paja
+    que el viento desparrama.
+    Porque el camino de los justos
+    lo cuida Yahvé,
+    y el camino de los malvados tiene mal fin.
+- tipo: Evangelio
+  cita: Lucas 11, 42-46
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Pero, ¡ay de vosotros, fariseos! ¡porque dais el diezmo de la menta, de la ruda y de toda legumbre, y dejáis de lado la justicia y el amor de Dios! Era menester practicar esto, sin omitir aquello. ¡Ay de vosotros, fariseos! porque amáis el primer sitial en las sinagogas y ser saludados en las plazas públicas.
+
+    ¡Ay de vosotros! porque sois como esos sepulcros, que no lo parecen y que van pisando las gentes, sin saberlo”. Entonces un doctor de la Ley le dijo: “Maestro, hablando así, nos ultrajas también a nosotros?” Mas Él respondió: “¡Ay de vosotros también, doctores de la Ley! porque agobiáis a los demás con cargas abrumadoras, al paso que vosotros mismos ni con un dedo tocáis esas cargas.
+  cierre: Palabra del Señor.

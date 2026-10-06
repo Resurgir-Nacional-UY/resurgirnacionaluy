@@ -1,0 +1,37 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-08'
+celebracion: Jueves de la XXVII semana del tiempo ordinario
+santo: ''
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Gálatas 3, 1-5
+  presentacion: Lectura de la carta del apóstol san Pablo a los Gálatas.
+  texto: |-
+    ¡Oh, insensatos gálatas! ¿cómo ha podido nadie fascinaros a vosotros, ante cuyos ojos fue presentado Jesucristo clavado en una cruz? Quisiera saber de vosotros esto solo: si recibisteis el Espíritu por obra de la Ley o por la palabra de la fe. ¿Tan insensatos sois que habiendo comenzado por Espíritu, acabáis ahora en carne?
+
+    ¿Valía la pena padecer tanto si todo fue en vano? Aquel que os suministra el Espíritu y obra milagros en vosotros ¿lo hace por las obras de la Ley o por la palabra de la fe?
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Lucas 1, 69-75
+  estrofas: |-
+    Al suscitarnos un poderoso Salvador, en la casa de David, su siervo,
+    como lo había anunciado por boca de sus santos profetas, que han sido desde los tiempos antiguos.
+
+    Un Salvador para librarnos de nuestros enemigos, y de las manos de todos los que nos aborrecen;
+    usando de misericordia con nuestros padres, y acordándose de su santa alianza.
+
+    Según el juramento, hecho a Abrahán nuestro padre, de concedernos
+    que librados de la mano de nuestros enemigos, le sirvamos sin temor
+    en santidad y justicia, en su presencia, todos nuestros días.
+- tipo: Evangelio
+  cita: Lucas 11, 5-13
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Y les dijo: “Quien de vosotros, teniendo un amigo, si va (éste) a buscarlo a medianoche y le dice: “Amigo, necesito tres panes, porque un amigo me ha llegado de viaje, y no tengo nada que ofrecerle”, y si él mismo le responde de adentro: “No me incomodes, ahora mi puerta está cerrada y mis hijos están como yo en cama, no puedo levantarme para darte”, os digo, que si no se levanta para darle por ser su amigo, al menos a causa de su pertinacia, se levantará para darle todo lo que le hace falta. Yo os digo: “Pedid y se os dará, buscad y encontraréis, golpead y se os abrirá”.
+
+    Porque todo el que pide obtiene, el que busca halla, al que golpea se le abre. ¿Qué padre, entre vosotros, si su hijo le pide pan, le dará una piedra? ¿Si pide pescado, en lugar de pescado le dará una serpiente? ¿O si pide un huevo, le dará un escorpión? Si pues vosotros, aunque malos, sabéis dar buenas cosas a vuestros hijos, ¡cuánto más el Padre dará desde el cielo el Espíritu Santo a quienes se lo pidan!”
+  cierre: Palabra del Señor.

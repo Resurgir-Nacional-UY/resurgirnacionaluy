@@ -1,0 +1,49 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-09'
+celebracion: Viernes de la XXVII semana del tiempo ordinario
+santo: 'Memoria libre: San Dionisio, obispo, y compañeros, mártires; o San Juan Leonardi, presbítero'
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Gálatas 3, 7-14
+  presentacion: Lectura de la carta del apóstol san Pablo a los Gálatas.
+  texto: |-
+    Sabed, pues, que los que viven de la fe, ésos son hijos de Abrahán. Y la Escritura, previendo que Dios justifica a los gentiles por la fe, anunció de antemano a Abrahán la buena nueva: “En ti serán bendecidas todas las naciones”. De modo que, junto con el creyente Abrahán, son bendecidos los que creen.
+
+    Porque cuantos vivan de las obras de la Ley, están sujetos a la maldición; pues escrito está: “Maldito todo aquel que no persevera en todo lo que está escrito en el Libro de la Ley para cumplirlo”. Por lo demás, es manifiesto que por la Ley nadie se justifica ante Dios, porque “el justo vivirá de fe”; en tanto que la Ley no viene de la fe, sino que: “El que hiciere estas cosas, vivirá por ellas”.
+
+    Cristo, empero, nos redimió de la maldición de la Ley, haciéndose por nosotros maldición, porque escrito está: “Maldito sea todo el que pende del madero”, para que en Cristo Jesús alcanzase a los gentiles la bendición de Abrahán, y por medio de la fe recibiésemos el Espíritu prometido.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 110
+  estrofas: |-
+    Quiero honrar a Yahvé
+    con todo mi corazón,
+    en el coro de los justos y en la asamblea.
+    Grandes son las obras de Yahvé:
+    escudríñenlas los que las disfrutan.
+
+    Su obrar es todo majestad y esplendor,
+    y su justicia permanece para siempre.
+    Hizo sus maravillas
+    para ser recordadas.
+    Yahvé es benigno y compasivo.
+
+    Él da alimento a los que le temen;
+    para siempre se acordará de su alianza.
+    A su pueblo ha mostrado
+    el poder de sus obras,
+    dándole la herencia de las naciones.
+- tipo: Evangelio
+  cita: Lucas 11, 15-26
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Pero algunos de entre ellos dijeron: “Por Beelzebul, príncipe de los demonios, expulsa los demonios”. Otros, para ponerlo a prueba, requerían de Él una señal desde el cielo. Mas Él, habiendo conocido sus pensamientos, les dijo: “Todo reino dividido contra sí mismo, es arruinado, y las casas caen una sobre otra. Si pues, Satanás se divide contra él mismo, ¿cómo se sostendrá su reino? Puesto que decís vosotros que por Beelzebul echo Yo los demonios. Ahora bien, si Yo echo los demonios por virtud de Beelzebul, ¿vuestros hijos por virtud de quién los arrojan? Ellos mismos serán, pues, vuestros jueces. Mas si por el dedo de Dios echo Yo los demonios, es que ya llegó a vosotros el reino de Dios. Cuando el hombre fuerte y bien armado guarda su casa, sus bienes están seguros.
+
+    Pero si sobreviniendo uno más fuerte que él lo vence, le quita todas sus armas en que confiaba y reparte sus despojos. Quien no está conmigo, está contra Mí; y quien no acumula conmigo, desparrama”. “Cuando el espíritu inmundo sale de un hombre, recorre los lugares áridos, buscando donde posarse, y, no hallándolo, dice: «Me volveré a la casa mía, de donde salí».
+
+    A su llegada, la encuentra barrida y adornada. Entonces se va a tomar consigo otros siete espíritus aun más malos que él mismo; entrados, se arraigan allí, y el fin de aquel hombre viene a ser peor que el principio”.
+  cierre: Palabra del Señor.

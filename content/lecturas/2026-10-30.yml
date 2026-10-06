@@ -1,0 +1,47 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-30'
+celebracion: Viernes de la XXX semana del tiempo ordinario
+santo: ''
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Filipenses 1, 1-11
+  presentacion: Lectura de la carta del apóstol san Pablo a los Filipenses.
+  texto: |-
+    Pablo y Timoteo, siervos de Cristo Jesús, a todos los santos en Cristo Jesús que están en Filipos con los obispos y diáconos: gracia a vosotros y paz, de parte de Dios nuestro Padre y del Señor Jesucristo. Doy gracias a mi Dios cada vez que me acuerdo de vosotros, y ruego siempre con gozo por todos vosotros en todas mis oraciones, a causa de vuestra participación en el Evangelio, desde el primer día hasta ahora.
+
+    Tengo la firme confianza de que Aquel que en vosotros comenzó la buena obra, la perfeccionará hasta el día de Cristo Jesús. Y es justo que yo piense así de todos vosotros, por cuanto os llevo en el corazón; pues tanto en mis prisiones como en la defensa y confirmación del Evangelio todos vosotros sois partícipes de mi gracia.
+
+    Porque testigo me es Dios de mi anhelo por todos vosotros en las entrañas de Cristo Jesús. Lo que pido en mi oración es que vuestro amor abunde más y más en conocimiento y en todo discernimiento, para que sepáis apreciar lo mejor y seáis puros e irreprensibles hasta el día de Cristo, llenos de frutos de justicia, por medio de Jesucristo, para gloria y alabanza de Dios.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 110
+  estrofas: |-
+    Quiero honrar a Yahvé
+    con todo mi corazón,
+    en el coro de los justos y en la asamblea.
+    Grandes son las obras de Yahvé:
+    escudríñenlas los que las disfrutan.
+
+    Su obrar es todo majestad y esplendor,
+    y su justicia permanece para siempre.
+    Hizo sus maravillas
+    para ser recordadas.
+    Yahvé es benigno y compasivo.
+
+    Él da alimento a los que le temen;
+    para siempre se acordará de su alianza.
+    A su pueblo ha mostrado
+    el poder de sus obras,
+    dándole la herencia de las naciones.
+- tipo: Evangelio
+  cita: Lucas 14, 1-6
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Como Él hubiese ido a casa de un jefe de los fariseos, un día sabático a comer, ellos lo acechaban. Estaba allí, delante de Él un hombre hidrópico. Tomando la palabra, Jesús preguntó a los doctores de la Ley y a los fariseos: “¿Es lícito curar, en día sabático, o no?” Pero ellos guardaron silencio.
+
+    Tomándolo, entonces, de la mano, lo sanó y lo despidió. Y les dijo: “¿Quién hay de vosotros, que viendo a su hijo o su buey caído en un pozo, no lo saque pronto de allí, aun en día de sábado?” Y no fueron capaces de responder a esto.
+  cierre: Palabra del Señor.

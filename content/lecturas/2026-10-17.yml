@@ -1,0 +1,47 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-17'
+celebracion: Sábado de la XXVIII semana del tiempo ordinario
+santo: 'Memoria obligatoria: San Ignacio de Antioquía, obispo y mártir'
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Efesios 1, 15-23
+  presentacion: Lectura de la carta del apóstol san Pablo a los Efesios.
+  texto: |-
+    Por esto, también yo, habiendo oído de la fe que tenéis en el Señor Jesús, de vuestra caridad para con todos los santos, no ceso de dar gracias por vosotros recordándoos en mis oraciones, para que el Dios de nuestro Señor Jesucristo, el Padre de la gloria, os conceda espíritu de sabiduría y de revelación, en el conocimiento de Él; a fin de que, iluminados los ojos de vuestro corazón, conozcáis cuál es la esperanza a que Él os ha llamado, cuál la riqueza de la gloria de su herencia en los santos, y cuál la soberana grandeza de su poder para con nosotros los que creemos; conforme a la eficacia de su poderosa virtud, que obró en Cristo resucitándolo de entre los muertos, y sentándolo a su diestra en los cielos por encima de todo, principado y potestad y poder y dominación, y sobre todo nombre que se nombre, no sólo en este siglo, sino también en el venidero.
+
+    Y todo lo sometió bajo sus pies, y lo dio por cabeza suprema de todo a la Iglesia, la cual es su cuerpo, la plenitud de Aquel que lo llena todo en todos.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 8
+  estrofas: |-
+    ¡Oh Yahvé, Señor nuestro,
+    cuán admirable es tu Nombre
+    en toda la tierra!
+    Tú, cuya gloria cantan los cielos,
+    te has preparado la alabanza
+    de la boca de los pequeños
+    y de los lactantes.
+
+    Cuando contemplo tus cielos,
+    hechura de tus dedos,
+    la luna y las estrellas
+    que Tú pusiste en su lugar...
+    ¿Qué es el hombre para que Tú lo recuerdes,
+    o el hijo del hombre
+    para que te ocupes de él?
+
+    Tú lo creaste poco inferior a Dios,
+    le ornaste de gloria y de honor.
+    Le diste poder sobre las obras de tus manos.
+- tipo: Evangelio
+  cita: Lucas 12, 8-12
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Yo os lo digo: a quien me confesare delante de los hombres, el Hijo del hombre lo confesará también delante de los ángeles de Dios. Mas el que me haya negado delante de los hombres, será negado delante de los ángeles de Dios”. “A cualquiera que hable mal contra el Hijo del hombre, le será perdonado, pero a quien blasfemare contra el Santo Espíritu, no le será perdonado.
+
+    Cuando os llevaren ante las sinagogas, los magistrados y las autoridades, no os preocupéis de cómo y qué diréis para defenderos o qué hablaréis. Porque el Espíritu Santo os enseñará en el momento mismo lo que habrá que decir”.
+  cierre: Palabra del Señor.

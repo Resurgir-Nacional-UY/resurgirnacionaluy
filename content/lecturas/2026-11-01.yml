@@ -1,0 +1,59 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-01'
+celebracion: Solemnidad de Todos los Santos
+santo: ''
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Apocalipsis 7, 2-4. 9-14
+  presentacion: Lectura del libro del Apocalipsis.
+  texto: |-
+    Y vi a otro ángel que subía del Oriente y tenía el sello del Dios vivo, y clamó a gran voz a los cuatro ángeles, a quienes había sido dado hacer daño a la tierra y al mar; y dijo: “No hagáis daño a la tierra, ni al mar, ni a los árboles, hasta que hayamos sellado a los siervos de nuestro Dios en sus frentes”.
+
+    Y oí el número de los que fueron sellados: ciento cuarenta y cuatro mil sellados de todas las tribus de los hijos de Israel; Después de esto miré, y había una gran muchedumbre que nadie podía contar, de entre todas las naciones, tribus, pueblos y lenguas, que estaban de pie ante el trono y ante el Cordero, vestidos de túnicas blancas, con palmas en sus manos; y clamaban a gran voz diciendo: “La salud es de nuestro Dios que está sentado en el trono, y del Cordero”.
+
+    Y todos los ángeles que estaban de pie alrededor del trono y de los ancianos y de los cuatro vivientes cayeron sobre sus rostros ante el trono y adoraron a Dios, diciendo: “Amén, la alabanza, la gloria, la sabiduría, la gratitud, el honor, el poder y la fuerza a nuestro Dios por los siglos de los siglos. Amén”.
+
+    Y uno de los ancianos, tomando la palabra, me preguntó: “Estos que están vestidos de túnicas blancas, ¿quiénes son y de dónde han venido?” Y yo le dije: “Señor mío, tú lo sabes”. Y él me contestó: “Estos son los que vienen de la gran tribulación, y lavaron sus vestidos, y los blanquearon en la sangre del Cordero”.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 23
+  estrofas: |-
+    De Yahvé es la tierra
+    y cuanto ella contiene;
+    el orbe y cuantos lo habitan.
+    Porque Él la asentó sobre mares
+    y la afirmó sobre corrientes.
+
+    ¿Quién será digno
+    de ascender al monte de Yahvé?
+    y ¿quién estará en su santuario?
+    Aquel que tiene inmaculadas las manos
+    y puro el corazón.
+
+    Él recibirá la bendición de Yahvé,
+    y la justicia de Dios su Salvador.
+
+    Esta es la generación
+    de los que lo buscan,
+    de los que buscan tu faz,
+    (Dios de) Jacob.
+- tipo: Segunda lectura
+  cita: 1 Juan 3, 1-3
+  presentacion: Lectura de la primera carta del apóstol san Juan.
+  texto: |-
+    Mirad qué amor nos ha mostrado el Padre, para que seamos llamados hijos de Dios. Y lo somos; por eso el mundo no nos conoce a nosotros, porque a Él no lo conoció. Carísimos, ya somos hijos de Dios aunque todavía no se ha manifestado lo que seremos. Mas sabemos que cuando se manifieste seremos semejantes a Él, porque lo veremos tal como es.
+
+    Entretanto quienquiera tiene en Él esta esperanza se hace puro, así como Él es puro.
+  cierre: Palabra de Dios.
+- tipo: Evangelio
+  cita: Mateo 5, 1-12
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    Al ver estas multitudes, subió a la montaña, y habiéndose sentado, se le acercaron sus discípulos. Entonces, abrió su boca, y se puso a enseñarles así: “Bienaventurados los pobres en el espíritu, porque a ellos pertenece el reino de los cielos. Bienaventurados los afligidos, porque serán consolados. Bienaventurados los mansos, porque heredarán la tierra. Bienaventurados los que tienen hambre y sed de la justicia, porque serán hartados. Bienaventurados los que tienen misericordia, porque para ellos habrá misericordia. Bienaventurados los de corazón puro, porque verán a Dios. Bienaventurados los pacificadores, porque serán llamados hijos de Dios. Bienaventurados los perseguidos por causa de la justicia, porque a ellos pertenece el reino de los cielos.
+
+    Dichosos seréis cuando os insultaren, cuando os persiguieren, cuando dijeren mintiendo todo mal contra vosotros, por causa mía. Gozaos y alegraos”.
+  cierre: Palabra del Señor.

@@ -1,0 +1,64 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-15'
+celebracion: Jueves de la XXVIII semana del tiempo ordinario
+santo: 'Memoria obligatoria: Santa Teresa de Jesús, virgen y doctora de la Iglesia'
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Eclesiástico 15, 1-6
+  presentacion: Lectura del libro del Eclesiástico.
+  texto: |-
+    El que teme a Dios, hará buenas obras; y quien observa exactamente la justicia, poseerá la (sabiduría); porque ella le saldrá al encuentro cual madre respetable, y cual virgen desposada le recibirá. Le alimentará con pan de vida y de inteligencia; le dará a beber el agua saludable de la sabiduría, y fijará en él su morada, y él será constante.
+
+    Será su sostén, y no se verá confundido, sino que será ensalzado entre sus hermanos. En medio de la Iglesia le abrirá la boca, llenándole del espíritu de sabiduría y de inteligencia, y revistiéndole de un manto de gloria. Le colmará de consuelo y de alegría, y le dará en herencia un eterno renombre.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 88
+  estrofas: |-
+    Quiero cantar eternamente
+    las misericordias de Yahvé;
+    que mi boca anuncie tu fidelidad
+    de generación en generación.
+    Porque Tú dijiste: “La misericordia
+    está afianzada para siempre”,
+    y en el cielo afirmaste tu fidelidad.
+
+    Los cielos pregonan
+    tus maravillas, oh Yahvé,
+    y tu fidelidad la asamblea de los santos.
+    Porque ¿quién en los cielos
+    se igualará a Yahvé,
+    y quién entre los hijos de Dios
+    será semejante a Él?
+
+    Dios es glorificado
+    en la asamblea de los santos;
+    grande y formidable sobre cuantos le rodean.
+    ¡Yahvé, Dios de los ejércitos!
+    ¿Quién como Tú?
+    Poderoso eres, oh Yah,
+    y tu fidelidad te circunda.
+
+    ¡Dichoso el pueblo
+    que conoce el alegre llamado!
+    Caminará, oh Yahvé,
+    a la luz de tu rostro.
+    Continuamente se regocijará
+    por tu Nombre,
+    y saltará de exultación
+    por tu justicia.
+
+    Porque Tú eres la gloria de su fortaleza,
+    y por favor tuyo
+    será exaltado nuestro poder.
+    Pues de Yahvé es nuestro socorro,
+    del Santo de Israel, que es nuestro Rey.
+- tipo: Evangelio
+  cita: Mateo 11, 25-30
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    Por aquel tiempo Jesús dio una respuesta, diciendo: “Yo te alabo, oh Padre, Señor del cielo y de la tierra, porque encubres estas cosas a los sabios y a los prudentes, y las revelas a los pequeños. Así es, oh Padre, porque esto es lo que te agrada a Ti. A Mí me ha sido transmitido todo por mi Padre, y nadie conoce bien al Hijo sino el Padre, ni al Padre conoce bien nadie sino el Hijo y aquel a quien el Hijo quisiere revelar (lo). Venid a Mí todos los agobiados y los cargados, y Yo os haré descansar. Tomad sobre vosotros el yugo mío, y dejaos instruir por Mí, porque manso soy y humilde en el corazón; y encontraréis reposo para vuestras vidas. Porque mi yugo es excelente; y mi carga es liviana”.
+  cierre: Palabra del Señor.

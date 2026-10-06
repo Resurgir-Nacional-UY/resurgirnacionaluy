@@ -1,0 +1,44 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-21'
+celebracion: Miércoles de la XXIX semana del tiempo ordinario
+santo: ''
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Efesios 3, 2-12
+  presentacion: Lectura de la carta del apóstol san Pablo a los Efesios.
+  texto: |-
+    pues habréis oído la dispensación de la gracia de Dios, que me fue otorgada en beneficio vuestro: cómo por revelación se me ha dado a conocer el misterio, tal como acabo de escribíroslo en pocas palabras – si lo leéis podéis entender el conocimiento que tengo en este misterio de Cristo– el cual (misterio) en otras generaciones no fue dado a conocer a los hijos de los hombres como ahora ha sido revelado por el Espíritu a sus santos apóstoles y profetas; (esto es) que los gentiles sois coherederos, y miembros del mismo, cuerpo, y copartícipes de la promesa en Cristo Jesús por medio del Evangelio, del cual yo he sido constituido ministro, conforme al don de la gracia de Dios a mí otorgada según la eficacia de su poder.
+
+    A mí, el ínfimo de todos los santos, ha sido dada esta gracia: evangelizar a los gentiles la insondable riqueza de Cristo, e iluminar a todos acerca de la dispensación del misterio, escondido desde los siglos en Dios creador de todas las cosas; a fin de que sea dada a conocer ahora a los principados y a las potestades en lo celestial, a través de la Iglesia, la multiforme sabiduría de Dios, que se muestra en el plan de las edades que Él realizó en Cristo Jesús, Señor nuestro, en quien, por la fe en Él, tenemos libertad y confiado acceso (al Padre).
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Isaías 12, 2-6
+  estrofas: |-
+    He aquí que Dios es mi salvación;
+    tendré confianza y no temeré,
+    porque mi fortaleza y mi canto,
+    es Yah, Yahvé, el cual ha sido mi salvación.
+    Sacaréis con regocijo el agua de las fuentes de salvación.
+
+    “Alabad a Yahvé, invocad su nombre;
+    pregonad sus obras entre los pueblos,
+    proclamad que es excelso su Nombre.
+
+    Cantad a Yahvé, porque ha hecho cosas gloriosas;
+    que lo sepa la tierra entera.
+    Prorrumpe en júbilo y canta, oh moradora de Sión;
+    porque grande es en medio de ti el Santo de Israel.”
+- tipo: Evangelio
+  cita: Lucas 12, 39-48
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Sabedlo bien; porque si el dueño de casa supiese a qué hora el ladrón ha de venir, no dejaría horadar su casa. Vosotros también estad prontos, porque a la hora que no pensáis es cuando vendrá el Hijo del hombre”. Entonces, Pedro le dijo: “Señor, ¿dices por nosotros esta parábola o también por todos?”
+
+    Y el Señor dijo: “¿Quién es pues el mayordomo fiel y prudente, que el amo pondrá a la cabeza de la servidumbre suya para dar a su tiempo la ración de trigo? ¡Feliz ese servidor a quien el amo, a su regreso, hallará haciéndolo así! En verdad, os digo, lo colocará al frente de toda su hacienda. Pero si ese servidor se dice a sí mismo: “Mi amo tarda en regresar”, y se pone a maltratar a los servidores y a las sirvientas, a comer, a beber, y a embriagarse, el amo de este servidor vendrá en día que no espera y en hora que no sabe, lo partirá por medio, y le asignará su suerte con los que no creyeron. Pero aquel servidor que, conociendo la voluntad de su amo, no se preparó, ni obró conforme a la voluntad de éste, recibirá muchos azotes. En cambio aquel que, no habiéndole conocido, haya hecho cosas dignas de azotes, recibirá pocos.
+
+    A todo aquel a quien se haya dado mucho, mucho le será demandado; y más aún le exigirán a aquel a quien se le haya confiado mucho”.
+  cierre: Palabra del Señor.

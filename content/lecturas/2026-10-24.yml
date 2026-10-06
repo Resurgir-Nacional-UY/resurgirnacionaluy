@@ -1,0 +1,45 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-24'
+celebracion: Sábado de la XXIX semana del tiempo ordinario
+santo: ''
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Efesios 4, 7-16
+  presentacion: Lectura de la carta del apóstol san Pablo a los Efesios.
+  texto: |-
+    Pero a cada uno de nosotros le ha sido dada la gracia en la medida del don de Cristo. Por esto dice: “Subiendo hacia lo alto llevó a cautivos consigo, y dio dones a los hombres”. Eso de subir, ¿qué significa sino que (antes) bajó a lo que está debajo de la tierra? El que bajó es el mismo que también subió por encima de todos los cielos, para complementarlo todo.
+
+    Y Él a unos constituyó apóstoles, y a otros profetas, y a otros evangelistas, y a otros pastores y doctores, a fin de perfeccionar a los santos para la obra del ministerio, para la edificación del cuerpo de Cristo, hasta que todos lleguemos a la unidad de la fe y del (pleno) conocimiento del Hijo de Dios, al estado de varón perfecto, alcanzando la estatura propia del Cristo total, para que ya no seamos niños fluctuantes y llevados a la deriva por todo viento de doctrina, al antojo de la humana malicia, de la astucia que conduce engañosamente al error, sino que, andando en la verdad por el amor, en todo crezcamos hacia adentro de Aquel que es la cabeza, Cristo.
+
+    De Él todo el cuerpo, bien trabado y ligado entre sí por todas las coyunturas que se ayudan mutuamente según la actividad propia de cada miembro, recibe su crecimiento para ir edificándole en el amor.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 121
+  estrofas: |-
+    Me llené de gozo cuando me dijeron:
+    “Iremos a la Casa de Yahvé.”
+    Ya se posan nuestros pies
+    ante tus puertas, ¡oh Jerusalén!
+
+    Jerusalén, que estás edificada,
+    como la ciudad
+    cuya comunidad le está bien unida.
+    Allá suben las tribus, las tribus de Yah.
+
+    Es ley para Israel
+    celebrar allí el Nombre de Yahvé.
+    Allí se han establecido
+    los tronos para el juicio,
+    los tronos de la casa de David.
+- tipo: Evangelio
+  cita: Lucas 13, 1-9
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    En aquel momento llegaron algunas personas a traerle la noticia de esos galileos cuya sangre Pilato había mezclado con la de sus sacrificios. Y respondiendoles dilo: “¿Pensáis que estos galileos fueron los mas pecadores de todos los galileos, porque han sufrido estas cosas? Os digo que de ninguna manera, sino que todos pereceréis igualmente si no os arrepentís. O bien aquellos dieciocho, sobre los cuales cayó la torre de Siloé y los mató, ¿pensáis que eran más culpables que todos los demás habitantes de Jerusalén? Os digo que de ninguna manera sino que todos pereceréis igualmente si no os convertís”.
+
+    Y dijo esta parábola: “Un hombre tenía una higuera plantada en su viña. Vino a buscar fruto de ella, y no lo halló. Entonces dijo al viñador: “Mira, tres años hace que vengo a buscar fruto en esta higuera, y no lo hallo. ¡Córtala! ¿Por qué ha de inutilizar la tierra?” Mas él le respondió y dijo: “Señor, déjala todavía este año, hasta que yo cave alrededor y eche abono. Quizá dé fruto en lo futuro; si no, la cortarás”.
+  cierre: Palabra del Señor.

@@ -1,0 +1,67 @@
+# Lecturas de la Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-10-11'
+celebracion: XXVIII domingo del tiempo ordinario
+santo: ''
+fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Isaías 25, 6-10
+  presentacion: Lectura del libro de Isaías.
+  texto: |-
+    Yahvé de los ejércitos dará a todas las naciones en este monte un banquete de pingües manjares, un festín de vinos generosos, de manjares grasos y enjundiosos, de vinos puros y refinados. Y Él destruirá en este monte el velo que cubría todos los pueblos, la cobertura tendida sobre todas las naciones.
+
+    Destruirá la muerte para siempre. Enjugará Yahvé el Señor las lágrimas de todos los rostros, y de toda la tierra quitará el oprobio de su pueblo. Pues Yahvé ha hablado. Se dirá en aquel día: “He aquí, éste es nuestro Dios, en quien esperábamos; Él nos salvará. Éste es Yahvé, en quien hemos puesto nuestra esperanza; regocijémonos y alegrémonos en su salvación.”
+
+    Porque la mano de Yahvé reposará sobre este monte.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 22
+  estrofas: |-
+    Yahvé es mi pastor,
+    nada me faltará.
+    Él me hace recostar en verdes prados,
+    me conduce a manantiales
+    que restauran,
+    Confortando mi alma.
+
+    Guiándome por senderos rectos,
+    para gloria de su Nombre.
+    Aunque atraviese
+    un valle de tinieblas,
+    no temeré ningún mal,
+    porque Tú vas conmigo.
+    Tu bastón y tu cayado
+    me infunden aliento.
+
+    Para mí Tú dispones una mesa
+    ante los ojos de mis enemigos.
+    Unges con bálsamo mi cabeza;
+    mi copa rebosa.
+
+    Bondad y misericordia me seguirán
+    todos los días de mi vida;
+    y moraré en la casa de Yahvé
+    por días sin fin.
+- tipo: Segunda lectura
+  cita: Filipenses 4, 12-14. 19-20
+  presentacion: Lectura de la carta del apóstol san Pablo a los Filipenses.
+  texto: |-
+    Sé vivir en humildad, y sé vivir en abundancia; en todo y por todo estoy avezado a tener hartura y a sufrir hambre; a tener sobra y a tener falta. Todo lo puedo en Aquel que me conforta. Sin embargo, habéis hecho bien en haceros copartícipes de mi estrechez. El Dios mío atenderá toda necesidad vuestra, conforme a la riqueza suya, con gloria en Cristo Jesús.
+
+    Gloria al Dios y Padre nuestro por los siglos de los siglos. Amén.
+  cierre: Palabra de Dios.
+- tipo: Evangelio
+  cita: Mateo 22, 1-14
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    Respondiendo Jesús les habló de nuevo en parábolas, y dijo: “El reino de los cielos es semejante a un rey que celebró las bodas de su hijo. Y envió a sus siervos a llamar a los convidados a las bodas, mas ellos no quisieron venir. Entonces envió a otros siervos, a los cuales dijo: “Decid a los convidados: Tengo preparado mi banquete; mis toros y animales cebados han sido sacrificados ya, y todo está a punto: venid a las bodas”.
+
+    Pero, sin hacerle caso, se fueron el uno a su granja, el otro a sus negocios. Y los restantes agarraron a los siervos, los ultrajaron y los mataron. El rey, encolerizado, envió sus soldados, hizo perecer a aquellos homicidas, y quemó su ciudad. Entonces dijo a sus siervos: “Las bodas están preparadas, mas los convidados no eran dignos. Id, pues, a las encrucijadas de los caminos, y a todos cuantos halléis, invitadlos a las bodas”.
+
+    Salieron aquellos siervos a los caminos, y reunieron a todos cuantos hallaron, malos y buenos, y la sala de las bodas quedó llena de convidados. Mas cuando el rey entró para ver a los comensales, notó a un hombre que no estaba vestido con el traje de boda. Díjole: “Amigo, ¿cómo has entrado aquí sin tener el traje de boda?”
+
+    Y él enmudeció. Entonces el rey dijo a los siervos: “Atadlo de pies y manos, y arrojadlo a las tinieblas de afuera; allí será el llanto y el rechinar de dientes. Porque muchos son llamados, mas pocos escogidos”.
+  cierre: Palabra del Señor.
