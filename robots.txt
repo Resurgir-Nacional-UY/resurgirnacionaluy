@@ -3,3 +3,4 @@ Allow: /
 Disallow: /admin/
 
 Sitemap: https://resurgirnacionaluy.org/sitemap.xml
+Sitemap: https://resurgirnacionaluy.org/sitemap-lecturas.xml
