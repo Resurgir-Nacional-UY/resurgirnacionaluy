@@ -1,0 +1,63 @@
+name: Fe · render lecturas y oraciones
+
+# Al publicar (merge a main) una lectura del día o una oración desde el CMS
+# (Fe · Lecturas del día / Fe · Oraciones por Uruguay), regenera lecturas.json
+# y la sección de oraciones de la pagina Fe.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/lecturas/**"
+      - "content/oraciones/**"
+      - "scripts/render_lecturas.py"
+      - "scripts/render_oraciones.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fe-render
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    # El token solo existe en este environment, que GitHub limita a la rama main:
+    # una rama de un colaborador no puede leerlo.
+    environment: publicar
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Token de un admin: puede publicar en main aunque la regla exija PR.
+          token: ${{ secrets.PUSH_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install --quiet pyyaml
+
+      - name: Render lecturas
+        run: python scripts/render_lecturas.py
+
+      - name: Render oraciones
+        run: python scripts/render_oraciones.py
+
+      - name: Publicar cambios
+        run: |
+          git config user.name "resurgir-bot"
+          git config user.email "avvedit@gmail.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Sin cambios que publicar."
+          else
+            git commit -m "Fe: regenerar lecturas y oraciones [skip ci]"
+            for i in 1 2 3 4 5; do
+              git push && exit 0
+              git fetch origin main
+              git rebase origin/main
+              sleep $((RANDOM % 5 + 1))
+            done
+            git push
+          fi

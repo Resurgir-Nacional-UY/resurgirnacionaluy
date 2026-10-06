@@ -23,6 +23,33 @@ OUT = os.path.join(ROOT, "lecturas.json")
 FECHA = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
+def _bloques(valor):
+    """Texto del CMS -> lista de bloques (separados por una línea en blanco)."""
+    if not valor:
+        return []
+    if isinstance(valor, list):
+        return valor
+    return [b.strip() for b in re.split(r"\n\s*\n", str(valor).strip()) if b.strip()]
+
+
+def _lectura(l):
+    out = {"tipo": l.get("tipo", "")}
+    for k in ("cita", "lema", "respuesta", "presentacion", "cierre"):
+        v = (l.get(k) or "").strip() if isinstance(l.get(k), str) else l.get(k)
+        if v:
+            out[k] = v
+    texto = _bloques(l.get("texto"))
+    if texto:
+        out["texto"] = [" ".join(b.split()) for b in texto]
+    estrofas = l.get("estrofas")
+    if estrofas:
+        if isinstance(estrofas, list):
+            out["estrofas"] = estrofas
+        else:
+            out["estrofas"] = [[v.strip() for v in b.splitlines() if v.strip()] for b in _bloques(estrofas)]
+    return out
+
+
 def main():
     dias = {}
     for path in sorted(glob.glob(os.path.join(SRC, "*.yml"))):
@@ -39,7 +66,7 @@ def main():
         dias[fecha] = {
             "celebracion": d.get("celebracion", ""),
             "santo": d.get("santo", ""),
-            "lecturas": d["lecturas"],
+            "lecturas": [_lectura(l) for l in d["lecturas"]],
         }
     with io.open(OUT, "w", encoding="utf-8", newline="\n") as f:
         json.dump({"dias": dias}, f, ensure_ascii=False, indent=1, sort_keys=True)

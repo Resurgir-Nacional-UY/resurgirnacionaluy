@@ -113,6 +113,19 @@
   .lectura__estrofa { margin-top: 1rem; white-space: pre-line; color: var(--ink); }
   .lectura__cierre { margin-top: 1.1rem; font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.9rem; color: var(--ink); }
 
+  /* Oraciones por Uruguay (se rellena en el build desde content/oraciones) */
+  .oraciones__lista { margin-top: 1.6rem; max-width: var(--measure); border-bottom: 1px solid var(--line); }
+  .oracion { border-top: 1px solid var(--line); }
+  .oracion summary { cursor: pointer; padding: 1.1rem 0; font-family: "Fraunces", serif; font-size: var(--step-1); line-height: 1.3; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+  .oracion summary::-webkit-details-marker { display: none; }
+  .oracion summary::after { content: "+"; font-family: "Archivo", sans-serif; font-weight: 600; color: var(--gold-text); }
+  .oracion[open] summary::after { content: "\2212"; }
+  .oracion summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .oracion__cuerpo { padding-bottom: 1.4rem; display: flex; flex-direction: column; gap: 0.95rem; }
+  .oracion__cuerpo p { color: var(--ink); }
+  .oracion__intro { font-style: italic; color: var(--ink-soft) !important; }
+  .oracion__fuente { font-size: 0.9rem; color: var(--ink-soft) !important; }
+
   .pullquote { max-width: 30ch; margin: 2rem 0; padding-left: 1.4rem; border-left: 3px solid var(--gold-line); font-family: "Fraunces", serif; font-size: var(--step-1); line-height: 1.3; color: var(--ink); }
 
   .values { margin-top: 2rem; display: flex; flex-direction: column; }
@@ -490,6 +503,8 @@
     })();
       </script>
     </section>
+
+    <!-- ORACIONES:START --><!-- ORACIONES:END -->
 
     <section class="scj-host">
       <img class="scj-bg" src="scj.png" alt="" aria-hidden="true" />

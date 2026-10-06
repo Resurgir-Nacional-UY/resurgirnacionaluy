@@ -645,3 +645,160 @@ collections:
         label: "Borrador (no se publica mientras esté marcado)"
         widget: boolean
         default: false
+
+  # ---- Fe: lecturas de la Misa del día y oraciones por Uruguay ----
+  # Van después de "tienda" a propósito: scripts/make_admin_redactores.py solo
+  # copia al CMS de articulistas lo que está entre "formacion" y "tienda".
+  - name: lecturas
+    label: "Fe · Lecturas del día"
+    label_singular: "Lectura del día"
+    description: >-
+      Lecturas de la Misa. Una entrada por fecha: se muestra en la página Fe el
+      día que corresponde (hora de Montevideo). Al guardar se crea un Pull
+      Request; queda publicada cuando alguien con permiso lo aprueba (merge).
+    folder: content/lecturas
+    create: true
+    extension: yml
+    format: yaml
+    slug: "{{fields.fecha}}"
+    identifier_field: fecha
+    summary: "{{fecha}} · {{celebracion}}"
+    sortable_fields:
+      - fecha
+    fields:
+      - name: fecha
+        label: "Fecha (AAAA-MM-DD)"
+        widget: string
+        hint: "Día en que se muestra, p. ej. 2026-10-07. Una sola entrada por día."
+        pattern:
+          - '^\d{4}-\d{2}-\d{2}$'
+          - "Escribí la fecha como AAAA-MM-DD, p. ej. 2026-10-07."
+
+      - name: celebracion
+        label: "Celebración del día"
+        widget: string
+        hint: "P. ej. Miércoles de la XXVII semana del tiempo ordinario, o Santa Teresa de Jesús, virgen y doctora de la Iglesia (memoria obligatoria)."
+
+      - name: santo
+        label: "Memoria libre / santo del día — opcional"
+        widget: string
+        required: false
+        hint: "P. ej. Memoria libre: San Bruno, presbítero. Dejar vacío si no hay."
+
+      - name: lecturas
+        label: "Lecturas (en el orden en que se leen)"
+        widget: list
+        summary: "{{fields.tipo}} · {{fields.cita}}"
+        min: 1
+        fields:
+          - name: tipo
+            label: Tipo
+            widget: select
+            options:
+              - "Primera lectura"
+              - "Salmo responsorial"
+              - "Segunda lectura"
+              - "Aclamación antes del Evangelio"
+              - "Evangelio"
+
+          - name: cita
+            label: "Cita bíblica — p. ej. Gálatas 1, 13-24"
+            widget: string
+            required: false
+            hint: "Con el nombre del libro completo (Gálatas, Salmo, Lucas), sin abreviar."
+
+          - name: lema
+            label: "Lema (frase en cursiva bajo la cita) — opcional"
+            widget: string
+            required: false
+
+          - name: respuesta
+            label: "Respuesta del salmo (R.) — solo salmo"
+            widget: string
+            required: false
+
+          - name: presentacion
+            label: "Presentación — p. ej. Lectura de la carta del apóstol san Pablo a los Gálatas"
+            widget: string
+            required: false
+
+          - name: texto
+            label: "Texto de la lectura"
+            widget: text
+            required: false
+            hint: "Un párrafo por bloque; separar los párrafos con una línea en blanco. Una frase que empiece con « se muestra como diálogo."
+
+          - name: estrofas
+            label: "Estrofas (solo salmo y aclamación)"
+            widget: text
+            required: false
+            hint: "Un verso por línea; separar las estrofas con una línea en blanco. Dejar la R/. al final de la estrofa tal como se lee."
+
+          - name: cierre
+            label: "Cierre — p. ej. Palabra de Dios."
+            widget: string
+            required: false
+
+      - name: draft
+        label: "Borrador (no se publica mientras esté marcado)"
+        widget: boolean
+        default: false
+
+  - name: oraciones
+    label: "Fe · Oraciones por Uruguay"
+    label_singular: "Oración"
+    description: >-
+      Oraciones por Uruguay que se muestran en la página Fe. Al guardar se crea
+      un Pull Request; queda publicada cuando alguien con permiso lo aprueba (merge).
+    folder: content/oraciones
+    create: true
+    extension: yml
+    format: yaml
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    summary: "{{title}}"
+    sortable_fields:
+      - title
+      - orden
+    fields:
+      - name: title
+        label: Título
+        widget: string
+
+      - name: slug
+        label: "Slug (identificador del archivo)"
+        widget: string
+        hint: "solo minúsculas, números y guiones — p. ej. oracion-por-la-patria"
+        pattern:
+          - "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          - "Todo en minúsculas, con guiones entre palabras (ej: oracion-por-la-patria)."
+
+      - name: orden
+        label: "Orden en la página (1 va primero)"
+        widget: number
+        value_type: int
+        min: 1
+        default: 100
+        hint: "Las oraciones se muestran de menor a mayor número."
+
+      - name: intro
+        label: "Frase introductoria — opcional"
+        widget: string
+        required: false
+        hint: "Una línea que se muestra antes del texto, p. ej. cuándo o por qué se reza."
+
+      - name: body
+        label: "Texto de la oración"
+        widget: text
+        hint: "Separar los párrafos con una línea en blanco. Los saltos de línea dentro de un párrafo se respetan (útil para versos)."
+
+      - name: fuente
+        label: "Autor o fuente — opcional"
+        widget: string
+        required: false
+        hint: "Se muestra al pie. Usar solo textos con aprobación eclesiástica o de dominio público."
+
+      - name: draft
+        label: "Borrador (no se publica mientras esté marcado)"
+        widget: boolean
+        default: false
