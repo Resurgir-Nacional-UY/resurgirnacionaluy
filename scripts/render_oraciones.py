@@ -3,7 +3,7 @@
 
 El HTML se escribe en catolicismo-en-uruguay.html entre los marcadores
 <!-- ORACIONES:START --> y <!-- ORACIONES:END -->. Si no hay ninguna oración
-publicada, la sección no se muestra. Todo el texto se escapa: el CMS no admite
+publicada, la pestaña no se muestra. Todo el texto se escapa: el CMS no admite
 HTML crudo.
 
 Uso (desde la raíz del repo):
@@ -76,15 +76,14 @@ def prayer_html(o):
 
 
 def section(oraciones):
+    """Contenido del panel "Oraciones por Uruguay" (el panel y la pestaña los pone la página Fe)."""
     if not oraciones:
         return ""
     cuerpo = "\n".join(prayer_html(o) for o in oraciones)
     return (
-        '\n    <section id="oraciones" class="oraciones" aria-labelledby="oraciones-titulo">\n'
-        '      <span class="label">Oración</span>\n'
-        '      <h2 id="oraciones-titulo">Oraciones por Uruguay</h2>\n'
-        '      <div class="oraciones__lista">\n%s\n      </div>\n'
-        "    </section>\n    " % cuerpo
+        '\n        <span class="label">Oración</span>\n'
+        '        <h2 id="oraciones-titulo">Oraciones por Uruguay</h2>\n'
+        '        <div class="oraciones__lista">\n%s\n        </div>\n        ' % cuerpo
     )
 
 
