@@ -168,10 +168,6 @@ _run("render_tienda.py")
 # Lecturas de la Misa del dia (content/lecturas/*.yml -> lecturas.json, que lee la pagina Fe)
 _run("render_lecturas.py")
 
-# Oraciones por Uruguay (content/oraciones/*.yml -> seccion en la pagina Fe,
-# entre los marcadores ORACIONES); corre despues de generar la pagina Fe.
-_run("render_oraciones.py")
-
 # redirecciones de URLs viejas (content/redirects.yml) -- corre al final, para
 # que las paginas viejas que Formacion/Biblioteca ya borraron por renombre
 # queden libres antes de ocuparlas con la redireccion.

@@ -646,7 +646,7 @@ collections:
         widget: boolean
         default: false
 
-  # ---- Fe: lecturas de la Misa del día y oraciones por Uruguay ----
+  # ---- Fe: lecturas de la Misa del día ----
   # Van después de "tienda" a propósito: scripts/make_admin_redactores.py solo
   # copia al CMS de articulistas lo que está entre "formacion" y "tienda".
   - name: lecturas
@@ -738,65 +738,6 @@ collections:
             label: "Cierre — p. ej. Palabra de Dios."
             widget: string
             required: false
-
-      - name: draft
-        label: "Borrador (no se publica mientras esté marcado)"
-        widget: boolean
-        default: false
-
-  - name: oraciones
-    label: "Fe · Oraciones por Uruguay"
-    label_singular: "Oración"
-    description: >-
-      Oraciones por Uruguay que se muestran en la página Fe. Al guardar se crea
-      un Pull Request; queda publicada cuando alguien con permiso lo aprueba (merge).
-    folder: content/oraciones
-    create: true
-    extension: yml
-    format: yaml
-    slug: "{{fields.slug}}"
-    identifier_field: title
-    summary: "{{title}}"
-    sortable_fields:
-      - title
-      - orden
-    fields:
-      - name: title
-        label: Título
-        widget: string
-
-      - name: slug
-        label: "Slug (identificador del archivo)"
-        widget: string
-        hint: "solo minúsculas, números y guiones — p. ej. oracion-por-la-patria"
-        pattern:
-          - "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-          - "Todo en minúsculas, con guiones entre palabras (ej: oracion-por-la-patria)."
-
-      - name: orden
-        label: "Orden en la página (1 va primero)"
-        widget: number
-        value_type: int
-        min: 1
-        default: 100
-        hint: "Las oraciones se muestran de menor a mayor número."
-
-      - name: intro
-        label: "Frase introductoria — opcional"
-        widget: string
-        required: false
-        hint: "Una línea que se muestra antes del texto, p. ej. cuándo o por qué se reza."
-
-      - name: body
-        label: "Texto de la oración"
-        widget: text
-        hint: "Separar los párrafos con una línea en blanco. Los saltos de línea dentro de un párrafo se respetan (útil para versos)."
-
-      - name: fuente
-        label: "Autor o fuente — opcional"
-        widget: string
-        required: false
-        hint: "Se muestra al pie. Usar solo textos con aprobación eclesiástica o de dominio público."
 
       - name: draft
         label: "Borrador (no se publica mientras esté marcado)"

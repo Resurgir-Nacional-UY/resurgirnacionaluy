@@ -1,1 +1,0 @@
-# Oraciones por Uruguay: un archivo .yml por oración (se cargan desde el CMS: Fe · Oraciones por Uruguay).

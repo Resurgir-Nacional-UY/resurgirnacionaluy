@@ -108,21 +108,11 @@
   .fe-tab:hover { color: var(--ink); border-color: var(--gold-line); }
   .fe-tab:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
   .fe-tab--on, .fe-tab--on:hover { background: var(--blue); border-color: var(--blue); color: var(--bg); }
-  .fe-tabs__lista[hidden], .fe-panel[hidden], .fe-tabs[hidden], .lecturas__vacia[hidden], #lecturas-titulo[hidden] { display: none; }
+  .fe-tabs__lista[hidden], .fe-panel[hidden], .lecturas__vacia[hidden], #lecturas-titulo[hidden] { display: none; }
   .lecturas__vacia { color: var(--ink-soft); max-width: var(--measure); }
 
-  /* Oraciones por Uruguay (se rellena en el build desde content/oraciones) */
-  .oraciones__lista { margin-top: 1.6rem; max-width: var(--measure); border-bottom: 1px solid var(--line); }
-  .oracion { border-top: 1px solid var(--line); }
-  .oracion summary { cursor: pointer; padding: 1.1rem 0; font-family: "Fraunces", serif; font-size: var(--step-1); line-height: 1.3; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
-  .oracion summary::-webkit-details-marker { display: none; }
-  .oracion summary::after { content: "+"; font-family: "Archivo", sans-serif; font-weight: 600; color: var(--gold-text); }
-  .oracion[open] summary::after { content: "\2212"; }
-  .oracion summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
-  .oracion__cuerpo { padding-bottom: 1.4rem; display: flex; flex-direction: column; gap: 0.95rem; }
-  .oracion__cuerpo p { color: var(--ink); }
-  .oracion__intro { font-style: italic; color: var(--ink-soft) !important; }
-  .oracion__fuente { font-size: 0.9rem; color: var(--ink-soft) !important; }
+  /* Las tres oraciones viven dentro del panel: mismo espaciado que cuando eran hijas directas de .doc */
+  .fe-panel > section + section { margin-top: clamp(3rem, 7vw, 4.5rem); }
 
   .pullquote { max-width: 30ch; margin: 2rem 0; padding-left: 1.4rem; border-left: 3px solid var(--gold-line); font-family: "Fraunces", serif; font-size: var(--step-1); line-height: 1.3; color: var(--ink); }
 
@@ -434,13 +424,13 @@
       </div>
     </section>
 
-    <section id="fe-tabs" class="fe-tabs" hidden aria-label="Lecturas del día y oraciones por Uruguay">
+    <section id="fe-tabs" class="fe-tabs" aria-label="Lecturas del día y oraciones por Uruguay">
       <div class="fe-tabs__lista" id="fe-tabs-lista" role="tablist" aria-label="Elegí qué ver" hidden>
         <button type="button" class="fe-tab fe-tab--on" role="tab" id="tab-lecturas" aria-controls="panel-lecturas" aria-selected="true" data-panel="lecturas">Lecturas del día</button>
         <button type="button" class="fe-tab" role="tab" id="tab-oraciones" aria-controls="panel-oraciones" aria-selected="false" tabindex="-1" data-panel="oraciones">Oraciones por Uruguay</button>
       </div>
 
-      <div class="fe-panel" role="tabpanel" id="panel-lecturas" aria-labelledby="tab-lecturas">
+      <div class="fe-panel" role="tabpanel" id="panel-lecturas" aria-labelledby="tab-lecturas" hidden>
         <span class="label" id="lecturas-fecha"></span>
         <h2 id="lecturas-titulo">Lecturas de la Misa de hoy</h2>
         <p class="lecturas__celebracion" id="lecturas-celebracion"></p>
@@ -449,24 +439,74 @@
         <div id="lecturas-cuerpo"></div>
       </div>
 
-      <div class="fe-panel" role="tabpanel" id="panel-oraciones" aria-labelledby="tab-oraciones" hidden>
-        <!-- ORACIONES:START --><!-- ORACIONES:END -->
+      <!-- Oraciones por Uruguay: contenido de siempre de la página (se edita en el CMS, Páginas > Fe).
+           Sin JavaScript este panel se ve y las pestañas no aparecen. -->
+      <div class="fe-panel" role="tabpanel" id="panel-oraciones" aria-labelledby="tab-oraciones">
+    <section class="scj-host">
+      <img class="scj-bg" src="scj.png" alt="" aria-hidden="true" />
+      <div class="rn-glow scj-heart-glow" aria-hidden="true"></div>
+      <div class="host-inner">
+        <span class="label">Oración de consagración</span>
+        <h2 data-cms="sec2-heading">Corazón de Jesús</h2>
+        <div class="prose">
+          <p data-cms="sec2-p1">Tú eres nuestro consuelo y nuestra esperanza.</p>
+          <p data-cms="sec2-p2">Humildemente postrados en tu presencia, te pedimos perdón de nuestros pecados.</p>
+          <p data-cms="sec2-p3">Proclamamos que queremos vivir y morir en tu servicio y corresponder dignamente a tus soberanos designios de misericordia en favor de la Iglesia y de la sociedad.</p>
+          <p data-cms="sec2-p4">Te consagramos nuestras personas y nuestras familias, nuestros intereses y nuestros bienes, el presente y el porvenir.</p>
+          <p data-cms="sec2-p5">Te rogamos, Señor, acojas benignamente nuestras plegarias por tu Santa Iglesia, por la conversión y salvación de los hombres, por la paz y prosperidad de nuestra patria y de todos los pueblos.</p>
+          <p data-cms="sec2-p6">Amén.</p>
+        </div>
+        <p class="invocations" data-cms="sec2-invocations">¡Corazón Santísimo, sálvanos!<br />¡Corazón de Jesús, ten piedad de nosotros!</p>
+      </div>
+    </section>
+
+    <section class="icdm-host">
+      <img class="icdm-bg" src="icdm.png" alt="" aria-hidden="true" />
+      <div class="rn-glow icdm-heart-glow" aria-hidden="true"></div>
+      <div class="host-inner">
+        <span class="label">A la patrona del Uruguay</span>
+        <h2 data-cms="sec3-heading">Oración para todos los días</h2>
+        <div class="prose">
+          <p data-cms="sec3-p1">Santísima Virgen de los Treinta y Tres, ante cuya imagen inclinaron su bandera y doblaron reverentemente su rodilla los fundadores de nuestra Patria.</p>
+          <p data-cms="sec3-p2">Protege siempre a este pueblo nacido a tu sombra bienhechora.</p>
+          <p data-cms="sec3-p3">Concede, oh Virgen de los Treinta y Tres, que en nuestros hogares florezcan la religión y todas las virtudes cristianas.</p>
+          <p data-cms="sec3-p4">Haz que veamos el reinado de Cristo, que es el de la verdad y la justicia.</p>
+          <p data-cms="sec3-p5">Alcánzanos estas gracias y la de la eterna salvación, de tu Hijo Jesucristo, que con el Padre y el Espíritu Santo vive y reina por los siglos de los siglos. Amén.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="vera-host">
+      <img class="vera-glow" src="vera.webp" alt="" aria-hidden="true" />
+      <img class="vera-bg" src="vera.webp" alt="" aria-hidden="true" />
+      <div class="host-inner">
+        <span class="label">Por su intercesión</span>
+        <h2 data-cms="sec4-heading">Oración al Beato Jacinto Vera</h2>
+        <div class="prose">
+          <p data-cms="sec4-p1">Dios, Padre nuestro, que ungiste con el Espíritu Santo a tu Siervo Jacinto, eligiéndolo como primer Obispo del Uruguay, para que, como instrumento de Cristo, Buen Pastor, llevara a todos los rincones de nuestra Patria el Evangelio de Tu Amor y los Sacramentos de la Salvación:</p>
+          <p data-cms="sec4-p2">Guía a nuestros obispos y sacerdotes. Envía abundantes y santas vocaciones sacerdotales y religiosas. Une a nuestras familias en la verdad y en el amor. Otorga a tus fieles santidad de vida y fortaleza para ser testigos del Evangelio de Cristo.</p>
+          <p data-cms="sec4-p3">Haz que vivamos según tus mandamientos, caminando bajo la luz de la fe, con la esperanza puesta en Ti, amándote con todo el corazón y amando al prójimo por amor a Ti.</p>
+          <p data-cms="sec4-p4">Glorifica tu Nombre en tu Siervo Jacinto y concédele ser reconocido entre tus santos, para alabanza de tu gloria y edificación de tu Iglesia.</p>
+          <p data-cms="sec4-p5">Dame, Señor, por su intercesión, la gracia que humilde y devotamente te pido (breve silencio para que cada uno pida la gracia deseada) y ayúdame a conformar mi vida con tu voluntad.</p>
+          <p data-cms="sec4-p6">Por Jesucristo, Nuestro Señor. Amén.</p>
+        </div>
+      </div>
+    </section>
       </div>
 
       <script>
-      /* Lecturas del día + Oraciones por Uruguay, como dos pestañas.
+      /* Dos pestañas: "Lecturas del día" y "Oraciones por Uruguay".
          - Lectura: se busca la fecha de hoy (hora de Montevideo) en /lecturas.json.
-         - Oraciones: vienen ya escritas en la página (las rellena el build).
-         Si hay oraciones se muestran las dos pestañas; si solo hay lectura, se
-         muestra sola; si no hay nada que mostrar, la sección queda oculta. */
+         - Si hoy no hay lectura cargada, se abre en "Oraciones por Uruguay".
+         - #lecturas / #oraciones en la URL abren esa pestaña. */
       (function () {
-        var sec = document.getElementById('fe-tabs');
-        if (!sec) return;
         var lista = document.getElementById('fe-tabs-lista');
+        if (!lista) return;
         var tabs = { lecturas: document.getElementById('tab-lecturas'), oraciones: document.getElementById('tab-oraciones') };
         var paneles = { lecturas: document.getElementById('panel-lecturas'), oraciones: document.getElementById('panel-oraciones') };
-        var hayOraciones = !!paneles.oraciones.querySelector('.oracion');
         var hoy = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Montevideo' }).format(new Date());
+        var h = (location.hash || '').replace('#', '');
+        var pedido = (h === 'lecturas' || h === 'oraciones') ? h : null;
 
         function el(tag, cls, txt) {
           var e = document.createElement(tag);
@@ -521,21 +561,10 @@
             cuerpo.appendChild(b);
           });
         }
-        function iniciar(dia) {
-          var hayLectura = !!dia;
-          if (hayLectura) pintarLectura(dia);
-          else if (hayOraciones) {
-            document.getElementById('lecturas-titulo').hidden = true;
-            document.getElementById('lecturas-vacia').hidden = false;
-          }
-          if (!hayLectura && !hayOraciones) return;        // nada que mostrar
-          lista.hidden = !hayOraciones;                      // con una sola cosa no hacen falta pestañas
-          var inicial = hayLectura ? 'lecturas' : 'oraciones';
-          var h = (location.hash || '').replace('#', '');
-          if (hayOraciones && (h === 'oraciones' || h === 'lecturas')) inicial = h;
-          mostrar(inicial, false);
-          if (!hayOraciones) paneles.oraciones.hidden = true;
-          sec.hidden = false;
+        function sinLectura() {
+          document.getElementById('lecturas-titulo').hidden = true;
+          document.getElementById('lecturas-vacia').hidden = false;
+          if (!pedido) mostrar('oraciones', false);          // sin lectura de hoy: abrir en las oraciones
         }
 
         ['lecturas', 'oraciones'].forEach(function (n) {
@@ -548,64 +577,16 @@
           });
         });
 
+        lista.hidden = false;
+        mostrar(pedido || 'lecturas', false);               // provisorio mientras carga la lectura
         fetch('/lecturas.json', { cache: 'no-cache' }).then(function (r) {
           return r.ok ? r.json() : null;
         }).then(function (data) {
-          iniciar(data && data.dias && data.dias[hoy]);
-        }).catch(function () { iniciar(null); });
+          var dia = data && data.dias && data.dias[hoy];
+          if (dia) pintarLectura(dia); else sinLectura();
+        }).catch(sinLectura);
       })();
       </script>
-    </section>
-
-    <section class="scj-host">
-      <img class="scj-bg" src="scj.png" alt="" aria-hidden="true" />
-      <div class="rn-glow scj-heart-glow" aria-hidden="true"></div>
-      <div class="host-inner">
-        <span class="label">Oración de consagración</span>
-        <h2 data-cms="sec2-heading">Corazón de Jesús</h2>
-        <div class="prose">
-          <p data-cms="sec2-p1">Tú eres nuestro consuelo y nuestra esperanza.</p>
-          <p data-cms="sec2-p2">Humildemente postrados en tu presencia, te pedimos perdón de nuestros pecados.</p>
-          <p data-cms="sec2-p3">Proclamamos que queremos vivir y morir en tu servicio y corresponder dignamente a tus soberanos designios de misericordia en favor de la Iglesia y de la sociedad.</p>
-          <p data-cms="sec2-p4">Te consagramos nuestras personas y nuestras familias, nuestros intereses y nuestros bienes, el presente y el porvenir.</p>
-          <p data-cms="sec2-p5">Te rogamos, Señor, acojas benignamente nuestras plegarias por tu Santa Iglesia, por la conversión y salvación de los hombres, por la paz y prosperidad de nuestra patria y de todos los pueblos.</p>
-          <p data-cms="sec2-p6">Amén.</p>
-        </div>
-        <p class="invocations" data-cms="sec2-invocations">¡Corazón Santísimo, sálvanos!<br />¡Corazón de Jesús, ten piedad de nosotros!</p>
-      </div>
-    </section>
-
-    <section class="icdm-host">
-      <img class="icdm-bg" src="icdm.png" alt="" aria-hidden="true" />
-      <div class="rn-glow icdm-heart-glow" aria-hidden="true"></div>
-      <div class="host-inner">
-        <span class="label">A la patrona del Uruguay</span>
-        <h2 data-cms="sec3-heading">Oración para todos los días</h2>
-        <div class="prose">
-          <p data-cms="sec3-p1">Santísima Virgen de los Treinta y Tres, ante cuya imagen inclinaron su bandera y doblaron reverentemente su rodilla los fundadores de nuestra Patria.</p>
-          <p data-cms="sec3-p2">Protege siempre a este pueblo nacido a tu sombra bienhechora.</p>
-          <p data-cms="sec3-p3">Concede, oh Virgen de los Treinta y Tres, que en nuestros hogares florezcan la religión y todas las virtudes cristianas.</p>
-          <p data-cms="sec3-p4">Haz que veamos el reinado de Cristo, que es el de la verdad y la justicia.</p>
-          <p data-cms="sec3-p5">Alcánzanos estas gracias y la de la eterna salvación, de tu Hijo Jesucristo, que con el Padre y el Espíritu Santo vive y reina por los siglos de los siglos. Amén.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="vera-host">
-      <img class="vera-glow" src="vera.webp" alt="" aria-hidden="true" />
-      <img class="vera-bg" src="vera.webp" alt="" aria-hidden="true" />
-      <div class="host-inner">
-        <span class="label">Por su intercesión</span>
-        <h2 data-cms="sec4-heading">Oración al Beato Jacinto Vera</h2>
-        <div class="prose">
-          <p data-cms="sec4-p1">Dios, Padre nuestro, que ungiste con el Espíritu Santo a tu Siervo Jacinto, eligiéndolo como primer Obispo del Uruguay, para que, como instrumento de Cristo, Buen Pastor, llevara a todos los rincones de nuestra Patria el Evangelio de Tu Amor y los Sacramentos de la Salvación:</p>
-          <p data-cms="sec4-p2">Guía a nuestros obispos y sacerdotes. Envía abundantes y santas vocaciones sacerdotales y religiosas. Une a nuestras familias en la verdad y en el amor. Otorga a tus fieles santidad de vida y fortaleza para ser testigos del Evangelio de Cristo.</p>
-          <p data-cms="sec4-p3">Haz que vivamos según tus mandamientos, caminando bajo la luz de la fe, con la esperanza puesta en Ti, amándote con todo el corazón y amando al prójimo por amor a Ti.</p>
-          <p data-cms="sec4-p4">Glorifica tu Nombre en tu Siervo Jacinto y concédele ser reconocido entre tus santos, para alabanza de tu gloria y edificación de tu Iglesia.</p>
-          <p data-cms="sec4-p5">Dame, Señor, por su intercesión, la gracia que humilde y devotamente te pido (breve silencio para que cada uno pida la gracia deseada) y ayúdame a conformar mi vida con tu voluntad.</p>
-          <p data-cms="sec4-p6">Por Jesucristo, Nuestro Señor. Amén.</p>
-        </div>
-      </div>
     </section>
   </div>
 </main>

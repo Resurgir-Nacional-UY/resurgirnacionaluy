@@ -1,16 +1,13 @@
-name: Fe · render lecturas y oraciones
+name: Fe · render lecturas del día
 
-# Al publicar (merge a main) una lectura del día o una oración desde el CMS
-# (Fe · Lecturas del día / Fe · Oraciones por Uruguay), regenera lecturas.json
-# y la sección de oraciones de la pagina Fe.
+# Al publicar (merge a main) una lectura del día desde el CMS (Fe · Lecturas
+# del día), regenera lecturas.json, que lee la pagina Fe.
 on:
   push:
     branches: [main]
     paths:
       - "content/lecturas/**"
-      - "content/oraciones/**"
       - "scripts/render_lecturas.py"
-      - "scripts/render_oraciones.py"
   workflow_dispatch:
 
 permissions:
@@ -41,9 +38,6 @@ jobs:
       - name: Render lecturas
         run: python scripts/render_lecturas.py
 
-      - name: Render oraciones
-        run: python scripts/render_oraciones.py
-
       - name: Publicar cambios
         run: |
           git config user.name "resurgir-bot"
@@ -52,7 +46,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Sin cambios que publicar."
           else
-            git commit -m "Fe: regenerar lecturas y oraciones [skip ci]"
+            git commit -m "Fe: regenerar lecturas [skip ci]"
             for i in 1 2 3 4 5; do
               git push && exit 0
               git fetch origin main
