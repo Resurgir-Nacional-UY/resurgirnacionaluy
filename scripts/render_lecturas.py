@@ -57,6 +57,13 @@ CSS = """<style>
   .lectura__estrofa { margin-top: 1rem; white-space: pre-line; color: var(--ink); }
   .lectura__cierre { margin-top: 1.1rem; font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.9rem; color: var(--ink); }
   .lecturas__fuente { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); max-width: var(--measure); font-size: 0.85rem; color: var(--ink-soft); }
+  .lecturas__pasos { margin-top: 2.2rem; display: flex; flex-wrap: wrap; gap: 0.6rem; max-width: var(--measure); }
+  .lecturas__paso { display: flex; flex-direction: column; gap: 0.1rem; min-width: 10.5rem; padding: 0.7rem 1.1rem; border: 1px solid var(--line); border-radius: 14px; color: var(--ink); text-decoration: none; transition: border-color 0.15s ease; }
+  .lecturas__paso:hover { border-color: var(--gold-line); }
+  .lecturas__paso:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .lecturas__paso b { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-text); }
+  .lecturas__paso span { font-size: 0.95rem; }
+  .lecturas__paso--sig { margin-left: auto; text-align: right; }
   .lecturas__nav { margin-top: 2.2rem; display: flex; flex-wrap: wrap; gap: 0.6rem 1.6rem; }
   .lecturas__nav a { color: var(--ink); }
   .lecturas__mes { margin-top: 2.4rem; font-size: var(--step-1); }
@@ -224,13 +231,16 @@ def day_page(tpl, fecha, dia, prev_f, next_f):
     pre = _head(tpl, page, title, desc, "Lecturas de la Misa del %s" % larga, ld)
     post = tpl[tpl.index("</main>") + len("</main>"):]
     cuerpo = "\n".join(lectura_html(l) for l in dia["lecturas"])
-    nav = []
+    pasos = []
     if prev_f:
-        nav.append('<a href="%s" rel="prev">← %s</a>' % (page_name(prev_f), esc(fecha_corta(prev_f))))
+        pasos.append('<a class="lecturas__paso" href="%s" rel="prev"><b>← Día anterior</b><span>%s</span></a>'
+                     % (page_name(prev_f), esc(fecha_larga(prev_f).capitalize())))
     if next_f:
-        nav.append('<a href="%s" rel="next">%s →</a>' % (page_name(next_f), esc(fecha_corta(next_f))))
-    nav.append('<a href="%s">Lecturas de otros días</a>' % INDEX_NAME)
-    nav.append('<a href="%s#oraciones">Oraciones por Uruguay</a>' % FE_PAGE)
+        pasos.append('<a class="lecturas__paso lecturas__paso--sig" href="%s" rel="next"><b>Día siguiente →</b><span>%s</span></a>'
+                     % (page_name(next_f), esc(fecha_larga(next_f).capitalize())))
+    pasos_html = ('      <div class="lecturas__pasos">%s</div>\n' % "".join(pasos)) if pasos else ""
+    nav = ['<a href="%s">Lecturas de otros días</a>' % INDEX_NAME,
+           '<a href="%s#oraciones">Oraciones por Uruguay</a>' % FE_PAGE]
     main = (
         '<main>\n'
         '  <article class="doc">\n'
@@ -241,6 +251,7 @@ def day_page(tpl, fecha, dia, prev_f, next_f):
         '%s'
         '%s\n'
         '%s'
+        '%s'
         '      <nav class="lecturas__nav" aria-label="Más lecturas">%s</nav>\n'
         '    </section>\n'
         '  </article>\n'
@@ -249,7 +260,7 @@ def day_page(tpl, fecha, dia, prev_f, next_f):
             ('      <p class="lecturas__santo">%s</p>\n' % esc(dia["santo"])) if dia["santo"] else "",
             cuerpo,
             ('      <p class="lecturas__fuente">%s</p>\n' % esc(dia["fuente"])) if dia["fuente"] else "",
-            " ".join(nav)))
+            pasos_html, " ".join(nav)))
     return pre + main + post
 
 
