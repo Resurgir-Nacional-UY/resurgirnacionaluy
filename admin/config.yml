@@ -237,6 +237,16 @@ collections:
         media_folder: /media/pages
         public_folder: /media/pages
         fields:
+          - name: hero_label
+            label: "Portada — etiqueta (encima del título)"
+            widget: string
+          - name: hero_title
+            label: "Portada — título"
+            widget: string
+          - name: hero_sub
+            label: "Portada — bajada (debajo del título)"
+            widget: string
+
           - name: bg_scj
             label: "Imagen de fondo — derecha (Cristo Rey)"
             widget: image
