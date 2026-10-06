@@ -66,6 +66,7 @@ def main():
         dias[fecha] = {
             "celebracion": d.get("celebracion", ""),
             "santo": d.get("santo", ""),
+            "fuente": d.get("fuente", ""),
             "lecturas": [_lectura(l) for l in d["lecturas"]],
         }
     with io.open(OUT, "w", encoding="utf-8", newline="\n") as f:

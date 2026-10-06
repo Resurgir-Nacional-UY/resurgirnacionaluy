@@ -695,6 +695,12 @@ collections:
         required: false
         hint: "P. ej. Memoria libre: San Bruno, presbítero. Dejar vacío si no hay."
 
+      - name: fuente
+        label: "Crédito del texto bíblico — opcional"
+        widget: string
+        required: false
+        hint: "Se muestra al pie de las lecturas, p. ej. Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger."
+
       - name: lecturas
         label: "Lecturas (en el orden en que se leen)"
         widget: list
