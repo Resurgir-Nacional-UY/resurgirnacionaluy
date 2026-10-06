@@ -55,6 +55,8 @@ CSS = """<style>
   .lectura__resp { margin-top: 0.9rem; color: var(--ink); }
   .lectura__resp b { font-family: "Archivo", sans-serif; font-weight: 700; color: var(--gold-text); }
   .lectura__estrofa { margin-top: 1rem; white-space: pre-line; color: var(--ink); }
+  .lectura__rmark { margin-top: 0.4rem; }
+  .lectura__rmark b { font-family: "Archivo", sans-serif; font-weight: 700; color: var(--gold-text); }
   .lectura__cierre { margin-top: 1.1rem; font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.9rem; color: var(--ink); }
   .lecturas__fuente { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); max-width: var(--measure); font-size: 0.85rem; color: var(--ink-soft); }
   .lecturas__pasos { margin-top: 2.2rem; display: flex; flex-wrap: wrap; gap: 0.6rem; max-width: var(--measure); }
@@ -163,6 +165,8 @@ def lectura_html(l):
         out.append("        </div>")
     for est in l.get("estrofas") or []:
         out.append('        <p class="lectura__estrofa">%s</p>' % esc("\n".join(est)))
+        if l.get("respuesta"):
+            out.append('        <p class="lectura__rmark"><b>R.</b></p>')
     if l.get("cierre"):
         out.append('        <div class="lectura__cierre">%s</div>' % esc(l["cierre"]))
     out.append("      </div>")
