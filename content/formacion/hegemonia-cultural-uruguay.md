@@ -2,14 +2,14 @@
 title: Hegemonía cultural vs revolución por las armas.
 slug: hegemonia-cultural-uruguay
 date: 2026-09-08
-author: Orlando Almada
+author: Orlando Aldama
 tema: "Cultura y sociedad"
 summary: El caos político que ves en universidades, en redes sociales, en reuniones de trabajo no es histeria colectiva. No es una generación de jóvenes que perdió la cabeza. No es espontáneo. Es protocolo. Está en un libro. Fue escrito en 1971 y quien lo escribió te explicó el sistema completo antes de morir.
 source_url: ''
 draft: false
 ---
 
-(De entre los muchos materiales que recibimos de amigos o colaboradores, compartimos este texto perteneciente a Orlando Almada, con su debida autorización)
+(De entre los muchos materiales que recibimos de amigos o colaboradores, compartimos este texto perteneciente a Orlando Aldama, con su debida autorización)
 
 El caos político que ves en universidades, en redes sociales, en reuniones de trabajo no es histeria colectiva. No es una generación de jóvenes que perdió la cabeza. No es espontáneo. Es protocolo. Está en un libro. Fue escrito en 1971 y quien lo escribió te explicó el sistema completo antes de morir.
 
@@ -71,4 +71,4 @@ Scruton pasó décadas tratando de recuperar el lenguaje, de devolver al debate 
 
 Si lo que vimos aquí te movió, lo que está en la descripción va más profundo. El Atlas de pensadores que tenemos disponible cubre a Alinsky en detalle: las 13 tácticas completas con sus contextos históricos, la genealogía de cómo llegaron al wokeismo contemporáneo y las contramedidas desarrolladas para cada una.
 
--Orlando Almada.
+-Orlando Aldama.
