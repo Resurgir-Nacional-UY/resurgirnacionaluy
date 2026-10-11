@@ -139,20 +139,14 @@
   .cal-fig { margin: 1.4rem 0 0; max-width: 640px; }
   .cal-fig img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
   .cal-nota { margin-top: 1rem; max-width: var(--measure); font-size: 0.88rem; color: var(--ink-soft); }
-  .cal-sub { margin-top: 2.4rem; font-family: "Fraunces", serif; font-size: var(--step-1); font-weight: 500; }
-  .cal-lista { list-style: none; padding: 0; margin: 1rem 0 0; max-width: var(--measure); display: flex; flex-direction: column; }
-  .cal-item { display: grid; grid-template-columns: 5.2rem 1fr; gap: 0.1rem 1rem; padding: 0.7rem 0; border-top: 1px solid var(--line); }
-  .cal-dia { color: var(--ink-soft); font-size: 0.9rem; }
-  .cal-dia b { font-family: "Fraunces", serif; font-size: 1.25rem; font-weight: 500; color: var(--ink); margin-right: 0.25rem; }
-  .cal-nombre { color: var(--ink); }
-  .cal-item--domingo .cal-nombre, .cal-item--fiesta .cal-nombre { color: var(--gold-text); font-weight: 600; }
-  .cal-item--memoria-libre .cal-nombre, .cal-item--martirologio .cal-nombre { font-style: italic; }
-  .cal-item--feria .cal-nombre { color: var(--ink-soft); }
-  .cal-tipo { display: block; font-family: "Archivo", sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-top: 0.15rem; }
-  .cal-extra { display: block; font-size: 0.88rem; color: var(--ink-soft); margin-top: 0.2rem; }
-  .cal-item--hoy { background: color-mix(in srgb, var(--gold-text) 9%, transparent); margin-inline: -0.6rem; padding-inline: 0.6rem; border-radius: 6px; }
-  .cal-item--hoy .cal-dia::after { content: ' · hoy'; color: var(--gold-text); font-weight: 600; }
-  @media (max-width: 480px) { .cal-item { grid-template-columns: 4.2rem 1fr; gap: 0.1rem 0.7rem; } }
+  .cal-hoy { margin-top: 1.8rem; padding: 1.1rem 1.3rem; max-width: var(--measure); border: 1px solid var(--gold-line); border-radius: 10px; }
+  .cal-hoy__fecha { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-text); }
+  .cal-hoy__nombre { font-family: "Fraunces", serif; font-size: var(--step-1); line-height: 1.3; margin-top: 0.3rem; color: var(--ink); }
+  .cal-hoy--domingo .cal-hoy__nombre, .cal-hoy--fiesta .cal-hoy__nombre { color: var(--gold-text); }
+  .cal-hoy--memoria-libre .cal-hoy__nombre, .cal-hoy--martirologio .cal-hoy__nombre { font-style: italic; }
+  .cal-tipo { display: block; font-family: "Archivo", sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-top: 0.35rem; }
+  .cal-extra { display: block; font-size: 0.9rem; color: var(--ink-soft); margin-top: 0.3rem; }
+  #calendario-hoy[hidden] { display: none; }
   .lecturas__mas { margin-top: 1.2rem; max-width: var(--measure); font-size: 0.92rem; color: var(--ink-soft); }
   .lecturas__mas a { color: var(--ink); }
   .lecturas__mas[hidden], .lecturas__pasos[hidden], .lecturas__paso[hidden] { display: none; }
@@ -524,10 +518,9 @@
         <h2 id="calendario-titulo">Calendario del mes</h2>
         <p class="lecturas__vacia" id="calendario-vacio" hidden>Todavía no está cargado el calendario de este mes. Volvé más tarde.</p>
         <div id="calendario-cuerpo" hidden>
+          <div class="cal-hoy" id="calendario-hoy" hidden></div>
           <figure class="cal-fig"><img id="calendario-img" alt="" decoding="async" /></figure>
           <p class="cal-nota" id="calendario-nota"></p>
-          <h3 class="cal-sub">Día por día</h3>
-          <ol class="cal-lista" id="calendario-lista"></ol>
         </div>
       </div>
 
@@ -706,23 +699,20 @@
           var img = document.getElementById('calendario-img');
           img.src = mes.imagen; img.alt = mes.imagen_alt || '';
           document.getElementById('calendario-nota').textContent = mes.nota || '';
-          var ul = document.getElementById('calendario-lista');
+          // Solo se muestra el día de hoy (hora de Montevideo)
           var p = hoy.split('-'), diaHoy = +p[2];
-          (mes.dias || []).forEach(function (d) {
-            var li = el('li', 'cal-item cal-item--' + d.tipo + (d.dia === diaHoy ? ' cal-item--hoy' : ''));
-            var f = new Date(Date.UTC(+p[0], +p[1] - 1, d.dia, 12));
-            var sem = new Intl.DateTimeFormat('es-UY', { timeZone: 'UTC', weekday: 'long' }).format(f);
-            var c1 = el('span', 'cal-dia');
-            c1.appendChild(el('b', null, String(d.dia)));
-            c1.appendChild(document.createTextNode(sem === 'domingo' ? 'Domingo' : sem));
-            var c2 = el('span', null);
-            c2.appendChild(el('span', 'cal-nombre', d.nombre));
-            c2.appendChild(el('span', 'cal-tipo', TIPO_TXT[d.tipo] || ''));
-            if (d.detalle) c2.appendChild(el('span', 'cal-extra', d.detalle));
-            if (d.tambien) c2.appendChild(el('span', 'cal-extra', 'También, memoria libre: ' + d.tambien));
-            li.appendChild(c1); li.appendChild(c2);
-            ul.appendChild(li);
-          });
+          var d = (mes.dias || []).filter(function (x) { return x.dia === diaHoy; })[0];
+          var caja = document.getElementById('calendario-hoy');
+          if (d) {
+            caja.className = 'cal-hoy cal-hoy--' + d.tipo;
+            caja.textContent = '';
+            caja.appendChild(el('p', 'cal-hoy__fecha', 'Hoy · ' + fechaLarga(hoy)));
+            caja.appendChild(el('p', 'cal-hoy__nombre', d.nombre));
+            caja.appendChild(el('span', 'cal-tipo', TIPO_TXT[d.tipo] || ''));
+            if (d.detalle) caja.appendChild(el('span', 'cal-extra', d.detalle));
+            if (d.tambien) caja.appendChild(el('span', 'cal-extra', 'También, memoria libre: ' + d.tambien));
+            caja.hidden = false;
+          }
           document.getElementById('calendario-cuerpo').hidden = false;
         }
         fetch('/calendario.json', { cache: 'no-cache' }).then(function (r) {

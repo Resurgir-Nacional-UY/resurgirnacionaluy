@@ -767,8 +767,9 @@ collections:
     label: "Fe · Calendario del mes"
     label_singular: "Calendario del mes"
     description: >-
-      Una imagen y la lista día por día para cada mes. La pestaña Calendario de la
-      página Fe muestra solo el mes que corresponde (hora de Montevideo). Al guardar
+      Una imagen y los datos de cada día para cada mes. La pestaña Calendario de la
+      página Fe muestra solo el mes que corresponde (hora de Montevideo) y, abajo de
+      "Hoy", únicamente el día de la fecha actual. Al guardar
       se crea un Pull Request; queda publicado cuando alguien con permiso lo aprueba (merge).
     folder: content/calendario
     create: true
@@ -804,16 +805,16 @@ collections:
       - name: imagen_alt
         label: "Texto alternativo de la imagen"
         widget: text
-        hint: "Describe la imagen para lectores de pantalla. El detalle día por día va en la lista de abajo."
+        hint: "Describe la imagen para lectores de pantalla."
 
       - name: nota
         label: "Nota al pie de la imagen — opcional"
         widget: text
         required: false
-        hint: "P. ej. aclaración de la cursiva, de los santos del martirologio y crédito de la pintura."
+        hint: "P. ej. aclaración de la cursiva y de los santos del martirologio. El crédito de la imagen va dentro de la imagen."
 
       - name: dias
-        label: "Día por día (para el texto de la página y los buscadores)"
+        label: "Día por día (la página muestra solo el día de hoy)"
         widget: list
         summary: "{{fields.dia}} · {{fields.nombre}}"
         min: 1
