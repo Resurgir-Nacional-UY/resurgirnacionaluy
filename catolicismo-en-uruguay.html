@@ -728,7 +728,7 @@
             var sem = new Intl.DateTimeFormat('es-UY', { timeZone: 'UTC', weekday: 'long' }).format(f);
             var c1 = el('span', 'cal-dia');
             c1.appendChild(el('b', null, String(d.dia)));
-            c1.appendChild(document.createTextNode(sem));
+            c1.appendChild(document.createTextNode(sem === 'domingo' ? 'Domingo' : sem));
             var c2 = el('span', null);
             c2.appendChild(el('span', 'cal-nombre', d.nombre));
             c2.appendChild(el('span', 'cal-tipo', TIPO_TXT[d.tipo] || ''));

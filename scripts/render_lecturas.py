@@ -38,7 +38,7 @@ GEN_MARK = "<!-- generated:lecturas-dia -->"
 FECHA = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
          "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
-DIAS = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+DIAS = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "Domingo"]
 
 # Estilos de la lectura (los mismos que la pagina Fe, que las pinta con JavaScript)
 CSS = """<style>
