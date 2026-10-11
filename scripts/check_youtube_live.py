@@ -100,9 +100,34 @@ def main():
         item = items[0]
         video_id = item.get("id", {}).get("videoId", "")
         title = item.get("snippet", {}).get("title", "")
-        new = {"live": True, "videoId": video_id,
-               "url": "https://www.youtube.com/watch?v=" + video_id,
-               "title": title}
+        # search.list sigue devolviendo una transmision ya terminada durante horas
+        # (su indice se actualiza con retraso). Se confirma con videos.list, que
+        # si refleja el estado real: solo cuenta como "en vivo" si no termino.
+        vqs = urllib.parse.urlencode({
+            "part": "snippet,liveStreamingDetails",
+            "id": video_id,
+            "key": api_key,
+        })
+        try:
+            with urllib.request.urlopen("https://www.googleapis.com/youtube/v3/videos?" + vqs, timeout=20) as r:
+                vdata = json.loads(r.read().decode("utf-8"))
+        except Exception as e:
+            print("WARNING: no se pudo confirmar el estado del video (se deja como estaba):", e)
+            return 0
+        vitems = vdata.get("items") or []
+        if vitems:
+            v = vitems[0]
+            en_vivo = (v.get("snippet", {}).get("liveBroadcastContent") == "live"
+                       and not v.get("liveStreamingDetails", {}).get("actualEndTime"))
+        else:
+            en_vivo = False
+        if en_vivo:
+            new = {"live": True, "videoId": video_id,
+                   "url": "https://www.youtube.com/watch?v=" + video_id,
+                   "title": title}
+        else:
+            print("search.list devolvio %s pero ya no esta en vivo" % video_id)
+            new = {"live": False}
     else:
         new = {"live": False}
 
