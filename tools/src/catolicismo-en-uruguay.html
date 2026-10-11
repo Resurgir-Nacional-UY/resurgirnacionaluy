@@ -147,6 +147,9 @@
   .cal-tipo { display: block; font-family: "Archivo", sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-top: 0.35rem; }
   .cal-extra { display: block; font-size: 0.9rem; color: var(--ink-soft); margin-top: 0.3rem; }
   #calendario-hoy[hidden] { display: none; }
+  .cal-pasos { margin-top: 1.4rem; max-width: 640px; }
+  .cal-pasos button.lecturas__paso { background: none; font: inherit; cursor: pointer; text-align: left; }
+  .cal-pasos button.lecturas__paso--sig { text-align: right; }
   .lecturas__mas { margin-top: 1.2rem; max-width: var(--measure); font-size: 0.92rem; color: var(--ink-soft); }
   .lecturas__mas a { color: var(--ink); }
   .lecturas__mas[hidden], .lecturas__pasos[hidden], .lecturas__paso[hidden] { display: none; }
@@ -521,6 +524,10 @@
           <div class="cal-hoy" id="calendario-hoy" hidden></div>
           <figure class="cal-fig"><img id="calendario-img" alt="" decoding="async" /></figure>
           <p class="cal-nota" id="calendario-nota"></p>
+          <div class="lecturas__pasos cal-pasos" id="calendario-pasos" hidden>
+            <button type="button" class="lecturas__paso" id="calendario-ant" hidden><b>← Mes anterior</b><span></span></button>
+            <button type="button" class="lecturas__paso lecturas__paso--sig" id="calendario-sig" hidden><b>Mes siguiente →</b><span></span></button>
+          </div>
         </div>
       </div>
 
@@ -694,18 +701,18 @@
         // Calendario del mes de hoy (/calendario.json)
         var TIPO_TXT = { 'domingo': 'Domingo', 'fiesta': 'Fiesta', 'memoria-obligatoria': 'Memoria obligatoria',
           'memoria-libre': 'Memoria libre', 'martirologio': 'Santo del martirologio · memoria libre', 'feria': 'Feria', 'evento': 'Evento especial' };
-        // ?mes=AAAA-MM muestra ese mes (vista previa); sin eso, el mes de hoy
-        var pedidoMes = (location.search.match(/[?&]mes=(\d{4}-\d{2})(?:&|$)/) || [])[1];
-        var clave = pedidoMes || hoy.slice(0, 7);
-        function pintarCalendario(mes) {
+        var claveHoy = hoy.slice(0, 7), claves = [], meses = {};
+        function pintarCalendario(clave) {
+          var mes = meses[clave];
           document.getElementById('calendario-titulo').textContent = mes.titulo || 'Calendario del mes';
           var img = document.getElementById('calendario-img');
           img.src = mes.imagen; img.alt = mes.imagen_alt || '';
           document.getElementById('calendario-nota').textContent = mes.nota || '';
           // Solo se muestra el día de hoy (hora de Montevideo)
           var p = hoy.split('-'), diaHoy = +p[2];
-          var d = clave !== hoy.slice(0, 7) ? null : (mes.dias || []).filter(function (x) { return x.dia === diaHoy; })[0];
+          var d = clave !== claveHoy ? null : (mes.dias || []).filter(function (x) { return x.dia === diaHoy; })[0];
           var caja = document.getElementById('calendario-hoy');
+          caja.hidden = true;
           if (d) {
             caja.className = 'cal-hoy cal-hoy--' + d.tipo;
             caja.textContent = '';
@@ -716,13 +723,22 @@
             if (d.tambien) caja.appendChild(el('span', 'cal-extra', 'También, memoria libre: ' + d.tambien));
             caja.hidden = false;
           }
+          // Flechas al mes anterior / siguiente, solo si existen
+          var i = claves.indexOf(clave);
+          [['calendario-ant', claves[i - 1]], ['calendario-sig', claves[i + 1]]].forEach(function (par) {
+            var b = document.getElementById(par[0]);
+            b.hidden = !par[1];
+            if (par[1]) { b.lastChild.textContent = meses[par[1]].titulo || par[1]; b.onclick = function () { pintarCalendario(par[1]); }; }
+          });
+          document.getElementById('calendario-pasos').hidden = !(claves[i - 1] || claves[i + 1]);
           document.getElementById('calendario-cuerpo').hidden = false;
         }
         fetch('/calendario.json', { cache: 'no-cache' }).then(function (r) {
           return r.ok ? r.json() : null;
         }).then(function (data) {
-          var mes = data && data.meses && data.meses[clave];
-          if (mes) pintarCalendario(mes); else document.getElementById('calendario-vacio').hidden = false;
+          meses = (data && data.meses) || {};
+          claves = Object.keys(meses).sort();
+          if (meses[claveHoy]) pintarCalendario(claveHoy); else document.getElementById('calendario-vacio').hidden = false;
         }).catch(function () { document.getElementById('calendario-vacio').hidden = false; });
 
         lista.hidden = false;
