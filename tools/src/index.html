@@ -489,7 +489,9 @@
 <header class="site-header">
   <style>
     .live-banner { display: none; background: #B3261E; }
-    .live-banner.is-live { display: block; }
+    .live-banner.is-live, .live-banner.is-recent { display: block; }
+    .live-banner.is-recent { background: #1B3F73; }
+    .live-banner.is-recent .live-banner__dot { display: none; }
     .live-banner__link { display: flex; align-items: center; justify-content: center; gap: 0.6rem; max-width: 1120px; margin-inline: auto; padding: 0.55rem var(--gutter); color: #fff; text-decoration: none; font-family: "Archivo", sans-serif; font-size: 0.85rem; flex-wrap: wrap; }
     .live-banner__link:hover { opacity: 0.88; }
     .live-banner__dot { width: 8px; height: 8px; border-radius: 50%; background: #fff; flex: none; }
@@ -512,12 +514,25 @@
       fetch('/live-status.json', { cache: 'no-store' }).then(function (r) {
         return r.ok ? r.json() : null;
       }).then(function (d) {
-        if (!d || !d.live || !d.url) return;
+        if (!d || !d.url) return;
         var link = document.getElementById('live-banner-link');
         var title = document.getElementById('live-banner-title');
+        var label = b.querySelector('.live-banner__label');
+        var cta = b.querySelector('.live-banner__cta');
+        if (d.live) {
+          b.classList.add('is-live');
+        } else {
+          // Directo terminado: el aviso queda hasta 6 horas (si no empezo otro antes)
+          var ended = d.endedAt ? Date.parse(d.endedAt) : NaN;
+          var ms = Date.now() - ended;
+          if (isNaN(ended) || ms > 6 * 3600 * 1000) return;
+          var min = Math.max(1, Math.round(ms / 60000));
+          label.textContent = 'Directo finalizado · hace ' + (min < 60 ? min + ' min' : Math.round(min / 60) + ' h');
+          cta.textContent = 'Ver grabación →';
+          b.classList.add('is-recent');
+        }
         link.href = d.url;
         if (title && d.title) title.textContent = '— ' + d.title;
-        b.classList.add('is-live');
       }).catch(function () {});
     })();
   </script>
