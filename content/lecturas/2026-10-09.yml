@@ -3,7 +3,7 @@
 # los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
 fecha: '2026-10-09'
 celebracion: Viernes de la XXVII semana del tiempo ordinario
-santo: 'Memoria libre: San Dionisio, obispo, y compañeros, mártires; o San Juan Leonardi, presbítero'
+santo: "Memoria libre: San Juan Enrique Newman; San Dionisio, obispo, y compañeros, mártires; o San Juan Leonardi, presbítero"
 fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
 draft: false
 lecturas:

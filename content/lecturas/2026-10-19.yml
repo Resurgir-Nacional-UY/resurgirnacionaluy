@@ -3,7 +3,7 @@
 # los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
 fecha: '2026-10-19'
 celebracion: Lunes de la XXIX semana del tiempo ordinario
-santo: 'Memoria libre: Santos Juan de Brébeuf e Isaac Jogues, presbíteros, y compañeros, mártires'
+santo: "Memoria libre: San Pablo de la Cruz; o Santos Juan de Brébeuf e Isaac Jogues, presbíteros, y compañeros, mártires"
 fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
 draft: false
 lecturas:

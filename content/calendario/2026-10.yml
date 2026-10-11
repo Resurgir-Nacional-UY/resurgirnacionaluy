@@ -1,0 +1,108 @@
+# Calendario litúrgico del mes (forma ordinaria). Un archivo por mes (nombre = AAAA-MM.yml).
+# Se edita desde el CMS (Fe · Calendario del mes). `python scripts/render_calendario.py`
+# los junta en /calendario.json, que lee la pestaña Calendario de la página Fe.
+mes: 2026-10
+titulo: Octubre 2026
+imagen: /media/calendario/2026-10.webp
+imagen_alt: 'Calendario de octubre de 2026 (forma ordinaria): una grilla con el santo o la fiesta de cada día, bajo la pintura La Virgen del Rosario, de Caravaggio. El detalle día por día está en la lista de abajo.'
+nota: 'En cursiva, memoria libre. Los santos señalados como del martirologio son santos del día del Martirologio Romano que no figuran en el calendario general; su celebración es memoria libre. Pintura: La Virgen del Rosario (detalle), Caravaggio, 1605-07, Kunsthistorisches Museum, Viena (dominio público).'
+dias:
+- dia: 1
+  nombre: Santa Teresa del Niño Jesús
+  tipo: memoria-obligatoria
+  detalle: Patrona de las misiones
+- dia: 2
+  nombre: Santos Ángeles Custodios
+  tipo: memoria-obligatoria
+- dia: 3
+  nombre: Santa María en sábado
+  tipo: memoria-libre
+- dia: 4
+  nombre: XXVII Domingo del Tiempo Ordinario
+  tipo: domingo
+- dia: 5
+  nombre: Santa Faustina Kowalska
+  tipo: memoria-libre
+- dia: 6
+  nombre: San Bruno
+  tipo: memoria-libre
+- dia: 7
+  nombre: Nuestra Señora del Rosario
+  tipo: memoria-obligatoria
+- dia: 8
+  nombre: Santa Brígida de Suecia
+  tipo: martirologio
+- dia: 9
+  nombre: San Juan Enrique Newman
+  tipo: memoria-libre
+  tambien: San Dionisio, obispo, y compañeros, mártires; San Juan Leonardi, presbítero
+- dia: 10
+  nombre: Santa María en sábado
+  tipo: memoria-libre
+- dia: 11
+  nombre: XXVIII Domingo del Tiempo Ordinario
+  tipo: domingo
+- dia: 12
+  nombre: Feria del tiempo ordinario
+  tipo: feria
+- dia: 13
+  nombre: San Eduardo
+  tipo: martirologio
+- dia: 14
+  nombre: San Calixto I
+  tipo: memoria-libre
+- dia: 15
+  nombre: Santa Teresa de Jesús
+  tipo: memoria-obligatoria
+- dia: 16
+  nombre: Santa Eduvigis
+  tipo: memoria-libre
+  tambien: Santa Margarita María de Alacoque, virgen
+- dia: 17
+  nombre: San Ignacio de Antioquía
+  tipo: memoria-obligatoria
+- dia: 18
+  nombre: XXIX Domingo del Tiempo Ordinario
+  tipo: domingo
+  detalle: 'Domund: Jornada Mundial de las Misiones'
+- dia: 19
+  nombre: San Pablo de la Cruz
+  tipo: memoria-libre
+  tambien: Santos Juan de Brébeuf e Isaac Jogues, presbíteros, y compañeros, mártires
+- dia: 20
+  nombre: San Juan Cancio
+  tipo: martirologio
+- dia: 21
+  nombre: San Hilarión
+  tipo: martirologio
+- dia: 22
+  nombre: San Juan Pablo II
+  tipo: memoria-libre
+- dia: 23
+  nombre: San Juan de Capistrano
+  tipo: memoria-libre
+- dia: 24
+  nombre: San Antonio María Claret
+  tipo: memoria-libre
+- dia: 25
+  nombre: XXX Domingo del Tiempo Ordinario
+  tipo: domingo
+- dia: 26
+  nombre: San Evaristo
+  tipo: martirologio
+- dia: 27
+  nombre: Santos Vicente, Sabina y Cristeta
+  tipo: martirologio
+- dia: 28
+  nombre: Santos Simón y Judas, apóstoles
+  tipo: fiesta
+- dia: 29
+  nombre: San Narciso
+  tipo: martirologio
+- dia: 30
+  nombre: San Serapión
+  tipo: martirologio
+- dia: 31
+  nombre: Santa María en sábado
+  tipo: memoria-libre
+draft: false

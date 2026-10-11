@@ -3,7 +3,7 @@
 # los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
 fecha: '2026-10-24'
 celebracion: Sábado de la XXIX semana del tiempo ordinario
-santo: ''
+santo: "Memoria libre: San Antonio María Claret"
 fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
 draft: false
 lecturas:

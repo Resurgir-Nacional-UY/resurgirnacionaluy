@@ -761,3 +761,98 @@ collections:
         label: "Borrador (no se publica mientras esté marcado)"
         widget: boolean
         default: false
+
+  # ---- Fe: calendario litúrgico del mes (pestaña "Calendario") ----
+  - name: calendario
+    label: "Fe · Calendario del mes"
+    label_singular: "Calendario del mes"
+    description: >-
+      Una imagen y la lista día por día para cada mes. La pestaña Calendario de la
+      página Fe muestra solo el mes que corresponde (hora de Montevideo). Al guardar
+      se crea un Pull Request; queda publicado cuando alguien con permiso lo aprueba (merge).
+    folder: content/calendario
+    create: true
+    extension: yml
+    format: yaml
+    slug: "{{fields.mes}}"
+    identifier_field: mes
+    summary: "{{mes}} · {{titulo}}"
+    media_folder: /media/calendario
+    public_folder: /media/calendario
+    sortable_fields:
+      - mes
+    fields:
+      - name: mes
+        label: "Mes (AAAA-MM)"
+        widget: string
+        hint: "P. ej. 2026-11. Una sola entrada por mes."
+        pattern:
+          - '^\d{4}-(0[1-9]|1[0-2])$'
+          - "Escribí el mes como AAAA-MM, p. ej. 2026-11."
+
+      - name: titulo
+        label: "Título"
+        widget: string
+        hint: "P. ej. Noviembre 2026."
+
+      - name: imagen
+        label: "Imagen del calendario"
+        widget: image
+        choose_url: false
+        hint: "La imagen del mes (p. ej. 1080×1350, mejor en WebP o JPG liviano)."
+
+      - name: imagen_alt
+        label: "Texto alternativo de la imagen"
+        widget: text
+        hint: "Describe la imagen para lectores de pantalla. El detalle día por día va en la lista de abajo."
+
+      - name: nota
+        label: "Nota al pie de la imagen — opcional"
+        widget: text
+        required: false
+        hint: "P. ej. aclaración de la cursiva, de los santos del martirologio y crédito de la pintura."
+
+      - name: dias
+        label: "Día por día (para el texto de la página y los buscadores)"
+        widget: list
+        summary: "{{fields.dia}} · {{fields.nombre}}"
+        min: 1
+        fields:
+          - name: dia
+            label: "Día del mes"
+            widget: number
+            value_type: int
+            min: 1
+            max: 31
+
+          - name: nombre
+            label: "Fiesta o santo del día"
+            widget: string
+            hint: "P. ej. Santa Teresa de Jesús, o XXVIII Domingo del Tiempo Ordinario."
+
+          - name: tipo
+            label: "Tipo"
+            widget: select
+            options:
+              - { label: "Domingo", value: "domingo" }
+              - { label: "Fiesta o solemnidad", value: "fiesta" }
+              - { label: "Memoria obligatoria", value: "memoria-obligatoria" }
+              - { label: "Memoria libre", value: "memoria-libre" }
+              - { label: "Santo del martirologio (memoria libre)", value: "martirologio" }
+              - { label: "Feria (sin santo)", value: "feria" }
+
+          - name: detalle
+            label: "Detalle — opcional"
+            widget: string
+            required: false
+            hint: "P. ej. Patrona de las misiones, o Domund: Jornada Mundial de las Misiones."
+
+          - name: tambien
+            label: "Otras memorias libres del mismo día — opcional"
+            widget: string
+            required: false
+
+      - name: draft
+        label: "Borrador (no se publica mientras esté marcado)"
+        widget: boolean
+        default: false

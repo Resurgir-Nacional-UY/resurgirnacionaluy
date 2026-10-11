@@ -3,7 +3,7 @@
 # los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
 fecha: '2026-10-27'
 celebracion: Martes de la XXX semana del tiempo ordinario
-santo: ''
+santo: "Memoria libre (santo del martirologio): Santos Vicente, Sabina y Cristeta"
 fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
 draft: false
 lecturas:

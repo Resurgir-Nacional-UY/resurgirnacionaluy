@@ -3,7 +3,7 @@
 # los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
 fecha: '2026-10-16'
 celebracion: Viernes de la XXVIII semana del tiempo ordinario
-santo: 'Memoria libre: Santa Eduvigis, religiosa'
+santo: "Memoria libre: Santa Eduvigis, religiosa; o Santa Margarita María de Alacoque, virgen"
 fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
 draft: false
 lecturas:

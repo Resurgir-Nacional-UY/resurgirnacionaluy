@@ -1,13 +1,16 @@
 name: Fe · render lecturas del día
 
-# Al publicar (merge a main) una lectura del día desde el CMS (Fe · Lecturas
-# del día), regenera lecturas.json, que lee la pagina Fe.
+# Al publicar (merge a main) una lectura del día o un calendario del mes desde el
+# CMS (Fe · Lecturas del día / Fe · Calendario del mes), regenera lecturas.json y
+# calendario.json, que lee la pagina Fe.
 on:
   push:
     branches: [main]
     paths:
       - "content/lecturas/**"
       - "scripts/render_lecturas.py"
+      - "content/calendario/**"
+      - "scripts/render_calendario.py"
   workflow_dispatch:
 
 permissions:
@@ -36,7 +39,9 @@ jobs:
       - run: pip install --quiet pyyaml
 
       - name: Render lecturas
-        run: python scripts/render_lecturas.py
+        run: |
+          python scripts/render_lecturas.py
+          python scripts/render_calendario.py
 
       - name: Publicar cambios
         run: |
@@ -46,7 +51,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Sin cambios que publicar."
           else
-            git commit -m "Fe: regenerar lecturas [skip ci]"
+            git commit -m "Fe: regenerar lecturas y calendario [skip ci]"
             for i in 1 2 3 4 5; do
               git push && exit 0
               git fetch origin main

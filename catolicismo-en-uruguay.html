@@ -146,6 +146,24 @@
   .lecturas__paso b { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-text); }
   .lecturas__paso span { font-size: 0.95rem; }
   .lecturas__paso--sig { margin-left: auto; text-align: right; }
+  /* Calendario litúrgico (se rellena desde /calendario.json) */
+  .cal-fig { margin: 1.4rem 0 0; max-width: 640px; }
+  .cal-fig img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
+  .cal-nota { margin-top: 1rem; max-width: var(--measure); font-size: 0.88rem; color: var(--ink-soft); }
+  .cal-sub { margin-top: 2.4rem; font-family: "Fraunces", serif; font-size: var(--step-1); font-weight: 500; }
+  .cal-lista { list-style: none; padding: 0; margin: 1rem 0 0; max-width: var(--measure); display: flex; flex-direction: column; }
+  .cal-item { display: grid; grid-template-columns: 5.2rem 1fr; gap: 0.1rem 1rem; padding: 0.7rem 0; border-top: 1px solid var(--line); }
+  .cal-dia { color: var(--ink-soft); font-size: 0.9rem; }
+  .cal-dia b { font-family: "Fraunces", serif; font-size: 1.25rem; font-weight: 500; color: var(--ink); margin-right: 0.25rem; }
+  .cal-nombre { color: var(--ink); }
+  .cal-item--domingo .cal-nombre, .cal-item--fiesta .cal-nombre { color: var(--gold-text); font-weight: 600; }
+  .cal-item--memoria-libre .cal-nombre, .cal-item--martirologio .cal-nombre { font-style: italic; }
+  .cal-item--feria .cal-nombre { color: var(--ink-soft); }
+  .cal-tipo { display: block; font-family: "Archivo", sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-top: 0.15rem; }
+  .cal-extra { display: block; font-size: 0.88rem; color: var(--ink-soft); margin-top: 0.2rem; }
+  .cal-item--hoy { background: color-mix(in srgb, var(--gold-text) 9%, transparent); margin-inline: -0.6rem; padding-inline: 0.6rem; border-radius: 6px; }
+  .cal-item--hoy .cal-dia::after { content: ' · hoy'; color: var(--gold-text); font-weight: 600; }
+  @media (max-width: 480px) { .cal-item { grid-template-columns: 4.2rem 1fr; gap: 0.1rem 0.7rem; } }
   .lecturas__mas { margin-top: 1.2rem; max-width: var(--measure); font-size: 0.92rem; color: var(--ink-soft); }
   .lecturas__mas a { color: var(--ink); }
   .lecturas__mas[hidden], .lecturas__pasos[hidden], .lecturas__paso[hidden] { display: none; }
@@ -494,10 +512,11 @@
   </section>
 
   <div class="doc">
-    <section id="fe-tabs" class="fe-tabs" aria-label="Lecturas del día y oraciones por Uruguay">
+    <section id="fe-tabs" class="fe-tabs" aria-label="Lecturas del día, oraciones por Uruguay y calendario litúrgico">
       <div class="fe-tabs__lista" id="fe-tabs-lista" role="tablist" aria-label="Elegí qué ver" hidden>
         <button type="button" class="fe-tab fe-tab--on" role="tab" id="tab-lecturas" aria-controls="panel-lecturas" aria-selected="true" data-panel="lecturas">Lecturas del día</button>
         <button type="button" class="fe-tab" role="tab" id="tab-oraciones" aria-controls="panel-oraciones" aria-selected="false" tabindex="-1" data-panel="oraciones">Oraciones por Uruguay</button>
+        <button type="button" class="fe-tab" role="tab" id="tab-calendario" aria-controls="panel-calendario" aria-selected="false" tabindex="-1" data-panel="calendario">Calendario</button>
       </div>
 
       <div class="fe-panel" role="tabpanel" id="panel-lecturas" aria-labelledby="tab-lecturas" hidden>
@@ -512,6 +531,18 @@
           <a class="lecturas__paso lecturas__paso--sig" id="lecturas-sig" href="lecturas-de-la-misa.html" rel="next" hidden><b>Día siguiente →</b><span></span></a>
         </div>
         <p class="lecturas__mas" id="lecturas-mas" hidden><a id="lecturas-enlace" href="lecturas-de-la-misa.html">Esta lectura en su propia página</a> · <a href="lecturas-de-la-misa.html">Lecturas de otros días</a></p>
+      </div>
+
+      <div class="fe-panel" role="tabpanel" id="panel-calendario" aria-labelledby="tab-calendario" hidden>
+        <span class="label">Calendario litúrgico</span>
+        <h2 id="calendario-titulo">Calendario del mes</h2>
+        <p class="lecturas__vacia" id="calendario-vacio" hidden>Todavía no está cargado el calendario de este mes. Volvé más tarde.</p>
+        <div id="calendario-cuerpo" hidden>
+          <figure class="cal-fig"><img id="calendario-img" alt="" decoding="async" /></figure>
+          <p class="cal-nota" id="calendario-nota"></p>
+          <h3 class="cal-sub">Día por día</h3>
+          <ol class="cal-lista" id="calendario-lista"></ol>
+        </div>
       </div>
 
       <!-- Oraciones por Uruguay: contenido de siempre de la página (se edita en el CMS, Páginas > Fe).
@@ -579,18 +610,19 @@
       </div>
 
       <script>
-      /* Dos pestañas: "Lecturas del día" y "Oraciones por Uruguay".
+      /* Tres pestañas: "Lecturas del día", "Oraciones por Uruguay" y "Calendario".
          - Lectura: se busca la fecha de hoy (hora de Montevideo) en /lecturas.json.
          - Si hoy no hay lectura cargada, se abre en "Oraciones por Uruguay".
-         - #lecturas / #oraciones en la URL abren esa pestaña. */
+         - #lecturas / #oraciones / #calendario en la URL abren esa pestaña. */
       (function () {
         var lista = document.getElementById('fe-tabs-lista');
         if (!lista) return;
-        var tabs = { lecturas: document.getElementById('tab-lecturas'), oraciones: document.getElementById('tab-oraciones') };
-        var paneles = { lecturas: document.getElementById('panel-lecturas'), oraciones: document.getElementById('panel-oraciones') };
+        var NOMBRES = ['lecturas', 'oraciones', 'calendario'];
+        var tabs = { lecturas: document.getElementById('tab-lecturas'), oraciones: document.getElementById('tab-oraciones'), calendario: document.getElementById('tab-calendario') };
+        var paneles = { lecturas: document.getElementById('panel-lecturas'), oraciones: document.getElementById('panel-oraciones'), calendario: document.getElementById('panel-calendario') };
         var hoy = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Montevideo' }).format(new Date());
         var h = (location.hash || '').replace('#', '');
-        var pedido = (h === 'lecturas' || h === 'oraciones') ? h : null;
+        var pedido = NOMBRES.indexOf(h) >= 0 ? h : null;
 
         function el(tag, cls, txt) {
           var e = document.createElement(tag);
@@ -605,7 +637,7 @@
           return s.charAt(0).toUpperCase() + s.slice(1);
         }
         function mostrar(nombre, desdeUsuario) {
-          ['lecturas', 'oraciones'].forEach(function (n) {
+          NOMBRES.forEach(function (n) {
             var on = n === nombre;
             tabs[n].classList.toggle('fe-tab--on', on);
             tabs[n].setAttribute('aria-selected', on ? 'true' : 'false');
@@ -670,15 +702,49 @@
           if (!pedido) mostrar('oraciones', false);          // sin lectura de hoy: abrir en las oraciones
         }
 
-        ['lecturas', 'oraciones'].forEach(function (n) {
+        NOMBRES.forEach(function (n, i) {
           tabs[n].addEventListener('click', function () { mostrar(n, true); });
           tabs[n].addEventListener('keydown', function (e) {
             if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-              var otro = n === 'lecturas' ? 'oraciones' : 'lecturas';
+              var otro = NOMBRES[(i + (e.key === 'ArrowRight' ? 1 : NOMBRES.length - 1)) % NOMBRES.length];
               mostrar(otro, true); tabs[otro].focus(); e.preventDefault();
             }
           });
         });
+
+        // Calendario del mes de hoy (/calendario.json)
+        var TIPO_TXT = { 'domingo': 'Domingo', 'fiesta': 'Fiesta', 'memoria-obligatoria': 'Memoria obligatoria',
+          'memoria-libre': 'Memoria libre', 'martirologio': 'Santo del martirologio · memoria libre', 'feria': 'Feria' };
+        function pintarCalendario(mes) {
+          document.getElementById('calendario-titulo').textContent = mes.titulo || 'Calendario del mes';
+          var img = document.getElementById('calendario-img');
+          img.src = mes.imagen; img.alt = mes.imagen_alt || '';
+          document.getElementById('calendario-nota').textContent = mes.nota || '';
+          var ul = document.getElementById('calendario-lista');
+          var p = hoy.split('-'), diaHoy = +p[2];
+          (mes.dias || []).forEach(function (d) {
+            var li = el('li', 'cal-item cal-item--' + d.tipo + (d.dia === diaHoy ? ' cal-item--hoy' : ''));
+            var f = new Date(Date.UTC(+p[0], +p[1] - 1, d.dia, 12));
+            var sem = new Intl.DateTimeFormat('es-UY', { timeZone: 'UTC', weekday: 'long' }).format(f);
+            var c1 = el('span', 'cal-dia');
+            c1.appendChild(el('b', null, String(d.dia)));
+            c1.appendChild(document.createTextNode(sem));
+            var c2 = el('span', null);
+            c2.appendChild(el('span', 'cal-nombre', d.nombre));
+            c2.appendChild(el('span', 'cal-tipo', TIPO_TXT[d.tipo] || ''));
+            if (d.detalle) c2.appendChild(el('span', 'cal-extra', d.detalle));
+            if (d.tambien) c2.appendChild(el('span', 'cal-extra', 'También, memoria libre: ' + d.tambien));
+            li.appendChild(c1); li.appendChild(c2);
+            ul.appendChild(li);
+          });
+          document.getElementById('calendario-cuerpo').hidden = false;
+        }
+        fetch('/calendario.json', { cache: 'no-cache' }).then(function (r) {
+          return r.ok ? r.json() : null;
+        }).then(function (data) {
+          var mes = data && data.meses && data.meses[hoy.slice(0, 7)];
+          if (mes) pintarCalendario(mes); else document.getElementById('calendario-vacio').hidden = false;
+        }).catch(function () { document.getElementById('calendario-vacio').hidden = false; });
 
         lista.hidden = false;
         mostrar(pedido || 'lecturas', false);               // provisorio mientras carga la lectura

@@ -167,6 +167,7 @@ _run("render_tienda.py")
 
 # Lecturas de la Misa del dia (content/lecturas/*.yml -> lecturas.json, que lee la pagina Fe)
 _run("render_lecturas.py")
+_run("render_calendario.py")
 
 # redirecciones de URLs viejas (content/redirects.yml) -- corre al final, para
 # que las paginas viejas que Formacion/Biblioteca ya borraron por renombre
