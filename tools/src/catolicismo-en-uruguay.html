@@ -513,6 +513,7 @@
           <a class="lecturas__paso" id="lecturas-ant" href="lecturas-de-la-misa.html" rel="prev" hidden><b>← Día anterior</b><span></span></a>
           <a class="lecturas__paso lecturas__paso--sig" id="lecturas-sig" href="lecturas-de-la-misa.html" rel="next" hidden><b>Día siguiente →</b><span></span></a>
         </div>
+        <div id="lecturas-share" data-share data-share-wait data-share-title="Lecturas de la Santa Misa de hoy · Resurgir Nacional" hidden></div>
         <p class="lecturas__mas" id="lecturas-mas" hidden><a id="lecturas-enlace" href="lecturas-de-la-misa.html">Esta lectura en su propia página</a> · <a href="lecturas-de-la-misa.html">Lecturas de otros días</a></p>
       </div>
 
@@ -529,6 +530,7 @@
             <button type="button" class="lecturas__paso lecturas__paso--sig" id="calendario-sig" hidden><b>Mes siguiente →</b><span></span></button>
           </div>
         </div>
+        <div data-share data-share-url="https://resurgirnacionaluy.org/catolicismo-en-uruguay.html#calendario" data-share-title="Calendario litúrgico · Resurgir Nacional"></div>
       </div>
 
       <!-- Oraciones por Uruguay: contenido de siempre de la página (se edita en el CMS, Páginas > Fe).
@@ -593,6 +595,7 @@
         </div>
       </div>
     </section>
+    <div data-share data-share-url="https://resurgirnacionaluy.org/catolicismo-en-uruguay.html#oraciones" data-share-title="Oraciones por Uruguay · Resurgir Nacional"></div>
       </div>
 
       <script>
@@ -668,7 +671,15 @@
             cuerpo.appendChild(b);
           });
           if (dia.fuente) cuerpo.appendChild(el('p', 'lecturas__fuente', dia.fuente));
-          if (dia.url) document.getElementById('lecturas-enlace').href = dia.url;
+          if (dia.url) {
+            document.getElementById('lecturas-enlace').href = dia.url;
+            // Compartir esta lectura = compartir su página propia
+            var sh = document.getElementById('lecturas-share');
+            sh.setAttribute('data-share-url', new URL(dia.url, location.href).href);
+            sh.setAttribute('data-share-title', 'Lecturas de la Santa Misa del ' + fechaLarga(hoy) + ' · Resurgir Nacional');
+            sh.removeAttribute('data-share-wait');
+            if (window.rnCompartir) window.rnCompartir(sh); else sh.hidden = false;
+          }
           document.getElementById('lecturas-mas').hidden = false;
           // Día anterior / siguiente: los más cercanos que tengan lectura cargada
           var fechas = Object.keys(data.dias).sort(), ant = null, sig = null;
@@ -788,6 +799,8 @@
       <a href="https://nacionalismouy.substack.com" target="_blank" rel="noopener" aria-label="Substack"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-substack" /></svg></a>
       <a href="https://www.tiktok.com/@resurgirnacionaloficial" target="_blank" rel="noopener" aria-label="TikTok"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tiktok" /></svg></a>
     </div>
+    <div data-share data-share-footer></div>
+    <script src="/share.js" defer></script>
     <p class="footer-legal">
       Resurgir Nacional — movimiento nacionalista del Uruguay. Contacto: <a class="mail-copy" data-cms="contact-email-footer" href="mailto:resurgirnacionaluruguay@gmail.com">resurgirnacionaluruguay@gmail.com</a>. © <span id="year">2026</span> Resurgir Nacional.
     </p>
