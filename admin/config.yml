@@ -407,14 +407,16 @@ collections:
             widget: boolean
             default: false
             hint: >-
-              Activalo justo cuando arranques la transmisión en YouTube:
-              hasta en unos 10 minutos aparece un aviso con el link en todo
-              el sitio (el sitio cachea ese dato un rato). El sitio igual
-              detecta solo una transmisión en vivo cada 20 minutos (vía la
-              API de YouTube) -- este interruptor es para no esperar tanto,
-              no para que sea instantáneo. No hace falta desactivarlo a mano
-              al cortar: el sitio vuelve a detectar el estado real en la
-              próxima consulta automática.
+              Activalo cuando arranques la transmisión en YouTube: en pocos
+              minutos aparece el aviso "Estamos EN VIVO ahora" con el link a
+              tu transmisión en todas las páginas, y reemplaza cualquier aviso
+              anterior (también el de "Directo finalizado"). Si ya estaba
+              activado y arrancás OTRO directo, desactivalo, guardá, y volvé a
+              activarlo para reiniciar el aviso y el link. No hace falta
+              apagarlo al cortar: cuando YouTube confirma que terminó, el aviso
+              pasa solo a "Directo finalizado" (queda 6 horas, salvo que
+              empiece otro directo antes). Si YouTube nunca llega a ver la
+              transmisión, el aviso manual se apaga solo a las 12 horas.
 
   - name: formacion
     label: Artículos de Formación
