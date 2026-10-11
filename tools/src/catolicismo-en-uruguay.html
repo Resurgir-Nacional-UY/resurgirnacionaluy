@@ -694,6 +694,9 @@
         // Calendario del mes de hoy (/calendario.json)
         var TIPO_TXT = { 'domingo': 'Domingo', 'fiesta': 'Fiesta', 'memoria-obligatoria': 'Memoria obligatoria',
           'memoria-libre': 'Memoria libre', 'martirologio': 'Santo del martirologio · memoria libre', 'feria': 'Feria', 'evento': 'Evento especial' };
+        // ?mes=AAAA-MM muestra ese mes (vista previa); sin eso, el mes de hoy
+        var pedidoMes = (location.search.match(/[?&]mes=(\d{4}-\d{2})(?:&|$)/) || [])[1];
+        var clave = pedidoMes || hoy.slice(0, 7);
         function pintarCalendario(mes) {
           document.getElementById('calendario-titulo').textContent = mes.titulo || 'Calendario del mes';
           var img = document.getElementById('calendario-img');
@@ -701,7 +704,7 @@
           document.getElementById('calendario-nota').textContent = mes.nota || '';
           // Solo se muestra el día de hoy (hora de Montevideo)
           var p = hoy.split('-'), diaHoy = +p[2];
-          var d = (mes.dias || []).filter(function (x) { return x.dia === diaHoy; })[0];
+          var d = clave !== hoy.slice(0, 7) ? null : (mes.dias || []).filter(function (x) { return x.dia === diaHoy; })[0];
           var caja = document.getElementById('calendario-hoy');
           if (d) {
             caja.className = 'cal-hoy cal-hoy--' + d.tipo;
@@ -718,7 +721,7 @@
         fetch('/calendario.json', { cache: 'no-cache' }).then(function (r) {
           return r.ok ? r.json() : null;
         }).then(function (data) {
-          var mes = data && data.meses && data.meses[hoy.slice(0, 7)];
+          var mes = data && data.meses && data.meses[clave];
           if (mes) pintarCalendario(mes); else document.getElementById('calendario-vacio').hidden = false;
         }).catch(function () { document.getElementById('calendario-vacio').hidden = false; });
 
