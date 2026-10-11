@@ -841,6 +841,7 @@ collections:
               - { label: "Memoria libre", value: "memoria-libre" }
               - { label: "Santo del martirologio (memoria libre)", value: "martirologio" }
               - { label: "Feria (sin santo)", value: "feria" }
+              - { label: "Evento especial (p. ej. visita del papa)", value: "evento" }
 
           - name: detalle
             label: "Detalle — opcional"

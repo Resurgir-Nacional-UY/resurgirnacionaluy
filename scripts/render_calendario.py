@@ -21,7 +21,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "content", "calendario")
 OUT = os.path.join(ROOT, "calendario.json")
 MES = re.compile(r"^\d{4}-(0[1-9]|1[0-2])$")
-TIPOS = {"domingo", "fiesta", "memoria-obligatoria", "memoria-libre", "martirologio", "feria"}
+TIPOS = {"domingo", "fiesta", "memoria-obligatoria", "memoria-libre", "martirologio", "feria", "evento"}
 
 
 def fail(msg):

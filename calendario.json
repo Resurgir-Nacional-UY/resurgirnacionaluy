@@ -167,6 +167,172 @@
    "imagen_alt": "Calendario de octubre de 2026 (forma ordinaria): una grilla con el santo o la fiesta de cada día, bajo la pintura La Virgen del Rosario, de Caravaggio.",
    "nota": "En cursiva, memoria libre. Los santos señalados como del martirologio son santos del día del Martirologio Romano que no figuran en el calendario general; su celebración es memoria libre.",
    "titulo": "Octubre 2026"
+  },
+  "2026-11": {
+   "dias": [
+    {
+     "detalle": "Solemnidad",
+     "dia": 1,
+     "nombre": "Todos los Santos",
+     "tipo": "fiesta"
+    },
+    {
+     "detalle": "Feriado en Uruguay",
+     "dia": 2,
+     "nombre": "Todos los Fieles Difuntos",
+     "tipo": "fiesta"
+    },
+    {
+     "dia": 3,
+     "nombre": "San Martín de Porres",
+     "tipo": "memoria-libre"
+    },
+    {
+     "dia": 4,
+     "nombre": "San Carlos Borromeo",
+     "tipo": "memoria-obligatoria"
+    },
+    {
+     "dia": 5,
+     "nombre": "Santos Zacarías e Isabel",
+     "tipo": "martirologio"
+    },
+    {
+     "detalle": "Visita apostólica a Uruguay",
+     "dia": 6,
+     "nombre": "Llega a Montevideo el papa León XIV",
+     "tipo": "evento"
+    },
+    {
+     "detalle": "Visita apostólica a Uruguay",
+     "dia": 7,
+     "nombre": "El Papa en Paysandú y Montevideo",
+     "tipo": "evento"
+    },
+    {
+     "detalle": "Misa del Papa en Florida",
+     "dia": 8,
+     "nombre": "XXXII Domingo del Tiempo Ordinario",
+     "tipo": "domingo"
+    },
+    {
+     "dia": 9,
+     "nombre": "Dedicación de la Basílica de Letrán",
+     "tipo": "fiesta"
+    },
+    {
+     "dia": 10,
+     "nombre": "San León Magno",
+     "tipo": "memoria-obligatoria"
+    },
+    {
+     "dia": 11,
+     "nombre": "San Martín de Tours",
+     "tipo": "memoria-obligatoria"
+    },
+    {
+     "dia": 12,
+     "nombre": "San Josafat",
+     "tipo": "memoria-obligatoria"
+    },
+    {
+     "dia": 13,
+     "nombre": "San Estanislao Kostka",
+     "tipo": "martirologio"
+    },
+    {
+     "dia": 14,
+     "nombre": "Santa María en sábado",
+     "tipo": "memoria-libre"
+    },
+    {
+     "detalle": "Jornada de los Pobres",
+     "dia": 15,
+     "nombre": "XXXIII Domingo del Tiempo Ordinario",
+     "tipo": "domingo"
+    },
+    {
+     "dia": 16,
+     "nombre": "Santa Gertrudis",
+     "tipo": "memoria-libre"
+    },
+    {
+     "dia": 17,
+     "nombre": "Santa Isabel de Hungría",
+     "tipo": "memoria-obligatoria"
+    },
+    {
+     "dia": 18,
+     "nombre": "Dedicación de las Basílicas de San Pedro y San Pablo",
+     "tipo": "memoria-libre"
+    },
+    {
+     "dia": 19,
+     "nombre": "Santa Matilde de Hackeborn",
+     "tipo": "martirologio"
+    },
+    {
+     "dia": 20,
+     "nombre": "San Félix de Valois",
+     "tipo": "martirologio"
+    },
+    {
+     "dia": 21,
+     "nombre": "Presentación de la Virgen María",
+     "tipo": "memoria-obligatoria"
+    },
+    {
+     "detalle": "Solemnidad",
+     "dia": 22,
+     "nombre": "Jesucristo, Rey del Universo",
+     "tipo": "fiesta"
+    },
+    {
+     "dia": 23,
+     "nombre": "San Clemente I",
+     "tipo": "memoria-libre"
+    },
+    {
+     "dia": 24,
+     "nombre": "Santos Andrés Dung-Lac y compañeros, mártires",
+     "tipo": "memoria-obligatoria"
+    },
+    {
+     "dia": 25,
+     "nombre": "Santa Catalina de Alejandría",
+     "tipo": "memoria-libre"
+    },
+    {
+     "dia": 26,
+     "nombre": "San Leonardo de Porto Mauricio",
+     "tipo": "martirologio"
+    },
+    {
+     "dia": 27,
+     "nombre": "Nuestra Señora de la Medalla Milagrosa",
+     "tipo": "martirologio"
+    },
+    {
+     "dia": 28,
+     "nombre": "Santa María en sábado",
+     "tipo": "memoria-libre"
+    },
+    {
+     "detalle": "Año A",
+     "dia": 29,
+     "nombre": "I Domingo de Adviento",
+     "tipo": "domingo"
+    },
+    {
+     "dia": 30,
+     "nombre": "San Andrés, apóstol",
+     "tipo": "fiesta"
+    }
+   ],
+   "imagen": "/media/calendario/2026-11.webp",
+   "imagen_alt": "Calendario de noviembre de 2026 (forma ordinaria): una grilla con el santo o la fiesta de cada día, bajo un detalle de La Adoración del Cordero Místico, de Jan van Eyck.",
+   "nota": "En cursiva, memoria libre. Los santos señalados como del martirologio son santos del día del Martirologio Romano que no figuran en el calendario general; su celebración es memoria libre.",
+   "titulo": "Noviembre 2026"
   }
  }
 }
