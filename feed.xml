@@ -6,7 +6,14 @@
   <atom:link href="https://resurgirnacionaluy.org/feed.xml" rel="self" type="application/rss+xml" />
   <description>Artículos de formación del movimiento Resurgir Nacional.</description>
   <language>es-uy</language>
-  <lastBuildDate>Mon, 05 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 12 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>El problema de la independencia de América</title>
+    <link>https://resurgirnacionaluy.org/el-problema-de-la-independencia-de-america.html</link>
+    <guid isPermaLink="true">https://resurgirnacionaluy.org/el-problema-de-la-independencia-de-america.html</guid>
+    <pubDate>Mon, 12 Oct 2026 12:00:00 +0000</pubDate>
+    <description>Pequeño texto de Don Luis Andregnette Capurro, done este mismo aborda brevemente la cuestión de la independencia de Hispanoamérica.</description>
+  </item>
   <item>
     <title>Sobre las elecciones de Brasil 2026</title>
     <link>https://resurgirnacionaluy.org/elecciones-de-brasil-2026.html</link>
