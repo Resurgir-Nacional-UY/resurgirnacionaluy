@@ -11,7 +11,6 @@ draft: false
 
 _`(Publicado originalmente en la revista Gladius, Junio del  2011)`_
 
-
 ![](/media/formacion/dr._luis_alberto_de_herrera.jpg)
 
 Decía el gran Thomas Carlyle que “los grandes hombres del pasado nos llaman afectuosamente”. Ese requerimiento fue el que sentimos arder en nuestro corazón para bucear en las enseñanzas que en el impreso y el accionar nos dejara la juvenil longevidad de Luis Alberto de Herrera. El objetivo que nos propusimos posee un ancho campo para los que amamos la historia y porque no somos ni archivistas ni hurga dores rogamos a Dios Nuestro Señor nos concediera, por unos minutos, detener la segunda muerte del pasado. Pero cuidado, esto no al modo de los embalsamadores, sino para asir las amarras que componen la santa tradición y atisbar el futuro. Con estas frases resumimos lo que nos mueve a valorar a Luis Alberto de Herrera como figura rioplatense e hispanoamericana. Hoy, cuando la Patria Grande Rioplatense parece hundirse en la negación inmanentista gramsciana se hace necesario volver al Gran Señor que vivió en guerra con el nihilismo enemigo natural de nuestra alma dinástico-histórica.
