@@ -4,7 +4,7 @@ slug: el-problema-de-la-independencia-de-america
 date: 2026-10-12
 author: Luis Alfredo Andregnette Capurro
 tema: Historia nacional
-summary: Pequeño texto de Don Luis Andregnette Capurro, done este mismo aborda brevemente la cuestión de la independencia de Hispanoamérica.
+summary: Pequeño texto de Don Luis Andregnette Capurro, donde este mismo aborda brevemente la cuestión de la independencia de Hispanoamérica.
 source_url: ''
 draft: false
 ---
