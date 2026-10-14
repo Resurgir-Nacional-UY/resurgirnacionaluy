@@ -11,7 +11,7 @@ draft: false
 
 ![](/media/formacion/wheat-2391348_960_720jpg.avif)
 
-# **_DE LO QUE APRENDÍ DEL CAMPO..._**
+# **_DE LO QUE APRENDÍ DEL CAMPO._**
 
 Pasé la gran parte de mi vida en el barrio de Pocitos en San Felipe y Santiago de Montevideo. Digamos toda la etapa de educación formal. Me fui a vivir a una zona rural de Villa Nuestra Señora de Guadalupe secularmente Canelones. Como no tengo dotes de escritor pondré en texto los pensamientos que se me ocurren y trataré de organizarlos lo mejor que pueda.
 
