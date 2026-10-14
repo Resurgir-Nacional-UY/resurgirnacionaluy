@@ -6,7 +6,14 @@
   <atom:link href="https://resurgirnacionaluy.org/feed.xml" rel="self" type="application/rss+xml" />
   <description>Artículos de formación del movimiento Resurgir Nacional.</description>
   <language>es-uy</language>
-  <lastBuildDate>Mon, 12 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 14 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>De lo que aprendí del campo...</title>
+    <link>https://resurgirnacionaluy.org/de-lo-que-aprendi-del-campo.html</link>
+    <guid isPermaLink="true">https://resurgirnacionaluy.org/de-lo-que-aprendi-del-campo.html</guid>
+    <pubDate>Wed, 14 Oct 2026 12:00:00 +0000</pubDate>
+    <description>Testimonio de vida de un compatriota oriental sobre sus vivencias en el campo.</description>
+  </item>
   <item>
     <title>El problema de la independencia de América</title>
     <link>https://resurgirnacionaluy.org/el-problema-de-la-independencia-de-america.html</link>
