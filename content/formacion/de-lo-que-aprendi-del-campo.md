@@ -1,6 +1,6 @@
 ---
 title: De lo que aprendí del campo...
-slug: de-lo-que-aprendi-del-campo
+slug: de-lo-que-aprendi-del-campo-canelones
 date: 2026-10-14
 author: Federico Serra González.
 tema: Cultura y sociedad
