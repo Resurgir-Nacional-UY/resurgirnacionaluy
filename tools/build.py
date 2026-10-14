@@ -115,8 +115,48 @@ for name in SUBPAGES:
     built[name] = page
 
 # --- emit standalone pages for GitHub Pages ---
+# Content-Security-Policy por <meta> (GitHub Pages no deja poner cabeceras HTTP).
+# Las paginas llevan scripts y estilos en linea, asi que script-src conserva
+# 'unsafe-inline'; lo que la politica garantiza es que no se pueda cargar JS,
+# frames, formularios ni conexiones hacia dominios que el sitio no usa.
+# Todas las paginas generadas (articulos, biblioteca, tienda, lecturas) copian
+# este <head> de su plantilla, asi que la politica se hereda al regenerarlas.
+CSP = {
+    "default-src": "'self'",
+    "base-uri": "'self'",
+    "object-src": "'none'",
+    "form-action": "'self' https://assets.mailerlite.com",
+    "script-src": "'self' 'unsafe-inline'",
+    "style-src": "'self' 'unsafe-inline' https://fonts.googleapis.com",
+    "font-src": "'self' https://fonts.gstatic.com",
+    "img-src": "'self' data:",
+    "media-src": "'self'",
+    "connect-src": "'self'",
+    "frame-src": "https://www.youtube-nocookie.com https://assets.mailerlite.com",
+}
+# La tienda carga el SDK de PayPal y habla con el Worker de workers/tienda-api/
+# (dominio *.workers.dev hasta que tenga uno propio).
+CSP_EXTRA = {
+    "tienda-resurgir-nacional.html": {
+        "script-src": "https://www.paypal.com",
+        "connect-src": "https://www.paypal.com https://*.paypal.com https://*.workers.dev",
+        "frame-src": "https://www.paypal.com https://*.paypal.com",
+        "img-src": "https://*.paypal.com https://*.paypalobjects.com",
+    },
+}
+
+
+def csp_meta(name):
+    pol = dict(CSP)
+    for k, v in CSP_EXTRA.get(name, {}).items():
+        pol[k] = pol[k] + " " + v
+    return ('<meta http-equiv="Content-Security-Policy" content="%s" />\n'
+            % "; ".join("%s %s" % kv for kv in pol.items()))
+
+
 HEAD = ('<!doctype html>\n<html lang="es">\n<head>\n'
         '<meta charset="utf-8" />\n'
+        '@@CSP@@'
         '<meta name="viewport" content="width=device-width, initial-scale=1" />\n'
         '<meta name="theme-color" content="#14315C" />\n'
         '<link rel="icon" href="favicon.ico" sizes="any" />\n'
@@ -126,7 +166,7 @@ HEAD = ('<!doctype html>\n<html lang="es">\n<head>\n'
         '<style>*{box-sizing:border-box}img{max-width:100%;height:auto}[hidden]{display:none!important}</style>\n')
 
 
-def to_repo(src):
+def to_repo(src, name="index.html"):
     s = src
     s = s.replace(VISION_ABS, VISION_PAGE)
     s = s.replace(HOME + "#", "index.html#")
@@ -137,12 +177,12 @@ def to_repo(src):
     s = re.sub(r'src="data:video/mp4;base64,[^"]+"\s+type="video/mp4"\s+data-file="([^"]+)"',
                r'src="\1" type="video/mp4"', s)
     hb = s.index("</style>") + len("</style>")
-    return HEAD + s[:hb] + '\n</head>\n<body style="margin:0">\n' + s[hb:] + "\n</body>\n</html>\n"
+    return HEAD.replace("@@CSP@@", csp_meta(name)) + s[:hb] + '\n</head>\n<body style="margin:0">\n' + s[hb:] + "\n</body>\n</html>\n"
 
 
 wr(os.path.join(ROOT, "index.html"), to_repo(idx))
 for name, page in built.items():
-    wr(os.path.join(ROOT, name), to_repo(page))
+    wr(os.path.join(ROOT, name), to_repo(page, name))
 print("built:", ", ".join(["index.html"] + list(built)))
 
 # render Formacion articles (content/formacion/*.md -> <slug>.html + article list)

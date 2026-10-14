@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /redactores/
 
 Sitemap: https://resurgirnacionaluy.org/sitemap.xml
 Sitemap: https://resurgirnacionaluy.org/sitemap-lecturas.xml

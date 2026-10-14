@@ -263,7 +263,8 @@ def article_page(tpl, a):
     body_html = sanitize_html(body_html)
     src = a.get("source_url")
     source_p = ""
-    if src:
+    # solo URLs completas: un valor suelto (p. ej. "hitlerystalin") daba un enlace roto
+    if src and re.match(r"https?://", str(src).strip()):
         source_p = ('\n      <p class="muted" style="margin-top:1.5rem">Publicado tambien en '
                     '<a href="%s" target="_blank" rel="noopener">X</a>.</p>' % esc(src))
     art_url = SITE + a["slug"] + ".html"
@@ -655,6 +656,9 @@ def write_sitemap(arts):
     pages = list(STATIC_PAGES)
     if len(arts) > HUB_LIMIT:
         pages.append(INDEX_NAME)
+    # indice completo de la Biblioteca (lo genera render_biblioteca.py solo si hace falta)
+    if os.path.exists(os.path.join(ROOT, "libros.html")):
+        pages.append("libros.html")
     rows = ["  <url><loc>%s%s</loc></url>" % (SITE, p) for p in pages]
     for a in arts:
         m = re.match(r"\d{4}-\d{2}-\d{2}", str(a.get("date", "")))

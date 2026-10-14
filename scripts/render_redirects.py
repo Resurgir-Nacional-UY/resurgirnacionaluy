@@ -26,6 +26,7 @@ PAGE = """<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'" />
 %s
 <title>Resurgir Nacional</title>
 <link rel="canonical" href="%s%s.html" />

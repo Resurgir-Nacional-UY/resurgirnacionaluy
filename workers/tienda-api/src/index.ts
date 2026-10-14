@@ -71,15 +71,60 @@ function corsHeaders(env: Env): HeadersInit {
     "Access-Control-Allow-Origin": env.ALLOWED_ORIGIN,
     "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    "Access-Control-Max-Age": "600",
+    Vary: "Origin",
   };
 }
+
+// Cabeceras de seguridad para toda respuesta: nada de lo que sale de este
+// Worker (pedidos, links de descarga) debe quedar en caches ni ser
+// reinterpretado por el navegador.
+const SECURITY_HEADERS: HeadersInit = {
+  "Cache-Control": "no-store",
+  "X-Content-Type-Options": "nosniff",
+  "Referrer-Policy": "no-referrer",
+  "Content-Security-Policy": "default-src 'none'; frame-ancestors 'none'",
+};
 
 function json(env: Env, data: unknown, status = 200): Response {
   return new Response(JSON.stringify(data), {
     status,
-    headers: { "Content-Type": "application/json", ...corsHeaders(env) },
+    headers: {
+      "Content-Type": "application/json",
+      ...SECURITY_HEADERS,
+      ...corsHeaders(env),
+    },
   });
 }
+
+// Comparacion en tiempo constante (evita adivinar el ADMIN_TOKEN midiendo
+// cuanto tarda la respuesta).
+function safeEqual(a: string, b: string): boolean {
+  const enc = new TextEncoder();
+  const x = enc.encode(a);
+  const y = enc.encode(b);
+  let diff = x.length ^ y.length;
+  const n = Math.max(x.length, y.length);
+  for (let i = 0; i < n; i++) diff |= (x[i] ?? 0) ^ (y[i] ?? 0);
+  return diff === 0;
+}
+
+// Los cuerpos legitimos pesan unos pocos cientos de bytes; cortar el resto
+// antes de parsear.
+const MAX_BODY_BYTES = 16 * 1024;
+async function readJson(req: Request): Promise<any> {
+  const len = Number(req.headers.get("Content-Length") || "0");
+  if (len > MAX_BODY_BYTES) throw new CartError("Solicitud demasiado grande.");
+  const text = await req.text();
+  if (text.length > MAX_BODY_BYTES) throw new CartError("Solicitud demasiado grande.");
+  const data = JSON.parse(text);
+  if (data === null || typeof data !== "object") throw new CartError("Solicitud inválida.");
+  return data;
+}
+
+// IDs de orden de PayPal: alfanumericos (A-Z0-9), 17 caracteres hoy; se acepta
+// un rango razonable pero nunca caracteres de ruta (/, ?, .. etc.).
+const ORDER_ID_RE = /^[A-Za-z0-9_-]{5,64}$/;
 
 function paypalBase(env: Env): string {
   return env.PAYPAL_ENV === "live"
@@ -163,9 +208,9 @@ function validateCart(
 async function handleCreateOrder(req: Request, env: Env): Promise<Response> {
   let body: { items: CartItemIn[] };
   try {
-    body = await req.json();
-  } catch {
-    return json(env, { error: "Solicitud inválida." }, 400);
+    body = await readJson(req);
+  } catch (e) {
+    return json(env, { error: e instanceof CartError ? e.message : "Solicitud inválida." }, 400);
   }
 
   let manifest: ManifestProduct[];
@@ -306,11 +351,13 @@ async function notifyOwner(
 async function handleCaptureOrder(req: Request, env: Env): Promise<Response> {
   let body: { orderID?: string };
   try {
-    body = await req.json();
-  } catch {
-    return json(env, { error: "Solicitud inválida." }, 400);
+    body = await readJson(req);
+  } catch (e) {
+    return json(env, { error: e instanceof CartError ? e.message : "Solicitud inválida." }, 400);
   }
-  if (!body.orderID) return json(env, { error: "Falta el ID de la orden." }, 400);
+  if (typeof body.orderID !== "string" || !ORDER_ID_RE.test(body.orderID)) {
+    return json(env, { error: "Falta el ID de la orden." }, 400);
+  }
 
   const pendingRaw = await env.ORDERS.get("pending:" + body.orderID);
   if (!pendingRaw) {
@@ -384,28 +431,32 @@ async function handleCaptureOrder(req: Request, env: Env): Promise<Response> {
 async function handleDownload(req: Request, env: Env): Promise<Response> {
   const url = new URL(req.url);
   const token = url.searchParams.get("token");
-  if (!token) return new Response("Falta el link de descarga.", { status: 400 });
+  if (!token || !/^[0-9a-f-]{36}$/i.test(token)) {
+    return new Response("Falta el link de descarga.", { status: 400, headers: SECURITY_HEADERS });
+  }
   const raw = await env.ORDERS.get("dl:" + token);
   if (!raw) {
     return new Response(
       "Este link de descarga venció (dura 15 minutos). Escribinos si necesitás uno nuevo.",
-      { status: 404 }
+      { status: 404, headers: SECURITY_HEADERS }
     );
   }
   const { key, filename } = JSON.parse(raw) as { key: string; filename: string };
   const obj = await env.DIGITAL_BOOKS.get(key);
   if (!obj) return new Response("No encontramos el archivo. Escribinos.", { status: 404 });
+  const safeName = filename.replace(/[^A-Za-z0-9._-]/g, "_");
   return new Response(obj.body, {
     headers: {
       "Content-Type": "application/pdf",
-      "Content-Disposition": `attachment; filename="${filename}"`,
+      "Content-Disposition": `attachment; filename="${safeName}"`,
+      ...SECURITY_HEADERS,
     },
   });
 }
 
 async function handleOrders(req: Request, env: Env): Promise<Response> {
   const auth = req.headers.get("Authorization") || "";
-  if (!env.ADMIN_TOKEN || auth !== `Bearer ${env.ADMIN_TOKEN}`) {
+  if (!env.ADMIN_TOKEN || !safeEqual(auth, `Bearer ${env.ADMIN_TOKEN}`)) {
     return json(env, { error: "No autorizado." }, 401);
   }
   const list = await env.ORDERS.list({ prefix: "order:", limit: 100 });
@@ -423,7 +474,10 @@ export default {
     const url = new URL(req.url);
 
     if (req.method === "OPTIONS") {
-      return new Response(null, { headers: corsHeaders(env) });
+      return new Response(null, {
+        status: 204,
+        headers: { ...SECURITY_HEADERS, ...corsHeaders(env) },
+      });
     }
 
     try {
