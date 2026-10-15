@@ -405,6 +405,22 @@
     .scj-heart-glow { right: -22%; opacity: 0.55; }
     .icdm-heart-glow { display: none; }
   }
+  /* ---------- Móvil: los tres grabados (Sagrado Corazón, Virgen de los Treinta y Tres,
+     Jacinto Vera) se ven enteros, centrados arriba de su oración, en vez de quedar
+     casi fuera de la pantalla o ocultos. #panel-oraciones da la especificidad
+     necesaria para ganarle a las reglas de opacidad del modo oscuro. */
+  @media (max-width: 900px) {
+    #panel-oraciones .scj-host, #panel-oraciones .icdm-host, #panel-oraciones .vera-host { min-height: 0; }
+    #panel-oraciones .host-inner { padding-top: calc(260px + 2.2rem); }
+    #panel-oraciones .scj-bg, #panel-oraciones .icdm-bg, #panel-oraciones .vera-bg, #panel-oraciones .vera-glow,
+    #panel-oraciones .scj-heart-glow, #panel-oraciones .icdm-heart-glow {
+      display: block; top: 1.4rem; bottom: auto; left: 50%; right: auto; height: 260px; width: auto;
+      transform: translateX(-50%); -webkit-mask: none; mask: none;
+    }
+    #panel-oraciones .icdm-bg, #panel-oraciones .icdm-heart-glow { transform: translateX(-50%) scaleX(-1); }
+    #panel-oraciones .scj-bg, #panel-oraciones .icdm-bg, #panel-oraciones .vera-bg, #panel-oraciones .vera-glow { opacity: 0.32; }
+    #panel-oraciones .scj-heart-glow, #panel-oraciones .icdm-heart-glow { opacity: 0.75; }
+  }
   /* ---------- Pie con cielo (solo esta página) ---------- */
   .site-footer { background: #1e3c68; }
   .site-footer__video { filter: brightness(0.92) saturate(1.05); }
