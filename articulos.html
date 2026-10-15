@@ -515,6 +515,24 @@
           };
           box.addEventListener('input', apply);
           apply();
+          // Archivo (meses / años): si hay una búsqueda escrita, el destino puede estar
+          // oculto y el clic no hacía nada. Se borra la búsqueda y se baja hasta el destino
+          // por JS; si el desplazamiento suave no llega (algunos navegadores lo cortan), salta.
+          [].forEach.call(document.querySelectorAll('.arc a[href^="#"]'), function (a) {
+            a.addEventListener('click', function (e) {
+              var t = document.getElementById(a.getAttribute('href').slice(1));
+              if (!t) return;
+              e.preventDefault();
+              if (box.value) { box.value = ''; apply(); }
+              var quieto = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+              t.scrollIntoView({ behavior: quieto ? 'instant' : 'smooth', block: 'start' });
+              setTimeout(function () {
+                var margen = parseFloat(getComputedStyle(t).scrollMarginTop) || 0;
+                if (Math.abs(t.getBoundingClientRect().top - margen) > 6) t.scrollIntoView({ behavior: 'instant', block: 'start' });
+              }, 900);
+              if (history.replaceState) history.replaceState(null, '', a.getAttribute('href'));
+            });
+          });
         })();
       </script>
   </article>
