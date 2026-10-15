@@ -342,6 +342,11 @@
     }
   }
   @media (max-width: 900px) { .vera-glow { opacity: 0.08; left: auto; right: -22%; } }
+  /* En pantallas de menos de ~1450px, "50vw + 450px + 0.2cm" empujaba al obispo (266px de ancho)
+     más allá del borde y quedaba cortado. Ahora el borde derecho de la imagen nunca pasa del de la sección. */
+  @media (min-width: 901px) {
+    .vera-bg, .vera-glow { left: min(calc(50vw + 450px + 0.2cm), calc(100% - 290px)); }
+  }
   /* ---------- Rayos de luz sobre los grabados (corazón y cabeza, en las
      dos figuras) ---------- Elementos aparte (no hijos de .scj-bg/.icdm-bg)
      para que el brillo no herede su opacidad tan baja; cada uno usa el
