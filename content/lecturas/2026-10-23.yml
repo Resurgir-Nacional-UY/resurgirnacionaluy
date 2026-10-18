@@ -4,42 +4,39 @@
 fecha: '2026-10-23'
 celebracion: Viernes de la XXIX semana del tiempo ordinario
 santo: 'Memoria libre: San Juan de Capistrano, presbítero'
-fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
 draft: false
 lecturas:
 - tipo: Primera lectura
   cita: Efesios 4, 1-6
   presentacion: Lectura de la carta del apóstol san Pablo a los Efesios.
   texto: |-
-    Os ruego, pues, yo, el prisionero en el Señor, que caminéis de una manera digna del llamamiento que se os ha hecho, con toda humildad de espíritu y mansedumbre, con longanimidad, sufriéndoos unos a otros con caridad, esforzándoos por guardar la unidad del Espíritu en el vínculo de la paz.
+    Yo, que estoy preso por el Señor, los exhorto a comportarse de una manera digna de la vocación que han recibido. Con mucha humildad, mansedumbre y paciencia, sopórtense mutuamente por amor. Traten de conservar la unidad del Espíritu mediante el vínculo de la paz. Hay un solo Cuerpo y un solo Espíritu, así como hay una misma esperanza, a la que ustedes han sido llamados, de acuerdo con la vocación recibida.
 
-    Uno es el cuerpo y uno el Espíritu, y así también una la esperanza de la vocación a que habéis sido llamados; uno el Señor, una la fe, uno el bautismo, uno el Dios y Padre de todos, el cual es sobre todo, en todo y en todos.
+    hay un solo Señor, una sola fe, un solo bautismo. Hay un solo Dios y Padre de todos, que está sobre todos, lo penetra todo y está en todos.
   cierre: Palabra de Dios.
 - tipo: Salmo responsorial
-  cita: Salmo 23
+  cita: Salmo 24
   estrofas: |-
-    De Yahvé es la tierra
-    y cuanto ella contiene;
-    el orbe y cuantos lo habitan.
-    Porque Él la asentó sobre mares
-    y la afirmó sobre corrientes.
+    Del Señor es la tierra y todo lo que hay en ella,
+    el mundo y todos sus habitantes
+    porque él la fundó sobre los mares,
+    él la afirmó sobre las corrientes del océano.
 
-    ¿Quién será digno
-    de ascender al monte de Yahvé?
-    y ¿quién estará en su santuario?
-    Aquel que tiene inmaculadas las manos
-    y puro el corazón.
+    ¿Quién podrá subir a la Montaña del Señor
+    y permanecer en su recinto sagrado?
+    El que tiene las manos limpias
+    y puro el corazón;
 
-    Él recibirá la bendición de Yahvé,
-    y la justicia de Dios su Salvador.
-
-    Esta es la generación
-    de los que lo buscan,
-    de los que buscan tu faz,
-    (Dios de) Jacob.
+    él recibirá la bendición del Señor,
+    la recompensa de Dios, su Salvador.
+    Así son los que buscan al Señor,
+    los que buscan tu rostro, Dios de Jacob.
 - tipo: Evangelio
   cita: Lucas 12, 54-59
   presentacion: ✠ Lectura del santo Evangelio según san Lucas.
   texto: |-
-    Dijo también a la muchedumbre: “Cuando veis una nube levantarse al poniente, luego decís: “Va a llover”. Y eso sucede. Y cuando sopla el viento del mediodía, decís: “Habrá calor”. Y eso sucede. Hipócritas, sabéis conocer el aspecto de la tierra y del cielo; ¿por qué entonces no conocéis este tiempo? ¿Por qué no juzgáis por vosotros mismos lo que es justo? Mientras vas con tu adversario en busca del magistrado, procura en el camino librarte de él, no sea que te arrastre ante el juez, que el juez te entregue al alguacil y que el alguacil te meta en la cárcel. Yo te lo declaro, no saldrás de allí hasta que no hayas reintegrado el último lepte”.
+    Dijo también a la multitud: «Cuando ven que una nube se levanta en occidente, ustedes dicen en seguida que va a llover, y así sucede. Y cuando sopla viento del sur, dicen que hará calor, y así sucede. ¡Hipócritas! Ustedes saben discernir el aspecto de la tierra y del cielo; ¿cómo entonces no saben discernir el tiempo presente? ¿Por qué no juzgan ustedes mismos lo que es justo? Cuando vas con tu adversario a presentarte ante el magistrado, trata de llegar a un acuerdo con él en el camino, no sea que el adversario te lleve ante el juez, y el juez te entregue al guardia, y este te ponga en la cárcel.
+
+    Te aseguro que no saldrás de allí hasta que hayas pagado el último centavo».
   cierre: Palabra del Señor.

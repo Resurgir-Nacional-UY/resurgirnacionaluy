@@ -3,46 +3,43 @@
 # los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
 fecha: '2026-10-19'
 celebracion: Lunes de la XXIX semana del tiempo ordinario
-santo: "Memoria libre: San Pablo de la Cruz; o Santos Juan de Brébeuf e Isaac Jogues, presbíteros, y compañeros, mártires"
-fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+santo: 'Memoria libre: San Pablo de la Cruz; o Santos Juan de Brébeuf e Isaac Jogues, presbíteros, y compañeros, mártires'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
 draft: false
 lecturas:
 - tipo: Primera lectura
   cita: Efesios 2, 1-10
   presentacion: Lectura de la carta del apóstol san Pablo a los Efesios.
   texto: |-
-    También vosotros estabais muertos por vuestros delitos y pecados, en los cuales en otro tiempo anduvisteis conforme al curso de este mundo, conforme al príncipe de la autoridad del aire, el espíritu que ahora obra en los hijos de la incredulidad. Entre ellos vivíamos también nosotros todos en un tiempo según las concupiscencias de nuestra carne, siguiendo los apetitos de la carne y de nuestros pensamientos; de modo que éramos por naturaleza hijos de ira, lo mismo que los demás.
+    Ustedes estaban muertos a causa de las faltas y pecados que cometían, cuando vivían conforme al criterio de este mundo, según el Príncipe que domina en el espacio, el mismo Espíritu que sigue actuando en aquellos que se rebelan. Todos nosotros también nos comportábamos así en otro tiempo, viviendo conforme a nuestros deseos carnales y satisfaciendo nuestra concupiscencia y nuestras malas inclinaciones, de manera que por nuestra condición estábamos condenados a la ira, igual que los demás.
 
-    Pero Dios, que es rico en misericordia por causa del grande amor suyo con que nos amó, cuando estábamos aún muertos en los pecados, nos vivificó juntamente con Cristo –de gracia habéis sido salvados– y juntamente con Él nos resucitó y nos hizo sentar en los cielos en Cristo Jesús, para que en las edades venideras se manifieste la sobreabundante riqueza de su gracia mediante la bondad que tuvo para nosotros en Cristo Jesús.
+    Pero Dios, que es rico en misericordia, por el gran amor con que nos amó, precisamente cuando estábamos muertos a causa de nuestros pecados, nos hizo revivir con Cristo –¡ustedes han sido salvados gratuitamente!– y con Cristo Jesús nos resucitó y nos hizo reinar con él en el cielo. Así, Dios ha querido demostrar a los tiempos futuros la inmensa riqueza de su gracia por el amor que nos tiene en Cristo Jesús.
 
-    Porque habéis sido salvados gratuitamente por medio de la fe; y esto no viene de vosotros: es el don de Dios; tampoco viene de las obras, para que ninguno pueda gloriarse. Pues de Él somos hechura, creados (de nuevo) en Cristo Jesús para obras buenas que Dios preparó de antemano para que las hagamos.
+    Porque ustedes han sido salvados por su gracia, mediante la fe. Esto no proviene de ustedes, sino que es un don de Dios; y no es el resultado de las obras, para que nadie se gloríe. Nosotros somos creación suya: fuimos creados en Cristo Jesús, a fin de realizar aquellas buenas obras, que Dios preparó de antemano para que las practicáramos.
   cierre: Palabra de Dios.
 - tipo: Salmo responsorial
-  cita: Salmo 99
+  cita: Salmo 100
   estrofas: |-
-    Aclamad a Yahvé, tierras todas,
-    servid a Yahvé con alegría,
-    llegaos a su presencia con exultación.
+    Aclame al Señor toda la tierra,
+    sirvan al Señor con alegría,
+    lleguen hasta él con cantos jubilosos.
 
-    Sabed que Yahvé es Dios.
-    Él nos hizo y somos de Él,
-    pueblo suyo y ovejas de su aprisco.
+    Reconozcan que el Señor es Dios:
+    él nos hizo y a él pertenecemos;
+    somos su pueblo y ovejas de su rebaño.
 
-    Entrad por sus puertas alabándole,
-    en sus atrios, con himnos.
-    Ensalzadle, bendecid su Nombre.
+    Entren por sus puertas dando gracias,
+    entren en sus atrios con himnos de alabanza,
+    alaben al Señor y bendigan su Nombre.
 
-    Porque Yahvé es bueno;
-    su misericordia es eterna,
-    y su fidelidad,
-    de generación en generación.
+    ¡Qué bueno es el Señor!
+    Su misericordia permanece para siempre,
+    y su fidelidad por todas las generaciones.
 - tipo: Evangelio
   cita: Lucas 12, 13-21
   presentacion: ✠ Lectura del santo Evangelio según san Lucas.
   texto: |-
-    Entonces uno del pueblo le dijo: “Maestro, dile a mi hermano que parta conmigo la herencia”. Jesús le respondió: “Hombre, ¿quién me ha constituido sobre vosotros juez o partidor?”. Y les dijo: “Mirad: preservaos de toda avaricia; porque, la vida del hombre no consiste en la abundancia de lo que posee”.
+    Uno de la multitud le dijo: «Maestro, dile a mi hermano que comparta conmigo la herencia». Jesús le respondió: «Amigo, ¿quién me ha constituido juez o árbitro entre ustedes?». Después les dijo: «Cuídense de la abundancia, la vida de un hombre no está asegurada por sus riquezas». Les dijo entonces una parábola: «Había un hombre rico, cuyas tierras habían producido mucho, y se preguntaba a sí mismo "¿Qué voy a hacer? No tengo dónde guardar mi cosecha".
 
-    Y les dijo una parábola: “Había un rico, cuyas tierras habían producido mucho. Y se hizo esta reflexión: “¿Qué voy a hacer? porque no tengo dónde recoger mis cosechas”. Y dijo: “He aquí lo que voy a hacer: derribaré mis graneros y construiré unos mayores; allí amontonaré todo mi trigo y mis bienes. Y diré a mi alma: Alma mía, tienes cuantiosos bienes en reserva para un gran número de años; reposa, come, bebe, haz fiesta”.
-
-    Mas Dios le dijo: “¡Insensato! esta misma noche te van a pedir el alma, y lo que tú has allegado, ¿para quién será?” Así ocurre con todo aquel que atesora para sí mismo, y no es rico ante Dios”.
+    Después pensó: "Voy a hacer esto: demoleré mis graneros, construiré otros más grandes y amontonaré allí todo mi trigo y mis bienes, y diré a mi alma: Alma mía, tienes bienes almacenados para muchos años; descansa, como, bebe y date buena vida". Pero Dios le dijo: "Insensato, esta misma noche vas a morir. ¿Y para quién será lo que has amontonado?". Esto es lo que sucede al que acumula riquezas para sí, y no es rico a los ojos de Dios».
   cierre: Palabra del Señor.

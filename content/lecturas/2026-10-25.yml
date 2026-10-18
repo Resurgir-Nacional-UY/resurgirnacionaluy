@@ -4,47 +4,45 @@
 fecha: '2026-10-25'
 celebracion: XXX Domingo del tiempo ordinario
 santo: ''
-fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
 draft: false
 lecturas:
 - tipo: Primera lectura
   cita: Éxodo 22, 20-26
   presentacion: Lectura del libro del Éxodo.
   texto: |-
-    No maltratarás al extranjero, ni lo oprimirás, pues extranjeros fuisteis vosotros en el país de Egipto. No afligiréis a la viuda ni al huérfano. Si los afligiereis, clamarán a Mí, y Yo no dejaré de oír su clamor; y se encenderá mi ira, y os mataré a espada; y vuestras mujeres quedarán viudas, y vuestros hijos, huérfanos.
+    No maltratarás al extranjero ni lo oprimirás, porque ustedes fueron extranjeros en Egipto. No harás daño a la viuda ni al huérfano. Si les haces daño y ellos me piden auxilio, yo escucharé su clamor. Entonces arderá mi ira, y yo los mataré a ustedes con la espada; sus mujeres quedará viudas, y sus hijos huérfanos. Si prestas dinero a un miembro de mi pueblo, al pobre que vive a tu lado, no te comportarás con él como un usurero, no le exigirás interés.
 
-    Si prestas dinero a uno de mi pueblo, al pobre que habita contigo, no serás con él como usurero; no le exigirás interés. Si tomas en prenda el manto de tu prójimo, se lo devolverás antes de ponerse el sol; porque es su único abrigo; es el vestido de su cuerpo. ¿Sobre qué dormirá?
-
-    Si clamare a Mí, le prestaré oído, porque soy misericordioso.
+    Si tomas en prenda el manto de tu prójimo, devuélveselo antes que se ponga el sol, porque ese es su único abrigo y el vestido de su cuerpo. De lo contrario, ¿con qué dormirá? Y si él me invoca, yo lo escucharé, porque soy compasivo.
   cierre: Palabra de Dios.
 - tipo: Salmo responsorial
-  cita: Salmo 17
+  cita: Salmo 18
   estrofas: |-
-    Te amo, Yahvé, fortaleza mía,
-    mi peña, mi baluarte, mi libertador,
-    Dios mío, mi roca, mi refugio.
+    Yo te amo, Señor, mi fuerza,
+    Señor, mi Roca, mi fortaleza y mi libertador,
 
-    Broquel mío, cuerno de mi salud, asilo mío.
-    Invoco a Yahvé, el digno de alabanza,
-    y quedo libre de mis enemigos.
+    mi Dios, el peñasco en que me refugio,
+    mi escudo, mi fuerza salvadora, mi baluarte.
+    Invoqué al Señor, que es digno de alabanza
+    y quedé a salvo de mis enemigos.
 
-    ¡Vive Yahvé! ¡Bendita sea mi Roca!
-    ¡Sea ensalzado el Dios mi Salvador!
-    Él da grandes victorias a su rey,
-    y usa de misericordia con su ungido.
+    ¡Viva el Señor! ¡Bendita sea mi Roca!
+    ¡Glorificado sea el Dios de mi salvación,
+    El concede grandes victorias a su rey
+    y trata con fidelidad a su Ungido.
 - tipo: Segunda lectura
   cita: 1 Tesalonicenses 1, 5-10
   presentacion: Lectura de la primera carta del apóstol san Pablo a los Tesalonicenses.
   texto: |-
-    Y así bien sabéis cuáles fuimos entre vosotros por amor vuestro. Vosotros os hicisteis imitadores nuestros y del Señor, recibiendo la palabra en medio de grande tribulación con gozo del Espíritu Santo; de modo que llegasteis a ser un ejemplo para todos los fieles de Macedonia y de Acaya.
+    Ya saben cómo procedimos cuando estuvimos allí al servicio de ustedes. Y ustedes, a su vez, imitaron nuestro ejemplo y el del Señor, recibiendo la Palabra en medio de muchas dificultades, con la alegría que da el Espíritu Santo. Así llegaron a ser un modelo para todos los creyentes de Macedonia y Acaya. En efecto, de allí partió la Palabra del Señor, que no sólo resonó en Macedonia y Acaya: en todas partes se ha difundido la fe que ustedes tienen en Dios, de manera que no es necesario hablar de esto.
 
-    Así es que desde vosotros ha repercutido la Palabra del Señor, no sólo por Macedonia y Acaya, sino que en todo lugar la fe vuestra, que es para con Dios, se ha divulgado de tal manera que nosotros no tenemos necesidad de decir palabra. Pues ellos mismos cuentan de nosotros cuál fue nuestra llegada a vosotros, y cómo os volvisteis de los ídolos a Dios para servir al Dios vivo y verdadero, y esperar de los cielos a su Hijo, a quien Él resucitó de entre los muertos: Jesús, el que nos libra de la ira venidera.
+    Ellos mismos cuentan cómo ustedes me han recibido y cómo se convirtieron a Dios, abandonando los ídolos para servir al Dios vivo y verdadero, y esperar a su Hijo, que vendrá desde el cielo: Jesús, a quien él resucitó y que nos libra de la ira venidera.
   cierre: Palabra de Dios.
 - tipo: Evangelio
   cita: Mateo 22, 34-40
   presentacion: ✠ Lectura del santo Evangelio según san Mateo.
   texto: |-
-    Mas los fariseos, al oír que había tapado la boca a los saduceos, vinieron a reunirse junto a Él; y uno de ellos, doctor de la Ley, le propuso esta cuestión para tentarlo: “Maestro, ¿cuál es el mayor mandamiento de la Ley?” Respondió Él: “Amarás al Señor tu Dios de todo tu corazón, con toda tu alma, y con todo tu espíritu. Éste es el mayor y primer mandamiento. El segundo le es semejante: “Amarás a tu prójimo como a ti mismo”.
+    Cuando los fariseos se enteraron de que Jesús había hecho callar a los saduceos, se reunieron en ese lugar, y uno de ellos, que era doctor de la Ley, le preguntó para ponerlo a prueba: «Maestro, ¿cuál es el mandamiento más grande de la Ley?». Jesús le respondió: «Amarás al Señor, tu Dios, con todo tu corazón, con toda tu alma y con todo tu espíritu. Este es el más grande y el primer mandamiento.
 
-    De estos dos mandamientos pende toda la Ley y los Profetas”.
+    El segundo es semejante al primero: Amarás a tu prójimo como a ti mismo. De estos dos mandamientos dependen toda la Ley y los Profetas».
   cierre: Palabra del Señor.

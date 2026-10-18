@@ -706,46 +706,42 @@
   },
   "2026-10-18": {
    "celebracion": "XXIX Domingo del tiempo ordinario",
-   "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
      "cita": "Isaías 45, 1. 4-6",
      "presentacion": "Lectura del libro de Isaías.",
      "texto": [
-      "Así dice Yahvé a su ungido, a Ciro, a quien he tomado de la derecha, para derribar delante de él naciones, y desceñir la cintura de reyes; para abrir ante él las puertas a fin de que las puertas no le estén cerradas. Por amor de Jacob, mi siervo, y por amor de Israel, mi escogido, te llamé por tu nombre; te puse nombre cuando no me conocías aún.",
-      "Yo soy Yahvé, y no hay otro; fuera de Mí no hay Dios alguno. Yo te ceñí cuando no me conocías, a fin de que sepan (todos), desde el Oriente hasta el Occidente, que no hay ninguno fuera de Mí. Yo soy Yahvé, y no hay otro."
+      "Así habla el Señor a su ungido, a Ciro, a quien tomé de la mano derecha, para someter ante él a las naciones y desarmar a los reyes para abrir ante él las puertas de las ciudades, de manera que no puedan cerrarse. Por amor a Jacob, mi servidor, y a Israel, mi elegido, yo te llamé por tu nombre, te di un título insigne, sin que tú me conocieras. Yo soy el Señor, y no hay otro, no hay ningún Dios fuera de mí, Yo hice empuñar las armas, sin que tú me conocieras, para que se conozca, desde el Oriente y el Occidente, que no hay nada fuera de mí. Yo soy el Señor, y no hay otro."
      ],
      "tipo": "Primera lectura"
     },
     {
-     "cita": "Salmo 95",
+     "cita": "Salmo 96",
      "estrofas": [
       [
-       "Cantad a Yahvé un cántico nuevo,",
-       "cantad a Yahvé, tierras todas.",
-       "Pregonad su gloria entre los gentiles;",
-       "sus maravillas entre los pueblos todos."
+       "Canten al Señor un canto nuevo,",
+       "cante al Señor toda la tierra;",
+       "Anuncien su gloria entre las naciones,",
+       "y sus maravillas entre los pueblos."
       ],
       [
-       "Porque grande es Yahvé",
-       "y digno de suma alabanza,",
-       "temible, más que todos los dioses.",
-       "Pues todos los dioses de los gentiles son ficción",
-       "en tanto que Yahvé hizo los cielos."
+       "Porque el Señor es grande y muy digno de alabanza,",
+       "más temible que todos los dioses.",
+       "Los dioses de los pueblos no son más que apariencia,",
+       "pero el Señor hizo el cielo;"
       ],
       [
-       "Reconoced a Yahvé,",
-       "oh razas de los pueblos,",
-       "reconoced a Yahvé la gloria y el poder.",
-       "Reconoced a Yahvé",
-       "la gloria de su Nombre."
+       "Aclamen al Señor, familias de los pueblos,",
+       "aclamen la gloria y el poder del Señor;",
+       "aclamen la gloria del nombre del Señor."
       ],
       [
-       "Adorad a Yahvé en sacro esplendor,",
-       "oh tierra toda, tiembla ante Él.",
-       "Anunciad a las naciones: “Reina Yahvé;",
-       "rige a los pueblos con justicia.”"
+       "adoren al Señor al manifestarse su santidad:",
+       "¡que toda la tierra tiemble ante él!",
+       "Digan entre las naciones: «¡el Señor reina!",
+       "El Señor juzgará a los pueblos con rectitud»."
       ]
      ],
      "tipo": "Salmo responsorial"
@@ -755,8 +751,8 @@
      "cita": "1 Tesalonicenses 1, 1-5",
      "presentacion": "Lectura de la primera carta del apóstol san Pablo a los Tesalonicenses.",
      "texto": [
-      "Pablo y Silvano y Timoteo, a la Iglesia de los tesalonicenses, en Dios Padre y en el Señor Jesucristo: gracia a vosotros y paz. Siempre damos gracias a Dios por todos vosotros, haciendo sin cesar memoria de vosotros en nuestras oraciones. Nos acordamos ante Dios y Padre nuestro de la obra de vuestra fe, y del trabajo de vuestra caridad, y de la paciencia de vuestra esperanza en nuestro Señor Jesucristo, porque conocemos, hermanos amados de Dios, vuestra elección.",
-      "Pues nuestro Evangelio llegó a vosotros no solamente en palabras, sino también en poder, y en el Espíritu Santo, y con toda plenitud."
+      "Pablo, Silvano y Timoteo saludan a la Iglesia de Tesalónica, que está unida a Dios Padre y al Señor Jesucristo. Llegue a ustedes la gracia y la paz. Siempre damos gracias a Dios por todos ustedes, cuando los recordamos en nuestras oraciones, y sin cesar tenemos presente delante de Dios, nuestro Padre, cómo ustedes han manifestado su fe con obras, su amor con fatigas y su esperanza en nuestro Señor Jesucristo con una firme constancia.",
+      "Sabemos, hermanos amados por Dios, que ustedes han sido elegidos. Porque la Buena Noticia que les hemos anunciado llegó hasta ustedes, no solamente con palabras, sino acompañada de poder, de la acción del Espíritu Santo y de toda clase de dones."
      ],
      "tipo": "Segunda lectura"
     },
@@ -765,8 +761,8 @@
      "cita": "Mateo 22, 15-21",
      "presentacion": "✠ Lectura del santo Evangelio según san Mateo.",
      "texto": [
-      "Entonces los fariseos se fueron y deliberaron cómo le sorprenderían en alguna palabra. Le enviaron, pues, sus discípulos con los herodianos, a decirle: “Maestro, sabemos que eres veraz y que enseñas el camino de Dios con verdad, sin miedo a nadie, porque no miras a la persona de los hombres. Dinos, pues, lo que piensas: ¿es lícito pagar tributo al César o no?”",
-      "Mas Jesús, conociendo su malicia, repuso: “Hipócritas, ¿por qué me tentáis? Mostradme la moneda del tributo”. Y le presentaron un denario. Preguntóles: “¿De quien es esta figura y la leyenda?” Le respondieron: “del César”. Entonces les dijo: “Dad, pues, al César lo que es del César, y a Dios lo que es de Dios”."
+      "Los fariseos se reunieron entonces para sorprender a Jesús en alguna de sus afirmaciones. Y le enviaron a varios discípulos con unos herodianos, para decirle: «Maestro, sabemos que eres sincero y que enseñas con toda fidelidad el camino de Dios, sin tener en cuenta la condición de las personas, porque tú no te fijas en la categoría de nadie. Dinos qué te parece: ¿Está permitido pagar el impuesto al César o no?».",
+      "Pero Jesús, conociendo su malicia, les dijo: «Hipócritas, ¿por qué me tienden una trampa? Muéstrenme la moneda con que pagan el impuesto». Ellos le presentaron un denario. Y él les preguntó: «¿De quién es esta figura y esta inscripción?». Le respondieron: «Del César». Jesús les dijo: «Den al César lo que es del César, y a Dios, lo que es de Dios»."
      ],
      "tipo": "Evangelio"
     }
@@ -776,42 +772,41 @@
   },
   "2026-10-19": {
    "celebracion": "Lunes de la XXIX semana del tiempo ordinario",
-   "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
      "cita": "Efesios 2, 1-10",
      "presentacion": "Lectura de la carta del apóstol san Pablo a los Efesios.",
      "texto": [
-      "También vosotros estabais muertos por vuestros delitos y pecados, en los cuales en otro tiempo anduvisteis conforme al curso de este mundo, conforme al príncipe de la autoridad del aire, el espíritu que ahora obra en los hijos de la incredulidad. Entre ellos vivíamos también nosotros todos en un tiempo según las concupiscencias de nuestra carne, siguiendo los apetitos de la carne y de nuestros pensamientos; de modo que éramos por naturaleza hijos de ira, lo mismo que los demás.",
-      "Pero Dios, que es rico en misericordia por causa del grande amor suyo con que nos amó, cuando estábamos aún muertos en los pecados, nos vivificó juntamente con Cristo –de gracia habéis sido salvados– y juntamente con Él nos resucitó y nos hizo sentar en los cielos en Cristo Jesús, para que en las edades venideras se manifieste la sobreabundante riqueza de su gracia mediante la bondad que tuvo para nosotros en Cristo Jesús.",
-      "Porque habéis sido salvados gratuitamente por medio de la fe; y esto no viene de vosotros: es el don de Dios; tampoco viene de las obras, para que ninguno pueda gloriarse. Pues de Él somos hechura, creados (de nuevo) en Cristo Jesús para obras buenas que Dios preparó de antemano para que las hagamos."
+      "Ustedes estaban muertos a causa de las faltas y pecados que cometían, cuando vivían conforme al criterio de este mundo, según el Príncipe que domina en el espacio, el mismo Espíritu que sigue actuando en aquellos que se rebelan. Todos nosotros también nos comportábamos así en otro tiempo, viviendo conforme a nuestros deseos carnales y satisfaciendo nuestra concupiscencia y nuestras malas inclinaciones, de manera que por nuestra condición estábamos condenados a la ira, igual que los demás.",
+      "Pero Dios, que es rico en misericordia, por el gran amor con que nos amó, precisamente cuando estábamos muertos a causa de nuestros pecados, nos hizo revivir con Cristo –¡ustedes han sido salvados gratuitamente!– y con Cristo Jesús nos resucitó y nos hizo reinar con él en el cielo. Así, Dios ha querido demostrar a los tiempos futuros la inmensa riqueza de su gracia por el amor que nos tiene en Cristo Jesús.",
+      "Porque ustedes han sido salvados por su gracia, mediante la fe. Esto no proviene de ustedes, sino que es un don de Dios; y no es el resultado de las obras, para que nadie se gloríe. Nosotros somos creación suya: fuimos creados en Cristo Jesús, a fin de realizar aquellas buenas obras, que Dios preparó de antemano para que las practicáramos."
      ],
      "tipo": "Primera lectura"
     },
     {
-     "cita": "Salmo 99",
+     "cita": "Salmo 100",
      "estrofas": [
       [
-       "Aclamad a Yahvé, tierras todas,",
-       "servid a Yahvé con alegría,",
-       "llegaos a su presencia con exultación."
+       "Aclame al Señor toda la tierra,",
+       "sirvan al Señor con alegría,",
+       "lleguen hasta él con cantos jubilosos."
       ],
       [
-       "Sabed que Yahvé es Dios.",
-       "Él nos hizo y somos de Él,",
-       "pueblo suyo y ovejas de su aprisco."
+       "Reconozcan que el Señor es Dios:",
+       "él nos hizo y a él pertenecemos;",
+       "somos su pueblo y ovejas de su rebaño."
       ],
       [
-       "Entrad por sus puertas alabándole,",
-       "en sus atrios, con himnos.",
-       "Ensalzadle, bendecid su Nombre."
+       "Entren por sus puertas dando gracias,",
+       "entren en sus atrios con himnos de alabanza,",
+       "alaben al Señor y bendigan su Nombre."
       ],
       [
-       "Porque Yahvé es bueno;",
-       "su misericordia es eterna,",
-       "y su fidelidad,",
-       "de generación en generación."
+       "¡Qué bueno es el Señor!",
+       "Su misericordia permanece para siempre,",
+       "y su fidelidad por todas las generaciones."
       ]
      ],
      "tipo": "Salmo responsorial"
@@ -821,9 +816,8 @@
      "cita": "Lucas 12, 13-21",
      "presentacion": "✠ Lectura del santo Evangelio según san Lucas.",
      "texto": [
-      "Entonces uno del pueblo le dijo: “Maestro, dile a mi hermano que parta conmigo la herencia”. Jesús le respondió: “Hombre, ¿quién me ha constituido sobre vosotros juez o partidor?”. Y les dijo: “Mirad: preservaos de toda avaricia; porque, la vida del hombre no consiste en la abundancia de lo que posee”.",
-      "Y les dijo una parábola: “Había un rico, cuyas tierras habían producido mucho. Y se hizo esta reflexión: “¿Qué voy a hacer? porque no tengo dónde recoger mis cosechas”. Y dijo: “He aquí lo que voy a hacer: derribaré mis graneros y construiré unos mayores; allí amontonaré todo mi trigo y mis bienes. Y diré a mi alma: Alma mía, tienes cuantiosos bienes en reserva para un gran número de años; reposa, come, bebe, haz fiesta”.",
-      "Mas Dios le dijo: “¡Insensato! esta misma noche te van a pedir el alma, y lo que tú has allegado, ¿para quién será?” Así ocurre con todo aquel que atesora para sí mismo, y no es rico ante Dios”."
+      "Uno de la multitud le dijo: «Maestro, dile a mi hermano que comparta conmigo la herencia». Jesús le respondió: «Amigo, ¿quién me ha constituido juez o árbitro entre ustedes?». Después les dijo: «Cuídense de la abundancia, la vida de un hombre no está asegurada por sus riquezas». Les dijo entonces una parábola: «Había un hombre rico, cuyas tierras habían producido mucho, y se preguntaba a sí mismo \"¿Qué voy a hacer? No tengo dónde guardar mi cosecha\".",
+      "Después pensó: \"Voy a hacer esto: demoleré mis graneros, construiré otros más grandes y amontonaré allí todo mi trigo y mis bienes, y diré a mi alma: Alma mía, tienes bienes almacenados para muchos años; descansa, como, bebe y date buena vida\". Pero Dios le dijo: \"Insensato, esta misma noche vas a morir. ¿Y para quién será lo que has amontonado?\". Esto es lo que sucede al que acumula riquezas para sí, y no es rico a los ojos de Dios»."
      ],
      "tipo": "Evangelio"
     }
@@ -833,44 +827,40 @@
   },
   "2026-10-20": {
    "celebracion": "Martes de la XXIX semana del tiempo ordinario",
-   "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
      "cita": "Efesios 2, 12-22",
      "presentacion": "Lectura de la carta del apóstol san Pablo a los Efesios.",
      "texto": [
-      "(acordaos digo) de que entonces estabais separados de Cristo, extraños a la comunidad de Israel, y ajenos a los pactos de la promesa, sin esperanza y sin Dios en el mundo. Mas ahora, en Cristo Jesús, vosotros los que en un tiempo estabais lejos, habéis sido acercados por la sangre de Cristo.",
-      "Porque Él es nuestra paz: El que de ambos hizo uno, derribando de en medio el muro de separación, la enemistad; anulando por medio de su carne la Ley con sus mandamientos y preceptos, para crear en Sí mismo de los dos un solo hombre nuevo, haciendo paz, y para reconciliar con Dios a ambos en un solo cuerpo por medio de la Cruz, matando en ella la enemistad.",
-      "Y viniendo, evangelizó paz a vosotros los que estabais lejos, y paz a los de cerca. Y así por Él unos y otros tenemos el acceso al Padre, en un mismo Espíritu; de modo que ya no sois extranjeros ni advenedizos sino que sois conciudadanos de los santos y miembros de la familia de Dios, edificados sobre el fundamento de los apóstoles y profetas, siendo piedra angular el mismo Cristo Jesús, en quien todo el edificio, armónicamente trabado, crece para templo santo en el Señor.",
-      "En Él sois también vosotros coedificados en el Espíritu para morada de Dios."
+      "Entonces ustedes no tenían a Cristo y estaban excluidos de la comunidad de Israel, ajenos a las alianzas de la promesa, sin esperanza y sin Dios en el mundo. Pero ahora, en Cristo Jesús, ustedes, los que antes estaban lejos, han sido acercados por la sangre de Cristo. Porque Cristo es nuestra paz; él ha unido a los dos pueblos en uno solo, derribando el muro de enemistad que los separaba, y aboliendo en su propia carne la Ley con sus mandamientos y prescripciones. Así creó con los dos pueblos un solo Hombre nuevo en su propia persona, restableciendo la paz, y los reconcilió con Dios en un solo Cuerpo, por medio de la cruz, destruyendo la enemistad en su persona.",
+      "Y él vino a proclamar la Buena Noticia de la paz, paz para ustedes, que estaban lejos, paz también para aquellos que estaban cerca. Porque por medio de Cristo, todos sin distinción tenemos acceso al Padre, en un mismo Espíritu. Por lo tanto, ustedes ya no son extranjeros ni huéspedes, sino conciudadanos de los santos y miembros de la familia de Dios. Ustedes están edificados sobre los apóstoles y los profetas, que son los cimientos, mientras que la piedra angular es el mismo Jesucristo.",
+      "En él, todo el edificio, bien trabado, va creciendo para constituir un templo santo en el Señor. En él, también ustedes son incorporados al edificio, para llegar a ser una morada de Dios en el Espíritu."
      ],
      "tipo": "Primera lectura"
     },
     {
-     "cita": "Salmo 84",
+     "cita": "Salmo 85",
      "estrofas": [
       [
-       "Quiero escuchar",
-       "lo que dirá Yahvé mi Dios;",
-       "sus palabras serán de paz",
-       "para su pueblo y para sus santos.",
-       "Sí, cercana está su salvación",
-       "para los que le temen;",
-       "y la Gloria fijará su morada en nuestro país."
+       "Voy a proclamar lo que dice el Señor:",
+       "el Señor promete la paz,",
+       "la paz para su pueblo y sus amigos,",
+       "Su salvación está muy cerca de sus fieles,",
+       "y la Gloria habitará en nuestra tierra."
       ],
       [
-       "La misericordia y la fidelidad",
-       "se saldrán al encuentro;",
-       "se darán el ósculo la justicia y la paz.",
-       "La fidelidad germinará de la tierra",
-       "y la justicia se asomará desde el cielo."
+       "El Amor y la Verdad se encontrarán,",
+       "la Justicia y la Paz se abrazarán;",
+       "la Verdad brotará de la tierra",
+       "y la Justicia mirará desde el cielo."
       ],
       [
-       "El mismo Yahvé dará el bien",
-       "y nuestra tierra dará su fruto.",
-       "La justicia marchará ante Él",
-       "y la salud sobre la huella de sus pasos."
+       "El mismo Señor nos dará sus bienes",
+       "y nuestra tierra producirá sus frutos.",
+       "La Justicia irá delante de él,",
+       "y la Paz, sobre la huella de sus pasos."
       ]
      ],
      "tipo": "Salmo responsorial"
@@ -880,7 +870,7 @@
      "cita": "Lucas 12, 35-38",
      "presentacion": "✠ Lectura del santo Evangelio según san Lucas.",
      "texto": [
-      "“Estén ceñidos vuestros lomos, y vuestras lámparas encendidas. Y sed semejantes a hombres que aguardan a su amo a su regreso de las bodas, a fin de que, cuando Él llegue y golpee, le abran en seguida. ¡Felices esos servidores, que el amo, cuando llegue, hallará velando! En verdad, os lo digo, él se ceñirá, los hará sentar a la mesa y se pondrá a servirles. Y si llega a la segunda vela, o a la tercera, y así los hallare, ¡felices de ellos!"
+      "Estén preparados, ceñidos y con las lámparas encendidas. Sean como los hombres que esperan el regreso de su señor, que fue a una boda, para abrirle apenas llegue y llame a la puerta. ¡Felices los servidores a quienes el señor encuentra velando a su llegada! Les aseguro que él mismo recogerá su túnica, los hará sentar a la mesa y se pondrá a servirlo. ¡Felices ellos, si el señor llega a medianoche o antes del alba y los encuentra así!"
      ],
      "tipo": "Evangelio"
     }
@@ -890,15 +880,16 @@
   },
   "2026-10-21": {
    "celebracion": "Miércoles de la XXIX semana del tiempo ordinario",
-   "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
      "cita": "Efesios 3, 2-12",
      "presentacion": "Lectura de la carta del apóstol san Pablo a los Efesios.",
      "texto": [
-      "pues habréis oído la dispensación de la gracia de Dios, que me fue otorgada en beneficio vuestro: cómo por revelación se me ha dado a conocer el misterio, tal como acabo de escribíroslo en pocas palabras – si lo leéis podéis entender el conocimiento que tengo en este misterio de Cristo– el cual (misterio) en otras generaciones no fue dado a conocer a los hijos de los hombres como ahora ha sido revelado por el Espíritu a sus santos apóstoles y profetas; (esto es) que los gentiles sois coherederos, y miembros del mismo, cuerpo, y copartícipes de la promesa en Cristo Jesús por medio del Evangelio, del cual yo he sido constituido ministro, conforme al don de la gracia de Dios a mí otorgada según la eficacia de su poder.",
-      "A mí, el ínfimo de todos los santos, ha sido dada esta gracia: evangelizar a los gentiles la insondable riqueza de Cristo, e iluminar a todos acerca de la dispensación del misterio, escondido desde los siglos en Dios creador de todas las cosas; a fin de que sea dada a conocer ahora a los principados y a las potestades en lo celestial, a través de la Iglesia, la multiforme sabiduría de Dios, que se muestra en el plan de las edades que Él realizó en Cristo Jesús, Señor nuestro, en quien, por la fe en Él, tenemos libertad y confiado acceso (al Padre)."
+      "Porque seguramente habrán oído hablar de la gracia de Dios, que me ha sido dispensada en beneficio de ustedes. Fue por medio de una revelación como se me dio a conocer este misterio, tal como acabo de exponérselo en pocas palabras. Al leerlas, se darán cuenta de la comprensión que tengo del misterio de Cristo, que no fue manifestado a las generaciones pasadas, pero que ahora ha sido revelado por medio del Espíritu a sus santos apóstoles y profetas.",
+      "Este misterio consiste en que también los paganos participan de una misma herencia, son miembros de un mismo Cuerpo y beneficiarios de la misma promesa en Cristo Jesús, por medio del Evangelio. De este Evangelio, yo fui constituido ministro por el don de la gracia que recibí de Dios, en virtud de la eficacia de su poder. Yo, el menor de todos los santos, he recibido la gracia de anunciar a los paganos la insondable riqueza de Cristo, y poner de manifiesto la dispensación del misterio que estaba oculto desde siempre en Dios, el creador de todas las cosas, para que los Principados y las Potestades celestiales conozcan la infinita variedad de la sabiduría de Dios por medio de la Iglesia.",
+      "Este es el designio que Dios concibió desde toda la eternidad en Cristo Jesús, nuestro Señor, por quien nos atrevemos a acercarnos a Dios con toda confianza, mediante la fe en él."
      ],
      "tipo": "Primera lectura"
     },
@@ -906,22 +897,15 @@
      "cita": "Isaías 12, 2-6",
      "estrofas": [
       [
-       "He aquí que Dios es mi salvación;",
-       "tendré confianza y no temeré,",
-       "porque mi fortaleza y mi canto,",
-       "es Yah, Yahvé, el cual ha sido mi salvación.",
-       "Sacaréis con regocijo el agua de las fuentes de salvación."
+       "Este es el Dios de mi salvación: yo tengo confianza y no temo, porque el Señor es mi fuerza y mi protección; él fue mi salvación.",
+       "Ustedes sacarán agua con alegría de las fuentes de la salvación."
       ],
       [
-       "“Alabad a Yahvé, invocad su nombre;",
-       "pregonad sus obras entre los pueblos,",
-       "proclamad que es excelso su Nombre."
+       "Den gracias al Señor, invoquen su Nombre, anuncien entre los pueblos sus proezas, proclamen qué sublime es su Nombre"
       ],
       [
-       "Cantad a Yahvé, porque ha hecho cosas gloriosas;",
-       "que lo sepa la tierra entera.",
-       "Prorrumpe en júbilo y canta, oh moradora de Sión;",
-       "porque grande es en medio de ti el Santo de Israel.”"
+       "Canten al Señor porque ha hecho algo grandioso: ¡que sea conocido en toda la tierra!",
+       "¡Aclama y grita de alegría. habitante de Sión, porque es grande en medio de ti el Santo de Israel!"
       ]
      ],
      "tipo": "Salmo responsorial"
@@ -931,9 +915,9 @@
      "cita": "Lucas 12, 39-48",
      "presentacion": "✠ Lectura del santo Evangelio según san Lucas.",
      "texto": [
-      "Sabedlo bien; porque si el dueño de casa supiese a qué hora el ladrón ha de venir, no dejaría horadar su casa. Vosotros también estad prontos, porque a la hora que no pensáis es cuando vendrá el Hijo del hombre”. Entonces, Pedro le dijo: “Señor, ¿dices por nosotros esta parábola o también por todos?”",
-      "Y el Señor dijo: “¿Quién es pues el mayordomo fiel y prudente, que el amo pondrá a la cabeza de la servidumbre suya para dar a su tiempo la ración de trigo? ¡Feliz ese servidor a quien el amo, a su regreso, hallará haciéndolo así! En verdad, os digo, lo colocará al frente de toda su hacienda. Pero si ese servidor se dice a sí mismo: “Mi amo tarda en regresar”, y se pone a maltratar a los servidores y a las sirvientas, a comer, a beber, y a embriagarse, el amo de este servidor vendrá en día que no espera y en hora que no sabe, lo partirá por medio, y le asignará su suerte con los que no creyeron. Pero aquel servidor que, conociendo la voluntad de su amo, no se preparó, ni obró conforme a la voluntad de éste, recibirá muchos azotes. En cambio aquel que, no habiéndole conocido, haya hecho cosas dignas de azotes, recibirá pocos.",
-      "A todo aquel a quien se haya dado mucho, mucho le será demandado; y más aún le exigirán a aquel a quien se le haya confiado mucho”."
+      "Entiéndalo bien: si el dueño de casa supiera a qué hora va a llegar el ladrón, no dejaría perforar las paredes de su casa. Ustedes también estén preparados, porque el Hijo del hombre llegará a la hora menos pensada». Pedro preguntó entonces: «Señor, ¿esta parábola la dices para nosotros o para todos?». El Señor le dijo: «¿Cuál es el administrador fiel y previsor, a quien el Señor pondrá al frente de su personal para distribuirle la ración de trigo en el momento oportuno?",
+      "¡Feliz aquel a quien su señor, al llegar, encuentra ocupado en este trabajo! Les aseguro que lo hará administrador de todos sus bienes. Pero si este servidor piensa: \"Mi señor tardará en llegar\", y se dedica a golpear a los servidores y a las sirvientas, y se pone a comer, a beber y a emborracharse, su señor llegará el día y la hora menos pensada, lo castigará y le hará correr la misma suerte que los infieles.",
+      "El servidor que, conociendo la voluntad de su señor, no tuvo las cosas preparadas y no obró conforme a lo que él había dispuesto, recibirá un castigo severo. Pero aquel que sin saberlo, se hizo también culpable, será castigado menos severamente. Al que se le dio mucho, se le pedirá mucho; y al que se le confió mucho, se le reclamará mucho más."
      ],
      "tipo": "Evangelio"
     }
@@ -943,48 +927,44 @@
   },
   "2026-10-22": {
    "celebracion": "Jueves de la XXIX semana del tiempo ordinario",
-   "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
      "cita": "Efesios 3, 14-21",
      "presentacion": "Lectura de la carta del apóstol san Pablo a los Efesios.",
      "texto": [
-      "Por esto doblo mis rodillas ante el Padre, de quien toma su nombre toda paternidad en el cielo y en la tierra, para que os conceda, según la riqueza de su gloria, que seáis poderosamente fortalecidos por su Espíritu en el hombre interior; y Cristo por la fe habite en vuestros corazones, a fin de que, arraigados y cimentados en el amor, seáis hechos capaces de comprender con todos los santos qué cosa sea la anchura y largura y alteza y profundidad, y de conocer el amor de Cristo (por nosotros) que sobrepuja a todo conocimiento, para que seáis colmados de toda la plenitud de Dios.",
-      "A Él, que es poderoso para hacer en todo, mediante su fuerza que obra en nosotros, incomparablemente más de lo que pedimos y pensamos, a Él la gloria en la Iglesia y en Cristo Jesús, por todas las generaciones de la edad de las edades. Amén."
+      "Por eso doblo mis rodillas delante del Padre, de quien procede toda paternidad en el cielo y en la tierra. Que él se digne fortificarlos por medio de su Espíritu, con forme a la riqueza de su gloria, para que crezca en ustedes el hombre interior. Que Cristo habite en sus corazones por la fe, y sean arraigados y edificados en el amor. Así podrán comprender, con todos los santos, cuál es la anchura y la longitud, la altura y la profundidad, en una palabra, ustedes podrán conocer el amor de Cristo, que supera todo conocimiento, para ser colmados por la plenitud de Dios.",
+      "¡A aquel que es capaz de hacer infinitamente más de lo que podemos pedir o pensar, por el poder que obra en nosotros, a él sea la gloria en la Iglesia y en Cristo Jesús, por todas las generaciones y para siempre! Amén."
      ],
      "tipo": "Primera lectura"
     },
     {
-     "cita": "Salmo 32",
+     "cita": "Salmo 33",
      "estrofas": [
       [
-       "Cantad, oh justos, a Yahvé,",
-       "la alabanza es propia de los rectos.",
-       "Celebrad al Señor con la cítara;",
-       "con el arpa de diez cuerdas cantadle himnos."
+       "Aclamen, justos, al Señor;",
+       "es propio de los buenos alabarlo.",
+       "Alaben al Señor con la cítara,",
+       "toquen en su honor el arpa de diez cuerdas;"
       ],
       [
-       "Porque la Palabra de Yahvé es recta,",
-       "y toda su conducta es fiel.",
-       "Él ama la misericordia y la justicia,",
-       "la tierra está llena de la bondad de Yahvé."
+       "Porque la palabra del Señor es recta",
+       "y él obra siempre con lealtad;",
+       "él ama la justicia y el derecho,",
+       "y la tierra está llena de su amor."
       ],
       [
-       "Mas los planes del Señor permanecen eternamente;",
-       "los designios de su corazón,",
-       "de generación en generación.",
-       "¡Dichoso el pueblo",
-       "que tiene por Dios a Yahvé,",
-       "dichoso el pueblo",
-       "que Él escogió para herencia suya!"
+       "pero el designio del Señor permanece para siempre,",
+       "y sus planes, a lo largo de las generaciones.",
+       "¡Feliz la nación cuyo Dios es el Señor,",
+       "el pueblo que él se eligió como herencia!"
       ],
       [
-       "Mas los ojos de Yahvé",
-       "velan por los que le temen,",
-       "por los que esperan de su misericordia,",
-       "que ha de librar sus almas de la muerte,",
-       "y alimentarlos en el tiempo de hambre."
+       "Los ojos del Señor están fijos sobre sus fieles,",
+       "sobre los que esperan en su misericordia,",
+       "para librar sus vidas de la muerte",
+       "y sustentarlos en el tiempo de indigencia."
       ]
      ],
      "tipo": "Salmo responsorial"
@@ -994,8 +974,7 @@
      "cita": "Lucas 12, 49-53",
      "presentacion": "✠ Lectura del santo Evangelio según san Lucas.",
      "texto": [
-      "Fuego vine a echar sobre la tierra, ¡y cuánto deseo que ya esté encendido! Un bautismo tengo para bautizarme, ¡y cómo estoy en angustias hasta que sea cumplido! ¿Pensáis que vine aquí para poner paz en la tierra? No, os digo, sino división. Porque desde ahora, cinco en una casa estarán divididos: tres contra dos, y dos contra tres.",
-      "Estarán divididos, el padre contra el hijo, y el hijo contra el padre; la madre contra la hija, y la hija contra la madre; la suegra contra su nuera, y la nuera contra su suegra”."
+      "Yo he venido a traer fuego sobre la tierra, ¡y cómo desearía que ya estuviera ardiendo! Tengo que recibir un bautismo, ¡y qué angustia siento hasta que esto se cumpla plenamente! ¿Piensan ustedes que he venido a traer la paz a la tierra? No, les digo que he venido a traer la división. De ahora en adelante, cinco miembros de una familia estarán divididos, tres contra dos y dos contra tres: el padre contra el hijo y el hijo contra el padre, la madre contra la hija y la hija contra la madre, la suegra contra la nuera y la nuera contra la suegra»."
      ],
      "tipo": "Evangelio"
     }
@@ -1005,44 +984,38 @@
   },
   "2026-10-23": {
    "celebracion": "Viernes de la XXIX semana del tiempo ordinario",
-   "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
      "cita": "Efesios 4, 1-6",
      "presentacion": "Lectura de la carta del apóstol san Pablo a los Efesios.",
      "texto": [
-      "Os ruego, pues, yo, el prisionero en el Señor, que caminéis de una manera digna del llamamiento que se os ha hecho, con toda humildad de espíritu y mansedumbre, con longanimidad, sufriéndoos unos a otros con caridad, esforzándoos por guardar la unidad del Espíritu en el vínculo de la paz.",
-      "Uno es el cuerpo y uno el Espíritu, y así también una la esperanza de la vocación a que habéis sido llamados; uno el Señor, una la fe, uno el bautismo, uno el Dios y Padre de todos, el cual es sobre todo, en todo y en todos."
+      "Yo, que estoy preso por el Señor, los exhorto a comportarse de una manera digna de la vocación que han recibido. Con mucha humildad, mansedumbre y paciencia, sopórtense mutuamente por amor. Traten de conservar la unidad del Espíritu mediante el vínculo de la paz. Hay un solo Cuerpo y un solo Espíritu, así como hay una misma esperanza, a la que ustedes han sido llamados, de acuerdo con la vocación recibida.",
+      "hay un solo Señor, una sola fe, un solo bautismo. Hay un solo Dios y Padre de todos, que está sobre todos, lo penetra todo y está en todos."
      ],
      "tipo": "Primera lectura"
     },
     {
-     "cita": "Salmo 23",
+     "cita": "Salmo 24",
      "estrofas": [
       [
-       "De Yahvé es la tierra",
-       "y cuanto ella contiene;",
-       "el orbe y cuantos lo habitan.",
-       "Porque Él la asentó sobre mares",
-       "y la afirmó sobre corrientes."
+       "Del Señor es la tierra y todo lo que hay en ella,",
+       "el mundo y todos sus habitantes",
+       "porque él la fundó sobre los mares,",
+       "él la afirmó sobre las corrientes del océano."
       ],
       [
-       "¿Quién será digno",
-       "de ascender al monte de Yahvé?",
-       "y ¿quién estará en su santuario?",
-       "Aquel que tiene inmaculadas las manos",
-       "y puro el corazón."
+       "¿Quién podrá subir a la Montaña del Señor",
+       "y permanecer en su recinto sagrado?",
+       "El que tiene las manos limpias",
+       "y puro el corazón;"
       ],
       [
-       "Él recibirá la bendición de Yahvé,",
-       "y la justicia de Dios su Salvador."
-      ],
-      [
-       "Esta es la generación",
-       "de los que lo buscan,",
-       "de los que buscan tu faz,",
-       "(Dios de) Jacob."
+       "él recibirá la bendición del Señor,",
+       "la recompensa de Dios, su Salvador.",
+       "Así son los que buscan al Señor,",
+       "los que buscan tu rostro, Dios de Jacob."
       ]
      ],
      "tipo": "Salmo responsorial"
@@ -1052,7 +1025,8 @@
      "cita": "Lucas 12, 54-59",
      "presentacion": "✠ Lectura del santo Evangelio según san Lucas.",
      "texto": [
-      "Dijo también a la muchedumbre: “Cuando veis una nube levantarse al poniente, luego decís: “Va a llover”. Y eso sucede. Y cuando sopla el viento del mediodía, decís: “Habrá calor”. Y eso sucede. Hipócritas, sabéis conocer el aspecto de la tierra y del cielo; ¿por qué entonces no conocéis este tiempo? ¿Por qué no juzgáis por vosotros mismos lo que es justo? Mientras vas con tu adversario en busca del magistrado, procura en el camino librarte de él, no sea que te arrastre ante el juez, que el juez te entregue al alguacil y que el alguacil te meta en la cárcel. Yo te lo declaro, no saldrás de allí hasta que no hayas reintegrado el último lepte”."
+      "Dijo también a la multitud: «Cuando ven que una nube se levanta en occidente, ustedes dicen en seguida que va a llover, y así sucede. Y cuando sopla viento del sur, dicen que hará calor, y así sucede. ¡Hipócritas! Ustedes saben discernir el aspecto de la tierra y del cielo; ¿cómo entonces no saben discernir el tiempo presente? ¿Por qué no juzgan ustedes mismos lo que es justo? Cuando vas con tu adversario a presentarte ante el magistrado, trata de llegar a un acuerdo con él en el camino, no sea que el adversario te lleve ante el juez, y el juez te entregue al guardia, y este te ponga en la cárcel.",
+      "Te aseguro que no saldrás de allí hasta que hayas pagado el último centavo»."
      ],
      "tipo": "Evangelio"
     }
@@ -1062,40 +1036,38 @@
   },
   "2026-10-24": {
    "celebracion": "Sábado de la XXIX semana del tiempo ordinario",
-   "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
      "cita": "Efesios 4, 7-16",
      "presentacion": "Lectura de la carta del apóstol san Pablo a los Efesios.",
      "texto": [
-      "Pero a cada uno de nosotros le ha sido dada la gracia en la medida del don de Cristo. Por esto dice: “Subiendo hacia lo alto llevó a cautivos consigo, y dio dones a los hombres”. Eso de subir, ¿qué significa sino que (antes) bajó a lo que está debajo de la tierra? El que bajó es el mismo que también subió por encima de todos los cielos, para complementarlo todo.",
-      "Y Él a unos constituyó apóstoles, y a otros profetas, y a otros evangelistas, y a otros pastores y doctores, a fin de perfeccionar a los santos para la obra del ministerio, para la edificación del cuerpo de Cristo, hasta que todos lleguemos a la unidad de la fe y del (pleno) conocimiento del Hijo de Dios, al estado de varón perfecto, alcanzando la estatura propia del Cristo total, para que ya no seamos niños fluctuantes y llevados a la deriva por todo viento de doctrina, al antojo de la humana malicia, de la astucia que conduce engañosamente al error, sino que, andando en la verdad por el amor, en todo crezcamos hacia adentro de Aquel que es la cabeza, Cristo.",
-      "De Él todo el cuerpo, bien trabado y ligado entre sí por todas las coyunturas que se ayudan mutuamente según la actividad propia de cada miembro, recibe su crecimiento para ir edificándole en el amor."
+      "Sin embargo, cada uno de nosotros ha recibido su propio don, en la medida que Cristo los ha distribuido. Por eso dice la Escritura: \"Cuando subió a lo alto, llevó consigo a los cautivos y repartió dones a los hombres\". Pero si decimos que subió, significa que primero descendió a las regiones inferiores de la tierra. El que descendió es el mismo que subió más allá de los cielos, para colmar todo el universo.",
+      "El comunicó a unos el don de ser apóstoles, a otros profetas, a otros predicadores del Evangelio, a otros pastores o maestros. Así organizó a los santos para la obra del ministerio, en orden a la edificación del Cuerpo de Cristo, hasta que todos lleguemos a la unidad de la fe y del conocimiento del Hijo de Dios, al estado de hombre perfecto y a la madurez que corresponde a la plenitud de Cristo.",
+      "Así dejaremos de ser niños, sacudidos por las olas y arrastrados por el viento de cualquier doctrina, a merced de la malicia de los hombres y de su astucia para enseñar el error. Por el contrario, viviendo en la verdad y en el amor, crezcamos plenamente, unidos a Cristo. El es la Cabeza, y de él, todo el Cuerpo recibe unidad y cohesión, gracias a los ligamentos que lo vivifican y a la acción armoniosa de todos los miembros. Así el Cuerpo crece y se edifica en el amor."
      ],
      "tipo": "Primera lectura"
     },
     {
-     "cita": "Salmo 121",
+     "cita": "Salmo 122",
      "estrofas": [
       [
-       "Me llené de gozo cuando me dijeron:",
-       "“Iremos a la Casa de Yahvé.”",
-       "Ya se posan nuestros pies",
-       "ante tus puertas, ¡oh Jerusalén!"
+       "¡Qué alegría cuando me dijeron:",
+       "«Vamos a la Casa del Señor»!",
+       "Nuestros pies ya están pisando",
+       "tus umbrales, Jerusalén."
       ],
       [
-       "Jerusalén, que estás edificada,",
-       "como la ciudad",
-       "cuya comunidad le está bien unida.",
-       "Allá suben las tribus, las tribus de Yah."
+       "Jerusalén, que fuiste construida",
+       "como ciudad bien compacta y armoniosa.",
+       "Allí suben las tribus, las tribus del Señor",
+       "–según es norma en Israel–"
       ],
       [
-       "Es ley para Israel",
-       "celebrar allí el Nombre de Yahvé.",
-       "Allí se han establecido",
-       "los tronos para el juicio,",
-       "los tronos de la casa de David."
+       "para celebrar el nombre del Señor.",
+       "Porque allí está el trono de la justicia,",
+       "el trono de la casa de David."
       ]
      ],
      "tipo": "Salmo responsorial"
@@ -1105,8 +1077,9 @@
      "cita": "Lucas 13, 1-9",
      "presentacion": "✠ Lectura del santo Evangelio según san Lucas.",
      "texto": [
-      "En aquel momento llegaron algunas personas a traerle la noticia de esos galileos cuya sangre Pilato había mezclado con la de sus sacrificios. Y respondiendoles dilo: “¿Pensáis que estos galileos fueron los mas pecadores de todos los galileos, porque han sufrido estas cosas? Os digo que de ninguna manera, sino que todos pereceréis igualmente si no os arrepentís. O bien aquellos dieciocho, sobre los cuales cayó la torre de Siloé y los mató, ¿pensáis que eran más culpables que todos los demás habitantes de Jerusalén? Os digo que de ninguna manera sino que todos pereceréis igualmente si no os convertís”.",
-      "Y dijo esta parábola: “Un hombre tenía una higuera plantada en su viña. Vino a buscar fruto de ella, y no lo halló. Entonces dijo al viñador: “Mira, tres años hace que vengo a buscar fruto en esta higuera, y no lo hallo. ¡Córtala! ¿Por qué ha de inutilizar la tierra?” Mas él le respondió y dijo: “Señor, déjala todavía este año, hasta que yo cave alrededor y eche abono. Quizá dé fruto en lo futuro; si no, la cortarás”."
+      "En ese momento se presentaron unas personas que comentaron a Jesús el caso de aquellos galileos, cuya sangre Pilato mezcló con la de las víctimas de sus sacrificios. El respondió: «¿Creen ustedes que esos galileos sufrieron todo esto porque eran más pecadores que los demás? Les aseguro que no, y si ustedes no se convierten, todos acabarán de la misma manera. ¿O creen que las dieciocho personas que murieron cuando se desplomó la torre de Siloé, eran más culpables que los demás habitantes de Jerusalén?",
+      "Les aseguro que no, y si ustedes no se convierten, todos acabarán de la misma manera». Les dijo también esta parábola: «Un hombre tenía una higuera plantada en su viña. Fue a buscar frutos y nos encontró. Dijo entonces al viñador: \"Hace tres años que vengo a buscar frutos en esta higuera y nos encuentro. Córtala, ¿para qué malgastar la tierra?\". Pero él respondió: \"Señor, déjala todavía este año; yo removeré la tierra alrededor de ella y la abonaré.",
+      "Puede ser que así dé frutos en adelante. Si no, la cortarás\"»."
      ],
      "tipo": "Evangelio"
     }
@@ -1116,37 +1089,36 @@
   },
   "2026-10-25": {
    "celebracion": "XXX Domingo del tiempo ordinario",
-   "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
      "cita": "Éxodo 22, 20-26",
      "presentacion": "Lectura del libro del Éxodo.",
      "texto": [
-      "No maltratarás al extranjero, ni lo oprimirás, pues extranjeros fuisteis vosotros en el país de Egipto. No afligiréis a la viuda ni al huérfano. Si los afligiereis, clamarán a Mí, y Yo no dejaré de oír su clamor; y se encenderá mi ira, y os mataré a espada; y vuestras mujeres quedarán viudas, y vuestros hijos, huérfanos.",
-      "Si prestas dinero a uno de mi pueblo, al pobre que habita contigo, no serás con él como usurero; no le exigirás interés. Si tomas en prenda el manto de tu prójimo, se lo devolverás antes de ponerse el sol; porque es su único abrigo; es el vestido de su cuerpo. ¿Sobre qué dormirá?",
-      "Si clamare a Mí, le prestaré oído, porque soy misericordioso."
+      "No maltratarás al extranjero ni lo oprimirás, porque ustedes fueron extranjeros en Egipto. No harás daño a la viuda ni al huérfano. Si les haces daño y ellos me piden auxilio, yo escucharé su clamor. Entonces arderá mi ira, y yo los mataré a ustedes con la espada; sus mujeres quedará viudas, y sus hijos huérfanos. Si prestas dinero a un miembro de mi pueblo, al pobre que vive a tu lado, no te comportarás con él como un usurero, no le exigirás interés.",
+      "Si tomas en prenda el manto de tu prójimo, devuélveselo antes que se ponga el sol, porque ese es su único abrigo y el vestido de su cuerpo. De lo contrario, ¿con qué dormirá? Y si él me invoca, yo lo escucharé, porque soy compasivo."
      ],
      "tipo": "Primera lectura"
     },
     {
-     "cita": "Salmo 17",
+     "cita": "Salmo 18",
      "estrofas": [
       [
-       "Te amo, Yahvé, fortaleza mía,",
-       "mi peña, mi baluarte, mi libertador,",
-       "Dios mío, mi roca, mi refugio."
+       "Yo te amo, Señor, mi fuerza,",
+       "Señor, mi Roca, mi fortaleza y mi libertador,"
       ],
       [
-       "Broquel mío, cuerno de mi salud, asilo mío.",
-       "Invoco a Yahvé, el digno de alabanza,",
-       "y quedo libre de mis enemigos."
+       "mi Dios, el peñasco en que me refugio,",
+       "mi escudo, mi fuerza salvadora, mi baluarte.",
+       "Invoqué al Señor, que es digno de alabanza",
+       "y quedé a salvo de mis enemigos."
       ],
       [
-       "¡Vive Yahvé! ¡Bendita sea mi Roca!",
-       "¡Sea ensalzado el Dios mi Salvador!",
-       "Él da grandes victorias a su rey,",
-       "y usa de misericordia con su ungido."
+       "¡Viva el Señor! ¡Bendita sea mi Roca!",
+       "¡Glorificado sea el Dios de mi salvación,",
+       "El concede grandes victorias a su rey",
+       "y trata con fidelidad a su Ungido."
       ]
      ],
      "tipo": "Salmo responsorial"
@@ -1156,8 +1128,8 @@
      "cita": "1 Tesalonicenses 1, 5-10",
      "presentacion": "Lectura de la primera carta del apóstol san Pablo a los Tesalonicenses.",
      "texto": [
-      "Y así bien sabéis cuáles fuimos entre vosotros por amor vuestro. Vosotros os hicisteis imitadores nuestros y del Señor, recibiendo la palabra en medio de grande tribulación con gozo del Espíritu Santo; de modo que llegasteis a ser un ejemplo para todos los fieles de Macedonia y de Acaya.",
-      "Así es que desde vosotros ha repercutido la Palabra del Señor, no sólo por Macedonia y Acaya, sino que en todo lugar la fe vuestra, que es para con Dios, se ha divulgado de tal manera que nosotros no tenemos necesidad de decir palabra. Pues ellos mismos cuentan de nosotros cuál fue nuestra llegada a vosotros, y cómo os volvisteis de los ídolos a Dios para servir al Dios vivo y verdadero, y esperar de los cielos a su Hijo, a quien Él resucitó de entre los muertos: Jesús, el que nos libra de la ira venidera."
+      "Ya saben cómo procedimos cuando estuvimos allí al servicio de ustedes. Y ustedes, a su vez, imitaron nuestro ejemplo y el del Señor, recibiendo la Palabra en medio de muchas dificultades, con la alegría que da el Espíritu Santo. Así llegaron a ser un modelo para todos los creyentes de Macedonia y Acaya. En efecto, de allí partió la Palabra del Señor, que no sólo resonó en Macedonia y Acaya: en todas partes se ha difundido la fe que ustedes tienen en Dios, de manera que no es necesario hablar de esto.",
+      "Ellos mismos cuentan cómo ustedes me han recibido y cómo se convirtieron a Dios, abandonando los ídolos para servir al Dios vivo y verdadero, y esperar a su Hijo, que vendrá desde el cielo: Jesús, a quien él resucitó y que nos libra de la ira venidera."
      ],
      "tipo": "Segunda lectura"
     },
@@ -1166,8 +1138,8 @@
      "cita": "Mateo 22, 34-40",
      "presentacion": "✠ Lectura del santo Evangelio según san Mateo.",
      "texto": [
-      "Mas los fariseos, al oír que había tapado la boca a los saduceos, vinieron a reunirse junto a Él; y uno de ellos, doctor de la Ley, le propuso esta cuestión para tentarlo: “Maestro, ¿cuál es el mayor mandamiento de la Ley?” Respondió Él: “Amarás al Señor tu Dios de todo tu corazón, con toda tu alma, y con todo tu espíritu. Éste es el mayor y primer mandamiento. El segundo le es semejante: “Amarás a tu prójimo como a ti mismo”.",
-      "De estos dos mandamientos pende toda la Ley y los Profetas”."
+      "Cuando los fariseos se enteraron de que Jesús había hecho callar a los saduceos, se reunieron en ese lugar, y uno de ellos, que era doctor de la Ley, le preguntó para ponerlo a prueba: «Maestro, ¿cuál es el mandamiento más grande de la Ley?». Jesús le respondió: «Amarás al Señor, tu Dios, con todo tu corazón, con toda tu alma y con todo tu espíritu. Este es el más grande y el primer mandamiento.",
+      "El segundo es semejante al primero: Amarás a tu prójimo como a ti mismo. De estos dos mandamientos dependen toda la Ley y los Profetas»."
      ],
      "tipo": "Evangelio"
     }
@@ -1177,16 +1149,16 @@
   },
   "2026-10-26": {
    "celebracion": "Lunes de la XXX semana del tiempo ordinario",
-   "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
      "cita": "Efesios 4, 32 – 5, 8",
      "presentacion": "Lectura de la carta del apóstol san Pablo a los Efesios.",
      "texto": [
-      "Sed benignos unos para con otros, compasivos, perdonándoos mutuamente de la misma manera que Dios os ha perdonado a vosotros en Cristo. Imitad entonces a Dios, pues que sois sus hijos amados; y vivid en amor así como Cristo os amó, y se entregó por nosotros como oblación y víctima a Dios cual (incienso de) olor suavísimo.",
-      "Fornicación y cualquier impureza o avaricia, ni siquiera se nombre entre vosotros, como conviene a santos; ni torpeza, ni vana palabrería, ni bufonerías, cosas que no convienen, antes bien acciones de gracia. Porque tened bien entendido que ningún fornicario, impuro o avaro, que es lo mismo que idólatra, tiene parte en el reino de Cristo y de Dios.",
-      "Nadie os engañe con vanas palabras, pues por estas cosas descarga la ira de Dios sobre los hijos de la desobediencia. No os hagáis, pues, copartícipes de ellos. Porque antes erais tinieblas, ahora sois luz en el Señor. Andad, pues, como hijos de la luz."
+      "Por el contrario, sean mutuamente buenos y compasivos, perdonándose los unos a los otros como Dios los ha perdonado en Cristo. Traten de imitar a Dios, como hijos suyos muy queridos. Practiquen el amor, a ejemplo de Cristo, que nos amó y se entregó por nosotros, como ofrenda y sacrificio agradable a Dios. En cuanto al pecado carnal y cualquier clase de impureza o avaricia, ni siquiera se los mencione entre ustedes, como conviene a los santos.",
+      "Lo mismo digo acerca de las obscenidades, de las malas conversaciones y de las bromas groseras: todo esto está fuera de lugar. Lo que deben hacer es dar gracias a Dios. Y sépanlo bien: ni el hombre lujurioso, ni el impuro, ni el avaro –que es un idólatra– tendrán parte en la herencia del Reino de Cristo y de Dios. No se dejen engañar por falsas razones: todo eso atrae la ira de Dios sobre los que se resisten a obedecerle.",
+      "No se hagan cómplices de los que obran así! Antes, ustedes eran tinieblas, pero ahora son luz en el Señor. Vivan como hijos de la luz."
      ],
      "tipo": "Primera lectura"
     },
@@ -1194,28 +1166,25 @@
      "cita": "Salmo 1",
      "estrofas": [
       [
-       "¡Dichoso el hombre que no sigue",
-       "el consejo de los malvados,",
-       "ni pone el pie",
-       "en el camino de los pecadores,",
-       "ni entre los burladores toma asiento,",
-       "mas tiene su deleite en la Ley del Señor,",
-       "y en ella medita día y noche!"
+       "¡Feliz el hombre",
+       "que no sigue el consejo de los malvados,",
+       "ni se detiene en el camino de los pecadores,",
+       "ni se sienta en la reunión de los impíos,",
+       "sino que se complace en la ley del Señor",
+       "y la medita de día y de noche!"
       ],
       [
-       "Es como un árbol",
-       "plantado junto a ríos de agua,",
-       "que a su tiempo dará fruto",
-       "y cuyas hojas no se marchitan;",
-       "todo cuanto hiciere prosperará."
+       "El es como un árbol",
+       "plantado al borde de las aguas,",
+       "que produce fruto a su debido tiempo,",
+       "y cuyas hojas nunca se marchitan:",
+       "todo lo que haga le saldrá bien."
       ],
       [
-       "No así los malvados, no así.",
-       "Ellos son como paja",
-       "que el viento desparrama.",
-       "Porque el camino de los justos",
-       "lo cuida Yahvé,",
-       "y el camino de los malvados tiene mal fin."
+       "No sucede así con los malvados:",
+       "ellos son como paja que se lleva el viento.",
+       "porque el Señor cuida el camino de los justos,",
+       "pero el camino de los malvados termina mal."
       ]
      ],
      "tipo": "Salmo responsorial"
@@ -1225,9 +1194,8 @@
      "cita": "Lucas 13, 10-17",
      "presentacion": "✠ Lectura del santo Evangelio según san Lucas.",
      "texto": [
-      "Un día sabático enseñaba en una sinagoga. Había allí una mujer que tenía desde hacía dieciocho años, un espíritu de enfermedad: estaba toda encorvada, y sin poder absolutamente enderezarse. Al verla Jesús, la llamó y le dijo: “Mujer, queda libre de tu enfermedad”. Y puso sobre ella sus manos, y al punto se enderezó y se puso a glorificar a Dios.",
-      "Entonces, el jefe de la sinagoga, indignado porque Jesús había curado en día sabático, respondió y dijo al pueblo: “Hay seis días para trabajar; en esos días podéis venir para haceros curar, y no el día de sábado”. Mas Jesús le replicó diciendo: “Hipócritas, ¿cada uno de vosotros no desata su buey o su asno del pesebre, en día sabático, para llevarlo al abrevadero? Y a ésta, que es una hija de Abrahán, que Satanás tenía ligada hace ya dieciocho años, ¿no se la había de libertar de sus ataduras, en día sabático?”",
-      "A estas palabras, todos sus adversarios quedaron anonadados de vergüenza, en tanto que la muchedumbre entera se gozaba de todas las cosas gloriosas hechas por Él."
+      "Un sábado, Jesús enseñaba en una sinagoga. Había allí una mujer poseída de un espíritu, que la tenía enferma desde hacía dieciocho años. Estaba completamente encorvada y no podía enderezarse de ninguna manera. Jesús, al verla, la llamó y le dijo: «Mujer, estás curada de tu enfermedad», y le impuso las manos. Ella se enderezó en seguida y glorificaba a Dios. Pero el jefe de la sinagoga, indignado porque Jesús había curado en sábado, dijo a la multitud: «Los días de trabajo son seis; vengan durante esos días para hacerse curar, y no el sábado».",
+      "El Señor le respondió: «¡Hipócritas! Cualquiera de ustedes, aunque sea sábado, ¿no desata del pesebre a su buey o a su asno para llevarlo a beber? Y esta hija de Abraham, a la que Satanás tuvo aprisionada durante dieciocho años, ¿no podía ser librada de sus cadenas el día sábado?». Al oír estas palabras, todos sus adversarios se llenaron de confusión, pero la multitud se alegraba de las maravillas que él hacía."
      ],
      "tipo": "Evangelio"
     }
@@ -1237,41 +1205,40 @@
   },
   "2026-10-27": {
    "celebracion": "Martes de la XXX semana del tiempo ordinario",
-   "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
      "cita": "Efesios 5, 21-33",
      "presentacion": "Lectura de la carta del apóstol san Pablo a los Efesios.",
      "texto": [
-      "sujetándoos los unos a los otros en el santo temor de Cristo. Las mujeres sujétense a sus maridos como al Señor, porque el varón es cabeza de la mujer, como Cristo cabeza de la Iglesia, salvador de su cuerpo. Así como la Iglesia está sujeta a Cristo, así también las mujeres lo han de estar a sus maridos en todo.",
-      "Maridos, amad a vuestras mujeres, como Cristo amó a la Iglesia y se entregó Él mismo por ella, para santificarla, purificándola con la palabra en el baño del agua, a fin de presentarla delante de Sí mismo como Iglesia gloriosa, sin mancha, ni arruga, ni nada semejante, sino santa e inmaculada.",
-      "Así también los varones deben amar a sus mujeres como a su propio cuerpo. El que ama a su mujer, a sí mismo se ama. Porque nadie jamás tuvo odio a su propia carne, sino que la sustenta y regala, como también Cristo a la Iglesia, puesto que somos miembros de su cuerpo. “A causa de esto dejará el hombre a su padre y a su madre, y se adherirá a su mujer, y los dos serán una carne”.",
-      "Este misterio es grande; mas yo lo digo en orden a Cristo y a la Iglesia. Con todo, también cada uno de vosotros ame a su mujer como a sí mismo; y la mujer a su vez reverencie al marido."
+      "Sométanse los unos a los otros, por consideración a Cristo. Las mujeres deben respetar a su marido como al Señor, porque el varón es la cabeza de la mujer, como Cristo es la Cabeza y el Salvador de la Iglesia, que es su Cuerpo. Así como la Iglesia está sometida a Cristo, de la misma manera las mujeres deben respetar en todo a su marido. Maridos, amen a su esposa, como Cristo amó a la Iglesia y se entregó por ella, para santificarla. El la purificó con el bautismo del agua y la palabra, porque quiso para sí una Iglesia resplandeciente, sin mancha ni arruga y sin ningún defecto, sino santa e inmaculada.",
+      "Del mismo modo, los maridos deben amar a su mujer como a su propio cuerpo. El que ama a su esposa se ama a sí mismo. Nadie menosprecia a su propio cuerpo, sino que lo alimenta y lo cuida. Así hace Cristo por la Iglesia, por nosotros, que somos los miembros de su Cuerpo. Por eso, el hombre dejará a su padre y a su madre para unirse a su mujer, y los dos serán una sola carne. Este es un gran misterio: y yo digo que se refiere a Cristo y a la Iglesia.",
+      "En cuanto a ustedes, cada uno debe amar a su mujer como así mismo, y la esposa debe respetar a su marido."
      ],
      "tipo": "Primera lectura"
     },
     {
-     "cita": "Salmo 127",
+     "cita": "Salmo 128",
      "estrofas": [
       [
-       "Dichoso tú que temes a Yahvé,",
-       "que andas en sus caminos.",
-       "Pues comerás del trabajo de tus manos;",
-       "serás bendito, te irá bien."
+       "¡Feliz el que teme al Señor",
+       "y sigue sus caminos!",
+       "Comerás del fruto de tu trabajo,",
+       "serás feliz y todo te irá bien."
       ],
       [
-       "Tu esposa, parra fecunda",
-       "en el interior de tu casa;",
-       "tus hijos, retoños de olivo",
+       "Tu esposa será como una vid fecunda",
+       "en el seno de tu hogar;",
+       "tus hijos, como retoños de olivo",
        "alrededor de tu mesa."
       ],
       [
-       "Así será bendecido el hombre",
-       "que teme a Yahvé.",
-       "Te bendiga Yahvé desde Sión,",
-       "para que veas la prosperidad de Jerusalén",
-       "todos los días de tu vida."
+       "¡Así será bendecido",
+       "el hombre que teme al Señor!",
+       "¡Que el Señor te bendiga desde Sión",
+       "todos los días de tu vida:",
+       "que contemples la paz de Jerusalén"
       ]
      ],
      "tipo": "Salmo responsorial"
@@ -1281,7 +1248,7 @@
      "cita": "Lucas 13, 18-21",
      "presentacion": "✠ Lectura del santo Evangelio según san Lucas.",
      "texto": [
-      "Dijo entonces: “¿A qué es semejante el reino de Dios, y con qué podré compararlo? Es semejante a un grano de mostaza que un hombre tomó y fue a sembrar en su huerta; creció, vino a ser un árbol, y los pájaros del cielo llegaron a anidar en sus ramas”. Dijo todavía: “¿Con qué podré comparar el reino de Dios? Es semejante a la levadura que una mujer tomó y escondió en tres medidas de harina y, finalmente, todo fermentó”."
+      "Jesús dijo entonces: «¿A qué se parece el Reino de Dios? ¿Con qué podré compararlo? Se parece a un grano de mostaza que un hombre sembró en su huerta; creció, se convirtió en un arbusto y los pájaros del cielo se cobijaron en sus ramas». Dijo también: «¿Con qué podré comparar el Reino de Dios? Se parece a un poco de levadura que una mujer mezcló con gran cantidad de harina, hasta que fermentó toda la masa»."
      ],
      "tipo": "Evangelio"
     }
@@ -1291,35 +1258,31 @@
   },
   "2026-10-28": {
    "celebracion": "Miércoles de la XXX semana del tiempo ordinario",
-   "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
      "cita": "Efesios 2, 19-22",
      "presentacion": "Lectura de la carta del apóstol san Pablo a los Efesios.",
      "texto": [
-      "de modo que ya no sois extranjeros ni advenedizos sino que sois conciudadanos de los santos y miembros de la familia de Dios, edificados sobre el fundamento de los apóstoles y profetas, siendo piedra angular el mismo Cristo Jesús, en quien todo el edificio, armónicamente trabado, crece para templo santo en el Señor.",
-      "En Él sois también vosotros coedificados en el Espíritu para morada de Dios."
+      "Por lo tanto, ustedes ya no son extranjeros ni huéspedes, sino conciudadanos de los santos y miembros de la familia de Dios. Ustedes están edificados sobre los apóstoles y los profetas, que son los cimientos, mientras que la piedra angular es el mismo Jesucristo. En él, todo el edificio, bien trabado, va creciendo para constituir un templo santo en el Señor. En él, también ustedes son incorporados al edificio, para llegar a ser una morada de Dios en el Espíritu."
      ],
      "tipo": "Primera lectura"
     },
     {
-     "cita": "Salmo 18",
+     "cita": "Salmo 19",
      "estrofas": [
       [
-       "Los cielos atestiguan la gloria de Dios;",
-       "y el firmamento predica las obras",
-       "que Él ha hecho.",
-       "Cada día transmite",
-       "al siguiente este mensaje,",
-       "y una noche lo hace conocer a la otra."
+       "El cielo proclama la gloria de Dios",
+       "y el firmamento anuncia la obra de sus manos;",
+       "un día transmite al otro este mensaje",
+       "y las noches se van dando la noticia."
       ],
       [
-       "Si bien no es la palabra,",
-       "tampoco es un lenguaje",
-       "cuya voz no pueda percibirse.",
-       "Por toda la tierra se oye su sonido,",
-       "y sus acentos hasta los confines del orbe."
+       "Sin hablar, sin pronunciar palabras,",
+       "sin que se escuche su voz,",
+       "resuena su eco por toda la tierra",
+       "y su lenguaje, hasta los confines del mundo."
       ]
      ],
      "tipo": "Salmo responsorial"
@@ -1329,9 +1292,8 @@
      "cita": "Lucas 6, 12-19",
      "presentacion": "✠ Lectura del santo Evangelio según san Lucas.",
      "texto": [
-      "Por aquellos días se salió a la montaña para orar, y pasó toda la noche en oración con Dios. Cuando se hizo de día, llamó a sus discípulos, y de entre ellos eligió a doce a los que dio el nombre de apóstoles: a Simón, a quien también llamó Pedro, y a Andrés el hermano de éste; a Santiago y Juan; a Felipe y Bartolomé; a Mateo y Tomás; a Santiago (hijo) de Alfeo, y Simón llamado el celoso; a Judas de Santiago, y a Judas Iscariote, el que llegó a ser el traidor.",
-      "Con éstos descendió y se estuvo de pie en un lugar llano, donde había un gran número de sus discípulos y una gran muchedumbre del pueblo de toda la Judea y de Jerusalén, y de la costa de Tiro y de Sidón, los cuales habían venido a oírlo y a que los sanara de sus enfermedades; y también los atormentados de espíritus inmundos eran sanados.",
-      "Y toda la gente quería tocarlo, porque de Él salía virtud y sanaba a todos."
+      "En esos días, Jesús se retiró a una montaña para orar, y pasó toda la noche en oración con Dios. Cuando se hizo de día, llamó a sus discípulos y eligió a doce de ellos, a los que dio el nombre de Apóstoles: Simón, a quien puso el sobrenombre de Pedro, Andrés, su hermano, Santiago, Juan, Felipe, Bartolomé, Mateo, Tomás, Santiago, hijo de Alfeo, Simón, llamado el Zelote, Judas, hijo de Santiago y Judas Iscariote, que fue el traidor.",
+      "Al bajar con ellos se detuvo en una llanura. Estaban allí muchos de sus discípulos y una gran muchedumbre que había llegado de toda la Judea, de Jerusalén y de la región costera de Tiro y Sidón, para escucharlo y hacerse curar de sus enfermedades. Los que estaban atormentados por espíritus impuros quedaban curados; y toda la gente quería tocarlo, porque salía de él una fuerza que sanaba a todos."
      ],
      "tipo": "Evangelio"
     }
@@ -1341,36 +1303,37 @@
   },
   "2026-10-29": {
    "celebracion": "Jueves de la XXX semana del tiempo ordinario",
-   "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
      "cita": "Efesios 6, 10-20",
      "presentacion": "Lectura de la carta del apóstol san Pablo a los Efesios.",
      "texto": [
-      "Por lo demás, hermanos, confortaos en el Señor y en la fuerza de su poder. Vestíos la armadura de Dios, para poder sosteneros contra los ataques engañosos del diablo. Porque para nosotros la lucha no es contra sangre y carne, sino contra los principados, contra las potestades, contra los poderes mundanos de estas tinieblas, contra los espíritus de la maldad en lo celestial.",
-      "Tomad, por eso, la armadura de Dios, para que puedas resistir en el día malo y, habiendo cumplido todo, estar en pie. Teneos, pues, firmes, ceñidos los lomos con la verdad y vestidos con la coraza de la justicia, y calzados los pies con la prontitud del Evangelio de la paz. Embrazad en todas las ocasiones el escudo de la fe, con el cual podréis apagar todos los dardos encendidos del Maligno.",
-      "Recibid asimismo el yelmo de la salud, y la espada del Espíritu, que es la Palabra de Dios; orando siempre en el Espíritu con toda suerte de oración y plegaria, y velando para ello con toda perseverancia y súplica por todos los santos, y por mí, a fin de que al abrir mi boca se me den palabras para manifestar con denuedo el misterio del Evangelio, del cual soy mensajero entre cadenas, y sea yo capaz de anunciarlo con toda libertad, según debo hablar."
+      "Por lo demás, fortalézcanse en el Señor con la fuerza de su poder. Revístanse con la armadura de Dios, para que puedan resistir las insidias del demonio. Porque nuestra lucha no es contra enemigos de carne y sangre, sino contra los Principados y Potestades, contra los Soberanos de este mundo de tinieblas, contra los espíritus del mal que habitan en el espacio. Por lo tanto, tomen la armadura de Dios, para que puedan resistir en el día malo y mantenerse firmes después de haber superado todos los obstáculos.",
+      "Permanezcan de pie, ceñidos con el cinturón de la verdad y vistiendo la justicia como coraza. Calcen sus pies con el celo para propagar la Buena Noticia de la paz. Tengan siempre en la mano el escudo de la fe, con el que podrán apagar todas las flechas encendidas del Maligno. Tomen el casco de la salvación, y la espada del Espíritu, que es la Palabra de Dios. Eleven constantemente toda clase de oraciones y súplicas, animadas por el Espíritu. Dedíquense con perseverancia incansable a interceder por todos los hermanos, y también por mí, a fin de que encuentre palabras adecuadas para anunciar resueltamente el misterio del Evangelio, del cual yo soy embajador en medio de mis cadenas. ¡Así podré hablar libremente de él, como debo hacerlo!"
      ],
      "tipo": "Primera lectura"
     },
     {
-     "cita": "Salmo 143",
+     "cita": "Salmo 144",
      "estrofas": [
       [
-       "Bendito sea Yahvé, mi piedra;",
-       "Él adiestra mis manos para la pelea,",
-       "mis dedos para la guerra;",
-       "Él es mi alcázar y mi libertador,",
-       "el broquel con que me cubro;",
-       "Él es quien me somete los pueblos."
+       "Bendito sea el Señor, mi Roca,",
+       "el que adiestra mis brazos para el combate",
+       "y mis manos para la lucha."
       ],
       [
-       "Quiero cantarte, oh Dios, un cántico nuevo,",
-       "con el salterio de diez cuerdas te cantaré:",
-       "El que da la victoria a los reyes,",
-       "que salvó a David, su siervo,",
-       "de la fatal espada."
+       "El es mi bienhechor y mi fortaleza,",
+       "mi baluarte y mi libertador;",
+       "él es el escudo con que me resguardo,",
+       "y el que somete los pueblos a mis pies."
+      ],
+      [
+       "Dios mío, yo quiero cantarte un canto nuevo",
+       "y tocar para ti con el arpa de diez cuerdas,",
+       "porque tú das la victoria a los reyes",
+       "y libras a David, tu servidor."
       ]
      ],
      "tipo": "Salmo responsorial"
@@ -1380,8 +1343,8 @@
      "cita": "Lucas 13, 31-35",
      "presentacion": "✠ Lectura del santo Evangelio según san Lucas.",
      "texto": [
-      "En ese momento se acercaron algunos fariseos, para decirle: “¡Sal, vete de aquí, porque Herodes te quiere matar”. Y les dijo: “Id a decir a ese zorro: He aquí que echo demonios y obro curaciones hoy y mañana; el tercer día habré terminado. Pero hoy, mañana y al otro día, es necesario que Yo ande, porque no cabe que un profeta perezca fuera de Jerusalén”.",
-      "¡A ¡Jerusalén, Jerusalén, tú que matas a los profetas, y apedreas a los que te son enviados, ¡cuántas veces quise Yo reunir a tus hijos, como la gallina reúne su pollada debajo de sus alas, y vosotros no lo habéis querido! Ved que vuestra casa os va a quedar desierta. Yo os lo digo, no me volveréis a ver, hasta que llegue el tiempo en que digáis: “¡Bendito el que viene en nombre del Señor!”"
+      "En ese momento se acercaron algunos fariseos que le dijeron: «Aléjate de aquí, porque Herodes quiere matarte». El les respondió: «Vayan a decir a ese zorro: hoy y mañana expulso a los demonios y realizo curaciones, y al tercer día habré terminado. Pero debo seguir mi camino hoy, mañana y pasado, porque no puede ser que un profeta muera fuera de Jerusalén. ¡Jerusalén, Jerusalén, que matas a los profetas y apedreas a los que te son enviados! ¡Cuántas veces quise reunir a tus hijos, como la gallina reúne bajo sus alas a los pollitos, y tú no quisiste!",
+      "Por eso, a ustedes la casa les quedará vacía. Les aseguro que ya no me verán más, hasta que llegue el día en que digan: ¡Bendito el viene en nombre del Señor!»."
      ],
      "tipo": "Evangelio"
     }
@@ -1391,41 +1354,38 @@
   },
   "2026-10-30": {
    "celebracion": "Viernes de la XXX semana del tiempo ordinario",
-   "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
      "cita": "Filipenses 1, 1-11",
      "presentacion": "Lectura de la carta del apóstol san Pablo a los Filipenses.",
      "texto": [
-      "Pablo y Timoteo, siervos de Cristo Jesús, a todos los santos en Cristo Jesús que están en Filipos con los obispos y diáconos: gracia a vosotros y paz, de parte de Dios nuestro Padre y del Señor Jesucristo. Doy gracias a mi Dios cada vez que me acuerdo de vosotros, y ruego siempre con gozo por todos vosotros en todas mis oraciones, a causa de vuestra participación en el Evangelio, desde el primer día hasta ahora.",
-      "Tengo la firme confianza de que Aquel que en vosotros comenzó la buena obra, la perfeccionará hasta el día de Cristo Jesús. Y es justo que yo piense así de todos vosotros, por cuanto os llevo en el corazón; pues tanto en mis prisiones como en la defensa y confirmación del Evangelio todos vosotros sois partícipes de mi gracia.",
-      "Porque testigo me es Dios de mi anhelo por todos vosotros en las entrañas de Cristo Jesús. Lo que pido en mi oración es que vuestro amor abunde más y más en conocimiento y en todo discernimiento, para que sepáis apreciar lo mejor y seáis puros e irreprensibles hasta el día de Cristo, llenos de frutos de justicia, por medio de Jesucristo, para gloria y alabanza de Dios."
+      "Pablo y Timoteo, servidores de Cristo Jesús, saludan a todos los santos en Cristo Jesús, que se encuentran en Filipos, así como también a los que presiden la comunidad y a los diáconos. Llegue a ustedes la gracia y la paz que proceden de Dios, nuestro Padre, y del Señor Jesucristo. Yo doy gracias a Dios cada vez que los recuerdo. Siempre y en todas mis oraciones pido con alegría por todos ustedes, pensando en la colaboración que prestaron a la difusión del Evangelio, desde el comienzo hasta ahora.",
+      "Estoy firmemente convencido de que aquel que comenzó en ustedes la buena obra la irá completando hasta el Día de Cristo Jesús. Y es justo que tenga estos sentimientos hacia todos ustedes, porque los llevo en mi corazón, ya que ustedes, sea cuando estoy prisionero, sea cuando trabajo en la defensa y en la confirmación del Evangelio, participan de la gracia que he recibido. Dios es testigo de que los quiero tiernamente a todos en el corazón de Cristo Jesús.",
+      "Y en mi oración pido que el amor de ustedes crezca cada vez más en el conocimiento y en la plena comprensión, a fin de que puedan discernir lo que es mejor. Así serán encontrados puros e irreprochables en el Día de Cristo. llenos del fruto de justicia que proviene de Jesucristo, para la gloria y alabanza de Dios."
      ],
      "tipo": "Primera lectura"
     },
     {
-     "cita": "Salmo 110",
+     "cita": "Salmo 111",
      "estrofas": [
       [
-       "Quiero honrar a Yahvé",
-       "con todo mi corazón,",
-       "en el coro de los justos y en la asamblea.",
-       "Grandes son las obras de Yahvé:",
-       "escudríñenlas los que las disfrutan."
+       "Doy gracias al Señor de todo corazón,",
+       "en la reunión y en la asamblea de los justos.",
+       "Grandes son las obras del Señor:",
+       "los que las aman desean comprenderlas."
       ],
       [
-       "Su obrar es todo majestad y esplendor,",
-       "y su justicia permanece para siempre.",
-       "Hizo sus maravillas",
-       "para ser recordadas.",
-       "Yahvé es benigno y compasivo."
+       "Su obra es esplendor y majestad,",
+       "su justicia permanece para siempre.",
+       "El hizo portentos memorables,",
+       "el Señor es bondadoso y compasivo."
       ],
       [
-       "Él da alimento a los que le temen;",
-       "para siempre se acordará de su alianza.",
-       "A su pueblo ha mostrado",
-       "el poder de sus obras,",
+       "Proveyó de alimento a sus fieles",
+       "y se acuerda eternamente de su alianza.",
+       "Manifestó a su pueblo el poder de sus obras,",
        "dándole la herencia de las naciones."
       ]
      ],
@@ -1436,8 +1396,8 @@
      "cita": "Lucas 14, 1-6",
      "presentacion": "✠ Lectura del santo Evangelio según san Lucas.",
      "texto": [
-      "Como Él hubiese ido a casa de un jefe de los fariseos, un día sabático a comer, ellos lo acechaban. Estaba allí, delante de Él un hombre hidrópico. Tomando la palabra, Jesús preguntó a los doctores de la Ley y a los fariseos: “¿Es lícito curar, en día sabático, o no?” Pero ellos guardaron silencio.",
-      "Tomándolo, entonces, de la mano, lo sanó y lo despidió. Y les dijo: “¿Quién hay de vosotros, que viendo a su hijo o su buey caído en un pozo, no lo saque pronto de allí, aun en día de sábado?” Y no fueron capaces de responder a esto."
+      "Un sábado, Jesús entró a comer en casa de uno de los principales fariseos. Ellos lo observaban atentamente. Delante de él había un hombre enfermo de hidropesía. Jesús preguntó a los doctores de la Ley y a los fariseos: «¿Está permitido curar en sábado o no?». Pero ellos guardaron silencio. Entonces Jesús tomó de la mano al enfermo, lo curó y lo despidió. Y volviéndose hacia ellos, les dijo: «Si a alguno de ustedes se le cae en un pozo su hijo o su buey, ¿acaso no lo saca en seguida, aunque sea sábado?».",
+      "A esto no pudieron responder nada."
      ],
      "tipo": "Evangelio"
     }
@@ -1447,39 +1407,39 @@
   },
   "2026-10-31": {
    "celebracion": "Sábado de la XXX semana del tiempo ordinario",
-   "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
      "cita": "Filipenses 1, 18-26",
      "presentacion": "Lectura de la carta del apóstol san Pablo a los Filipenses.",
      "texto": [
-      "En esto me regocijo y no dejaré de regocijarme. Porque sé que esto resultará en mi provecho gracias a vuestra oración y a la asistencia del Espíritu de Jesucristo, según mi firme expectación y esperanza de que en nada seré confundido; sino que, con toda libertad, ahora lo mismo que siempre, Cristo será enaltecido en mi cuerpo, sea por vida, o por muerte.",
-      "Porque para mí el vivir es Cristo, y el morir ganancia. Mas si el vivir en la carne significa para mí trabajo fecundo, no sé qué escoger. Estrechado estoy por ambos lados: tengo deseo de morir y estar con Cristo, lo cual sería mucho mejor; por otra parte el quedarme en la carne es más necesario por vosotros.",
-      "Persuadido, pues, de esto ya sé que me quedaré y permaneceré para todos vosotros, para vuestro provecho gozo en la fe, a fin de que abunde vuestra gloria en Cristo Jesús, a causa mía, con motivo de mi reaparición entre vosotros."
+      "Y de esto me alegro y me alegraré siempre. Porque sé que esto servirá para mi salvación, gracias a las oraciones de ustedes y a la ayuda que me da el Espíritu de Jesucristo. Así lo espero ansiosamente, y no seré defraudado. Al contrario, estoy completamente seguro de que ahora, como siempre, sea que viva, sea que muera, Cristo será glorificado en mi cuerpo. Porque para mí la vida es Cristo, y la muerte, una ganancia.",
+      "Pero si la vida en este cuerpo me permite seguir trabajando fructuosamente, ya no sé qué elegir. Me siento urgido de ambas partes: deseo irme para estar con Cristo, porque es mucho mejor, pero por el bien de ustedes es preferible que permanezca en este cuerpo. Tengo la plena convicción de que me quedaré y permaneceré junto a todos ustedes, para que progresen y se alegren en la fe.",
+      "De este modo, mi regreso y mi presencia entre ustedes les proporcionarán un nuevo motivo de orgullo en Cristo Jesús."
      ],
      "tipo": "Primera lectura"
     },
     {
-     "cita": "Salmo 41",
+     "cita": "Salmo 42",
      "estrofas": [
       [
-       "Como el ciervo ansía",
-       "las corrientes de aguas,",
-       "así mi alma suspira por Ti, oh Dios."
+       "Como la cierva sedienta",
+       "busca las corrientes de agua,",
+       "así mi alma suspira",
+       "por ti, mi Dios."
       ],
       [
-       "Porque mi alma tiene sed de Dios,",
-       "del Dios vivo.",
-       "¿Cuándo vendré",
-       "y estaré en la presencia de Dios?"
+       "Mi alma tiene sed de Dios,",
+       "del Dios viviente:",
+       "¿Cuándo iré a contemplar",
+       "el rostro de Dios?"
       ],
       [
-       "De cómo caminaba yo",
-       "al frente de la noble cohorte",
-       "hacia la casa de Dios,",
-       "entre cantares de júbilo y alabanza,",
-       "en festivo cortejo."
+       "¡cómo iba en medio de la multitud",
+       "y la guiaba hacia la Casa de Dios,",
+       "entre cantos de alegría y alabanza,",
+       "en el júbilo de la fiesta!"
       ]
      ],
      "tipo": "Salmo responsorial"
@@ -1489,8 +1449,8 @@
      "cita": "Lucas 14, 1. 7-11",
      "presentacion": "✠ Lectura del santo Evangelio según san Lucas.",
      "texto": [
-      "Como Él hubiese ido a casa de un jefe de los fariseos, un día sabático a comer, ellos lo acechaban. Observando cómo elegían los primeros puestos en la mesa, dirigió una parábola a los invitados, diciéndoles: “Cuando seas invitado a un convite de bodas, no te pongas en el primer puesto, no sea que haya allí otro convidado objeto de mayor honra que tú y viniendo el que os convido a ambos, te diga: “Deja el sitio a éste”, y pases entonces, con vergüenza, a ocupar el último lugar. Por el contrario, cuando seas invitado, ve a ponerte en el último lugar, para que, cuando entre el que te invitó, te diga: “Amigo, sube más arriba”.",
-      "Y entonces tendrás honor a los ojos de todos los convidados. Porque el que se levanta, será abajado; y el que se abaja, será levantado”."
+      "Un sábado, Jesús entró a comer en casa de uno de los principales fariseos. Ellos lo observaban atentamente. Y al notar cómo los invitados buscaban los primeros puestos, les dijo esta parábola: «Si te invitan a un banquete de bodas, no te coloques en el primer lugar, porque puede suceder que haya sido invitada otra persona más importante que tú, y cuando llegue el que los invitó a los dos, tenga que decirte: \"Déjale el sitio\", y así, lleno de vergüenza, tengas que ponerte en el último lugar.",
+      "Al contrario, cuando te inviten, ve a colocarte en el último sitio, de manera que cuando llegue el que te invitó, te diga: \"Amigo, acércate más\", y así quedarás bien delante de todos los invitados. Porque todo el que ensalza será humillado, y el que se humilla será ensalzado»."
      ],
      "tipo": "Evangelio"
     }
@@ -1500,46 +1460,39 @@
   },
   "2026-11-01": {
    "celebracion": "Solemnidad de Todos los Santos",
-   "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
      "cita": "Apocalipsis 7, 2-4. 9-14",
      "presentacion": "Lectura del libro del Apocalipsis.",
      "texto": [
-      "Y vi a otro ángel que subía del Oriente y tenía el sello del Dios vivo, y clamó a gran voz a los cuatro ángeles, a quienes había sido dado hacer daño a la tierra y al mar; y dijo: “No hagáis daño a la tierra, ni al mar, ni a los árboles, hasta que hayamos sellado a los siervos de nuestro Dios en sus frentes”.",
-      "Y oí el número de los que fueron sellados: ciento cuarenta y cuatro mil sellados de todas las tribus de los hijos de Israel; Después de esto miré, y había una gran muchedumbre que nadie podía contar, de entre todas las naciones, tribus, pueblos y lenguas, que estaban de pie ante el trono y ante el Cordero, vestidos de túnicas blancas, con palmas en sus manos; y clamaban a gran voz diciendo: “La salud es de nuestro Dios que está sentado en el trono, y del Cordero”.",
-      "Y todos los ángeles que estaban de pie alrededor del trono y de los ancianos y de los cuatro vivientes cayeron sobre sus rostros ante el trono y adoraron a Dios, diciendo: “Amén, la alabanza, la gloria, la sabiduría, la gratitud, el honor, el poder y la fuerza a nuestro Dios por los siglos de los siglos. Amén”.",
-      "Y uno de los ancianos, tomando la palabra, me preguntó: “Estos que están vestidos de túnicas blancas, ¿quiénes son y de dónde han venido?” Y yo le dije: “Señor mío, tú lo sabes”. Y él me contestó: “Estos son los que vienen de la gran tribulación, y lavaron sus vestidos, y los blanquearon en la sangre del Cordero”."
+      "Luego vi a otro Angel que subía del Oriente, llevando el sello del Dios vivo. Y comenzó a gritar con voz potente a los cuatro Angeles que habían recibido el poder de dañar a la tierra y al mar: «No dañen a la tierra, ni al mar, ni a los árboles, hasta que marquemos con el sello la frente de los servidores de nuestro Dios». Oí entonces el número de los que habían sido marcados: eran 144.000 pertenecientes a todas las tribus de Israel.",
+      "Después de esto, vi una enorme muchedumbre, imposible de contar, formada por gente de todas las naciones, familias, pueblos y lenguas. Estaban de pie ante el trono y delante del Cordero, vestidos con túnicas blancas; llevaban palmas en la mano y exclamaban con voz potente: «¡La salvación viene de nuestro Dios que está sentado en el trono, y del Cordero!». Y todos los Angeles que estaban alrededor del trono, de los Ancianos y de los cuatro Seres Vivientes, se postraron con el rostro en tierra delante del trono, y adoraron a Dios, diciendo: «¡Amén! ¡Alabanza, gloria y sabiduría, acción de gracias, honor, poder y fuerza a nuestro Dios para siempre! ¡Amén!",
+      "Y uno de los Ancianos me preguntó: «¿Quiénes son y de dónde vienen los que están revestidos de túnicas blancas?». Yo le respondí: «Tú lo sabes, señor». Y él me dijo: «Estos son los que vienen de la gran tribulación; ellos han lavado sus vestiduras y las han blanqueado en la sangre del Cordero."
      ],
      "tipo": "Primera lectura"
     },
     {
-     "cita": "Salmo 23",
+     "cita": "Salmo 24",
      "estrofas": [
       [
-       "De Yahvé es la tierra",
-       "y cuanto ella contiene;",
-       "el orbe y cuantos lo habitan.",
-       "Porque Él la asentó sobre mares",
-       "y la afirmó sobre corrientes."
+       "Del Señor es la tierra y todo lo que hay en ella,",
+       "el mundo y todos sus habitantes",
+       "porque él la fundó sobre los mares,",
+       "él la afirmó sobre las corrientes del océano."
       ],
       [
-       "¿Quién será digno",
-       "de ascender al monte de Yahvé?",
-       "y ¿quién estará en su santuario?",
-       "Aquel que tiene inmaculadas las manos",
-       "y puro el corazón."
+       "¿Quién podrá subir a la Montaña del Señor",
+       "y permanecer en su recinto sagrado?",
+       "El que tiene las manos limpias",
+       "y puro el corazón;"
       ],
       [
-       "Él recibirá la bendición de Yahvé,",
-       "y la justicia de Dios su Salvador."
-      ],
-      [
-       "Esta es la generación",
-       "de los que lo buscan,",
-       "de los que buscan tu faz,",
-       "(Dios de) Jacob."
+       "él recibirá la bendición del Señor,",
+       "la recompensa de Dios, su Salvador.",
+       "Así son los que buscan al Señor,",
+       "los que buscan tu rostro, Dios de Jacob."
       ]
      ],
      "tipo": "Salmo responsorial"
@@ -1549,8 +1502,7 @@
      "cita": "1 Juan 3, 1-3",
      "presentacion": "Lectura de la primera carta del apóstol san Juan.",
      "texto": [
-      "Mirad qué amor nos ha mostrado el Padre, para que seamos llamados hijos de Dios. Y lo somos; por eso el mundo no nos conoce a nosotros, porque a Él no lo conoció. Carísimos, ya somos hijos de Dios aunque todavía no se ha manifestado lo que seremos. Mas sabemos que cuando se manifieste seremos semejantes a Él, porque lo veremos tal como es.",
-      "Entretanto quienquiera tiene en Él esta esperanza se hace puro, así como Él es puro."
+      "¡Miren cómo nos amó el Padre! Quiso que nos llamáramos hijos de Dios, y nosotros lo somos realmente. Si el mundo no nos reconoce, es porque no lo ha reconocido a él. Queridos míos, desde ahora somos hijos de Dios, y lo que seremos no se ha manifestado todavía. Sabemos que cuando se manifieste, seremos semejantes a él, porque lo veremos tal cual es. El que tiene esta esperanza en él, se purifica, así como él es puro."
      ],
      "tipo": "Segunda lectura"
     },
@@ -1559,8 +1511,9 @@
      "cita": "Mateo 5, 1-12",
      "presentacion": "✠ Lectura del santo Evangelio según san Mateo.",
      "texto": [
-      "Al ver estas multitudes, subió a la montaña, y habiéndose sentado, se le acercaron sus discípulos. Entonces, abrió su boca, y se puso a enseñarles así: “Bienaventurados los pobres en el espíritu, porque a ellos pertenece el reino de los cielos. Bienaventurados los afligidos, porque serán consolados. Bienaventurados los mansos, porque heredarán la tierra. Bienaventurados los que tienen hambre y sed de la justicia, porque serán hartados. Bienaventurados los que tienen misericordia, porque para ellos habrá misericordia. Bienaventurados los de corazón puro, porque verán a Dios. Bienaventurados los pacificadores, porque serán llamados hijos de Dios. Bienaventurados los perseguidos por causa de la justicia, porque a ellos pertenece el reino de los cielos.",
-      "Dichosos seréis cuando os insultaren, cuando os persiguieren, cuando dijeren mintiendo todo mal contra vosotros, por causa mía. Gozaos y alegraos”."
+      "Al ver a la multitud, Jesús subió a la montaña, se sentó, y sus discípulos se acercaron a él. Entonces tomó la palabra y comenzó a enseñarles, diciendo: «Felices los que tienen alma de pobres, porque a ellos les pertenece el Reino de los Cielos. Felices los pacientes, porque recibirán la tierra en herencia. Felices los afligidos, porque serán consolados. Felices los que tienen hambre y sed de justicia, porque serán saciados.",
+      "Felices los misericordiosos, porque obtendrán misericordia. Felices los que tienen el corazón puro, porque verán a Dios. Felices los que trabajan por la paz, porque serán llamados hijos de Dios. Felices los que son perseguidos por practicar la justicia, porque a ellos les pertenece el Reino de los Cielos. Felices ustedes, cuando sean insultados y perseguidos, y cuando se los calumnie en toda forma a causa de mí.",
+      "Alégrense y regocíjense entonces, porque ustedes tendrán una gran recompensa en el cielo."
      ],
      "tipo": "Evangelio"
     }

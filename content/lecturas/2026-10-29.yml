@@ -3,40 +3,39 @@
 # los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
 fecha: '2026-10-29'
 celebracion: Jueves de la XXX semana del tiempo ordinario
-santo: "Memoria libre (santo del martirologio): San Narciso"
-fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+santo: 'Memoria libre (santo del martirologio): San Narciso'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
 draft: false
 lecturas:
 - tipo: Primera lectura
   cita: Efesios 6, 10-20
   presentacion: Lectura de la carta del apóstol san Pablo a los Efesios.
   texto: |-
-    Por lo demás, hermanos, confortaos en el Señor y en la fuerza de su poder. Vestíos la armadura de Dios, para poder sosteneros contra los ataques engañosos del diablo. Porque para nosotros la lucha no es contra sangre y carne, sino contra los principados, contra las potestades, contra los poderes mundanos de estas tinieblas, contra los espíritus de la maldad en lo celestial.
+    Por lo demás, fortalézcanse en el Señor con la fuerza de su poder. Revístanse con la armadura de Dios, para que puedan resistir las insidias del demonio. Porque nuestra lucha no es contra enemigos de carne y sangre, sino contra los Principados y Potestades, contra los Soberanos de este mundo de tinieblas, contra los espíritus del mal que habitan en el espacio. Por lo tanto, tomen la armadura de Dios, para que puedan resistir en el día malo y mantenerse firmes después de haber superado todos los obstáculos.
 
-    Tomad, por eso, la armadura de Dios, para que puedas resistir en el día malo y, habiendo cumplido todo, estar en pie. Teneos, pues, firmes, ceñidos los lomos con la verdad y vestidos con la coraza de la justicia, y calzados los pies con la prontitud del Evangelio de la paz. Embrazad en todas las ocasiones el escudo de la fe, con el cual podréis apagar todos los dardos encendidos del Maligno.
-
-    Recibid asimismo el yelmo de la salud, y la espada del Espíritu, que es la Palabra de Dios; orando siempre en el Espíritu con toda suerte de oración y plegaria, y velando para ello con toda perseverancia y súplica por todos los santos, y por mí, a fin de que al abrir mi boca se me den palabras para manifestar con denuedo el misterio del Evangelio, del cual soy mensajero entre cadenas, y sea yo capaz de anunciarlo con toda libertad, según debo hablar.
+    Permanezcan de pie, ceñidos con el cinturón de la verdad y vistiendo la justicia como coraza. Calcen sus pies con el celo para propagar la Buena Noticia de la paz. Tengan siempre en la mano el escudo de la fe, con el que podrán apagar todas las flechas encendidas del Maligno. Tomen el casco de la salvación, y la espada del Espíritu, que es la Palabra de Dios. Eleven constantemente toda clase de oraciones y súplicas, animadas por el Espíritu. Dedíquense con perseverancia incansable a interceder por todos los hermanos, y también por mí, a fin de que encuentre palabras adecuadas para anunciar resueltamente el misterio del Evangelio, del cual yo soy embajador en medio de mis cadenas. ¡Así podré hablar libremente de él, como debo hacerlo!
   cierre: Palabra de Dios.
 - tipo: Salmo responsorial
-  cita: Salmo 143
+  cita: Salmo 144
   estrofas: |-
-    Bendito sea Yahvé, mi piedra;
-    Él adiestra mis manos para la pelea,
-    mis dedos para la guerra;
-    Él es mi alcázar y mi libertador,
-    el broquel con que me cubro;
-    Él es quien me somete los pueblos.
+    Bendito sea el Señor, mi Roca,
+    el que adiestra mis brazos para el combate
+    y mis manos para la lucha.
 
-    Quiero cantarte, oh Dios, un cántico nuevo,
-    con el salterio de diez cuerdas te cantaré:
-    El que da la victoria a los reyes,
-    que salvó a David, su siervo,
-    de la fatal espada.
+    El es mi bienhechor y mi fortaleza,
+    mi baluarte y mi libertador;
+    él es el escudo con que me resguardo,
+    y el que somete los pueblos a mis pies.
+
+    Dios mío, yo quiero cantarte un canto nuevo
+    y tocar para ti con el arpa de diez cuerdas,
+    porque tú das la victoria a los reyes
+    y libras a David, tu servidor.
 - tipo: Evangelio
   cita: Lucas 13, 31-35
   presentacion: ✠ Lectura del santo Evangelio según san Lucas.
   texto: |-
-    En ese momento se acercaron algunos fariseos, para decirle: “¡Sal, vete de aquí, porque Herodes te quiere matar”. Y les dijo: “Id a decir a ese zorro: He aquí que echo demonios y obro curaciones hoy y mañana; el tercer día habré terminado. Pero hoy, mañana y al otro día, es necesario que Yo ande, porque no cabe que un profeta perezca fuera de Jerusalén”.
+    En ese momento se acercaron algunos fariseos que le dijeron: «Aléjate de aquí, porque Herodes quiere matarte». El les respondió: «Vayan a decir a ese zorro: hoy y mañana expulso a los demonios y realizo curaciones, y al tercer día habré terminado. Pero debo seguir mi camino hoy, mañana y pasado, porque no puede ser que un profeta muera fuera de Jerusalén. ¡Jerusalén, Jerusalén, que matas a los profetas y apedreas a los que te son enviados! ¡Cuántas veces quise reunir a tus hijos, como la gallina reúne bajo sus alas a los pollitos, y tú no quisiste!
 
-    ¡A ¡Jerusalén, Jerusalén, tú que matas a los profetas, y apedreas a los que te son enviados, ¡cuántas veces quise Yo reunir a tus hijos, como la gallina reúne su pollada debajo de sus alas, y vosotros no lo habéis querido! Ved que vuestra casa os va a quedar desierta. Yo os lo digo, no me volveréis a ver, hasta que llegue el tiempo en que digáis: “¡Bendito el que viene en nombre del Señor!”
+    Por eso, a ustedes la casa les quedará vacía. Les aseguro que ya no me verán más, hasta que llegue el día en que digan: ¡Bendito el viene en nombre del Señor!».
   cierre: Palabra del Señor.

@@ -4,54 +4,49 @@
 fecha: '2026-10-18'
 celebracion: XXIX Domingo del tiempo ordinario
 santo: ''
-fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
 draft: false
 lecturas:
 - tipo: Primera lectura
   cita: Isaías 45, 1. 4-6
   presentacion: Lectura del libro de Isaías.
   texto: |-
-    Así dice Yahvé a su ungido, a Ciro, a quien he tomado de la derecha, para derribar delante de él naciones, y desceñir la cintura de reyes; para abrir ante él las puertas a fin de que las puertas no le estén cerradas. Por amor de Jacob, mi siervo, y por amor de Israel, mi escogido, te llamé por tu nombre; te puse nombre cuando no me conocías aún.
-
-    Yo soy Yahvé, y no hay otro; fuera de Mí no hay Dios alguno. Yo te ceñí cuando no me conocías, a fin de que sepan (todos), desde el Oriente hasta el Occidente, que no hay ninguno fuera de Mí. Yo soy Yahvé, y no hay otro.
+    Así habla el Señor a su ungido, a Ciro, a quien tomé de la mano derecha, para someter ante él a las naciones y desarmar a los reyes para abrir ante él las puertas de las ciudades, de manera que no puedan cerrarse. Por amor a Jacob, mi servidor, y a Israel, mi elegido, yo te llamé por tu nombre, te di un título insigne, sin que tú me conocieras. Yo soy el Señor, y no hay otro, no hay ningún Dios fuera de mí, Yo hice empuñar las armas, sin que tú me conocieras, para que se conozca, desde el Oriente y el Occidente, que no hay nada fuera de mí. Yo soy el Señor, y no hay otro.
   cierre: Palabra de Dios.
 - tipo: Salmo responsorial
-  cita: Salmo 95
+  cita: Salmo 96
   estrofas: |-
-    Cantad a Yahvé un cántico nuevo,
-    cantad a Yahvé, tierras todas.
-    Pregonad su gloria entre los gentiles;
-    sus maravillas entre los pueblos todos.
+    Canten al Señor un canto nuevo,
+    cante al Señor toda la tierra;
+    Anuncien su gloria entre las naciones,
+    y sus maravillas entre los pueblos.
 
-    Porque grande es Yahvé
-    y digno de suma alabanza,
-    temible, más que todos los dioses.
-    Pues todos los dioses de los gentiles son ficción
-    en tanto que Yahvé hizo los cielos.
+    Porque el Señor es grande y muy digno de alabanza,
+    más temible que todos los dioses.
+    Los dioses de los pueblos no son más que apariencia,
+    pero el Señor hizo el cielo;
 
-    Reconoced a Yahvé,
-    oh razas de los pueblos,
-    reconoced a Yahvé la gloria y el poder.
-    Reconoced a Yahvé
-    la gloria de su Nombre.
+    Aclamen al Señor, familias de los pueblos,
+    aclamen la gloria y el poder del Señor;
+    aclamen la gloria del nombre del Señor.
 
-    Adorad a Yahvé en sacro esplendor,
-    oh tierra toda, tiembla ante Él.
-    Anunciad a las naciones: “Reina Yahvé;
-    rige a los pueblos con justicia.”
+    adoren al Señor al manifestarse su santidad:
+    ¡que toda la tierra tiemble ante él!
+    Digan entre las naciones: «¡el Señor reina!
+    El Señor juzgará a los pueblos con rectitud».
 - tipo: Segunda lectura
   cita: 1 Tesalonicenses 1, 1-5
   presentacion: Lectura de la primera carta del apóstol san Pablo a los Tesalonicenses.
   texto: |-
-    Pablo y Silvano y Timoteo, a la Iglesia de los tesalonicenses, en Dios Padre y en el Señor Jesucristo: gracia a vosotros y paz. Siempre damos gracias a Dios por todos vosotros, haciendo sin cesar memoria de vosotros en nuestras oraciones. Nos acordamos ante Dios y Padre nuestro de la obra de vuestra fe, y del trabajo de vuestra caridad, y de la paciencia de vuestra esperanza en nuestro Señor Jesucristo, porque conocemos, hermanos amados de Dios, vuestra elección.
+    Pablo, Silvano y Timoteo saludan a la Iglesia de Tesalónica, que está unida a Dios Padre y al Señor Jesucristo. Llegue a ustedes la gracia y la paz. Siempre damos gracias a Dios por todos ustedes, cuando los recordamos en nuestras oraciones, y sin cesar tenemos presente delante de Dios, nuestro Padre, cómo ustedes han manifestado su fe con obras, su amor con fatigas y su esperanza en nuestro Señor Jesucristo con una firme constancia.
 
-    Pues nuestro Evangelio llegó a vosotros no solamente en palabras, sino también en poder, y en el Espíritu Santo, y con toda plenitud.
+    Sabemos, hermanos amados por Dios, que ustedes han sido elegidos. Porque la Buena Noticia que les hemos anunciado llegó hasta ustedes, no solamente con palabras, sino acompañada de poder, de la acción del Espíritu Santo y de toda clase de dones.
   cierre: Palabra de Dios.
 - tipo: Evangelio
   cita: Mateo 22, 15-21
   presentacion: ✠ Lectura del santo Evangelio según san Mateo.
   texto: |-
-    Entonces los fariseos se fueron y deliberaron cómo le sorprenderían en alguna palabra. Le enviaron, pues, sus discípulos con los herodianos, a decirle: “Maestro, sabemos que eres veraz y que enseñas el camino de Dios con verdad, sin miedo a nadie, porque no miras a la persona de los hombres. Dinos, pues, lo que piensas: ¿es lícito pagar tributo al César o no?”
+    Los fariseos se reunieron entonces para sorprender a Jesús en alguna de sus afirmaciones. Y le enviaron a varios discípulos con unos herodianos, para decirle: «Maestro, sabemos que eres sincero y que enseñas con toda fidelidad el camino de Dios, sin tener en cuenta la condición de las personas, porque tú no te fijas en la categoría de nadie. Dinos qué te parece: ¿Está permitido pagar el impuesto al César o no?».
 
-    Mas Jesús, conociendo su malicia, repuso: “Hipócritas, ¿por qué me tentáis? Mostradme la moneda del tributo”. Y le presentaron un denario. Preguntóles: “¿De quien es esta figura y la leyenda?” Le respondieron: “del César”. Entonces les dijo: “Dad, pues, al César lo que es del César, y a Dios lo que es de Dios”.
+    Pero Jesús, conociendo su malicia, les dijo: «Hipócritas, ¿por qué me tienden una trampa? Muéstrenme la moneda con que pagan el impuesto». Ellos le presentaron un denario. Y él les preguntó: «¿De quién es esta figura y esta inscripción?». Le respondieron: «Del César». Jesús les dijo: «Den al César lo que es del César, y a Dios, lo que es de Dios».
   cierre: Palabra del Señor.
