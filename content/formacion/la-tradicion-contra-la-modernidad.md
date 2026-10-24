@@ -41,9 +41,7 @@ Independientemente de las condiciones históricas actuales, diferentes a las de 
 
 También en la escolástica encontramos otra síntesis de raciocinio y trascendencia. En la escolástica medieval se desarrolló una de las síntesis intelectuales más profundas de Occidente. Aquellos autores, como Tomás de Aquino, integraron la filosofía clásica[8] con la tradición cristiana, construyendo una visión del mundo en la que la razón y la fe colaboraban en lugar de enfrentarse. Este enfoque plasma la idea de cómo la modernidad debería abordar las cuestiones que perturban el sentido del ser en tanto sujeto social. La sociedad medieval entendía la realidad como una estructura bien formada y jerarquizada, orientada hacia fines superiores. La política, la economía y la cultura no eran ámbitos autónomos, sino que pertenecían de forma orgánica a algo más amplio. En tanto, para aquellos críticos de la modernidad, esta concepción logra ofrecer una alternativa consciente al relativismo contemporáneo. No se trata de copiar y pegar lo que alguna vez fueron las instituciones medievales, sino de recuperar aquellas ideas que formaron la vida humana y que deben estar orientadas, en primera instancia, a la trascendencia por encima de los intereses inmediatos.
 
-
 ### **Los dioses débiles**
-
 
 A lo largo de la historia, las grandes civilizaciones no fueron desapareciendo porque fueron conquistadas por enemigos extranjeros. Desaparecieron porque olvidaron aquello que les otorgaba significado. Una verdadera decadencia no comienza en sí con la ruina de la economía, la derrota militar en el campo de batalla o la fragmentación de las castas políticas, sino con la pérdida del elemento orientador hacia algo superior que existe en el principio básico del ser en comunidad. Toda cultura se organiza de alguna manera alrededor de un concepto de lo sagrado; toda civilización posee un norte desde el cual se van ordenando sus valores, sus instituciones y sus aspiraciones. Durante siglos, Occidente logró reconocer una realidad trascendental que se sitúa por encima de la voluntad del ser. Pero, con la venida de la modernidad y el pacto del nuevo hombre, emprendió una rebelión contra todas las formas de autoridad espiritual. Lo que comenzó como un intento de emancipación del individuo, una separación del concepto de colectivo, terminó convirtiéndose en una sustitución. Los antiguos dioses fueron expulsados del panteón donde se adoraban para dar lugar a la adoración de elementos terrenos y artificiales. Esas nuevas divinidades se transformaron en objetos más cercanos y más cómodos para el hombre, accesibles al sujeto. La democracia, el progreso y los derechos del hombre dejaron de ser conceptos políticos para convertirse en principios sagrados e insustituibles, cuya legitimidad ya no puede ser cuestionada por nadie sin antes provocar alguna clase de escándalo.
 
@@ -64,7 +62,6 @@ El individuo se miente a sí mismo creyendo que controla el mecanismo que utiliz
 En cuanto a la posmodernidad, esta no logró corregir los defectos que la modernidad trajo consigo, sino que los amplificó, llevándolos hasta su última consecuencia. Si en la modernidad se destruyeron las evidencias de la tradición, la posmodernidad destruyó las certezas de la modernidad. La verdad fue reducida a una construcción subjetiva[17]; la identidad, a una elección circunstancial[18] que puede ser modificada conforme a los gustos de cada sujeto. Y, si consideramos el concepto de historia, la posmodernidad lo transformó en una sucesión arbitraria de relatos sin orden ni dirección. Todo se volvió meramente relativo porque ya no existe ningún principio sostenible que reconozca algo superior al individuo. Todas las jerarquías fueron consideradas sospechosas o destruidas. Toda autoridad también lo fue. Toda tradición fue sometida a una revisión permanente. Lo que emerge de este proceso definitivamente no es una sociedad más libre, sino una civilización hundida e incapaz de distinguir entre la esencia y lo accesorio[19]. El resultado final es un nihilismo extremo; un mundo donde todo es discutible, donde la propia ciencia, que en otras épocas era foco de una supuesta verdad, ahora pasa a ser relegada o casi desmentida por la ideología. Donde toda opinión fuera del círculo de aprobación es considerada equivocada y donde cualquier referencia a la verdad trascendente es vista como un fósil.
 
 La crisis que está afectando a Occidente no puede ser considerada únicamente como un problema político, económico o cultural. Parece ser la punta de lanza de algo que va más allá de los entes dominadores actuales, algo que supera a los Estados. Fenómenos que no parecen explicables culpando solamente al sujeto que desde hace siglos es expulsado de toda tierra en la que pone sus pies, cuestión que desarrollaremos más adelante. Ese sujeto que enferma las raíces, pudre el tallo y envenena la fruta. Se trata de una crisis espiritual nacida de la sustitución de los antiguos principios que dominaron nuestras tierras, reemplazados por ídolos incapaces de sostener una civilización. La democracia, el supuesto progreso y las ideologías que deforman el físico y la mente se transformaron en condiciones sagradas porque ocuparon a la fuerza los lugares que antes pertenecían a una realidad superior. Pero son dioses débiles porque no exigen elevación, sacrificio ni transformación interna. Proponen comodidad, destruyendo todo lo que tocan. Aquella civilización que adore tales principios termina produciendo individuos adaptados a la administración de sus necesidades, pero incapaces de mirar más allá de su ego. En estas cosas reside la tragedia profunda de la modernidad.
-
 
 ### **Disciplina y carácter. Sobrevivir al Kali Yuga.**
 
@@ -88,7 +85,6 @@ Esta cuarta disciplina no opera de manera aislada, ya que la mente, sin alguna c
 
 Lo decisivo del Kali Yuga no consiste en predecir el futuro ni en intentar controlar procesos históricos que exceden al individuo. Consiste, por lo tanto, en determinar qué clase de hombre podemos ser mientras ese proceso tiene lugar. Mantenerse firme frente a las ruinas del mundo moderno[24]. Toda época se divide entre oportunidades para la decadencia y oportunidades para la grandeza. El hombre debe elegir cuál de ellas emprender, sin caer antes en el ostracismo. Sin esperar que las circunstancias de la vida mejoren. Debe comprender las transformaciones; debe comenzar el camino antes de que el fuego llegue a consumir los campos. En esto están las formas: cuando la mente adquiere claridad, el discernimiento se vuelve firme y la vía de la acción se transforma en un camino recto.
 
-
 ### **El camino del héroe.**
 
 En su mayoría, los hombres creen que su vida comienza bajo un mundo exterior. Creen que el problema fundamental nada más consiste en obtener riquezas, reconocimiento, seguridad o alguna clase de influencia. Orientan su existencia en base a metas visibles y comparan su valor según los resultados que consideran adecuados dentro de su organización social. Sin embargo, las grandes tradiciones destacan otras características que son más relevantes que estas. El verdadero escenario de aventura que el hombre puede realizar no es el mercado, ni la política, ni lo social. Es nada más y nada menos que su alma. La batalla constante y decisiva no se libra contra enemigos externos, sino contra las limitaciones que el individuo tiene en su interior. En este sentido, entendemos que la estructura del Camino del Héroe, desarrollada por Joseph Campbell[31] (escritor estadounidense), no constituye únicamente un patrón narrativo persistente a lo largo de la historia en mitos y leyendas. Es una descripción simbólica de algo más grande, de una identidad, y esto permite emprender una búsqueda de una forma superior de existencia.
@@ -110,12 +106,6 @@ Ernst Jünger entendió que toda verdadera formación[36] depende de atravesar p
 La meta final del recorrido puede expresarse mediante una palabra de la Grecia antigua: areté[39]. Esta concepción no designa simplemente éxito; designa excelencia. Un significado desarrollado en cuanto a las potencias más elevadas de la naturaleza humana. La areté exige disciplina, valentía, inteligencia[40], autocontrol y una importante nobleza espiritual. No puede obtenerse por herencia ni por decreto. Debe conquistarse. Cada acción, cada decisión y cada sacrificio participan en esa construcción.
 
 Y al final del camino, al héroe no le espera un trono ni una recompensa material. Lo que va a encontrar es algo más valioso: una nueva concepción de sí mismo. Ya no vive como un personaje dentro de una existencia vacía; actúa en una dirección consciente. Deja de estar encerrado en la pequeña cápsula individual con la que comenzó el viaje y se mueve hacia un mundo donde es un componente más de una maquinaria superior. Esta es la enseñanza que busca transmitir permanentemente el mito heroico: la vida humana alcanza su plenitud convirtiéndose en algo más elevado. No hay que conquistar el mundo, sino el propio ser. La verdadera victoria no es el dominio de otros hombres, sino la aproximación constante a la excelencia[39].
-
-
-
-
-
-
 
 ###### **_Referencias Bibliografía:_**
 
@@ -199,19 +189,6 @@ Y al final del camino, al héroe no le espera un trono ni una recompensa materia
 
 ###### _[40] Werner Jaeger. Paideia: los ideales de la cultura griega. Ciudad de México: Fondo de Cultura Económica, 2001._
 
-
-
-
-
-
-
 ### 
 
-
-
-
-
-
-
-
-###
+Blog de G. Zaballa: [https://gzaballa.blogspot.com/2026/06/ensayos-matar-la-hidra-la-tradicion.html](https://gzaballa.blogspot.com/2026/06/ensayos-matar-la-hidra-la-tradicion.html)
