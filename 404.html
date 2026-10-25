@@ -39,6 +39,7 @@
   /* Con dos enlaces, cada uno en un solo renglón: el título se recorta con "…". */
   .live-banner__row:has(> a + a) .live-banner__link { flex-wrap: nowrap; }
   .live-banner__row:has(> a + a) .live-banner__title { flex: 0 1 auto; }
+  .live-banner__row:has(> a + a) .live-banner__label, .live-banner__row:has(> a + a) .live-banner__cta { flex: none; white-space: nowrap; }
   /* Con dos enlaces, en pantallas medianas y chicas: sin el "Ver ... →" (todo el renglón ya es el enlace). */
   @media (max-width: 1100px) {
     .live-banner__row:has(> a + a) .live-banner__cta { display: none; }
