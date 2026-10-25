@@ -9,6 +9,12 @@ en cada carga y muestra/oculta el aviso segun el estado:
     {"live": false, "videoId", "url", "title", "endedAt"}    -> "Directo finalizado" (hasta 6 h)
     {"live": false}                                          -> sin aviso
 
+Ademas, si se pudo consultar, dos datos extra (el banner los muestra como enlaces aparte):
+    "upcoming": {"videoId", "url", "title", "start"}   -> directo programado mas proximo
+    "last":     {"videoId", "url", "title", "endedAt"} -> ultimo directo terminado
+Salen de la lista de subidas del canal + videos.list (2 unidades de cuota por consulta,
+contra 100 de una busqueda), asi que no cambian el gasto de cuota de forma apreciable.
+
 Interruptor manual (CMS: Páginas > "🔴 Transmisión en vivo", content/pages/live.yml)
 ----------------------------------------------------------------------------------
 Al ACTIVARLO (pasa de apagado a encendido) se publica "en vivo" al toque y se
@@ -150,6 +156,49 @@ def api_state(api_key, prev):
     return "state", {"live": False}, ended
 
 
+def extras(api_key):
+    """{"upcoming": ..., "last": ...} desde las ultimas subidas del canal, o None si la API fallo.
+    Los directos programados y los ya emitidos aparecen en la lista de subidas (UU...)."""
+    try:
+        pl = api_get("playlistItems", {"part": "contentDetails", "playlistId": "UU" + CHANNEL_ID[2:],
+                                       "maxResults": "15", "key": api_key})
+        ids = [i["contentDetails"]["videoId"] for i in pl.get("items") or [] if i.get("contentDetails")]
+        if not ids:
+            return {}
+        vd = api_get("videos", {"part": "snippet,liveStreamingDetails", "id": ",".join(ids), "key": api_key})
+    except Exception as e:
+        print("WARNING: no se pudieron leer las subidas del canal:", e)
+        return None
+    ahora = datetime.datetime.now(datetime.timezone.utc)
+    prox, ult = [], []
+    for v in vd.get("items") or []:
+        det, sn = v.get("liveStreamingDetails") or {}, v.get("snippet") or {}
+        base = {"videoId": v["id"], "url": "https://www.youtube.com/watch?v=" + v["id"], "title": sn.get("title", "")}
+        if sn.get("liveBroadcastContent") == "upcoming" and det.get("scheduledStartTime"):
+            start = det["scheduledStartTime"]
+            # un programado que nunca arranco no se anuncia para siempre: 2 h de gracia
+            if (ahora - parse_iso(start)).total_seconds() < 2 * 3600:
+                prox.append(dict(base, start=start))
+        elif det.get("actualEndTime"):
+            ult.append(dict(base, endedAt=det["actualEndTime"]))
+    out = {}
+    if prox:
+        out["upcoming"] = min(prox, key=lambda x: x["start"])
+    if ult:
+        out["last"] = max(ult, key=lambda x: x["endedAt"])
+    return out
+
+
+def con_extras(new, api_key, prev):
+    """Agrega upcoming/last al estado; si la API fallo, conserva los del estado anterior."""
+    ex = extras(api_key)
+    if ex is None:
+        ex = {k: prev[k] for k in ("upcoming", "last") if k in prev}
+    new = {k: v for k, v in new.items() if k not in ("upcoming", "last")}
+    new.update(ex)
+    return new
+
+
 def main():
     toggle = manual_override()
     prev = read_prev()
@@ -166,6 +215,8 @@ def main():
             new = {"live": True, "url": CHANNEL_LIVE_URL, "title": "Transmisión en vivo"}
         new["manual"] = True
         new["since"] = now_iso()
+        if api_key:
+            new = con_extras(new, api_key, prev)
         write_if_changed(new)
         return 0
 
@@ -185,11 +236,12 @@ def main():
             termino_la_nueva = bool(ended) and parse_iso(ended) > parse_iso(since)
             if prev.get("live") and horas_desde(since) < MANUAL_MAX_HORAS and not termino_la_nueva:
                 print("Interruptor manual vigente: se mantiene el aviso en vivo")
+                write_if_changed(con_extras(prev, api_key, prev))
                 return 0
         new["manual"] = True
         new["since"] = since
 
-    write_if_changed(new)
+    write_if_changed(con_extras(new, api_key, prev))
     return 0
 
 

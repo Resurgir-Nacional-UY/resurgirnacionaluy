@@ -349,51 +349,85 @@
 
 <header class="site-header">
   <style>
-    .live-banner { display: none; background: #B3261E; }
-    .live-banner.is-live, .live-banner.is-recent { display: block; }
-    .live-banner.is-recent { background: #1B3F73; }
-    .live-banner.is-recent .live-banner__dot { display: none; }
-    .live-banner__link { display: flex; align-items: center; justify-content: center; gap: 0.6rem; max-width: 1120px; margin-inline: auto; padding: 0.55rem var(--gutter); color: #fff; text-decoration: none; font-family: "Archivo", sans-serif; font-size: 0.85rem; flex-wrap: wrap; }
+    .live-banner { display: none; background: #1B3F73; }
+    .live-banner.is-on { display: block; }
+    .live-banner.is-live { background: #B3261E; }
+    .live-banner__row { display: flex; flex-wrap: wrap; max-width: 1120px; margin-inline: auto; }
+    .live-banner__link { flex: 1 1 320px; min-width: 0; display: flex; align-items: center; justify-content: center; gap: 0.6rem; padding: 0.55rem var(--gutter); color: #fff; text-decoration: none; font-family: "Archivo", sans-serif; font-size: 0.85rem; flex-wrap: wrap; }
+    .live-banner__link + .live-banner__link { border-left: 1px solid rgba(255,255,255,0.22); }
+    .live-banner__link--live { background: #B3261E; }
     .live-banner__link:hover { opacity: 0.88; }
     .live-banner__dot { width: 8px; height: 8px; border-radius: 50%; background: #fff; flex: none; }
     .live-banner__label { font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
-    .live-banner__title { opacity: 0.92; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 40ch; }
-    .live-banner__cta { font-weight: 600; text-decoration: underline; white-space: nowrap; margin-left: auto; }
+    .live-banner__title { opacity: 0.92; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 40ch; min-width: 0; }
+    .live-banner__cta { font-weight: 600; text-decoration: underline; white-space: nowrap; }
+    @media (max-width: 700px) {
+      .live-banner__link + .live-banner__link { border-left: 0; border-top: 1px solid rgba(255,255,255,0.22); }
+    }
   </style>
   <div class="live-banner" id="live-banner">
-    <a class="live-banner__link" id="live-banner-link" href="https://www.youtube.com/@ResurgirNacional/live" target="_blank" rel="noopener">
-      <span class="live-banner__dot" aria-hidden="true"></span>
-      <span class="live-banner__label">Estamos en vivo ahora</span>
-      <span class="live-banner__title" id="live-banner-title"></span>
-      <span class="live-banner__cta">Ver en YouTube →</span>
-    </a>
+    <div class="live-banner__row" id="live-banner-row"></div>
   </div>
   <script>
+    /* Barra de YouTube (lee /live-status.json):
+       - en vivo ahora (rojo);
+       - directo terminado hace menos de 6 h;
+       - directo programado ("Próximo directo"), y con él también el último directo ya hecho,
+         aunque tenga más de 6 h: así quedan los dos enlaces. */
     (function () {
       var b = document.getElementById('live-banner');
-      if (!b) return;
+      var row = document.getElementById('live-banner-row');
+      if (!b || !row) return;
+      var TZ = 'America/Montevideo';
+      function dia(ms) { return new Intl.DateTimeFormat('en-CA', { timeZone: TZ }).format(ms); }
+      function cuando(ms) {
+        var hora = new Intl.DateTimeFormat('es-UY', { timeZone: TZ, hour: '2-digit', minute: '2-digit' }).format(ms);
+        var hoy = dia(Date.now()), d = dia(ms);
+        if (d === hoy) return 'hoy, ' + hora;
+        if (d === dia(Date.now() + 864e5)) return 'mañana, ' + hora;
+        return new Intl.DateTimeFormat('es-UY', { timeZone: TZ, weekday: 'short', day: 'numeric', month: 'short' }).format(ms) + ', ' + hora;
+      }
+      function fecha(ms) { return new Intl.DateTimeFormat('es-UY', { timeZone: TZ, day: 'numeric', month: 'short' }).format(ms); }
+      function enlace(tipo, url, etiqueta, titulo, cta) {
+        var a = document.createElement('a');
+        a.className = 'live-banner__link live-banner__link--' + tipo;
+        a.href = url; a.target = '_blank'; a.rel = 'noopener';
+        if (tipo === 'live') { var dot = document.createElement('span'); dot.className = 'live-banner__dot'; dot.setAttribute('aria-hidden', 'true'); a.appendChild(dot); }
+        [['live-banner__label', etiqueta], ['live-banner__title', titulo ? '— ' + titulo : ''], ['live-banner__cta', cta]].forEach(function (p) {
+          if (!p[1]) return;
+          var s = document.createElement('span'); s.className = p[0]; s.textContent = p[1]; a.appendChild(s);
+        });
+        row.appendChild(a);
+      }
       fetch('/live-status.json', { cache: 'no-store' }).then(function (r) {
         return r.ok ? r.json() : null;
       }).then(function (d) {
-        if (!d || !d.url) return;
-        var link = document.getElementById('live-banner-link');
-        var title = document.getElementById('live-banner-title');
-        var label = b.querySelector('.live-banner__label');
-        var cta = b.querySelector('.live-banner__cta');
-        if (d.live) {
-          b.classList.add('is-live');
+        if (!d) return;
+        var ahora = Date.now();
+        var prox = d.upcoming && d.upcoming.url ? d.upcoming : null;
+        var inicio = prox ? Date.parse(prox.start) : NaN;
+        if (prox && (isNaN(inicio) || ahora - inicio > 2 * 3600 * 1000)) prox = null;  // nunca arrancó
+        var mostrado = null;
+        if (d.live && d.url) {
+          enlace('live', d.url, 'Estamos en vivo ahora', d.title, 'Ver en YouTube →');
+          mostrado = d.videoId;
         } else {
-          // Directo terminado: el aviso queda hasta 6 horas (si no empezo otro antes)
-          var ended = d.endedAt ? Date.parse(d.endedAt) : NaN;
-          var ms = Date.now() - ended;
-          if (isNaN(ended) || ms > 6 * 3600 * 1000) return;
-          var min = Math.max(1, Math.round(ms / 60000));
-          label.textContent = 'Directo finalizado · hace ' + (min < 60 ? min + ' min' : Math.round(min / 60) + ' h');
-          cta.textContent = 'Ver grabación →';
-          b.classList.add('is-recent');
+          var fin = d.endedAt ? Date.parse(d.endedAt) : NaN;
+          var ms = ahora - fin;
+          if (d.url && !isNaN(fin) && ms <= 6 * 3600 * 1000) {
+            var min = Math.max(1, Math.round(ms / 60000));
+            enlace('recent', d.url, 'Directo finalizado · hace ' + (min < 60 ? min + ' min' : Math.round(min / 60) + ' h'), d.title, 'Ver grabación →');
+            mostrado = d.videoId;
+          } else if (prox && d.last && d.last.url) {
+            enlace('recent', d.last.url, 'Último directo · ' + fecha(Date.parse(d.last.endedAt)), d.last.title, 'Ver grabación →');
+            mostrado = d.last.videoId;
+          }
         }
-        link.href = d.url;
-        if (title && d.title) title.textContent = '— ' + d.title;
+        if (prox && prox.videoId !== mostrado) {
+          enlace('upcoming', prox.url, inicio <= ahora ? 'Próximo directo · empieza en breve' : 'Próximo directo · ' + cuando(inicio), prox.title, 'Ver en YouTube →');
+        }
+        if (row.children.length) b.classList.add('is-on');
+        if (d.live && row.children.length === 1) b.classList.add('is-live');  // solo el vivo: toda la barra roja
       }).catch(function () {});
     })();
   </script>
@@ -433,7 +467,7 @@
 <p>Hace un tiempo, por gentil deferencia del doctor don Miguel Ayuso Torres, recibimos el tomo XII de los <em>Anales de la Fundación Francisco Elías de Tejada.</em> Publicación cuidada y valiosísima que puede <em>“enorgullecerse de ser un punto de referencia en el tradicionalismo de raíz hispánica”,</em> y que por eso tomamos con respeto y afecto en nuestras manos.</p>
 <p>En primer término debe anotarse que este volumen se abre con una sección de notas <em>In Memoriam,</em> a cargo del doctor Ayuso Torres, Secretario del Patronato de la Fundación. De esas páginas queremos destacar dos, que con justicia exaltan las figuras de los queridos camaradas y amigos inolvidables: Eduardo Víctor Ordóñez y Álvaro Pacheco Seré. Ellos representaron las orillas de la Patria Rioplatense. El recuerdo de don Miguel nos hace entrar en las hondas huellas del paso por esta vida de aquellos maestros que nos permiten continuar aprendiendo. Ambos, a no dudar, están <em>“rogando ante el Altísimo por todos nosotros y su amada hispanidad”.</em></p>
 <p>Proseguimos la lectura con creciente interés cuando en la Sección Estudios y tal vez movidos por la cercanía del segundo centenario de la iniciación de la crisis del Imperio Romano Hispánico (1808-2008) llegamos a un título en el que nos detuvimos. Éste no era otro que el que encabeza esta nota: <em>“El problema de la Independencia de América”.</em> El trabajo lucía la firma de Federico Suárez Verdeguer que <em>“fuera Catedrático de Historia en la Universidad de Santiago de Compostela…”</em> trasladándose más tarde a Pamplona para dar comienzo a la que luego fue Facultad de Filosofía y Letras de la Universidad de Navarra, donde creó el Seminario de Historia Moderna. Como Director de la <em>“Colección Historia”</em> de esa Casa de Estudios debe destacarse en particular la edición de los <em>“Documentos del reinado de Fernando VII en trece volúmenes aparecidos entre 1965 y 1972”.</em></p>
-<p>De tan insigne profesor no podíamos dar crédito a nuestros ojos y entendederas que en la página 55 del tomo que nos ocupa estampara lo siguiente: <em>“Así como en España… los Reinos de América reaccionaron como los españoles creando Juntas para la defensa de los derechos del Rey. El problema jurídico nace cuando las Juntas de América</em> rehúsan el reconocimiento a la Junta Central o la Regencia_”_ (las negritas son nuestras). <em>“En 1814</em> —agrega— <em>las circunstancias cambian y los argumentos deben cambiar también. Fernando VII regresa a España en la plenitud de su soberanía y con respecto a América vuelve a ser como antes de 1808. Si se levantaron en defensa de los derechos del Rey, su alzamiento ya no tiene objeto”.</em></p>
+<p>De tan insigne profesor no podíamos dar crédito a nuestros ojos y entendederas que en la página 55 del tomo que nos ocupa estampara lo siguiente: <em>“Así como en España… los Reinos de América reaccionaron como los españoles creando Juntas para la defensa de los derechos del Rey. El problema jurídico nace cuando las Juntas de América</em> rehúsan el reconocimiento a la Junta Central o la Regencia_”<em> (las negritas son nuestras). </em>“En 1814_ —agrega— <em>las circunstancias cambian y los argumentos deben cambiar también. Fernando VII regresa a España en la plenitud de su soberanía y con respecto a América vuelve a ser como antes de 1808. Si se levantaron en defensa de los derechos del Rey, su alzamiento ya no tiene objeto”.</em></p>
 <p>Cabe entonces preguntar cuál era la situación legal de América en los comienzos del siglo XIX. La respuesta se puede sintetizar en forma clara y categórica. Las Indias no eran colonias sino Reinos y estaban unidos a la Corona de Castilla fuera de toda vinculación con el Estado español. Esto era lo que establecía el ordenamiento jurídico originado en los Pactos celebrados por el nieto de los Reyes Católicos con las autoridades indígenas locales.</p>
 <p>Todo nos lleva a la época de Carlos V, cuando el César firma, a su paso por Barcelona, en el año 1519, los documentos por medio de los cuales se <em>“estableció la Unidad e Intangibilidad de América”.</em> Durante tres siglos, ése fue el Estatuto.</p>
 <p>Ya en el siglo XVIII el accionar de las logias masónicas y la difusión de las ideas iluministas golpearon la estructura sobre la que se apoyaba la relación de los Reinos de Indias y la Monarquía Católica. Como un ejemplo de esto podemos señalar que el fundamento teológico de la autoridad de los Austrias se fue debilitando hasta ser sustituido por el laicismo del poder civil que hizo el absolutismo de la dinastía borbónica, llegada con Felipe V. Un absolutismo cerrado que eliminó el peso iluminador de la Iglesia al que se agregó la adopción del liberalismo con sus ideas en educación y economía.</p>
