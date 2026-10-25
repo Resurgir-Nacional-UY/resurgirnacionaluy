@@ -1,6 +1,6 @@
 ---
-title: Y si lo Anterior Falla (I)
-slug: la-decadencia-del-uruguay
+title: La apología de la degradación en Uruguay
+slug: la-decadencia-y-degeneracion-del-uruguay
 date: 2026-10-24
 author: Martín Schiaffino
 tema: Cultura y sociedad
@@ -217,7 +217,6 @@ La disyuntiva histórica que se le presenta a la República Oriental del Uruguay
 Solo mediante la firmeza inquebrantable de un sistema que castigue la contumacia, proteja el hogar y devuelva al habitante honesto la tranquilidad de transitar su suelo sin temor, podrá erigirse nuevamente una Nación digna de su historia. El orden y la justicia no constituyen tiranía alguna, sino la condición indispensable de toda libertad verdadera.
 
 **_«¿Quién ha dicho que cuando insultan nuestros sentimientos, antes que reaccionar como hombres, estamos obligados a ser amables? Bien está, sí, la dialéctica como primer instrumento de comunicación. Pero no hay más dialéctica admisible que la dialéctica de los puños y de las pistolas cuando se ofende a la justicia o a la Patria»_**, José Antonio Primo de Rivera.
-
 
 _—Martín Schiaffino_
 
