@@ -332,7 +332,7 @@
 
 <header class="site-header">
   <style>
-    .live-banner { display: none; background: #1B3F73; }
+    .live-banner { overflow: hidden; display: none; background: #1B3F73; }
     .live-banner.is-on { display: block; }
     .live-banner.is-live { background: #B3261E; }
     .live-banner__row { display: flex; flex-wrap: wrap; max-width: 1120px; margin-inline: auto; }
@@ -346,6 +346,9 @@
     .live-banner__cta { font-weight: 600; text-decoration: underline; white-space: nowrap; }
     @media (max-width: 700px) {
       .live-banner__link + .live-banner__link { border-left: 0; border-top: 1px solid rgba(255,255,255,0.22); }
+      /* En el teléfono, con dos enlaces, solo la etiqueta (último / próximo y fecha), que entra entera. */
+      .live-banner__row:has(> a + a) .live-banner__title { display: none; }
+      .live-banner__row:has(> a + a) .live-banner__label { letter-spacing: 0.08em; font-size: 0.8rem; }
     }
     /* Con dos enlaces, cada uno en un solo renglón: el título se recorta con "…". */
     .live-banner__row:has(> a + a) .live-banner__link { flex-wrap: nowrap; }
