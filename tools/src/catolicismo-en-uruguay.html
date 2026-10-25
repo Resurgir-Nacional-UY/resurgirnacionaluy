@@ -447,6 +447,11 @@
     @media (max-width: 700px) {
       .live-banner__link + .live-banner__link { border-left: 0; border-top: 1px solid rgba(255,255,255,0.22); }
     }
+    /* Con dos enlaces, en pantallas medianas y chicas: sin el "Ver ... →" (todo el renglón ya es el enlace). */
+    @media (max-width: 1100px) {
+      .live-banner__row:has(> a + a) .live-banner__cta { display: none; }
+      .live-banner__row:has(> a + a) .live-banner__title { max-width: 30ch; }
+    }
   </style>
   <div class="live-banner" id="live-banner">
     <div class="live-banner__row" id="live-banner-row"></div>
@@ -464,7 +469,7 @@
       var TZ = 'America/Montevideo';
       function dia(ms) { return new Intl.DateTimeFormat('en-CA', { timeZone: TZ }).format(ms); }
       function cuando(ms) {
-        var hora = new Intl.DateTimeFormat('es-UY', { timeZone: TZ, hour: '2-digit', minute: '2-digit' }).format(ms);
+        var hora = new Intl.DateTimeFormat('es-UY', { timeZone: TZ, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(ms);
         var hoy = dia(Date.now()), d = dia(ms);
         if (d === hoy) return 'hoy, ' + hora;
         if (d === dia(Date.now() + 864e5)) return 'mañana, ' + hora;
