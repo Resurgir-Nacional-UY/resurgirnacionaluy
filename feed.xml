@@ -6,7 +6,14 @@
   <atom:link href="https://resurgirnacionaluy.org/feed.xml" rel="self" type="application/rss+xml" />
   <description>Artículos de formación del movimiento Resurgir Nacional.</description>
   <language>es-uy</language>
-  <lastBuildDate>Sat, 24 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Sun, 25 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>La industria uruguaya</title>
+    <link>https://resurgirnacionaluy.org/la-industria-uruguaya.html</link>
+    <guid isPermaLink="true">https://resurgirnacionaluy.org/la-industria-uruguaya.html</guid>
+    <pubDate>Sun, 25 Oct 2026 12:00:00 +0000</pubDate>
+    <description>Pequeño escrito sobre la industria uruguaya y su historia.</description>
+  </item>
   <item>
     <title>La apología de la degradación en Uruguay</title>
     <link>https://resurgirnacionaluy.org/la-decadencia-del-uruguay.html</link>
