@@ -69,7 +69,11 @@ Tengamos apertura a escuchar a aquel que se sienta en la silla del pescador. Use
 
 Pido a la Virgen de los Treinta y Tres, patrona del Uruguay, a quien aquellos treinta y tres orientales supieron encomendarse, que interceda por cada uno de nosotros para que sepamos actuar de tal manera que nuestra patria vuelva a ser grande.
 
-**_¡Que viva Cristo Rey y que viva Su Santidad León XIV!_**
+#### **_¡Que viva Cristo Rey y que viva Su Santidad León XIV!_**
+
+#### 
+
+**_—Pablo N. Carrasco._**
 
 _Bibliografía:_
 
