@@ -1,7 +1,7 @@
 ---
 title: 'León XIV en Uruguay: fe, patria y verdad frente a la falsa laicidad'
 slug: leonxiv-en-uruguay-catolicismo
-date: 2026-10-26
+date: 2026-10-25
 author: Pablo N. Carrasco
 tema: Fe católica
 summary: Una defensa firme de la identidad católica del Uruguay, donde se sostiene que la visita del papa León XIV constituye una oportunidad para reabrir el debate sobre el lugar de la religión en la vida pública nacional. La laicidad no debe confundirse con la hostilidad hacia la religión, y que reconocer la herencia católica del Uruguay no implica pretender imponer una confesión religiosa.
