@@ -6,7 +6,14 @@
   <atom:link href="https://resurgirnacionaluy.org/feed.xml" rel="self" type="application/rss+xml" />
   <description>Artículos de formación del movimiento Resurgir Nacional.</description>
   <language>es-uy</language>
-  <lastBuildDate>Sun, 25 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 26 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>León XIV en Uruguay: fe, patria y verdad frente a la falsa laicidad</title>
+    <link>https://resurgirnacionaluy.org/leonxiv-en-uruguay-catolicismo.html</link>
+    <guid isPermaLink="true">https://resurgirnacionaluy.org/leonxiv-en-uruguay-catolicismo.html</guid>
+    <pubDate>Mon, 26 Oct 2026 12:00:00 +0000</pubDate>
+    <description>Una defensa firme de la identidad católica del Uruguay, donde se sostiene que la visita del papa León XIV constituye una oportunidad para reabrir el debate sobre el lugar de la religión en la vida pública nacional. La laicidad no debe confundirse con la hostilidad hacia la religión, y que reconocer la herencia católica del Uruguay no implica pretender imponer una confesión religiosa.</description>
+  </item>
   <item>
     <title>La industria uruguaya</title>
     <link>https://resurgirnacionaluy.org/la-industria-uruguaya.html</link>
