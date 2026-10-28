@@ -6,7 +6,14 @@
   <atom:link href="https://resurgirnacionaluy.org/feed.xml" rel="self" type="application/rss+xml" />
   <description>Artículos de formación del movimiento Resurgir Nacional.</description>
   <language>es-uy</language>
-  <lastBuildDate>Sun, 25 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 28 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>EL ÚLTIMO CESAR EN EL RECUERDO.</title>
+    <link>https://resurgirnacionaluy.org/benito-mussolini-marcha-sobre-roma.html</link>
+    <guid isPermaLink="true">https://resurgirnacionaluy.org/benito-mussolini-marcha-sobre-roma.html</guid>
+    <pubDate>Wed, 28 Oct 2026 12:00:00 +0000</pubDate>
+    <description>A raíz de la conmemoración de la marcha sobre roma, compartimos este artículo del historiador uruguayo Luis Alfredo Andregnette Capurro, que abarca la cuestión del catolicismo y la figura del Duce.</description>
+  </item>
   <item>
     <title>La industria uruguaya</title>
     <link>https://resurgirnacionaluy.org/la-industria-uruguaya.html</link>
