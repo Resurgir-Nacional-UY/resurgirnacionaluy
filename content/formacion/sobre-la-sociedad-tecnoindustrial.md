@@ -40,7 +40,7 @@ Volviendo a lo que nos compete en este escrito, daremos una definición sobre el
 Por consiguiente, este individuo, fanático, idiota, tiene, como su realidad recurrente, el de sentirse una víctima social. Un arquetipo fundado en los últimos años por una sociedad que se ha ido fragilidad consecuentemente con los movimientos sociales, que a su vez se victimizan de la misma forma que este individuo previamente mencionado. Denominándose, fehacientemente, como un supuesto “mártir”, des-conexo a lo que relacionamos tradicionalmente como una persona, no por su condición de víctima, sino por su dimensión heroica, por el hecho de haber perecido, gracias a una causa fundamental, que, obviamente este, no posee. Este fanático idiota es una mera víctima, que se reconoce por sus pares por estar situado en un acto de supuesta opresión. Y esto se va forjando constantemente dentro de su grupo, una víctima al servicio de la nada, en otras palabras.
 
 Este fanático idiota, además, ve como principal representante de información los medios de comunicación hegemónicos, que por supuesto están al servicio del ente o individuo coercitivo. Pensando a su vez que todo lo que acontece en la realidad es lo que pasa por sí en el medio primo de información, son canales que refuerzan el orden establecido. Son los únicos medios que el fanático idiota ve como relevantes en su mundo, transformándose en el norte ideológico del individuo. Como ejemplo, el fanático idiota toma como ley fundamental la voz, que proviene representada de los medios y del elemento coercitivo, transformándolo y acatándolo sin objeción alguna.
- 
+
 > _"Aquellos que no saben gobernarse a sí mismos están constantemente buscando un líder al que adorar." (Hermann Hesse)_
 
 Y, aun así, luego de estar constantemente influenciados por otros y manipulados, el fanático idiota aún cree que su único motivo dentro del grupo de pares, es hacer una supuesta “revolución”, cuando en verdad el sistema los utiliza como un peón. Para que realicen de algún modo una parodia revolucionaria de sí mismo, dejando todo el sistema que conviven como está, intacto a conveniencia del ente o individuo coercitivo. De esa forma reproduce el status quo y bloquea cualquier posibilidad de una verdadera revolución. Sin embargo, existen otros factores como las instituciones educativas que en gran medida fortalecen la estupidez de este individuo, el fanático idiota. Ya que dichas instituciones en los últimos años dejaron de educar y pasaron a adoctrinar, con el motivo de formar más, para sus filas. La educación ya no enseña, sino que adoctrina, adormece el espíritu crítico y lo emplea como volante propagandístico. Y me temo, remitir a estos hechos desde mi calidad como docente. Cuando uno ya no tiene un propósito en la vida, uno toma el propósito que te ofrecen como lema de lucha creyendo que, abrazando causas, se pueden mostrar más intelectuales o más empáticos frente a los demás.
@@ -170,7 +170,6 @@ Aunque los docentes enfrentan desafíos como la falta de recursos, interés de l
 —G. Zaballa
 
 Blgo de G. Zaballa: [https://gzaballa.blogspot.com/](https://gzaballa.blogspot.com/)
-
 
 _Bibliografía:_ 
 
