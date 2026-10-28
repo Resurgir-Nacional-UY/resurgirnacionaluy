@@ -9,7 +9,7 @@ source_url: ''
 draft: false
 ---
 
-_(Por el historiador uruguayo, Don Luis Alfredo Andregnette Capurro. Publicado en “Cabildo”, abril-mayo de 2008)_
+_(Extraído de la Revista Verdad, del Sr. Bruno Acosta Pastore. Por el historiador uruguayo, Don Luis Alfredo Andregnette Capurro. Publicado en “Cabildo”, abril-mayo de 2008)_
 
 ![](/media/formacion/hola.jpeg)
 
