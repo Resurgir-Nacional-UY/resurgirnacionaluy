@@ -70,5 +70,4 @@ Tiempo atrás, desde la ciudad de Forli, llegamos hasta la cripta de la familia 
 
 Luego, y en voz alta, repetimos un párrafo de su testamento: 
 
-
 > _“Todo lo que fue hecho no podrá ser borrado, mientras mi espíritu, ya librado de la materia, viva, después de la pequeña existencia terrena, la vida sin fin y universal de Dios”._
