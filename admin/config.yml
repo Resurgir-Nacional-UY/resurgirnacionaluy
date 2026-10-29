@@ -480,6 +480,24 @@ collections:
               - { name: nombre, label: "Uso (ej: Redes sociales)", widget: string }
               - { name: descripcion, label: "Descripción corta", widget: text, required: false }
               - { name: porcentaje, label: "Porcentaje del total", widget: number, value_type: float, required: false }
+          - name: usos_por_mes
+            label: "Mes a mes — en qué se usó el dinero"
+            widget: list
+            required: false
+            hint: >-
+              Cada mes se muestra con un gráfico de torta, solo con porcentajes
+              (sin montos). El primero de la lista es el más reciente. Los %
+              salen del Resumen de la planilla interna, con Desde/Hasta en ese mes.
+            fields:
+              - { name: mes, label: "Mes (ej: Octubre 2026)", widget: string }
+              - name: usos
+                label: "En qué se usó"
+                widget: list
+                hint: "Usá los mismos nombres de «En qué se usa» para que cada categoría mantenga su color. Deberían sumar 100."
+                fields:
+                  - { name: nombre, label: "Categoría (ej: Redes sociales)", widget: string }
+                  - { name: porcentaje, label: "Porcentaje", widget: number, value_type: float }
+              - { name: nota, label: "Aclaración (opcional)", widget: text, required: false }
 
       - name: live
         label: "🔴 Transmisión en vivo"

@@ -274,6 +274,33 @@
     .fin-ini--img { grid-template-columns: 1fr; }
     .fin-ini__img { min-height: 0; aspect-ratio: 16 / 9; }
   }
+  /* Mes a mes: una dona por mes. Paleta categorica fija (cada categoria
+     conserva su color en todos los meses), con su version para modo oscuro. */
+  .fin-months-wrap { --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; --series-4: #eda100; --series-5: #e87ba4; --series-6: #6250d6; --series-other: #9a978d; }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) .fin-months-wrap { --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500; --series-5: #d55181; --series-6: #9085e9; --series-other: #6f6c64; }
+  }
+  :root[data-theme="dark"] .fin-months-wrap { --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500; --series-5: #d55181; --series-6: #9085e9; --series-other: #6f6c64; }
+  .fin-months-wrap { margin-top: 2.4rem; }
+  .fin-months-wrap > h3 { font-size: var(--step-1); }
+  .fin-months { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 21rem), 1fr)); gap: 1rem; margin-top: 1.1rem; }
+  .fin-month { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 1.1rem 1.25rem 1.25rem; }
+  .fin-month__title { font-family: "Archivo", system-ui, sans-serif; font-weight: 600; font-size: var(--step--1); letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); }
+  .fin-month__body { display: flex; align-items: center; gap: 1.25rem; margin-top: 0.8rem; }
+  .fin-donut { width: 7.5rem; height: 7.5rem; flex: none; transform: rotate(-90deg); }
+  .fin-donut circle { fill: none; stroke-width: 6; }
+  .fin-donut .fin-donut__track { stroke: var(--line); }
+  .fin-donut circle[data-seg] { cursor: default; transition: stroke-width 0.15s ease; }
+  .fin-donut circle[data-seg]:hover { stroke-width: 7.5; }
+  .fin-legend { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; min-width: 0; flex: 1; }
+  .fin-legend li { display: flex; align-items: baseline; gap: 0.5rem; font-size: 0.98rem; line-height: 1.3; }
+  .fin-legend i { width: 0.7rem; height: 0.7rem; border-radius: 3px; flex: none; transform: translateY(0.05rem); }
+  .fin-legend span { flex: 1; min-width: 0; }
+  .fin-legend strong { font-family: "Archivo", system-ui, sans-serif; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink); }
+  .fin-month__note { margin-top: 0.9rem; padding-top: 0.75rem; border-top: 1px solid var(--line); font-size: 0.92rem; line-height: 1.5; color: var(--ink-soft); }
+  @media (max-width: 420px) {
+    .fin-month__body { flex-direction: column; align-items: flex-start; }
+  }
 </style>
 </head>
 <body style="margin:0">
@@ -462,6 +489,16 @@
         <div class="fin-card"><span class="fin-card__num">01</span><h3>Redes sociales</h3><p>Cuentas y herramientas para difundir el mensaje del movimiento.</p></div>
         <div class="fin-card"><span class="fin-card__num">02</span><h3>Transmisiones en vivo</h3><p>Plataformas y servicios para los directos.</p></div>
         <div class="fin-card"><span class="fin-card__num">03</span><h3>Actividades del movimiento</h3><p>Presentaciones, materiales y encuentros.</p></div>
+      </div>
+      <div class="fin-months-wrap">
+        <h3>Mes a mes</h3>
+        <div class="fin-months">
+        <article class="fin-month">
+          <h4 class="fin-month__title">Octubre 2026</h4>
+          <div class="fin-month__body"><svg class="fin-donut" viewBox="0 0 42 42" role="img" aria-label="Octubre 2026: Merchandising 70 %, Redes sociales 30 %"><circle class="fin-donut__track" cx="21" cy="21" r="15.9155"></circle><circle data-seg cx="21" cy="21" r="15.9155" stroke="var(--series-4)" stroke-dasharray="69.00 31.00" stroke-dashoffset="-0.00"><title>Merchandising: 70 %</title></circle><circle data-seg cx="21" cy="21" r="15.9155" stroke="var(--series-1)" stroke-dasharray="29.00 71.00" stroke-dashoffset="-70.00"><title>Redes sociales: 30 %</title></circle></svg><ul class="fin-legend"><li><i style="background:var(--series-4)"></i><span>Merchandising</span><strong>70 %</strong></li><li><i style="background:var(--series-1)"></i><span>Redes sociales</span><strong>30 %</strong></li></ul></div>
+          <p class="fin-month__note">Merchandising: gorras encargadas y pagadas por los compañeros que las pidieron. Redes sociales: la cuenta verificada en X.</p>
+        </article>
+        </div>
       </div>
       <p class="fin-members"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V11a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm-3 8V6a3 3 0 1 1 6 0v3H9z"/></svg><span>Los miembros activos reciben el detalle completo de las cuentas: cada aporte, cada gasto y sus comprobantes.</span></p>
     </section>

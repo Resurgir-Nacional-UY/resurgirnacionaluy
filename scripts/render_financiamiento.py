@@ -108,6 +108,33 @@ STYLE = """
     .fin-ini--img { grid-template-columns: 1fr; }
     .fin-ini__img { min-height: 0; aspect-ratio: 16 / 9; }
   }
+  /* Mes a mes: una dona por mes. Paleta categorica fija (cada categoria
+     conserva su color en todos los meses), con su version para modo oscuro. */
+  .fin-months-wrap { --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; --series-4: #eda100; --series-5: #e87ba4; --series-6: #6250d6; --series-other: #9a978d; }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) .fin-months-wrap { --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500; --series-5: #d55181; --series-6: #9085e9; --series-other: #6f6c64; }
+  }
+  :root[data-theme="dark"] .fin-months-wrap { --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500; --series-5: #d55181; --series-6: #9085e9; --series-other: #6f6c64; }
+  .fin-months-wrap { margin-top: 2.4rem; }
+  .fin-months-wrap > h3 { font-size: var(--step-1); }
+  .fin-months { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 21rem), 1fr)); gap: 1rem; margin-top: 1.1rem; }
+  .fin-month { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 1.1rem 1.25rem 1.25rem; }
+  .fin-month__title { font-family: "Archivo", system-ui, sans-serif; font-weight: 600; font-size: var(--step--1); letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); }
+  .fin-month__body { display: flex; align-items: center; gap: 1.25rem; margin-top: 0.8rem; }
+  .fin-donut { width: 7.5rem; height: 7.5rem; flex: none; transform: rotate(-90deg); }
+  .fin-donut circle { fill: none; stroke-width: 6; }
+  .fin-donut .fin-donut__track { stroke: var(--line); }
+  .fin-donut circle[data-seg] { cursor: default; transition: stroke-width 0.15s ease; }
+  .fin-donut circle[data-seg]:hover { stroke-width: 7.5; }
+  .fin-legend { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; min-width: 0; flex: 1; }
+  .fin-legend li { display: flex; align-items: baseline; gap: 0.5rem; font-size: 0.98rem; line-height: 1.3; }
+  .fin-legend i { width: 0.7rem; height: 0.7rem; border-radius: 3px; flex: none; transform: translateY(0.05rem); }
+  .fin-legend span { flex: 1; min-width: 0; }
+  .fin-legend strong { font-family: "Archivo", system-ui, sans-serif; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink); }
+  .fin-month__note { margin-top: 0.9rem; padding-top: 0.75rem; border-top: 1px solid var(--line); font-size: 0.92rem; line-height: 1.5; color: var(--ink-soft); }
+  @media (max-width: 420px) {
+    .fin-month__body { flex-direction: column; align-items: flex-start; }
+  }
 </style>
 """
 
@@ -226,6 +253,22 @@ def load():
         total = sum(r["porcentaje"] or 0 for r in rows)
         if total and abs(total - 100) > 1:
             print("  AVISO: los porcentajes de %s suman %g, no 100" % (k, total))
+
+    meses = []
+    for m in d.get("usos_por_mes") or []:
+        if not isinstance(m, dict) or not m.get("mes"):
+            continue
+        usos = [{"nombre": str(u["nombre"]), "porcentaje": _num(u.get("porcentaje")) or 0.0}
+                for u in (m.get("usos") or []) if isinstance(u, dict) and u.get("nombre")]
+        usos = [u for u in usos if u["porcentaje"] > 0]
+        if not usos:
+            continue
+        total = sum(u["porcentaje"] for u in usos)
+        if abs(total - 100) > 1:
+            print("  AVISO: los porcentajes de %s suman %g, no 100" % (m["mes"], total))
+        m["usos"] = sorted(usos, key=lambda u: -u["porcentaje"])
+        meses.append(m)
+    d["usos_por_mes"] = meses
 
     home = yaml.safe_load(rd(HOME_DATA)) if os.path.exists(HOME_DATA) else {}
     home = home if isinstance(home, dict) else {}
@@ -390,6 +433,65 @@ def summary_block(rows, kind):
         split, " fin-cards--out" if kind == "out" else "", "\n".join(items))
 
 
+MAX_SLOTS = 6  # categorias con color propio; las demas comparten el gris "otro"
+
+
+def series_colors(d):
+    """Color fijo por categoria: primero el orden de `usos`, despues las que
+    aparezcan solo en los meses. El color sigue a la categoria, no a su rango."""
+    names = [r["nombre"] for r in d["usos"]]
+    for m in d["usos_por_mes"]:
+        for u in m["usos"]:
+            if u["nombre"] not in names:
+                names.append(u["nombre"])
+    return {n: ("var(--series-%d)" % (i + 1)) if i < MAX_SLOTS else "var(--series-other)"
+            for i, n in enumerate(names)}
+
+
+def donut(m, colors):
+    """Dona en SVG: cada porcion es un arco con stroke-dasharray sobre una
+    circunferencia de largo 100 (r = 100 / 2pi), con 1 unidad de separacion."""
+    r = 15.9155
+    gap = 1.0 if len(m["usos"]) > 1 else 0.0
+    total = sum(u["porcentaje"] for u in m["usos"]) or 1
+    segs, start = [], 0.0
+    for u in m["usos"]:
+        share = u["porcentaje"] / total * 100
+        segs.append(
+            '<circle data-seg cx="21" cy="21" r="%s" stroke="%s" stroke-dasharray="%.2f %.2f" stroke-dashoffset="%.2f">'
+            '<title>%s: %g %%</title></circle>' % (
+                r, colors[u["nombre"]], max(share - gap, 0.1), 100 - max(share - gap, 0.1), -start,
+                esc(u["nombre"]), u["porcentaje"])
+        )
+        start += share
+    label = "%s: %s" % (m["mes"], ", ".join("%s %g %%" % (u["nombre"], u["porcentaje"]) for u in m["usos"]))
+    return ('<svg class="fin-donut" viewBox="0 0 42 42" role="img" aria-label="%s">'
+            '<circle class="fin-donut__track" cx="21" cy="21" r="%s"></circle>%s</svg>' % (esc(label), r, "".join(segs)))
+
+
+def months_html(d):
+    if not d["usos_por_mes"]:
+        return ""
+    colors = series_colors(d)
+    cards = []
+    for m in d["usos_por_mes"]:
+        legend = "".join(
+            '<li><i style="background:%s"></i><span>%s</span><strong>%g %%</strong></li>'
+            % (colors[u["nombre"]], esc(u["nombre"]), u["porcentaje"]) for u in m["usos"])
+        cards.append(
+            '        <article class="fin-month">\n'
+            '          <h4 class="fin-month__title">%s</h4>\n'
+            '          <div class="fin-month__body">%s<ul class="fin-legend">%s</ul></div>\n%s'
+            '        </article>' % (
+                esc(m["mes"]), donut(m, colors), legend,
+                ('          <p class="fin-month__note">%s</p>\n' % esc(m["nota"])) if m.get("nota") else "")
+        )
+    return ('      <div class="fin-months-wrap">\n'
+            '        <h3>Mes a mes</h3>\n'
+            '        <div class="fin-months">\n%s\n        </div>\n'
+            '      </div>\n' % "\n".join(cards))
+
+
 def summary_html(d):
     period = ('      <p class="fin-period">Resumen %s</p>\n' % esc(d["resumen_periodo"])) if d.get("resumen_periodo") else ""
     out = []
@@ -400,14 +502,17 @@ def summary_html(d):
             '      <h2>De dónde viene el dinero</h2>\n%s%s'
             '    </section>\n\n' % (period, summary_block(d["fuentes"], "in"))
         )
-    if d["usos"]:
+    if d["usos"] or d["usos_por_mes"]:
         out.append(
             '    <section>\n'
             '      <span class="label">En qué se usa</span>\n'
-            '      <h2>A dónde va</h2>\n%s%s'
+            '      <h2>A dónde va</h2>\n%s%s%s'
             '      <p class="fin-members">%s<span>Los miembros activos reciben el detalle completo de las cuentas: '
             'cada aporte, cada gasto y sus comprobantes.</span></p>\n'
-            '    </section>\n\n' % ("" if d["fuentes"] else period, summary_block(d["usos"], "out"), LOCK_ICON)
+            '    </section>\n\n' % (
+                "" if d["fuentes"] else period,
+                summary_block(d["usos"], "out") if d["usos"] else "",
+                months_html(d), LOCK_ICON)
         )
     return "".join(out)
 
