@@ -47,6 +47,10 @@ MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
 # intensidad de cada segmento del resumen (mismo tono, de mas a menos)
 SHADES = [100, 70, 48, 32, 20, 12]
 
+# ultimos aportes: cuantos se muestran y largo maximo del mensaje
+FEED_MAX = 12
+FEED_MSG_MAX = 140
+
 STYLE = """
 <style>
   /* Financiamiento */
@@ -106,6 +110,16 @@ STYLE = """
     .fin-ini--img { grid-template-columns: 1fr; }
     .fin-ini__img { min-height: 0; aspect-ratio: 16 / 9; }
   }
+  .fin-feed { list-style: none; margin: 1.6rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); gap: 0.75rem; }
+  .fin-feed li { display: flex; gap: 0.85rem; align-items: flex-start; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 0.85rem 1rem; }
+  .fin-feed__avatar { width: 2.4rem; height: 2.4rem; flex: none; border-radius: 999px; display: grid; place-items: center; font-family: "Archivo", system-ui, sans-serif; font-weight: 700; font-size: 1rem; background: color-mix(in srgb, var(--gold-line) 22%, var(--surface)); color: var(--gold-text); }
+  .fin-feed__avatar--anon { background: var(--line); color: var(--ink-soft); }
+  .fin-feed__who { font-size: 1rem; line-height: 1.4; }
+  .fin-feed__who strong { font-family: "Archivo", system-ui, sans-serif; font-weight: 600; }
+  .fin-feed__who .is-anon { font-style: italic; font-weight: 500; color: var(--ink-soft); }
+  .fin-feed__msg { margin-top: 0.3rem; font-size: 0.98rem; line-height: 1.45; }
+  .fin-feed__date { margin-top: 0.3rem; font-family: "Archivo", system-ui, sans-serif; font-size: 0.8rem; color: var(--ink-soft); }
+  .fin-feed-more { margin-top: 0.9rem; font-size: 0.95rem; color: var(--ink-soft); }
   /* Mes a mes: una dona por mes. Paleta categorica fija (cada categoria
      conserva su color en todos los meses), con su version para modo oscuro. */
   .fin-months-wrap { --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; --series-4: #eda100; --series-5: #e87ba4; --series-6: #6250d6; --series-other: #9a978d; }
@@ -248,6 +262,18 @@ def load():
         if total and abs(total - 100) > 1:
             print("  AVISO: los porcentajes de %s suman %g, no 100" % (k, total))
 
+    feed = []
+    for a in d.get("aportes_recientes") or []:
+        if not isinstance(a, dict):
+            continue
+        feed.append({
+            "nick": str(a.get("nick") or "").strip(),
+            "fecha": a.get("fecha") or "",
+            "iniciativa": str(a.get("iniciativa") or "").strip(),
+            "mensaje": re.sub(r"\s+", " ", str(a.get("mensaje") or "")).strip()[:FEED_MSG_MAX],
+        })
+    d["aportes_recientes"] = feed
+
     meses = []
     for m in d.get("usos_por_mes") or []:
         if not isinstance(m, dict) or not m.get("mes"):
@@ -319,7 +345,7 @@ def open_card(e, d):
         give = (
             '%s%s'
             '        <p class="fin-give__hint">En el mensaje o concepto del pago escribí «%s» y, si querés '
-            'figurar en los agradecimientos, tu nombre. Sin nombre, tu aporte suma igual.</p>\n'
+            'aparecer en los últimos aportes, un nick y un mensaje corto. Sin nick, tu aporte suma igual.</p>\n'
             % (('        <div class="fin-give">%s</div>\n' % buttons) if buttons else "", prex, esc(e["nombre"]))
         )
 
@@ -397,6 +423,39 @@ def initiatives_html(d, notice):
                    % "\n".join(done_card(e, d["moneda"]) for e in logradas))
     out.append('    </section>\n\n')
     return "".join(out)
+
+
+def feed_html(d):
+    """Ultimos aportes al estilo Ko-fi: nick, para que fue y mensaje; nunca montos."""
+    feed = d["aportes_recientes"]
+    if not feed:
+        return ""
+    items = []
+    for a in feed[:FEED_MAX]:
+        nick = a["nick"]
+        avatar = ('<span class="fin-feed__avatar" aria-hidden="true">%s</span>' % esc(nick[0].upper())) if nick else \
+            '<span class="fin-feed__avatar fin-feed__avatar--anon" aria-hidden="true">?</span>'
+        who = ('<strong>%s</strong>' % esc(nick)) if nick else '<strong class="is-anon">Anónimo</strong>'
+        target = (" para <em>%s</em>" % esc(a["iniciativa"])) if a["iniciativa"] else ""
+        items.append(
+            '        <li>%s<div><p class="fin-feed__who">%s aportó%s</p>%s%s</div></li>' % (
+                avatar, who, target,
+                ('<p class="fin-feed__msg">“%s”</p>' % esc(a["mensaje"])) if a["mensaje"] else "",
+                ('<p class="fin-feed__date">%s</p>' % esc(fecha(a["fecha"]))) if a["fecha"] else "",
+            )
+        )
+    rest = len(feed) - FEED_MAX
+    more = ('      <p class="fin-feed-more">Y %d %s más. ¡Gracias!</p>\n' % (rest, "aporte" if rest == 1 else "aportes")) \
+        if rest > 0 else ""
+    return (
+        '    <section id="aportes">\n'
+        '      <span class="label">Comunidad</span>\n'
+        '      <h2>Últimos aportes</h2>\n'
+        '      <div class="prose"><p>Gracias a quienes sostienen el movimiento. Al aportar, podés dejar '
+        'un nick y un mensaje corto para aparecer acá.</p></div>\n'
+        '      <ul class="fin-feed">\n%s\n      </ul>\n%s'
+        '    </section>\n\n' % ("\n".join(items), more)
+    )
 
 
 def shade(kind, i):
@@ -557,7 +616,7 @@ def main_html(d):
         '      <p class="doc-hero__sub">%s</p>\n'
         '    </div>\n'
         '  </section>\n\n'
-        '  <div class="doc">\n%s%s'
+        '  <div class="doc">\n%s%s%s'
         '    <section>\n'
         '      <span class="label">Colaborar</span>\n'
         '      <h2>El movimiento se sostiene con sus miembros</h2>\n'
@@ -565,7 +624,7 @@ def main_html(d):
         '      <p style="margin-top:1.4rem"><a class="btn btn--rounded" href="index.html#aporta">Aportar →</a></p>\n'
         '    </section>\n'
         '  </div>\n%s'
-        '</main>' % (TITLE, esc(lead), initiatives_html(d, notice), summary_html(d), PAGE_JS)
+        '</main>' % (TITLE, esc(lead), initiatives_html(d, notice), feed_html(d), summary_html(d), PAGE_JS)
     )
 
 

@@ -458,6 +458,20 @@ collections:
                 hint: "Deja de pedir aportes y pasa a «Iniciativas logradas» con su resultado."
               - { name: resultado, label: "Resultado: qué se hizo con lo recaudado", widget: text, required: false }
               - { name: resultado_imagen, label: "Resultado: foto", widget: image, required: false }
+          - name: aportes_recientes
+            label: "Últimos aportes (estilo Ko-fi)"
+            widget: list
+            required: false
+            hint: >-
+              Se muestran con el nick que eligió cada persona, sin montos. El más
+              reciente primero; se ven los últimos 12. Sin nick aparece como
+              «Anónimo». Este archivo es público: nunca pongas el nombre real de
+              alguien que no lo pidió.
+            fields:
+              - { name: nick, label: "Nick (vacío = Anónimo)", widget: string, required: false }
+              - { name: fecha, label: "Fecha", widget: datetime, time_format: false, format: "YYYY-MM-DD", required: false }
+              - { name: iniciativa, label: "Para qué iniciativa (opcional)", widget: string, required: false }
+              - { name: mensaje, label: "Mensaje corto (opcional, hasta 140 letras)", widget: text, required: false }
           - name: resumen_periodo
             label: "Resumen — período de los porcentajes (ej: año 2026)"
             widget: string

@@ -21,6 +21,11 @@ iniciativas:
     aportes: 0
     lograda: false
 
+# Últimos aportes, al estilo Ko-fi: el nick que cada persona eligió (vacío =
+# "Anónimo"), la fecha y, si quiere, un mensaje corto. Nunca montos. El más
+# reciente primero. Mientras la lista esté vacía, la sección no se muestra.
+aportes_recientes: []
+
 # Resumen general: en qué proporción entra y se usa el dinero, sin montos.
 # Si no se cargan porcentajes, se muestran solo las tarjetas.
 resumen_periodo: ""
