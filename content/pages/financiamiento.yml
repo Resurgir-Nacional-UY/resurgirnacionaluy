@@ -1,19 +1,30 @@
-# Desglose de financiamiento. Lo lee scripts/render_financiamiento.py y
-# genera financiamiento.html. Editable desde el CMS: "Financiamiento".
+# Financiamiento: página pública de iniciativas y resumen general.
+# Lo lee scripts/render_financiamiento.py y genera financiamiento.html.
+# Editable desde el CMS: "Financiamiento — iniciativas y resumen".
 #
-# Mientras no haya períodos cargados, la página muestra la estructura sin
-# números: de dónde viene el dinero (fuentes), en qué se usa (usos), las
-# colectas por evento y una vista previa de cómo se van a ver las cuentas.
+# Este archivo es PUBLICO en GitHub. Acá van solo totales y porcentajes: el
+# detalle de cada aporte y de cada gasto se lleva en la planilla interna de
+# los miembros, no en el repositorio.
 ejemplo: false
-lead: "En qué se usa cada peso que recibe el movimiento. Publicamos los ingresos y los gastos de cada período."
+lead: "Iniciativas concretas, con meta a la vista. Cada aporte suma para algo que se puede ver."
 moneda: "$"
+
+# Iniciativas: cada una con su meta, lo recaudado y la cantidad de aportes.
+# `nombres` lista solo a quienes eligieron figurar; el resto se cuenta como
+# "personas más". Al marcar `lograda`, pasa a "Iniciativas logradas" con su
+# resultado.
+iniciativas: []
+
+# Resumen general: en qué proporción entra y se usa el dinero, sin montos.
+# Si no se cargan porcentajes, se muestran solo las tarjetas.
+resumen_periodo: ""
 fuentes:
   - nombre: "Cuotas de miembros"
     descripcion: "La base del sostenimiento: cada miembro aporta según sus posibilidades."
   - nombre: "Aportes en línea"
     descripcion: "Donaciones por PayPal, Ko-fi y otros medios, de quien quiera colaborar."
-  - nombre: "Colectas por evento"
-    descripcion: "Para actividades puntuales, con una meta propia y a la vista de todos."
+  - nombre: "Iniciativas"
+    descripcion: "Aportes para una actividad puntual, con una meta propia y a la vista de todos."
 usos:
   - nombre: "Redes sociales"
     descripcion: "Cuentas y herramientas para difundir el mensaje del movimiento."
@@ -21,9 +32,3 @@ usos:
     descripcion: "Plataformas y servicios para los directos."
   - nombre: "Actividades del movimiento"
     descripcion: "Presentaciones, materiales y encuentros."
-# Colectas para una ocasión puntual, con su propia meta. Las que tienen
-# `cerrado: true` pasan a "Colectas anteriores". En cada donación, el nombre
-# es opcional: si se deja vacío aparece como "Anónimo". Este archivo es
-# PUBLICO en GitHub, así que de un donante anónimo no se guarda el nombre.
-eventos: []
-periodos: []

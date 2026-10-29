@@ -406,8 +406,10 @@ collections:
             widget: string
 
       - name: financiamiento
-        label: "Financiamiento — ingresos y gastos"
+        label: "Financiamiento — iniciativas y resumen"
         file: content/pages/financiamiento.yml
+        media_folder: /media/pages
+        public_folder: /media/pages
         fields:
           - name: ejemplo
             label: "¿Son datos de ejemplo?"
@@ -421,84 +423,63 @@ collections:
             label: "Símbolo de la moneda"
             widget: string
             default: "$"
-          - name: actualizado
-            label: "Fecha de la última actualización"
-            widget: datetime
-            time_format: false
-            format: "YYYY-MM-DD"
+          - name: iniciativas
+            label: "Iniciativas"
+            widget: list
+            required: false
+            hint: >-
+              Cada iniciativa muestra su meta, una barra de lo recaudado y la
+              cantidad de aportes. Este archivo es público en GitHub: cargá solo
+              totales. El detalle de cada aporte va en la planilla interna.
+            fields:
+              - { name: nombre, label: "Nombre (ej: Presentación de libro)", widget: string }
+              - { name: imagen, label: "Imagen", widget: image, required: false }
+              - { name: descripcion, label: "Para qué es el dinero", widget: text, required: false }
+              - { name: meta, label: "Meta (en pesos)", widget: number, value_type: int }
+              - name: recaudado
+                label: "Total recaudado hasta ahora (en pesos)"
+                widget: number
+                value_type: int
+                default: 0
+                hint: "La suma de todos los aportes. Si llegaron en dólares, el equivalente en pesos."
+              - { name: aportes, label: "Cantidad de aportes", widget: number, value_type: int, default: 0 }
+              - name: nombres
+                label: "Nombres a agradecer"
+                widget: list
+                required: false
+                hint: >-
+                  Solo quienes pidieron figurar, sin montos. El resto se muestra
+                  como «y N personas más».
+              - { name: fecha_limite, label: "Fecha límite", widget: datetime, time_format: false, format: "YYYY-MM-DD", required: false }
+              - name: lograda
+                label: "¿Iniciativa terminada?"
+                widget: boolean
+                default: false
+                hint: "Deja de pedir aportes y pasa a «Iniciativas logradas» con su resultado."
+              - { name: resultado, label: "Resultado: qué se hizo con lo recaudado", widget: text, required: false }
+              - { name: resultado_imagen, label: "Resultado: foto", widget: image, required: false }
+          - name: resumen_periodo
+            label: "Resumen — período de los porcentajes (ej: año 2026)"
+            widget: string
             required: false
           - name: fuentes
             label: "De dónde viene el dinero"
             widget: list
             required: false
-            hint: "Se muestran como tarjetas mientras no haya cuentas publicadas, y como categorías en la vista previa."
+            hint: "Con porcentaje se muestra una barra repartida; sin porcentaje, solo las tarjetas. Deberían sumar 100."
             fields:
               - { name: nombre, label: "Fuente (ej: Cuotas de miembros)", widget: string }
               - { name: descripcion, label: "Descripción corta", widget: text, required: false }
+              - { name: porcentaje, label: "Porcentaje del total", widget: number, value_type: float, required: false }
           - name: usos
             label: "En qué se usa"
             widget: list
             required: false
-            hint: "Se muestran como tarjetas mientras no haya cuentas publicadas, y como categorías en la vista previa."
+            hint: "Con porcentaje se muestra una barra repartida; sin porcentaje, solo las tarjetas. Deberían sumar 100."
             fields:
               - { name: nombre, label: "Uso (ej: Redes sociales)", widget: string }
               - { name: descripcion, label: "Descripción corta", widget: text, required: false }
-          - name: eventos
-            label: "Eventos — colectas para una ocasión puntual"
-            widget: list
-            required: false
-            hint: "Cada colecta muestra su meta, una barra de lo recaudado y la lista de donantes."
-            fields:
-              - { name: nombre, label: "Nombre del evento (ej: Presentación de libro)", widget: string }
-              - { name: fecha, label: "Fecha del evento", widget: datetime, time_format: false, format: "YYYY-MM-DD", required: false }
-              - { name: descripcion, label: "Para qué es el dinero", widget: text, required: false }
-              - { name: meta, label: "Meta (en pesos)", widget: number, value_type: int }
-              - name: cerrado
-                label: "¿Colecta cerrada?"
-                widget: boolean
-                default: false
-                hint: "Al cerrarla deja de pedir donaciones y pasa a «Colectas anteriores»."
-              - name: donaciones
-                label: "Donaciones"
-                widget: list
-                required: false
-                fields:
-                  - name: nombre
-                    label: "Nombre a mostrar"
-                    widget: string
-                    required: false
-                    hint: >-
-                      Dejalo vacío si la persona quiere ser anónima: aparece como
-                      «Anónimo». No escribas acá el nombre real de un donante
-                      anónimo — este archivo es público en GitHub.
-                  - name: monto
-                    label: "Monto (en pesos)"
-                    widget: number
-                    value_type: int
-                    hint: "Si llegó en dólares por PayPal o Ko-fi, poné el equivalente en pesos."
-          - name: periodos
-            label: "Períodos (el primero de la lista es el que se destaca)"
-            widget: list
-            required: false
-            hint: "Mientras no haya ninguno, la página muestra «Próximamente» en lugar de las cuentas."
-            fields:
-              - { name: nombre, label: "Nombre del período (ej: Tercer trimestre 2026)", widget: string }
-              - name: ingresos
-                label: "Ingresos"
-                widget: list
-                fields:
-                  - { name: concepto, label: "Origen", widget: string }
-                  - { name: monto, label: "Monto", widget: number, value_type: int }
-              - name: gastos
-                label: "Gastos"
-                widget: list
-                fields:
-                  - { name: concepto, label: "Categoría", widget: string }
-                  - { name: monto, label: "Monto", widget: number, value_type: int }
-          - name: nota
-            label: "Nota al pie (cómo se registran las cuentas)"
-            widget: text
-            required: false
+              - { name: porcentaje, label: "Porcentaje del total", widget: number, value_type: float, required: false }
 
       - name: live
         label: "🔴 Transmisión en vivo"

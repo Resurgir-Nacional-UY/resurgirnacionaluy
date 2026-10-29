@@ -9,8 +9,8 @@ on:
       # La pagina copia el header, el footer y los estilos de Ideario: si
       # cambian ahi, hay que regenerarla para que no quede desactualizada.
       - "ideario-y-valores-rn.html"
-      # Los botones de donar de los eventos usan los links de PayPal y Ko-fi
-      # de la portada.
+      # Los botones de aportar de las iniciativas usan los links de PayPal, Ko-fi
+      # y la cuenta Prex de la portada.
       - "content/pages/home.yml"
   workflow_dispatch:
 
