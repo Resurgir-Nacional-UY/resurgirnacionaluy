@@ -102,8 +102,6 @@ STYLE = """
   .fin-card h3 { font-size: var(--step-1); margin-top: 0.35rem; }
   .fin-card p { margin-top: 0.45rem; color: var(--ink-soft); font-size: 1rem; line-height: 1.55; }
   .fin-period { font-family: "Archivo", system-ui, sans-serif; color: var(--ink-soft); font-size: 0.9rem; margin-top: 0.4rem; }
-  .fin-members { margin-top: 2rem; display: flex; gap: 0.8rem; align-items: flex-start; max-width: var(--measure); padding: 1rem 1.15rem; border-radius: 8px; background: color-mix(in srgb, var(--blue) 8%, transparent); border: 1px solid color-mix(in srgb, var(--blue) 30%, transparent); font-size: 1rem; }
-  .fin-members svg { width: 1.2rem; height: 1.2rem; flex: none; margin-top: 0.25rem; fill: var(--blue); }
   @media (max-width: 720px) {
     .fin-ini--img { grid-template-columns: 1fr; }
     .fin-ini__img { min-height: 0; aspect-ratio: 16 / 9; }
@@ -185,10 +183,6 @@ PAGE_JS = """  <script>
   })();
   </script>
 """
-
-LOCK_ICON = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 '
-             '2-2V11a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm-3 8V6a3 3 0 1 1 6 0v3H9z"/></svg>')
-
 
 def rd(p):
     return io.open(p, encoding="utf-8").read()
@@ -507,12 +501,10 @@ def summary_html(d):
             '    <section>\n'
             '      <span class="label">En qué se usa</span>\n'
             '      <h2>A dónde va</h2>\n%s%s%s'
-            '      <p class="fin-members">%s<span>Los miembros activos reciben el detalle completo de las cuentas: '
-            'cada aporte, cada gasto y sus comprobantes.</span></p>\n'
             '    </section>\n\n' % (
                 "" if d["fuentes"] else period,
                 summary_block(d["usos"], "out") if d["usos"] else "",
-                months_html(d), LOCK_ICON)
+                months_html(d))
         )
     return "".join(out)
 
