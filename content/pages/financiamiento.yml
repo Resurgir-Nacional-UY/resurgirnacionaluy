@@ -1,0 +1,60 @@
+# Desglose de financiamiento. Lo lee scripts/render_financiamiento.py y
+# genera financiamiento.html. Editable desde el CMS: "Financiamiento".
+#
+# ATENCION: los montos de abajo son DE EJEMPLO. Mientras `ejemplo` este en
+# true la pagina muestra un aviso bien visible de que no son datos reales.
+ejemplo: true
+lead: "En qué se usa cada peso que recibe el movimiento. Publicamos los ingresos y los gastos de cada período."
+moneda: "$"
+actualizado: "2026-10-01"
+# Colectas para una ocasión puntual, con su propia meta. Las que tienen
+# `cerrado: true` pasan a "Colectas anteriores". En cada donación, el nombre
+# es opcional: si se deja vacío aparece como "Anónimo". Este archivo es
+# PUBLICO en GitHub, así que de un donante anónimo no se guarda el nombre.
+eventos:
+  - nombre: "Presentación de libro"
+    fecha: "2026-11-21"
+    descripcion: "Alquiler del salón, sonido y ejemplares para la presentación. Todo lo que se recaude va a cubrir estos gastos."
+    meta: 2000
+    cerrado: false
+    donaciones:
+      - nombre: "Martín R."
+        monto: 300
+      - nombre: ""
+        monto: 200
+      - nombre: "Lucía F."
+        monto: 150
+      - nombre: ""
+        monto: 100
+periodos:
+  - nombre: "Tercer trimestre 2026"
+    ingresos:
+      - concepto: "Cuotas de miembros"
+        monto: 48000
+      - concepto: "Aportes vía PayPal y Ko-fi"
+        monto: 12500
+      - concepto: "Tienda"
+        monto: 6200
+    gastos:
+      - concepto: "Propaganda callejera (afiches, pegatinas, carteleras, banderas)"
+        monto: 31000
+      - concepto: "Acciones sociales"
+        monto: 18500
+      - concepto: "Funcionamiento (sitio, dominio, materiales)"
+        monto: 9800
+  - nombre: "Segundo trimestre 2026"
+    ingresos:
+      - concepto: "Cuotas de miembros"
+        monto: 42000
+      - concepto: "Aportes vía PayPal y Ko-fi"
+        monto: 9300
+      - concepto: "Tienda"
+        monto: 3100
+    gastos:
+      - concepto: "Propaganda callejera (afiches, pegatinas, carteleras, banderas)"
+        monto: 27400
+      - concepto: "Acciones sociales"
+        monto: 15200
+      - concepto: "Funcionamiento (sitio, dominio, materiales)"
+        monto: 8900
+nota: "Las cuotas y los aportes se registran el mes en que se reciben. Los gastos se respaldan con comprobantes que cualquier miembro puede pedir para revisar."

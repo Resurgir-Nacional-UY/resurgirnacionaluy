@@ -398,6 +398,82 @@ collections:
             label: "Aviso sobre el envío en el carrito"
             widget: string
 
+      - name: financiamiento
+        label: "Financiamiento — ingresos y gastos"
+        file: content/pages/financiamiento.yml
+        fields:
+          - name: ejemplo
+            label: "¿Son datos de ejemplo?"
+            widget: boolean
+            default: false
+            hint: "Mientras esté activado, la página muestra un aviso de que los montos no son reales."
+          - name: lead
+            label: "Bajada (debajo del título)"
+            widget: text
+          - name: moneda
+            label: "Símbolo de la moneda"
+            widget: string
+            default: "$"
+          - name: actualizado
+            label: "Fecha de la última actualización"
+            widget: datetime
+            time_format: false
+            format: "YYYY-MM-DD"
+          - name: eventos
+            label: "Eventos — colectas para una ocasión puntual"
+            widget: list
+            required: false
+            hint: "Cada colecta muestra su meta, una barra de lo recaudado y la lista de donantes."
+            fields:
+              - { name: nombre, label: "Nombre del evento (ej: Presentación de libro)", widget: string }
+              - { name: fecha, label: "Fecha del evento", widget: datetime, time_format: false, format: "YYYY-MM-DD", required: false }
+              - { name: descripcion, label: "Para qué es el dinero", widget: text, required: false }
+              - { name: meta, label: "Meta (en pesos)", widget: number, value_type: int }
+              - name: cerrado
+                label: "¿Colecta cerrada?"
+                widget: boolean
+                default: false
+                hint: "Al cerrarla deja de pedir donaciones y pasa a «Colectas anteriores»."
+              - name: donaciones
+                label: "Donaciones"
+                widget: list
+                required: false
+                fields:
+                  - name: nombre
+                    label: "Nombre a mostrar"
+                    widget: string
+                    required: false
+                    hint: >-
+                      Dejalo vacío si la persona quiere ser anónima: aparece como
+                      «Anónimo». No escribas acá el nombre real de un donante
+                      anónimo — este archivo es público en GitHub.
+                  - name: monto
+                    label: "Monto (en pesos)"
+                    widget: number
+                    value_type: int
+                    hint: "Si llegó en dólares por PayPal o Ko-fi, poné el equivalente en pesos."
+          - name: periodos
+            label: "Períodos (el primero de la lista es el que se destaca)"
+            widget: list
+            fields:
+              - { name: nombre, label: "Nombre del período (ej: Tercer trimestre 2026)", widget: string }
+              - name: ingresos
+                label: "Ingresos"
+                widget: list
+                fields:
+                  - { name: concepto, label: "Origen", widget: string }
+                  - { name: monto, label: "Monto", widget: number, value_type: int }
+              - name: gastos
+                label: "Gastos"
+                widget: list
+                fields:
+                  - { name: concepto, label: "Categoría", widget: string }
+                  - { name: monto, label: "Monto", widget: number, value_type: int }
+          - name: nota
+            label: "Nota al pie (cómo se registran las cuentas)"
+            widget: text
+            required: false
+
       - name: live
         label: "🔴 Transmisión en vivo"
         file: content/pages/live.yml
