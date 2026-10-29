@@ -33,7 +33,7 @@ HUB_LIMIT = 6
 # URL publica del sitio. Cambiar si se pasa a dominio propio (p. ej. https://resurgirnacionaluy.org/)
 SITE = "https://resurgirnacionaluy.org/"
 STATIC_PAGES = ["", "ideario-y-valores-rn.html", "cultura-nacional-uruguaya.html", "catolicismo-en-uruguay.html",
-                "lecturas-para-el-uruguay.html"]
+                "lecturas-para-el-uruguay.html", "financiamiento.html"]
 # tienda-resurgir-nacional.html queda afuera del sitemap a proposito: la
 # Tienda esta oculta al publico hasta terminar de configurar el pago (ver
 # el comentario en tools/src/index.html junto al link de nav que se saco).
@@ -54,7 +54,7 @@ GEN_MARK = "<!-- generated:formacion-article -->"
 RESERVED = {"index", "vision", "formacion", "sagradocorazondejesus", "biblioteca", "admin", "404",
             "readme", "articulos",
             "ideario-y-valores-rn", "catolicismo-en-uruguay", "cultura-nacional-uruguaya",
-            "lecturas-para-el-uruguay", "tienda-resurgir-nacional"}
+            "lecturas-para-el-uruguay", "tienda-resurgir-nacional", "financiamiento"}
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
          "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 MESES_AB = ["ene", "feb", "mar", "abr", "may", "jun", "jul",

@@ -1,0 +1,59 @@
+# Financiamiento: página pública de iniciativas y resumen general.
+# Lo lee scripts/render_financiamiento.py y genera financiamiento.html.
+# Editable desde el CMS: "Financiamiento — iniciativas y resumen".
+#
+# Este archivo es PUBLICO en GitHub. Acá van solo totales y porcentajes: el
+# detalle de cada aporte y de cada gasto se lleva en la planilla interna de
+# los miembros, no en el repositorio.
+ejemplo: false
+lead: "Iniciativas concretas, con meta a la vista. Cada aporte suma para algo que se puede ver."
+moneda: "$"
+
+# Iniciativas: cada una con su meta, lo recaudado y la cantidad de aportes.
+# `nombres` lista solo a quienes eligieron figurar; el resto se cuenta como
+# "personas más". Al marcar `lograda`, pasa a "Iniciativas logradas" con su
+# resultado.
+iniciativas:
+  - nombre: "Presentación de libro"
+    descripcion: "Fondos para organizar la presentación del libro del movimiento."
+    meta: 2000
+    recaudado: 0
+    aportes: 0
+    lograda: false
+
+# Últimos aportes, al estilo Ko-fi: el nick que cada persona eligió (vacío =
+# "Anónimo"), la fecha y, si quiere, un mensaje corto. Nunca montos. El más
+# reciente primero. Mientras la lista esté vacía, la sección no se muestra.
+aportes_recientes:
+  - nick: "Nro"
+  - nick: "Juan"
+
+# Resumen general: en qué proporción entra y se usa el dinero, sin montos.
+# Si no se cargan porcentajes, se muestran solo las tarjetas.
+resumen_periodo: ""
+fuentes:
+  - nombre: "Cuotas de miembros"
+    descripcion: "La base del sostenimiento: cada miembro aporta según sus posibilidades."
+  - nombre: "Aportes en línea"
+    descripcion: "Donaciones por PayPal, Ko-fi y otros medios, de quien quiera colaborar."
+  - nombre: "Iniciativas"
+    descripcion: "Aportes para una actividad puntual, con una meta propia y a la vista de todos."
+usos:
+  - nombre: "Redes sociales"
+    descripcion: "Cuentas y herramientas para difundir el mensaje del movimiento."
+  - nombre: "Transmisiones en vivo"
+    descripcion: "Plataformas y servicios para los directos."
+  - nombre: "Actividades del movimiento"
+    descripcion: "Presentaciones, materiales y encuentros."
+
+# Mes a mes: en qué se usó el dinero, en porcentajes (sin montos). El primero
+# de la lista es el más reciente. Los % salen del Resumen de la planilla
+# interna, con Desde/Hasta en ese mes.
+usos_por_mes:
+  - mes: "Octubre 2026"
+    usos:
+      - nombre: "Merchandising"
+        porcentaje: 70
+      - nombre: "Redes sociales"
+        porcentaje: 30
+    nota: "El merchandising lo pagaron los compañeros que lo encargaron."
