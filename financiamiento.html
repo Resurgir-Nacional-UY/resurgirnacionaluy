@@ -266,6 +266,22 @@
   .fin-donors li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.4rem 0; border-bottom: 1px dashed var(--line); font-size: 1rem; }
   .fin-donors li span:last-child { font-family: "Archivo", system-ui, sans-serif; font-size: 0.9rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; white-space: nowrap; }
   .fin-donors .is-anon { font-style: italic; color: var(--ink-soft); }
+  .fin-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 1rem; margin-top: 1.6rem; }
+  .fin-card { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--gold-line); border-radius: 8px; padding: 1.1rem 1.25rem 1.25rem; }
+  .fin-cards--out .fin-card { border-top-color: var(--blue); }
+  .fin-card__num { font-family: "Archivo", system-ui, sans-serif; font-weight: 600; font-size: var(--step--1); letter-spacing: 0.14em; color: var(--gold-text); }
+  .fin-cards--out .fin-card__num { color: var(--blue); }
+  .fin-card h3 { font-size: var(--step-1); margin-top: 0.35rem; }
+  .fin-card p { margin-top: 0.45rem; color: var(--ink-soft); font-size: 1rem; line-height: 1.55; }
+  .fin-empty { margin-top: 1.6rem; border: 1px dashed var(--line); border-radius: 8px; padding: 1.25rem; max-width: var(--measure); color: var(--ink-soft); }
+  .fin-empty strong { display: block; color: var(--ink); font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: var(--step-1); margin-bottom: 0.3rem; }
+  .fin-preview { position: relative; margin-top: 2.2rem; border: 1px solid var(--line); border-radius: 8px; padding: clamp(1.4rem, 3vw, 2rem) clamp(1.1rem, 3vw, 1.75rem) clamp(1.1rem, 3vw, 1.75rem); background: var(--surface); }
+  .fin-preview__tag { position: absolute; top: -0.75rem; left: 1.1rem; background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 0.1rem 0.7rem; font-family: "Archivo", system-ui, sans-serif; font-weight: 600; font-size: var(--step--1); letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); }
+  .fin-preview .fin-stats { margin-top: 0; }
+  .fin-preview .fin-stat { background: var(--bg); }
+  .fin-preview .fin-stat__value { color: var(--ink-soft); }
+  .fin-preview .fin-bar__fill { background: color-mix(in srgb, var(--ink-soft) 30%, transparent); }
+  .fin-preview__caption { margin-top: 1.4rem; font-size: 0.95rem; color: var(--ink-soft); }
   .fin-past { list-style: none; margin: 1rem 0 0; padding: 0; }
   .fin-past li { display: flex; justify-content: space-between; gap: 0.3rem 1rem; flex-wrap: wrap; padding: 0.7rem 0; border-bottom: 1px solid var(--line); }
   .fin-past li span:last-child { font-family: "Archivo", system-ui, sans-serif; font-size: 0.9rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
@@ -418,9 +434,81 @@
 
   <div class="doc">
     <section>
+      <span class="label">Cómo se financia</span>
+      <h2>De dónde viene el dinero</h2>
+      <div class="fin-cards">
+        <div class="fin-card"><span class="fin-card__num">01</span><h3>Cuotas de miembros</h3><p>La base del sostenimiento: cada miembro aporta según sus posibilidades.</p></div>
+        <div class="fin-card"><span class="fin-card__num">02</span><h3>Aportes en línea</h3><p>Donaciones por PayPal, Ko-fi y otros medios, de quien quiera colaborar.</p></div>
+        <div class="fin-card"><span class="fin-card__num">03</span><h3>Colectas por evento</h3><p>Para actividades puntuales, con una meta propia y a la vista de todos.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <span class="label">En qué se usa</span>
+      <h2>A dónde va</h2>
+      <div class="fin-cards fin-cards--out">
+        <div class="fin-card"><span class="fin-card__num">01</span><h3>Redes sociales</h3><p>Cuentas y herramientas para difundir el mensaje del movimiento.</p></div>
+        <div class="fin-card"><span class="fin-card__num">02</span><h3>Transmisiones en vivo</h3><p>Plataformas y servicios para los directos.</p></div>
+        <div class="fin-card"><span class="fin-card__num">03</span><h3>Actividades del movimiento</h3><p>Presentaciones, materiales y encuentros.</p></div>
+      </div>
+    </section>
+
+    <section id="eventos">
+      <span class="label">Eventos</span>
+      <h2>Colectas por evento</h2>
+      <div class="prose"><p>Para actividades puntuales abrimos una colecta con su propia meta. Una barra muestra cuánto se juntó y cuánto falta, y se puede donar con nombre o de forma anónima.</p></div>
+      <p class="fin-empty"><strong>No hay colectas abiertas por ahora</strong>Cuando organicemos la próxima, va a aparecer acá y en la portada.</p>
+    </section>
+
+    <section>
       <span class="label">Cuentas</span>
       <h2>Próximamente</h2>
       <div class="prose"><p>Acá vamos a publicar, período por período, cuánto dinero recibe el movimiento, de dónde viene y en qué se usa.</p></div>
+      <div class="fin-preview">
+        <span class="fin-preview__tag">Vista previa</span>
+        <div class="fin-stats">
+        <div class="fin-stat"><div class="fin-stat__label">Ingresos</div><div class="fin-stat__value">—</div></div>
+        <div class="fin-stat"><div class="fin-stat__label">Gastos</div><div class="fin-stat__value">—</div></div>
+        <div class="fin-stat"><div class="fin-stat__label">Saldo</div><div class="fin-stat__value">—</div></div>
+        </div>
+        <div class="fin-cols">
+          <div>
+          <h3>En qué se gastó</h3>
+        <ul class="fin-bars">
+          <li>
+            <div class="fin-bar__head"><span class="fin-bar__name">Redes sociales</span><span class="fin-bar__amount">—</span></div>
+            <div class="fin-bar__track" aria-hidden="true"><span class="fin-bar__fill" style="width:72%"></span></div>
+          </li>
+          <li>
+            <div class="fin-bar__head"><span class="fin-bar__name">Transmisiones en vivo</span><span class="fin-bar__amount">—</span></div>
+            <div class="fin-bar__track" aria-hidden="true"><span class="fin-bar__fill" style="width:48%"></span></div>
+          </li>
+          <li>
+            <div class="fin-bar__head"><span class="fin-bar__name">Actividades del movimiento</span><span class="fin-bar__amount">—</span></div>
+            <div class="fin-bar__track" aria-hidden="true"><span class="fin-bar__fill" style="width:30%"></span></div>
+          </li>
+        </ul>
+          </div>
+          <div>
+          <h3>De dónde vino</h3>
+        <ul class="fin-bars">
+          <li>
+            <div class="fin-bar__head"><span class="fin-bar__name">Cuotas de miembros</span><span class="fin-bar__amount">—</span></div>
+            <div class="fin-bar__track" aria-hidden="true"><span class="fin-bar__fill" style="width:72%"></span></div>
+          </li>
+          <li>
+            <div class="fin-bar__head"><span class="fin-bar__name">Aportes en línea</span><span class="fin-bar__amount">—</span></div>
+            <div class="fin-bar__track" aria-hidden="true"><span class="fin-bar__fill" style="width:48%"></span></div>
+          </li>
+          <li>
+            <div class="fin-bar__head"><span class="fin-bar__name">Colectas por evento</span><span class="fin-bar__amount">—</span></div>
+            <div class="fin-bar__track" aria-hidden="true"><span class="fin-bar__fill" style="width:30%"></span></div>
+          </li>
+        </ul>
+          </div>
+        </div>
+        <p class="fin-preview__caption">Así se va a ver cada período: los totales, el desglose por categoría y el historial completo.</p>
+      </div>
     </section>
 
     <section>

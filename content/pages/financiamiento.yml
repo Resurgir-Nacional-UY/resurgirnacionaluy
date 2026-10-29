@@ -1,11 +1,26 @@
 # Desglose de financiamiento. Lo lee scripts/render_financiamiento.py y
 # genera financiamiento.html. Editable desde el CMS: "Financiamiento".
 #
-# Mientras no haya períodos ni eventos cargados, la página muestra un texto
-# genérico ("Próximamente") sin números.
+# Mientras no haya períodos cargados, la página muestra la estructura sin
+# números: de dónde viene el dinero (fuentes), en qué se usa (usos), las
+# colectas por evento y una vista previa de cómo se van a ver las cuentas.
 ejemplo: false
 lead: "En qué se usa cada peso que recibe el movimiento. Publicamos los ingresos y los gastos de cada período."
 moneda: "$"
+fuentes:
+  - nombre: "Cuotas de miembros"
+    descripcion: "La base del sostenimiento: cada miembro aporta según sus posibilidades."
+  - nombre: "Aportes en línea"
+    descripcion: "Donaciones por PayPal, Ko-fi y otros medios, de quien quiera colaborar."
+  - nombre: "Colectas por evento"
+    descripcion: "Para actividades puntuales, con una meta propia y a la vista de todos."
+usos:
+  - nombre: "Redes sociales"
+    descripcion: "Cuentas y herramientas para difundir el mensaje del movimiento."
+  - nombre: "Transmisiones en vivo"
+    descripcion: "Plataformas y servicios para los directos."
+  - nombre: "Actividades del movimiento"
+    descripcion: "Presentaciones, materiales y encuentros."
 # Colectas para una ocasión puntual, con su propia meta. Las que tienen
 # `cerrado: true` pasan a "Colectas anteriores". En cada donación, el nombre
 # es opcional: si se deja vacío aparece como "Anónimo". Este archivo es

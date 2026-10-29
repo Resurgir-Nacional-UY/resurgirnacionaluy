@@ -427,6 +427,22 @@ collections:
             time_format: false
             format: "YYYY-MM-DD"
             required: false
+          - name: fuentes
+            label: "De dónde viene el dinero"
+            widget: list
+            required: false
+            hint: "Se muestran como tarjetas mientras no haya cuentas publicadas, y como categorías en la vista previa."
+            fields:
+              - { name: nombre, label: "Fuente (ej: Cuotas de miembros)", widget: string }
+              - { name: descripcion, label: "Descripción corta", widget: text, required: false }
+          - name: usos
+            label: "En qué se usa"
+            widget: list
+            required: false
+            hint: "Se muestran como tarjetas mientras no haya cuentas publicadas, y como categorías en la vista previa."
+            fields:
+              - { name: nombre, label: "Uso (ej: Redes sociales)", widget: string }
+              - { name: descripcion, label: "Descripción corta", widget: text, required: false }
           - name: eventos
             label: "Eventos — colectas para una ocasión puntual"
             widget: list

@@ -94,6 +94,22 @@ STYLE = """
   .fin-donors li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.4rem 0; border-bottom: 1px dashed var(--line); font-size: 1rem; }
   .fin-donors li span:last-child { font-family: "Archivo", system-ui, sans-serif; font-size: 0.9rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; white-space: nowrap; }
   .fin-donors .is-anon { font-style: italic; color: var(--ink-soft); }
+  .fin-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 1rem; margin-top: 1.6rem; }
+  .fin-card { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--gold-line); border-radius: 8px; padding: 1.1rem 1.25rem 1.25rem; }
+  .fin-cards--out .fin-card { border-top-color: var(--blue); }
+  .fin-card__num { font-family: "Archivo", system-ui, sans-serif; font-weight: 600; font-size: var(--step--1); letter-spacing: 0.14em; color: var(--gold-text); }
+  .fin-cards--out .fin-card__num { color: var(--blue); }
+  .fin-card h3 { font-size: var(--step-1); margin-top: 0.35rem; }
+  .fin-card p { margin-top: 0.45rem; color: var(--ink-soft); font-size: 1rem; line-height: 1.55; }
+  .fin-empty { margin-top: 1.6rem; border: 1px dashed var(--line); border-radius: 8px; padding: 1.25rem; max-width: var(--measure); color: var(--ink-soft); }
+  .fin-empty strong { display: block; color: var(--ink); font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: var(--step-1); margin-bottom: 0.3rem; }
+  .fin-preview { position: relative; margin-top: 2.2rem; border: 1px solid var(--line); border-radius: 8px; padding: clamp(1.4rem, 3vw, 2rem) clamp(1.1rem, 3vw, 1.75rem) clamp(1.1rem, 3vw, 1.75rem); background: var(--surface); }
+  .fin-preview__tag { position: absolute; top: -0.75rem; left: 1.1rem; background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 0.1rem 0.7rem; font-family: "Archivo", system-ui, sans-serif; font-weight: 600; font-size: var(--step--1); letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); }
+  .fin-preview .fin-stats { margin-top: 0; }
+  .fin-preview .fin-stat { background: var(--bg); }
+  .fin-preview .fin-stat__value { color: var(--ink-soft); }
+  .fin-preview .fin-bar__fill { background: color-mix(in srgb, var(--ink-soft) 30%, transparent); }
+  .fin-preview__caption { margin-top: 1.4rem; font-size: 0.95rem; color: var(--ink-soft); }
   .fin-past { list-style: none; margin: 1rem 0 0; padding: 0; }
   .fin-past li { display: flex; justify-content: space-between; gap: 0.3rem 1rem; flex-wrap: wrap; padding: 0.7rem 0; border-bottom: 1px solid var(--line); }
   .fin-past li span:last-child { font-family: "Archivo", system-ui, sans-serif; font-size: 0.9rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
@@ -204,6 +220,9 @@ def load():
                        (("Donar por PayPal", "aporta_paypal"), ("Donar por Ko-fi", "aporta_kofi"))
                        if home.get(k)]
     d["prex"] = str(home.get("aporta_prex") or "").strip()
+
+    for k in ("fuentes", "usos"):
+        d[k] = [r for r in (d.get(k) or []) if isinstance(r, dict) and r.get("nombre")]
     return d
 
 
@@ -315,6 +334,93 @@ def events_html(d, cur, notice):
     return "".join(parts)
 
 
+def cards(rows, mod=""):
+    items = "\n".join(
+        '        <div class="fin-card"><span class="fin-card__num">%02d</span><h3>%s</h3>%s</div>' % (
+            i + 1, esc(r["nombre"]),
+            ("<p>%s</p>" % esc(r["descripcion"])) if r.get("descripcion") else "")
+        for i, r in enumerate(rows)
+    )
+    return '      <div class="fin-cards%s">\n%s\n      </div>\n' % (mod, items)
+
+
+# anchos fijos de las barras de la vista previa: decorativos, no son datos
+GHOST_WIDTHS = [72, 48, 30, 20, 12]
+
+
+def ghost_bars(rows):
+    items = "\n".join(
+        '          <li>\n'
+        '            <div class="fin-bar__head"><span class="fin-bar__name">%s</span><span class="fin-bar__amount">—</span></div>\n'
+        '            <div class="fin-bar__track" aria-hidden="true"><span class="fin-bar__fill" style="width:%d%%"></span></div>\n'
+        '          </li>' % (esc(r["nombre"]), GHOST_WIDTHS[min(i, len(GHOST_WIDTHS) - 1)])
+        for i, r in enumerate(rows)
+    )
+    return '        <ul class="fin-bars">\n%s\n        </ul>' % items
+
+
+def generic_html(d, notice, has_events):
+    """Pagina sin cuentas publicadas: muestra la estructura sin numeros."""
+    first = ' style="margin-top:1.4rem"' if notice else ""
+    out = []
+    if d["fuentes"]:
+        out.append(
+            '    <section>\n%s'
+            '      <span class="label"%s>Cómo se financia</span>\n'
+            '      <h2>De dónde viene el dinero</h2>\n%s'
+            '    </section>\n\n' % (notice, first, cards(d["fuentes"]))
+        )
+        notice, first = "", ""
+    if d["usos"]:
+        out.append(
+            '    <section>\n%s'
+            '      <span class="label"%s>En qué se usa</span>\n'
+            '      <h2>A dónde va</h2>\n%s'
+            '    </section>\n\n' % (notice, first, cards(d["usos"], " fin-cards--out"))
+        )
+        notice, first = "", ""
+    if not has_events:
+        out.append(
+            '    <section id="eventos">\n%s'
+            '      <span class="label"%s>Eventos</span>\n'
+            '      <h2>Colectas por evento</h2>\n'
+            '      <div class="prose"><p>Para actividades puntuales abrimos una colecta con su propia meta. '
+            'Una barra muestra cuánto se juntó y cuánto falta, y se puede donar con nombre o de forma anónima.</p></div>\n'
+            '      <p class="fin-empty"><strong>No hay colectas abiertas por ahora</strong>'
+            'Cuando organicemos la próxima, va a aparecer acá y en la portada.</p>\n'
+            '    </section>\n\n' % (notice, first)
+        )
+        notice, first = "", ""
+
+    preview = ""
+    if d["fuentes"] or d["usos"]:
+        tiles = "".join(
+            '        <div class="fin-stat"><div class="fin-stat__label">%s</div><div class="fin-stat__value">—</div></div>\n' % t
+            for t in ("Ingresos", "Gastos", "Saldo")
+        )
+        preview = (
+            '      <div class="fin-preview">\n'
+            '        <span class="fin-preview__tag">Vista previa</span>\n'
+            '        <div class="fin-stats">\n%s        </div>\n'
+            '        <div class="fin-cols">\n'
+            '          <div>\n          <h3>En qué se gastó</h3>\n%s\n          </div>\n'
+            '          <div>\n          <h3>De dónde vino</h3>\n%s\n          </div>\n'
+            '        </div>\n'
+            '        <p class="fin-preview__caption">Así se va a ver cada período: los totales, el desglose '
+            'por categoría y el historial completo.</p>\n'
+            '      </div>\n' % (tiles, ghost_bars(d["usos"]), ghost_bars(d["fuentes"]))
+        )
+    out.append(
+        '    <section>\n%s'
+        '      <span class="label"%s>Cuentas</span>\n'
+        '      <h2>Próximamente</h2>\n'
+        '      <div class="prose"><p>Acá vamos a publicar, período por período, cuánto dinero recibe '
+        'el movimiento, de dónde viene y en qué se usa.</p></div>\n%s'
+        '    </section>\n' % (notice, first, preview)
+    )
+    return "".join(out)
+
+
 def home_block(d):
     """Resumen de las colectas en curso para la seccion Colaborar de la portada."""
     cur = d["moneda"]
@@ -378,14 +484,7 @@ def main_html(d):
         notice = ""
 
     if not d["periodos"]:
-        out.append(
-            '    <section>\n%s'
-            '      <span class="label"%s>Cuentas</span>\n'
-            '      <h2>Próximamente</h2>\n'
-            '      <div class="prose"><p>Acá vamos a publicar, período por período, cuánto dinero recibe '
-            'el movimiento, de dónde viene y en qué se usa.</p></div>\n'
-            '    </section>\n' % (notice, ' style="margin-top:1.4rem"' if notice else "")
-        )
+        out.append(generic_html(d, notice, bool(ev)))
     else:
         p = d["periodos"][0]
         saldo = p["total_in"] - p["total_out"]
