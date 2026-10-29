@@ -574,7 +574,6 @@ def page(tpl, d):
                      lambda m: m.group(1) + esc(val) + m.group(2), pre, count=1)
     pre = pre.replace(' aria-current="page"', "")
     post = post.replace(' aria-current="page"', "")
-    post = post.replace('<a href="financiamiento.html">', '<a href="financiamiento.html" aria-current="page">')
     pre = pre.replace("<head>", "<head>\n" + GEN_MARK, 1)
     pre = pre.replace("</head>", STYLE + "</head>", 1)
     return pre + main_html(d) + post
