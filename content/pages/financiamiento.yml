@@ -13,7 +13,13 @@ moneda: "$"
 # `nombres` lista solo a quienes eligieron figurar; el resto se cuenta como
 # "personas más". Al marcar `lograda`, pasa a "Iniciativas logradas" con su
 # resultado.
-iniciativas: []
+iniciativas:
+  - nombre: "Presentación de libro"
+    descripcion: "Fondos para organizar la presentación del libro del movimiento."
+    meta: 2000
+    recaudado: 0
+    aportes: 0
+    lograda: false
 
 # Resumen general: en qué proporción entra y se usa el dinero, sin montos.
 # Si no se cargan porcentajes, se muestran solo las tarjetas.
