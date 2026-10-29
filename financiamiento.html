@@ -255,6 +255,10 @@
   .fin-give { margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap; }
   .fin-give .btn--alt { background: transparent; color: var(--blue); border-color: var(--blue); }
   .fin-give .btn--alt:hover { background: color-mix(in srgb, var(--blue) 10%, transparent); }
+  .fin-prex { margin-top: 1rem; display: flex; align-items: center; gap: 0.4rem 0.7rem; flex-wrap: wrap; font-family: "Archivo", system-ui, sans-serif; font-size: 0.95rem; }
+  .fin-prex strong { font-variant-numeric: tabular-nums; letter-spacing: 0.04em; }
+  .fin-copy { font: inherit; font-size: 0.85rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--blue); cursor: pointer; }
+  .fin-copy:hover { border-color: var(--blue); }
   .fin-give__hint { margin-top: 0.8rem; font-size: 0.95rem; color: var(--ink-soft); max-width: var(--measure); }
   .fin-donors { margin-top: 1.6rem; border-top: 1px solid var(--line); padding-top: 1.1rem; }
   .fin-donors__title { font-family: "Archivo", system-ui, sans-serif; font-weight: 600; font-size: var(--step--1); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }
@@ -413,101 +417,10 @@
   </section>
 
   <div class="doc">
-    <section id="eventos">
-      <p class="fin-notice"><strong>Datos de ejemplo</strong>Los montos de esta página son ilustrativos y todavía no corresponden a las cuentas reales del movimiento.</p>
-      <span class="label" style="margin-top:1.4rem">Eventos</span>
-      <h2>Colectas en curso</h2>
-      <div class="prose"><p>Para actividades puntuales abrimos una colecta con su propia meta. Cada donación se suma a la barra y a la lista.</p></div>
-      <div class="fin-events">
-      <article class="fin-event">
-        <h3>Presentación de libro</h3>
-        <p class="fin-event__date">21 de noviembre de 2026</p>
-        <p class="fin-event__desc">Alquiler del salón, sonido y ejemplares para la presentación. Todo lo que se recaude va a cubrir estos gastos.</p>
-        <div class="fin-goal">
-          <div class="fin-goal__nums"><span class="fin-goal__raised">$ 750</span><span class="fin-goal__of">recaudados de $ 2.000</span></div>
-          <div class="fin-goal__track" role="progressbar" aria-label="Recaudado para Presentación de libro" aria-valuemin="0" aria-valuemax="2000" aria-valuenow="750"><span class="fin-goal__fill" style="width:37.5%"></span></div>
-          <div class="fin-goal__foot"><span>38% de la meta</span><span>Faltan <strong>$ 1.250</strong></span></div>
-        </div>
-        <div class="fin-give"><a class="btn btn--rounded" href="https://www.paypal.me/resurgirnacional" target="_blank" rel="noopener">Donar por PayPal</a><a class="btn btn--rounded btn--alt" href="https://ko-fi.com/resurgirnacionaluy" target="_blank" rel="noopener">Donar por Ko-fi</a></div>
-        <p class="fin-give__hint">En el mensaje del pago escribí «Presentación de libro» y el nombre con el que querés aparecer en la lista. Si preferís no figurar, no pongas nombre: aparecés como «Anónimo».</p>
-        <div class="fin-donors">
-          <p class="fin-donors__title">4 donaciones</p>
-          <ul>
-            <li><span>Martín R.</span><span>$ 300</span></li>
-            <li><span class="is-anon">Anónimo</span><span>$ 200</span></li>
-            <li><span>Lucía F.</span><span>$ 150</span></li>
-            <li><span class="is-anon">Anónimo</span><span>$ 100</span></li>
-          </ul>
-        </div>
-      </article>
-      </div>
-    </section>
-
     <section>
-      <span class="label">Último período</span>
-      <h2>Tercer trimestre 2026</h2>
-      <p class="fin-period">Actualizado el 1 de octubre de 2026</p>
-      <div class="fin-stats">
-        <div class="fin-stat"><div class="fin-stat__label">Ingresos</div><div class="fin-stat__value">$ 66.700</div></div>
-        <div class="fin-stat"><div class="fin-stat__label">Gastos</div><div class="fin-stat__value">$ 59.300</div><div class="fin-stat__sub">89% de lo recaudado</div></div>
-        <div class="fin-stat"><div class="fin-stat__label">Saldo</div><div class="fin-stat__value">$ 7.400</div><div class="fin-stat__sub">Queda para el próximo período</div></div>
-      </div>
-    </section>
-
-    <section>
-      <span class="label">Desglose</span>
-      <h2>De dónde viene y a dónde va</h2>
-      <div class="fin-cols">
-        <div>
-        <h3>En qué se gastó</h3>
-        <ul class="fin-bars fin-bars--out">
-          <li>
-            <div class="fin-bar__head"><span class="fin-bar__name">Propaganda callejera (afiches, pegatinas, carteleras, banderas)</span><span class="fin-bar__amount">$ 31.000<span>52%</span></span></div>
-            <div class="fin-bar__track" aria-hidden="true"><span class="fin-bar__fill" style="width:52.3%"></span></div>
-          </li>
-          <li>
-            <div class="fin-bar__head"><span class="fin-bar__name">Acciones sociales</span><span class="fin-bar__amount">$ 18.500<span>31%</span></span></div>
-            <div class="fin-bar__track" aria-hidden="true"><span class="fin-bar__fill" style="width:31.2%"></span></div>
-          </li>
-          <li>
-            <div class="fin-bar__head"><span class="fin-bar__name">Funcionamiento (sitio, dominio, materiales)</span><span class="fin-bar__amount">$ 9.800<span>17%</span></span></div>
-            <div class="fin-bar__track" aria-hidden="true"><span class="fin-bar__fill" style="width:16.5%"></span></div>
-          </li>
-        </ul>
-        </div>
-        <div>
-        <h3>De dónde vino</h3>
-        <ul class="fin-bars fin-bars--in">
-          <li>
-            <div class="fin-bar__head"><span class="fin-bar__name">Cuotas de miembros</span><span class="fin-bar__amount">$ 48.000<span>72%</span></span></div>
-            <div class="fin-bar__track" aria-hidden="true"><span class="fin-bar__fill" style="width:72.0%"></span></div>
-          </li>
-          <li>
-            <div class="fin-bar__head"><span class="fin-bar__name">Aportes vía PayPal y Ko-fi</span><span class="fin-bar__amount">$ 12.500<span>19%</span></span></div>
-            <div class="fin-bar__track" aria-hidden="true"><span class="fin-bar__fill" style="width:18.7%"></span></div>
-          </li>
-          <li>
-            <div class="fin-bar__head"><span class="fin-bar__name">Tienda</span><span class="fin-bar__amount">$ 6.200<span>9%</span></span></div>
-            <div class="fin-bar__track" aria-hidden="true"><span class="fin-bar__fill" style="width:9.3%"></span></div>
-          </li>
-        </ul>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <span class="label">Historial</span>
-      <h2>Todos los períodos</h2>
-      <div class="fin-table-wrap">
-        <table class="fin-table">
-          <thead><tr><th scope="col">Período</th><th scope="col">Ingresos</th><th scope="col">Gastos</th><th scope="col">Saldo</th></tr></thead>
-          <tbody>
-            <tr><td>Tercer trimestre 2026</td><td>$ 66.700</td><td>$ 59.300</td><td>$ 7.400</td></tr>
-            <tr><td>Segundo trimestre 2026</td><td>$ 54.400</td><td>$ 51.500</td><td>$ 2.900</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="prose"><p class="muted">Las cuotas y los aportes se registran el mes en que se reciben. Los gastos se respaldan con comprobantes que cualquier miembro puede pedir para revisar.</p></div>
+      <span class="label">Cuentas</span>
+      <h2>Próximamente</h2>
+      <div class="prose"><p>Acá vamos a publicar, período por período, cuánto dinero recibe el movimiento, de dónde viene y en qué se usa.</p></div>
     </section>
 
     <section>

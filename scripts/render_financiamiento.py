@@ -83,6 +83,10 @@ STYLE = """
   .fin-give { margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap; }
   .fin-give .btn--alt { background: transparent; color: var(--blue); border-color: var(--blue); }
   .fin-give .btn--alt:hover { background: color-mix(in srgb, var(--blue) 10%, transparent); }
+  .fin-prex { margin-top: 1rem; display: flex; align-items: center; gap: 0.4rem 0.7rem; flex-wrap: wrap; font-family: "Archivo", system-ui, sans-serif; font-size: 0.95rem; }
+  .fin-prex strong { font-variant-numeric: tabular-nums; letter-spacing: 0.04em; }
+  .fin-copy { font: inherit; font-size: 0.85rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--blue); cursor: pointer; }
+  .fin-copy:hover { border-color: var(--blue); }
   .fin-give__hint { margin-top: 0.8rem; font-size: 0.95rem; color: var(--ink-soft); max-width: var(--measure); }
   .fin-donors { margin-top: 1.6rem; border-top: 1px solid var(--line); padding-top: 1.1rem; }
   .fin-donors__title { font-family: "Archivo", system-ui, sans-serif; font-weight: 600; font-size: var(--step--1); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }
@@ -94,6 +98,44 @@ STYLE = """
   .fin-past li { display: flex; justify-content: space-between; gap: 0.3rem 1rem; flex-wrap: wrap; padding: 0.7rem 0; border-bottom: 1px solid var(--line); }
   .fin-past li span:last-child { font-family: "Archivo", system-ui, sans-serif; font-size: 0.9rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
 </style>
+"""
+
+
+# Botones "Copiar número" (cuenta Prex). Usa el mismo aviso .copy-toast que
+# el correo del pie, cuyos estilos ya trae la plantilla.
+COPY_JS = """  <script>
+  (function () {
+    var btns = document.querySelectorAll('.fin-copy');
+    if (!btns.length) return;
+    var toast = document.createElement('div');
+    toast.className = 'copy-toast';
+    toast.setAttribute('role', 'status');
+    toast.textContent = 'Número de cuenta copiado';
+    document.body.appendChild(toast);
+    var t;
+    function ping() {
+      toast.classList.add('is-on');
+      clearTimeout(t);
+      t = setTimeout(function () { toast.classList.remove('is-on'); }, 1600);
+    }
+    function fallback(str) {
+      var ta = document.createElement('textarea');
+      ta.value = str; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.top = '-1000px';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      ping();
+    }
+    [].forEach.call(btns, function (b) {
+      b.addEventListener('click', function () {
+        var v = b.getAttribute('data-copy');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(v).then(ping, function () { fallback(v); });
+        } else { fallback(v); }
+      });
+    });
+  })();
+  </script>
 """
 
 
@@ -161,6 +203,7 @@ def load():
     d["give_links"] = [(label, home[k]) for label, k in
                        (("Donar por PayPal", "aporta_paypal"), ("Donar por Ko-fi", "aporta_kofi"))
                        if home.get(k)]
+    d["prex"] = str(home.get("aporta_prex") or "").strip()
     return d
 
 
@@ -178,7 +221,7 @@ def bars(rows, total, cur, mod):
     return '        <ul class="fin-bars %s">\n%s\n        </ul>' % (mod, "\n".join(items))
 
 
-def event_card(e, cur, give_links):
+def event_card(e, cur, give_links, prex):
     rec, meta = e["recaudado"], e["meta"]
     pct = min(100.0, rec / meta * 100) if meta else 0
     falta = max(0.0, meta - rec)
@@ -187,17 +230,22 @@ def event_card(e, cur, give_links):
     desc = ('        <p class="fin-event__desc">%s</p>\n' % esc(e["descripcion"])) if e.get("descripcion") else ""
 
     give = ""
-    if give_links:
+    if give_links or prex:
         buttons = "".join(
             '<a class="btn btn--rounded%s" href="%s" target="_blank" rel="noopener">%s</a>'
             % ("" if i == 0 else " btn--alt", esc(url), esc(label))
             for i, (label, url) in enumerate(give_links)
         )
+        prex_html = (
+            '        <p class="fin-prex">Por Prex, a la cuenta <strong>%s</strong> '
+            '<button type="button" class="fin-copy" data-copy="%s">Copiar número</button></p>\n'
+            % (esc(prex), esc(prex))
+        ) if prex else ""
         give = (
-            '        <div class="fin-give">%s</div>\n'
-            '        <p class="fin-give__hint">En el mensaje del pago escribí «%s» y el nombre con el que querés '
+            '%s%s'
+            '        <p class="fin-give__hint">En el mensaje o concepto del pago escribí «%s» y el nombre con el que querés '
             'aparecer en la lista. Si preferís no figurar, no pongas nombre: aparecés como «Anónimo».</p>\n'
-            % (buttons, esc(e["nombre"]))
+            % (('        <div class="fin-give">%s</div>\n' % buttons) if buttons else "", prex_html, esc(e["nombre"]))
         )
 
     donors = ""
@@ -247,7 +295,7 @@ def events_html(d, cur, notice):
             'Cada donación se suma a la barra y a la lista.</p></div>\n'
             '      <div class="fin-events">\n%s\n      </div>\n' % (
                 ' style="margin-top:1.4rem"' if notice else "",
-                "\n".join(event_card(e, cur, d["give_links"]) for e in activos))
+                "\n".join(event_card(e, cur, d["give_links"], d["prex"]) for e in activos))
         )
     if cerrados:
         rows = "\n".join(
@@ -330,7 +378,14 @@ def main_html(d):
         notice = ""
 
     if not d["periodos"]:
-        out.append('    <section>\n%s      <p class="prose">Todavía no hay períodos publicados.</p>\n    </section>\n' % notice)
+        out.append(
+            '    <section>\n%s'
+            '      <span class="label"%s>Cuentas</span>\n'
+            '      <h2>Próximamente</h2>\n'
+            '      <div class="prose"><p>Acá vamos a publicar, período por período, cuánto dinero recibe '
+            'el movimiento, de dónde viene y en qué se usa.</p></div>\n'
+            '    </section>\n' % (notice, ' style="margin-top:1.4rem"' if notice else "")
+        )
     else:
         p = d["periodos"][0]
         saldo = p["total_in"] - p["total_out"]
@@ -401,7 +456,8 @@ def main_html(d):
         '      <p style="margin-top:1.4rem"><a class="btn btn--rounded" href="index.html#aporta">Aportar →</a></p>\n'
         '    </section>\n'
         '  </div>\n'
-        '</main>'
+        '%s'
+        '</main>' % (COPY_JS if d["prex"] else "")
     )
     return "".join(out)
 

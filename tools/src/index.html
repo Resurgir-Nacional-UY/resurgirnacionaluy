@@ -707,7 +707,7 @@
       <p class="give-note" data-cms="aporta-note">El dinero recaudado se destina a las actividades de Resurgir Nacional: propaganda callejera (afiches, pegatinas, carteleras, banderas), acciones sociales y funcionamiento del movimiento.</p>
       <p class="give-link"><a href="financiamiento.html">Ver en qué se usa el dinero →</a></p>
       <!-- EVENTOS:START --><!-- EVENTOS:END -->
-      <p class="give-online"><span class="label">Colaborar en línea</span><a href="https://www.paypal.me/resurgirnacional" data-cms="aporta-paypal" target="_blank" rel="noopener">PayPal</a><a href="https://ko-fi.com/resurgirnacionaluy" data-cms="aporta-kofi" target="_blank" rel="noopener">Ko-fi</a></p>
+      <p class="give-online"><span class="label">Colaborar en línea</span><a href="https://www.paypal.me/resurgirnacional" data-cms="aporta-paypal" target="_blank" rel="noopener">PayPal</a><a href="https://ko-fi.com/resurgirnacionaluy" data-cms="aporta-kofi" target="_blank" rel="noopener">Ko-fi</a><a href="#aporta" role="button" data-cms="aporta-prex" data-copy="" title="Copiar el número de cuenta Prex" hidden>Prex</a></p>
     </div>
   </section>
 
@@ -886,6 +886,39 @@
     }
     [].forEach.call(links, function (a) {
       a.addEventListener('click', function (e) { e.preventDefault(); copy(); });
+    });
+  })();
+  (function () {
+    // Enlaces que copian un dato (p. ej. el número de cuenta Prex de Colaborar).
+    var links = document.querySelectorAll('a[data-copy]');
+    if (!links.length) return;
+    var toast = document.createElement('div');
+    toast.className = 'copy-toast';
+    toast.setAttribute('role', 'status');
+    toast.textContent = 'Número de cuenta copiado';
+    document.body.appendChild(toast);
+    var t;
+    function ping() {
+      toast.classList.add('is-on');
+      clearTimeout(t);
+      t = setTimeout(function () { toast.classList.remove('is-on'); }, 1600);
+    }
+    function fallback(str) {
+      var ta = document.createElement('textarea');
+      ta.value = str; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.top = '-1000px';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      ping();
+    }
+    [].forEach.call(links, function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var v = a.getAttribute('data-copy');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(v).then(ping, function () { fallback(v); });
+        } else { fallback(v); }
+      });
     });
   })();
 

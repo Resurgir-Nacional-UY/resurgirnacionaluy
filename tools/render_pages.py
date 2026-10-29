@@ -139,6 +139,25 @@ def sub_href(page, key, value):
     return sub_attr_by_marker(page, key, "href", value)
 
 
+def sub_copy_link(page, key, value, label):
+    """<a ... data-cms="key" data-copy="...">label · valor</a>: enlace que copia
+    un dato al portapapeles (p. ej. un número de cuenta). Si el valor está vacío
+    el enlace queda con `hidden` en vez de borrarse, para que se pueda volver a
+    mostrar desde el CMS."""
+    if value is None:
+        return page
+    value = str(value).strip()
+    pat = re.compile(r'(<a\b[^>]*\bdata-cms="%s"[^>]*>)(.*?)(</a>)' % re.escape(key), re.S)
+
+    def fix(m):
+        tag = re.sub(r'\s+hidden(?=[\s>])', '', m.group(1))
+        tag = re.sub(r'(data-copy=")[^"]*', lambda mm: mm.group(1) + esc(value), tag, count=1)
+        if not value:
+            tag = tag[:-1] + ' hidden>'
+        return tag + ("%s · %s" % (label, esc(value)) if value else label) + m.group(3)
+    return pat.sub(fix, page, count=1)
+
+
 def sub_mailto(page, key, email):
     """<a ... data-cms="key" href="mailto:X...">...texto con X...</a>: cambia la
     parte local del href (preserva cualquier ?subject=... que ya tuviera) y
@@ -196,6 +215,7 @@ def apply_home(page):
     page = sub_by_marker(page, "aporta-note", d.get("aporta_note"))
     page = sub_href(page, "aporta-paypal", d.get("aporta_paypal"))
     page = sub_href(page, "aporta-kofi", d.get("aporta_kofi"))
+    page = sub_copy_link(page, "aporta-prex", d.get("aporta_prex", ""), "Prex")
 
     page = sub_by_marker(page, "sumate-label", d.get("sumate_label"))
     page = sub_by_marker(page, "sumate-heading", d.get("sumate_heading"))

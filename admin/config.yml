@@ -116,6 +116,13 @@ collections:
           - name: aporta_kofi
             label: "Sección Colaborar — link de Ko-fi"
             widget: string
+          - name: aporta_prex
+            label: "Sección Colaborar — número de cuenta Prex"
+            widget: string
+            required: false
+            hint: >-
+              Se muestra con un botón para copiarlo, en Colaborar y en las
+              colectas de eventos. Si lo dejás vacío, Prex no aparece.
 
           - name: sumate_label
             label: "Sección Sumarse — etiqueta"
@@ -419,6 +426,7 @@ collections:
             widget: datetime
             time_format: false
             format: "YYYY-MM-DD"
+            required: false
           - name: eventos
             label: "Eventos — colectas para una ocasión puntual"
             widget: list
@@ -455,6 +463,8 @@ collections:
           - name: periodos
             label: "Períodos (el primero de la lista es el que se destaca)"
             widget: list
+            required: false
+            hint: "Mientras no haya ninguno, la página muestra «Próximamente» en lugar de las cuentas."
             fields:
               - { name: nombre, label: "Nombre del período (ej: Tercer trimestre 2026)", widget: string }
               - name: ingresos
