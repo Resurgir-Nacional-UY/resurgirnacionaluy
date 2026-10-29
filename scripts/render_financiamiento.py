@@ -332,19 +332,28 @@ def done_card(e, cur):
 def initiatives_html(d, notice):
     abiertas = [e for e in d["iniciativas"] if not e["lograda"]]
     logradas = [e for e in d["iniciativas"] if e["lograda"]]
+    # el titulo acompaña lo que hay: con iniciativas abiertas invita a aportar;
+    # sin ninguna, explica como van a funcionar
+    if abiertas:
+        title = "Iniciativas abiertas"
+        intro = ("Cada iniciativa tiene una meta y una fecha. La barra muestra cuánto se juntó "
+                 "y cuánto falta; cuando se cumple, publicamos qué se hizo.")
+    else:
+        title = "Próximas iniciativas"
+        intro = ("Cuando el movimiento necesite fondos para algo puntual —una presentación, materiales, "
+                 "un acto— lo vas a ver acá, con su meta, cuánto se juntó y cuánto falta.")
     out = [
         '    <section id="iniciativas">\n%s'
         '      <span class="label">Iniciativas</span>\n'
-        '      <h2>Aportá a algo concreto</h2>\n'
-        '      <div class="prose"><p>Cada iniciativa tiene una meta y una fecha. La barra muestra cuánto se juntó '
-        'y cuánto falta; cuando se cumple, publicamos qué se hizo.</p></div>\n' % notice
+        '      <h2>%s</h2>\n'
+        '      <div class="prose"><p>%s</p></div>\n' % (notice, title, intro)
     ]
     if abiertas:
         out.append('      <div class="fin-inis">\n%s\n      </div>\n'
                    % "\n".join(open_card(e, d) for e in abiertas))
     else:
-        out.append('      <p class="fin-empty"><strong>No hay iniciativas abiertas por ahora</strong>'
-                   'Cuando lancemos la próxima, va a aparecer acá y en la portada.</p>\n')
+        out.append('      <p class="fin-empty"><strong>Todavía no hay iniciativas abiertas</strong>'
+                   'La primera se va a anunciar acá y en la portada.</p>\n')
     if logradas:
         out.append('      <h3 style="margin-top:2.6rem;font-size:var(--step-1)">Iniciativas logradas</h3>\n'
                    '      <div class="fin-done">\n%s\n      </div>\n'
