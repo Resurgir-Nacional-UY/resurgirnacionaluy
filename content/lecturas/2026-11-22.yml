@@ -1,0 +1,59 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-22'
+celebracion: Solemnidad de Nuestro Señor Jesucristo, Rey del Universo
+santo: ''
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-22.jpg
+imagen_credito: 'Fra Angelico, «El Juicio Final» (c. 1435)'
+titulo_miniatura: 'Jesucristo, Rey del Universo'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Ezequiel 34, 11-12. 15-17
+  presentacion: Lectura de la profecía de Ezequiel.
+  texto: |-
+    Porque así habla el Señor: ¡Aquí estoy yo! Yo mismo voy a buscar mi rebaño y me ocuparé de él. Como el pastor se ocupa de su rebaño cuando está en medio de sus ovejas dispersas, así me ocuparé de mis ovejas y las libraré de todos los lugares donde se habían dispersado, en un día de nubes y tinieblas. Yo mismo apacentaré a mis ovejas y las llevaré a descansar –oráculo del Señor–.
+
+    Buscaré a la oveja perdida, haré volver a la descarriada, vendaré a la herida y curaré a la enferma, pero exterminará a la que está gorda y robusta. Yo las apacentaré con justicia. En cuanto a ustedes, ovejas de mi rebaño, así habla el Señor: Yo voy a juzgar entre oveja y oveja, entre carneros y chivos.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 23
+  estrofas: |-
+    El Señor es mi pastor,
+    nada me puede faltar.
+    El me hace descansar en verdes praderas,
+
+    me conduce a las aguas tranquilas
+    y repara mis fuerzas;
+    me guía por el recto sendero,
+    por amor de su Nombre.
+
+    Tú preparas ante mí una mesa,
+    frente a mis enemigos;
+    unges con óleo mi cabeza
+    y mi copa rebosa.
+
+    Tu bondad y tu gracia me acompañan
+    a lo largo de mi vida;
+    y habitaré en la Casa del Señor,
+    por muy largo tiempo.
+- tipo: Segunda lectura
+  cita: 1 Corintios 15, 20-26. 28
+  presentacion: Lectura de la primera carta del apóstol san Pablo a los Corintios.
+  texto: |-
+    Pero no, Cristo resucitó de entre los muertos, el primero de todos. Porque la muerte vino al mundo por medio de un hombre, y también por medio de un hombre viene la resurrección. En efecto, así como todos mueren en Adán, así también todos revivirán en Cristo, cada uno según el orden que le corresponde: Cristo, el primero de todos, luego, aquellos que estén unidos a él en el momento de su Venida.
+
+    En seguida vendrá el fin, cuando Cristo entregue el Reino a Dios, el Padre, después de haber aniquilado todo Principado, Dominio y Poder. Porque es necesario que Cristo reine hasta que ponga a todos los enemigos debajo de sus pies. El último enemigo que será vencido es la muerte, Y cuando el universo entero le sea sometido, el mismo Hijo se someterá también a aquel que le sometió todas las cosas, a fin de que Dios sea todo en todos.
+  cierre: Palabra de Dios.
+- tipo: Evangelio
+  cita: Mateo 25, 31-46
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    Cuando el Hijo del hombre venga en su gloria rodeado de todos los ángeles, se sentará en su trono glorioso. Todas las naciones serán reunidas en su presencia, y él separará a unos de otros, como el pastor separa las ovejas de los cabritos, y pondrá a aquellas a su derecha y a estos a su izquierda. Entonces el Rey dirá a los que tenga a su derecha: "Vengan, benditos de mi Padre, y reciban en herencia el Reino que les fue preparado desde el comienzo del mundo, porque tuve hambre, y ustedes me dieron de comer; tuve sed, y me dieron de beber; estaba de paso, y me alojaron; desnudo, y me vistieron; enfermo, y me visitaron; preso, y me vinieron a ver".
+
+    Los justos le responderán: "Señor, ¿cuándo te vimos hambriento, y te dimos de comer; sediento, y te dimos de beber? ¿Cuándo te vimos de paso, y te alojamos; desnudo, y te vestimos? ¿Cuándo te vimos enfermo o preso, y fuimos a verte?". Y el Rey les responderá: "Les aseguro que cada vez que lo hicieron con el más pequeño de mis hermanos, lo hicieron conmigo". Luego dirá a los de su izquierda: "Aléjense de mí, malditos; vayan al fuego eterno que fue preparado para el demonio y sus ángeles, porque tuve hambre, y ustedes no me dieron de comer; tuve sed, y no me dieron de beber; estaba de paso, y no me alojaron; desnudo, y no me vistieron; enfermo y preso, y no me visitaron".
+
+    Estos, a su vez, le preguntarán: "Señor, ¿cuando te vimos hambriento o sediento, de paso o desnudo, enfermo o preso, y no te hemos socorrido?". Y él les responderá: "Les aseguro que cada vez que no lo hicieron con el más pequeño de mis hermanos, tampoco lo hicieron conmigo". Estos irán al castigo eterno, y los justos a la Vida eterna».
+  cierre: Palabra del Señor.

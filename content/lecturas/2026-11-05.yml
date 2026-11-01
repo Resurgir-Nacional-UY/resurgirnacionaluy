@@ -1,0 +1,46 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-05'
+celebracion: Jueves de la XXXI semana del tiempo ordinario
+santo: 'Memoria libre (santo del martirologio): Santos Zacarías e Isabel, padres de San Juan Bautista'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-05.jpg
+imagen_credito: 'Jacob Jordaens, «La Virgen y el Niño con San Zacarías, Santa Isabel y San Juan Bautista» (s. XVII)'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Filipenses 3, 3-8a
+  presentacion: Lectura de la carta del apóstol san Pablo a los Filipenses.
+  texto: |-
+    Porque los verdaderos circuncisos somos nosotros, los que ofrecemos un culto inspirado en el Espíritu de Dios y nos gloriamos en Cristo Jesús, en lugar de poner nuestra confianza en la carne, aunque yo también tengo motivos para poner mi confianza en ella. Si alguien cree que puede confiar en la carne, yo puedo hacerlo con mayor razón; circuncidado al octavo día; de la raza de Israel y de la tribu de Benjamín; hebreo, hijo de hebreos; en cuanto a la Ley, un fariseo; por el ardor de mi cielo, perseguidor de la Iglesia; y en lo que se refiere a la justicia que procede de la Ley, de una conducta irreprochable.
+
+    Pero todo lo que hasta ahora consideraba una ganancia, lo tengo por pérdida, a causa de Cristo. Más aún, todo me parece una desventaja comparado con el inapreciable conocimiento de Cristo Jesús, mi Señor.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 105
+  estrofas: |-
+    ¡Canten al Señor con instrumentos musicales,
+    pregonen todas sus maravillas!
+    ¡Gloríense en su santo Nombre,
+    alégrense los que buscan al Señor!
+
+    ¡Recurran al Señor y a su poder,
+    busquen constantemente su rostro;
+    recuerden las maravillas que él obró,
+    sus portentos y los juicios de su boca!
+
+    Descendientes de Abraham, su servidor,
+    hijos de Jacob, su elegido:
+    el Señor es nuestro Dios,
+    en toda la tierra rigen sus decretos.
+- tipo: Evangelio
+  cita: Lucas 15, 1-10
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Todos los publicanos y pecadores se acercaban a Jesús para escucharlo. Los fariseos y los escribas murmuraban, diciendo: «Este hombre recibe a los pecadores y come con ellos». Jesús les dijo entonces esta parábola: «Si alguien tiene cien ovejas y pierde una, ¿no deja acaso las noventa y nueve en el campo y va a buscar la que se había perdido, hasta encontrarla? Y cuando la encuentra, la carga sobre sus hombros, lleno de alegría, y al llegar a su casa llama a sus amigos y vecinos, y les dice: "Alégrense conmigo, porque encontré la oveja que se me había perdido".
+
+    Les aseguro que, de la misma manera, habrá más alegría en el cielo por un solo pecador que se convierta, que por noventa y nueve justos que no necesitan convertirse». Y les dijo también: «Si una mujer tiene diez dracmas y pierde una, ¿no enciende acaso la lámpara, barre la casa y busca con cuidado hasta encontrarla? Y cuando la encuentra, llama a sus amigas y vecinas, y les dice: "Alégrense conmigo, porque encontré la dracma que se me había perdido".
+
+    Les aseguro que, de la misma manera, se alegran los ángeles de Dios por un solo pecador que se convierte».
+  cierre: Palabra del Señor.

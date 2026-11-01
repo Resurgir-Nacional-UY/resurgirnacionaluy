@@ -1,0 +1,55 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-29'
+celebracion: I Domingo de Adviento
+santo: ''
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-29.jpg
+imagen_credito: 'Miguel Ángel, «El profeta Isaías», Capilla Sixtina (1509)'
+titulo_miniatura: 'I Domingo de Adviento'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Isaías 63, 16b-17. 19b; 64, 1-7
+  presentacion: Lectura del libro de Isaías.
+  texto: |-
+    ¡Tú, Señor, eres nuestro padre, «nuestro Redentor» es tu Nombre desde siempre! ¿Por qué, Señor, nos desvías de tus caminos y endureces nuestros corazones para que dejen de temerte? ¡Vuelve, por amor a tus servidores y a las tribus de tu herencia! ¡Si rasgaras el cielo y descendieras las montañas se disolverían delante de ti, como el fuego enciende un matorral, como el fuego hace hervir el agua! Así manifestarías tu Nombre a tus adversarios y las naciones temblarían ante ti.
+
+    Cuando hiciste portentos inesperados, que nadie había escuchado jamás, ningún oído oyó, ningún ojo vio a otro Dios, fuera de ti, que hiciera tales cosas por los que esperan en él. Tú vas al encuentro de los que practican la justicia y se acuerdan de tus caminos Tú estás irritado, y nosotros hemos pecado, desde siempre fuimos rebeldes contra ti. Nos hemos convertido en una cosa impura, toda nuestra justicia es como un trapo sucio. Nos hemos marchitado como el follaje y nuestras culpas nos arrastran como el viento.
+
+    No hay nadie que invoque tu Nombre, nadie que despierte para aferrarse a ti, porque tú nos ocultaste tu rostro y nos pusiste a merced de nuestras culpas. Pero tú, Señor, eres nuestro padre, nosotros somos la arcilla, y tú, nuestro alfarero: ¡todos somos la obra de tus manos!
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 80
+  estrofas: |-
+    Escucha, Pastor de Israel,
+    tú que tienes el trono sobre los querubines,
+    reafirma tu poder y ven a salvarnos.
+
+    Vuélvete, Dios de los ejércitos,
+    observa desde el cielo y mira:
+    ven a visitar tu vid,
+    la cepa que plantó tu mano,
+    el retoño que tú hiciste vigoroso.
+
+    Que tu mano sostenga al que está a tu derecha,
+    al hombre que tú fortaleciste,
+    y nunca nos apartaremos de ti:
+    devuélvenos la vida e invocaremos tu Nombre.
+- tipo: Segunda lectura
+  cita: 1 Corintios 1, 3-9
+  presentacion: Lectura de la primera carta del apóstol san Pablo a los Corintios.
+  texto: |-
+    Llegue a ustedes la gracia y la paz que proceden de Dios, nuestro Padre, y del Señor Jesucristo. No dejo de dar gracias a Dios por ustedes, por la gracia que él les ha concedido en Cristo Jesús. En efecto, ustedes han sido colmados en él con toda clase de riquezas, las de la palabra y las del conocimiento, en la medida que el testimonio de Cristo se arraigó en ustedes. Por eso, mientras esperan la Revelación de nuestro Señor Jesucristo, no les falta ningún don de la gracia.
+
+    El los mantendrá firmes hasta el fin, para que sean irreprochables en el día de la Venida de nuestro Señor Jesucristo. Porque Dios es fiel, y él los llamó a vivir en comunión con su Hijo Jesucristo, nuestro Señor.
+  cierre: Palabra de Dios.
+- tipo: Evangelio
+  cita: Marcos 13, 33-37
+  presentacion: ✠ Lectura del santo Evangelio según san Marcos.
+  texto: |-
+    «Tengan cuidado y estén prevenidos porque no saben cuándo llegará el momento. Será como un hombre que se va de viaje, deja su casa al cuidado de sus servidores, asigna a cada uno su tarea, y recomienda al portero que permanezca en vela. Estén prevenidos, entonces, porque no saben cuándo llegará el dueño de casa, si al atardecer, a medianoche, al canto del gallo o por la mañana. No sea que llegue de improviso y los encuentre dormidos.
+
+    Y esto que les digo a ustedes, lo digo a todos: "¡Estén prevenidos!"».
+  cierre: Palabra del Señor.

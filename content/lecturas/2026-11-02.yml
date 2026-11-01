@@ -1,0 +1,58 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-02'
+celebracion: Conmemoración de todos los fieles difuntos
+santo: ''
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-02.jpg
+imagen_credito: 'William-Adolphe Bouguereau, «El día de los difuntos» (1859)'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Sabiduría 3, 1-9
+  presentacion: Lectura del libro de la Sabiduría.
+  texto: |-
+    Las almas de los justos están en las manos de Dios, y no los afectará ningún tormento. A los ojos de los insensatos parecían muertos; su partida de este mundo fue considerada una desgracia y su alejamiento de nosotros, una completa destrucción; pero ellos están en paz. A los ojos de los hombres, ellos fueron castigados, pero su esperanza estaba colmada de inmortalidad. Por una leve corrección, recibirán grandes beneficios, porque Dios los puso a prueba y los encontró dignos de él.
+
+    Los probó como oro en el crisol y los aceptó como un holocausto. Por eso brillarán cuando Dios los visite, y se extenderán como chispas por los rastrojos. Juzgarán a las naciones y dominarán a los pueblos, y el Señor será su rey para siempre. Los que confían en él comprenderán la verdad y los que le son fieles permanecerán junto a él en el amor. Porque la gracia y la misericordia son para sus elegidos.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 23
+  estrofas: |-
+    El Señor es mi pastor,
+    nada me puede faltar.
+    El me hace descansar en verdes praderas,
+    me conduce a las aguas tranquilas
+    y repara mis fuerzas;
+
+    me guía por el recto sendero,
+    por amor de su Nombre.
+    Aunque cruce por oscuras quebradas,
+    no temeré ningún mal,
+    porque tú estás conmigo:
+    tu vara y tu bastón me infunden confianza.
+
+    Tú preparas ante mí una mesa,
+    frente a mis enemigos;
+    unges con óleo mi cabeza
+    y mi copa rebosa.
+
+    Tu bondad y tu gracia me acompañan
+    a lo largo de mi vida;
+    y habitaré en la Casa del Señor,
+    por muy largo tiempo.
+- tipo: Segunda lectura
+  cita: Romanos 5, 5-11
+  presentacion: Lectura de la carta del apóstol san Pablo a los Romanos.
+  texto: |-
+    Y la esperanza no quedará defraudada, porque el amor de Dios ha sido derramado en nuestros corazones por el Espíritu Santo, que nos ha sido dado. En efecto, cuando todavía éramos débiles, Cristo, en el tiempo señalado, murió por los pecadores. Difícilmente se encuentra alguien que dé su vida por un hombre justo; tal vez alguno sea capaz de morir por un bienhechor. Pero la prueba de que Dios nos ama es que Cristo murió por nosotros cuando todavía éramos pecadores.
+
+    Y ahora que estamos justificados por su sangre, con mayor razón seremos librados por él de la ira de Dios. Porque si siendo enemigos, fuimos reconciliados con Dios por la muerte de su Hijo, mucho más ahora que estamos reconciliados, seremos salvados por su vida. Y esto no es todo: nosotros nos gloriamos en Dios, por medio de nuestro Señor Jesucristo, por quien desde ahora hemos recibido la reconciliación.
+  cierre: Palabra de Dios.
+- tipo: Evangelio
+  cita: Juan 6, 37-40
+  presentacion: ✠ Lectura del santo Evangelio según san Juan.
+  texto: |-
+    Todo lo que me da el Padre viene a mí, y al que venga a mí yo no lo rechazaré, porque he bajado del cielo, no para hacer mi voluntad, sino la del que me envió. La voluntad del que me ha enviado es que yo no pierda nada de lo que él me dio, sino que lo resucite en el último día. Esta es la voluntad de mi Padre: que el que ve al Hijo y cree en él, tenga Vida eterna y que yo lo resucite en el último día».
+  cierre: Palabra del Señor.

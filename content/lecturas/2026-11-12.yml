@@ -1,0 +1,47 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-12'
+celebracion: Jueves de la XXXII semana del tiempo ordinario
+santo: 'Memoria obligatoria: San Josafat, obispo y mártir'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-12.jpg
+imagen_credito: 'Józef Simmler, «Martirio de San Josafat» (1861)'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Filemón 7-20
+  presentacion: Lectura de la carta del apóstol san Pablo a Filemón.
+  texto: |-
+    Por mi parte, yo he experimentado una gran alegría y me he sentido reconfortado por tu amor, viendo como tú, querido hermano aliviabas las necesidades de los santos Por eso, aunque tengo absoluta libertad en Cristo para ordenarte lo que debes hacer, prefiero suplicarte en nombre del amor, Yo, Pablo, ya anciano y ahora prisionero a causa de Cristo Jesús, te suplico en favor de mi hijo Onésimo, al que engendré en la prisión.
+
+    Antes, él no te presto ninguna utilidad, pero ahora te será muy útil, como lo es para mí. Te lo envío como si fuera yo mismo. Con gusto lo hubiera retenido a mi lado, para que me sirviera en tu nombre mientras estoy prisionero a causa del Evangelio. Pero no he querido realizar nada sin tu consentimiento, para que el beneficio que me haces no sea forzado, sino voluntario. Tal vez, él se apartó de ti por un instante, a fin de que lo recuperes para siempre, no ya como un esclavo, sino como algo mucho mejor, como un hermano querido. Si es tan querido para mí, cuánto más lo será para ti, que estás unido a él por lazos humanos y en el Señor.
+
+    Por eso, si me consideras un amigo, recíbelo como a mí mismo. Y si él te ha hecho algún daño o te debe algo, anótalo a mi cuenta. Lo pagaré yo, Pablo que firmo esta carta de mi puño y letra. No quiero recordarte que tú también eres mi deudor, y la deuda eres tú mismo. Sí, hermano, préstame ese servicio por amor al Señor y tranquiliza mi corazón en Cristo.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 146
+  estrofas: |-
+    El mantiene su fidelidad para siempre,
+    hace justicia a los oprimidos
+    y da pan a los hambrientos.
+    El Señor libera a los cautivos,
+
+    abre los ojos de los ciegos
+    y endereza a los que están encorvados.
+    El Señor protege a los extranjeros
+
+    y sustenta al huérfano y a la viuda;
+    el Señor ama a los justos
+    y entorpece el camino de los malvados.
+    El Señor reina eternamente,
+    reina tu Dios, Sión,
+    a lo largo de las generaciones.
+- tipo: Evangelio
+  cita: Lucas 17, 20-25
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Los fariseos le preguntaron cuándo llegará el Reino de Dios. El les respondió: «El Reino de Dios no viene ostensiblemente, y no se podrá decir: «Está aquí» o «Está allí». Porque el Reino de Dios está entre ustedes». Jesús dijo después a sus discípulos: «Vendrá el tiempo en que ustedes desearán ver uno solo de los días del Hijo del hombre y no lo verán. Les dirán: «Está aquí» o «Está allí», pero no corran a buscarlo.
+
+    Como el relámpago brilla de un extremo al otro del cielo, así será el Hijo del hombre cuando llegue su Día. Pero antes tendrá que sufrir mucho y será rechazado por esta generación.
+  cierre: Palabra del Señor.

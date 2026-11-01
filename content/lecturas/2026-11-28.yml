@@ -1,0 +1,46 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-28'
+celebracion: Sábado de la XXXIV semana del tiempo ordinario
+santo: 'Memoria libre: Santa María en sábado'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-28.jpg
+imagen_credito: 'Bartolomé Esteban Murillo, «La Virgen del Rosario» (c. 1650, Palacio Pitti)'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Apocalipsis 22, 1-7
+  presentacion: Lectura del libro del Apocalipsis.
+  texto: |-
+    Después el Angel me mostró un río de agua de vida, claro como el cristal, que brotaba del trono de Dios y del Cordero, en medio de la plaza de la Ciudad. A ambos lados del río, había arboles de vida que fructificaban doce veces al año, una vez por mes, y sus hojas servían para curar a los pueblos. Ya no habrá allí ninguna maldición. El trono de Dios y del Cordero estará en la Ciudad, y sus servidores lo adorarán.
+
+    Ellos contemplarán su rostro y llevarán su Nombre en la frente. Tampoco existirá la noche, ni les hará falta la luz de las lámparas ni la luz del sol, porque el Señor Dios los iluminará, y ellos reinarán por los siglos de los siglos. Después me dijo: «Estas palabras son verdaderas y dignas de crédito. El Señor Dios que inspira a los profetas envió a su mensajero para mostrar a sus servidores lo que tiene que suceder pronto.
+
+    ¡Volveré pronto! Feliz el que cumple las palabras proféticas de este Libro».
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 95
+  estrofas: |-
+    ¡Vengan, cantemos con júbilo al Señor,
+    aclamemos a la Roca que nos salva!
+    ¡Lleguemos hasta él dándole gracias,
+    aclamemos con música al Señor!
+
+    Porque el Señor es un Dios grande,
+    el soberano de todos los dioses:
+    en su mano están los abismos de la tierra,
+    y son suyas las cumbres de las montañas;
+    suyo es el mar, porque él lo hizo,
+    y la tierra firme, que formaron sus manos.
+
+    ¡Entren, inclinémonos para adorarlo!
+    ¡Doblemos la rodilla ante el Señor que nos creó!
+    Porque él es nuestro Dios,
+    y nosotros, el pueblo que él apacienta.
+- tipo: Evangelio
+  cita: Lucas 21, 34-36
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Tengan cuidado de no dejarse aturdir por los excesos, la embriaguez y las preocupaciones de la vida, para que ese día no caiga de improviso sobre ustedes como una trampa, porque sobrevendrá a todos los hombres en toda la tierra. Estén prevenidos y oren incesantemente, para quedar a salvo de todo lo que ha de ocurrir. Así podrán comparecer seguros ante del Hijo del hombre».
+  cierre: Palabra del Señor.

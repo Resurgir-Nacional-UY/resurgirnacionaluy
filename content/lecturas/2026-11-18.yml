@@ -1,0 +1,53 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-18'
+celebracion: Miércoles de la XXXIII semana del tiempo ordinario
+santo: 'Memoria libre: Dedicación de las basílicas de San Pedro y San Pablo, apóstoles'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-18.jpg
+imagen_credito: 'Giovanni Paolo Panini, «Interior de la basílica de San Pedro» (s. XVIII)'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Apocalipsis 4, 1-11
+  presentacion: Lectura del libro del Apocalipsis.
+  texto: |-
+    Después tuve la siguiente visión: Había una puerta abierta en el cielo, y la voz que había escuchado antes, hablándome como una trompeta, me dijo: «Sube aquí, y te mostraré las cosas que deben suceder en seguida». En ese mismo momento, fui arrebatado por el Espíritu y vi en el cielo un trono, en el cual alguien estaba sentado. El que estaba sentado tenía el aspecto de una piedra de jaspe y de ágata. Rodeando el trono, vi un arco iris que tenía el aspecto de la esmeralda.
+
+    Y alrededor de él, había otros veinticuatro tronos, donde estaban sentados veinticuatro Ancianos, con túnicas blancas y coronas de oro en la cabeza. Del trono salían relámpagos, voces y truenos, y delante de él ardían siete lámparas de fuego, que son los siete Espíritus de Dios. Frente al trono, se extendía como un mar transparente semejante al cristal. En medio del trono y alrededor de él, había cuatro Seres Vivientes, llenos de ojos por delante y por detrás.
+
+    El primer Ser Viviente era semejante a un león; el segundo, a un toro; el tercero tenía rostro humano; y el cuarto era semejante a un águila en pleno vuelo. Cada uno de los cuatro Seres Vivientes tenía seis alas y estaba lleno de ojos por dentro y por fuera. Y repetían sin cesar, día y noche: «Santo, santo, santo es el Señor Dios, el Todopoderoso, el que era, el que es y el que vendrá».
+
+    Y cada vez que los Seres Vivientes daban gloria, honor y acción de gracias al que está sentado en el trono, al que vive por los siglos de los siglos, los veinticuatro Ancianos se postraban ante él para adorarlo, y ponían sus coronas delante del trono, diciendo: «Tú eres digno, Señor y Dios nuestro, de recibir la gloria, el honor y el poder. Porque has creado todas las cosas: ellas existen y fueron creadas por tu voluntad».
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 150
+  estrofas: |-
+    Alaben a Dios en su Santuario,
+    alábenlo en su poderoso firmamento;
+    alábenlo por su inmensa grandeza.
+
+    Alábenlo con toques de trompeta,
+    alábenlo con el arpa y la cítara;
+    alábenlo con tambores y danzas,
+    alábenlo con laudes y flautas.
+
+    Alábenlo con platillos sonoros,
+    alábenlo con platillos vibrantes,
+    ¡Que todos los seres vivientes
+    alaben al Señor!
+- tipo: Evangelio
+  cita: Lucas 19, 11-28
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Como la gente seguía escuchando, añadió una parábola, porque estaba cerca de Jerusalén y ellos pensaban que el Reino de Dios iba a aparecer de un momento a otro. El les dijo: «Un hombre de familia noble fue a un país lejano para recibir la investidura real y regresar en seguida. Llamó a diez de sus servidores y les entregó cien monedas de plata a cada uno, diciéndoles: "Háganlas producir hasta que yo vuelva".
+
+    Pero sus conciudadanos lo odiaban y enviaron detrás de él una embajada encargada de decir: "No queremos que este sea nuestro rey". Al regresar, investido de la dignidad real, hizo llamar a los servidores a quienes había dado el dinero, para saber lo que había ganado cada uno. El primero se presentó y le dijo: "Señor, tus cien monedas de plata han producido diez veces más". "Está bien, buen servidor, le respondió, ya que has sido fiel en tan poca cosa, recibe el gobierno de diez ciudades".
+
+    Llegó el segundo y el dijo: "Señor, tus cien monedas de plata han producido cinco veces más". A él también le dijo: "Tú estarás al frente de cinco ciudades". Llegó el otro y le dijo: "Señor, aquí tienes tus cien monedas de plata, que guardé envueltas en un pañuelo. Porque tuve miedo de ti, que eres un hombre exigente, que quieres percibir lo que no has depositado y cosechar lo que no has sembrado".
+
+    El le respondió: "Yo te juzgo por tus propias palabras, mal servidor. Si sabías que soy un hombre exigente, que quiero percibir lo que no deposité y cosechar lo que no sembré, ¿por qué no entregaste mi dinero en préstamo? A mi regreso yo lo hubiera recuperado con intereses" Y dijo a los que estaban allí: "Quítenle las cien monedas y dénselas al que tiene diez veces más". "¡Pero, señor, le respondieron, ya tiene mil!".
+
+    "Les aseguro que al que tiene, se le dará; pero al que no tiene, se le quitará aún lo que tiene. En cuanto a mis enemigos, que no me han querido por rey, tráiganlos aquí y mátenlos en mi presencia"». Después de haber dicho esto, Jesús siguió adelante, subiendo a Jerusalén.
+  cierre: Palabra del Señor.

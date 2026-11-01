@@ -1,0 +1,48 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-19'
+celebracion: Jueves de la XXXIII semana del tiempo ordinario
+santo: 'Memoria libre (santo del martirologio): Santa Matilde de Hackeborn'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-19.jpg
+imagen_credito: 'Según Charles Lock Eastlake, «Cristo llora sobre Jerusalén» (s. XIX)'
+titulo_miniatura: 'Jesús llora por Jerusalén'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Apocalipsis 5, 1-10
+  presentacion: Lectura del libro del Apocalipsis.
+  texto: |-
+    Después vi en la mano derecha de aquel que estaba sentado en el trono un libro escrito por dentro y por fuera, y sellado con siete sellos. Y vi a un Angel poderoso que proclamaba en alta voz: «¿Quién es digno de abrir el libro y de romper sus sellos?». Pero nadie, ni en el cielo ni en la tierra ni debajo de ella, era capaz de abrir el libro ni de leerlo. Y yo me puse a llorar porque nadie era digno de abrir el libro ni de leerlo.
+
+    Pero uno de los Ancianos me dijo: «No llores: ha triunfado el León de la tribu de Judá, el Retoño de David, y él abrirá el libro y sus siete sellos». Entonces vi un Cordero que parecía haber sido inmolado: estaba de pie entre el trono y los cuatro Seres Vivientes, en medio de los veinticuatro Ancianos. Tenía siete cuernos y siete ojos, que son los siete Espíritus de Dios enviados a toda la tierra.
+
+    El Cordero vino y tomó el libro de la mano derecha de aquel que estaba sentado en el trono. Cuando tomó el libro, los cuatro Seres Vivientes y los veinticuatro Ancianos se postraron ante el Cordero. Cada uno tenía un arpa, y copas de oro llenas de perfume, que son las oraciones de los Santos, y cantaban un canto nuevo, diciendo: «Tú eres digno de tomar el libro y de romper los sellos, porque has sido inmolado, y por medio de tu Sangre, has rescatado para Dios a hombres de todas las familias, lenguas, pueblos y naciones.
+
+    Tú has hecho de ellos un Reino sacerdotal para nuestro Dios, y ellos reinarán sobre la tierra».
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 149
+  estrofas: |-
+    Canten al Señor un canto nuevo,
+    resuene su alabanza en la asamblea de los fieles;
+    que Israel se alegre por su Creador
+    y los hijos de Sión se regocijen por su Rey.
+
+    Celebran su Nombre con danzas,
+    cántenle con el tambor y la cítara,
+    porque el Señor tiene predilección por su pueblo
+    y corona con el triunfo a los humildes.
+
+    Que los fieles se alegren por su gloria
+    y canten jubilosos en sus fiestas.
+    Glorifiquen a Dios con sus gargantas
+    y empuñen la espada de dos filos:
+    esta es la victoria de todos tus fieles.
+- tipo: Evangelio
+  cita: Lucas 19, 41-44
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Cuando estuvo cerca y vio la ciudad, se puso a llorar por ella, diciendo: «¡Si tú también hubieras comprendido en ese día el mensaje de paz! Pero ahora está oculto a tus ojos. Vendrán días desastrosos para ti, en que tus enemigos te cercarán con empalizadas, te sitiarán y te atacarán por todas partes. Te arrasarán junto con tus hijos, que están dentro de ti, y no dejarán en ti piedra sobre piedra, porque no has sabido reconocer el tiempo en que fuiste visitada por Dios».
+  cierre: Palabra del Señor.

@@ -1,0 +1,47 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-21'
+celebracion: Sábado de la XXXIII semana del tiempo ordinario
+santo: 'Memoria obligatoria: Presentación de la Santísima Virgen María'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-21.jpg
+imagen_credito: 'Tiziano, «Presentación de la Virgen en el Templo» (1534-1538)'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Apocalipsis 11, 4-12
+  presentacion: Lectura del libro del Apocalipsis.
+  texto: |-
+    Estos dos testigos son los dos olivos y los dos candelabros que están delante del Señor de la tierra. Si alguien quiere hacerles daño, saldrá un fuego de su boca que consumirá a sus enemigos: así perecerá el que se atreva a dañarlos. Ellos tienen el poder de cerrar el cielo para impedir que llueva durante los días de su misión profética; y también, tienen poder para cambiar las aguas en sangre y para herir la tierra con toda clase de plagas, todas las veces que quieran.
+
+    Y cuando hayan acabado de dar testimonio, la Bestia que surge del Abismo les hará la guerra, los vencerá y los matará. Sus cadáveres yacerán en la plaza de la gran Ciudad –llamada simbólicamente Sodoma y también Egipto– allí mismo donde el Señor fue crucificado. Estarán expuestos durante tres días y medio, a la vista de gente de todos los pueblos, familias, lenguas y naciones, y no se permitirá enterrarlos.
+
+    Los habitantes de la tierra se alegrarán y harán fiesta, y se intercambiarán regalos, porque estos dos profetas los habían atormentado». Pero después de estos tres días y medio, un soplo de vida de Dios entró en ellos y los hizo poner de pie, y un gran temor se apoderó de los espectadores. Entonces escucharon una voz potente que les decía desde el cielo: «Suban aquí». Y ellos subieron al cielo en la nube, a la vista de sus enemigos.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 144
+  estrofas: |-
+    Bendito sea el Señor, mi Roca,
+    el que adiestra mis brazos para el combate
+    y mis manos para la lucha.
+
+    El es mi bienhechor y mi fortaleza,
+    mi baluarte y mi libertador;
+    él es el escudo con que me resguardo,
+    y el que somete los pueblos a mis pies.
+
+    Dios mío, yo quiero cantarte un canto nuevo
+    y tocar para ti con el arpa de diez cuerdas,
+    porque tú das la victoria a los reyes
+    y libras a David, tu servidor.
+- tipo: Evangelio
+  cita: Lucas 20, 27-40
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Se le acercaron algunos saduceos, que niegan la resurrección, y le dijeron: «Maestro, Moisés nos ha ordenado: "Si alguien está casado y muere sin tener hijos, que su hermano, para darle descendencia, se case con la viuda". Ahora bien, había siete hermanos. El primero se casó y murió sin tener hijos. El segundo se casó con la viuda, y luego el tercero. Y así murieron los siete sin dejar descendencia.
+
+    Finalmente, también murió la mujer. Cuando resuciten los muertos, ¿de quién será esposa, ya que los siete la tuvieron por mujer?». Jesús les respondió: «En este mundo los hombres y las mujeres se casa, pero los que sean juzgados dignos de participar del mundo futuro y de la resurrección, no se casarán. Ya no pueden morir, porque son semejantes a los ángeles y son hijos de Dios, al ser hijos de la resurrección.
+
+    Que los muertos van a resucitar, Moisés lo ha dado a entender en el pasaje de la zarza, cuando llama al Señor el Dios de Abraham, el Dios de Isaac y el Dios de Jacob. Porque él no es Dios de muertos, sino de vivientes; todos, en efecto, viven para él». Tomando la palabra, algunos escribas le dijeron: «Maestro, has hablado bien». Y ya no se atrevían a preguntarle nada.
+  cierre: Palabra del Señor.

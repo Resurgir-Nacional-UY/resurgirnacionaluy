@@ -1,0 +1,50 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-16'
+celebracion: Lunes de la XXXIII semana del tiempo ordinario
+santo: 'Memoria libre: Santa Margarita de Escocia; o Santa Gertrudis, virgen'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-16.jpg
+imagen_credito: 'Según Nicolas Poussin, «Los ciegos de Jericó» (s. XVII)'
+titulo_miniatura: 'Jesús cura al ciego de Jericó'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Apocalipsis 1, 1-4; 2, 1-5
+  presentacion: Lectura del libro del Apocalipsis.
+  texto: |-
+    Revelación de Jesucristo, que le fue confiada por Dios para enseñar a sus servidores lo que tiene que suceder pronto. El envió a su Angel para transmitírsela a su servidor Juan. Este atestigua que todo lo que vio es Palabra de Dios y testimonio de Jesucristo. Feliz el que lea, y felices los que escuchen las palabras de esta profecía y tengan en cuenta lo que está escrito en ella, porque el tiempo está cerca.
+
+    Yo, Juan, escribo a las siete Iglesias de Asia. Llegue a ustedes la gracia y la paz de parte de aquel que es, que era y que vendrá, y de los siete Espíritus que están delante de su trono, Escribe al Angel de la Iglesia de Efeso: «El que tiene en su mano derecha las siete estrellas y camina en medio de los siete candelabros de oro, afirma: «Conozco tus obras, tus trabajos y tu constancia. Sé que no puedes tolerar a los perversos: has puesto a prueba a quienes usurpan el título de apóstoles, y comprobaste que son mentirosos.
+
+    Sé que tienes constancia y que has sufrido mucho por mi Nombre sin desfallecer. Pero debo reprocharte que hayas dejado enfriar el amor que tenías al comienzo. Fíjate bien desde dónde has caído, conviértete y observa tu conducta anterior. Si no te arrepientes, vendré hacia ti y sacaré tu candelabro de su lugar preeminente.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 1
+  estrofas: |-
+    ¡Feliz el hombre
+    que no sigue el consejo de los malvados,
+    ni se detiene en el camino de los pecadores,
+    ni se sienta en la reunión de los impíos,
+    sino que se complace en la ley del Señor
+    y la medita de día y de noche!
+
+    El es como un árbol
+    plantado al borde de las aguas,
+    que produce fruto a su debido tiempo,
+    y cuyas hojas nunca se marchitan:
+    todo lo que haga le saldrá bien.
+
+    No sucede así con los malvados:
+    ellos son como paja que se lleva el viento.
+    porque el Señor cuida el camino de los justos,
+    pero el camino de los malvados termina mal.
+- tipo: Evangelio
+  cita: Lucas 18, 35-43
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Cuando se acercaba a Jericó, un ciego estaba sentado al borde del camino, pidiendo limosna. Al oír que pasaba mucha gente, preguntó qué sucedía. Le respondieron que pasaba Jesús de Nazaret. El ciego se puso a gritar: «¡Jesús, Hijo de David, ten compasión de mí!». Los que iban delante lo reprendían para que se callara, pero él gritaba más fuerte: «¡Hijo de David, ten compasión de mí!».
+
+    Jesús se detuvo y mandó que se lo trajeran. Cuando lo tuvo a su lado, le preguntó: ¿Qué quieres que haga por ti?». «Señor, que yo vea otra vez». Y Jesús le dijo: «Recupera la vista, tu fe te ha salvado». En el mismo momento, el ciego recuperó la vista y siguió a Jesús, glorificando a Dios. Al ver esto, todo el pueblo alababa a Dios.
+  cierre: Palabra del Señor.

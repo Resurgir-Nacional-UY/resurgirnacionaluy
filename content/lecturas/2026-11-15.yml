@@ -1,0 +1,61 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-15'
+celebracion: XXXIII Domingo del tiempo ordinario
+santo: ''
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-15.jpg
+imagen_credito: 'Willem de Poorter, «La parábola de los talentos» (s. XVII)'
+titulo_miniatura: 'La parábola de los talentos'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Proverbios 31, 10-13. 19-20. 30-31
+  presentacion: Lectura del libro de los Proverbios.
+  texto: |-
+    Una buena ama de casa, ¿quién la encontrará? Es mucho más valiosa que las perlas. El corazón de su marido confía en ella y no le faltará compensación. Ella le hace el bien, y nunca el mal, todos los días de su vida. Se procura la lana y el lino, y trabaja de buena gana con sus manos. Aplica sus manos a la rueca y sus dedos manejan el huso. Abre su mano al desvalido y tiende sus brazos al indigente.
+
+    Engañoso es el encanto y vana la hermosura: la mujer que teme al Señor merece ser alabada. Entréguenle el fruto de sus manos y que sus obras la alaben públicamente.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 128
+  estrofas: |-
+    ¡Feliz el que teme al Señor
+    y sigue sus caminos!
+    Comerás del fruto de tu trabajo,
+    serás feliz y todo te irá bien.
+
+    Tu esposa será como una vid fecunda
+    en el seno de tu hogar;
+    tus hijos, como retoños de olivo
+    alrededor de tu mesa.
+
+    ¡Así será bendecido
+    el hombre que teme al Señor!
+    ¡Que el Señor te bendiga desde Sión
+    todos los días de tu vida:
+    que contemples la paz de Jerusalén
+    y veas a los hijos de tus hijos!
+- tipo: Segunda lectura
+  cita: 1 Tesalonicenses 5, 1-6
+  presentacion: Lectura de la primera carta del apóstol san Pablo a los Tesalonicenses.
+  texto: |-
+    Hermanos, en cuanto al tiempo y al momento, no es necesario que les escriba. Ustedes saben perfectamente que el Día del Señor vendrá como un ladrón en plena noche. Cuando la gente afirme que hay paz y seguridad, la destrucción caerá sobre ellos repentinamente, como los dolores de parto sobre una mujer embarazada, y nadie podrá escapar. Pero ustedes, hermanos, no viven en las tinieblas para que ese Día los sorprenda como un ladrón: todos ustedes son hijos de la luz, hijos del día. Nosotros no pertenecemos a la noche ni a las tinieblas.
+
+    No nos durmamos, entonces, como hacen los otros: permanezcamos despiertos y seamos sobrios.
+  cierre: Palabra de Dios.
+- tipo: Evangelio
+  cita: Mateo 25, 14-30
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    El reino de los Cielos es también como un hombre que, al salir de viaje, llamó a sus servidores y les confió sus bienes. A uno le dio cinco talentos, a otro dos, y uno solo a un tercero, a cada uno según su capacidad; y después partió. En seguida, el que había recibido cinco talentos, fue a negociar con ellos y ganó otros cinco. De la misma manera, el que recibió dos, ganó otros dos, pero el que recibió uno solo, hizo un pozo y enterró el dinero de su señor.
+
+    Después de un largo tiempo, llegó el señor y arregló las cuentas con sus servidores. El que había recibido los cinco talentos se adelantó y le presentó otros cinco. "Señor, le dijo, me has confiado cinco talentos: aquí están los otros cinco que he ganado". "Está bien, servidor bueno y fiel, le dijo su señor, ya que respondiste fielmente en lo poco, te encargaré de mucho más: entra a participar del gozo de tu señor".
+
+    Llegó luego el que había recibido dos talentos y le dijo: "Señor, me has confiado dos talentos: aquí están los otros dos que he ganado". "Está bien, servidor bueno y fiel, ya que respondiste fielmente en lo poco, te encargaré de mucho más: entra a participar del gozo de tu señor". Llegó luego el que había recibido un solo talento. "Señor, le dijo, sé que eres un hombre exigente: cosechas donde no has sembrado y recoges donde no has esparcido.
+
+    Por eso tuve miedo y fui a enterrar tu talento: ¡aquí tienes lo tuyo!". Pero el señor le respondió: "Servidor malo y perezoso, si sabías que cosecho donde no he sembrado y recojo donde no he esparcido, tendrías que haber colocado el dinero en el banco, y así, a mi regreso, lo hubiera recuperado con intereses. Quítenle el talento para dárselo al que tiene diez, porque a quien tiene, se le dará y tendrá de más, pero al que no tiene, se le quitará aun lo que tiene.
+
+    Echen afuera, a las tinieblas, a este servidor inútil; allí habrá llanto y rechinar de dientes".
+  cierre: Palabra del Señor.

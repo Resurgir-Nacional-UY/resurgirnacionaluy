@@ -1,0 +1,42 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-14'
+celebracion: Sábado de la XXXII semana del tiempo ordinario
+santo: 'Memoria libre: Santa María en sábado'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-14.jpg
+imagen_credito: 'Rafael, «La Virgen del Gran Duque» (c. 1505)'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: 3 Juan 5-8
+  presentacion: Lectura de la tercera carta del apóstol san Juan.
+  texto: |-
+    Querido hermano, tú obras fielmente, al ponerte al servicio de tus hermanos, incluso de los que están de paso, y ellos dieron testimonio de tu amor delante de la Iglesia. Harás bien en ayudarlos para que puedan proseguir su viaje de una manera digna de Dios. porque ellos se pusieron en camino para servir a Cristo, sin aceptar nada de los paganos, Por eso debemos acogerlos, a fin de colaborar con ellos en favor de la verdad.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 112
+  estrofas: |-
+    Feliz el hombre que teme al Señor
+    y se complace en sus mandamientos.
+    Su descendencia será fuerte en la tierra:
+    la posteridad de los justos es bendecida.
+
+    En su casa habrá abundancia y riqueza,
+    su generosidad permanecerá para siempre.
+    Para los buenos brilla una luz en las tinieblas:
+    es el Bondadoso, el Compasivo y el Justo.
+
+    Dichoso el que se compadece y da prestado,
+    y administra sus negocios con rectitud.
+    El justo no vacilará jamás,
+    su recuerdo permanecerá para siempre.
+- tipo: Evangelio
+  cita: Lucas 18, 1-8
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Después le enseñó con una parábola que era necesario orar siempre sin desanimarse: «En una ciudad había un juez que no temía a Dios ni le importaban los hombres; y en la misma ciudad vivía una viuda que recurría a él, diciéndole: "Te ruego que me hagas justicia contra mi adversario". Durante mucho tiempo el juez se negó, pero después dijo: "Yo no temo a Dios ni me importan los hombres, pero como esta viuda me molesta, le haré justicia para que no venga continuamente a fastidiarme".»
+
+    Y el Señor dijo: «Oigan lo que dijo este juez injusto. Y Dios, ¿no hará justicia a sus elegidos, que claman a él día y noche, aunque los haga esperar? Les aseguro que en un abrir y cerrar de ojos les hará justicia. Pero cuando venga el Hijo del hombre, ¿encontrará fe sobre la tierra?».
+  cierre: Palabra del Señor.

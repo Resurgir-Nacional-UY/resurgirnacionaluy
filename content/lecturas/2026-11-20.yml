@@ -1,0 +1,46 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-20'
+celebracion: Viernes de la XXXIII semana del tiempo ordinario
+santo: 'Memoria libre (santo del martirologio): San Edmundo, rey y mártir'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-20.jpg
+imagen_credito: 'El Greco, «Cristo expulsa a los mercaderes del Templo» (c. 1600)'
+titulo_miniatura: 'Jesús expulsa a los vendedores del Templo'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Apocalipsis 10, 8-11
+  presentacion: Lectura del libro del Apocalipsis.
+  texto: |-
+    Y la voz que había oído desde el cielo me habló nuevamente, diciéndome: «Ve a tomar el pequeño libro que tiene abierto en la mano el Angel que está de pie sobre el mar y sobre la tierra». Yo corrí hacia el Angel y le rogué que me diera el pequeño libro, y él me respondió: «Toma y cómelo; será amargo para tu estómago, pero en tu boca será dulce como la miel». Yo tomé el pequeño libro de la mano del Angel y lo comí: en mi boca era dulce como la miel, pero cuando terminé de comerlo, se volvió amargo en mi estómago.
+
+    Entonces se me dijo: «Es necesario que profetices nuevamente acerca de una multitud de pueblos, de naciones, de lenguas y de reyes».
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 119
+  estrofas: |-
+    Me alegro de cumplir tus prescripciones,
+    más que de todas las riquezas.
+
+    Porque tus prescripciones son todo mi deleite,
+    y tus preceptos, mis consejeros.
+
+    Para mí vale más la ley de tus labios
+    que todo el oro y la plata.
+
+    ¡Qué dulce es tu palabra para mi boca,
+    es más dulce que la miel!
+
+    Tus prescripciones son mi herencia para siempre,
+    porque alegran mi corazón.
+
+    Abro mi boca y aspiro hondamente,
+    porque anhelo tus mandamientos.
+- tipo: Evangelio
+  cita: Lucas 19, 45-48
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Y al entrar al Templo, se puso a echar a los vendedores, diciéndoles: «Está escrito: Mi casa será una casa de oración, pero ustedes la han convertido en una cueva de ladrones». Y diariamente enseñaba en el Templo. Los sumos sacerdotes, los escribas y los más importantes del pueblo, buscaban la forma de matarlo. Pero no sabían cómo hacerlo, porque todo el pueblo lo escuchaba y estaba pendiente de sus palabras.
+  cierre: Palabra del Señor.

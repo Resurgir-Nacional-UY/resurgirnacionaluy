@@ -1,0 +1,20 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-08'
+celebracion: Purísima Virgen de los Treinta y Tres, patrona principal del Uruguay
+santo: Solemnidad en Uruguay (desplaza al XXXII Domingo del tiempo ordinario)
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-08.jpg
+imagen_credito: 'Purísima Virgen de los Treinta y Tres (imagen del siglo XVIII), Catedral de Florida'
+titulo_miniatura: 'Purísima Virgen de los Treinta y Tres'
+draft: true
+lecturas:
+- tipo: Evangelio
+  cita: Lucas 1, 39-47
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    En aquellos días, María partió y fue sin demora a un pueblo de la montaña de Judá. Entró en la casa de Zacarías y saludó a Isabel. Apenas esta oyó el saludo de María, el niño saltó de alegría en su seno, e Isabel, llena del Espíritu Santo, exclamó: «¡Tú eres bendita entre todas las mujeres y bendito es el fruto de tu vientre! ¿Quién soy yo, para que la madre de mi Señor venga a visitarme?
+
+    Apenas oí tu saludo, el niño saltó de alegría en mi seno. Feliz de ti por haber creído que se cumplirá lo que te fue anunciado de parte del Señor». María dijo entonces: «Mi alma canta la grandeza del Señor, y mi espíritu se estremece de gozo en Dios, mi salvador,
+  cierre: Palabra del Señor.

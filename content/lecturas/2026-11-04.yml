@@ -1,0 +1,48 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-04'
+celebracion: Miércoles de la XXXI semana del tiempo ordinario
+santo: 'Memoria obligatoria: San Carlos Borromeo, obispo'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-04.jpg
+imagen_credito: 'Domenico Fetti, «San Carlos Borromeo» (c. 1620)'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Filipenses 2, 12-18
+  presentacion: Lectura de la carta del apóstol san Pablo a los Filipenses.
+  texto: |-
+    Por eso, queridos míos, ustedes que siempre me han obedecido, trabajen por su salvación con temor y temblor, no solamente cuando estoy entre ustedes, sino mucho más ahora que estoy ausente. Porque Dios es el que produce en ustedes el querer y el hacer, conforme a su designio de amor. Procedan en todo sin murmuraciones ni discusiones: así serán irreprochables y puros, hijos de Dios sin mancha, en medio de una generación extraviada y pervertida, dentro de la cual ustedes brillan como haces de luz en el mundo, mostrándole la Palabra de Vida. De esa manera, el Día de Cristo yo podré gloriarme de no haber trabajado ni sufrido en vano.
+
+    Y aunque mi sangre debiera derramarse como libación sobre el sacrificio y la ofrenda sagrada, que es la fe de ustedes, yo me siento dichoso y comparto su alegría; También ustedes siéntanse dichosos y alégrense conmigo.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 27
+  estrofas: |-
+    El Señor es mi luz y mi salvación,
+    ¿a quién temeré?
+    El Señor es el baluarte de mi vida,
+    ¿ante quién temblaré?
+
+    Una sola cosa he pedido al Señor,
+    y esto es lo que quiero:
+    vivir en la Casa del Señor
+    todos los días de mi vida,
+    para gozar de la dulzura del Señor
+    y contemplar su Templo.
+
+    Yo creo que contemplaré la bondad del Señor
+    en la tierra de los vivientes.
+    Espera en el Señor y sé fuerte;
+    ten valor y espera en el Señor.
+- tipo: Evangelio
+  cita: Lucas 14, 25-33
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Junto con Jesús iba un gran gentío, y él, dándose vuelta, les dijo: «Cualquiera que venga a mí y no me ame más que a su padre y a su madre, a su mujer y a sus hijos, a sus hermanos y hermanas, y hasta a su propia vida, no puede ser mi discípulo. El que no carga con su cruz y me sigue, no puede ser mi discípulo. ¿Quién de ustedes, si quiere edificar una torre, no se sienta primero a calcular los gastos, para ver si tiene con qué terminarla?
+
+    No sea que una vez puestos los cimientos, no pueda acabar y todos los que lo vean se rían de él, diciendo: "Este comenzó a edificar y no pudo terminar". ¿Y qué rey, cuando sale en campaña contra otro, no se sienta antes a considerar si con diez mil hombres puede enfrentar al que viene contra él con veinte mil? Por el contrario, mientras el otro rey está todavía lejos, envía una embajada para negociar la paz. ]
+
+    De la misma manera, cualquiera de ustedes que no renuncie a todo lo que posee, no puede ser mi discípulo.
+  cierre: Palabra del Señor.

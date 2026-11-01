@@ -1,0 +1,52 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-26'
+celebracion: Jueves de la XXXIV semana del tiempo ordinario
+santo: 'Memoria libre (santo del martirologio): San Leonardo de Porto Mauricio, presbítero'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-26.jpg
+imagen_credito: 'David Roberts, «El sitio y la destrucción de Jerusalén» (1850)'
+titulo_miniatura: 'Ya se acerca la liberación'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Apocalipsis 18, 1-2. 21-23; 19, 1-3. 9a
+  presentacion: Lectura del libro del Apocalipsis.
+  texto: |-
+    Después vi que otro Angel descendía del cielo con gran poder, mientras la tierra se iluminaba con su resplandor. Y gritó con voz potente: «¡Ha caído, ha caído Babilonia, la grande! Se ha convertido en refugio de demonios, en guarida de toda clase de espíritus impuros y en nido de aves impuras y repugnantes. Y un Angel poderoso tomó una piedra del tamaño de una rueda de molino y la arrojó al mar, diciendo: «Así, de golpe, será arrojada Babilonia, la gran Ciudad, y nunca más se la verá».
+
+    Ya no se escuchará dentro de ti el canto de los que tocan el arpa y de los músicos, de los flautistas y de los trompetistas; ya no se encontrarán artesanos de los diversos oficios, ni se escuchará el sonido de la rueda del molino. No volverá a brillar la luz de la lámpara, ni tampoco se escuchará la voz de los recién casados. Porque tus comerciantes eran los grandes de la tierra, y con tus encantos sedujiste a todos los pueblos.
+
+    Después oí algo parecido al clamor de una enorme multitud que estaba en el cielo, y exclamaba: «¡Aleluya! La salvación, la gloria y el poder pertenecen a nuestro Dios, porque sus juicios son verdaderos y justos. El ha condenado a la famosa Prostituta que corrompía la tierra con su lujuria, y ha vengado en ella la sangre de sus servidores». Y volvieron a decir: «¡Aleluya! La humareda de la Ciudad se eleva por los siglos de los siglos».
+
+    Después el Angel me dijo: «Escribe esto: Felices los que han sido invitados al banquete de bodas del Cordero».
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 100
+  estrofas: |-
+    Aclame al Señor toda la tierra,
+    sirvan al Señor con alegría,
+    lleguen hasta él con cantos jubilosos.
+
+    Reconozcan que el Señor es Dios:
+    él nos hizo y a él pertenecemos;
+    somos su pueblo y ovejas de su rebaño.
+
+    Entren por sus puertas dando gracias,
+    entren en sus atrios con himnos de alabanza,
+    alaben al Señor y bendigan su Nombre.
+
+    ¡Qué bueno es el Señor!
+    Su misericordia permanece para siempre,
+    y su fidelidad por todas las generaciones.
+- tipo: Evangelio
+  cita: Lucas 21, 20-28
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Cuando vean a Jerusalén sitiada por los ejércitos, sepan que su ruina está próxima. Los que estén en Judea, que se refugien en las montañas; los que estén dentro de la ciudad, que se alejen; y los que estén en los campos, que no vuelvan a ella. Porque serán días de escarmiento, en que todo lo que está escrito deberá cumplirse. ¡Ay de las que estén embarazadas o tengan niños de pecho en aquellos días! Será grande la desgracia de este país y la ira de Dios pesará sobre este pueblo.
+
+    Caerán al filo de la espada, serán llevados cautivos a todas las naciones, y Jerusalén será pisoteada por los paganos, hasta que el tiempo de los paganos llegue a su cumplimiento. Habrá señales en el sol, en la luna y en las estrellas; y en la tierra, los pueblos serán presa de la angustia ante el rugido del mar y la violencia de las olas. Los hombres desfallecerán de miedo por lo que sobrevendrá al mundo, porque los astros se conmoverán.
+
+    Entonces se verá al Hijo del hombre venir sobre una nube, lleno de poder y de gloria. Cuando comience a suceder esto, tengan ánimo y levanten la cabeza, porque está por llegarles la liberación».
+  cierre: Palabra del Señor.

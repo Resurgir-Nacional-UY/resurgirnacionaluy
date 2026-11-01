@@ -1,0 +1,50 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-27'
+celebracion: Viernes de la XXXIV semana del tiempo ordinario
+santo: Nuestra Señora de la Medalla Milagrosa
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-27.jpg
+imagen_credito: '«Aparición de la Virgen en París, 1830», pintura sobre vidrio (s. XIX)'
+titulo_miniatura: 'Nuestra Señora de la Medalla Milagrosa'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Apocalipsis 20, 1-4. 11-21, 2
+  presentacion: Lectura del libro del Apocalipsis.
+  texto: |-
+    Luego vi que un Angel descendía del cielo, llevando en su mano la llave del Abismo y una enorme cadena. El capturó al Dragón, la antigua Serpiente –que es el Diablo o Satanás– y lo encadenó por mil años. Después lo arrojó al Abismo, lo cerró con llave y lo selló, para que el Dragón no pudiera seducir a los pueblos paganos hasta que se cumplieran los mil años. Transcurridos esos mil años, será soltado por un breve tiempo.
+
+    Entonces vi unos tronos, y los que se sentaron en ellos recibieron autoridad para juzgar. También vi las almas de los que habían sido decapitados a causa del testimonio de Jesús y de la Palabra de Dios, y a todos los que no habían adorado a la Bestia ni a su imagen, ni habían recibido su marca en la frente o en la mano. Ellos revivieron y reinaron con Cristo durante mil años. Después vi un gran trono blanco y al que estaba sentado en él. Ante su presencia, el cielo y la tierra desaparecieron sin dejar rastros.
+
+    Y vi a los que habían muerto, grandes y pequeños, de pie delante del trono. Fueron abiertos los libros, y también fue abierto el Libro de la Vida; y los que habían muerto fueron juzgados de acuerdo con el contenido de los libros; cada uno según sus obras. El mar devolvió a los muertos que guardaba: la Muerte y el Abismo hicieron lo mismo, y cada uno fue juzgado según sus obras. Entonces la Muerte y el Abismo fueron arrojados al estanque de fuego, que es la segunda muerte.
+
+    Y los que no estaban inscritos en el Libro de la Vida fueron arrojados al estanque de fuego. Después vi un cielo nuevo y una tierra nueva, porque el primer cielo y la primera tierra desaparecieron, y el mar ya no existe más. Vi la Ciudad santa, la nueva Jerusalén, que descendía del cielo y venía de Dios, embellecida como una novia preparada para recibir a su esposo.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 84
+  estrofas: |-
+    Mi alma se consume de deseos
+    por los atrios del Señor;
+    mi corazón y mi carne claman ansiosos
+    por el Dios viviente.
+
+    Hasta el gorrión encontró una casa,
+    y la golondrina tiene un nido
+    donde poner sus pichones,
+    junto a tus altares, Señor del universo,
+    mi Rey y mi Dios.
+
+    ¡Felices los que habitan en tu Casa
+    y te alaban sin cesar!
+    ¡Felices los que encuentran su fuerza en ti,
+    al emprender la peregrinación!
+    Ellos avanzan con vigor siempre creciente
+    hasta contemplar a Dios en Sión.
+- tipo: Evangelio
+  cita: Lucas 21, 29-33
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Y Jesús les hizo esta comparación: «Miren lo que sucede con la higuera o con cualquier otro árbol. Cuando comienza a echar brotes, ustedes se dan cuenta de que se acerca el verano. Así también, cuando vean que suceden todas estas cosas, sepan que el Reino de Dios está cerca. Les aseguro que no pasará esta generación hasta que se cumpla todo esto. El cielo y la tierra pasarán, pero mis palabras no pasarán.
+  cierre: Palabra del Señor.

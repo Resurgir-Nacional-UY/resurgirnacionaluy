@@ -1,0 +1,46 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-06'
+celebracion: Viernes de la XXXI semana del tiempo ordinario
+santo: 'Memoria libre (santo del martirologio): San Leonardo de Noblac, ermitaño'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-06.jpg
+imagen_credito: 'Marinus van Reymerswaele, «La parábola del administrador infiel» (s. XVI)'
+titulo_miniatura: 'El administrador astuto'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Filipenses 3, 17-4, 1
+  presentacion: Lectura de la carta del apóstol san Pablo a los Filipenses.
+  texto: |-
+    Sigan mi ejemplo, hermanos, y observen atentamente a los que siguen el ejemplo que yo les he dado. Porque ya les advertí frecuentemente y ahora les repito llorando: hay muchos que se portan como enemigos de la cruz de Cristo. Su fin es la predicción, su dios es el vientre, su gloria está en aquello que los cubre de vergüenza, y no aprecian sino las cosas de la tierra. En cambio, nosotros somos ciudadanos del cielo, y esperamos ardientemente que venga de allí como Salvador el Señor Jesucristo.
+
+    El transformará nuestro pobre cuerpo mortal, haciéndolo semejante a su cuerpo glorioso, con el poder que tiene para poner todas las cosas bajo su dominio. Por eso, hermanos míos muy queridos, a quienes tanto deseo ver, ustedes que son mi alegría y mi corona, amados míos, perseveren firmemente en el Señor.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 122
+  estrofas: |-
+    ¡Qué alegría cuando me dijeron:
+    «Vamos a la Casa del Señor»!
+    Nuestros pies ya están pisando
+    tus umbrales, Jerusalén.
+
+    Jerusalén, que fuiste construida
+    como ciudad bien compacta y armoniosa.
+    Allí suben las tribus, las tribus del Señor
+    –según es norma en Israel–
+
+    para celebrar el nombre del Señor.
+    Porque allí está el trono de la justicia,
+    el trono de la casa de David.
+- tipo: Evangelio
+  cita: Lucas 16, 1-8
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Decía también a los discípulos: «Había un hombre rico que tenía un administrador, al cual acusaron de malgastar sus bienes. Lo llamó y le dijo: "¿Qué es lo que me han contado de ti? Dame cuenta de tu administración, porque ya no ocuparás más ese puesto". El administrador pensó entonces: "¿Qué voy a hacer ahora que mi señor me quita el cargo? ¿Cavar? No tengo fuerzas. ¿Pedir limosna? Me da vergüenza.
+
+    ¡Ya sé lo que voy a hacer para que, al dejar el puesto, haya quienes me reciban en su casa!". Llamó uno por uno a los deudores de su señor y preguntó al primero: "¿Cuánto debes a mi señor?". "Veinte barriles de aceite", le respondió. El administrador le dijo: "Toma tu recibo, siéntate en seguida, y anota diez". Después preguntó a otro: "Y tú, ¿cuánto debes?". "Cuatrocientos quintales de trigo", le respondió. El administrador le dijo: "Toma tu recibo y anota trescientos".
+
+    Y el señor alabó a este administrador deshonesto, por haber obrado tan hábilmente. Porque los hijos de este mundo son más astutos en su trato con lo demás que los hijos de la luz.
+  cierre: Palabra del Señor.

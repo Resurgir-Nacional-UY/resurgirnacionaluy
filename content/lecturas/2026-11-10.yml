@@ -1,0 +1,44 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-10'
+celebracion: Martes de la XXXII semana del tiempo ordinario
+santo: 'Memoria obligatoria: San León Magno, papa y doctor de la Iglesia'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-10.jpg
+imagen_credito: 'Rafael, «El encuentro de León Magno con Atila» (1514)'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Tito 2, 1-8. 11-14
+  presentacion: Lectura de la carta del apóstol san Pablo a Tito.
+  texto: |-
+    En cuanto a ti, debes enseñar todo lo que es conforme a la sana doctrina. Que los ancianos sean sobrios, dignos, moderados, íntegros en la fe, en el amor y en la constancia. Que las mujeres de edad se comporten como corresponde a personas santas. No deben ser murmuradoras, ni entregarse a la bebida. Que por medio de buenos consejos, enseñen a las jóvenes a amar a su marido y a sus hijos, a ser modestas, castas, mujeres de su casa, buenas y respetuosas con su marido. Así la Palabra de Dios no será objeto de blasfemia.
+
+    Exhorta también a los jóvenes a ser moderados en todo, dándoles tú mismo ejemplo de buena conducta, en lo que se refiere a la pureza de doctrina, a la dignidad, a la enseñanza correcta e inobjetable. De esa manera, el adversario quedará confundido, porque no tendrá nada que reprocharnos. Porque la gracia de Dios, que es fuente de salvación para todos los hombres, se ha manifestado.
+
+    Ella nos enseña a rechazar la impiedad y las concupiscencias del mundo, para vivir en la vida presente con sobriedad, justicia y piedad, mientras aguardamos la feliz esperanza y la Manifestación de la gloria de nuestro gran Dios y Salvador, Cristo Jesús. El se entregó por nosotros, a fin de librarnos de toda iniquidad, purificarnos y crear para sí un Pueblo elegido y lleno en la práctica del bien.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 37
+  estrofas: |-
+    Confía en el Señor y practica el bien;
+    habita en la tierra y vive tranquilo:
+    que el Señor sea tu único deleite,
+    y él colmará los deseos de tu corazón.
+
+    El Señor se preocupa de los buenos
+    y su herencia permanecerá para siempre;
+    El Señor asegura los pasos del hombre
+    en cuyo camino se complace:
+
+    Aléjate del mal, practica el bien,
+    y siempre tendrás una morada,
+    pero los justos poseerán la tierra
+    y habitarán en ella para siempre.
+- tipo: Evangelio
+  cita: Lucas 17, 7-10
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Supongamos que uno de ustedes tiene un servidor para arar o cuidar el ganado. Cuando este regresa del campo, ¿acaso le dirá: "Ven pronto y siéntate a la mesa"? ¿No le dirá más bien: "Prepárame la cena y recógete la túnica para servirme hasta que yo haya comido y bebido, y tú comerás y beberás después"? ¿Deberá mostrarse agradecido con el servidor porque hizo lo que se le mandó? Así también ustedes, cuando hayan hecho todo lo que se les mande, digan: "Somos simples servidores, no hemos hecho más que cumplir con nuestro deber"».
+  cierre: Palabra del Señor.

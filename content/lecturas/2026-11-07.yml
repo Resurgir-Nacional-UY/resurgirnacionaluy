@@ -1,0 +1,47 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-07'
+celebracion: Sábado de la XXXI semana del tiempo ordinario
+santo: 'Memoria libre: Santa María en sábado'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-07.jpg
+imagen_credito: 'Rafael, «La Virgen de la silla» (c. 1514)'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Filipenses 4, 10-19
+  presentacion: Lectura de la carta del apóstol san Pablo a los Filipenses.
+  texto: |-
+    Yo tuve una gran alegría en el Señor cuando vi florecer los buenos sentimientos de ustedes con respecto a mí; ciertamente los tenían, pero les faltaba la ocasión de demostrarlos. No es la necesidad la que me hace hablar, porque he aprendido a hacer frente a cualquier situación. Yo sé vivir tanto en las privaciones como en la abundancia; estoy hecho absolutamente a todo, a la saciedad como al hambre, a tener sobra como a no tener nada.
+
+    Yo lo puedo todo en aquel que me conforta. Sin embargo, ustedes hicieron bien en interesarse por mis necesidades. Y ya saben, filipenses, que al comienzo de la evangelización, cuando dejé Macedonia, ninguna otra iglesia me ayudó pecuniariamente. Ustedes fueron los únicos que cuando estaba en Tesalónica, en dos ocasiones me enviaron medios para asistirme en mis necesidades. No es que yo busque regalos; solamente quiero darles la ocasión de que ustedes se enriquezcan cada vez más delante de Dios.
+
+    Por el momento, tengo todo lo necesario y más todavía. Vivo en la abundancia desde que Epafrodito me entregó la ofrenda de ustedes, como perfume de aroma agradable, como sacrificio aceptable y grato a Dios. Dios colmará con magnificencia todas las necesidades de ustedes, conforme a su riqueza, en Cristo Jesús.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 112
+  estrofas: |-
+    Feliz el hombre que teme al Señor
+    y se complace en sus mandamientos.
+    Su descendencia será fuerte en la tierra:
+    la posteridad de los justos es bendecida.
+
+    Dichoso el que se compadece y da prestado,
+    y administra sus negocios con rectitud.
+    El justo no vacilará jamás,
+    su recuerdo permanecerá para siempre.
+
+    Su ánimo está seguro, y no temerá,
+    hasta que vea la derrota de sus enemigos.
+    El da abundantemente a los pobres:
+    su generosidad permanecerá para siempre,
+    y alzará su frente con dignidad.
+- tipo: Evangelio
+  cita: Lucas 16, 9-15
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Pero yo les digo: Gánense amigos con el dinero de la injusticia, para que el día en que este les falte, ellos los reciban en las moradas eternas. El que es fiel en lo poco, también es fiel en lo mucho, y el que es deshonesto en lo poco, también es deshonesto en lo mucho. Si ustedes no son fieles en el uso del dinero injusto, ¿quién les confiará el verdadero bien? Y si no son fieles con lo ajeno, ¿quién les confiará lo que les pertenece a ustedes?
+
+    Ningún servidor puede servir a dos señores, porque aborrecerá a uno y amará al otro, o bien se interesará por el primero y menospreciará al segundo. No puede servir a Dios y al Dinero». Los fariseos, que eran amigos del dinero, escuchaban todo esto y se burlaban de Jesús. El les dijo: «Ustedes aparentan rectitud ante los hombres, pero Dios conoce sus corazones. Porque lo que es estimable a los ojos de los hombres, resulta despreciable para Dios.
+  cierre: Palabra del Señor.

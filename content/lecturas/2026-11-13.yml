@@ -1,0 +1,49 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-13'
+celebracion: Viernes de la XXXII semana del tiempo ordinario
+santo: 'Memoria libre (santo del martirologio): San Estanislao de Kostka'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-13.jpg
+imagen_credito: 'Bartholomeus Strobel, «La Virgen y el Niño con San Estanislao de Kostka» (s. XVII)'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: 2 Juan 4-9
+  presentacion: Lectura de la segunda carta del apóstol san Juan.
+  texto: |-
+    Me he alegrado muchísimo al encontrar a algunos hijos tuyos que viven en la verdad, según el mandamiento que hemos recibido del Padre. Y ahora te ruego: amémonos los unos a los otros. Con lo cual no te comunico un nuevo mandamiento, sino que el que tenemos desde el principio. El amor consiste en vivir de acuerdo con los mandamientos de Dios. Y el mandamiento que ustedes han aprendido desde el principio es que vivan en el amor.
+
+    Porque han invadido el mundo muchos seductores que no confiesan a Jesucristo manifestado en la carne. ¡Ellos son el Seductor y el Anticristo! Ustedes estén alerta para no perder el fruto de sus trabajos, de manera que puedan recibir una perfecta retribución. Todo el que se aventura más allá de la doctrina de Cristo y no permanece en ella, no está unido a Dios. En cambio, el que permanece en su doctrina está unido al Padre y también al Hijo.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 119
+  estrofas: |-
+    Felices los que van por un camino intachable,
+    los que siguen la ley del Señor,
+
+    Felices los que cumplen sus prescripciones
+    y lo buscan de todo corazón
+
+    Yo te busco de todo corazón:
+    no permitas que me aparte de tus mandamientos.
+
+    Conservo tu palabra en mi corazón,
+    para no pecar contra ti.
+
+    Sé bueno con tu servidor,
+    para que yo viva y pueda cumplir tu palabra.
+
+    Abre mis ojos,
+    para que contemple las maravillas de tu ley.
+- tipo: Evangelio
+  cita: Lucas 17, 26-37
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    En los días del Hijo del hombre sucederá como en tiempo de Noé. La gente comía, bebía y se casaba, hasta el día en que Noé entró en el arca y llegó el diluvio, que los hizo morir a todos. Sucederá como en tiempos de Lot: se comía y se bebía, se compraba y se vendía, se plantaba y se construía. Pero el día en que Lot salió de Sodoma, cayó del cielo una lluvia de fuego y de azufre que los hizo morir a todos.
+
+    Lo mismo sucederá el Día en que se manifieste el Hijo del hombre. En ese Día, el que esté en la azotea y tenga sus cosas en la casa, no baje a buscarlas. Igualmente, el que esté en el campo, no vuelva atrás. Acuérdense de la mujer de Lot. El que trate de salvar su vida, la perderá; y el que la pierda, la conservará. Les aseguro que en esa noche, de dos hombres que estén comiendo juntos, uno será llevado y el otro dejado; de dos mujeres que estén moliendo juntas, una será llevada y la otra dejada».
+
+    Entonces le preguntaron: «¿Dónde sucederá esto, Señor?». Jesús les respondió: «Donde esté el cadáver, se juntarán los buitres».
+  cierre: Palabra del Señor.

@@ -1,0 +1,52 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-11'
+celebracion: Miércoles de la XXXII semana del tiempo ordinario
+santo: 'Memoria obligatoria: San Martín de Tours, obispo'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-11.jpg
+imagen_credito: 'Según El Greco, «San Martín y el mendigo» (s. XVII)'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Tito 3, 1-7
+  presentacion: Lectura de la carta del apóstol san Pablo a Tito.
+  texto: |-
+    Recuerda a todos que respeten a los gobernantes y a las autoridades, que les obedezcan y estén siempre dispuestos para cualquier obra buena. Que no injurien a nadie y sean amantes de la paz, que sean benévolos y demuestren una gran humildad con todos los hombres. Porque también nosotros antes éramos insensatos, rebeldes, extraviados, esclavos de los malos deseos y de toda clase de concupiscencias, y vivíamos en la maldad y la envidia, siendo objeto de odio y odiándonos los unos a los otros.
+
+    Pero cuando se manifestó la bondad de Dios, nuestro Salvador, y su amor a los hombres, no por las obras de justicia que habíamos realizado, sino solamente por su misericordia, él nos salvó, haciéndonos renacer por el bautismo y renovándonos por el Espíritu Santo. Y derramó abundantemente ese Espíritu sobre nosotros por medio de Jesucristo, nuestro Salvador, a fin de que, justificados por su gracia, seamos en esperanza herederos de la Vida eterna.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 23
+  estrofas: |-
+    El Señor es mi pastor,
+    nada me puede faltar.
+    El me hace descansar en verdes praderas,
+    me conduce a las aguas tranquilas
+    y repara mis fuerzas;
+
+    me guía por el recto sendero,
+    por amor de su Nombre.
+    Aunque cruce por oscuras quebradas,
+    no temeré ningún mal,
+    porque tú estás conmigo:
+    tu vara y tu bastón me infunden confianza.
+
+    Tú preparas ante mí una mesa,
+    frente a mis enemigos;
+    unges con óleo mi cabeza
+    y mi copa rebosa.
+
+    Tu bondad y tu gracia me acompañan
+    a lo largo de mi vida;
+    y habitaré en la Casa del Señor,
+    por muy largo tiempo.
+- tipo: Evangelio
+  cita: Lucas 17, 11-19
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Mientras se dirigía a Jerusalén, Jesús pesaba a través de Samaría y Galilea. Al entrar en un poblado, le salieron al encuentro diez leprosos, que se detuvieron a distancia y empezaron a gritarle: «¡Jesús, Maestro, ten compasión de nosotros!». Al verlos, Jesús les dijo: «Vayan a presentarse a los sacerdotes». Y en el camino quedaron purificados. Uno de ellos, al comprobar que estaba curado, volvió atrás alabando a Dios en voz alta y se arrojó a los pies de Jesús con el rostro en tierra, dándole gracias. Era un samaritano.
+
+    Jesús le dijo entonces: «¿Cómo, no quedaron purificados los diez? Los otros nueve, ¿dónde están? ¿Ninguno volvió a dar gracias a Dios, sino este extranjero?». Y agregó: «Levántate y vete, tu fe te ha salvado».
+  cierre: Palabra del Señor.

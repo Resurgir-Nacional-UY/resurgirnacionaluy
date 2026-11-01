@@ -1,0 +1,50 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-03'
+celebracion: Martes de la XXXI semana del tiempo ordinario
+santo: 'Memoria libre: San Martín de Porres, religioso'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-03.jpg
+imagen_credito: 'Monogramista de Brunswick, «La parábola del gran banquete» (c. 1525)'
+titulo_miniatura: 'La parábola del gran banquete'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Filipenses 2, 5-11
+  presentacion: Lectura de la carta del apóstol san Pablo a los Filipenses.
+  texto: |-
+    Tengan los mismos sentimientos de Cristo Jesús. El, que era de condición divina, no consideró esta igualdad con Dios como algo que debía guardar celosamente: al contrario, se anonadó a sí mismo, tomando la condición de servidor y haciéndose semejante a los hombres. Y presentándose con aspecto humano, se humilló hasta aceptar por obediencia la muerte y muerte de cruz. Por eso, Dios lo exaltó y le dio el Nombre que está sobre todo nombre, para que al nombre de Jesús, se doble toda rodilla en el cielo, en la tierra y en los abismos, y toda lengua proclame para gloria de Dios Padre: «Jesucristo es el Señor».
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 22
+  estrofas: |-
+    y cumpliré mis votos delante de los fieles:
+    los pobres comerán hasta saciarse
+    y los que buscan al Señor lo alabarán.
+    ¡Que sus corazones vivan para siempre!
+
+    Todos los confines de la tierra
+    se acordarán y volverán al Señor;
+    todas las familias de los pueblos
+    se postrarán en su presencia.
+    Porque sólo el Señor es rey
+    y él gobierna a las naciones.
+    Todos los que duermen en el sepulcro
+    se postrarán en su presencia;
+
+    y los que no tienen vida
+    glorificarán su poder.
+    Hablarán del Señor a la generación futura,
+    anunciarán su justicia a los que nacerán después,
+    porque esta es la obra del Señor.
+- tipo: Evangelio
+  cita: Lucas 14, 15-24
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Al oír estas palabras, uno de los invitados le dijo: «¡Feliz el que se siente a la mesa en el Reino de Dios!». Jesús le respondió: «Un hombre preparó un gran banquete y convidó a mucha gente. A la hora de cenar, mandó a su sirviente que dijera a los invitados: «Vengan, todo está preparado». Pero todos, sin excepción, empezaron a excusarse. El primero le dijo: "Acabo de comprar un campo y tengo que ir a verlo. Te ruego me disculpes".
+
+    El segundo dijo: "He comprado cinco yuntas de bueyes y voy a probarlos. Te ruego me disculpes" Y un tercero respondió: "Acabo de casarme y por esa razón no puedo ir". A su regreso, el sirviente contó todo esto al dueño de casa, este, irritado, le dijo: "Recorre en seguida las plazas y las calles de la ciudad, y trae aquí a los pobres, a los lisiados, a los ciegos y a los paralíticos".
+
+    Volvió el sirviente y dijo: "Señor, tus órdenes se han cumplido y aún sobra lugar". El señor le respondió: "Ve a los caminos y a lo largo de los cercos, e insiste a la gente para que entre, de manera que se llene mi casa. Porque les aseguro que ninguno de los que antes fueron invitados ha de probar mi cena"».
+  cierre: Palabra del Señor.

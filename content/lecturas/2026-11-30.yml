@@ -1,0 +1,41 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-30'
+celebracion: Lunes de la I semana de Adviento
+santo: 'Fiesta: San Andrés, apóstol'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-30.jpg
+imagen_credito: 'Duccio, «La vocación de Pedro y Andrés» (1308-1311)'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Romanos 10, 9-18
+  presentacion: Lectura de la carta del apóstol san Pablo a los Romanos.
+  texto: |-
+    Porque si confiesas con tu boca que Jesús es el Señor y crees en tu corazón que Dios lo resucitó de entre los muertos, serás salvado. Con el corazón se cree para alcanzar la justicia, y con la boca se confiesa para obtener la salvación. Así lo afirma la Escritura: "El que cree en él, no quedará confundido". Porque no hay distinción entre judíos y los que no lo son: todos tienen el mismo Señor, que colma de bienes a quienes lo invocan.
+
+    Ya que todo el que invoque el nombre del Señor se salvará. Pero, ¿como invocarlo sin creer en él? ¿Y cómo creer, sin haber oído hablar de él? ¿Y cómo oír hablar de él, si nadie lo predica? ¿Y quiénes predicarán, si no se los envía? Como dice la Escritura: "¡Qué hermosos son los pasos de los que anuncian buenas noticias!" Pero no todos aceptan la Buena Noticia. Así lo dice Isaías: "Señor, ¿quién creyó en nuestra predicación?"
+
+    La fe, por lo tanto, nace de la predicación y la predicación se realiza en virtud de la Palabra de Cristo. Yo me pregunto: ¿Acaso no la han oído? Sí, por supuesto: Por toda la tierra se extiende su voz y sus palabras llegan hasta los confines del mundo.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 19
+  estrofas: |-
+    El cielo proclama la gloria de Dios
+    y el firmamento anuncia la obra de sus manos;
+    un día transmite al otro este mensaje
+    y las noches se van dando la noticia.
+
+    Sin hablar, sin pronunciar palabras,
+    sin que se escuche su voz,
+    resuena su eco por toda la tierra
+    y su lenguaje, hasta los confines del mundo.
+- tipo: Evangelio
+  cita: Mateo 4, 18-22
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    Mientras caminaba a orillas del mar de Galilea, Jesús vio a dos hermanos: a Simón, llamado Pedro, y a su hermano Andrés, que echaban las redes al mar porque eran pescadores. Entonces les dijo: «Síganme, y yo los haré pescadores de hombres». Inmediatamente, ellos dejaron las redes y lo siguieron. Continuando su camino, vio a otros dos hermanos: a Santiago, hijo de Zebedeo, y a su hermano Juan, que estaban en la barca de Zebedeo, su padre, arreglando las redes; y Jesús los llamó.
+
+    Inmediatamente, ellos dejaron la barca y a su padre, y lo siguieron.
+  cierre: Palabra del Señor.

@@ -1,0 +1,49 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-25'
+celebracion: Miércoles de la XXXIV semana del tiempo ordinario
+santo: 'Memoria libre: Santa Catalina de Alejandría, virgen y mártir'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-25.jpg
+imagen_credito: 'Caravaggio, «Santa Catalina de Alejandría» (c. 1598)'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Apocalipsis 15, 1-4
+  presentacion: Lectura del libro del Apocalipsis.
+  texto: |-
+    Después vi en el cielo otro signo grande y admirable: siete Angeles que llevaban las siete últimas plagas, con las cuales debía consumarse la ira de Dios. También vi como un mar de cristal, mezclado de fuego. Los que habían vencido a la Bestia, a su imagen y la cifra de su nombre, estaban de pie sobre el mar, teniendo en sus manos grandes arpas, y cantaban el canto de Moisés, el servidor de Dios, y el canto del Cordero, diciendo: «¡Grandes y admirables son tus obras, Señor, Dios todopoderoso; justos y verdaderos son tus caminos, Rey de los pueblos! ¿Quién dejará de temerte, Señor, quién no alabará tu Nombre?
+
+    Sólo tú eres santo, y todas las naciones vendrán a adorarte, porque se ha manifestado la justicia de tus actos».
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 98
+  estrofas: |-
+    Canten al Señor un canto nuevo,
+    porque él hizo maravillas:
+    su mano derecha y su santo brazo
+    le obtuvieron la victoria.
+
+    El Señor manifestó su victoria,
+    reveló su justicia a los ojos de las naciones:
+    se acordó de su amor y su fidelidad
+    en favor del pueblo de Israel.
+
+    Resuene el mar y todo lo que hay en él,
+    el mundo y todos sus habitantes;
+    aplaudan las corrientes del océano,
+    griten de gozo las montañas al unísono.
+
+    Griten de gozo delante del Señor,
+    porque él viene a gobernar la tierra;
+    él gobernará al mundo con justicia,
+    y a los pueblos con rectitud.
+- tipo: Evangelio
+  cita: Lucas 21, 12-19
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Pero antes de todo eso, los detendrán, los perseguirán, los entregarán a las sinagogas y serán encarcelados; los llevarán ante reyes y gobernadores a causa de mi Nombre, y esto les sucederá para que puedan dar testimonio de mí. Tengan bien presente que no deberán preparar su defensa, porque yo mismo les daré una elocuencia y una sabiduría que ninguno de sus adversarios podrá resistir ni contradecir.
+
+    Serán entregados hasta por sus propios padres y hermanos, por sus parientes y amigos; y a muchos de ustedes los matarán. Serán odiados por todos a causa de mi Nombre. Pero ni siquiera un cabello se les caerá de la cabeza. Gracias a la constancia salvarán sus vidas.
+  cierre: Palabra del Señor.

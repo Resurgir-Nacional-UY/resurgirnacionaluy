@@ -1,0 +1,46 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-11-17'
+celebracion: Martes de la XXXIII semana del tiempo ordinario
+santo: 'Memoria obligatoria: Santa Isabel de Hungría, religiosa'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-17.jpg
+imagen_credito: 'Bartolomé Esteban Murillo, «Santa Isabel de Hungría curando a los tiñosos» (1672)'
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Apocalipsis 3, 1-6. 14-22
+  presentacion: Lectura del libro del Apocalipsis.
+  texto: |-
+    Escribe al Angel de la Iglesia de Sardes: «El que posee los siete Espíritus de Dios y las siete estrellas, afirma: «Conozco tus obras: aparentemente vives, pero en realidad estás muerto. Permanece alerta y reanima lo que todavía puedes rescatar de la muerte, porque veo que tu conducta no es perfecta delante de mi Dios. Recuerda cómo has recibido y escuchado la Palabra: consérvala fielmente y arrepiéntete. Porque si no vigilas, llegaré como un ladrón, y no sabrás a qué hora te sorprenderé.
+
+    Sin embargo, tienes todavía en Sardes algunas personas que no han manchado su ropa: ellas me acompañarán vestidas de blanco, porque lo han merecido. El vencedor recibirá una vestidura blanca, nunca borraré su nombre del Libro de la Vida y confesaré su nombre delante de mi Padre y de sus Angeles». El que pueda entender, que entienda lo que el Espíritu dice a las Iglesias. Escribe al Angel de la Iglesia de Laodicea: «El que es Amén, el Testigo fiel y verídico, el Principio de las obras de Dios, afirma: «Conozco tus obras: no eres frío ni caliente. ¡Ojalá fueras frío o caliente!
+
+    Por eso, porque eres tibio, te vomitaré de mi boca. Tú andas diciendo: Soy rico, estoy lleno de bienes y no me falta nada. Y no sabes que eres desdichado, digno de compasión, pobre, ciego y desnudo. Por eso, te aconsejo: cómprame oro purificado en el fuego para enriquecerte, vestidos blancos para revestirte y cubrir tu vergonzosa desnudez, y un colirio para ungir tus ojos y recobrar la vista.
+
+    Yo corrijo y comprendo a los que amo. ¡Reanima tu fervor y arrepiéntete! Yo estoy junto a la puerta y llamo: si alguien oye mi voz y me abre, entraré en su casa y cenaremos juntos. Al vencedor lo haré sentar conmigo en mi trono, así como yo he vencido y me he sentado con mi Padre en su trono». El que pueda entender, que entienda lo que el Espíritu dice a las Iglesias».
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 15
+  estrofas: |-
+    El que procede rectamente y practica la justicia;
+    el que dice la verdad de corazón
+    y no calumnia con su lengua.
+
+    El que no hace mal a su prójimo
+    ni agravia a su vecino,
+    el que no estima a quien Dios reprueba
+    y honra a los que temen al Señor.
+
+    El que no presta su dinero a usura
+    ni acepta soborno contra el inocente.
+    El que procede así, nunca vacilará.
+- tipo: Evangelio
+  cita: Lucas 19, 1-10
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Jesús entró en Jericó y atravesaba la cuidad. Allí vivía un hombre muy rico llamado Zaqueo, que era el jefe de los publicanos. El quería ver quién era Jesús, pero no podía a causa de la multitud, porque era de baja estatura. Entonces se adelantó y subió a un sicomoro para poder verlo, porque iba a pasar por allí, Al llegar a ese lugar, Jesús miró hacia arriba y le dijo: «Zaqueo, baja pronto, porque hoy tengo que alojarme en tu casa».
+
+    Zaqueo bajó rápidamente y lo recibió con alegría. Al ver esto, todos murmuraban, diciendo: «Se ha ido a alojar en casa de un pecador». Pero Zaqueo dijo resueltamente al Señor: «Señor, voy a dar la mitad de mis bienes a los pobres, y si he perjudicado a alguien, le daré cuatro veces más». Y Jesús le dijo: «Hoy ha llegado la salvación a esta casa, ya que también este hombre es un hijo de Abraham, porque el Hijo del hombre vino a buscar y a salvar lo que estaba perdido».
+  cierre: Palabra del Señor.
