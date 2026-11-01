@@ -5,6 +5,8 @@ fecha: "2026-10-06"
 celebracion: "Martes de la XXVII semana del tiempo ordinario"
 santo: "Memoria libre: San Bruno, presbítero"
 fuente: "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger."
+imagen: /media/lecturas/2026-10-06.jpg
+imagen_credito: 'Francisco de Zurbarán, «Apoteosis de San Bruno» (c. 1638)'
 draft: false
 lecturas:
   - tipo: "Primera lectura"

@@ -3,6 +3,8 @@
   "2026-10-06": {
    "celebracion": "Martes de la XXVII semana del tiempo ordinario",
    "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "imagen": "/media/lecturas/2026-10-06.jpg",
+   "imagen_credito": "Francisco de Zurbarán, «Apoteosis de San Bruno» (c. 1638)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -64,6 +66,8 @@
   "2026-10-07": {
    "celebracion": "Miércoles de la XXVII semana del tiempo ordinario",
    "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "imagen": "/media/lecturas/2026-10-07.jpg",
+   "imagen_credito": "Bartolomé Esteban Murillo, «Virgen del Rosario» (c. 1650)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -118,6 +122,9 @@
   "2026-10-08": {
    "celebracion": "Jueves de la XXVII semana del tiempo ordinario",
    "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "imagen": "/media/lecturas/2026-10-08.jpg",
+   "imagen_credito": "Maso da San Friano, «Santa Brígida de Suecia» (s. XVI)",
+   "imagen_foco": 0.1,
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -165,6 +172,8 @@
   "2026-10-09": {
    "celebracion": "Viernes de la XXVII semana del tiempo ordinario",
    "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "imagen": "/media/lecturas/2026-10-09.jpg",
+   "imagen_credito": "John Everett Millais, «El cardenal Newman» (1881)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -222,6 +231,8 @@
   "2026-10-10": {
    "celebracion": "Sábado de la XXVII semana del tiempo ordinario",
    "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "imagen": "/media/lecturas/2026-10-10.jpg",
+   "imagen_credito": "Sassoferrato, «La Virgen en oración» (s. XVII)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -276,6 +287,8 @@
   "2026-10-11": {
    "celebracion": "XXVIII Domingo del tiempo ordinario",
    "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "imagen": "/media/lecturas/2026-10-11.jpg",
+   "imagen_credito": "Pieter Aertsen, «La parábola del banquete de bodas» (s. XVI)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -348,11 +361,14 @@
     }
    ],
    "santo": "",
+   "titulo_miniatura": "La parábola del banquete de bodas",
    "url": "lecturas-de-la-misa-11-de-octubre-de-2026.html"
   },
   "2026-10-12": {
    "celebracion": "Lunes de la XXVIII semana del tiempo ordinario",
    "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "imagen": "/media/lecturas/2026-10-12.jpg",
+   "imagen_credito": "Pieter Lastman, «Jonás y la ballena» (1621)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -403,11 +419,14 @@
     }
    ],
    "santo": "",
+   "titulo_miniatura": "La señal de Jonás",
    "url": "lecturas-de-la-misa-12-de-octubre-de-2026.html"
   },
   "2026-10-13": {
    "celebracion": "Martes de la XXVIII semana del tiempo ordinario",
    "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "imagen": "/media/lecturas/2026-10-13.jpg",
+   "imagen_credito": "Díptico de Wilton, con San Eduardo el Confesor (c. 1395)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -462,6 +481,8 @@
   "2026-10-14": {
    "celebracion": "Miércoles de la XXVIII semana del tiempo ordinario",
    "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "imagen": "/media/lecturas/2026-10-14.jpg",
+   "imagen_credito": "Retrato del papa San Calixto I, basílica de San Pablo Extramuros",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -520,6 +541,8 @@
   "2026-10-15": {
    "celebracion": "Jueves de la XXVIII semana del tiempo ordinario",
    "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "imagen": "/media/lecturas/2026-10-15.jpg",
+   "imagen_credito": "Pedro Pablo Rubens, «Visión de Santa Teresa de Jesús» (c. 1614)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -597,6 +620,8 @@
   "2026-10-16": {
    "celebracion": "Viernes de la XXVIII semana del tiempo ordinario",
    "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "imagen": "/media/lecturas/2026-10-16.jpg",
+   "imagen_credito": "Corrado Giaquinto, «Santa Margarita María de Alacoque contempla el Sagrado Corazón» (c. 1765)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -645,11 +670,14 @@
     }
    ],
    "santo": "Memoria libre: Santa Eduvigis, religiosa; o Santa Margarita María de Alacoque, virgen",
+   "titulo_miniatura": "Santa Margarita María de Alacoque",
    "url": "lecturas-de-la-misa-16-de-octubre-de-2026.html"
   },
   "2026-10-17": {
    "celebracion": "Sábado de la XXVIII semana del tiempo ordinario",
    "fuente": "Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.",
+   "imagen": "/media/lecturas/2026-10-17.jpg",
+   "imagen_credito": "Icono de San Ignacio de Antioquía (s. XVII, Museo Pushkin)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -707,6 +735,8 @@
   "2026-10-18": {
    "celebracion": "XXIX Domingo del tiempo ordinario",
    "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
+   "imagen": "/media/lecturas/2026-10-18.jpg",
+   "imagen_credito": "Tiziano, «El tributo de la moneda» (c. 1568)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -768,11 +798,14 @@
     }
    ],
    "santo": "",
+   "titulo_miniatura": "Den al César lo que es del César",
    "url": "lecturas-de-la-misa-18-de-octubre-de-2026.html"
   },
   "2026-10-19": {
    "celebracion": "Lunes de la XXIX semana del tiempo ordinario",
    "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
+   "imagen": "/media/lecturas/2026-10-19.jpg",
+   "imagen_credito": "Rembrandt, «La parábola del rico insensato» (1627)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -823,11 +856,14 @@
     }
    ],
    "santo": "Memoria libre: San Pablo de la Cruz; o Santos Juan de Brébeuf e Isaac Jogues, presbíteros, y compañeros, mártires",
+   "titulo_miniatura": "La parábola del rico insensato",
    "url": "lecturas-de-la-misa-19-de-octubre-de-2026.html"
   },
   "2026-10-20": {
    "celebracion": "Martes de la XXIX semana del tiempo ordinario",
    "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
+   "imagen": "/media/lecturas/2026-10-20.jpg",
+   "imagen_credito": "Tadeusz Kuntze, «Milagro de San Juan Cancio» (1767)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -881,6 +917,8 @@
   "2026-10-21": {
    "celebracion": "Miércoles de la XXIX semana del tiempo ordinario",
    "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
+   "imagen": "/media/lecturas/2026-10-21.jpg",
+   "imagen_credito": "Friedrich Wilhelm von Schadow, «La parábola de las vírgenes prudentes y las necias» (1838-1842)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -923,11 +961,14 @@
     }
    ],
    "santo": "Memoria libre (santo del martirologio): San Hilarión",
+   "titulo_miniatura": "Estén preparados",
    "url": "lecturas-de-la-misa-21-de-octubre-de-2026.html"
   },
   "2026-10-22": {
    "celebracion": "Jueves de la XXIX semana del tiempo ordinario",
    "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
+   "imagen": "/media/lecturas/2026-10-22.jpg",
+   "imagen_credito": "San Juan Pablo II (fotografía, 1991)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -985,6 +1026,8 @@
   "2026-10-23": {
    "celebracion": "Viernes de la XXIX semana del tiempo ordinario",
    "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
+   "imagen": "/media/lecturas/2026-10-23.jpg",
+   "imagen_credito": "Alonso del Arco, «San Juan de Capistrano» (s. XVII, Museo del Prado)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -1037,6 +1080,8 @@
   "2026-10-24": {
    "celebracion": "Sábado de la XXIX semana del tiempo ordinario",
    "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
+   "imagen": "/media/lecturas/2026-10-24.jpg",
+   "imagen_credito": "San Antonio María Claret (Museo Nacional del Romanticismo, Madrid)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -1090,6 +1135,8 @@
   "2026-10-25": {
    "celebracion": "XXX Domingo del tiempo ordinario",
    "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
+   "imagen": "/media/lecturas/2026-10-25.jpg",
+   "imagen_credito": "Jacob Jordaens, «Cristo y los fariseos» (c. 1660)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -1145,11 +1192,14 @@
     }
    ],
    "santo": "",
+   "titulo_miniatura": "El mandamiento más grande",
    "url": "lecturas-de-la-misa-25-de-octubre-de-2026.html"
   },
   "2026-10-26": {
    "celebracion": "Lunes de la XXX semana del tiempo ordinario",
    "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
+   "imagen": "/media/lecturas/2026-10-26.jpg",
+   "imagen_credito": "James Tissot, «La mujer enferma desde hacía dieciocho años» (c. 1890)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -1201,11 +1251,14 @@
     }
    ],
    "santo": "Memoria libre (santo del martirologio): San Evaristo",
+   "titulo_miniatura": "Jesús sana a la mujer encorvada",
    "url": "lecturas-de-la-misa-26-de-octubre-de-2026.html"
   },
   "2026-10-27": {
    "celebracion": "Martes de la XXX semana del tiempo ordinario",
    "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
+   "imagen": "/media/lecturas/2026-10-27.jpg",
+   "imagen_credito": "«Jesús y la parábola del grano de mostaza»",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -1254,11 +1307,14 @@
     }
    ],
    "santo": "Memoria libre (santo del martirologio): Santos Vicente, Sabina y Cristeta",
+   "titulo_miniatura": "El grano de mostaza y la levadura",
    "url": "lecturas-de-la-misa-27-de-octubre-de-2026.html"
   },
   "2026-10-28": {
    "celebracion": "Miércoles de la XXX semana del tiempo ordinario",
    "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
+   "imagen": "/media/lecturas/2026-10-28.jpg",
+   "imagen_credito": "Ugolino di Nerio, «San Simón y San Judas Tadeo» (1324-1325)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -1304,6 +1360,8 @@
   "2026-10-29": {
    "celebracion": "Jueves de la XXX semana del tiempo ordinario",
    "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
+   "imagen": "/media/lecturas/2026-10-29.jpg",
+   "imagen_credito": "Enrique Simonet, «Flevit super illam» (1892)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -1350,11 +1408,14 @@
     }
    ],
    "santo": "Memoria libre (santo del martirologio): San Narciso",
+   "titulo_miniatura": "Jesús llora por Jerusalén",
    "url": "lecturas-de-la-misa-29-de-octubre-de-2026.html"
   },
   "2026-10-30": {
    "celebracion": "Viernes de la XXX semana del tiempo ordinario",
    "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
+   "imagen": "/media/lecturas/2026-10-30.jpg",
+   "imagen_credito": "Rembrandt, «Cristo sanando a los enfermos» (c. 1648)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -1403,11 +1464,14 @@
     }
    ],
    "santo": "Memoria libre (santo del martirologio): San Serapión",
+   "titulo_miniatura": "Jesús sana en sábado",
    "url": "lecturas-de-la-misa-30-de-octubre-de-2026.html"
   },
   "2026-10-31": {
    "celebracion": "Sábado de la XXX semana del tiempo ordinario",
    "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
+   "imagen": "/media/lecturas/2026-10-31.jpg",
+   "imagen_credito": "Bartolomé Esteban Murillo, «La Inmaculada Concepción» (s. XVII)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",
@@ -1461,6 +1525,8 @@
   "2026-11-01": {
    "celebracion": "Solemnidad de Todos los Santos",
    "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
+   "imagen": "/media/lecturas/2026-11-01.jpg",
+   "imagen_credito": "Hermanos van Eyck, «La adoración del Cordero místico» (1432)",
    "lecturas": [
     {
      "cierre": "Palabra de Dios.",

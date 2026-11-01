@@ -5,6 +5,9 @@ fecha: '2026-10-27'
 celebracion: Martes de la XXX semana del tiempo ordinario
 santo: 'Memoria libre (santo del martirologio): Santos Vicente, Sabina y Cristeta'
 fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-10-27.jpg
+imagen_credito: '«Jesús y la parábola del grano de mostaza»'
+titulo_miniatura: 'El grano de mostaza y la levadura'
 draft: false
 lecturas:
 - tipo: Primera lectura

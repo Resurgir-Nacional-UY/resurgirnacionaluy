@@ -5,6 +5,8 @@ fecha: '2026-10-13'
 celebracion: Martes de la XXVIII semana del tiempo ordinario
 santo: "Memoria libre (santo del martirologio): San Eduardo"
 fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+imagen: /media/lecturas/2026-10-13.jpg
+imagen_credito: 'Díptico de Wilton, con San Eduardo el Confesor (c. 1395)'
 draft: false
 lecturas:
 - tipo: Primera lectura

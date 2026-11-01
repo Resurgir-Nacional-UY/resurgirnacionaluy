@@ -5,6 +5,8 @@ fecha: '2026-10-31'
 celebracion: Sábado de la XXX semana del tiempo ordinario
 santo: 'Memoria libre: Santa María en sábado'
 fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-10-31.jpg
+imagen_credito: 'Bartolomé Esteban Murillo, «La Inmaculada Concepción» (s. XVII)'
 draft: false
 lecturas:
 - tipo: Primera lectura

@@ -5,6 +5,8 @@ fecha: '2026-10-28'
 celebracion: Miércoles de la XXX semana del tiempo ordinario
 santo: 'Fiesta: Santos Simón y Judas, apóstoles'
 fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-10-28.jpg
+imagen_credito: 'Ugolino di Nerio, «San Simón y San Judas Tadeo» (1324-1325)'
 draft: false
 lecturas:
 - tipo: Primera lectura

@@ -119,9 +119,48 @@ def _background(w, h, background=BACKGROUND):
     return bg
 
 
-def make_og_image(kicker, title, byline, out_path, background=BACKGROUND, fmt=None):
-    """kicker: p.ej. 'Formacion . Articulo'. title/byline: texto plano."""
-    img = _background(W, H, background)
+def _cover_focus(img, w, h, focus_y=0.3):
+    """Como _cover, pero el recorte vertical se centra en focus_y (0 = arriba): en un
+    cuadro de pie las caras suelen estar en el tercio de arriba."""
+    scale = max(w / img.width, h / img.height)
+    rw, rh = round(img.width * scale), round(img.height * scale)
+    img = img.resize((rw, rh), Image.LANCZOS)
+    x0 = (rw - w) // 2
+    y0 = min(max(int(rh * focus_y - h / 2), 0), rh - h)
+    return img.crop((x0, y0, x0 + w, y0 + h))
+
+
+PAINT_X = 540      # donde empieza la pintura (a la derecha del texto)
+PAINT_FADE = 170   # ancho del fundido entre el panel del texto y la pintura
+
+
+def _painting_background(painting, w, h, focus_y=0.3):
+    """Panel azul oscuro a la izquierda (para el texto) y la pintura a la derecha,
+    fundida hacia el panel. Debajo, la misma pintura ampliada y muy oscurecida, para
+    que el fundido no deje un corte en seco."""
+    src = Image.open(_lp(painting)).convert("RGB")
+    base = _cover(src, w, h).convert("RGBA")
+    base.alpha_composite(Image.new("RGBA", (w, h), (13, 32, 62, 236)))
+    pw = w - PAINT_X
+    paint = _cover_focus(src, pw, h, focus_y).convert("RGBA")
+    mask = Image.new("L", (pw, 1))
+    for x in range(pw):
+        t = min(x / PAINT_FADE, 1.0)
+        mask.putpixel((x, 0), int(255 * (t * t * (3 - 2 * t))))
+    paint.putalpha(mask.resize((pw, h)))
+    base.alpha_composite(paint, (PAINT_X, 0))
+    return base
+
+
+def make_og_image(kicker, title, byline, out_path, background=BACKGROUND, fmt=None,
+                  painting=None, focus_y=0.3):
+    """kicker: p.ej. 'Formacion . Articulo'. title/byline: texto plano.
+    painting: ruta a un cuadro; si se pasa, va a la derecha y el texto queda en una
+    columna mas angosta a la izquierda (lecturas del dia)."""
+    if painting:
+        img = _painting_background(painting, W, H, focus_y)
+    else:
+        img = _background(W, H, background)
 
     draw = ImageDraw.Draw(img)
 
@@ -138,8 +177,12 @@ def make_og_image(kicker, title, byline, out_path, background=BACKGROUND, fmt=No
     draw.text((PAD, kicker_y), kicker.upper(), font=kicker_font, fill=GOLD)
 
     # Titulo
-    max_w = W - PAD * 2
-    title_font, lines, size = _fit_title(draw, title, max_w, max_lines=3, start=66, minimum=38)
+    if painting:
+        max_w = PAINT_X + 40 - PAD
+        title_font, lines, size = _fit_title(draw, title, max_w, max_lines=4, start=58, minimum=36)
+    else:
+        max_w = W - PAD * 2
+        title_font, lines, size = _fit_title(draw, title, max_w, max_lines=3, start=66, minimum=38)
     line_h = int(size * 1.18)
     title_y = kicker_y + 56
     for i, line in enumerate(lines):

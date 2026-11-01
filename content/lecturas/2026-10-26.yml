@@ -5,6 +5,9 @@ fecha: '2026-10-26'
 celebracion: Lunes de la XXX semana del tiempo ordinario
 santo: 'Memoria libre (santo del martirologio): San Evaristo'
 fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-10-26.jpg
+imagen_credito: 'James Tissot, «La mujer enferma desde hacía dieciocho años» (c. 1890)'
+titulo_miniatura: 'Jesús sana a la mujer encorvada'
 draft: false
 lecturas:
 - tipo: Primera lectura

@@ -5,6 +5,9 @@ fecha: '2026-10-08'
 celebracion: Jueves de la XXVII semana del tiempo ordinario
 santo: "Memoria libre (santo del martirologio): Santa Brígida de Suecia"
 fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+imagen: /media/lecturas/2026-10-08.jpg
+imagen_credito: 'Maso da San Friano, «Santa Brígida de Suecia» (s. XVI)'
+imagen_foco: 0.1
 draft: false
 lecturas:
 - tipo: Primera lectura

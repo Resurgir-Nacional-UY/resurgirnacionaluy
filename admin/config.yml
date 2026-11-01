@@ -703,6 +703,37 @@ collections:
         required: false
         hint: "Se muestra al pie de las lecturas, p. ej. Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger."
 
+      - name: imagen
+        label: "Imagen de la miniatura — opcional"
+        widget: image
+        required: false
+        media_folder: /media/lecturas
+        public_folder: /media/lecturas
+        hint: "Lo que se ve al compartir el enlace del día (WhatsApp, Facebook…): una pintura del santo, de la fiesta o del Evangelio. Usar obras de dominio público (p. ej. de Wikimedia Commons). Sin imagen, se usa el fondo de Fe."
+
+      - name: imagen_foco
+        label: "Encuadre de la imagen — opcional"
+        widget: select
+        required: false
+        options:
+          - { label: "Arriba (cuadros altos: que no se corte la cabeza)", value: "0.1" }
+          - { label: "Un poco arriba (por defecto)", value: "0.3" }
+          - { label: "Centro", value: "0.5" }
+          - { label: "Abajo", value: "0.8" }
+        hint: "Qué parte de la pintura se ve si hay que recortarla. Si en la miniatura se corta la cara, elegir Arriba."
+
+      - name: imagen_credito
+        label: "Autor y obra de la imagen — opcional"
+        widget: string
+        required: false
+        hint: "Se muestra al pie de las lecturas, p. ej. Francisco de Zurbarán, «Apoteosis de San Bruno» (c. 1638)."
+
+      - name: titulo_miniatura
+        label: "Título de la miniatura — opcional"
+        widget: string
+        required: false
+        hint: "Por defecto, el santo del día o la celebración. Cambiarlo si la imagen es del Evangelio, p. ej. La parábola del rico insensato."
+
       - name: lecturas
         label: "Lecturas (en el orden en que se leen)"
         widget: list

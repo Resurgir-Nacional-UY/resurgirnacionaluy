@@ -12,6 +12,10 @@
                                    puedan rastrear).
   * sitemap-lecturas.xml        -> sitemap propio (sitemap.xml es de render_articles.py).
 
+  * og/lecturas/AAAA-MM-DD.jpg -> miniatura al compartir cada dia: la pintura del santo,
+                                   la fiesta o el Evangelio (campo `imagen`, en media/lecturas/)
+                                   con el titulo y la fecha. Sin imagen, usa el fondo de Fe.
+
 Uso (desde la raiz del repo):
     python scripts/render_lecturas.py
 """
@@ -25,6 +29,8 @@ import sys
 
 import yaml
 
+import og_image
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "content", "lecturas")
 OUT = os.path.join(ROOT, "lecturas.json")
@@ -34,6 +40,8 @@ SITE = "https://resurgirnacionaluy.org/"
 INDEX_NAME = "lecturas-de-la-misa.html"
 FE_PAGE = "catolicismo-en-uruguay.html"
 OG_IMAGE = SITE + "og-image-fe.jpg"
+OG_DIR = os.path.join(ROOT, "og", "lecturas")
+OG_FONDO = os.path.join(ROOT, "scripts", "assets", "fondo-fe.jpg")
 GEN_MARK = "<!-- generated:lecturas-dia -->"
 FECHA = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
@@ -145,6 +153,42 @@ def fecha_larga(fecha):
     return "%s %s" % (sem, fecha_corta(fecha))
 
 
+def og_url(fecha):
+    return "%sog/lecturas/%s.jpg" % (SITE, fecha)
+
+
+def titulo_miniatura(dia):
+    """Lo que dice la miniatura: el titulo elegido en el CMS; si no, el santo del dia
+    (sin el "Memoria libre:" y solo la primera opcion); si no, la celebracion."""
+    if dia.get("titulo_miniatura"):
+        return dia["titulo_miniatura"]
+    santo = re.sub(r"^[^:]*:\s*", "", dia.get("santo") or "").split(";")[0].strip()
+    return santo or dia["celebracion"]
+
+
+def write_og(fecha, dia):
+    """Genera og/lecturas/<fecha>.jpg (solo reescribe si cambio)."""
+    out = os.path.join(OG_DIR, fecha + ".jpg")
+    tmp = out + ".tmp"
+    ev = [l.get("cita") for l in dia["lecturas"] if l.get("tipo") == "Evangelio" and l.get("cita")]
+    byline = fecha_larga(fecha).capitalize() + ("\nEvangelio: " + ev[0] if ev else "")
+    pintura = os.path.join(ROOT, dia["imagen"].lstrip("/")) if dia.get("imagen") else None
+    if pintura and not os.path.exists(pintura):
+        print("  AVISO: %s: no existe la imagen %s; se usa el fondo de Fe" % (fecha, dia["imagen"]))
+        pintura = None
+    og_image.make_og_image("Fe · Lecturas de la Santa Misa", titulo_miniatura(dia), byline, tmp,
+                           background=OG_FONDO, fmt="JPEG", painting=pintura,
+                           focus_y=float(dia.get("imagen_foco") or 0.3))
+    with open(tmp, "rb") as f:
+        new = f.read()
+    old = open(out, "rb").read() if os.path.exists(out) else None
+    if old == new:
+        os.remove(tmp)
+        return False
+    os.replace(tmp, out)
+    return True
+
+
 # ---------------------------------------------------------------- html de la lectura
 def lectura_html(l):
     out = ['      <div class="lectura">']
@@ -191,7 +235,7 @@ def recortar(texto, limite=155):
 
 
 # ---------------------------------------------------------------- paginas
-def _head(tpl, page, title, desc, og_title, ld):
+def _head(tpl, page, title, desc, og_title, ld, og_img=OG_IMAGE):
     pre = tpl[:tpl.index("<main>")]
     pre = re.sub(r"<title>.*?</title>", lambda m: "<title>%s</title>" % esc(title), pre, count=1, flags=re.S)
     pre = pre.replace(SITE + "lecturas-para-el-uruguay.html", SITE + page)     # canonical, hreflang, og:url
@@ -202,7 +246,7 @@ def _head(tpl, page, title, desc, og_title, ld):
     pre = re.sub(r'(<meta property="og:description" content=")[^"]*(")',
                  lambda m: m.group(1) + esc(desc) + m.group(2), pre, count=1)
     pre = re.sub(r'<meta property="og:image" content="[^"]*" />',
-                 '<meta property="og:image" content="%s" />' % OG_IMAGE, pre, count=1)
+                 '<meta property="og:image" content="%s" />' % og_img, pre, count=1)
     pre = pre.replace("<head>", "<head>\n" + GEN_MARK, 1)
     ld_tag = ('<script type="application/ld+json">%s</script>\n'
               % json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"))
@@ -225,16 +269,18 @@ def day_page(tpl, fecha, dia, prev_f, next_f):
         {"@type": "Article", "headline": "Lecturas de la Santa Misa del %s" % larga,
          "description": desc, "url": SITE + page, "mainEntityOfPage": SITE + page,
          "datePublished": fecha, "dateModified": fecha, "inLanguage": "es-UY",
-         "image": OG_IMAGE,
+         "image": og_url(fecha),
          "author": {"@type": "Organization", "name": "Resurgir Nacional"},
          "publisher": {"@type": "Organization", "name": "Resurgir Nacional",
                        "url": SITE}},
         _crumbs([("Inicio", ""), ("Fe", FE_PAGE), ("Lecturas de la Santa Misa", INDEX_NAME),
                  (fecha_corta(fecha), page)]),
     ]}
-    pre = _head(tpl, page, title, desc, "Lecturas de la Santa Misa del %s" % larga, ld)
+    pre = _head(tpl, page, title, desc, "Lecturas de la Santa Misa del %s" % larga, ld, og_url(fecha))
     post = tpl[tpl.index("</main>") + len("</main>"):]
     cuerpo = "\n".join(lectura_html(l) for l in dia["lecturas"])
+    fuentes = [t for t in (dia["fuente"], ("Imagen: %s." % dia["imagen_credito"].rstrip("."))
+                           if dia.get("imagen_credito") else "") if t]
     pasos = []
     if prev_f:
         pasos.append('<a class="lecturas__paso" href="%s" rel="prev"><b>← Día anterior</b><span>%s</span></a>'
@@ -265,7 +311,7 @@ def day_page(tpl, fecha, dia, prev_f, next_f):
             esc(larga), esc(dia["celebracion"]),
             ('      <p class="lecturas__santo">%s</p>\n' % esc(dia["santo"])) if dia["santo"] else "",
             cuerpo,
-            ('      <p class="lecturas__fuente">%s</p>\n' % esc(dia["fuente"])) if dia["fuente"] else "",
+            ('      <p class="lecturas__fuente">%s</p>\n' % "<br>".join(esc(t) for t in fuentes)) if fuentes else "",
             pasos_html, " ".join(nav)))
     return pre + main + post
 
@@ -352,6 +398,9 @@ def main():
             "url": page_name(fecha),
             "lecturas": [_lectura(l) for l in d["lecturas"]],
         }
+        for k in ("imagen", "imagen_credito", "titulo_miniatura", "imagen_foco"):
+            if d.get(k):
+                dias[fecha][k] = d[k]
     data = json.dumps({"dias": dias}, ensure_ascii=False, indent=1, sort_keys=True) + "\n"
     wr(OUT, data)
     print("lecturas.json: %d día(s)" % len(dias))
@@ -363,6 +412,14 @@ def main():
         return
     tpl = rd(TEMPLATE)
     fechas = sorted(dias)
+    os.makedirs(OG_DIR, exist_ok=True)
+    for f in fechas:
+        if write_og(f, dias[f]):
+            print("  og/lecturas/%s.jpg: miniatura actualizada" % f)
+    for path in glob.glob(os.path.join(OG_DIR, "*.jpg")):
+        if os.path.splitext(os.path.basename(path))[0] not in dias:
+            os.remove(path)
+            print("  eliminado (obsoleto): og/lecturas/%s" % os.path.basename(path))
     escritos = set()
     for i, f in enumerate(fechas):
         prev_f = fechas[i - 1] if i > 0 else None

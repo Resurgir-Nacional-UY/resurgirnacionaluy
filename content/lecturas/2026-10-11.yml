@@ -5,6 +5,9 @@ fecha: '2026-10-11'
 celebracion: XXVIII Domingo del tiempo ordinario
 santo: ''
 fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+imagen: /media/lecturas/2026-10-11.jpg
+imagen_credito: 'Pieter Aertsen, «La parábola del banquete de bodas» (s. XVI)'
+titulo_miniatura: 'La parábola del banquete de bodas'
 draft: false
 lecturas:
 - tipo: Primera lectura

@@ -5,6 +5,8 @@ fecha: '2026-11-01'
 celebracion: Solemnidad de Todos los Santos
 santo: ''
 fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-11-01.jpg
+imagen_credito: 'Hermanos van Eyck, «La adoración del Cordero místico» (1432)'
 draft: false
 lecturas:
 - tipo: Primera lectura

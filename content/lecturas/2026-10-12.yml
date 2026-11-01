@@ -5,6 +5,9 @@ fecha: '2026-10-12'
 celebracion: Lunes de la XXVIII semana del tiempo ordinario
 santo: ''
 fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+imagen: /media/lecturas/2026-10-12.jpg
+imagen_credito: 'Pieter Lastman, «Jonás y la ballena» (1621)'
+titulo_miniatura: 'La señal de Jonás'
 draft: false
 lecturas:
 - tipo: Primera lectura

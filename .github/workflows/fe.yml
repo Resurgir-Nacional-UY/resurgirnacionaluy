@@ -8,6 +8,8 @@ on:
     branches: [main]
     paths:
       - "content/lecturas/**"
+      - "media/lecturas/**"
+      - "scripts/og_image.py"
       - "scripts/render_lecturas.py"
       - "content/calendario/**"
       - "scripts/render_calendario.py"
@@ -36,7 +38,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install --quiet pyyaml
+      - run: pip install --quiet pyyaml pillow
 
       - name: Render lecturas
         run: |

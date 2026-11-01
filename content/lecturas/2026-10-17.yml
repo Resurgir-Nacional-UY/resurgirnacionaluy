@@ -5,6 +5,8 @@ fecha: '2026-10-17'
 celebracion: Sábado de la XXVIII semana del tiempo ordinario
 santo: 'Memoria obligatoria: San Ignacio de Antioquía, obispo y mártir'
 fuente: 'Texto bíblico: La Sagrada Biblia, traducción de Mons. Juan Straubinger.'
+imagen: /media/lecturas/2026-10-17.jpg
+imagen_credito: 'Icono de San Ignacio de Antioquía (s. XVII, Museo Pushkin)'
 draft: false
 lecturas:
 - tipo: Primera lectura

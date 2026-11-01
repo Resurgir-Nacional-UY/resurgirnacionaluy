@@ -5,6 +5,9 @@ fecha: '2026-10-30'
 celebracion: Viernes de la XXX semana del tiempo ordinario
 santo: 'Memoria libre (santo del martirologio): San Serapión'
 fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-10-30.jpg
+imagen_credito: 'Rembrandt, «Cristo sanando a los enfermos» (c. 1648)'
+titulo_miniatura: 'Jesús sana en sábado'
 draft: false
 lecturas:
 - tipo: Primera lectura
