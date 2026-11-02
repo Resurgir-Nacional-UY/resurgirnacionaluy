@@ -279,8 +279,6 @@ def day_page(tpl, fecha, dia, prev_f, next_f):
     pre = _head(tpl, page, title, desc, "Lecturas de la Santa Misa del %s" % larga, ld, og_url(fecha))
     post = tpl[tpl.index("</main>") + len("</main>"):]
     cuerpo = "\n".join(lectura_html(l) for l in dia["lecturas"])
-    fuentes = [t for t in (dia["fuente"], ("Imagen: %s." % dia["imagen_credito"].rstrip("."))
-                           if dia.get("imagen_credito") else "") if t]
     pasos = []
     if prev_f:
         pasos.append('<a class="lecturas__paso" href="%s" rel="prev"><b>← Día anterior</b><span>%s</span></a>'
@@ -311,7 +309,7 @@ def day_page(tpl, fecha, dia, prev_f, next_f):
             esc(larga), esc(dia["celebracion"]),
             ('      <p class="lecturas__santo">%s</p>\n' % esc(dia["santo"])) if dia["santo"] else "",
             cuerpo,
-            ('      <p class="lecturas__fuente">%s</p>\n' % "<br>".join(esc(t) for t in fuentes)) if fuentes else "",
+            ('      <p class="lecturas__fuente">%s</p>\n' % esc(dia["fuente"])) if dia["fuente"] else "",
             pasos_html, " ".join(nav)))
     return pre + main + post
 
