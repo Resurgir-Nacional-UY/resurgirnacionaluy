@@ -132,15 +132,23 @@ def _cover_focus(img, w, h, focus_y=0.3):
 
 PAINT_X = 540      # donde empieza la pintura (a la derecha del texto)
 PAINT_FADE = 170   # ancho del fundido entre el panel del texto y la pintura
+FLAG = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "bandera-resurgir.jpg")
+FLAG_SUN_X = 0.58  # donde cae el sol de la bandera (fraccion del ancho de la foto)
 
 
 def _painting_background(painting, w, h, focus_y=0.3):
-    """Panel azul oscuro a la izquierda (para el texto) y la pintura a la derecha,
-    fundida hacia el panel. Debajo, la misma pintura ampliada y muy oscurecida, para
-    que el fundido no deje un corte en seco."""
+    """La bandera de Resurgir Nacional a la izquierda (oscurecida, para el texto) y la
+    pintura a la derecha, fundida hacia la bandera."""
     src = Image.open(_lp(painting)).convert("RGB")
-    base = _cover(src, w, h).convert("RGBA")
-    base.alpha_composite(Image.new("RGBA", (w, h), (13, 32, 62, 236)))
+    flag = Image.open(FLAG).convert("RGB")
+    scale = max(w / flag.width, h / flag.height)
+    flag = flag.resize((round(flag.width * scale), round(flag.height * scale)), Image.LANCZOS)
+    panel = PAINT_X + PAINT_FADE
+    x0 = min(max(int(flag.width * FLAG_SUN_X - panel * 0.5), 0), flag.width - panel)
+    y0 = (flag.height - h) // 2
+    base = Image.new("RGBA", (w, h), (13, 32, 62, 255))
+    base.paste(flag.crop((x0, y0, x0 + panel, y0 + h)), (0, 0))
+    base.alpha_composite(Image.new("RGBA", (w, h), (13, 32, 62, 165)))
     pw = w - PAINT_X
     paint = _cover_focus(src, pw, h, focus_y).convert("RGBA")
     mask = Image.new("L", (pw, 1))
