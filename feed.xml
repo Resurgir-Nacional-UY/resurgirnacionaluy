@@ -6,7 +6,14 @@
   <atom:link href="https://resurgirnacionaluy.org/feed.xml" rel="self" type="application/rss+xml" />
   <description>Artículos de formación del movimiento Resurgir Nacional.</description>
   <language>es-uy</language>
-  <lastBuildDate>Fri, 30 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 11 Nov 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Sobre la autocracia</title>
+    <link>https://resurgirnacionaluy.org/sobre-la-autocracia-politica.html</link>
+    <guid isPermaLink="true">https://resurgirnacionaluy.org/sobre-la-autocracia-politica.html</guid>
+    <pubDate>Wed, 11 Nov 2026 12:00:00 +0000</pubDate>
+    <description>Ensayo sobre la autocracia y su legitimización política.</description>
+  </item>
   <item>
     <title>El honor de las armas y la dignidad disidente: Una introducción al ethos de la ruptura</title>
     <link>https://resurgirnacionaluy.org/el-honor-de-las-armas-disidencia-revolucion.html</link>
