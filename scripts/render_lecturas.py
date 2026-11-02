@@ -278,6 +278,7 @@ def day_page(tpl, fecha, dia, prev_f, next_f):
     ]}
     pre = _head(tpl, page, title, desc, "Lecturas de la Santa Misa del %s" % larga, ld, og_url(fecha))
     post = tpl[tpl.index("</main>") + len("</main>"):]
+    post = post.replace("footer-rn", "footer")   # Fe conserva su fondo de siempre
     cuerpo = "\n".join(lectura_html(l) for l in dia["lecturas"])
     pasos = []
     if prev_f:
@@ -327,6 +328,7 @@ def index_page(tpl, dias):
     ]}
     pre = _head(tpl, INDEX_NAME, title, recortar(desc), "Lecturas de la Santa Misa de cada día", ld)
     post = tpl[tpl.index("</main>") + len("</main>"):]
+    post = post.replace("footer-rn", "footer")   # Fe conserva su fondo de siempre
     bloques, mes_actual = [], None
     for f in fechas:
         _, _, _, mes, anio = _fecha_parts(f)
