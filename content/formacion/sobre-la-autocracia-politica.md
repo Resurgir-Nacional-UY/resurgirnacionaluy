@@ -25,5 +25,4 @@ Matizando el marco de exigencia institucional del sistema, todo gabinete ejecuti
 
 _—José Otaiza. 01/11/2026_
 
-
 #
