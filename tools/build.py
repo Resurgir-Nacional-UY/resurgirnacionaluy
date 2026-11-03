@@ -205,6 +205,9 @@ _run("render_biblioteca.py")
 # render Tienda (content/tienda/*.yml -> <slug>.html + grilla de productos)
 _run("render_tienda.py")
 
+# Financiamiento (content/pages/financiamiento.yml -> financiamiento.html, con el chrome de Ideario)
+_run("render_financiamiento.py")
+
 # Lecturas de la Misa del dia (content/lecturas/*.yml -> lecturas.json, que lee la pagina Fe)
 _run("render_lecturas.py")
 _run("render_calendario.py")

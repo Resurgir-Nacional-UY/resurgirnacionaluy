@@ -116,6 +116,13 @@ collections:
           - name: aporta_kofi
             label: "Sección Colaborar — link de Ko-fi"
             widget: string
+          - name: aporta_prex
+            label: "Sección Colaborar — número de cuenta Prex"
+            widget: string
+            required: false
+            hint: >-
+              Se muestra con un botón para copiarlo, en Colaborar y en las
+              colectas de eventos. Si lo dejás vacío, Prex no aparece.
 
           - name: sumate_label
             label: "Sección Sumarse — etiqueta"
@@ -397,6 +404,114 @@ collections:
           - name: shipping_note
             label: "Aviso sobre el envío en el carrito"
             widget: string
+
+      - name: financiamiento
+        label: "Financiamiento — iniciativas y resumen"
+        file: content/pages/financiamiento.yml
+        media_folder: /media/pages
+        public_folder: /media/pages
+        fields:
+          - name: ejemplo
+            label: "¿Son datos de ejemplo?"
+            widget: boolean
+            default: false
+            hint: "Mientras esté activado, la página muestra un aviso de que los montos no son reales."
+          - name: lead
+            label: "Bajada (debajo del título)"
+            widget: text
+          - name: moneda
+            label: "Símbolo de la moneda"
+            widget: string
+            default: "$"
+          - name: iniciativas
+            label: "Iniciativas"
+            widget: list
+            required: false
+            hint: >-
+              Cada iniciativa muestra su meta, una barra de lo recaudado y la
+              cantidad de aportes. Este archivo es público en GitHub: cargá solo
+              totales. El detalle de cada aporte va en la planilla interna.
+            fields:
+              - { name: nombre, label: "Nombre (ej: Presentación de libro)", widget: string }
+              - { name: imagen, label: "Imagen", widget: image, required: false }
+              - { name: descripcion, label: "Para qué es el dinero", widget: text, required: false }
+              - { name: meta, label: "Meta (en pesos)", widget: number, value_type: int }
+              - name: recaudado
+                label: "Total recaudado hasta ahora (en pesos)"
+                widget: number
+                value_type: int
+                default: 0
+                hint: "La suma de todos los aportes. Si llegaron en dólares, el equivalente en pesos."
+              - { name: aportes, label: "Cantidad de aportes", widget: number, value_type: int, default: 0 }
+              - name: nombres
+                label: "Nombres a agradecer"
+                widget: list
+                required: false
+                hint: >-
+                  Solo quienes pidieron figurar, sin montos. El resto se muestra
+                  como «y N personas más».
+              - { name: fecha_limite, label: "Fecha límite", widget: datetime, time_format: false, format: "YYYY-MM-DD", required: false }
+              - name: lograda
+                label: "¿Iniciativa terminada?"
+                widget: boolean
+                default: false
+                hint: "Deja de pedir aportes y pasa a «Iniciativas logradas» con su resultado."
+              - { name: resultado, label: "Resultado: qué se hizo con lo recaudado", widget: text, required: false }
+              - { name: resultado_imagen, label: "Resultado: foto", widget: image, required: false }
+          - name: aportes_recientes
+            label: "Últimos aportes (estilo Ko-fi)"
+            widget: list
+            required: false
+            hint: >-
+              Se muestran con el nick que eligió cada persona, sin montos. El más
+              reciente primero; se ven los últimos 12. Sin nick aparece como
+              «Anónimo». Este archivo es público: nunca pongas el nombre real de
+              alguien que no lo pidió.
+            fields:
+              - { name: nick, label: "Nick (vacío = Anónimo)", widget: string, required: false }
+              - { name: fecha, label: "Fecha", widget: datetime, time_format: false, format: "YYYY-MM-DD", required: false }
+              - { name: iniciativa, label: "Para qué iniciativa (opcional)", widget: string, required: false }
+              - { name: mensaje, label: "Mensaje corto (opcional, hasta 140 letras)", widget: text, required: false }
+          - name: resumen_periodo
+            label: "Resumen — período de los porcentajes (ej: año 2026)"
+            widget: string
+            required: false
+          - name: fuentes
+            label: "De dónde viene el dinero"
+            widget: list
+            required: false
+            hint: "Con porcentaje se muestra una barra repartida; sin porcentaje, solo las tarjetas. Deberían sumar 100."
+            fields:
+              - { name: nombre, label: "Fuente (ej: Cuotas de miembros)", widget: string }
+              - { name: descripcion, label: "Descripción corta", widget: text, required: false }
+              - { name: porcentaje, label: "Porcentaje del total", widget: number, value_type: float, required: false }
+          - name: usos
+            label: "En qué se usa"
+            widget: list
+            required: false
+            hint: "Con porcentaje se muestra una barra repartida; sin porcentaje, solo las tarjetas. Deberían sumar 100."
+            fields:
+              - { name: nombre, label: "Uso (ej: Redes sociales)", widget: string }
+              - { name: descripcion, label: "Descripción corta", widget: text, required: false }
+              - { name: porcentaje, label: "Porcentaje del total", widget: number, value_type: float, required: false }
+          - name: usos_por_mes
+            label: "Mes a mes — en qué se usó el dinero"
+            widget: list
+            required: false
+            hint: >-
+              Cada mes se muestra con un gráfico de torta, solo con porcentajes
+              (sin montos). El primero de la lista es el más reciente. Los %
+              salen del Resumen de la planilla interna, con Desde/Hasta en ese mes.
+            fields:
+              - { name: mes, label: "Mes (ej: Octubre 2026)", widget: string }
+              - name: usos
+                label: "En qué se usó"
+                widget: list
+                hint: "Usá los mismos nombres de «En qué se usa» para que cada categoría mantenga su color. Deberían sumar 100."
+                fields:
+                  - { name: nombre, label: "Categoría (ej: Redes sociales)", widget: string }
+                  - { name: porcentaje, label: "Porcentaje", widget: number, value_type: float }
+              - { name: nota, label: "Aclaración (opcional)", widget: text, required: false }
 
       - name: live
         label: "🔴 Transmisión en vivo"

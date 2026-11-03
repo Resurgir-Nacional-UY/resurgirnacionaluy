@@ -41,7 +41,7 @@ GEN_MARK = "<!-- generated:biblioteca-book -->"
 RESERVED = {"index", "vision", "formacion", "sagradocorazondejesus", "biblioteca",
             "admin", "404", "readme", "articulos", "libros",
             "ideario-y-valores-rn", "catolicismo-en-uruguay", "cultura-nacional-uruguaya",
-            "lecturas-para-el-uruguay", "tienda-resurgir-nacional"}
+            "lecturas-para-el-uruguay", "tienda-resurgir-nacional", "financiamiento"}
 
 
 def _lp(p):
