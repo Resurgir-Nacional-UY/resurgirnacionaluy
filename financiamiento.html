@@ -150,6 +150,7 @@
   /* Footer */
   .site-footer { background: #14315C; color: #FFFFFF; padding-block: 3.5rem; position: relative; overflow: hidden; isolation: isolate; }
   .site-footer__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; pointer-events: none; }
+  .site-footer__video[poster*="footer-rn"] { object-position: 50% 0%; }
   .site-footer__scrim { position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(180deg, rgba(19,44,82,0.90) 0%, rgba(10,22,42,0.96) 100%); }
   .site-footer > .wrap { position: relative; z-index: 1; }
   @media (prefers-reduced-motion: reduce) { .site-footer__video { display: none; } }
@@ -481,16 +482,6 @@
       </div>
     </section>
 
-    <section id="aportes">
-      <span class="label">Comunidad</span>
-      <h2>Últimos aportes</h2>
-      <div class="prose"><p>Gracias a quienes sostienen el movimiento. Al aportar, podés dejar un nick y un mensaje corto para aparecer acá.</p></div>
-      <ul class="fin-feed">
-        <li><span class="fin-feed__avatar" aria-hidden="true">N</span><div><p class="fin-feed__who"><strong>Nro</strong> aportó</p></div></li>
-        <li><span class="fin-feed__avatar" aria-hidden="true">J</span><div><p class="fin-feed__who"><strong>Juan</strong> aportó</p></div></li>
-      </ul>
-    </section>
-
     <section>
       <span class="label">Cómo se financia</span>
       <h2>De dónde viene el dinero</h2>
@@ -575,8 +566,8 @@
 
 <footer class="site-footer">
   <video class="site-footer__video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"
-         poster="footer_poster.jpg">
-    <source src="footer.mp4" type="video/mp4" />
+         poster="footer-rn_poster.jpg">
+    <source src="footer-rn.mp4" type="video/mp4" />
   </video>
   <div class="site-footer__scrim"></div>
   <div class="wrap">
