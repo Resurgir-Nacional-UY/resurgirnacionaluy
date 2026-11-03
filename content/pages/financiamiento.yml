@@ -19,6 +19,7 @@ iniciativas:
     meta: 2000
     recaudado: 0
     aportes: 0
+    fecha_limite: "2026-11-28"
     lograda: false
 
 # Últimos aportes, al estilo Ko-fi: el nick que cada persona eligió (vacío =
