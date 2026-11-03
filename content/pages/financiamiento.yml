@@ -15,7 +15,7 @@ moneda: "$"
 # resultado.
 iniciativas:
   - nombre: "Presentación de libro"
-    descripcion: "Fondos para organizar la presentación del libro del movimiento."
+    descripcion: "Presentación del libro de Bruno Acosta Pastore en Montevideo. Lo recaudado cubre el alquiler del lugar y los gastos de organización que surjan."
     meta: 2000
     recaudado: 0
     aportes: 0
