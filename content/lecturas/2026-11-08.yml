@@ -8,8 +8,41 @@ fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 199
 imagen: /media/lecturas/2026-11-08.jpg
 imagen_credito: 'Purísima Virgen de los Treinta y Tres (imagen del siglo XVIII), Catedral de Florida'
 titulo_miniatura: 'Purísima Virgen de los Treinta y Tres'
-draft: true
+draft: false
 lecturas:
+- tipo: Primera lectura
+  cita: Judit 15, 8-10
+  presentacion: Lectura del libro de Judit.
+  texto: |-
+    El sumo sacerdote Joaquím y los ancianos del pueblo de Israel que habitaban en Jerusalén vinieron para contemplar los beneficios con que Dios había colmado a Israel, y también para ver a Judit y saludarla. Al verla, todos a unas, la elogiaron y le dijeron: «¡Tú eres la gloria de Jerusalén, tú el gran orgullo de Israel, tú el insigne honor de nuestra raza!
+
+    Al realizar todo esto con tu propia mano, has hecho un gran bien a Israel, y Dios ha aprobado tu obra. Que el Señor todopoderoso te bendiga para siempre». Y todo el pueblo dijo: «¡Amén!».
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Judit 13, 18-20
+  estrofas: |-
+    Que el Dios Altísimo te bendiga, hija mía,
+    más que a todas las mujeres de la tierra;
+    y bendito sea el Señor Dios,
+    creador del cielo y de la tierra.
+
+    Nunca olvidarán los hombres la confianza que has demostrado
+    y siempre recordarán el poder de Dios.
+
+    Que Dios te exalte para siempre,
+    favoreciéndote con sus bienes.
+    Porque no vacilaste en exponer tu vida,
+    al ver la humillación de nuestro pueblo,
+    sino que has conjurado nuestra ruina,
+    procediendo resueltamente delante de nuestro Dios.
+- tipo: Segunda lectura
+  cita: 1 Timoteo 2, 1-6
+  presentacion: Lectura de la primera carta del apóstol san Pablo a Timoteo.
+  texto: |-
+    Ante todo, te recomiendo que se hagan peticiones, oraciones, súplicas y acciones de gracias por todos los hombres, por los soberanos y por todas las autoridades, para que podamos disfrutar de paz y de tranquilidad, y llevar una vida piadosa y digna.
+
+    Esto es bueno y agradable a Dios, nuestro Salvador, porque él quiere que todos se salven y lleguen al conocimiento de la verdad. Hay un solo Dios y un solo mediador entre Dios y los hombres: Jesucristo, hombre él también, que se entregó a sí mismo para rescatar a todos. Este es el testimonio que él dio a su debido tiempo,
+  cierre: Palabra de Dios.
 - tipo: Evangelio
   cita: Lucas 1, 39-47
   presentacion: ✠ Lectura del santo Evangelio según san Lucas.
