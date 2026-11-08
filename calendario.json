@@ -318,7 +318,7 @@
      "tipo": "memoria-libre"
     },
     {
-     "detalle": "Año A",
+     "detalle": "Año B",
      "dia": 29,
      "nombre": "I Domingo de Adviento",
      "tipo": "domingo"
@@ -333,6 +333,174 @@
    "imagen_alt": "Calendario de noviembre de 2026 (forma ordinaria): una grilla con el santo o la fiesta de cada día, bajo un detalle de La Adoración del Cordero Místico, de Jan van Eyck.",
    "nota": "En cursiva, memoria libre. Los santos señalados como del martirologio son santos del día del Martirologio Romano que no figuran en el calendario general; su celebración es memoria libre.",
    "titulo": "Noviembre 2026"
+  },
+  "2026-12": {
+   "dias": [
+    {
+     "dia": 1,
+     "nombre": "San Carlos de Foucauld",
+     "tipo": "martirologio"
+    },
+    {
+     "dia": 2,
+     "nombre": "Santa Bibiana",
+     "tipo": "martirologio"
+    },
+    {
+     "dia": 3,
+     "nombre": "San Francisco Javier, presbítero",
+     "tipo": "memoria-obligatoria"
+    },
+    {
+     "dia": 4,
+     "nombre": "San Juan Damasceno, presbítero y doctor de la Iglesia",
+     "tipo": "memoria-libre"
+    },
+    {
+     "dia": 5,
+     "nombre": "San Sabas",
+     "tipo": "martirologio"
+    },
+    {
+     "dia": 6,
+     "nombre": "II Domingo de Adviento",
+     "tipo": "domingo"
+    },
+    {
+     "dia": 7,
+     "nombre": "San Ambrosio, obispo y doctor de la Iglesia",
+     "tipo": "memoria-obligatoria"
+    },
+    {
+     "detalle": "Solemnidad",
+     "dia": 8,
+     "nombre": "Inmaculada Concepción de la Virgen María",
+     "tipo": "fiesta"
+    },
+    {
+     "dia": 9,
+     "nombre": "San Juan Diego Cuauhtlatoatzin",
+     "tipo": "memoria-libre"
+    },
+    {
+     "dia": 10,
+     "nombre": "Nuestra Señora de Loreto",
+     "tipo": "memoria-libre"
+    },
+    {
+     "dia": 11,
+     "nombre": "San Dámaso I, papa",
+     "tipo": "memoria-libre"
+    },
+    {
+     "dia": 12,
+     "nombre": "Nuestra Señora de Guadalupe",
+     "tipo": "memoria-libre"
+    },
+    {
+     "detalle": "Gaudete",
+     "dia": 13,
+     "nombre": "III Domingo de Adviento",
+     "tipo": "domingo"
+    },
+    {
+     "dia": 14,
+     "nombre": "San Juan de la Cruz, presbítero y doctor de la Iglesia",
+     "tipo": "memoria-obligatoria"
+    },
+    {
+     "dia": 15,
+     "nombre": "Santa Virginia Centurione Bracelli",
+     "tipo": "martirologio"
+    },
+    {
+     "dia": 16,
+     "nombre": "Santa Adelaida",
+     "tipo": "martirologio"
+    },
+    {
+     "dia": 17,
+     "nombre": "Feria privilegiada de Adviento",
+     "tipo": "feria"
+    },
+    {
+     "dia": 18,
+     "nombre": "Feria privilegiada de Adviento",
+     "tipo": "feria"
+    },
+    {
+     "dia": 19,
+     "nombre": "Beato Urbano V",
+     "tipo": "martirologio"
+    },
+    {
+     "dia": 20,
+     "nombre": "IV Domingo de Adviento",
+     "tipo": "domingo"
+    },
+    {
+     "dia": 21,
+     "nombre": "San Pedro Canisio, presbítero y doctor de la Iglesia",
+     "tipo": "memoria-libre"
+    },
+    {
+     "dia": 22,
+     "nombre": "Santa Francisca Javier Cabrini",
+     "tipo": "martirologio"
+    },
+    {
+     "dia": 23,
+     "nombre": "San Juan de Kety, presbítero",
+     "tipo": "memoria-libre"
+    },
+    {
+     "detalle": "Por la tarde, Misa de la Vigilia de Navidad",
+     "dia": 24,
+     "nombre": "Nochebuena",
+     "tipo": "feria"
+    },
+    {
+     "detalle": "Solemnidad · Feriado en Uruguay",
+     "dia": 25,
+     "nombre": "Natividad del Señor",
+     "tipo": "fiesta"
+    },
+    {
+     "dia": 26,
+     "nombre": "San Esteban, protomártir",
+     "tipo": "fiesta"
+    },
+    {
+     "detalle": "Fiesta",
+     "dia": 27,
+     "nombre": "Sagrada Familia de Jesús, María y José",
+     "tipo": "fiesta"
+    },
+    {
+     "dia": 28,
+     "nombre": "Santos Inocentes, mártires",
+     "tipo": "fiesta"
+    },
+    {
+     "dia": 29,
+     "nombre": "Santo Tomás Becket, obispo y mártir",
+     "tipo": "memoria-libre"
+    },
+    {
+     "dia": 30,
+     "nombre": "Día VI de la Octava de Navidad",
+     "tipo": "feria"
+    },
+    {
+     "dia": 31,
+     "nombre": "San Silvestre I, papa",
+     "tipo": "memoria-libre"
+    }
+   ],
+   "imagen": "/media/calendario/2026-12.webp",
+   "imagen_alt": "Calendario de diciembre de 2026 (forma ordinaria): una grilla con el santo o la fiesta de cada día, bajo un detalle de la Natividad mística, de Sandro Botticelli.",
+   "nota": "En cursiva, memoria libre. Los santos señalados como del martirologio son santos del día del Martirologio Romano que no figuran en el calendario general; su celebración es memoria libre.",
+   "titulo": "Diciembre 2026"
   }
  }
 }
