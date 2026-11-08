@@ -1942,6 +1942,71 @@
    "santo": "Memoria libre: Santa María en sábado",
    "url": "lecturas-de-la-misa-7-de-noviembre-de-2026.html"
   },
+  "2026-11-08": {
+   "celebracion": "Purísima Virgen de los Treinta y Tres, patrona principal del Uruguay",
+   "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
+   "imagen": "/media/lecturas/2026-11-08.jpg",
+   "imagen_credito": "Purísima Virgen de los Treinta y Tres (imagen del siglo XVIII), Catedral de Florida",
+   "lecturas": [
+    {
+     "cierre": "Palabra de Dios.",
+     "cita": "Judit 15, 8-10",
+     "presentacion": "Lectura del libro de Judit.",
+     "texto": [
+      "El sumo sacerdote Joaquím y los ancianos del pueblo de Israel que habitaban en Jerusalén vinieron para contemplar los beneficios con que Dios había colmado a Israel, y también para ver a Judit y saludarla. Al verla, todos a unas, la elogiaron y le dijeron: «¡Tú eres la gloria de Jerusalén, tú el gran orgullo de Israel, tú el insigne honor de nuestra raza!",
+      "Al realizar todo esto con tu propia mano, has hecho un gran bien a Israel, y Dios ha aprobado tu obra. Que el Señor todopoderoso te bendiga para siempre». Y todo el pueblo dijo: «¡Amén!»."
+     ],
+     "tipo": "Primera lectura"
+    },
+    {
+     "cita": "Judit 13, 18-20",
+     "estrofas": [
+      [
+       "Que el Dios Altísimo te bendiga, hija mía,",
+       "más que a todas las mujeres de la tierra;",
+       "y bendito sea el Señor Dios,",
+       "creador del cielo y de la tierra."
+      ],
+      [
+       "Nunca olvidarán los hombres la confianza que has demostrado",
+       "y siempre recordarán el poder de Dios."
+      ],
+      [
+       "Que Dios te exalte para siempre,",
+       "favoreciéndote con sus bienes.",
+       "Porque no vacilaste en exponer tu vida,",
+       "al ver la humillación de nuestro pueblo,",
+       "sino que has conjurado nuestra ruina,",
+       "procediendo resueltamente delante de nuestro Dios."
+      ]
+     ],
+     "tipo": "Salmo responsorial"
+    },
+    {
+     "cierre": "Palabra de Dios.",
+     "cita": "1 Timoteo 2, 1-6",
+     "presentacion": "Lectura de la primera carta del apóstol san Pablo a Timoteo.",
+     "texto": [
+      "Ante todo, te recomiendo que se hagan peticiones, oraciones, súplicas y acciones de gracias por todos los hombres, por los soberanos y por todas las autoridades, para que podamos disfrutar de paz y de tranquilidad, y llevar una vida piadosa y digna.",
+      "Esto es bueno y agradable a Dios, nuestro Salvador, porque él quiere que todos se salven y lleguen al conocimiento de la verdad. Hay un solo Dios y un solo mediador entre Dios y los hombres: Jesucristo, hombre él también, que se entregó a sí mismo para rescatar a todos. Este es el testimonio que él dio a su debido tiempo,"
+     ],
+     "tipo": "Segunda lectura"
+    },
+    {
+     "cierre": "Palabra del Señor.",
+     "cita": "Lucas 1, 39-47",
+     "presentacion": "✠ Lectura del santo Evangelio según san Lucas.",
+     "texto": [
+      "En aquellos días, María partió y fue sin demora a un pueblo de la montaña de Judá. Entró en la casa de Zacarías y saludó a Isabel. Apenas esta oyó el saludo de María, el niño saltó de alegría en su seno, e Isabel, llena del Espíritu Santo, exclamó: «¡Tú eres bendita entre todas las mujeres y bendito es el fruto de tu vientre! ¿Quién soy yo, para que la madre de mi Señor venga a visitarme?",
+      "Apenas oí tu saludo, el niño saltó de alegría en mi seno. Feliz de ti por haber creído que se cumplirá lo que te fue anunciado de parte del Señor». María dijo entonces: «Mi alma canta la grandeza del Señor, y mi espíritu se estremece de gozo en Dios, mi salvador,"
+     ],
+     "tipo": "Evangelio"
+    }
+   ],
+   "santo": "Solemnidad en Uruguay (desplaza al XXXII Domingo del tiempo ordinario)",
+   "titulo_miniatura": "Purísima Virgen de los Treinta y Tres",
+   "url": "lecturas-de-la-misa-8-de-noviembre-de-2026.html"
+  },
   "2026-11-09": {
    "celebracion": "Lunes de la XXXII semana del tiempo ordinario",
    "fuente": "Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.",
