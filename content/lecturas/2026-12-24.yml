@@ -1,0 +1,47 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-24'
+celebracion: Jueves de la IV semana de Adviento
+santo: Misa de la mañana
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-24.jpg
+imagen_credito: Pieter Brueghel el Viejo, «El censo de Belén» (1566)
+titulo_miniatura: Camino a Belén
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: 2 Samuel 7, 1-5. 8b-12. 14a. 16
+  presentacion: Lectura del segundo libro de Samuel.
+  texto: |-
+    Cuando David se estableció en su casa y el Señor le dio paz, librándolo de todos sus enemigos de alrededor, el rey dijo al profeta Natán: «Mira, yo habito en una casa de cedro, mientras el Arca de Dios está en una tienda de campaña». Natán respondió al rey: «Ve a hacer todo lo que tienes pensado, porque el Señor está contigo». Pero aquella misma noche, la palabra del Señor llegó a Natán en estos términos: «Ve a decirle a mi servidor David: Así habla el Señor: ¿Eres tú el que me va a edificar una casa para que yo la habite?
+
+    Así habla el Señor de los ejércitos: Yo te saqué del campo de pastoreo, de detrás del rebaño, para que fueras el jefe de mi pueblo Israel. Estuve contigo dondequiera que fuiste y exterminé a todos tus enemigos delante de ti. Yo haré que tu nombre sea tan grande como el de los grandes de la tierra. Fijaré un lugar para mi pueblo Israel y lo plantaré para que tenga allí su morada. Ya no será perturbado, ni los malhechores seguirán oprimiéndolo como lo hacían antes, desde el día en que establecí Jueces sobre mi pueblo Israel. Yo te he dado paz, librándote de todos tus enemigos. Y el Señor te ha anunciado que él mismo te hará una casa.
+
+    Sí, cuando hayas llegado al término de tus días y vayas a descansar con tus padres, yo elevaré después de ti a uno de tus descendientes, a uno que saldrá de tus entrañas, y afianzaré su realeza. Seré un padre para él, y él será para mí un hijo. Tu casa y tu reino durarán eternamente delante de mí, y su trono será estable para siempre».
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 89
+  estrofas: |-
+    Cantaré eternamente el amor del Señor,
+    proclamaré tu fidelidad por todas las generaciones.
+    Porque tú has dicho: «Mi amor se mantendrá eternamente,
+    mi fidelidad está afianzada en el cielo.
+
+    Yo sellé una alianza con mi elegido,
+    hice este juramento a David, mi servidor:
+    «Estableceré tu descendencia para siempre,
+    mantendré tu trono por todas las generaciones».
+
+    El me dirá: «Tú eres mi padre,
+    mi Dios, mi Roca salvadora».
+    Le aseguraré mi amor eternamente,
+    y mi alianza será estable para él.
+- tipo: Evangelio
+  cita: Lucas 1, 67-79
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Entonces Zacarías, su padre, quedó lleno del Espíritu Santo y dijo proféticamente: «Bendito sea el Señor, el Dios de Israel, porque ha visitado y redimido a su Pueblo, y nos ha dado un poderoso Salvador en la casa de David, su servidor, como lo había anunciado mucho tiempo antes, por boca de sus santos profetas, para salvarnos de nuestros enemigos y de las manos de todos los que nos odian.
+
+    Así tuvo misericordia de nuestros padres y se acordó de su santa Alianza, del juramento que hizo a nuestro padre Abraham de concedernos que, libres de temor, arrancados de las manos de nuestros enemigos, lo sirvamos en santidad y justicia, bajo su mirada, durante toda nuestra vida. Y tú, niño, serás llamado Profeta del Altísimo, porque irás delante del Señor preparando sus caminos, para hacer conocer a su Pueblo la salvación mediante el perdón de los pecados; gracias a la misericordiosa ternura de nuestro Dios, que nos traerá del cielo la visita del Sol naciente, para iluminar a los que están en las tinieblas y en la sombra de la muerte, y guiar nuestros pasos por el camino de la paz».
+  cierre: Palabra del Señor.

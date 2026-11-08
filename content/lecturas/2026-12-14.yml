@@ -1,0 +1,45 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-14'
+celebracion: Lunes de la III semana de Adviento
+santo: 'Memoria obligatoria: San Juan de la Cruz, presbítero y doctor de la Iglesia'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-14.jpg
+imagen_credito: Diego de Sanabria, «San Juan de la Cruz»
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Números 24, 2-7. 15-17a
+  presentacion: Lectura del libro de los Números.
+  texto: |-
+    Cuando alzó los ojos y vio a Israel acampado por tribus, el espíritu de Dios vino sobre él y pronunció su poema, diciendo: «Oráculo de Balaam hijo de Beor, oráculo del hombre de mirada penetrante; oráculo del que oye las palabras de Dios y conoce el pensamiento del Altísimo; del que recibe visiones del Todopoderoso, en éxtasis, pero con los ojos abiertos. ¡Qué hermosas son tus carpas, Jacob, y tus moradas, Israel!
+
+    Son como quebradas que se extienden, como jardines junto a un río, como áloes que plantó el Señor, como cedros junto a las aguas. El agua desborda de sus cántaros, su simiente tiene agua en abundancia. Su rey se eleva por encima de Agag y su reino es exaltado. Entonces pronunció su poema, diciendo: «Oráculo de Balaam, hijo de Beor, oráculo del hombre de mirada penetrante; oráculo del que oye las palabras de Dios y conoce el pensamiento del Altísimo; del recibe visiones del Todopoderoso, en éxtasis pero con los ojos abiertos.
+
+    Lo veo, pero no ahora; lo contemplo, pero no de cerca: una estrella se alza desde Jacob, un cetro surge de Israel.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 25
+  estrofas: |-
+    Muéstrame, Señor, tus caminos,
+    enséñame tus senderos.
+    Guíame por el camino de tu fidelidad;
+    enséñame, porque tú eres mi Dios y mi salvador,
+
+    Acuérdate, Señor, de tu compasión y de tu amor,
+    porque son eternos.
+    por tu bondad, Señor, acuérdate de mi según tu fidelidad.
+
+    El Señor es bondadoso y recto:
+    por eso muestra el camino a los extraviados;
+    él guía a los humildes para que obren rectamente
+    y enseña su camino a los pobres.
+- tipo: Evangelio
+  cita: Mateo 21, 23-27
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    Jesús entró en el Templo y, mientras enseñaba, se le acercaron los sumos sacerdotes y los ancianos del pueblo, para decirle: «¿Con qué autoridad haces estas cosas? ¿Y quién te ha dado esa autoridad?». Jesús les respondió: «Yo también quiero hacerles una sola pregunta. Si me responden, les diré con qué autoridad hago estas cosas. ¿De dónde venía el bautismo de Juan? ¿Del cielo o de los hombres?». Ellos se hacían este razonamiento: «Si respondemos: «Del cielo», él nos dirá: «Entonces, ¿por qué no creyeron en él?».
+
+    Y si decimos: «De los hombres», debemos temer a la multitud, porque todos consideran a Juan un profeta». Por eso respondieron a Jesús: «No sabemos». El, por su parte, les respondió: «Entonces yo tampoco les diré con qué autoridad hago esto».
+  cierre: Palabra del Señor.

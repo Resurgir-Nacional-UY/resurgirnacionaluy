@@ -1,0 +1,48 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-03'
+celebracion: Jueves de la I semana de Adviento
+santo: 'Memoria obligatoria: San Francisco Javier, presbítero'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-03.jpg
+imagen_credito: Bartolomé Esteban Murillo, «San Francisco Javier» (1670)
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Isaías 26, 1-6
+  presentacion: Lectura del libro de Isaías.
+  texto: |-
+    Aquel día, se entonará este canto en el país de Judá: Tenemos una ciudad fuerte, el Señor le ha puesto como salvaguardia muros y antemuros. Abran las puertas, para que entre una nación justa, que se mantiene fiel. Su carácter es firme, y tú la conservas en paz. porque ella confía en ti. Confíen en el Señor para siempre, porque el Señor es una Roca eterna. El doblegó a los que habitaban en la altura, en la ciudad inaccesible; la humilló hasta la tierra, le hizo tocar el polvo.
+
+    Ella es pisoteada por los pies del pobre, por las pisadas de los débiles.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 118
+  estrofas: |-
+    ¡Den gracias al Señor, porque es bueno,
+    porque es eterno su amor!
+    Es mejor refugiarse en el Señor
+    que fiarse de los hombres;
+    es mejor refugiarse en el Señor
+    que fiarse de los poderosos.
+
+    «Abran las puertas de la justicia
+    y entraré para dar gracias al Señor».
+    «Esta es la puerta del Señor:
+    sólo los justos entran por ella».
+    Yo te doy gracias porque me escuchaste
+    y fuiste mi salvación.
+
+    Sálvanos, Señor, asegúranos la prosperidad.
+    ¡Bendito el que viene en nombre del Señor!
+    Nosotros los bendecimos desde la Casa del Señor:
+    el Señor es Dios, y él nos ilumina.
+- tipo: Evangelio
+  cita: Mateo 7, 21. 24-27
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    No son los que me dicen: «Señor, Señor», los que entrarán en el Reino de los Cielos, sino los que cumplen la voluntad de mi Padre que está en el cielo. Así, todo el que escucha las palabras que acabo de decir y las pone en práctica, puede compararse a un hombre sensato que edificó su casa sobre roca. Cayeron las lluvias, se precipitaron los torrentes, soplaron los vientos y sacudieron la casa; pero esta no se derrumbó porque estaba construida sobre roca.
+
+    Al contrario, el que escucha mis palabras y no las practica, puede compararse a un hombre insensato, que edificó su casa sobre arena». Cayeron las lluvias, se precipitaron los torrentes, soplaron los vientos y sacudieron la casa: esta se derrumbó, y su ruina fue grande».
+  cierre: Palabra del Señor.

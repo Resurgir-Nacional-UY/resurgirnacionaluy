@@ -1,0 +1,52 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-22'
+celebracion: Martes de la IV semana de Adviento
+santo: ''
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-22.jpg
+imagen_credito: Sandro Botticelli, «La Virgen del Magníficat» (c. 1483)
+titulo_miniatura: El Magníficat
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: 1 Samuel 1, 24-28
+  presentacion: Lectura del primer libro de Samuel.
+  texto: |-
+    Cuando el niño dejó de mamar, lo subió con ella, llevando además un novillo de tres años, una medida de harina y un odre de vino, y lo condujo a la Casa del Señor en Silo. El niño era aún muy pequeño. Y después de inmolar el novillo, se lo llevaron a Elí. Ella dijo: «Perdón, señor mío, ¡por tu vida, señor!, yo soy aquella mujer que estuvo aquí junto a ti, para orar al Señor. Era este niño lo que yo suplicaba al Señor, y él me concedió lo que le pedía.
+
+    Ahora yo, a mi vez, se lo cedo a él; para toda su vida queda cedido al Señor». Después se postraron delante del Señor.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: 1 Samuel 2, 1. 4-8
+  estrofas: |-
+    Mi corazón se regocija en el Señor,
+    tengo la frente erguida gracias a mi Dios.
+    Mi boca se ríe de mis enemigos,
+    porque tu salvación me ha llenado de alegría.
+
+    El arco de los valientes se ha quebrado,
+    y los vacilantes se ciñen de vigor;
+    los satisfechos se contratan por un pedazo de pan,
+    y los hambrientos dejan de fatigarse;
+    la mujer estéril da a luz siete veces,
+    y la madre de muchos hijos se marchita.
+
+    El Señor da la muerte y la vida,
+    hunde en el Abismo y levanta de él.
+    El Señor da la pobreza y la riqueza,
+    humilla y también enaltece.
+
+    El levanta del polvo al desvalido
+    y alza al pobre de la miseria,
+    para hacerlos sentar con los príncipes
+    y darles en herencia un trono de gloria.
+- tipo: Evangelio
+  cita: Lucas 1, 46-56
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    María dijo entonces: «Mi alma canta la grandeza del Señor, y mi espíritu se estremece de gozo en Dios, mi salvador, porque el miró con bondad la pequeñez de tu servidora. En adelante todas las generaciones me llamarán feliz, porque el Todopoderoso he hecho en mí grandes cosas: ¡su Nombre es santo! Su misericordia se extiende de generación en generación sobre aquellos que lo temen.
+
+    Desplegó la fuerza de su brazo, dispersó a los soberbios de corazón. Derribó a los poderosos de su trono y elevó a los humildes. Colmó de bienes a los hambrientos y despidió a los ricos con las manos vacías. Socorrió a Israel, su servidor, acordándose de su misericordia, como lo había prometido a nuestros padres, en favor de Abraham y de su descendencia para siempre». María permaneció con Isabel unos tres meses y luego regresó a su casa.
+  cierre: Palabra del Señor.

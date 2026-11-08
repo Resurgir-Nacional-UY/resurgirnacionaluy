@@ -1,0 +1,49 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-07'
+celebracion: Lunes de la II semana de Adviento
+santo: 'Memoria obligatoria: San Ambrosio, obispo y doctor de la Iglesia'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-07.jpg
+imagen_credito: Anton van Dyck, «San Ambrosio y el emperador Teodosio» (c. 1620)
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Isaías 35, 1-10
+  presentacion: Lectura del libro de Isaías.
+  texto: |-
+    ¡Regocíjese el desierto y la tierra reseca, alégrese y florezca la estepa! ¡Sí, florezca como el narciso, que se alegre y prorrumpa en cantos de júbilo! Le ha sido dada la gloria del Líbano, el esplendor del Carmelo y del Sarón. Ellos verán la gloria del Señor, el esplendor de nuestro Dios. Fortalezcan los brazos débiles, robustezcan las rodillas vacilantes; digan a los que están desalentados: «¡Sean fuertes, no teman: ahí está su Dios! Llega la venganza, la represalia de Dios: él mismo viene a salvarlos!».
+
+    Entonces se abrirán los ojos de los ciegos y se destaparán los oídos de los sordos; entonces el tullido saltará como un ciervo y la lengua de los mudos gritará de júbilo. Porque brotarán aguas en el desierto y torrentes en la estepa; el páramo se convertirá en un estanque y la tierra sedienta en manantiales; la morada donde se recostaban los chacales será un paraje de caña y papiros.
+
+    Allí habrá una senda y un camino que se llamará «Camino santo». No lo recorrerá ningún impuro ni los necios vagarán por él; no habrá allí ningún león ni penetrarán en él las fieras salvajes. Por allí caminarán los redimidos, volverán los rescatados por el Señor; y entrarán en Sión con gritos de júbilo, coronados de una alegría perpetua: los acompañarán el gozo y la alegría, la tristeza y los gemidos se alejarán.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 85
+  estrofas: |-
+    Voy a proclamar lo que dice el Señor:
+    el Señor promete la paz,
+    la paz para su pueblo y sus amigos,
+    Su salvación está muy cerca de sus fieles,
+    y la Gloria habitará en nuestra tierra.
+
+    El Amor y la Verdad se encontrarán,
+    la Justicia y la Paz se abrazarán;
+    la Verdad brotará de la tierra
+    y la Justicia mirará desde el cielo.
+
+    El mismo Señor nos dará sus bienes
+    y nuestra tierra producirá sus frutos.
+    La Justicia irá delante de él,
+    y la Paz, sobre la huella de sus pasos.
+- tipo: Evangelio
+  cita: Lucas 5, 17-26
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Un día, mientras Jesús enseñaba, había entre los presente algunos fariseos y doctores de la Ley, llegados de todas las regiones de Galilea, de Judea y de Jerusalén. La fuerza del Señor le daba poder para curar. Llegaron entonces unas personas transportando a un paralítico sobre una camilla y buscaban el modo de entrar, para llevarlo ante Jesús. Como no sabían por dónde introducirlo a causa de la multitud, subieron a la terraza y, desde el techo, lo bajaron con su camilla en medio de la concurrencia y lo pusieron delante de Jesús.
+
+    Al ver su fe, Jesús le dijo: «Hombre, tus pecados te son perdonados». Los escribas y los fariseos comenzaron a preguntarse: «¿Quién es este que blasfema? ¿Quién puede perdonar los pecados, sino sólo Dios?». Pero Jesús, conociendo sus pensamientos, les dijo: «¿Qué es lo que están pensando? ¿Qué es más fácil decir: "Tus pecados están perdonados", o "Levántate y camina"? Para que ustedes sepan que el Hijo del hombre tiene sobre la tierra el poder de perdonar los pecados –dijo al paralítico– yo te lo mando, levántate, toma tu camilla y vuelve a tu casa».
+
+    Inmediatamente se levantó a la vista de todos, tomó su camilla y se fue a su casa alabando a Dios. Todos quedaron llenos de asombro y glorificaban a Dios, diciendo con gran temor: «Hoy hemos visto cosas maravillosas».
+  cierre: Palabra del Señor.

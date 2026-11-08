@@ -1,0 +1,47 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-04'
+celebracion: Viernes de la I semana de Adviento
+santo: 'Memoria libre: San Juan Damasceno, presbítero y doctor de la Iglesia'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-04.jpg
+imagen_credito: El Greco, «Cristo cura al ciego» (c. 1570)
+titulo_miniatura: Jesús cura a dos ciegos
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Isaías 29, 17-24
+  presentacion: Lectura del libro de Isaías.
+  texto: |-
+    ¿No falta poco, muy poco tiempo, para que Líbano se vuelva un vergel y el vergel parezca un bosque? Aquel día, los sordos oirán las palabras del libro, y verán los ojos de los ciegos, libres de tinieblas y oscuridad. Los humildes de alegrarán más y más en el Señor y los más indigentes se regocijarán en el Santo de Israel. Porque se acabarán los tiranos, desaparecerá el insolente, y serán extirpados los que acechan para hacer el mal, los que con una palabra hacen condenar a un hombre, los que tienden trampas al que actúa en un juicio, y porque sí nomás perjudican al justo.
+
+    Por eso, así habla el Señor, el Dios de la casa de Jacob, el que rescató a Abraham: En adelante, Jacob no se avergonzará ni se pondrá pálido su rostro Porque, al ver lo que hago en medio de él, proclamarán que mi Nombre es santo, proclamarán santo al Santo de Jacob y temerán al Dios de Israel. Los espíritus extraviados llegarán a entender y los recalcitrantes aceptarán la enseñanza.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 27
+  estrofas: |-
+    El Señor es mi luz y mi salvación,
+    ¿a quién temeré?
+    El Señor es el baluarte de mi vida,
+    ¿ante quién temblaré?
+
+    Una sola cosa he pedido al Señor,
+    y esto es lo que quiero:
+    vivir en la Casa del Señor
+    todos los días de mi vida,
+    para gozar de la dulzura del Señor
+    y contemplar su Templo.
+
+    Yo creo que contemplaré la bondad del Señor
+    en la tierra de los vivientes.
+    Espera en el Señor y sé fuerte;
+    ten valor y espera en el Señor.
+- tipo: Evangelio
+  cita: Mateo 9, 27-31
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    Cuando Jesús se fue, lo siguieron dos ciegos, gritando: «Ten piedad de nosotros, Hijo de David». Al llegar a la casa, los ciegos se le acercaron y él les preguntó: «¿Creen que yo puedo hacer lo que me piden?». Ellos le respondieron: «Sí, Señor». Jesús les tocó los ojos, diciendo: «Que suceda como ustedes han creído». Y se les abrieron sus ojos. Entonces Jesús los conminó: «¡Cuidado! Que nadie lo sepa».
+
+    Pero ellos, apenas salieron, difundieron su fama por toda aquella región.
+  cierre: Palabra del Señor.

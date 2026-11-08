@@ -1,0 +1,47 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-05'
+celebracion: Sábado de la I semana de Adviento
+santo: ''
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-05.jpg
+imagen_credito: Domenico Ghirlandaio, «La vocación de los primeros apóstoles», Capilla Sixtina (1481)
+titulo_miniatura: Jesús envía a los Doce
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Isaías 30, 19-21. 23-26
+  presentacion: Lectura del libro de Isaías.
+  texto: |-
+    Sí, pueblo de Sión, que habitas en Jerusalén, ya no tendrás que llorar: él se apiadará de ti al oír tu clamor; apenas te escuche, te responderá. Cuando el Señor les haya dado el pan de la angustia y el agua de la aflicción, aquel que te instruye no se ocultará más, sino que verás a tu maestro con tus propios ojos. Tus oídos escucharán detrás de ti una palabra: «Este es el camino, síganlo, aunque se hayan desviado a la derecha o a la izquierda».
+
+    El Señor te dará lluvia para la semilla que siembres en el suelo, y el pan que produzca el terreno será rico y sustancioso. Aquel día, tu ganado pacerá en extensas praderas. Los bueyes y los asnos que trabajen el suelo comerán forraje bien sazonado, aventado con el bieldo y la horquilla. En todo monte elevado y en toda colina alta, habrá arroyos y corrientes de agua, el día de la gran masacre, cuando se derrumben las torres.
+
+    Entonces, la luz de la luna será como la luz del sol, y la luz del sol será siete veces más intensa –como la luz de siete días– el día en que el Señor vende la herida de su pueblo y sane las llagas de los golpes que le infligió.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 147
+  estrofas: |-
+    ¡Qué bueno es cantar a nuestro Dios,
+    qué agradable y merecida es su alabanza!
+    El Señor reconstruye a Jerusalén
+    y congrega a los dispersos de Israel;
+
+    sana a los que están afligidos
+    y les venda las heridas.
+    El cuenta el número de las estrellas
+    y llama a cada una por su nombre:
+
+    nuestro Señor es grande y poderoso,
+    su inteligencia no tiene medida.
+    El Señor eleva a los oprimidos
+    y humilla a los malvados hasta el polvo.
+- tipo: Evangelio
+  cita: Mateo 9, 35 – 10, 1. 5a. 6-8
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    Jesús recorría todas las ciudades y los pueblos, enseñando en las sinagogas, proclamando la Buena Noticia del Reino y curando todas las enfermedades y dolencias. Al ver a la multitud, tuvo compasión, porque estaban fatigados y abatidos, como ovejas que no tienen pastor. Entonces dijo a sus discípulos: «La cosecha es abundante, pero los trabajadores son pocos. Rueguen al dueño de los sembrados que envíe trabajadores para la cosecha.
+
+    Jesús convocó a sus doce discípulos y les dio el poder de expulsar a los espíritus impuros y de curar cualquier enfermedad o dolencia. A estos Doce, Jesús los envió con las siguientes instrucciones: « Vayan, en cambio, a las ovejas perdidas del pueblo de Israel. Por el camino, proclamen que el Reino de los Cielos está cerca. Curen a los enfermos, resuciten a los muertos, purifiquen a los leprosos, expulsen a los demonios. Ustedes han recibido gratuitamente, den también gratuitamente.
+  cierre: Palabra del Señor.

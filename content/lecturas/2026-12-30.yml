@@ -1,0 +1,42 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-30'
+celebracion: Día VI de la Octava de Navidad
+santo: ''
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-30.jpg
+imagen_credito: Rembrandt, «La profetisa Ana» (1631)
+titulo_miniatura: La profetisa Ana
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: 1 Juan 2, 12-17
+  presentacion: Lectura de la primera carta del apóstol san Juan.
+  texto: |-
+    Hijos, les escribo porque sus pecados han sido perdonados por el nombre de Jesús. Padres, les escribo porque ustedes conocen al que existe desde el principio. Jóvenes, les escribo porque ustedes han vencido al Maligno. Hijos, les he escrito porque ustedes conocen al Padre. Padres, les he escrito porque ustedes conocen al que existe desde el principio. Jóvenes, les he escrito porque son fuertes, y la Palabra de Dios permanece en ustedes, y ustedes han vencido al Maligno.
+
+    No amen al mundo ni las cosas mundanas. Si alguien ama al mundo, el amor del Padre no está en él. Porque todo lo que hay en el mundo es concupiscencia de la carne, codicia de los ojos y ostentación de riqueza. Todo esto no viene del Padre, sino del mundo; pero el mundo pasa, y con él, su concupiscencia. En cambio, el que cumple la voluntad de Dios permanece eternamente.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 96
+  estrofas: |-
+    Aclamen al Señor, familias de los pueblos,
+    aclamen la gloria y el poder del Señor;
+    aclamen la gloria del nombre del Señor.
+
+    Entren en sus atrios trayendo una ofrenda,
+    adoren al Señor al manifestarse su santidad:
+    ¡que toda la tierra tiemble ante él!
+
+    Digan entre las naciones: «¡el Señor reina!
+    El mundo está firme y no vacilará.
+    El Señor juzgará a los pueblos con rectitud».
+- tipo: Evangelio
+  cita: Lucas 2, 36-40
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Había también allí una profetisa llamada Ana, hija de Fanuel, de la familia de Aser, mujer ya entrada en años, que, casa en su juventud, había vivido siete años con su marido. Desde entonces había permanecido viuda, y tenía ochenta y cuatro años. No se apartaba del Templo, sirviendo a Dios noche y día con ayunos y oraciones. Se presentó en ese mismo momento y se puso a dar gracias a Dios. Y hablaba acerca del niño a todos los que esperaban la redención de Jerusalén.
+
+    Después de cumplir todo lo que ordenaba la Ley del Señor, volvieron a su ciudad de Nazaret, en Galilea. El niño iba creciendo y se fortalecía, lleno de sabiduría, y la gracia de Dios estaba con él.
+  cierre: Palabra del Señor.

@@ -1,0 +1,45 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-23'
+celebracion: Miércoles de la IV semana de Adviento
+santo: 'Memoria libre: San Juan de Kety, presbítero'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-23.jpg
+imagen_credito: Fra Angelico, «La imposición del nombre a san Juan Bautista» (c. 1435)
+titulo_miniatura: Su nombre es Juan
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Malaquías 3, 1-4. 23-24
+  presentacion: Lectura de la profecía de Malaquías.
+  texto: |-
+    Yo envío a mi mensajero, para que prepare el camino delante de mí. Y en seguida entrará en su Templo el Señor que ustedes buscan; y el Angel de la alianza que ustedes desean ya viene, dice el Señor de los ejércitos. ¿Quién podrá soportar el Día de su venida? ¿Quién permanecerá de pie cuando aparezca? Porque él es como el fuego del fundidor y como la lejía de los lavanderos. El se sentará para fundir y purificar: purificará a los hijos de Leví y los depurará como al oro y la plata; y ellos serán para el Señor los que presentan la ofrenda conforme a la justicia.
+
+    La ofrenda de Judá y de Jerusalén será agradable al Señor, como en los tiempos pasados, como en los primeros años. Yo les voy a enviar a Elías, el profeta, antes que llegue el Día del Señor, grande y terrible. El hará volver el corazón de los padres hacia sus hijos y el corazón de los hijos hacia sus padres, para que yo no venga a castigar el país con el exterminio total.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 25
+  estrofas: |-
+    Muéstrame, Señor, tus caminos,
+    enséñame tus senderos.
+    Guíame por el camino de tu fidelidad;
+    enséñame, porque tú eres mi Dios y mi salvador,
+
+    El Señor es bondadoso y recto:
+    por eso muestra el camino a los extraviados;
+    él guía a los humildes para que obren rectamente
+    y enseña su camino a los pobres.
+
+    Todos los senderos del Señor son amor y fidelidad,
+    para los que observan los preceptos de su alianza.
+    El Señor da su amistad a los que lo temen
+    y les hace conocer su alianza.
+- tipo: Evangelio
+  cita: Lucas 1, 57-66
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Cuando llegó el tiempo en que Isabel debía ser madre, dio a luz un hijo. Al enterarse sus vecinos y parientes de la gran misericordia con que Dios la había tratado, se alegraban con ella. A los ocho días, se reunieron para circuncidar al niño, y querían llamarlo Zacarías, como su padre; pero la madre dijo: «No, debe llamarse Juan». Ellos le decían: «No hay nadie en tu familia que lleve ese nombre».
+
+    Entonces preguntaron por señas al padre qué nombre quería que le pusieran. Este pidió una pizarra y escribió: «Su nombre es Juan». Todos quedaron admirados. Y en ese mismo momento, Zacarías recuperó el habla y comenzó a alabar a Dios. Este acontecimiento produjo una gran impresión entre la gente de los alrededores, y se lo comentaba en toda la región montañosa de Judea. Todos los que se enteraron guardaban este recuerdo en su corazón y se decían: «¿Qué llegará a ser este niño?». Porque la mano del Señor estaba con él.
+  cierre: Palabra del Señor.

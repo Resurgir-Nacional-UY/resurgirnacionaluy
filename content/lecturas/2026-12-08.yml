@@ -1,0 +1,55 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-08'
+celebracion: Solemnidad de la Inmaculada Concepción de la Virgen María
+santo: ''
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-08.jpg
+imagen_credito: Giovanni Battista Tiepolo, «La Inmaculada Concepción» (1767-1769)
+titulo_miniatura: Inmaculada Concepción
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Génesis 3, 9-15. 20
+  presentacion: Lectura del libro del Génesis.
+  texto: |-
+    Pero el Señor Dios llamó al hombre y le dijo: «¿Dónde estás?». «Oí tus pasos por el jardín, respondió él, y tuve miedo porque estaba desnudo. Por eso me escondí». El replicó: «¿Y quién te dijo que estabas desnudo? ¿Acaso has comido del árbol que yo te prohibí?». El hombre respondió: «La mujer que pusiste a mi lado me dio el fruto y yo comí de él». El Señor Dios dijo a la mujer: «¿Cómo hiciste semejante cosa?». La mujer respondió: «La serpiente me sedujo y comí».
+
+    Y el Señor Dios dijo a la serpiente: «Por haber hecho esto, maldita seas entre todos los animales domésticos y entre todos los animales del campo. Te arrastrarás sobre tu vientre, y comerás polvo todos los días de tu vida. Pondré enemistad entre ti y la mujer, entre tu linaje y el suyo. El te aplastará la cabeza y tú le acecharás el talón». El hombre dio a su mujer el nombre de Eva, por ser ella la madre de todos los vivientes
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 98
+  estrofas: |-
+    Canten al Señor un canto nuevo,
+    porque él hizo maravillas:
+    su mano derecha y su santo brazo
+    le obtuvieron la victoria.
+
+    El Señor manifestó su victoria,
+    reveló su justicia a los ojos de las naciones:
+    se acordó de su amor y su fidelidad
+    en favor del pueblo de Israel.
+
+    Los confines de la tierra han contemplado
+    el triunfo de nuestro Dios.
+    Aclame al Señor toda la tierra,
+    prorrumpan en cantos jubilosos.
+- tipo: Segunda lectura
+  cita: Efesios 1, 3-6. 11-12
+  presentacion: Lectura de la carta del apóstol san Pablo a los Efesios.
+  texto: |-
+    Bendito sea Dios, el Padre de nuestro Señor Jesucristo, que nos ha bendecido en Cristo con toda clase de bienes espirituales en el cielo, y nos ha elegido en él, antes de la creación del mundo, para que fuéramos santos e irreprochables en su presencia, por el amor. El nos predestinó a ser sus hijos adoptivos por medio de Jesucristo, conforme al beneplácito de su voluntad, para alabanza de la gloria de su gracia, que nos dio en su Hijo muy querido.
+
+    En él hemos sido constituidos herederos, y destinados de antemano –según el previo designio del que realiza todas las cosas conforme a su voluntad– a ser aquellos que han puesto su esperanza en Cristo, para alabanza de su gloria.
+  cierre: Palabra de Dios.
+- tipo: Evangelio
+  cita: Lucas 1, 26-38
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    En el sexto mes, el ángel Gabriel fue enviado por Dios a una ciudad de Galilea, llamada Nazaret, a una virgen que estaba comprometida con un hombre perteneciente a la familia de David, llamado José. El nombre de la virgen era María. El Angel entró en su casa y la saludó, diciendo: «¡Alégrate!, llena de gracia, el Señor está contigo». Al oír estas palabras, ella quedó desconcertada y se preguntaba qué podía significar ese saludo.
+
+    Pero el Angel le dijo: «No temas, María, porque Dios te ha favorecido. Concebirás y darás a luz un hijo, y le pondrás por nombre Jesús; él será grande y será llamado Hijo del Altísimo. El Señor Dios le dará el trono de David, su padre, reinará sobre la casa de Jacob para siempre y su reino no tendrá fin». María dijo al Angel: «¿Cómo puede ser eso, si yo no tengo relaciones con ningún hombre?».
+
+    El Angel le respondió: «El Espíritu Santo descenderá sobre ti y el poder del Altísimo te cubrirá con su sombra. Por eso el niño será Santo y será llamado Hijo de Dios. También tu parienta Isabel concibió un hijo a pesar de su vejez, y la que era considerada estéril, ya se encuentra en su sexto mes, porque no hay nada imposible para Dios». María dijo entonces: «Yo soy la servidora del Señor, que se cumpla en mí lo que has dicho».Y el Angel se alejó.
+  cierre: Palabra del Señor.

@@ -1,0 +1,43 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-09'
+celebracion: Miércoles de la II semana de Adviento
+santo: 'Memoria libre: San Juan Diego Cuauhtlatoatzin'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-09.jpg
+imagen_credito: Carl Bloch, «Cristo consolador» (s. XIX)
+titulo_miniatura: Vengan a mí
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Isaías 40, 25-31
+  presentacion: Lectura del libro de Isaías.
+  texto: |-
+    «¿A quién me va a asemejar, para que yo me iguale a él?» dice el Santo. Levanten los ojos a lo alto y miren: ¿quién creó todos estos seres? El que hace salir a su ejército uno por uno y los llama a todos por su nombre: ¡su vigor es tan grande, tan firme su fuerza, que no falta ni uno solo! ¿Por qué dices Jacob, y lo repites tú, Israel: «Al Señor se le oculta mi camino y mi derecho pasa desapercibido a mi Dios?
+
+    ¿No lo saber acaso? ¿Nunca lo has escuchado? El Señor es un Dios eterno, él crea los confines de la tierra: no se fatiga ni se agota, su inteligencia es inescrutable. El fortalece al que está fatigado y acrecienta la fuerza del que no tiene vigor. Los jóvenes se fatigan y se agotan, los muchachos tropiezan y caen. Pero los que esperan en el Señor renuevan sus fuerzas, despliegan alas como las águilas; corren y no se agotan, avanzan y no se fatigan.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 103
+  estrofas: |-
+    Bendice al Señor, alma mía,
+    que todo mi ser bendiga a su santo Nombre;
+    bendice al Señor, alma mía,
+    y nunca olvides sus beneficios.
+
+    El perdona todas tus culpas
+    y cura todas tus dolencias;
+    rescata tu vida del sepulcro,
+    te corona de amor y de ternura;
+
+    El Señor es bondadoso y compasivo,
+    lento para enojarse y de gran misericordia;
+    no nos trata según nuestros pecados
+    ni nos paga conforme a nuestras culpas.
+- tipo: Evangelio
+  cita: Mateo 11, 28-30
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    Vengan a mí todos los que están afligidos y agobiados, y yo los aliviaré. Carguen sobre ustedes mi yugo y aprendan de mí, porque soy paciente y humilde de corazón, y así encontrarán alivio. Porque mi yugo es suave y mi carga liviana.
+  cierre: Palabra del Señor.

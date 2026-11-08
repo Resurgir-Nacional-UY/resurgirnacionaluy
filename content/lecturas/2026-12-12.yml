@@ -1,0 +1,43 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-12'
+celebracion: Sábado de la II semana de Adviento
+santo: 'Memoria libre: Nuestra Señora de Guadalupe'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-12.jpg
+imagen_credito: Anónimo novohispano, «Virgen de Guadalupe» (c. 1700)
+titulo_miniatura: Nuestra Señora de Guadalupe
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Eclesiástico 48, 1-4. 9-11b
+  presentacion: Lectura del libro del Eclesiástico.
+  texto: |-
+    Después surgió como un fuego el profeta Elías, su palabra quemaba como una antorcha. El atrajo el hambre sobre ellos y con su celo los diezmó. Por la palabra del Señor, cerró el cielo, y también hizo caer tres veces fuego de lo alto. ¡Qué glorioso te hiciste, Elías, con tus prodigios! ¿Quién puede jactarse de ser igual a ti? tú fuiste arrebatado en un torbellino de fuego por un carro con caballos de fuego.
+
+    De ti está escrito que en los castigos futuros aplacarás la ira antes que estalle, para hacer volver el corazón de los padres hacia los hijos y restablecer las tribus de Jacob. ¡Felices los que te verán y los que se durmieron en el amor!
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 80
+  estrofas: |-
+    Escucha, Pastor de Israel,
+    tú que tienes el trono sobre los querubines,
+    reafirma tu poder y ven a salvarnos.
+
+    Vuélvete, Dios de los ejércitos,
+    observa desde el cielo y mira:
+    ven a visitar tu vid,
+    la cepa que plantó tu mano,
+    el retoño que tú hiciste vigoroso.
+
+    Que tu mano sostenga al que está a tu derecha,
+    al hombre que tú fortaleciste,
+    y nunca nos apartaremos de ti:
+    devuélvenos la vida e invocaremos tu Nombre.
+- tipo: Evangelio
+  cita: Mateo 17, 10-13
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    Entonces los discípulos le preguntaron: «¿Por qué dicen los escribas que primero debe venir Elías?». El respondió: «Sí, Elías debe venir a poner en orden todas las cosas; pero les aseguro que Elías ya ha venido, y no lo han reconocido, sino que hicieron con él lo que quisieron. Y también harán padecer al Hijo del hombre». Los discípulos comprendieron entonces que Jesús se refería a Juan el Bautista.
+  cierre: Palabra del Señor.

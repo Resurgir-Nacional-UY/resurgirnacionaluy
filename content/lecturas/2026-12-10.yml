@@ -1,0 +1,47 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-10'
+celebracion: Jueves de la II semana de Adviento
+santo: 'Memoria libre: Bienaventurada Virgen María de Loreto'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-10.jpg
+imagen_credito: Geertgen tot Sint Jans, «San Juan Bautista en el desierto» (c. 1490)
+titulo_miniatura: No ha nacido nadie más grande que Juan
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Isaías 41, 13-20
+  presentacion: Lectura del libro de Isaías.
+  texto: |-
+    Porque yo, el Señor, soy tu Dios, el que te sostengo de la mano derecha y te digo: ¿No temas, yo vengo en tu ayuda». Tú eres un gusano, Jacob, eres una lombriz, Israel, pero no temas, yo vengo en tu ayuda –oráculo del Señor– y tu redentor es el Santo de Israel. Yo te convertiré en una trilladora, afilada, nueva, de doble filo: trillarás las montañas y las pulverizarás, y dejarás las colinas como rastrojo.
+
+    Las aventarás y el viento se las llevará, y las dispersará la tormenta; y tú te alegrarás en el Señor, te gloriarás en el Santo de Israel. Los pobres y los indigentes buscan agua en vano, su lengua está reseca por la sed. Pero yo, el Señor, les responderé, yo, el Dios de Israel, no los abandonaré. Haré brotar ríos en las cumbres desiertas y manantiales en medio de los valles; convertiré el desierto en estanques, la tierra árida en vertientes de agua.
+
+    Pondré en el desierto cedros, acacias, mirtos y olivos silvestres; plantaré en la estepa cipreses, junto con olmos y pinos, para que ellos vean y reconozcan, para que reflexionen y comprendan de una vez que la mano del Señor ha hecho esto, que el Santo de Israel lo ha creado.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 145
+  estrofas: |-
+    Te alabaré, Dios mío, a ti, el único Rey,
+    y bendeciré tu Nombre eternamente;
+    el Señor es bueno con todos
+    y tiene compasión de todas sus criaturas.
+
+    Que todas tus obras te den gracias, Señor,
+    y tus fieles te bendigan;
+    que anuncien la gloria de tu reino
+    y proclamen tu poder.
+
+    Así manifestarán a los hombres tu fuerza
+    y el glorioso esplendor de tu reino:
+    Tu reino es un reino eterno,
+    y tu dominio permanece para siempre.
+- tipo: Evangelio
+  cita: Mateo 11, 11-15
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    Les aseguro que no ha nacido ningún hombre más grande que Juan el Bautista; y sin embargo, el más pequeño en el Reino de los Cielos es más grande que él. Desde la época de Juan el Bautista hasta ahora, el Reino de los Cielos es combatido violentamente, y los violentos intentan arrebatarlo. Porque todos los Profetas, lo mismo que la Ley, han profetizado hasta Juan. Y si ustedes quieren crearme, él es aquel Elías que debe volver.
+
+    ¡El que tenga oídos, que oiga!
+  cierre: Palabra del Señor.

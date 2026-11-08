@@ -1,0 +1,46 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-18'
+celebracion: Viernes de la III semana de Adviento
+santo: ''
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-18.jpg
+imagen_credito: Philippe de Champaigne, «El sueño de san José» (c. 1642)
+titulo_miniatura: El sueño de José
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Jeremías 23, 5-8
+  presentacion: Lectura del libro de Jeremías.
+  texto: |-
+    Llegarán los días –oráculo del Señor– en que suscitaré para David un germen justo; él reinará como rey y será prudente, practicará la justicia y el derecho en el país. En sus días, Judá estará a salvo e Israel habitará seguro. Y se lo llamará con este nombre: «El Señor es nuestra justicia». Por eso, llegarán los días –oráculo del Señor– en que ya no se dirá: «Por la vida del Señor que hizo subir a los israelitas del país de Egipto»,
+
+    sino más bien: «por la vida del Señor que hizo subir a los descendientes de la casa de Israel, y los hizo llegar del país del Norte y de todos los países adonde los había expulsado, para que habiten en su propio suelo».
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 72
+  estrofas: |-
+    Oh Dios, concede tu justicia al rey
+    y tu rectitud al descendiente de reyes,
+    para que gobierne a tu pueblo con justicia
+    y a tus pobres con rectitud.
+
+    Porque él librará al pobre que suplica
+    y al humilde que está desamparado.
+    Tendrá compasión del débil y del pobre,
+    y salvará la vida de los indigentes.
+
+    Bendito sea el Señor, Dios de Israel,
+    el único que hace maravillas.
+    Sea bendito eternamente su Nombre glorioso
+    y que su gloria llene toda la tierra.
+    ¡Amén! ¡Amén!
+- tipo: Evangelio
+  cita: Mateo 1, 18-24
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    Este fue el origen de Jesucristo: María, su madre, estaba comprometida con José y, cuando todavía no han vivido juntos, concibió un hijo por obra del Espíritu Santo. José, su esposo, que era un hombre justo y no quería denunciarla públicamente, resolvió abandonarla en secreto. Mientras pensaba en esto, el Angel del Señor se le apareció en sueños y le dijo: «José, hijo de David, no temas recibir a María, tu esposa, porque lo que ha sido engendrado en ella proviene del Espíritu Santo.
+
+    Ella dará a luz un hijo, a quien pondrás el nombre de Jesús, porque él salvará a su Pueblo de todos sus pecados». Todo esto sucedió para que se cumpliera lo que el Señor había anunciado por el Profeta: "La Virgen concebirá y dará a luz un hijo a quien pondrán el nombre de Emanuel", que traducido significa: «Dios con nosotros». Al despertar, José hizo lo que el Angel del Señor le había ordenado: llevó a María a su casa,
+  cierre: Palabra del Señor.

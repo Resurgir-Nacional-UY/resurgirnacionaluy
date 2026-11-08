@@ -1,0 +1,46 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-26'
+celebracion: Día II de la Octava de Navidad
+santo: 'Fiesta: San Esteban, protomártir'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-26.jpg
+imagen_credito: Rembrandt, «La lapidación de san Esteban» (1625)
+titulo_miniatura: San Esteban, protomártir
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Hechos de los Apóstoles 6, 8-10; 7, 54-59
+  presentacion: Lectura del libro de los Hechos de los Apóstoles.
+  texto: |-
+    Esteban, lleno de gracia y de poder, hacía grandes prodigios y signos en el pueblo. Algunos miembros de la sinagoga llamada «de los Libertos», como también otros, originarios de Cirene, de Alejandría, de Cilicia y de la provincia de Asia, se presentaron para discutir con él. Pero como no encontraban argumentos, frente a la sabiduría y al espíritu que se manifestaba en su palabra, Al oír esto, se enfurecieron y rechinaban los dientes contra él.
+
+    Esteban, lleno del Espíritu Santo y con los ojos fijos en el cielo, vio la gloria de Dios, y a Jesús, que estaba de pie a la derecha de Dios. Entonces exclamó: «Veo el cielo abierto y al Hijo del hombre de pie a la derecha de Dios». Ellos comenzaron a vociferar y, tapándose los oídos, se precipitaron sobre él como un solo hombre, y arrastrándolo fuera de la ciudad, lo apedrearon. Los testigos se quitaron los mantos, confiándolos a un joven llamado Saulo.
+
+    Mientras lo apedreaban, Esteban oraba, diciendo: «Señor Jesús, recibe mi espíritu».
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 31
+  estrofas: |-
+    Sé para mí una roca protectora,
+    un baluarte donde me encuentre a salvo,
+    porque tú eres mi Roca y mi baluarte:
+    por tu Nombre, guíame y condúceme.
+
+    Yo pongo mi vida en tus manos:
+    tú me rescatarás, Señor, Dios fiel.
+    ¡Tu amor será mi gozo y mi alegría!
+
+    Líbrame del poder de mis enemigos
+    y de aquellos que me persiguen.
+    Que brille tu rostro sobre tu servidor,
+    sálvame por tu misericordia.
+- tipo: Evangelio
+  cita: Mateo 10, 17-22
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    Cuídense de los hombres, porque los entregarán a los tribunales y los azotarán en las sinagogas. A causa de mí, serán llevados ante gobernadores y reyes, para dar testimonio delante de ellos y de los paganos. Cuando los entreguen, no se preocupen de cómo van a hablar o qué van a decir: lo que deban decir se les dará a conocer en ese momento, porque no serán ustedes los que hablarán, sino que el Espíritu de su Padre hablará en ustedes.
+
+    El hermano entregará a su hermano para que sea condenado a muerte, y el padre a su hijo; los hijos se rebelarán contra sus padres y los harán morir. Ustedes serán odiados por todos a causa de mi Nombre, pero aquel que persevere hasta el fin se salvará.
+  cierre: Palabra del Señor.

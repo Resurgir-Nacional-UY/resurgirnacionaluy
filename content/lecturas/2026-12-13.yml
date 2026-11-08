@@ -1,0 +1,55 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-13'
+celebracion: III Domingo de Adviento
+santo: ''
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-13.jpg
+imagen_credito: Tiziano, «San Juan Bautista» (c. 1540)
+titulo_miniatura: III Domingo de Adviento
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Isaías 61, 1-2a. 10-11
+  presentacion: Lectura del libro de Isaías.
+  texto: |-
+    El espíritu del Señor está sobre mí, porque el Señor me ha ungido. El me envió a llevar la buena noticia a los pobres, a vender los corazones heridos, a proclamar la liberación a los cautivos y la libertad a los prisioneros, a proclamar un año de gracia del Señor. Yo desbordo de alegría en el Señor, mi alma se regocija en mi Dios. Porque él me vistió con las vestiduras de la salvación y me envolvió con el manto de la justicia, como un esposo que se ajusta la diadema y como una esposa que se adorna con sus joyas.
+
+    Porque así como la tierra da sus brotes y un jardín hace germinar lo sembrado, así el Señor hará germinar la justicia y la alabanza ante todas las naciones.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Lucas 1, 46-50. 53-54
+  estrofas: |-
+    Mi alma canta la grandeza del Señor,
+    y mi espíritu se estremece de gozo en Dios, mi salvador,
+    porque el miró con bondad la pequeñez de tu servidora.
+    En adelante todas las generaciones me llamarán feliz,
+
+    porque el Todopoderoso he hecho en mí grandes cosas:
+    ¡su Nombre es santo!
+    Su misericordia se extiende de generación en generación
+    sobre aquellos que lo temen.
+
+    Colmó de bienes a los hambrientos
+    y despidió a los ricos con las manos vacías.
+    Socorrió a Israel, su servidor,
+    acordándose de su misericordia.
+- tipo: Segunda lectura
+  cita: 1 Tesalonicenses 5, 16-24
+  presentacion: Lectura de la primera carta del apóstol san Pablo a los Tesalonicenses.
+  texto: |-
+    Estén siempre alegres. Oren sin cesar. Den gracias a Dios en toda ocasión: esto es lo que Dios quiere de todos ustedes, en Cristo Jesús. No extingan la acción del Espíritu; no desprecien las profecías; examínenlo todo y quédense con lo bueno. Cuídense del mal en todas sus formas. Que el Dios de la paz los santifique plenamente, para que ustedes se conserven irreprochables en todo su ser –espíritu, alma y cuerpo– hasta la Venida de nuestro Señor Jesucristo.
+
+    El que los llama es fiel, y así lo hará.
+  cierre: Palabra de Dios.
+- tipo: Evangelio
+  cita: Juan 1, 6-8. 19-28
+  presentacion: ✠ Lectura del santo Evangelio según san Juan.
+  texto: |-
+    Apareció un hombre enviado por Dios, que se llamaba Juan. Vino como testigo, para dar testimonio de la luz, para que todos creyeran por medio de él. El no era luz, sino el testigo de la luz. Este es el testimonio que dio Juan, cuando los judíos enviaron sacerdotes y levitas desde Jerusalén, para preguntarle: «¿Quién eres tú?». El confesó y no lo ocultó, sino que dijo claramente: «Yo no soy el Mesías».
+
+    «¿Quién eres, entonces?», le preguntaron: «¿Eres Elías?». Juan dijo: «No». «¿Eres el Profeta?». «Tampoco», respondió. Ellos insistieron: «¿Quién eres, para que podamos dar una respuesta a los que nos han enviado? ¿Qué dices de ti mismo?» Y él les dijo: «Yo soy una voz que grita en el desierto: Allanen el camino del Señor, como dijo el profeta Isaías». Algunos de los enviados eran fariseos, y volvieron a preguntarle: «¿Por qué bautizas, entonces, si tú no eres el Mesías, ni Elías, ni el Profeta?».
+
+    Juan respondió: «Yo bautizo con agua, pero en medio de ustedes hay alguien al que ustedes no conocen: él viene después de mí, y yo no soy digno de desatar la correa de su sandalia». Todo esto sucedió en Betania, al otro lado del Jordán donde Juan bautizaba.
+  cierre: Palabra del Señor.

@@ -1,0 +1,53 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-01'
+celebracion: Martes de la I semana de Adviento
+santo: ''
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-01.jpg
+imagen_credito: Círculo de Geertgen tot Sint Jans, «El árbol de Jesé» (c. 1500)
+titulo_miniatura: El tronco de Jesé
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Isaías 11, 1-10
+  presentacion: Lectura del libro de Isaías.
+  texto: |-
+    Saldrá una rama del tronco de Jesé y un retoño brotará de sus raíces. Sobre él reposará el espíritu del Señor: espíritu de sabiduría y de inteligencia, espíritu de consejo y de fortaleza, espíritu de ciencia y de temor del Señor –y lo inspirará el temor del Señor–. El no juzgará según las apariencias ni decidirá por lo que oiga decir: juzgará con justicia a los débiles y decidirá con rectitud para los pobres de país; herirá al violento con la vara de su boca y con el soplo de sus labios hará morir al malvado.
+
+    La justicia ceñirá su cintura y la fidelidad ceñirá sus caderas. El lobo habitará con el cordero y el leopardo se recostará junto al cabrito; el ternero y el cachorro de león pacerán juntos, y un niño pequeño los conducirá, la vaca y la osa vivirán en compañía, sus crías se recostarán juntas, y el león comerá paja lo mismo que el buey. El niño de pecho jugará sobre el agujero de la cobra, y en la cueva de la víbora, meterá la mano el niño apenas destetado.
+
+    No se hará daño ni estragos en toda mi Montaña santa, porque el conocimiento del Señor llenará la tierra como las aguas cubren el mar. Aquel día, la raíz de Jesé se erigirá como emblema para los pueblos: las naciones la buscarán y la gloria será su morada.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 72
+  estrofas: |-
+    Oh Dios, concede tu justicia al rey
+    y tu rectitud al descendiente de reyes,
+    para que gobierne a tu pueblo con justicia
+    y a tus pobres con rectitud.
+
+    Que en sus días florezca la justicia
+    y abunde la paz, mientras dure la luna;
+    que domine de un mar hasta el otro,
+    y desde el Río hasta los confines de la tierra.
+
+    Porque él librará al pobre que suplica
+    y al humilde que está desamparado.
+    Tendrá compasión del débil y del pobre,
+    y salvará la vida de los indigentes.
+
+    Que perdure su nombre para siempre
+    y su linaje permanezca como el sol;
+    que él sea la bendición de todos los pueblos
+    y todas las naciones lo proclamen feliz.
+- tipo: Evangelio
+  cita: Lucas 10, 21-24
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    En aquel momento Jesús se estremeció de gozo, movido por el Espíritu Santo, y dijo: «Te alabo, Padre, Señor del cielo y de la tierra, por haber ocultado estas cosas a los sabios y a los prudentes y haberlas revelado a los pequeños. Sí, Padre, porque así lo has querido. Todo me ha sido dado por mi Padre, y nadie sabe quién es el Hijo, sino el Padre, como nadie sabe quién es el Padre, sino el Hijo y aquel a quien el Hijo se lo quiera revelar».
+
+    Después, volviéndose hacia sus discípulos, Jesús les dijo a ellos solos: «¡Felices los ojos que ven lo que ustedes ven! ¡Les aseguro que muchos profetas y reyes quisieron ver lo que ustedes ven y no lo vieron, oír lo que ustedes oyen y no lo oyeron!».
+  cierre: Palabra del Señor.
+imagen_foco: 0.0

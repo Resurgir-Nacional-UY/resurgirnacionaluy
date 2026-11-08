@@ -1,0 +1,49 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-31'
+celebracion: Día VII de la Octava de Navidad
+santo: 'Memoria libre: San Silvestre I, papa'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-31.jpg
+imagen_credito: Diego Velázquez, «San Juan Evangelista en la isla de Patmos» (c. 1618)
+titulo_miniatura: La Palabra se hizo carne
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: 1 Juan 2, 18-21
+  presentacion: Lectura de la primera carta del apóstol san Juan.
+  texto: |-
+    Hijos míos, ha llegado la última hora. Ustedes oyeron decir que vendría el Anticristo; en realidad, ya han aparecido muchos anticristos, y por eso sabemos que ha llegado la última hora. Ellos salieron de entre nosotros, sin embargo, no eran de los nuestros. Si lo hubieran sido, habrían permanecido con nosotros. Pero debía ponerse de manifiesto que no todos son de los nuestros. Ustedes recibieron la unción del que es Santo, y todos tienen el verdadero conocimiento.
+
+    Les he escrito, no porque ustedes ignoren la verdad, sino porque la conocen, y porque ninguna mentira procede de la verdad.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 96
+  estrofas: |-
+    Canten al Señor un canto nuevo,
+    cante al Señor toda la tierra;
+    canten al Señor, bendigan su Nombre,
+    día tras día, proclamen su victoria.
+
+    Alégrese el cielo y exulte la tierra,
+    resuene el mar y todo lo que hay en él;
+    regocíjese el campo con todos sus frutos,
+    griten de gozo los árboles del bosque.
+
+    Griten de gozo delante del Señor,
+    porque él viene a gobernar la tierra:
+    él gobernará al mundo con justicia,
+    y a los pueblos con su verdad.
+- tipo: Evangelio
+  cita: Juan 1, 1-18
+  presentacion: ✠ Lectura del santo Evangelio según san Juan.
+  texto: |-
+    Al principio existía la Palabra, y la Palabra estaba junto a Dios, y la Palabra era Dios. Al principio estaba junto a Dios. Todas las cosas fueron hechas por medio de la Palabra y sin ella no se hizo nada de todo lo que existe. En ella estaba la vida, y la vida era la luz de los hombres. La luz brilla en las tinieblas, y las tinieblas no la percibieron. Apareció un hombre enviado por Dios, que se llamaba Juan.
+
+    Vino como testigo, para dar testimonio de la luz, para que todos creyeran por medio de él. El no era luz, sino el testigo de la luz. La Palabra era la luz verdadera que, al venir a este mundo, ilumina a todo hombre. Ella estaba en el mundo, y el mundo fue hecho por medio de ella, y el mundo no la conoció. Vino a los suyos, y los suyos no la recibieron. Pero a todos los que la recibieron, a los que creen en su Nombre, les dio el poder de llegar a ser hijos de Dios.
+
+    Ellos no nacieron de la sangre, ni por obra de la carne, ni de la voluntad del hombre, sino que fueron engendrados por Dios. Y la Palabra se hizo carne y habitó entre nosotros. Y nosotros hemos visto su gloria, la gloria que recibe del Padre como Hijo único, lleno de gracia y de verdad. Juan da testimonio de él, al declarar: «Este es aquel del que yo dije: El que viene después de mí me ha precedido, porque existía antes que yo».
+
+    De su plenitud, todos nosotros hemos participado y hemos recibido gracia sobre gracia: porque la Ley fue dada por medio de Moisés, pero la gracia y la verdad nos han llegado por Jesucristo. Nadie ha visto jamás a Dios; el que lo ha revelado es el Hijo único, que está en el seno del Padre.
+  cierre: Palabra del Señor.

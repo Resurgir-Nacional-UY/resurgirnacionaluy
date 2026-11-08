@@ -1,0 +1,62 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-27'
+celebracion: Fiesta de la Sagrada Familia de Jesús, María y José
+santo: ''
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-27.jpg
+imagen_credito: Bartolomé Esteban Murillo, «La Sagrada Familia del pajarito» (c. 1650)
+titulo_miniatura: La Sagrada Familia
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Eclesiástico 3, 2-6. 12-14
+  presentacion: Lectura del libro del Eclesiástico.
+  texto: |-
+    Porque el Señor quiere que el padre sea respetado por sus hijos y confirmó el derecho de la madre sobre ellos. El que honra a su padre expía sus pecados y el que respeta a su madre es como quien acumula un tesoro. El que honra a su padre encontrará alegría en sus hijos y cuando ore, será escuchado. El que respeta a su padre tendrá larga vida y el que obedece al Señor da tranquilidad a su madre.
+
+    Hijo mío, socorre a tu padre en su vejez y no le causes tristeza mientras viva. Aunque pierda su lucidez, sé indulgente con él; no lo desprecies, tú que estás en pleno vigor. La ayuda prestada a un padre no caerá en el olvido y te servirá de reparación por tus pecados.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 128
+  estrofas: |-
+    ¡Feliz el que teme al Señor
+    y sigue sus caminos!
+    Comerás del fruto de tu trabajo,
+    serás feliz y todo te irá bien.
+
+    Tu esposa será como una vid fecunda
+    en el seno de tu hogar;
+    tus hijos, como retoños de olivo
+    alrededor de tu mesa.
+
+    ¡Así será bendecido
+    el hombre que teme al Señor!
+    ¡Que el Señor te bendiga desde Sión
+    todos los días de tu vida:
+    que contemples la paz de Jerusalén.
+- tipo: Segunda lectura
+  cita: Colosenses 3, 12-21
+  presentacion: Lectura de la carta del apóstol san Pablo a los Colosenses.
+  texto: |-
+    Como elegidos de Dios, sus santos y amados, revístanse de sentimientos de profunda compasión. Practiquen la benevolencia, la humildad, la dulzura, la paciencia. Sopórtense los unos a los otros, y perdónense mutuamente siempre que alguien tenga motivo de queja contra otro. El Señor los ha perdonado: hagan ustedes lo mismo. Sobre todo, revístanse del amor, que es el vínculo de la perfección.
+
+    Que la paz de Cristo reine en sus corazones: esa paz a la que han sido llamados, porque formamos un solo Cuerpo. Y vivan en la acción de gracias. Que la Palabra de Cristo resida en ustedes con toda su riqueza. Instrúyanse en la verdadera sabiduría, corrigiéndose los unos a los otros. Canten a Dios con gratitud y de todo corazón salmos, himnos y cantos inspirados. Todo lo que puedan decir o realizar, háganlo siempre en nombre del Señor Jesús, dando gracias por él a Dios Padre.
+
+    Mujeres, respeten a su marido, como corresponde a los discípulos del Señor. Maridos, amen a su mujer, y no le amarguen la vida. Hijos, obedezcan siempre a sus padres, porque esto es agradable al Señor. Padres, no exasperen a sus hijos, para que ellos no se desanimen.
+  cierre: Palabra de Dios.
+- tipo: Evangelio
+  cita: Lucas 2, 22-40
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Cuando llegó el día fijado por la Ley de Moisés para la purificación, llevaron al niño a Jerusalén para presentarlo al Señor, como está escrito en la Ley: "Todo varón primogénito será consagrado al Señor". También debían ofrecer un sacrificio un par de tórtolas o de pichones de paloma, como ordena la Ley del Señor. Vivía entonces en Jerusalén un hombre llamado Simeón, que era justo y piadoso, y esperaba el consuelo de Israel. El Espíritu Santo estaba en él y le había revelado que no moriría antes de ver al Mesías del Señor.
+
+    Conducido por el mismo Espíritu, fue al Templo, y cuando los padres de Jesús llevaron al niño para cumplir con él las prescripciones de la Ley, Angel lo tomó en sus brazos y alabó a Dios, diciendo: «Ahora, Señor, puedes dejar que tu servidor muera en paz, como lo has prometido, porque mis ojos han visto la salvación que preparaste delante de todos los pueblos: luz para iluminar a las naciones paganas y gloria de tu pueblo Israel».
+
+    Su padre y su madre estaban admirados por lo que oían decir de él. Simeón, después de bendecirlos, dijo a María, la madre: «Este niño será causa de caída y de elevación para muchos en Israel; será signo de contradicción, y a ti misma una espada te atravesará el corazón. Así se manifestarán claramente los pensamientos íntimos de muchos». Había también allí una profetisa llamada Ana, hija de Fanuel, de la familia de Aser, mujer ya entrada en años, que, casa en su juventud, había vivido siete años con su marido.
+
+    Desde entonces había permanecido viuda, y tenía ochenta y cuatro años. No se apartaba del Templo, sirviendo a Dios noche y día con ayunos y oraciones. Se presentó en ese mismo momento y se puso a dar gracias a Dios. Y hablaba acerca del niño a todos los que esperaban la redención de Jerusalén. Después de cumplir todo lo que ordenaba la Ley del Señor, volvieron a su ciudad de Nazaret, en Galilea.
+
+    El niño iba creciendo y se fortalecía, lleno de sabiduría, y la gracia de Dios estaba con él.
+  cierre: Palabra del Señor.

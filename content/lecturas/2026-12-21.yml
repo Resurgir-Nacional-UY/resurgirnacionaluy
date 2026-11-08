@@ -1,0 +1,45 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-21'
+celebracion: Lunes de la IV semana de Adviento
+santo: 'Memoria libre: San Pedro Canisio, presbítero y doctor de la Iglesia'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-21.jpg
+imagen_credito: Domenico Ghirlandaio, «La Visitación» (1491)
+titulo_miniatura: La Visitación
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Cantar de los Cantares 2, 8-14
+  presentacion: Lectura del libro del Cantar de los Cantares.
+  texto: |-
+    ¡La voz de mi amado! Ahí viene, saltando por las montañas, brincando por las colinas. Mi amado es como una gacela, como un ciervo joven. Ahí está: se detiene detrás de nuestro muro; mira por la ventana, espía por el enrejado. Habla mi amado, y me dice: «¡Levántate, amada mía, y ven, hermosa mía! Porque ya pasó el invierno, cesaron y se fueron las lluvias. Aparecieron las flores sobre la tierra, llegó el tiempo de las canciones, y se oye en nuestra tierra el arrullo de la tórtola.
+
+    La higuera dio sus primeros frutos y las viñas en flor exhalan su perfume. ¡Levántate, amada mía, y ven, hermosa mía! Paloma mía, que anidas en las grietas de las rocas, en lugares escarpados, muéstrame tu rostro, déjame oír tu voz; porque tu voz es suave y es hermoso tu semblante».
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 33
+  estrofas: |-
+    Alaben al Señor con la cítara,
+    toquen en su honor el arpa de diez cuerdas;
+    entonen para él un canto nuevo,
+    toquen con arte, profiriendo aclamaciones.
+
+    pero el designio del Señor permanece para siempre,
+    y sus planes, a lo largo de las generaciones.
+    ¡Feliz la nación cuyo Dios es el Señor,
+    el pueblo que él se eligió como herencia!
+
+    Nuestra alma espera en el Señor;
+    él es nuestra ayuda y nuestro escudo.
+    Nuestro corazón se regocija en él:
+    nosotros confiamos en su santo Nombre.
+- tipo: Evangelio
+  cita: Lucas 1, 39-45
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    En aquellos días, María partió y fue sin demora a un pueblo de la montaña de Judá. Entró en la casa de Zacarías y saludó a Isabel. Apenas esta oyó el saludo de María, el niño saltó de alegría en su seno, e Isabel, llena del Espíritu Santo, exclamó: «¡Tú eres bendita entre todas las mujeres y bendito es el fruto de tu vientre! ¿Quién soy yo, para que la madre de mi Señor venga a visitarme?
+
+    Apenas oí tu saludo, el niño saltó de alegría en mi seno. Feliz de ti por haber creído que se cumplirá lo que te fue anunciado de parte del Señor».
+  cierre: Palabra del Señor.

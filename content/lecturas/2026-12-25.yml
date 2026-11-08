@@ -1,0 +1,62 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-25'
+celebracion: Solemnidad de la Natividad del Señor
+santo: Misa del día
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-25.jpg
+imagen_credito: Gerard van Honthorst, «Adoración de los pastores» (1622)
+titulo_miniatura: Natividad del Señor
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Isaías 52, 7-10
+  presentacion: Lectura del libro de Isaías.
+  texto: |-
+    ¡Qué hermosos son sobre las montañas los pasos del que trae la buena noticia, del que proclama la paz, del que anuncia la felicidad, del que proclama la salvación, y dice a Sión: «¡Tu Dios reina!». ¡Escucha! Tus centinelas levantan la voz, gritan todos juntos de alegría, porque ellos ven con sus propios ojos el regreso del Señor a Sión, ¡Prorrumpan en gritos de alegría, ruinas de Jerusalén, porque el Señor consuela a su Pueblo, él redime a Jerusalén!
+
+    El Señor desnuda su santo brazo a la vista de todas las naciones, verán la salvación de nuestro Dios.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 98
+  estrofas: |-
+    Canten al Señor un canto nuevo,
+    porque él hizo maravillas:
+    su mano derecha y su santo brazo
+    le obtuvieron la victoria.
+
+    El Señor manifestó su victoria,
+    reveló su justicia a los ojos de las naciones:
+    se acordó de su amor y su fidelidad
+    en favor del pueblo de Israel.
+
+    Los confines de la tierra han contemplado
+    el triunfo de nuestro Dios.
+    Aclame al Señor toda la tierra,
+    prorrumpan en cantos jubilosos.
+
+    Canten al Señor con el arpa
+    y al son de instrumentos musicales;
+    con clarines y sonidos de trompeta
+    aclamen al Señor, que es Rey.
+- tipo: Segunda lectura
+  cita: Hebreos 1, 1-6
+  presentacion: Lectura de la carta a los Hebreos.
+  texto: |-
+    Después de haber hablado antiguamente a nuestros padres por medio de los Profetas, en muchas ocasiones y de diversas maneras, ahora, en este tiempo final, Dios nos habló por medio de su Hijo, a quien constituyó heredero de todas las cosas y por quien hizo el mundo. El es el resplandor de su gloria y la impronta de su ser. El sostiene el universo con su Palabra poderosa, y después de realizar la purificación de los pecados, se sentó a la derecha del trono de Dios en lo más alto del cielo.
+
+    Así llegó a ser tan superior a los ángeles, cuanto incomparablemente mayor que el de ellos es el Nombre que recibió en herencia. ¿Acaso dijo Dios alguna vez a un ángel: "Tú eres mi Hijo, yo te he engendrado hoy"? ¿Y de qué ángel dijo: "Yo seré un padre para él y él será para mí un hijo"? Y al introducir a su Primogénito en el mundo, Dios nos dice: "Que todos los ángeles de Dios lo adoren".
+  cierre: Palabra de Dios.
+- tipo: Evangelio
+  cita: Juan 1, 1-18
+  presentacion: ✠ Lectura del santo Evangelio según san Juan.
+  texto: |-
+    Al principio existía la Palabra, y la Palabra estaba junto a Dios, y la Palabra era Dios. Al principio estaba junto a Dios. Todas las cosas fueron hechas por medio de la Palabra y sin ella no se hizo nada de todo lo que existe. En ella estaba la vida, y la vida era la luz de los hombres. La luz brilla en las tinieblas, y las tinieblas no la percibieron. Apareció un hombre enviado por Dios, que se llamaba Juan.
+
+    Vino como testigo, para dar testimonio de la luz, para que todos creyeran por medio de él. El no era luz, sino el testigo de la luz. La Palabra era la luz verdadera que, al venir a este mundo, ilumina a todo hombre. Ella estaba en el mundo, y el mundo fue hecho por medio de ella, y el mundo no la conoció. Vino a los suyos, y los suyos no la recibieron. Pero a todos los que la recibieron, a los que creen en su Nombre, les dio el poder de llegar a ser hijos de Dios.
+
+    Ellos no nacieron de la sangre, ni por obra de la carne, ni de la voluntad del hombre, sino que fueron engendrados por Dios. Y la Palabra se hizo carne y habitó entre nosotros. Y nosotros hemos visto su gloria, la gloria que recibe del Padre como Hijo único, lleno de gracia y de verdad. Juan da testimonio de él, al declarar: «Este es aquel del que yo dije: El que viene después de mí me ha precedido, porque existía antes que yo».
+
+    De su plenitud, todos nosotros hemos participado y hemos recibido gracia sobre gracia: porque la Ley fue dada por medio de Moisés, pero la gracia y la verdad nos han llegado por Jesucristo. Nadie ha visto jamás a Dios; el que lo ha revelado es el Hijo único, que está en el seno del Padre.
+  cierre: Palabra del Señor.

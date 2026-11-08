@@ -1,0 +1,58 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-06'
+celebracion: II Domingo de Adviento
+santo: ''
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-06.jpg
+imagen_credito: Pieter Brueghel el Viejo, «La predicación de san Juan Bautista» (1566)
+titulo_miniatura: II Domingo de Adviento
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Isaías 40, 1-5. 9-11
+  presentacion: Lectura del libro de Isaías.
+  texto: |-
+    ¡Consuelen, consuelen a mi pueblo, dice su Dios! Hablen al corazón de Jerusalén y anúncienle que su tiempo de servicio se ha cumplido, que su culpa está paga, que ha recibido de la mano del Señor doble castigo por todos sus pecados. Una voz proclama: ¡Preparen en el desierto el camino del Señor, tracen en la estepa un sendero para nuestro Dios! ¡Que se rellenen todos los valles y se aplanen todas las montañas y colinas; que las quebradas se conviertan en llanuras y los terrenos escarpados, en planicies!
+
+    Entonces se revelará la gloria del Señor y todos los hombres la verán juntamente, porque ha hablado la boca del Señor. Súbete a una montaña elevada, tú que llevas la buena noticia a Sión; levanta con fuerza tu voz, tú que llevas la buena noticia a Jerusalén. Levántala sin temor, di a las ciudades de Judá: «¡Aquí está tu Dios!». Ya llega el Señor con poder y su brazo le asegura el dominio: el premio de su victoria lo acompaña y su recompensa lo precede.
+
+    Como un pastor, él apacienta su rebaño, lo reúne con su brazo; lleva sobre su pecho a los corderos y guía con cuidado a las que han dado a luz
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 85
+  estrofas: |-
+    Voy a proclamar lo que dice el Señor:
+    el Señor promete la paz,
+    la paz para su pueblo y sus amigos,
+    Su salvación está muy cerca de sus fieles,
+    y la Gloria habitará en nuestra tierra.
+
+    El Amor y la Verdad se encontrarán,
+    la Justicia y la Paz se abrazarán;
+    la Verdad brotará de la tierra
+    y la Justicia mirará desde el cielo.
+
+    El mismo Señor nos dará sus bienes
+    y nuestra tierra producirá sus frutos.
+    La Justicia irá delante de él,
+    y la Paz, sobre la huella de sus pasos.
+- tipo: Segunda lectura
+  cita: 2 Pedro 3, 8-14
+  presentacion: Lectura de la segunda carta del apóstol san Pedro.
+  texto: |-
+    Pero ustedes, queridos hermanos, no deben ignorar que, delante del Señor, un día es como mil años y mil años como un día. El señor no tarda en cumplir lo que ha prometido, como algunos se imaginan, sino que tiene paciencia con ustedes porque no quiere que nadie perezca, sino que todos se conviertan. Sin embargo, el Día del Señor, llegará como un ladrón, y ese día, los cielos desaparecerán estrepitosamente; los elementos serán desintegrados por el fuego, y la tierra, con todo lo que hay en ella, será consumida.
+
+    Ya que todas las cosas se desintegrarán de esa manera, ¡qué santa y piadosa debe ser la conducta de ustedes, esperando y acelerando la venida del Día del Señor! Entonces se consumirán los cielos y los elementos quedarán fundidos por el fuego. Pero nosotros, de acuerdo con la promesa del Señor, esperamos un cielo nuevo y una tierra nueva donde habitará la justicia. Por eso, queridos hermanos, mientras esperan esto, procuren vivir de tal manera que él los encuentre en paz, sin mancha ni reproche.
+  cierre: Palabra de Dios.
+- tipo: Evangelio
+  cita: Marcos 1, 1-8
+  presentacion: ✠ Lectura del santo Evangelio según san Marcos.
+  texto: |-
+    Comienzo de la Buena Noticia de Jesús, Mesías, Hijo de Dios. Como está escrito en el libro del profeta Isaías: "Mira, yo envío a mi mensajero delante de ti para prepararte el camino. Una voz grita en el desierto: Preparen el camino del Señor, allanen sus senderos", así se presentó Juan el Bautista en el desierto, proclamando un bautismo de conversión para el perdón de los pecados.
+
+    Toda la gente de Judea y todos los habitantes de Jerusalén acudían a él, y se hacían bautizar en las aguas del Jordán, confesando sus pecados. Juan estaba vestido con una piel de camello y un cinturón de cuero, y se alimentaba con langostas y miel silvestre. Y predicaba, diciendo: «Detrás de mi vendrá el que es más poderoso que yo, y yo ni siquiera soy digno de ponerme a sus pies para desatar la correa de sus sandalias.
+
+    Yo los he bautizado a ustedes con agua, pero él los bautizará con el Espíritu Santo».
+  cierre: Palabra del Señor.

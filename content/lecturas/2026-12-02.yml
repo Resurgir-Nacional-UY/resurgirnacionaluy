@@ -1,0 +1,55 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-02'
+celebracion: Miércoles de la I semana de Adviento
+santo: ''
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-02.jpg
+imagen_credito: Tintoretto, «El milagro de los panes y los peces» (detalle, 1579-1581)
+titulo_miniatura: Jesús multiplica los panes
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Isaías 25, 6-10a
+  presentacion: Lectura del libro de Isaías.
+  texto: |-
+    El Señor de los ejércitos ofrecerá a todos los pueblos sobre esta montaña un banquete de manjares suculentos, un banquete de vinos añejados, de manjares suculentos, medulosos, de vinos añejados, decantados. El arrancará sobre esta montaña el velo que cubre a todos los pueblos, el paño tendido sobre todas las naciones. Destruirá la Muerte para siempre; el Señor enjugará las lágrimas de todos los rostros, y borrará sobre toda la tierra el oprobio de su pueblo, porque lo ha dicho él, el Señor.
+
+    Y se dirá en aquel día: «Ahí está nuestro Dios, de quien esperábamos la salvación: es el Señor, en quien nosotros esperábamos; ¡alegrémonos y regocijémonos de su salvación!». Porque la mano del Señor se posará sobre esta montaña.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 23
+  estrofas: |-
+    El Señor es mi pastor,
+    nada me puede faltar.
+    El me hace descansar en verdes praderas,
+    me conduce a las aguas tranquilas
+    y repara mis fuerzas;
+
+    me guía por el recto sendero,
+    por amor de su Nombre.
+    Aunque cruce por oscuras quebradas,
+    no temeré ningún mal,
+    porque tú estás conmigo:
+    tu vara y tu bastón me infunden confianza.
+
+    Tú preparas ante mí una mesa,
+    frente a mis enemigos;
+    unges con óleo mi cabeza
+    y mi copa rebosa.
+
+    Tu bondad y tu gracia me acompañan
+    a lo largo de mi vida;
+    y habitaré en la Casa del Señor,
+    por muy largo tiempo.
+- tipo: Evangelio
+  cita: Mateo 15, 29-37
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    Desde allí, Jesús llegó a orillas del mar de Galilea y, subiendo a la montaña, se sentó. Una gran multitud acudió a él, llevando paralíticos, lisiados, ciegos, mudos y muchos otros enfermos. Los pusieron a sus pies y él los curó. La multitud se admiraba al ver que los mudos hablaban, los inválidos quedaban curados, los paralíticos caminaban y los ciegos recobraban la vista. Y todos glorificaban al Dios de Israel.
+
+    Entonces Jesús llamó a sus discípulos y les dijo: «Me da pena esta multitud, porque hace tres días que están conmigo y no tienen qué comer. No quiero despedirlos en ayunas, porque podrían desfallecer en el camino». Los discípulos le dijeron: «¿Y dónde podríamos conseguir en este lugar despoblado bastante cantidad de pan para saciar a tanta gente?». Jesús les dijo: «¿Cuántos panes tienen?». Ellos respondieron: «Siete y unos pocos pescados».
+
+    El ordenó a la multitud que se sentara en el suelo; después, tomó los panes y los pescados, dio gracias, los partió y los dio a los discípulos. Y ellos los distribuyeron entre la multitud. Todos comieron hasta saciarse, y con los pedazos que sobraron se llenaron siete canastas.
+  cierre: Palabra del Señor.

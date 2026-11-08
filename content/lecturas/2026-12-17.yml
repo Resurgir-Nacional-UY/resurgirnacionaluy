@@ -1,0 +1,52 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-17'
+celebracion: Jueves de la III semana de Adviento
+santo: ''
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-17.jpg
+imagen_credito: Adam van Noort, «Jacob bendice a sus hijos» (c. 1600-1640)
+titulo_miniatura: Jacob bendice a sus hijos
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Génesis 49, 1-2. 8-10
+  presentacion: Lectura del libro del Génesis.
+  texto: |-
+    Jacob llamó a sus hijos y les habló en estos términos: «Reúnanse, para que yo les anuncie lo que les va a suceder en el futuro: Reúnanse y escuchen, hijos de Jacob, oigan a Israel, su padre. A ti, Judá, te alabarán tus hermanos, tomarás a tus enemigos por la nuca y los hijos de tu padre se postrarán ante ti. Judá es un cachorro de león, –¡Has vuelto de la matanza, hijo mío!– Se recuesta, se tiende como un león, como una leona: ¿quién lo hará levantar?
+
+    El cetro no se apartará de Judá ni el bastón de mando de entre sus piernas, hasta que llegue aquel a quien le pertenece y a quien los pueblos deben obediencia.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 72
+  estrofas: |-
+    Oh Dios, concede tu justicia al rey
+    y tu rectitud al descendiente de reyes,
+    para que gobierne a tu pueblo con justicia
+    y a tus pobres con rectitud.
+
+    Que las montañas traigan al pueblo la paz,
+    y las colinas, la justicia;
+    que él defienda a los humildes del pueblo,
+    socorra a los hijos de los pobres
+
+    Que en sus días florezca la justicia
+    y abunde la paz, mientras dure la luna;
+    que domine de un mar hasta el otro,
+    y desde el Río hasta los confines de la tierra.
+
+    Que perdure su nombre para siempre
+    y su linaje permanezca como el sol;
+    que él sea la bendición de todos los pueblos
+    y todas las naciones lo proclamen feliz.
+- tipo: Evangelio
+  cita: Mateo 1, 1-17
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    Genealogía de Jesucristo, hijo de David, hijo de Abraham: Abraham fue padre de Isaac; Isaac, padre de Jacob; Jacob, padre de Judá y de sus hermanos. Judá fue padre de Fares y de Zará, y la madre de estos fue Tamar. Fares fue padre de Aram; Aram, padre de Aminadab; Aminadab, padre de Naasón; Naasón, padre de Salmón. Salmón fue padre de Booz, y la madre de este fue Rahab. Booz fue padre de Obed, y la madre de este fue Rut. Obed fue padre de Jesé; Jesé, padre del rey David. David fue padre de Salomón, y la madre de este fue la que había sido mujer de Urías.
+
+    Salomón fue padre de Roboam; Roboam, padre de Abías; Abías, padre de Asá; Asá, padre de Josafat; Josafat, padre de Joram; Joram, padre de Ozías. Ozías fue padre de Joatam; Joatam, padre de Acaz; Acaz, padre de Ezequías; Ezequías, padre de Manasés. Manasés fue padre de Josías; Josías, padre de Jeconías y de sus hermanos, durante el destierro en Babilonia. Después del destierro en Babilonia: Jeconías fue padre de Salatiel; Salatiel, padre de Zorobabel; Zorobabel, padre de Abiud; Abiud, padre de Eliacim; Eliacim, padre de Azor.
+
+    Azor fue padre de Sadoc; Sadoc, padre de Aquim; Aquim, padre de Eliud; Eliud, padre de Eleazar; Eleazar, padre de Matán; Matán, padre de Jacob. Jacob fue padre de José, el esposo de María, de la cual nació Jesús, que es llamado Cristo. El total de las generaciones es, por lo tanto: desde Abraham hasta David, catorce generaciones; desde David hasta el destierro en Babilonia, catorce generaciones; desde el destierro en Babilonia hasta Cristo, catorce generaciones.
+  cierre: Palabra del Señor.

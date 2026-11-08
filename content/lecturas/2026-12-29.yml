@@ -1,0 +1,44 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-29'
+celebracion: Día V de la Octava de Navidad
+santo: 'Memoria libre: Santo Tomás Becket, obispo y mártir'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-29.jpg
+imagen_credito: Rembrandt, «Simeón y Ana en el Templo» (1627)
+titulo_miniatura: Simeón en el Templo
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: 1 Juan 2, 3-11
+  presentacion: Lectura de la primera carta del apóstol san Juan.
+  texto: |-
+    La señal de que lo conocemos, es que cumplimos sus mandamientos. El que dice: «Yo lo conozco», y no cumple sus mandamientos, es un mentiroso, y la verdad no está en él. Pero en aquel que cumple su palabra, el amor de Dios ha llegado verdaderamente a su plenitud. Esta es la señal de que vivimos en él. El que dice que permanece en él, debe proceder como él. Queridos míos, no les doy un mandamiento nuevo, sino un mandamiento antiguo, el que aprendieron desde el principio: este mandamiento antiguo es la palabra que ustedes oyeron.
+
+    sin embargo, el mandamiento que les doy es nuevo. Y esto es verdad tanto en él como en ustedes, porque se disipan las tinieblas y ya brilla la verdadera luz. El que dice que está en la luz y no ama a su hermano, está todavía en las tinieblas. El que ama a su hermano permanece en la luz y nada lo hace tropezar. Pero el que no ama a su hermano, está en las tinieblas y camina en ellas, sin saber a dónde va, porque las tinieblas lo han enceguecido.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 96
+  estrofas: |-
+    Canten al Señor un canto nuevo,
+    cante al Señor toda la tierra;
+    canten al Señor, bendigan su Nombre,
+
+    día tras día, proclamen su victoria.
+    Anuncien su gloria entre las naciones,
+    y sus maravillas entre los pueblos.
+
+    pero el Señor hizo el cielo;
+    en su presencia hay esplendor y majestad,
+    en su Santuario, poder y hermosura.
+- tipo: Evangelio
+  cita: Lucas 2, 22-35
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    Cuando llegó el día fijado por la Ley de Moisés para la purificación, llevaron al niño a Jerusalén para presentarlo al Señor, como está escrito en la Ley: "Todo varón primogénito será consagrado al Señor". También debían ofrecer un sacrificio un par de tórtolas o de pichones de paloma, como ordena la Ley del Señor. Vivía entonces en Jerusalén un hombre llamado Simeón, que era justo y piadoso, y esperaba el consuelo de Israel. El Espíritu Santo estaba en él y le había revelado que no moriría antes de ver al Mesías del Señor.
+
+    Conducido por el mismo Espíritu, fue al Templo, y cuando los padres de Jesús llevaron al niño para cumplir con él las prescripciones de la Ley, Angel lo tomó en sus brazos y alabó a Dios, diciendo: «Ahora, Señor, puedes dejar que tu servidor muera en paz, como lo has prometido, porque mis ojos han visto la salvación que preparaste delante de todos los pueblos: luz para iluminar a las naciones paganas y gloria de tu pueblo Israel».
+
+    Su padre y su madre estaban admirados por lo que oían decir de él. Simeón, después de bendecirlos, dijo a María, la madre: «Este niño será causa de caída y de elevación para muchos en Israel; será signo de contradicción, y a ti misma una espada te atravesará el corazón. Así se manifestarán claramente los pensamientos íntimos de muchos».
+  cierre: Palabra del Señor.

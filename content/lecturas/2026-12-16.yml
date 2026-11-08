@@ -1,0 +1,48 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-16'
+celebracion: Miércoles de la III semana de Adviento
+santo: ''
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-16.jpg
+imagen_credito: Rembrandt, «La estampa de los cien florines» (c. 1648)
+titulo_miniatura: ¿Eres tú el que ha de venir?
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Isaías 45, 6c-8. 18. 21b-25
+  presentacion: Lectura del libro de Isaías.
+  texto: |-
+    Yo soy el Señor, y no hay otro. Yo formo la luz y creo las tinieblas, hago la felicidad y creo la desgracia: yo, el Señor, soy el que hago todo esto. Destilen, cielos, desde lo alto, y que las nubes derramen la justicia! Que se abra la tierra y produzca la salvación, y que también haga germinar la justicia! Yo, el Señor, he creado todo esto. Porque así habla el Señor, el que creó el cielo y es Dios, el que modeló la tierra, la hizo y la afianzó, y no la creó vacía, sino que la formó para que fuera habitada: Yo soy el Señor, y no hay otro.
+
+    ¿Quién predijo esto antiguamente y lo anunció en los tiempos pasados? ¿No fui yo, el Señor? No hay otro Dios fuera de mí; un Dios justo y salvador, no lo hay, excepto yo. Vuélvanse a mí, y serán salvados, todos los confines de la tierra, porque yo soy Dios, y no hay otro. Lo he jurado por mí mismo, de mi boca ha salido la justicia, una palabra irrevocable: Ante mí se doblará toda rodilla, toda lengua jurará por mí, diciendo: Sólo en el Señor están los actos de justicia y el poder. Hasta él llegarán avergonzados todos los que se enfurecieron contra él.
+
+    En el Señor hallará la justicia y se gloriará toda la descendencia de Israel.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 85
+  estrofas: |-
+    Voy a proclamar lo que dice el Señor:
+    el Señor promete la paz,
+    la paz para su pueblo y sus amigos,
+    Su salvación está muy cerca de sus fieles,
+    y la Gloria habitará en nuestra tierra.
+
+    El Amor y la Verdad se encontrarán,
+    la Justicia y la Paz se abrazarán;
+    la Verdad brotará de la tierra
+    y la Justicia mirará desde el cielo.
+
+    El mismo Señor nos dará sus bienes
+    y nuestra tierra producirá sus frutos.
+    La Justicia irá delante de él,
+    y la Paz, sobre la huella de sus pasos.
+- tipo: Evangelio
+  cita: Lucas 7, 19-23
+  presentacion: ✠ Lectura del santo Evangelio según san Lucas.
+  texto: |-
+    los envió a decir al Señor: «¿Eres tú el que ha de venir o debemos esperar a otro?». Cuando se presentaron ante él, le dijeron: «Juan el Bautista nos envía a preguntarte: "¿Eres tú el que ha de venir o debemos esperar a otro?"». En esa ocasión, Jesús curó mucha gente de sus enfermedades, de sus dolencias y de los malos espíritus, y devolvió la vista a muchos ciegos. Entonces respondió a los enviados: «Vayan a contar a Juan lo que han visto y oído: los ciegos ven, los paralíticos caminan, los leprosos son purificados y los sordos oyen, los muertos resucitan, la Buena Noticia es anunciada a los pobres.
+
+    ¡Y feliz aquel para quien yo no sea motivo de escándalo!».
+  cierre: Palabra del Señor.

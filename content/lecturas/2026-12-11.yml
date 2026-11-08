@@ -1,0 +1,44 @@
+# Lecturas de la Santa Misa del día. Un archivo por fecha (nombre = AAAA-MM-DD.yml).
+# Se edita desde el CMS (Fe · Lecturas del día). `python scripts/render_lecturas.py`
+# los junta en /lecturas.json, que lee la página Fe para mostrar la lectura de hoy.
+fecha: '2026-12-11'
+celebracion: Viernes de la II semana de Adviento
+santo: 'Memoria libre: San Dámaso I, papa'
+fuente: 'Texto bíblico: El Libro del Pueblo de Dios (traducción argentina, 1990), tal como lo publica la Santa Sede en vatican.va.'
+imagen: /media/lecturas/2026-12-11.jpg
+imagen_credito: Pieter Brueghel el Viejo, «Juegos de niños» (1560)
+titulo_miniatura: Les tocamos la flauta
+draft: false
+lecturas:
+- tipo: Primera lectura
+  cita: Isaías 48, 17-19
+  presentacion: Lectura del libro de Isaías.
+  texto: |-
+    Así habla el Señor, tu redentor, el Santo de Israel: Yo soy el Señor, tu Dios, el que te instruye para tu provecho, el que te guía por el camino que debes seguir. ¡Si tú hubieras atendido a mis mandamientos, tu prosperidad sería como un río y tu justicia, como las olas del mar! Como la arena sería tu descendencia, como los granos de arena, el fruto de tus entrañas; tu nombre no habría sido extirpado ni borrado de mi presencia.
+  cierre: Palabra de Dios.
+- tipo: Salmo responsorial
+  cita: Salmo 1
+  estrofas: |-
+    ¡Feliz el hombre
+    que no sigue el consejo de los malvados,
+    ni se detiene en el camino de los pecadores,
+    ni se sienta en la reunión de los impíos,
+    sino que se complace en la ley del Señor
+    y la medita de día y de noche!
+
+    El es como un árbol
+    plantado al borde de las aguas,
+    que produce fruto a su debido tiempo,
+    y cuyas hojas nunca se marchitan:
+    todo lo que haga le saldrá bien.
+
+    No sucede así con los malvados:
+    ellos son como paja que se lleva el viento.
+    porque el Señor cuida el camino de los justos,
+    pero el camino de los malvados termina mal.
+- tipo: Evangelio
+  cita: Mateo 11, 16-19
+  presentacion: ✠ Lectura del santo Evangelio según san Mateo.
+  texto: |-
+    ¿Con quién puedo comparar a esta generación? Se parece a esos muchachos que, sentados en la plaza, gritan a los otros: «¡Les tocamos la flauta, y ustedes no bailaron! ¡Entonamos cantos fúnebres, y no lloraron!» Porque llegó Juan, que no come ni bebe, y ustedes dicen: «¡Ha perdido la cabeza!». Llegó el Hijo del hombre, que come y bebe, y dicen: «Es un glotón y un borracho, amigo de publicanos y pecadores». Pero la Sabiduría ha quedado justificada por sus obras».
+  cierre: Palabra del Señor.
