@@ -35,9 +35,6 @@ Los hombres de negocios pensaron que con la prédica de la libertad de concienci
 
 Con el santo propósito de auspiciar las “riquezas de las naciones” lanzaron su ataque concentrado contra la Iglesia y la monarquía para conquistar el derecho de dirigir el mercado, pero, al mismo tiempo, destruyeron los lazos ancestrales de la obediencia el respeto sagrado a las jerarquías y la íntima contención de las pasiones. Las consecuencias más o menos inmediatas fueron la aparición de un hombre sin vida interior, sin temor de Dios, sin fe, sin espíritu ni conciencia.
 
-
-
-
 # EL PROCESO DEL LIBERALISMO.
 
 Nació de dos movimientos opuestos: del revolucionario que acusó a los liberales de detener el proceso liberador en los límites del Estado gendarme, defensor de la propiedad, y del contrarrevolucionario que pretendió, afirmándose en el sistema de las libertades concretas, restaurar la autoridad, la jerarquía, el sentido personal de la responsabilidad y el predominio de lo político sobre lo económico.
@@ -59,8 +56,5 @@ Conviene recordar que la crítica al liberalismo hecha por los mejores represent
 Evola lo dice sin tapujos cuando asegura que el catolicismo medieval defendía una concepción del hombre en total acuerdo con lo que ese autor llamaba "la gran tradición", pero, "desterrada en nuestros días por los representantes democráticos y, abiertamente a la izquierda", se hace eco de un reclamo publicitario en armonía con el mundo socialista. Al aceptar las premisas ideológicas del liberalismo y la democracia, la Iglesia pierde su presencia jerárquica y la oportunidad de su magisterio de las verdades paradigmáticas.
 
 La historia del pensamiento político del siglo XX exige una atención minuciosa, porque es muy fácil confundir las diversas corrientes que lo atraviesan. Muchas de ellas coinciden en la crítica cerrada que llevan contra las ideas dominantes, pero suelen diferir profundamente en los principios que los apoyan y en los remedios que proponen...
-
-
-
 
 -Rubén Calderón Bouchet. 1989. Una introducción al mundo del Fascismo. pág-26-32.
