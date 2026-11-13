@@ -11,8 +11,9 @@ draft: false
 
 > _En estos días donde la facilidad y comodidad que los aparatos tecnológicos nos brindan ha provocado que las personas podamos acceder a un contenido lujurioso sin ningún tipo de límites. No hace falta gastar párrafos para tratar el problema médico que la pornografía ha generado en la juventud. Hay infinidad de estudios que ya han demostrado y advertido sobre las consecuencias catastróficas del consumo pornográfico en el cerebro. La adicción a la pornografía es un problema que concierne a millones de personas, compartimos este testimonio de un camarada que elige mantenerse en el anonimato. Esperamos que este testimonio y reflexión sirva de ayuda las personas que se ven torturadas por este problema._ 
 
+## ​
 
-## ​Reflexión del autor.
+## Reflexión del autor.
 
 Todos conocemos acerca de la lujuria, cómo afecta vidas, el ámbito social y la propia cognición, pero la lujuria abarca más allá que un deseo profundo de tener coito, es un océano profundo y visceral donde caes más y más profundo, llegando a lo asqueroso, lo violento y lo directamente ilegal.
 
