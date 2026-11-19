@@ -81,7 +81,6 @@ Por otra parte, luego de no encontrar dichas armas de destrucción masiva, sumad
 
 La desarticulación del Estado iraquí cambió el equilibrio de poder en el Golfo Pérsico. Fuera de consolidar una democracia “obediente” para Occidente, al sustituir el régimen de Saddam por gobiernos dominados por partidos chiitas fortaleció la influencia de Irán en la región. Por último, las pérdidas financieras (billones de dólares) y el estancamiento de Estados Unidos en una guerra asimétrica durante un largo periodo de tiempo, mostraron los límites del poder militar de EEUU. Como sostiene Moniz Bandeira, el desgaste en Irak y la posterior crisis económica de 2008 marcaron un agotamiento, abriendo el camino hacia la recuperación de disputas por parte de Rusia y China en aspectos geopolíticos a lo largo del mundo.
 
-
 _Bibliografía:_ 
 
 _Moniz Bandeira, Luiz Alberto (2013). A segunda guerra fria: Geopolítica e dimensão estratégica dos Estados Unidos. Das rebeliões na Eurásia à África do Norte e ao Oriente Médio._  
