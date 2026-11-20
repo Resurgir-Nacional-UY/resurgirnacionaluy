@@ -6,7 +6,14 @@
   <atom:link href="https://resurgirnacionaluy.org/feed.xml" rel="self" type="application/rss+xml" />
   <description>Artículos de formación del movimiento Resurgir Nacional.</description>
   <language>es-uy</language>
-  <lastBuildDate>Thu, 19 Nov 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 20 Nov 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Fe, Patria y Milicia</title>
+    <link>https://resurgirnacionaluy.org/la-patria-y-la-fe.html</link>
+    <guid isPermaLink="true">https://resurgirnacionaluy.org/la-patria-y-la-fe.html</guid>
+    <pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+    <description>Conclusiones sobre el nacionalismo católico y la tradición que nos une. Ni de derechas, ni de izquierdas, de Cristo nuestro Señor.</description>
+  </item>
   <item>
     <title>La Unión Soviética y los conflictos en Medio Oriente.</title>
     <link>https://resurgirnacionaluy.org/la-union-sovietica-conflictos-mediooriente.html</link>
