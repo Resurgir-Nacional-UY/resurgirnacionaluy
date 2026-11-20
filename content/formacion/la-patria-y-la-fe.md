@@ -1,7 +1,7 @@
 ---
 title: Fe, Patria y Milicia
 slug: la-patria-y-la-fe
-date: ''
+date: 2026-11-20
 author: G. Zaballa
 tema: Fe católica
 summary: Conclusiones sobre el nacionalismo católico y la tradición que nos une. Ni de derechas, ni de izquierdas, de Cristo nuestro Señor.
