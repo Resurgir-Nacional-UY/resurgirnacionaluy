@@ -4,7 +4,10 @@ slug: enrique-viana-soberanismo-republica
 date: 2026-11-23
 author: Facundo Cuadro
 tema: Teoría política
-summary: Homenaje al Dr. Enrique Viana, en el Ateneo, por parte del Sr. Facundo Cuadro.
+summary: |-
+  (Con su debido permiso, compartimos este texto escrito por el compatriota Oriental Facundo Cuadro)
+
+  Homenaje al Dr. Enrique Viana, en el Ateneo, por parte del Sr. Facundo Cuadro.
 source_url: ''
 draft: false
 ---
